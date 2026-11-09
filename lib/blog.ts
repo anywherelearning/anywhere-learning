@@ -286,6 +286,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '30. Just sit' },
       { type: 'paragraph', text: 'Find a log, a rock, a hill. Sit. Stay 10 minutes. The walk is not the point. The pause is. This is the activity adults need too.' },
       { type: 'pull-quote', text: 'You do not need a microscope to do science. You need a curious kid and an open door.' },
+      { type: 'paragraph', text: 'Back home, the animals you noticed can turn into a project. Have your kid [design their own creature](/blog/design-your-own-creature) using a trick they saw on the walk.' },
       { type: 'heading', level: 2, text: 'What to bring (almost nothing)' },
       { type: 'list', ordered: false, items: [
         'A small notebook or nature journal',
@@ -1611,6 +1612,7 @@ const posts: BlogPost[] = [
 
       { type: 'tip', title: 'The one-material challenge', text: 'Pick a single material: cardboard, string, newspaper, aluminium foil, and challenge your kids to make something useful out of it. No instructions, no examples, no help unless they ask. This one exercise builds more creative muscle than a whole shelf of craft kits.' },
 
+      { type: 'paragraph', text: 'For a project that puts all of this to work, have your kid [design their own creature](/blog/design-your-own-creature), where every wild idea has to earn its place.' },
       { type: 'heading', level: 2, text: 'Creativity is a life skill, not a hobby' },
       { type: 'paragraph', text: 'The world is changing fast. AI can follow instructions better than any human. The skill that won\u2019t be automated is the ability to think originally: to ask a question nobody asked, to solve a problem nobody\u2019s solved, to see a possibility nobody imagined.' },
       { type: 'paragraph', text: 'That\u2019s creativity. And the best way to build it isn\u2019t with more supplies or [structured activities](/blog/what-no-prep-means). It\u2019s with less. Less instruction, less intervention, less "here\u2019s how." More space, more boredom, more "what do you think?"' },
@@ -1626,7 +1628,7 @@ const posts: BlogPost[] = [
         { question: 'Can creativity be taught?', answer: 'Creativity isn\u2019t so much taught as it is nurtured. All kids are naturally creative; what matters is whether their environment supports or suppresses it. You can build creative thinking by asking open-ended questions, celebrating the process (not just the product), and giving kids opportunities to solve real problems in their own way.' },
       ]},
     ],
-    relatedSlugs: ['just-let-them-play', 'outdoor-stem-challenges'],
+    relatedSlugs: ['design-your-own-creature', 'just-let-them-play', 'outdoor-stem-challenges'],
     recommendedProduct: 'creature-habitat',
   },
   {
@@ -3132,6 +3134,7 @@ const posts: BlogPost[] = [
       ] },
       { type: 'pull-quote', text: 'When a child builds an imaginary world with themed regions, magic systems, and its own internal logic, they\u2019re not just playing. They\u2019re teaching themselves how real worlds work.' },
 
+      { type: 'paragraph', text: 'If the world needs animals, [designing a creature](/blog/design-your-own-creature) that could really survive there is a great next step.' },
       { type: 'heading', level: 2, text: 'Different types of worldbuilding' },
       { type: 'paragraph', text: 'Worldbuilding doesn\u2019t have to look like a notebook full of maps (though it can). There are many entry points, and different kids gravitate to different ones:' },
       { type: 'heading', level: 3, text: 'Map-makers' },
@@ -3170,7 +3173,7 @@ const posts: BlogPost[] = [
         { question: 'What if my child starts a world and abandons it?', answer: 'That\u2019s completely normal and fine. Some worlds are quick explorations; others become long-term projects. The abandoned worlds still involved creative thinking, writing, and design. Don\u2019t pressure them to finish, the next world they start might be the one that captures them for a year.' },
       ] },
     ],
-    relatedSlugs: ['build-a-museum-exhibit-at-home', 'raise-creative-kids', 'just-let-them-play', 'kids-making-videos-learning'],
+    relatedSlugs: ['design-your-own-creature', 'build-a-museum-exhibit-at-home', 'raise-creative-kids', 'just-let-them-play', 'kids-making-videos-learning'],
     recommendedProduct: 'imaginary-world',
   },
   {
@@ -4904,6 +4907,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '12. Worm habitat' },
       { type: 'paragraph', text: 'Fill a large clear jar with alternating layers of soil and sand. Add a few earthworms and a bit of food scraps on top. Cover the outside with dark paper (worms avoid light) and check daily. Within days, you will see tunnels forming through the layers. This teaches soil health, decomposition, and animal behaviour.' },
 
+      { type: 'paragraph', text: 'If your kid gets hooked on why animals look and act the way they do, have them [design their own creature](/blog/design-your-own-creature) and work out how it would survive.' },
       { type: 'heading', level: 2, text: 'Physics experiments' },
       { type: 'paragraph', text: 'Physics sounds intimidating, but it is just the science of how things move, fall, and interact. Your backyard is full of physics if you know where to look.' },
       { type: 'heading', level: 3, text: '13. Egg drop challenge' },
@@ -4938,7 +4942,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'cta', text: 'Want a free guide packed with more nature-based learning ideas? Download it and get started today.', href: '/free-guide', label: 'Get the Free Guide' },
     ],
-    relatedSlugs: ['forest-school-activities', 'outdoor-stem-challenges', 'summer-stem-activities-for-kids', 'nature-walks-science', 'seasonal-scavenger-hunts'],
+    relatedSlugs: ['design-your-own-creature', 'forest-school-activities', 'outdoor-stem-challenges', 'summer-stem-activities-for-kids', 'nature-walks-science', 'seasonal-scavenger-hunts'],
     recommendedProduct: 'outdoor-stem-challenges',
   },
   {
@@ -7109,6 +7113,7 @@ const posts: BlogPost[] = [
       { type: 'image', src: '/images/stem-by-age-tire-derable.jpeg', alt: 'Kid eating homemade tire d\'erable maple taffy off a stick, eyes wide, sticky strands of cooled syrup running down', caption: 'Maple taffy is real chemistry: temperature control, sugar supersaturation, phase change. The lesson lands faster when the experiment is delicious.' },
 
       { type: 'product-callout', slug: 'outdoor-stem-challenges' },
+      { type: 'paragraph', text: 'Biology fits here too. Ask them to [design their own creature](/blog/design-your-own-creature) and give every body part a job that helps it survive.' },
       { type: 'heading', level: 2, text: 'Ages 11 to 13: multi-week projects and real budgets' },
       { type: 'paragraph', text: 'Eleven to thirteen is when STEM stops being a single afternoon and starts being a project that stretches across weeks. They can hold a goal in their head, manage parts of it themselves, and come back after a break. This is also where AI literacy starts to matter as a real skill, not a gimmick.' },
       { type: 'paragraph', text: 'They can now handle budget, deadline, materials they have to source, and the social piece of explaining their project to someone else. The math stops being kitchen math and becomes [real-world math activities](/blog/real-world-math-activities) with stakes.' },
@@ -9329,7 +9334,7 @@ const posts: BlogPost[] = [
     publishedAt: '2026-09-14',
     dateModified: '2026-10-05',
     keywords: ['how to create a museum', 'how to build a museum exhibit', 'museum exhibit project for kids', 'creating a museum exhibit', 'kids museum project', 'museum at home', 'create a museum exhibit project', 'museum project ideas for kids', 'homeschool museum project', 'curation project for kids'],
-    readTimeMinutes: 11,
+    readTimeMinutes: 8,
     author: amelie,
     recommendedProduct: 'build-a-museum',
     heroImage: '/images/museum-exhibit-kids-hero.jpeg',
@@ -9340,7 +9345,7 @@ const posts: BlogPost[] = [
 
       { type: 'paragraph', text: 'Every kid has a topic. Rocks, one specific dinosaur, a sport, a video game, the family history nobody else finds interesting. They know more about it than anyone in the house, and they will tell you about it for as long as you let them. A home museum takes that and gives it a job: make a stranger understand why this matters, in six objects and six short labels, in a room they can walk through.' },
       { type: 'paragraph', text: 'That job is what a real curator does. Research the subject, pick what earns a spot, write labels a visitor will actually read, lay out the space so people see things in the right order, and then stand there on opening day and talk about it. Research, writing, design, and public speaking, all in service of something the kid already loves. It is one of the best examples of [project-based learning at home](/blog/project-based-learning-homeschool) I know, and nobody involved calls it school.' },
-      { type: 'paragraph', text: 'This post is the free version: how to run it, what to say at each step, and how to adjust it by age. If you would rather open a guide with the steps, the prompts, and three levels of challenge already laid out, that is the [Build a Museum activity](/shop/build-a-museum) in the library. Everything below works without it.' },
+      { type: 'paragraph', text: 'This post covers what the project is, why it works and how it runs from start to finish. If you want to run it with your kid, the [Build a Museum activity](/shop/build-a-museum) in the library has the questions to ask at every step, the cards for the angle, the labels and the interactive pieces, and three levels of challenge ready to go.' },
 
       { type: 'heading', level: 2, text: 'Why a museum exhibit teaches more than a report' },
       { type: 'paragraph', text: 'A report asks a kid to write down everything they know. An exhibit asks them to decide what matters, which is a harder and more useful question. When there is room for six objects, the seventh has to go, and a kid who has argued with themselves about which rock to cut has done more thinking than a kid who listed all twelve. Then every label has to make sense to someone who knows nothing about the topic, in two sentences, which is the hardest short writing there is.' },
@@ -9357,38 +9362,24 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Six steps. A small version fits in an afternoon; a big one runs a week with an opening on the weekend. Your role the whole way through is the visitor, not the curator. Ask what they want people to learn, help find materials, and keep your hands off the layout.' },
 
       { type: 'heading', level: 3, text: 'Step 1: Pick the topic and the angle' },
-      { type: 'paragraph', text: 'Start with what your kid already knows a lot about or wants to know more about. The best museum topics are the ones where they have something to say, not the ones that sound impressive. Then help them find the angle, because "everything about dinosaurs" is not a museum. "The three weirdest dinosaur teeth and what they ate" is a museum. Rocks and minerals, one animal, a sport and its history, how a thing is made, a place they have visited, their own family: all of these work once they are narrowed.' },
-      { type: 'paragraph', text: 'Decide the kind of museum too. A collection museum shows real objects with labels (rocks, shells, coins, LEGO minifigures). An information museum uses posters, diagrams, and facts. An art museum shows their own work with artist statements. An interactive museum has stations where visitors do something. Most kids end up with a mix. Two questions to ask: what do you know about this that most people do not, and if a visitor only remembers one thing from your museum, what should it be?' },
+      { type: 'paragraph', text: 'Start with what your kid already knows a lot about or wants to know more about. Then help them find the angle, because "everything about dinosaurs" is not a museum. "The three weirdest dinosaur teeth and what they ate" is a museum.' },
 
       { type: 'heading', level: 3, text: 'Step 2: Research and gather' },
-      { type: 'paragraph', text: 'This is where "I like rocks" becomes "here are five rocks that tell a story." Books, websites, a phone call to a grandparent, their own memory, and their own observation all count as research. What they collect can be real objects, printed photos, drawings, maps, a timeline, or facts on index cards. The rule is that every item has to earn its spot.' },
-      { type: 'tip', title: 'Set a limit before you start', text: 'Research is a rabbit hole. "Find five to eight things you want to include and we start building tomorrow" keeps the project moving. They can always add more after opening day. While they work, ask what surprised them, and which pieces tell the most interesting story.' },
+      { type: 'paragraph', text: 'This is where "I like rocks" becomes "here are five rocks that tell a story." Books, websites, a phone call to a grandparent and their own collection all count as research. The rule is that every item has to earn its spot, and five to eight things is plenty to start.' },
 
       { type: 'heading', level: 3, text: 'Step 3: Build the exhibits' },
-      { type: 'paragraph', text: 'Before anything goes on a table, have them sketch a quick layout. Where do visitors enter? What do they see first? What is the big finish? The layout can be one table with everything arranged left to right, a walking path through a hallway, separate stations in different rooms, or an outdoor trail along the porch or the backyard path (nature collections are great outside).' },
-      { type: 'paragraph', text: 'Then build. Each exhibit needs something to look at and something to read. Mount items on cardboard, make small dioramas in shoeboxes, prop posters on chairs, use trays for collections. One thing worth saying out loud: kid eye level and adult eye level are very different. If the visitors are grown-ups, the displays need to sit higher than your kid’s instinct. Help with logistics (which room, which table), and resist redesigning their layout. Ask instead: what should a visitor see first, and why? Which exhibit is the most important one?' },
+      { type: 'paragraph', text: 'Before anything goes on a table, have them sketch a quick layout: where visitors enter, what they see first, and what the big finish is. It can be one table, a walking path through a hallway, or an outdoor trail along the porch. Each exhibit needs something to look at and something to read. Help with logistics, and resist redesigning their layout.' },
 
       { type: 'heading', level: 3, text: 'Step 4: Write the labels and add something interactive' },
-      { type: 'paragraph', text: 'Labels first. Every exhibit gets a title and one or two sentences: what it is and why it matters. Short is the whole skill. Explaining something complicated in two sentences forces a kid to understand it properly, which is why label writing is secretly the best [real-world writing practice](/blog/real-world-writing-for-kids) in the project. You are the test visitor: read every label, and if you are confused, say so kindly.' },
-      { type: 'paragraph', text: 'Then add at least one thing a visitor can do, not just look at. That is what turns a display into a museum. Ideas that work at home:' },
-      { type: 'list', ordered: false, items: [
-        'A touch-and-feel station: different textures or weights, eyes closed.',
-        'A quiz or guessing game: "Which rock is the oldest?" with the answer under a flap.',
-        'A magnifying glass station for close-up looking.',
-        'Lift-the-flap facts: sticky notes over the answers.',
-        'A sorting challenge: put these in order.',
-        'A drawing station where visitors sketch what they see.',
-      ]},
-      { type: 'paragraph', text: 'A good test at this step: if you covered up the label, would someone still understand the exhibit? If not, either the object or the label needs work.' },
+      { type: 'paragraph', text: 'Every exhibit gets a title and one or two sentences: what it is and why it matters. Short is the whole skill, which is why label writing is secretly the best [real-world writing practice](/blog/real-world-writing-for-kids) in the project. Then add at least one thing a visitor can do, not just look at, like a guessing game with the answer under a flap. That is what turns a display into a museum.' },
 
       { type: 'heading', level: 3, text: 'Step 5: Test it and fix it' },
-      { type: 'paragraph', text: 'Walk in like you have never seen it. Read every label. Try every interactive piece. Does it flow? Is anything confusing? Do you know where to go next? Then hand them the checklist: nothing falling over, labels readable from where a visitor would stand, interactive elements that work without explanation, a clear path from start to finish, and a museum name or welcome sign at the entrance. The usual fixes are small: an arrow or a "next" sign, raising a label that is too low, moving exhibits closer together, or taking out the one piece that does not fit the theme.' },
+      { type: 'paragraph', text: 'Walk in like you have never seen it. Read every label and try every interactive piece. Does it flow? Is anything confusing? The fixes are usually small.' },
 
       { type: 'heading', level: 3, text: 'Step 6: The grand opening' },
-      { type: 'paragraph', text: 'Invite someone who was not involved. Grandparents, neighbours, a friend, or just one person. The point is that a real visitor comes through and experiences it. Your kid can give a guided tour, let people go self-guided with the labels, or mix the two and finish with a highlight tour. Put a guest book near the exit, even if it is a sheet of paper that says "What was your favourite exhibit?" That is real feedback, and kids read it more carefully than any comment a parent makes.' },
-      { type: 'paragraph', text: 'If a visitor asks a question your kid cannot answer, that is not a problem. That is the next exhibit. Take photos of each display, film the curator’s tour if they are up for it, and afterwards ask: which exhibit got the biggest reaction, and what question surprised you?' },
+      { type: 'paragraph', text: 'Invite someone who was not involved. Grandparents, neighbours, a friend, or just one person. Your kid can give a guided tour or let people wander with the labels. Put a guest book near the exit, even if it is a sheet of paper that says "What was your favourite exhibit?" If a visitor asks a question your kid cannot answer, that is not a problem. That is the next exhibit.' },
 
-      { type: 'product-callout', slug: 'build-a-museum', context: 'If you want all six steps laid out with the prompts, the checklist, and three levels of challenge (a 3-item table, a multi-section museum, or a full exhibit with a curator’s statement and guided tour), that is the Build a Museum guide for ages 6 to 14. Open it and follow along.' },
+      { type: 'product-callout', slug: 'build-a-museum', context: 'The guide is how you actually run this with your kid: the questions to ask at every step, the angle, museum type, label and interactive cards, and three levels of challenge for ages 6 to 14. Open it and follow along.' },
 
       { type: 'heading', level: 2, text: 'Museum exhibit ideas kids actually pick' },
       { type: 'paragraph', text: 'If your kid is stuck on a topic, these are the kinds of angles that turn into good exhibits. Notice that each one is narrow. Narrow is what makes it buildable.' },
@@ -9405,16 +9396,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'For a kid who lives for maps and invented places, a museum about their own [imaginary world](/blog/imaginary-worlds-kids) is a genuinely good project, because it forces them to explain a thing that only exists in their head to a person who has never been there.' },
 
       { type: 'heading', level: 2, text: 'Adapting it by age' },
-      { type: 'heading', level: 3, text: 'Ages 6 to 8' },
-      { type: 'paragraph', text: 'Keep it to three or four items on one table, in a clear order, with a title for each and one interactive element. Research is whatever they already know plus one book. Write the labels together: they say the sentence, you help get it down, they copy it onto the card. The grand opening is one visitor and a short tour. Quick, playful, low pressure. The learning at this age is in deciding what goes first and being brave enough to explain it.' },
-      { type: 'heading', level: 3, text: 'Ages 9 to 11' },
-      { type: 'paragraph', text: 'A multi-section museum with five or six exhibits, a specific angle on the topic, two or three sources, and findings organised into categories. Titles and one or two sentence descriptions on every label, two interactive elements, a welcome sign and directional signs, and a hand-drawn visitor map. Two walk-throughs with fixes in between. Host an opening for two or three visitors with a guest book, and talk about the feedback afterwards.' },
-      { type: 'heading', level: 3, text: 'Ages 12 to 14' },
-      { type: 'paragraph', text: 'Push toward what a real exhibit needs. A one-paragraph curator’s statement explaining why this topic matters. A research notebook with sources and a "Future Research" list of the questions they could not answer. Multiple display formats (flat, 3D, wall-mounted), questions on the labels for visitors to think about, a museum passport stamped at each station, admission tickets or a printed brochure, and a rehearsed curator’s tour. Film a virtual tour for someone who could not come. Then ask them what they would change in a version two on a different topic, and mean it.' },
-
-      { type: 'heading', level: 2, text: 'What to say while they work (and what not to)' },
-      { type: 'paragraph', text: 'The first setup will look more like a pile than a museum. That is where the learning is. Organising chaos into something a visitor can follow is the whole skill, so let the messy first version exist. When you praise, praise the thinking, not the result: "you figured out that visitors needed to see the small rocks before the big ones so they would notice the difference" does more than "that looks nice." And ask rather than tell. "What do you want people to learn from this exhibit?" beats a list of what to include, every time.' },
-      { type: 'paragraph', text: 'When it is done, pick one or two reflection questions and let them answer properly: What was the hardest part of making exhibits other people could understand? What would you change if you built it again? Did any visitor reaction surprise you? If they want to keep going, a second museum on a completely different topic, a travelling version that fits in a box, a gift shop with handmade bookmarks, or a short documentary about the best exhibit are all natural next steps.' },
+      { type: 'paragraph', text: 'Ages 6 to 8 do well with three or four items on one table and one short tour, and you help get the labels down. Ages 9 to 11 can build a multi-section museum with a visitor map and an opening for a few guests. Ages 12 to 14 can add a curator’s statement and a rehearsed tour.' },
 
       { type: 'cta', text: 'Want more real-world projects like this one, where research, writing, and presenting happen inside something your kid already cares about? Our free guide has a week of them you can run at home with almost no prep.', href: '/free-guide', label: 'Get the Free Guide' },
 
@@ -9443,7 +9425,7 @@ const posts: BlogPost[] = [
     pillarSlug: 'real-world-learning',
     publishedAt: '2026-03-12',
     keywords: ['design a theme park', 'build a theme park project', 'theme park project for kids', 'design your own theme park', 'build an adventure park', 'adventure park builder', 'theme park math project', 'amusement park project for kids', 'backyard adventure course', 'theme park design activity'],
-    readTimeMinutes: 11,
+    readTimeMinutes: 8,
     author: amelie,
     recommendedProduct: 'theme-park',
     heroImage: '/images/design-a-theme-park-hero.jpeg',
@@ -9453,7 +9435,7 @@ const posts: BlogPost[] = [
 
       { type: 'paragraph', text: 'Ask a kid what they would put in a theme park and you will not get to finish the question. A roller coaster through a volcano. A water slide that goes into a shark tank (a friendly shark). A snack stand that only sells blue things. They have opinions, they have been planning this for years, and until now nobody handed them a piece of paper and said "fine, build it."' },
       { type: 'paragraph', text: 'That is the whole project. What makes it more than a drawing is the three questions a real park designer has to answer: where does everything go so people can actually move through it, what does it cost to visit, and does the park make money? Layout is geometry. Prices are arithmetic with stakes. "Would a family of four come back?" is a business question. Kids do all of it, for days, because the volcano coaster needs a ticket price. It is one of my favourite pieces of [real-world math](/blog/real-world-math-activities) because the math is never the point and it happens anyway.' },
-      { type: 'paragraph', text: 'This post is the free version: the six steps, the questions to ask at each one, the math that shows up, and how to size it by age. If you want it laid out as a guide with the prompts and three levels of challenge ready to go, that is the [Theme Park activity](/shop/theme-park) in the library. Everything below works without it.' },
+      { type: 'paragraph', text: 'This post covers what the project is, the math that shows up and how it runs from start to finish. If you want to run it with your kid, the [Theme Park activity](/shop/theme-park) in the library has the questions to ask at every step, the cards for the theme, the rides and the map, and three levels of challenge ready to go.' },
 
       { type: 'heading', level: 2, text: 'The math and skills hiding in a theme park' },
       { type: 'paragraph', text: 'You do not need to teach any of this. It comes up on its own the moment the park has to work for a visitor. Your job is to be that visitor and ask the questions a visitor would ask.' },
@@ -9471,54 +9453,32 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Six steps. A first version fits in a long afternoon; the full version with pricing and an opening runs across a week. Keep the first version loose. Nobody builds Disneyland on day one, and a few cardboard rides with a hand-drawn map is a great start.' },
 
       { type: 'heading', level: 3, text: 'Step 1: Pick the theme and the star attractions' },
-      { type: 'paragraph', text: 'Start with the big idea: what kind of experience do they want visitors to have? Jungle adventure, space station, underwater world, medieval kingdom, dinosaur island, spy academy, pirate cove, enchanted forest, or something entirely invented. Your one job here is to help them commit to a single theme instead of cramming in every idea they have ever had. Then brainstorm three to five star attractions, aiming for variety: something thrilling, something relaxing, something interactive.' },
-      { type: 'paragraph', text: 'Two questions that get them thinking like a designer: what is the one ride people would travel far to see, and what do you want visitors to walk away talking about? Older kids can sort their attractions into "thrill," "chill," and "interactive," give the park a name and a slogan, and write a short backstory for the flagship ride.' },
+      { type: 'paragraph', text: 'Start with the big idea: what kind of experience do they want visitors to have? Jungle adventure, space station, medieval kingdom, dinosaur island, or something entirely invented. Your one job here is to help them commit to a single theme instead of cramming in every idea they have ever had. Then they pick three to five star attractions, aiming for variety: something thrilling, something relaxing, something interactive.' },
 
       { type: 'heading', level: 3, text: 'Step 2: Design the map' },
-      { type: 'paragraph', text: 'Hand them the biggest piece of paper in the house. Where is the entrance? Where are the big rides? Where do people eat? How do visitors get from one area to another? Encourage them to think in zones, because real parks cluster things: a thrill zone, a kids’ area, a food court. The first map will be too crowded or too spread out. Let them draw it, then walk through it with your finger as a pretend visitor. They will spot the problems themselves.' },
-      { type: 'tip', title: 'The traffic jam question', text: '"If a hundred people walked in at once, where would the traffic jam happen?" is the single best question for this step. It turns a drawing into a layout problem, and kids solve it by widening paths, moving the star ride away from the gate, and adding a second route. That is visitor flow, and it is exactly what the people who design real parks spend their days on.' },
-      { type: 'paragraph', text: 'For older kids, add a legend, at least two routes through the park, visitor-flow arrows, and a "fast pass" route for VIP guests. If they want to go further with scale, one square on the graph paper equals a set number of metres, and the coaster footprint has to be drawn to match. That is the same skill as [drawing a room to scale](/blog/real-world-math-activities), with a much better reason to do it.' },
+      { type: 'paragraph', text: 'Hand them the biggest piece of paper in the house. Where is the entrance? Where are the big rides? Where do people eat? The first map will be too crowded or too spread out. Let them draw it, then walk through it with your finger as a pretend visitor. They will spot the problems themselves.' },
 
       { type: 'heading', level: 3, text: 'Step 3: Build the park' },
-      { type: 'paragraph', text: 'Now the map becomes something real, and there are three good ways to do it. A tabletop model: cardboard boxes for buildings, paper towel rolls for towers, string for zip lines, ramps from folded cardboard, small toys as riders. A drawn park: detailed drawings of each attraction with labels and "blueprints" showing how the ride works. Or a life-size course in the yard: chalk paths, pool noodle tunnels, jump rope zip lines, bucket toss challenges, cone obstacle courses, the whole backyard as a walk-through adventure. This last one is the "adventure course" half of the project and it is the best version for kids who need to move.' },
-      { type: 'paragraph', text: 'Some kids will spend three hours perfecting one ride. Others will slap together five attractions in twenty minutes. Both are fine; the goal is a park someone can actually tour. Help with tricky construction, remind them that working matters more than pretty, and ask: what is the hardest part to build, and how could you simplify it? Does the built version match the map, or did you change things? Older kids can engineer at least one attraction with a moving part: a ramp, a pulley, a spinner, a marble-run feature. That is a small [engineering project](/blog/engineering-for-kids) hiding inside the big one.' },
+      { type: 'paragraph', text: 'Now the map becomes something real, and there are three good ways to do it: a tabletop model from cardboard boxes and paper towel rolls, detailed drawings of each attraction, or a life-size course in the yard with chalk paths, pool noodle tunnels and jump ropes. The yard version is the "adventure course" half of the project and it is the best one for kids who need to move. Working matters more than pretty, and it is a small [engineering project](/blog/engineering-for-kids) hiding inside the big one.' },
 
       { type: 'heading', level: 3, text: 'Step 4: Add the details that make it real (this is where the math lives)' },
-      { type: 'paragraph', text: 'A collection of rides becomes a place people would visit when it has the details. Start with the essentials: an entrance sign, tickets or wristbands, and a menu for at least one food stand. Then whatever excites them: a gift shop, a mascot, a park safety rules poster, a "coming soon" sign for a future ride.' },
-      { type: 'paragraph', text: 'This step is quietly full of math, and the trick is not to point it out. Just ask visitor questions. "What does a corn dog cost at your park?" "What would a family of four spend for a full day?" Here is what that question turns into, for a park charging $12 a ticket:' },
-      { type: 'list', ordered: true, items: [
-        'Tickets: 4 people at $12 is $48.',
-        'Lunch: 4 corn dogs at $4 and 4 drinks at $2 is $16 plus $8, so $24.',
-        'One souvenir each from the gift shop at $5: $20.',
-        'Total for the day: $48 plus $24 plus $20 is $92.',
-      ]},
-      { type: 'paragraph', text: 'Then the question that makes them a business owner: is $92 too much? Would a family come back? What happens to the day if the ticket drops to $10? Kids adjust prices, and every adjustment is a fresh multiplication with a reason behind it. For older kids, take it all the way to a day’s profit: if 200 visitors come at $12 a ticket, that is $2,400 in tickets, plus food sales, minus what the park costs to run (staff, electricity for the coaster, corn dog supplies). Does the park make money? If not, what changes: the price, the number of visitors, or the costs? That is the same thinking as a [real budget](/blog/teach-kids-about-money), with a roller coaster in it.' },
+      { type: 'paragraph', text: 'A collection of rides becomes a place people would visit when it has an entrance sign, tickets and a menu for at least one food stand. This step is quietly full of math, and the trick is not to point it out. Just ask what a visitor would ask. "What would a family of four spend for a full day?" For a park charging $12 a ticket, with a corn dog, a drink and a souvenir each, that comes to $92.' },
+      { type: 'paragraph', text: 'Then the question that makes them a business owner: is $92 too much? Would a family come back? Kids adjust prices, and every adjustment is a fresh multiplication with a reason behind it. It is the same thinking as a [real budget](/blog/teach-kids-about-money), with a roller coaster in it.' },
 
       { type: 'heading', level: 3, text: 'Step 5: Test it with a real visitor' },
-      { type: 'paragraph', text: 'Walk through the park as a guest. Start at the entrance, buy a ticket, follow the paths. Which attraction is the most fun? Which one feels half-finished? Are the signs clear? Be an honest visitor: ask real questions and do not fake enthusiasm for the parts that do not work yet. Your genuine confusion is the best feedback they will get.' },
-      { type: 'paragraph', text: 'Afterwards, sit down together and pick one or two things to improve. Not everything. "If you could only fix one thing before opening day, what would it be?" is the version of this that works. Older kids can make a three-question visitor feedback card, collect answers from two people, and rate each attraction on fun and theme fit, then redesign the weakest one.' },
+      { type: 'paragraph', text: 'Walk through the park as a guest. Start at the entrance, buy a ticket, follow the paths, and be an honest visitor. Your genuine confusion is the best feedback they will get. Afterwards, pick one or two things to improve before opening day.' },
 
       { type: 'heading', level: 3, text: 'Step 6: The grand opening' },
-      { type: 'paragraph', text: 'Your kid runs the show. They greet visitors, hand out maps, explain the attractions, take tickets, and serve the pretend (or real) food. Siblings and friends get roles: ride operator, food stand worker, park photographer. Cut a ribbon. Announce the park name. If it is a life-size course, time each visitor through it and post the results. Even if the whole thing is held together with tape and hope, treating it like a real event gives the project weight, and kids rise to it.' },
-      { type: 'paragraph', text: 'Photograph the park from above, film a "welcome to our park" commercial if they are up for it, and have visitors sign a guest book with their favourite attraction. Then the two questions that turn a fun day into learning: what would you change if you were building a second park, and what was the hardest part of this whole project?' },
+      { type: 'paragraph', text: 'Your kid runs the show. They greet visitors, hand out maps, explain the attractions and take tickets. Cut a ribbon and announce the park name. Even if the whole thing is held together with tape and hope, treating it like a real event gives the project weight, and kids rise to it.' },
 
-      { type: 'product-callout', slug: 'theme-park', context: 'If you want all six steps laid out with the prompts, the visitor questions, and three levels of challenge (a 3-ride park with a basic map, a zoned park with pricing, or a full design with visitor flow, marketing, and a day’s profit), that is the Theme Park or Adventure Course guide for ages 6 to 14. Open it and follow along.' },
+      { type: 'product-callout', slug: 'theme-park', context: 'The guide is how you actually run this with your kid: the questions to ask at every step, the theme, ride and map cards, and three levels of challenge for ages 6 to 14. Open it and follow along.' },
 
       { type: 'heading', level: 2, text: 'Adapting it by age' },
-      { type: 'heading', level: 3, text: 'Ages 6 to 8' },
-      { type: 'paragraph', text: 'A simple park with three or four attractions, described in one sentence each, and a basic map with the rides, the paths, and an entrance, everything labelled. Build or draw three attractions that are recognisable, not fancy. Make an entrance sign, three tickets, and a menu for one food stand with round prices ($2 corn dog, $1 drink). Open the park for one visitor, give the tour, and ask what was fun and what was confusing. The backyard course version is perfect at this age. Minimal writing, maximum building.' },
-      { type: 'heading', level: 3, text: 'Ages 9 to 11' },
-      { type: 'paragraph', text: 'A park with five named attractions sorted into thrill, chill, and interactive, themed zones on the map with a legend and two routes through it, and a built version that matches the layout. Add a gift shop, staff name tags, a park rules poster, and prices for everything, then work out what a family of four spends on a day. Two improvements after a feedback card from two visitors. Host an opening with tickets, a map handout, and at least two guests.' },
-      { type: 'heading', level: 3, text: 'Ages 12 to 14' },
-      { type: 'paragraph', text: 'The full design. A park identity with a name, slogan, and flagship attraction with a backstory. Visitor-flow arrows and a fast-pass route on the map. At least one engineered attraction with a moving part. Then the business side: ticket revenue, food sales, running costs, and whether the park turns a profit in a day, with the price changes it would take if it does not. Rate every attraction and redesign the weakest. Finish with a ribbon cutting, a "Season 2" expansion idea, and a short park commercial. A tween who has argued their ticket price against a family’s budget has done a unit of real-world business math and will not describe it that way.' },
-
-      { type: 'heading', level: 2, text: 'What to say while they work' },
-      { type: 'paragraph', text: 'You are the park visitor, not the park designer. "What kind of park would you want to visit?" beats "you should make a water park." When you praise, praise the thinking, not the neatness: "you moved the food stand closer to the coaster because you noticed visitors would be hungry after" does more than "nice drawing." And when the map is a mess, resist fixing it. Walk it with your finger and let them find the problems.' },
-      { type: 'paragraph', text: 'When the park is open, pick one or two reflection questions and let them answer properly: what was the biggest problem you solved? If a real investor gave you money to build one part of your park for real, which part would you pick? What did you learn about how spaces work from designing the layout? If they want to keep going, a "Season 2" expansion with a new themed zone, a companion water park, zoo, or [museum](/blog/build-a-museum-exhibit-at-home) next door, a brochure to market the park, or turning the backyard course into a timed challenge to beat their own record are all natural next steps.' },
+      { type: 'paragraph', text: 'Ages 6 to 8 usually do best with three or four attractions, a simple labelled map and round prices, and the backyard course is perfect at this age. Ages 9 to 11 can add themed zones and work out what a family of four spends on a day. Ages 12 to 14 can take on the business side and build a ride with a moving part.' },
 
       { type: 'cta', text: 'Want more real-world projects like this one, where the math and the life skills happen in the same task? Our free guide has a week of them you can run at home with almost no prep.', href: '/free-guide', label: 'Get the Free Guide' },
 
-      { type: 'paragraph', text: 'A theme park is a project kids have been waiting to be assigned. The theme is theirs, the visitors are real, and the moment they realise the ticket price decides whether anyone comes is the moment the math stops being math. Hand them the paper, the cardboard, and the family budget, and let them show you what a good park looks like.' },
+      { type: 'paragraph', text: 'A theme park is a project kids have been waiting to be assigned. The theme is theirs, the visitors are real, and the moment they realise the ticket price decides whether anyone comes is the moment the math stops being math. Hand them the paper, the cardboard, and the family budget, and let them show you what a good park looks like. If they want another big build after this, [building a museum exhibit at home](/blog/build-a-museum-exhibit-at-home) is a good next one.' },
       { type: 'paragraph', text: 'And if you would rather open a guide that walks them through the whole thing, that is what the Anywhere Learning membership is for: real-world, hands-on projects for ages 6 to 14, from theme parks to museums to business pitches, ready to run with nothing to plan the night before.' },
 
       { type: 'faq', items: [
@@ -10196,6 +10156,103 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['communication-skills-for-kids', 'critical-thinking-for-kids', 'decision-making-skills-kids', 'allowance-vs-commission', 'teaching-empathy-to-kids'],
+  },
+  // ── Design Your Own Creature ──
+  {
+    slug: 'design-your-own-creature',
+    title: "Design Your Own Creature: A Kids' Biology Project That Sticks",
+    seoTitle: "Design Your Own Creature: A Kids' Biology Project",
+    excerpt: 'Ask a kid to invent an animal and you get wings, horns, gills and laser eyes. Ask what each one is for and you get a real biology project. How to design your own creature at home, give every feature a survival job, build its habitat and present it like a new species, for ages 6 to 14.',
+    metaDescription: 'How kids design their own creature: invent an animal, give every feature a survival job, build its habitat and make a field guide page. Ages 6 to 14.',
+    hook: 'Wings, horns, gills and laser eyes is a great first draft. The project starts when you ask what each one is for.',
+    category: 'stem-for-kids',
+    pillarSlug: 'stem-for-kids',
+    publishedAt: '2026-11-09',
+    dateModified: '2026-11-09',
+    keywords: ['design your own creature', 'create a creature project', 'invent an animal project for kids', 'build a creature', 'animal adaptations project for kids', 'design an animal adaptations', 'creature habitat project', 'make up an animal for kids', 'kids biology project at home', 'adaptations activity for kids'],
+    readTimeMinutes: 7,
+    author: amelie,
+    recommendedProduct: 'creature-habitat',
+    heroImage: '/images/design-your-own-creature-hero.jpeg',
+    heroImageAlt: 'A golden silk orb-weaver spider in sharp focus at the centre of its web, with a boy in a cap blurred behind it',
+    content: [
+      { type: 'summary', text: 'A design-your-own-creature project is a hands-on biology activity where a child invents an animal that has never existed, gives every body part a job that helps it survive, names one real weakness, builds the creature and a habitat that fits it, and presents it on a field guide page like a newly discovered species. It teaches adaptations, camouflage and food chains along with drawing, building and writing, for ages 6 to 14, using paper, cardboard, clay or whatever you find outside.' },
+
+      { type: 'paragraph', text: 'If you ask a kid to invent an animal, it will probably have wings, horns, fur, gills and laser eyes, and it will be able to beat everything else alive. I love that animal. It’s also a great place to start a real biology project, because from there you only need one question: how does that help it survive?' },
+      { type: 'paragraph', text: 'Once you ask that, your kid starts thinking the way a biologist does. The big ears have to do something. The bright colour has to be a message to someone. The creature has to eat, so it has to catch something, and something else is probably trying to catch it. Then they get to build it with their hands and make it a home that makes sense.' },
+      { type: 'paragraph', text: 'This post covers what the project is, the rules that make it work and how it runs from start to finish. If you want to run it with your kid, the [Creature Habitat activity](/shop/creature-habitat) in the library has the questions to ask at every step, the cards to work from and three levels of challenge ready to go.' },
+
+      { type: 'heading', level: 2, text: 'Start by showing them one real animal' },
+      { type: 'paragraph', text: 'The spider in the photo at the top is a golden silk orb-weaver. We came across it on a walk in Delray Beach, Florida, and my son stood behind the web for the picture.' },
+      { type: 'paragraph', text: 'It’s a great animal to show a kid before they start, because so much about it has a job. The females are among the biggest spiders in North America, tarantulas aside, and their webs can be one to two metres across. The silk really is yellow. Researchers have found that yellow webs catch certain bees more often than webs of other colours, and in the shade the yellow seems to blend in with the leaves.' },
+      { type: 'paragraph', text: 'It has a problem too. Tiny silvery spiders, only 3 or 4 millimetres long, move into its web and steal food. That’s what you want from your kid’s creature: a trick that works, and a problem that comes with being alive.' },
+
+      { type: 'heading', level: 2, text: 'What your kid is learning while they do this' },
+      { type: 'paragraph', text: 'You don’t need to teach any of this first. It comes up on its own as soon as you start asking what each part is for.' },
+      { type: 'list', ordered: false, items: [
+        'Biology: adaptations, camouflage, warning colours, predators and prey, and how a food chain fits together.',
+        'Reasoning: giving a reason for every choice, and changing the design when the reason doesn’t hold up.',
+        'Art and making: drawing the creature, then turning a flat sketch into something that stands up.',
+        'Writing: a field guide page that a stranger could use to identify the animal.',
+        'Speaking: explaining a discovery to someone and answering their questions about it.',
+      ]},
+
+      { type: 'heading', level: 2, text: 'The four rules that make it work' },
+      { type: 'paragraph', text: 'These are the only rules. They’re what turn a fun drawing into a biology project, and kids tend to like having them because they make the creature feel more real.' },
+      { type: 'list', ordered: true, items: [
+        'Every feature has a job.',
+        'Every creature has a weakness.',
+        'The habitat fits the body.',
+        'It eats something, and something eats it.',
+      ]},
+      { type: 'paragraph', text: 'Rule one usually gets rid of the laser eyes. Whatever is left has a reason to be there, and your kid can tell you what it is.' },
+
+      { type: 'heading', level: 2, text: 'How to design your own creature with kids, step by step' },
+      { type: 'paragraph', text: 'This works well over three short sessions: invent it and work out how it survives, build it and its home, then present it. It also fits into one long afternoon. Sit down and do it with them. Make your own creature if you want to, because kids love finding the weak spot in yours.' },
+
+      { type: 'heading', level: 3, text: 'Step 1: Invent the creature' },
+      { type: 'paragraph', text: 'Your kid sketches an animal that has never existed, decides what it’s covered in and how big it is, then gives it a name and a personality. If they’re stuck, real animals are the best place to look. Have them mix two and change it until it’s theirs. If they start with a dragon, that’s completely fine.' },
+
+      { type: 'heading', level: 3, text: 'Step 2: Work out how it survives' },
+      { type: 'paragraph', text: 'They figure out what it eats, what it does when something bigger shows up, and what its weakness is. Go through the drawing together and point at each part. If a feature can’t answer "how does this help it survive?", it either gets a job or it goes.' },
+
+      { type: 'heading', level: 3, text: 'Step 3: Build it' },
+      { type: 'paragraph', text: 'Use what you have: clay or playdough, cardboard, tape, or sticks and bark if you’re outside. They probably can’t build every detail, so they have to choose which features matter most. That choice is part of the thinking.' },
+
+      { type: 'heading', level: 3, text: 'Step 4: Build its habitat' },
+      { type: 'paragraph', text: 'Your kid decides exactly where the creature lives, then builds it in a shoebox or outside in a real spot. This is where the design gets tested. Thick white fur doesn’t make much sense on a tropical beach, so either the fur or the beach has to change.' },
+
+      { type: 'heading', level: 3, text: 'Step 5: Make the field guide page and reveal it' },
+      { type: 'paragraph', text: 'Your kid makes a page as if they’d just discovered a new species, then sets the creature in its habitat and presents it to someone. If they love this part, [building a museum exhibit at home](/blog/build-a-museum-exhibit-at-home) uses the same skills.' },
+
+      { type: 'product-callout', slug: 'creature-habitat', pinned: true, context: 'The guide is how you actually run this with your kid: the questions to ask at every step, the Real Animal Tricks, Body Part Jobs and Habitat Match cards, a field guide checklist and three levels of challenge for ages 6 to 14. Open it and follow along.' },
+
+      { type: 'heading', level: 2, text: 'Real animal tricks your kid can borrow' },
+      { type: 'paragraph', text: 'A few real ones to get them going. Read them out loud before they start working on how their creature survives.' },
+      { type: 'list', ordered: false, items: [
+        'Owl: comb-like edges on its wing feathers are part of what makes it so quiet in the air.',
+        'Wood frog: much of its body freezes over the winter and its heart stops. Sugar in its body protects its cells until it thaws in spring.',
+        'Tortoise: its shell is joined to its ribs and spine, so it can never step out of it. It’s great armour, and it has to carry that armour everywhere it goes.',
+      ]},
+      { type: 'image', src: '/images/creature-frog-panama.jpeg', alt: 'A small brown frog sitting on a wet, sandy-coloured rock beside dark water, nearly the same colour as the stone', caption: 'A little frog we spotted on a wet rock in Panama. Show your kid and ask how long it would take a bird to find it.' },
+      { type: 'image', src: '/images/creature-butterfly-panama.jpeg', alt: 'A cream butterfly with bold black stripes resting on a large green leaf', caption: 'Another one from Panama. Ask your kid what those stripes might be for. Nobody needs the right answer to start guessing.' },
+
+      { type: 'heading', level: 2, text: 'How it changes by age' },
+      { type: 'paragraph', text: 'The project works from about 6 to 14, and the steps stay the same. Younger kids draw, name and build, and you write down what they tell you. Older kids reason through every feature, fill in the field guide themselves and can take the biology a lot further.' },
+
+      { type: 'heading', level: 2, text: 'Take the question outside' },
+      { type: 'paragraph', text: 'The best part comes after the project. Once your kid has spent a few days asking "what is that for?" about an animal they invented, they start asking it about real ones. You can help it along on your next walk. This [nature walk checklist for kids](/ideas/nature-walk-ideas) has plenty to look for, and our [backyard science experiments](/blog/backyard-science-experiments) keep the same kind of questions going at home.' },
+
+      { type: 'faq', items: [
+        { question: 'What is a design-your-own-creature project?', answer: 'It’s a hands-on project where a child invents an animal that doesn’t exist and works out how it would really survive. They give every body part a job, name a weakness, build the creature and its habitat, and present it on a field guide page. It works for ages 6 to 14.' },
+        { question: 'What is an animal adaptation, in words kids understand?', answer: 'An adaptation is a body part or behaviour that helps an animal survive where it lives. Big ears that let heat out in the desert are an adaptation, and so are bright colours that warn predators to stay away. A simple test for kids is to ask "how does this help it stay alive?"' },
+        { question: 'How do you make up an animal for a kids’ project?', answer: 'Start by mixing two real animals, then change it until it’s new. Decide what it’s covered in, how big it is and where it lives. Then go through every feature and ask how it helps the animal survive, and give it one weakness so it feels real.' },
+        { question: 'What materials do you need to build a creature and habitat?', answer: 'Paper and something to draw with, plus clay, playdough or cardboard for the creature and a shoebox for the habitat. Tape, glue and scissors help. You can also build the whole thing outside with sticks, leaves, bark and mud, and nothing needs to be bought.' },
+        { question: 'How long does the project take?', answer: 'Plan on three short sessions: one to invent the creature and work out how it survives, one to build it and its habitat, and one for the field guide page and the reveal. It also fits into one long afternoon.' },
+        { question: 'What age is a design-your-own-creature project good for?', answer: 'About 6 to 14. Younger kids draw, name and build the creature while you write down what they say. Older kids give a reason for every feature, fill in the field guide themselves and can go much deeper into the biology.' },
+      ]},
+    ],
+    relatedSlugs: ['imaginary-worlds-kids', 'build-a-museum-exhibit-at-home', 'backyard-science-experiments', 'nature-walks-science', 'stem-activities-by-age', 'design-a-theme-park-kids'],
   },
 ];
 

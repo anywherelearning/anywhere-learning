@@ -170,6 +170,7 @@ const POST_OVERRIDES: Record<string, string | 'capable-kid' | 'free-guide'> = {
   'lego-stem-activities': 'engineering-ideas',
   'science-fair-project-ideas': 'backyard-science-ideas',
   'just-let-them-play': 'creative-ideas',
+  'design-your-own-creature': 'creative-ideas',
   'how-much-screen-time-kids': 'ai-digital-ideas',
   'screen-free-activities-kids': 'creative-ideas',
   'when-should-kids-get-a-phone': 'ai-digital-ideas',
