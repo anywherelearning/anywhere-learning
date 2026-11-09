@@ -1,0 +1,227 @@
+{
+  "slug": "time-energy-planner",
+  "category": "Planning & Problem-Solving",
+  "title": "Time & Energy Planner",
+  "tagline": "Track · Match · Plan · Reset",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds out when they've got the most to give. They list what really fills their day, track their energy from morning to night, match each job to the right time, build a plan with room in it, then live it and find out what brings them back when they run out.",
+  "need": [
+    "Paper and a pencil",
+    "A clock or a phone timer",
+    "An ordinary day, at home or on the go",
+    "Coloured pencils for the energy line (optional)"
+  ],
+  "academics": [
+    { "subject": "Science", "text": "collecting real data and finding a pattern" },
+    { "subject": "Math", "text": "elapsed time and drawing a line graph" },
+    { "subject": "Health", "text": "how food, sleep and movement change a day" },
+    { "subject": "Planning", "text": "priorities, order and breathing room" }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need to be organized yourself. Your job is to be honest about your own day and to keep asking 'Is that a best-brain job?' instead of fixing their plan. Track your own energy too. Kids love finding out exactly when you run out.",
+    "plan": [
+      { "when": "Day 1", "what": "List what fills the day, then check your fuel as you go (Steps 1 and 2)." },
+      { "when": "That evening", "what": "Match the jobs and build tomorrow's plan (Steps 3 and 4)." },
+      { "when": "Day 2", "what": "Live the plan, use a reset and change what didn't work (Step 5)." }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      { "q": "Every number is the same", "a": "Go first and be specific: 'I'm a 2, and the dishes are annoying me.' Then ask how their body feels, not how their day is going." },
+      { "q": "They keep forgetting to check in", "a": "Tie it to things that already happen, like breakfast, lunch and getting dressed. Or set a phone alarm with a silly sound." },
+      { "q": "Their plan has no room in it", "a": "Leave it. Ask 'What happens if that takes longer?' and let the day answer. They'll add room themselves next time." }
+    ]
+  },
+  "lesson": {
+    "text": "A good plan doesn't squeeze more in. It puts the hard things where you've got the most to give, and it leaves room for the part of the day when you don't.",
+    "before": "I'll work on my project after supper.",
+    "model": [
+      { "part": "Energy", "line": "I'm sharpest around 9:30, and I'm done by 3:00." },
+      { "part": "Job", "line": "My project needs my best brain." },
+      { "part": "Plan", "line": "Project from 9:30 to 10:15, then outside." },
+      { "part": "Low point", "line": "At 3:00, a snack and something easy. Nothing hard." }
+    ],
+    "modelNote": "After supper sounded fine, but it's when they've got the least to give. The second plan starts with how the day really feels."
+  },
+  "steps": [
+    {
+      "title": "List what fills your day",
+      "why": "Most of the day hides in between things.",
+      "kid": "Your kid sets a timer for five minutes and writes down everything in an ordinary day, including the doing nothing. They use the Where the day hides card in the Energy Toolkit at the end of the guide, then mark each one must, should or want.",
+      "you": "Walk them through it: 'What's the very first thing you do?' Make sure the real stuff goes on the list, not only what sounds useful. Then share your own honest list.",
+      "ask": [
+        "What takes longer than you think it does?",
+        "What happens in between things?"
+      ],
+      "tip": "Ask them to guess how long getting dressed really takes, then time it tomorrow.",
+      "levels": {
+        "explore": "Say or draw five things you do every day, and pick the one that matters most.",
+        "develop": "List at least ten things, mark must, should or want, and guess how long each takes.",
+        "extend": "List everything, add up the hours and work out how much of the day is really yours to choose."
+      }
+    },
+    {
+      "title": "Catch your energy",
+      "why": "You can't guess this one. You have to catch it.",
+      "kid": "Your kid stops at least five times in a day and gives themselves a number from the Fuel check card, writing down the time and what they'd just been doing. Then they join the dots into an energy line and look for the highs and the crash.",
+      "you": "Do it with them and say your numbers out loud. At the end, put your lines side by side and find out when you're both out of fuel.",
+      "ask": [
+        "What's your number right now?",
+        "What happened just before it changed?"
+      ],
+      "tip": "Look at what they'd just eaten or done before each big change. That's usually where the surprises are.",
+      "levels": {
+        "explore": "Say your number at breakfast, lunch and bedtime, and colour in three dots.",
+        "develop": "Check in five or six times, draw your line and name what pushed it up or down.",
+        "extend": "Track two different kinds of day, compare the lines and explain what's different."
+      }
+    },
+    {
+      "title": "Match the job to the energy",
+      "why": "Hard things feel harder at the wrong time.",
+      "kid": "Your kid goes through their list and uses the Match it card to label each job best brain, okay brain or tired brain. Then they write each one along their energy line where it belongs, and notice what doesn't fit.",
+      "you": "Keep asking 'Is that a best-brain job?' and let them argue. Don't move anything for them. If everything is best brain, ask what they could do half asleep.",
+      "ask": [
+        "Which job on your list needs your best brain?",
+        "Where does the thing you keep putting off go?"
+      ],
+      "tip": "The job they keep putting off often belongs in their best time, not whatever's left over.",
+      "levels": {
+        "explore": "Sort four jobs into two piles, best brain and tired brain.",
+        "develop": "Label every job and put each one on your line, then circle anything that clashes.",
+        "extend": "Label every job and decide what has to happen first, and what you'd drop if two things clash."
+      }
+    },
+    {
+      "title": "Build the day",
+      "why": "A plan with no room in it breaks by mid-morning.",
+      "kid": "Your kid builds tomorrow from their energy line. Fixed things go in first, like meals and sleep, then the hard job in their best time, a small gap after each block and an empty stretch somewhere. They fill in My day plan at the end of the guide.",
+      "you": "Ask questions and leave the plan alone, even when you can see the trouble coming. 'How long will that really take?' and 'Where's your gap?' are plenty.",
+      "ask": [
+        "Where's your gap if something runs long?",
+        "What are you looking forward to at the end?"
+      ],
+      "tip": "End the plan with something easy or fun. It makes it much more likely they'll start it.",
+      "levels": {
+        "explore": "Plan one morning or afternoon in three or four blocks, with one gap.",
+        "develop": "Plan a full day with six blocks, a gap after each one and some empty time.",
+        "extend": "Plan two different kinds of day, and explain why the blocks move between them."
+      }
+    },
+    {
+      "title": "Live it and find your reset",
+      "why": "Every plan runs into a low point. What matters is what you do next.",
+      "kid": "Your kid follows the plan for a day and marks what happened. When their number drops, they try something from the Resets card and see if it works. Afterwards they keep what helped, change what didn't and choose their best three resets.",
+      "you": "Don't rescue the plan when it wobbles. Tell them what you do when you run out, and what you've tried that doesn't help at all.",
+      "ask": [
+        "What was the first thing to go off the plan?",
+        "Which reset actually brought you back?"
+      ],
+      "tip": "Odd resets count. If humming in the bathroom works, it goes on the list.",
+      "levels": {
+        "explore": "Try your plan and one reset, then say what helped and what you'd change.",
+        "develop": "Live the plan for two days, test two resets and change the plan twice.",
+        "extend": "Live it for three days, then write your own rules for different kinds of day and what to do at each low point."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Energy Toolkit",
+    "intro": "Where the time goes, how to read your own fuel, what goes when and how to come back.",
+    "items": [
+      {
+        "name": "Where the day hides",
+        "lines": [
+          { "k": "Waking up:", "v": "the first 20 minutes" },
+          { "k": "In between:", "v": "getting from one thing to the next" },
+          { "k": "Food:", "v": "making it, eating it, cleaning up" },
+          { "k": "Screens:", "v": "how long, really?" },
+          { "k": "Nothing:", "v": "wandering, staring, being bored" }
+        ],
+        "ask": "Where did the time go?"
+      },
+      {
+        "name": "Fuel check",
+        "lines": [
+          { "k": "5:", "v": "I could take on anything" },
+          { "k": "4:", "v": "ready to think" },
+          { "k": "3:", "v": "fine, but nothing tricky" },
+          { "k": "2:", "v": "slow and easily annoyed" },
+          { "k": "1:", "v": "done for now" }
+        ],
+        "ask": "What's your number right now?"
+      },
+      {
+        "name": "Match it",
+        "lines": [
+          { "k": "Best brain:", "v": "new, tricky or important" },
+          { "k": "Okay brain:", "v": "things you know how to do" },
+          { "k": "Tired brain:", "v": "tidying, sorting, easy jobs" },
+          { "k": "Fixed:", "v": "meals, sleep, set times" },
+          { "k": "Putting off:", "v": "try it in your best time" }
+        ],
+        "ask": "Does this need your best brain?"
+      },
+      {
+        "name": "Resets",
+        "lines": [
+          { "k": "Five minutes:", "v": "just start, then decide" },
+          { "k": "Move:", "v": "stretch, jump, walk around" },
+          { "k": "New spot:", "v": "another room or outside" },
+          { "k": "Shrink it:", "v": "one sentence, one shelf" },
+          { "k": "Swap:", "v": "do something easy first" }
+        ],
+        "ask": "Which one really helped?"
+      }
+    ],
+    "after": {
+      "label": "My day plan",
+      "lines": [
+        "My best-brain time",
+        "What goes there",
+        "My low point",
+        "My best reset"
+      ]
+    }
+  },
+  "skills": [
+    { "name": "Self-awareness", "text": "knowing when they're at their best" },
+    { "name": "Priorities", "text": "deciding what matters most" },
+    { "name": "Time sense", "text": "seeing where the day really goes" },
+    { "name": "Self-regulation", "text": "having a way back when energy drops" }
+  ],
+  "conclusion": {
+    "headline": "They know when they've got the most to give.",
+    "text": "Listen for it in the weeks after. If they say 'I'll do that in the morning' or 'I'm a 2 right now, I need a minute', they've started to read themselves.",
+    "celebrate": "When they save a hard thing for the right time and it goes well, say: 'You knew exactly when to do that.'",
+    "extensions": [
+      "Plan a family day out around everyone's low points",
+      "Compare an ordinary day with a travel day",
+      "Try one new reset each week and keep score",
+      "Ask a grandparent when they do their best thinking, and whether it's changed"
+    ]
+  },
+  "signs": [
+    "They know when they think best",
+    "They save hard things for the right time",
+    "They can say what they need when they run out"
+  ],
+  "makeItReal": "Put their energy line on the fridge, and plan the next big or hard thing around it.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/time-energy-planner.jpg",
+    "alt": "Two soaking wet kids in the forest after a hike, the younger one scowling through wet hair in a black hoodie, the older one grinning",
+    "caption": "Same hike. Very different numbers.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "We finished this hike in the pouring rain, trying to find shelter here and there. My daughter was cold and whining. My son was having fun. Ask them for a number on that trail and you'd have got a 1 and a 5.",
+    "quotes": []
+  }
+}

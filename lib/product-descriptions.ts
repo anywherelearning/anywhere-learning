@@ -1181,23 +1181,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'time-energy-planner': {
     opening:
-      'Your child maps their own energy patterns, figures out when their brain actually works best, and builds a daily plan that matches hard tasks to high-energy windows. Then they test it in real life and fix what does not work. Self-awareness and planning skills that most adults never learn.',
+      'Your child finds out when they have the most to give. They list what really fills their day, give themselves a fuel number at five moments from morning to night and draw their own energy line. Then they match each job to the right time, build a plan with room in it, live it and find out what brings them back when they run out.',
     whatsIncluded: [
-      'Brain dump and task sorting by priority',
-      'Personal energy mapping throughout the day',
-      'Task-to-energy matching system',
-      'Time-blocked daily plan with buffers',
-      'Real-life testing and Version 2 revision',
+      'A 5-step guide from listing the day to finding your reset',
+      'A worked example that shows why timing beats trying harder',
+      'Where the day hides card and Fuel check card',
+      'Match it card and Resets card',
+      'My day plan page to fill in and keep',
     ],
-    skillTags: ['Planning', 'Self-Awareness', 'Life Skills'],
+    skillTags: ['Self-Awareness', 'Planning', 'Time Management', 'Self-Regulation', 'Life Skills'],
     insideTheLearning: {
       lead:
-        'Your child maps when they actually have energy across a day, then matches tasks to it instead of fighting it. Brain dump, sort by priority, block the day with buffers built in. Then they test it against a real day and find out where it was optimistic.',
+        'Your child learns that a good plan does not squeeze more in. It puts the hard things where they have the most to give and leaves room for the part of the day when they do not. They collect their own numbers, so the plan starts with how the day really feels.',
       skills: [
-        { skill: 'Executive Functioning', where: 'Dumping every task out, sorting by priority, and building a time-blocked plan' },
-        { skill: 'Planning', where: 'Matching hard tasks to high-energy hours and leaving buffers for reality' },
-        { skill: 'Emotional Regulation', where: 'Noticing their own patterns instead of pushing through and crashing' },
-        { skill: 'Problem-Solving', where: 'Testing the plan on a real day and fixing what did not survive' },
+        { skill: 'Self-Awareness', where: 'Catching their own energy at five moments and finding the highs and the crash' },
+        { skill: 'Science', where: 'Collecting real data and looking for what pushed the line up or down' },
+        { skill: 'Math', where: 'Drawing a line graph and working out how long things really take' },
+        { skill: 'Planning', where: 'Putting each job in the right time and leaving gaps for what runs long' },
+        { skill: 'Self-Regulation', where: 'Testing resets and choosing what really brings them back' },
       ],
     },
     format: 'Project Guide',
