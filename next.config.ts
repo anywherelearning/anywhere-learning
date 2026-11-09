@@ -79,6 +79,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Retired Nov 2026: too close to Travel Day.
+      {
+        source: "/shop/plan-a-mini-adventure",
+        destination: "/shop/travel-day",
+        permanent: true,
+      },
+
       // ── Membership pivot: routes that no longer exist ──
       // Old pins, posts, and emails still point at the a-la-carte store.
       // /join folded into the homepage (Aug 2026). These land on #membership,

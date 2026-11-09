@@ -16,7 +16,7 @@ const SEPTEMBER_2026 = {
     // Six Self-Management picks (no overlap with any other month's set).
     slugs: [
       'time-energy-planner',     // map energy, build a real daily plan, test it
-      'plan-a-mini-adventure',   // plan a two-hour family outing and lead it
+      'problem-solver',          // find why something keeps happening, build a fix
       'boredom-toolkit',         // handle empty time without a screen
       'teach-it-to-learn-it',    // plan a real lesson and deliver it
       'travel-day',              // plan a full day trip: budget, itinerary, backup

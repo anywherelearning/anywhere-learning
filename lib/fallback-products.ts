@@ -2701,7 +2701,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: null,
     ageRange: "Ages 6–14",
     sortOrder: 144,
-    active: true,
+    active: false, // retired Nov 2026: too close to Travel Day, which covers ages 6-14
     createdAt: new Date("2026-06-26"),
   },
 

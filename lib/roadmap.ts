@@ -269,7 +269,7 @@ export const TERRITORIES: readonly Territory[] = [
       ],
     },
     activities: [
-      'time-energy-planner', 'plan-a-mini-adventure', 'travel-day', 'hard-thing-challenge',
+      'time-energy-planner', 'travel-day', 'hard-thing-challenge',
       'boredom-toolkit', 'calm-down-toolkit', 'disappointment-lab', 'comeback-journal',
       'business-failure-lab', 'worry-sorter', 'healthy-tech-boundaries',
     ],
@@ -379,7 +379,7 @@ export const TERRITORIES: readonly Territory[] = [
     },
     activities: [
       'outdoor-learning-missions', 'square-foot-safari', 'invent-a-sport',
-      'backyard-campout-planner', 'outdoor-survival-planner', 'plan-a-mini-adventure',
+      'backyard-campout-planner', 'outdoor-survival-planner',
       'nature-journal-walks', 'nature-walk-task-cards', 'outdoor-stem-challenges', 'land-art-challenges',
     ],
   },
