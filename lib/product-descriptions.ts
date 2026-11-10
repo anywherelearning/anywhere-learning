@@ -1914,24 +1914,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'pricing-experiment': {
     opening:
-      'Test different pricing strategies and discover what makes people willing to pay. Kids experiment with value perception, anchoring, bundling, and other pricing techniques. Financial literacy and critical thinking through hands-on experimentation.',
+      'Your child finds the right price for something real by testing it, not guessing. They work out what one costs to make, check what others charge, pick two prices and predict which will win. Then they sell at both with real buyers, try a bigger size or a bundle, and settle on the price their own numbers support.',
     whatsIncluded: [
-      'Pricing experiment design guide',
-      'Value perception and anchoring activities',
-      'Real pricing challenges and scenarios',
-      'Data collection and analysis framework',
-      'Strategy reflection and decision-making',
+      'A 5-step guide from the cost of one to a tested price',
+      'A worked example where the higher price keeps more money',
+      'Cost of one card and Market check card',
+      'Test tally card and Value ideas card',
+      'My price page to fill in with their own results',
     ],
-    skillTags: ['Financial Literacy', 'Critical Thinking', 'Experimentation', 'Maths', 'Decision-Making'],
+    skillTags: ['Financial Literacy', 'Math', 'Experimentation', 'Critical Thinking', 'Decision-Making'],
     insideTheLearning: {
       lead:
-        'Your child tests what a price actually does. Same product, different numbers, real reactions. They gather the data, find where their assumptions were wrong, and work out the margin underneath. Then they have to defend the price they landed on.',
+        'Your child learns that the price that sells the most is not always the price that makes the most. They find their floor, run a fair test with real buyers and let their own numbers decide.',
       skills: [
-        { skill: 'Financial Literacy', where: 'Costs, margins, and the logic that decides what a price should be' },
-        { skill: 'Research', where: 'Collecting real prices and finding the patterns in them' },
-        { skill: 'Critical Thinking', where: 'Testing their assumptions against the data instead of their instinct' },
-        { skill: 'Problem-Solving', where: 'Balancing the trade-offs when the profitable price is not the popular one' },
-        { skill: 'Communication', where: 'Explaining and pitching the pricing decision they made' },
+        { skill: 'Math', where: 'Working out the cost of one, money in and money kept at each price' },
+        { skill: 'Science', where: 'Running a fair test where only the price changes' },
+        { skill: 'Financial Literacy', where: 'Seeing how costs, deals and value shape a price' },
+        { skill: 'Research', where: 'Checking what shops and other sellers charge' },
+        { skill: 'Communication', where: 'Explaining their final price using real numbers' },
       ],
     },
     format: 'Project Guide',

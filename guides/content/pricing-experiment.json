@@ -1,0 +1,344 @@
+{
+  "slug": "pricing-experiment",
+  "category": "Entrepreneurship",
+  "title": "Pricing Experiment",
+  "tagline": "Floor · Market · Test · Value",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds the right price for something real by testing it, not guessing. They work out what one costs to make, see what others charge, pick two prices and predict, sell at both with real buyers, then try adding value and settle on the price their numbers support.",
+  "need": [
+    "Something to sell: baking, crafts or a service",
+    "The receipts for what it costs",
+    "A place to sell it, twice",
+    "Paper and a pencil for the tally"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "cost of one, profit and comparing results"
+    },
+    {
+      "subject": "Science",
+      "text": "a fair test with only one thing changed"
+    },
+    {
+      "subject": "Economics",
+      "text": "value, demand and what buyers will pay"
+    },
+    {
+      "subject": "Communication",
+      "text": "explaining a price with real numbers"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need to know anything about business. You're the receipt-keeper and the honest customer. Your most useful question is 'More sales, or more money?' Let them pick prices you think are wrong. The test will tell them, and that sticks far better than you telling them.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Find the floor and check the market (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Pick two prices and predict (Step 3)."
+      },
+      {
+        "when": "Two selling times",
+        "what": "Run the test (Step 4)."
+      },
+      {
+        "when": "Afterwards",
+        "what": "Add value and set the price (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to charge way too much",
+        "a": "Let them test it. Watching people walk away teaches more than any warning."
+      },
+      {
+        "q": "They have nothing to sell",
+        "a": "A service works too, like washing cars or raking leaves. Price it per job, and test two prices with different neighbours."
+      },
+      {
+        "q": "The two days weren't fair",
+        "a": "That's one of the best lessons in here. Ask what else changed besides the price, and run it again with more kept the same."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "The price that sells the most isn't always the price that makes the most. You only find out by knowing your costs and testing more than one price with real buyers.",
+    "before": "I'll charge $1 so everyone buys one.",
+    "model": [
+      {
+        "part": "Floor",
+        "line": "One cookie costs me 25 cents to make."
+      },
+      {
+        "part": "At $1",
+        "line": "Sold 20. Kept 75 cents each, so $15."
+      },
+      {
+        "part": "At $2",
+        "line": "Sold 12. Kept $1.75 each, so $21."
+      },
+      {
+        "part": "Price",
+        "line": "$2 wins, and I bake 8 fewer cookies."
+      }
+    ],
+    "modelNote": "The cheap price sold more cookies. The higher one kept more money for less work, and they'd never have known without testing both."
+  },
+  "steps": [
+    {
+      "title": "Find your floor",
+      "why": "Below this price, every sale loses money.",
+      "kid": "Your kid picks something to sell and works out what one costs, using the Cost of one card in the Pricing Toolkit at the end of the guide. They split shared costs, like a bag of flour, across everything it makes, and remember the packaging.",
+      "you": "Show them the receipts and let them do the dividing. If they want to count their time, ask what an hour of their time should be worth.",
+      "ask": [
+        "What does one really cost you?",
+        "What did you almost forget to count?"
+      ],
+      "tip": "Packaging is the cost everyone forgets. Bags, cups and labels add up fast.",
+      "levels": {
+        "explore": "Add up what goes into one, with a grown-up helping with the math.",
+        "develop": "Work out the cost of one, including packaging and shared costs.",
+        "extend": "Work out the cost of one with and without your time, and see how far your floor moves."
+      }
+    },
+    {
+      "title": "Check the market",
+      "why": "Buyers already have a price in their head.",
+      "kid": "Your kid finds what others charge for the same thing or something close, using the Market check card: a store, a market stall, a café or a quick search. They write down the lowest, the middle and the highest, and where theirs fits.",
+      "you": "Go and look together, in a shop or online. Ask 'Why does this one cost more?' and let them guess before you say anything.",
+      "ask": [
+        "Why is that one so much more?",
+        "What makes yours different?"
+      ],
+      "tip": "Compare the price of one piece, not the package. A box of 12 at $6 is 50 cents each.",
+      "levels": {
+        "explore": "Find two prices for something like yours, and say which is cheaper.",
+        "develop": "Find four or five prices, and mark the lowest, middle and highest.",
+        "extend": "Work out the price of one piece for each, and explain how the most expensive one gets away with it."
+      }
+    },
+    {
+      "title": "Pick two prices and predict",
+      "why": "A guess turns into an experiment when you write it down first.",
+      "kid": "Your kid picks two prices above their floor, a lower one and a higher one. For each, they predict how many they'll sell and how much they'll keep after costs. Then they write down which one they think will win, and why.",
+      "you": "Ask 'More sales, or more money?' and let them argue it out. Don't tell them which one you'd pick.",
+      "ask": [
+        "Which price will sell more?",
+        "Which price will keep more?"
+      ],
+      "tip": "Make the gap big enough to matter. $1 and $2 will tell you more than $1 and $1.25.",
+      "levels": {
+        "explore": "Pick a low price and a high price, and guess which will sell more.",
+        "develop": "Predict sales and money kept at both prices.",
+        "extend": "Add a third price, and predict where the most money kept will be."
+      }
+    },
+    {
+      "title": "Run the test",
+      "why": "Only real buyers can tell you what it's worth.",
+      "kid": "Your kid sells at one price for a set time, then at the other price on another day, in the same place at the same time of day. They keep a tally using the Test tally card, and work out what they kept at each price.",
+      "you": "Help set up and stay close. Keep everything the same except the price, and count the money together at the end of each session.",
+      "ask": [
+        "Did more people walk away at the higher price?",
+        "Which price kept more money?"
+      ],
+      "tip": "Weather and crowds change everything. If one day was rainy, test again before you decide.",
+      "levels": {
+        "explore": "Sell at both prices, and count how many you sold each time.",
+        "develop": "Tally sales, money in and money kept at both prices, then compare.",
+        "extend": "Run each price twice, and work out the average before you decide."
+      }
+    },
+    {
+      "title": "Add value and set your price",
+      "why": "People don't pay for the cost. They pay for what they feel they get.",
+      "kid": "Your kid tries one idea from the Value ideas card, like a bigger size or a bundle, and watches whether people pay more for it. Then they choose their price, fill in My price at the end of the guide and explain it to someone using their numbers.",
+      "you": "Be an honest customer. Tell them whether the bigger size or the bundle would make you pay more, and why.",
+      "ask": [
+        "Would you pay more for that?",
+        "What price will you keep, and why?"
+      ],
+      "tip": "Watch the math on deals. 'Buy four, get one free' at $1 is really 80 cents each, so check it's still above your floor.",
+      "levels": {
+        "explore": "Try one value idea, and say which price you'll keep.",
+        "develop": "Test one value idea with real buyers, then fill in My price.",
+        "extend": "Work out what you'd do if your costs went up by a dollar, and explain your new price."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Pricing Toolkit",
+    "intro": "What one costs, what others charge, how to keep score and ways to make it worth more.",
+    "items": [
+      {
+        "name": "Cost of one",
+        "lines": [
+          {
+            "k": "Ingredients:",
+            "v": "everything that goes in"
+          },
+          {
+            "k": "Packaging:",
+            "v": "bags, cups, labels"
+          },
+          {
+            "k": "Shared:",
+            "v": "a $4 bag of flour ÷ 40 cookies"
+          },
+          {
+            "k": "Time:",
+            "v": "what's an hour of yours worth?"
+          },
+          {
+            "k": "Floor:",
+            "v": "never sell below this"
+          }
+        ],
+        "ask": "What does one really cost?"
+      },
+      {
+        "name": "Market check",
+        "lines": [
+          {
+            "k": "Shops:",
+            "v": "what does the store charge?"
+          },
+          {
+            "k": "Stalls:",
+            "v": "what do other sellers charge?"
+          },
+          {
+            "k": "Online:",
+            "v": "search for the same thing"
+          },
+          {
+            "k": "Range:",
+            "v": "lowest, middle, highest"
+          },
+          {
+            "k": "Yours:",
+            "v": "what makes it different?"
+          }
+        ],
+        "ask": "Where does yours fit?"
+      },
+      {
+        "name": "Test tally",
+        "lines": [
+          {
+            "k": "Price:",
+            "v": "the same for the whole session"
+          },
+          {
+            "k": "Sold:",
+            "v": "a tally mark for each one"
+          },
+          {
+            "k": "In:",
+            "v": "price × number sold"
+          },
+          {
+            "k": "Kept:",
+            "v": "money in minus costs"
+          },
+          {
+            "k": "Fair:",
+            "v": "same place, same time, same length"
+          }
+        ],
+        "ask": "More sales, or more money?"
+      },
+      {
+        "name": "Value ideas",
+        "lines": [
+          {
+            "k": "Bigger:",
+            "v": "a large size for a bit more"
+          },
+          {
+            "k": "Bundle:",
+            "v": "3 for $5"
+          },
+          {
+            "k": "Extras:",
+            "v": "a ribbon, a label, a note"
+          },
+          {
+            "k": "Story:",
+            "v": "say how and why it's made"
+          },
+          {
+            "k": "Fresh:",
+            "v": "made this morning"
+          }
+        ],
+        "ask": "Would they pay more for that?"
+      }
+    ],
+    "after": {
+      "label": "My price",
+      "lines": [
+        "One costs me",
+        "Others charge",
+        "What I kept at each price",
+        "My price and why"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Money math",
+      "text": "cost of one and money kept"
+    },
+    {
+      "name": "Experimenting",
+      "text": "changing only the price"
+    },
+    {
+      "name": "Market sense",
+      "text": "knowing what others charge"
+    },
+    {
+      "name": "Value thinking",
+      "text": "seeing what people will pay more for"
+    }
+  ],
+  "conclusion": {
+    "headline": "They found their price, and they can prove it.",
+    "text": "Next time you're shopping together, see what they notice. If they check the price of one piece, or wonder out loud why one brand costs double, they've started to see how prices really work.",
+    "celebrate": "When they explain their price with their own numbers, say: 'You didn't guess. You tested it.'",
+    "extensions": [
+      "Test a sale price, like half off in the last hour",
+      "Price a service by the job and by the hour, and compare",
+      "Find the same item in three stores and work out who charges most, and why",
+      "Ask a shop owner how they decide their prices"
+    ]
+  },
+  "signs": [
+    "They check the price of one piece, not the package",
+    "They ask what something costs to make",
+    "They test before they decide"
+  ],
+  "makeItReal": "Keep the tally sheet, and use it to price the next batch, the next stall or the next season.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/pricing-experiment.jpg",
+    "alt": "Three kids behind a park table of homemade cookies, with a hand-drawn sign reading homemade cookies $1, buy 4 get 1 free, and a tip jar",
+    "caption": "$1 a cookie, or buy four, get one free."
+  },
+  "fromHome": {
+    "text": "My daughter and two friends set up a cookie stand in the park. Their sign said $1 a cookie, or buy four, get one free, which works out to 80 cents each. Some cookies came out much smaller but cost the same, so they sold slower.",
+    "quotes": []
+  }
+}
