@@ -158,7 +158,7 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
     colorText: '#b5803e',
     time: 'Multi-day',
     photo: '/products/micro-business.jpg',
-    blurb: 'Price it, brand it, pitch it, profit.',
+    blurb: 'Run it, keep the books, decide.',
   },
   {
     slug: 'brand-builder',
@@ -171,14 +171,14 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
     blurb: 'Name, logo and story, from scratch.',
   },
   {
-    slug: 'customer-discovery',
-    title: 'Customer Discovery',
+    slug: 'complaint-to-product',
+    title: 'Complaint to Product',
     category: 'Entrepreneurship',
     color: '#b5803e',
     colorText: '#b5803e',
-    time: 'Half-day',
-    photo: '/products/customer-discovery.jpg',
-    blurb: 'Ask customers, then fix the idea.',
+    time: 'Multi-day',
+    photo: '/products/complaint-to-product.jpg',
+    blurb: 'Listen, build it rough, test it.',
   },
   {
     slug: 'problem-solver',

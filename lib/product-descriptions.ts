@@ -2907,23 +2907,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'complaint-to-product': {
     opening:
-      'Your child turns one everyday family annoyance into a real product idea. They collect complaints, pick one worth solving, invent a fix, design it, and pitch it to the family. Every great business started as somebody\'s complaint.',
+      'Your child designs a product for someone else, not just for themselves. They collect complaints from real people, find the one that keeps coming up and build a rough model from cardboard. Then they watch the people who complained try it without explaining, fix what went wrong and find out if anyone would really choose it.',
     whatsIncluded: [
-      'Collect real complaints worth solving',
-      'Pick one problem to tackle',
-      'Brainstorm and choose the best fix',
-      'Design the product, name and all',
-      'Pitch it and field real questions',
+      'A 5-step guide from collecting complaints to a real yes',
+      'A worked example that shows why listening beats inventing alone',
+      'Listening questions card and Spot the pattern card',
+      'Make it real card and Test it card',
+      'My product page to fill in with who said yes',
     ],
-    skillTags: ['Problem-Solving', 'Innovation', 'Design Thinking', 'Confidence'],
+    skillTags: ['Entrepreneurship', 'Design Thinking', 'Listening', 'Prototyping', 'Empathy'],
     insideTheLearning: {
       lead:
-        'Your child takes something that genuinely annoys them and turns it into a product. A vague complaint has to become a clear problem first, which is most of the work. Then they invent the fix and have to stand up and sell it.',
+        'Your child learns that a good product starts with someone else. They listen for the complaint that keeps coming up, build something rough enough to test and watch real people use it before deciding what to change.',
       skills: [
-        { skill: 'Problem-Solving', where: 'Turning a vague annoyance into a clearly defined problem' },
-        { skill: 'Innovation', where: 'Inventing something that did not exist before' },
-        { skill: 'Design Thinking', where: 'Noticing what bugs other people too, which is where good products start' },
-        { skill: 'Confidence', where: 'Standing up and selling an idea they believe in' },
+        { skill: 'Communication', where: 'Asking open questions and writing down exact words' },
+        { skill: 'Critical Thinking', where: 'Finding one pattern in many different complaints' },
+        { skill: 'Creativity', where: 'Inventing a fix and building a cardboard model' },
+        { skill: 'Science', where: 'Watching people test it and changing what failed' },
+        { skill: 'Empathy', where: 'Designing for someone else and asking for an honest yes' },
       ],
     },
     format: 'Project Guide',

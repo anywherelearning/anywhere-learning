@@ -79,6 +79,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Retired Nov 2026: merged into Complaint to Product.
+      {
+        source: "/shop/product-design-lab",
+        destination: "/shop/complaint-to-product",
+        permanent: true,
+      },
+      {
+        source: "/shop/customer-discovery",
+        destination: "/shop/complaint-to-product",
+        permanent: true,
+      },
+
       // Retired Nov 2026: merged into Micro-Business Challenge.
       {
         source: "/shop/community-service-business",

@@ -30,7 +30,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "community-impact": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Community%20Impact%20Project%20v5.pdf",
   "community-service-business": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Community%20Service%20Business%20v2.pdf",
   "community-tour-guide": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Community%20Tour%20Guide%20v6.pdf",
-  "complaint-to-product": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Complaint%20to%20Product%20v2.pdf",
+  "complaint-to-product": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Complaint%20to%20Product%20v3.pdf",
   "conflict-fix": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Conflict%20Fix%20v2.pdf",
   "create-with-ai": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20CREATE%20WITH%20AI%2C%20ETHICALLY%20v2.pdf",
   "creature-habitat": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Create%20a%20Creature%20and%20Build%20Its%20Habitat%20v4.pdf",

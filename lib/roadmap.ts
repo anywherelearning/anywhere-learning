@@ -161,7 +161,7 @@ export const TERRITORIES: readonly Territory[] = [
       ],
     },
     activities: [
-      'media-info-check', 'customer-discovery', 'what-if-scenario-lab', 'rube-goldberg-machine',
+      'media-info-check', 'complaint-to-product', 'what-if-scenario-lab', 'rube-goldberg-machine',
       'decomposition-detective', 'supply-chain-detective', 'seed-travelers', 'hallucination-detective',
       'family-debate-night', 'bias-fairness-lab', 'comeback-journal',
       'pricing-experiment', 'camouflage-challenge', 'problem-solver', 'three-ais-one-question',
@@ -215,8 +215,8 @@ export const TERRITORIES: readonly Territory[] = [
     },
     activities: [
       'directions-challenge', 'community-tour-guide', 'two-minute-story', 'neighbourhood-interview',
-      'people-stories-interview', 'customer-discovery', 'shark-tank-pitch', 'market-stall-pitch',
-      'mini-movie', 'investor-pitch', 'product-design-lab', 'board-game-studio', 'family-debate-night',
+      'people-stories-interview', 'complaint-to-product', 'shark-tank-pitch', 'market-stall-pitch',
+      'mini-movie', 'investor-pitch', 'board-game-studio', 'family-debate-night',
     ],
   },
   {
@@ -295,7 +295,7 @@ export const TERRITORIES: readonly Territory[] = [
       ],
     },
     activities: [
-      'imaginary-world', 'invent-a-sport', 'theme-park', 'product-design-lab', 'rube-goldberg-machine',
+      'imaginary-world', 'invent-a-sport', 'theme-park', 'rube-goldberg-machine',
       'board-game-studio', 'land-art-challenges', 'mini-movie', 'household-orchestra', 'survival-base',
       'nature-crafts', 'kinetic-sculpture', 'build-a-museum', 'creature-habitat', 'micro-business',
       'marketing-campaign', 'brand-builder', 'problem-solver', 'complaint-to-product', 'shark-tank-pitch',

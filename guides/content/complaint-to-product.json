@@ -1,0 +1,336 @@
+{
+  "slug": "complaint-to-product",
+  "category": "Entrepreneurship",
+  "title": "Complaint to Product",
+  "tagline": "Listen · Pattern · Build · Test",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid designs a product for someone else's problem, not their own. They collect complaints from real people, find the one that keeps coming up, build a rough model from cardboard, watch the people who complained try it, then fix it and find out if anyone would really choose it.",
+  "need": [
+    "A few people to listen to: family, friends, neighbours",
+    "Cardboard, tape, string and scissors",
+    "A notebook for their exact words",
+    "Time to go back and test"
+  ],
+  "academics": [
+    {
+      "subject": "Communication",
+      "text": "asking open questions and really listening"
+    },
+    {
+      "subject": "Design",
+      "text": "building and testing a rough model"
+    },
+    {
+      "subject": "Science",
+      "text": "watching, testing and changing one thing"
+    },
+    {
+      "subject": "Math",
+      "text": "tallying complaints and test results"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need to be handy or creative. You're the first person they interview and the ride to the others. Your most useful question is 'Who's it for?' Keep bringing them back to the people who complained, especially when they fall in love with their own idea.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Collect complaints and find the pattern (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Invent it and build a rough model (Step 3)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Test it, fix it and ask for a real yes (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They only want to invent for themselves",
+        "a": "Fair, and Problem-Solver Studio is made for that. Here, ask: 'Who else has this problem? Let's go and ask them.'"
+      },
+      {
+        "q": "People are too polite to criticize",
+        "a": "Ask them to show you, not tell you. Watching someone use it is honest even when people are being nice."
+      },
+      {
+        "q": "The model fell apart",
+        "a": "Good, that's what models are for. Ask which part broke first, and rebuild only that part."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A good product doesn't start with an idea. It starts with listening to someone else's complaint, and it isn't finished until they'd actually choose it.",
+    "before": "I'll invent a robot that cleans my room.",
+    "model": [
+      {
+        "part": "Complaint",
+        "line": "Four people said their charger cord keeps falling behind the table."
+      },
+      {
+        "part": "Pattern",
+        "line": "It slides off every time the phone is unplugged."
+      },
+      {
+        "part": "Model",
+        "line": "A clip with a cardboard weight that keeps the end on the table."
+      },
+      {
+        "part": "Test",
+        "line": "Three of four used it without help. One wanted it smaller."
+      }
+    ],
+    "modelNote": "The robot fixed a problem only your kid had. The clip came from listening, and the test showed it works for other people."
+  },
+  "steps": [
+    {
+      "title": "Collect complaints",
+      "why": "Every product you own started as someone's complaint.",
+      "kid": "Your kid asks at least five people about one part of their day, like getting out the door, meals, trips or chores, using the Listening questions card in the Product Toolkit at the end of the guide. They write down people's exact words, not just the gist.",
+      "you": "Be the practice interview and give real answers. Then help them reach people outside the family, like a friend's parent, a coach or a neighbour, and stay nearby while they ask.",
+      "ask": [
+        "What did they say, word for word?",
+        "What do they do about it right now?"
+      ],
+      "tip": "'Tell me about your mornings' gets far more than 'What bugs you?' People complain freely once they're telling a story.",
+      "levels": {
+        "explore": "Ask two people what bugs them, and draw what they said.",
+        "develop": "Ask five people about one part of the day and write their exact words.",
+        "extend": "Ask eight people of different ages, and note who complained most and about what."
+      }
+    },
+    {
+      "title": "Find the pattern",
+      "why": "One complaint is a story. The same one three times is a product.",
+      "kid": "Your kid spreads out the notes and groups complaints that are really the same problem, using the Spot the pattern card. They pick the one that came up most or bothers people most, and write it in one sentence: who has it, when, and what they do now.",
+      "you": "Ask 'Who's it for?' until the answer is a real person, not 'everyone'.",
+      "ask": [
+        "Which complaint came up more than once?",
+        "What are people already doing to get around it?"
+      ],
+      "tip": "Workarounds are gold. If someone's already using an elastic and a clothespin to fix it, they really want it fixed.",
+      "levels": {
+        "explore": "Find two complaints that are really the same problem, and pick one.",
+        "develop": "Group every complaint, and write the top one in a sentence.",
+        "extend": "Rank the top three by how often and how much they bother people, and defend your pick."
+      }
+    },
+    {
+      "title": "Invent it and build a rough model",
+      "why": "A cardboard model answers questions a drawing can't.",
+      "kid": "Your kid sketches a few ways to fix it, picks one and builds a rough model from cardboard, tape and whatever's around, using the Make it real card. They label what each part does.",
+      "you": "Ask 'How would they hold it?' and 'Where would it live?' Help with the cutting, and leave the design to them.",
+      "ask": [
+        "How would they use it on a busy morning?",
+        "What's the one part it can't do without?"
+      ],
+      "tip": "Ugly is fine. A model has one job, and that's to be tested.",
+      "levels": {
+        "explore": "Draw your invention with labels, then build one part of it from cardboard.",
+        "develop": "Build a rough model that shows how it works.",
+        "extend": "Build two different models, and plan how to find out which one people prefer."
+      }
+    },
+    {
+      "title": "Watch them use it",
+      "why": "People will say they love it. Watch what their hands do.",
+      "kid": "Your kid takes the model back to the people who complained and hands it over without explaining. They watch, using the Test it card: where people get stuck, what they try first and what they say. Then they ask what they'd change.",
+      "you": "Go with them, and stay quiet while the person tries it. Afterwards, ask your kid what surprised them.",
+      "ask": [
+        "Where did they get stuck?",
+        "Would they swap what they do now for this?"
+      ],
+      "tip": "Don't explain it first. If it needs explaining, that's the most useful thing you'll learn.",
+      "levels": {
+        "explore": "Show one person your model and ask what they think.",
+        "develop": "Test it with three people without explaining, and write down where they got stuck.",
+        "extend": "Test both models with the same people, and count which one they choose."
+      }
+    },
+    {
+      "title": "Fix it and ask for a real yes",
+      "why": "The only test that counts: would they choose it?",
+      "kid": "Your kid changes the model based on what they saw, then gives it a name and a price. They go back and ask the real question: would you pay for this, or swap it for what you use now? Then they fill in My product at the end of the guide.",
+      "you": "Help them hear a no as information, not a verdict. Ask what would turn it into a yes.",
+      "ask": [
+        "Who said yes, and why?",
+        "What would change a no into a yes?"
+      ],
+      "tip": "'I'd buy that' is polite. 'Can I have one when it's ready?' is a real yes.",
+      "levels": {
+        "explore": "Make one change, and ask one person if they'd use it.",
+        "develop": "Make two changes, name it, price it and ask three people for a real yes.",
+        "extend": "Work out what one would cost to make, and whether people's price would cover it."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Product Toolkit",
+    "intro": "How to listen, how to spot the pattern, what to build with and how to test it.",
+    "items": [
+      {
+        "name": "Listening questions",
+        "lines": [
+          {
+            "k": "Tell me:",
+            "v": "about your mornings, meals, trips"
+          },
+          {
+            "k": "Hardest:",
+            "v": "what's the hardest part?"
+          },
+          {
+            "k": "Last time:",
+            "v": "when did it last happen?"
+          },
+          {
+            "k": "Now:",
+            "v": "what do you do about it now?"
+          },
+          {
+            "k": "More:",
+            "v": "can you tell me more?"
+          }
+        ],
+        "ask": "What were their exact words?"
+      },
+      {
+        "name": "Spot the pattern",
+        "lines": [
+          {
+            "k": "Same:",
+            "v": "different words, same problem"
+          },
+          {
+            "k": "Often:",
+            "v": "how many people said it?"
+          },
+          {
+            "k": "Bothers:",
+            "v": "how much does it get to them?"
+          },
+          {
+            "k": "Workaround:",
+            "v": "what are they already doing?"
+          },
+          {
+            "k": "Who:",
+            "v": "who has it most?"
+          }
+        ],
+        "ask": "Who's it for?"
+      },
+      {
+        "name": "Make it real",
+        "lines": [
+          {
+            "k": "Cardboard:",
+            "v": "boxes, tubes, egg cartons"
+          },
+          {
+            "k": "Join:",
+            "v": "tape, string, clothespins"
+          },
+          {
+            "k": "Size:",
+            "v": "as big as the real thing"
+          },
+          {
+            "k": "Labels:",
+            "v": "what each part does"
+          },
+          {
+            "k": "Just enough:",
+            "v": "only what you need to test it"
+          }
+        ],
+        "ask": "How would they hold it?"
+      },
+      {
+        "name": "Test it",
+        "lines": [
+          {
+            "k": "Hand it over:",
+            "v": "no explaining"
+          },
+          {
+            "k": "Watch:",
+            "v": "where do they get stuck?"
+          },
+          {
+            "k": "Listen:",
+            "v": "what do they say out loud?"
+          },
+          {
+            "k": "Time:",
+            "v": "how long until it works?"
+          },
+          {
+            "k": "Ask:",
+            "v": "what would you change?"
+          }
+        ],
+        "ask": "What did their hands do?"
+      }
+    ],
+    "after": {
+      "label": "My product",
+      "lines": [
+        "The complaint",
+        "Who it's for",
+        "What I made",
+        "Who said a real yes"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Listening",
+      "text": "hearing what people really need"
+    },
+    {
+      "name": "Pattern finding",
+      "text": "seeing one problem in many complaints"
+    },
+    {
+      "name": "Prototyping",
+      "text": "building to test, not to keep"
+    },
+    {
+      "name": "Empathy",
+      "text": "designing for someone else"
+    }
+  ],
+  "conclusion": {
+    "headline": "They made something for someone else, and checked that it worked.",
+    "text": "Notice how they react the next time someone grumbles. If they ask 'What do you do about it now?' instead of rolling their eyes, they're thinking like a designer.",
+    "celebrate": "When someone uses the thing they made, say: 'You listened to them, and it shows.'",
+    "extensions": [
+      "Interview people of a different age about the same part of the day",
+      "Build the next model from a different material",
+      "Design the packaging and the one sentence that would sell it",
+      "Find a real product that started as someone's complaint, and read its story"
+    ]
+  },
+  "signs": [
+    "They ask people questions before they start building",
+    "They notice the workarounds people use",
+    "They test ideas on someone else"
+  ],
+  "makeItReal": "Keep a complaints page in a notebook. When the same one shows up three times, it's time for a new model.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/complaint-to-product.jpg",
+    "alt": "Watercolour of a kitchen table with a taped cardboard invention, a pencil sketch of it, a stack of complaint notes with frowning faces, scissors, tape and a clip holding a charger cord on the table edge",
+    "caption": "Who's it for?"
+  }
+}
