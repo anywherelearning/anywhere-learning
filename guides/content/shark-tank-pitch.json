@@ -71,11 +71,11 @@
     "before": "Can I have $30 for my business? Please?",
     "model": [
       {
-        "part": "Need",
+        "part": "Start-up",
         "line": "$30 for thread, beads and clasps."
       },
       {
-        "part": "Have",
+        "part": "Gap",
         "line": "$10 saved, so I'm asking for $20."
       },
       {
@@ -83,8 +83,8 @@
         "line": "I'll pay you back $22 by March 1, from bracelet sales."
       },
       {
-        "part": "Proof",
-        "line": "I keep $1.50 from each bracelet, so 15 bracelets pays you back."
+        "part": "Pay back",
+        "line": "I keep $1.50 a bracelet, so 15 bracelets covers the $22."
       }
     ],
     "modelNote": "The first ask was a favour. The second tells the shark what it's for, what they get and how it gets paid, so they can say yes for a reason."
@@ -102,8 +102,8 @@
       "tip": "Count what they already have first. Asking for $20 sounds very different when they've saved $10 themselves.",
       "levels": {
         "explore": "Say what you'd sell, the price and what you need to buy first.",
-        "develop": "Work out the cost of one, what's left from each sale and the total you need.",
-        "extend": "Work out how many you'd need to sell to pay back the start-up money."
+        "develop": "Work out the gap, what's left from each sale and how many sales pay it back.",
+        "extend": "Work out what happens to your payback date if you sell half as many as you hope."
       }
     },
     {
@@ -257,15 +257,15 @@
         "name": "Shark panel",
         "lines": [
           {
-            "k": "Ask:",
+            "k": "Who:",
             "v": "who exactly will buy this?"
           },
           {
-            "k": "Ask:",
+            "k": "What if:",
             "v": "what if it doesn't sell?"
           },
           {
-            "k": "Ask:",
+            "k": "Why you:",
             "v": "why are you the one to do this?"
           },
           {
@@ -313,8 +313,8 @@
     "text": "Their asks change after this. If the next request comes with a reason, an amount and a payback date, the pitch has stuck.",
     "celebrate": "On the day they make the last payment, say: 'You said you would, and you did.'",
     "extensions": [
-      "Pitch to a shark outside the family, like an aunt or a family friend",
-      "Turn the profit into a second, bigger ask",
+      "Pitch to a shark outside your home, like a grandparent, an aunt or a family friend",
+      "Once it's paid off, come back with a second, bigger ask",
       "Be the shark for a sibling or a friend, and use the Shark panel card",
       "Write down the best question any shark asked, and why it was hard"
     ]

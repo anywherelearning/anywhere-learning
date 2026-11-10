@@ -90,7 +90,7 @@
       "title": "Find your floor",
       "why": "Below this price, every sale loses money.",
       "kid": "Your kid picks something to sell and works out what one costs, using the Cost of one card in the Pricing Toolkit at the end of the guide. They split shared costs, like a bag of flour, across everything it makes, and remember the packaging.",
-      "you": "Show them the receipts and let them do the dividing. Ask what they nearly forgot, because there's almost always something.",
+      "you": "Show them the receipts and let them work it out. Ask what they nearly forgot, because there's almost always something.",
       "ask": [
         "What does one really cost you?",
         "What did you almost forget to count?"
@@ -153,17 +153,17 @@
     {
       "title": "Add value and set your price",
       "why": "People don't pay for the cost. They pay for what they feel they get.",
-      "kid": "Your kid tries one idea from the Value ideas card, like a bigger size or a bundle, and watches whether people pay more for it. Then they choose their price, fill in My price at the end of the guide and explain it to someone using their numbers.",
+      "kid": "Your kid tries one idea from the Value ideas card, like a bigger size or a bundle, and watches whether people pay more for it. Then they choose their price, fill in My price at the end of the guide and tell the family why.",
       "you": "Be an honest customer. Tell them whether the bigger size or the bundle would make you pay more, and why.",
       "ask": [
-        "Would you pay more for that?",
+        "What did people pay more for?",
         "What price will you keep, and why?"
       ],
-      "tip": "Watch the math on deals. 'Buy four, get one free' at $1 is really 80 cents each, so check it's still above your floor.",
+      "tip": "Watch the math on bundles. 3 for $5 when one is $2 is about $1.67 each, so check it's still above your floor.",
       "levels": {
         "explore": "Try one value idea, and say which price you'll keep.",
         "develop": "Test one value idea with real buyers, then fill in My price.",
-        "extend": "Work out what you'd do if your flour doubled in price, and explain your new price."
+        "extend": "Work out what you'd do if your main supply doubled in price, and explain your new price."
       }
     }
   ],
@@ -311,7 +311,7 @@
     "extensions": [
       "Test a sale price, like half off in the last hour",
       "Try a pay-what-you-want hour and compare it with your fixed price",
-      "Find the same item in three stores and work out who charges most, and why",
+      "Price a service, like dog walking, per job and per hour, and test both",
       "Ask a shop owner how they decide their prices"
     ]
   },

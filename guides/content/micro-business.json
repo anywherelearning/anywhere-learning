@@ -4,7 +4,7 @@
   "title": "Micro-Business Challenge",
   "tagline": "Spot · Ask · Count · Run",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid starts a tiny business that keeps going, not a one-day sale. They pick something people nearby will pay for again and again, ask before they start, work out what it costs, run it for a few weeks while keeping track of every dollar and minute, then decide if it's worth keeping, changing or handing over.",
+  "goal": "Your kid starts a tiny business that keeps going, not a one-day sale. They pick something people nearby will pay for again and again, ask before they start, work out what it costs, run it for a few weeks while keeping track of every dollar and minute, then decide if it's worth keeping, changing, handing over or stopping.",
   "need": [
     "An idea for something people nearby need",
     "A small notebook for the money",
@@ -68,26 +68,26 @@
   },
   "lesson": {
     "text": "Money coming in isn't the same as money made. A business works when what's left after the costs is worth the time it took, and when people come back.",
-    "before": "I made $40 washing cars!",
+    "before": "I made $40 walking dogs!",
     "model": [
       {
         "part": "In",
-        "line": "4 cars at $10 each is $40."
+        "line": "8 walks at $5 each is $40."
       },
       {
         "part": "Costs",
-        "line": "Soap and sponges, $8."
+        "line": "Poop bags and treats, $4."
       },
       {
         "part": "Kept",
-        "line": "$32 for 4 hours, so $8 an hour."
+        "line": "$36 for 6 hours, so $6 an hour."
       },
       {
         "part": "Back",
-        "line": "Two neighbours want it again next month."
+        "line": "Three dogs want walks every week now."
       }
     ],
-    "modelNote": "$40 sounded like the answer. Now they know what they really kept, what an hour of their time earned and that the business has a future."
+    "modelNote": "What they kept, and what an hour of their time earned, changed how good $40 looked. And three dogs coming back every week is what makes it a business."
   },
   "steps": [
     {
@@ -112,7 +112,7 @@
       "kid": "Your kid asks at least three real people, using the Ask first card: would they use it, how often and what would they pay? They write down every answer, the no's too, and change the idea if they need to. Then they write a one-line offer.",
       "you": "Help them reach people, like a neighbour, a grandparent or a family friend. Stand nearby and let them do the asking.",
       "ask": [
-        "What did people say that surprised you?",
+        "Who said 'every week'?",
         "What did the no's have in common?"
       ],
       "tip": "Ask what they'd pay and how often. 'Every Saturday' tells you far more than 'Sure, sounds good.'",
@@ -125,7 +125,7 @@
     {
       "title": "Count the costs and set the price",
       "why": "If you don't know your costs, you don't know if you made money.",
-      "kid": "Your kid lists everything it takes, using the Count it card: supplies, anything borrowed and their own time. They work out the cost of one job, pick a price people said they'd pay and check there's something left over. Then they fill in My business at the end of the guide.",
+      "kid": "Your kid lists everything it takes, using the Count it card: supplies, anything borrowed and their own time. They work out the cost of one job, pick a price people said they'd pay and check there's something left over. Then they fill in the first two lines of My business at the end of the guide.",
       "you": "Be the bank if they need supplies. Write the loan down and agree when it gets paid back. Let them do the math, even when it's slow.",
       "ask": [
         "What's left after the costs?",
@@ -141,8 +141,8 @@
     {
       "title": "Run it and keep the books",
       "why": "This is where it gets real: promises, people and money.",
-      "kid": "Your kid runs the business for two or three weeks. They write a line in the notebook for every job: the date, money in, money out and how long it took. They pay back costs first, and keep a list of customers who want it again.",
-      "you": "Drive, and stay close for anything with strangers or roads. Otherwise step back. If they forget a job, let them be the one to talk to the customer. For food, ask about allergies first, list the ingredients and check your local rules.",
+      "kid": "Your kid runs the business for two or three weeks. They write a line for every job in the notebook: the date, money in, money out and how long it took. They pay back any loan first and keep a list of customers who want it again.",
+      "you": "Stay close for anything with strangers or roads, and go along the first time for jobs inside someone's home. For food, ask about allergies and check your local rules. Otherwise step back, and if they forget a job, let them talk to the customer.",
       "ask": [
         "Who came back?",
         "What took longer than you expected?"
@@ -157,7 +157,7 @@
     {
       "title": "Keep it, change it or hand it over",
       "why": "Deciding to stop is a business decision too.",
-      "kid": "Your kid adds up the books: money in, money out, profit, hours and customers who came back. Then they use the What next card to decide what happens now, and explain their decision to someone using their numbers.",
+      "kid": "Your kid adds up the books: money in, money out, profit, hours and customers who came back. Then they use the What next card to decide what happens now, and explain their decision to someone using their numbers, and finish My business.",
       "you": "Ask, don't decide. If it's struggling, go through the four usual reasons together: the wrong customers, the wrong price, the wrong place or doing too much. If they want to grow, ask who could help and what they'd pay them.",
       "ask": [
         "Was it worth it?",
@@ -214,7 +214,7 @@
           },
           {
             "k": "Price:",
-            "v": "would you pay $5 for it?"
+            "v": "what would you pay for it?"
           },
           {
             "k": "Now:",
@@ -284,15 +284,15 @@
       "label": "My business",
       "lines": [
         "What I do and for who",
-        "My price",
-        "What one job costs me",
+        "My price, and what one job costs me",
+        "What I kept, and per hour",
         "What I decided, and why"
       ]
     }
   },
   "skills": [
     {
-      "name": "Money sense",
+      "name": "Owner's math",
       "text": "knowing what's really left"
     },
     {
@@ -310,12 +310,12 @@
   ],
   "conclusion": {
     "headline": "They ran something real, and they know what it was worth.",
-    "text": "Watch for it in the weeks after. If they ask what something costs to make, or work out what an hour of their time is worth, they're thinking like an owner, not a seller.",
+    "text": "Watch for it in the weeks after. If they ask how long a job takes before they say yes to it, or work out what an hour of their time is worth, they're thinking like an owner, not a seller.",
     "celebrate": "When a customer comes back, say: 'They came back because you did it well.'",
     "extensions": [
-      "Hire a sibling or friend and work out a fair wage",
+      "Run it again next season and compare profit per hour",
       "Give the profit a job with a savings goal",
-      "Ask a local business owner what they wish they'd known at the start",
+      "Teach someone younger to run it, and see what they change",
       "Keep a notebook of problems nobody around you is solving yet"
     ]
   },

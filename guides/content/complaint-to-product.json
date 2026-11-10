@@ -80,7 +80,7 @@
       },
       {
         "part": "Test",
-        "line": "Three of four used it without help. One wanted it smaller."
+        "line": "Three of four used it without help, and two asked for one of their own."
       }
     ],
     "modelNote": "The snack fridge fixed a problem only your kid had. The clip came from listening, and the test showed it works for other people."
@@ -124,7 +124,7 @@
       "kid": "Your kid sketches a few ways to fix it, picks one and builds a rough model from cardboard, tape and whatever's around, using the Make it real card. They label what each part does.",
       "you": "Ask 'How would they hold it?' and 'Where would it live?' Help with the cutting, and leave the design to them. If they get stuck, ask what the person does now and build one small step up from that.",
       "ask": [
-        "How would they use it on a busy morning?",
+        "How would they use it on a busy day?",
         "What's the one part it can't do without?"
       ],
       "tip": "Ugly is fine. A model has one job, and that's to be tested.",
@@ -288,8 +288,8 @@
   },
   "skills": [
     {
-      "name": "Listening",
-      "text": "hearing what people really need"
+      "name": "Interviewing",
+      "text": "getting people to tell the real story"
     },
     {
       "name": "Pattern finding",
@@ -306,13 +306,13 @@
   ],
   "conclusion": {
     "headline": "They made something for someone else, and checked that it worked.",
-    "text": "Notice how they react the next time someone grumbles. If they ask 'What do you do about it now?' instead of rolling their eyes, they're thinking like a designer.",
+    "text": "Notice how they react the next time someone grumbles. If they ask 'What do you do about it now?' instead of rolling their eyes, they're designing for other people.",
     "celebrate": "When someone uses the thing they made, say: 'You listened to them, and it shows.'",
     "extensions": [
-      "Interview people of a different age about the same part of the day",
+      "Run the same listening on a different part of the day, like bedtime",
       "Build the next model from a different material",
       "Design the packaging and the one sentence that would sell it",
-      "Find a real product that started as someone's complaint, and read its story"
+      "Show your model to someone who makes things for a living, and ask what they'd change"
     ]
   },
   "signs": [

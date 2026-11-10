@@ -35,7 +35,7 @@
     "plan": [
       {
         "when": "Day 1",
-        "what": "Pick the paperclip, find who wants it and make the first trade (Steps 1 to 3)."
+        "what": "Pick the starting object, find who wants it and make the first trade (Steps 1 to 3)."
       },
       {
         "when": "Over a week or two",
@@ -92,13 +92,13 @@
       "kid": "Your kid picks one small, humble object, like a paperclip, a marble or a cool rock. Together you set the trading circle, using the Trading circle card in the Trade Toolkit at the end of the guide.",
       "you": "Set the circle first, and steer them away from starting with something good. Then tell them about Kyle MacDonald, a Canadian who started with one red paperclip in 2005 and had a house 14 trades later. He traded with strangers online. Yours stays with people you know.",
       "ask": [
-        "Who might want this little thing?",
+        "What's this little thing good for?",
         "What would you love to end up with?"
       ],
       "tip": "A start that means something to them, like a rock they found, makes the first offer easier.",
       "levels": {
-        "explore": "Pick a small object, and say who might want it.",
-        "develop": "Pick a humble object, and name three people who might want it.",
+        "explore": "Pick a small object, and say one thing it's good for.",
+        "develop": "Pick a humble object, and list three ways someone could use it.",
         "extend": "Pick a humble object and a dream item to aim for, and guess how many trades it'll take."
       }
     },
@@ -122,7 +122,7 @@
       "title": "Make the first trade",
       "why": "The first ask is the hardest. After that, the game opens up.",
       "kid": "Your kid makes the offer out loud, using the Making the offer card. If the answer is no, they listen for what the person does want and try again. When someone says yes, they write down both sides of the trade.",
-      "you": "Stay close and let them do the asking, even when it's slow. Afterwards, tell them what you saw them do well.",
+      "you": "Stay close and let them do the asking, even when it's awkward. Afterwards, tell them what you saw them do well.",
       "ask": [
         "What would make it a yes?",
         "What did they actually want?"
@@ -266,7 +266,7 @@
           },
           {
             "k": "Undo:",
-            "v": "agree first if it can be undone"
+            "v": "agree you can swap back by tomorrow"
           },
           {
             "k": "Log it:",
@@ -306,12 +306,12 @@
   ],
   "conclusion": {
     "headline": "They started with almost nothing, and talked their way up.",
-    "text": "Their sense of what something's worth shifts after this. If they say 'That's junk to me, but my friend would love it,' they've got the whole idea.",
+    "text": "Listen to how they talk about their things. If they say 'That's junk to me, but my friend would love it,' they've got the whole idea.",
     "celebrate": "When you look at the chain laid out together, say: 'All of that started with a paperclip and you asking.'",
     "extensions": [
       "Start again with a different object, and try to beat your chain",
       "Trade a skill instead of a thing, like teaching someone to juggle",
-      "Trade a favour chain: one small chore traded up to a bigger one",
+      "Start a chain with a sibling from the same kind of object, and compare where you each end up",
       "Read the full red paperclip story together and compare it with yours"
     ]
   },

@@ -50,7 +50,7 @@
     "troubleshoot": [
       {
         "q": "Nothing real is coming up",
-        "a": "Offer them a family thing to market: a yard sale, a sibling's recital or a dinner you're hosting. Or a local event that needs people."
+        "a": "Offer them a family thing to market: a yard sale, a sibling's recital or a dinner you're hosting. Or a local event that needs people. If it's food, check your local rules and list what's in it."
       },
       {
         "q": "They want to spend hours on the logo",
@@ -108,7 +108,7 @@
       "kid": "Your kid gives it a name, picks two colours and draws a simple logo, using the Look and feel card. Then they write a tagline of a few words that says why someone should care.",
       "you": "Say each name out loud with them and react honestly. Ask 'Would you remember it tomorrow?' Point out a sign they already know from the car, and ask what made it stick.",
       "ask": [
-        "Would someone remember this tomorrow?",
+        "What would they call it when they tell a friend?",
         "Does the look fit the people you want to reach?"
       ],
       "tip": "Shrink the logo to the size of a stamp. If you can still tell what it is, it works.",
@@ -153,7 +153,7 @@
     {
       "title": "Count what worked, change one thing",
       "why": "Marketing is a guess until you count.",
-      "kid": "Your kid counts every response, like sales, visitors, replies or code words, and where each one came from. They write the counts big and side by side, and fill in My campaign at the end of the guide. Then they change one thing, like the headline or a place, and try again.",
+      "kid": "Your kid counts every response, like sales, visitors, replies or code words, and where each one came from. They write the counts big and side by side, and fill in My campaign at the end of the guide. Then they choose one thing they'd change next time, like the headline or a place.",
       "you": "Ask what the numbers say before you say anything. Let them be surprised.",
       "ask": [
         "Which place worked best?",

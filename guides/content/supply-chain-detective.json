@@ -127,7 +127,7 @@
         "What did they know that the label didn't say?",
         "Who would know the next link back?"
       ],
-      "tip": "Go at a quiet time, like a weekday morning. Busy staff can't stop to chat on a Saturday.",
+      "tip": "Ask one question, then 'Who would know more?' It leads you to the next link.",
       "levels": {
         "explore": "Ask one question at the store, with a grown-up beside you.",
         "develop": "Ask two people in the chain, and add what you learned to the map.",
@@ -153,7 +153,7 @@
     {
       "title": "Find the weak link",
       "why": "Every chain has a link that breaks first.",
-      "kid": "Your kid finds out about a time something was hard to get or got more expensive, by asking at the store or looking it up with you. Using the Weak links card, they work out which link broke. Then they finish the map and fill in My chain at the end of the guide.",
+      "kid": "Your kid finds out about a time their product, or one like it, was hard to get or got more expensive, by asking at the store or looking it up with you. Using the Weak links card, they work out which link broke. Then they finish the map and fill in My chain at the end of the guide.",
       "you": "Share a time you couldn't find something in a store. Help them find out what really happened, not just a guess.",
       "ask": [
         "Which link broke?",
@@ -269,8 +269,8 @@
             "v": "fuel and shipping prices"
           },
           {
-            "k": "Closer:",
-            "v": "is there a version made nearby?"
+            "k": "People:",
+            "v": "not enough pickers, drivers or workers"
           }
         ],
         "ask": "What would break first?"
@@ -281,7 +281,7 @@
       "lines": [
         "The product",
         "Where it started",
-        "Stops on the way",
+        "Stops on the way, and how far it came",
         "Its weakest link"
       ]
     }
@@ -306,13 +306,13 @@
   ],
   "conclusion": {
     "headline": "They know where their stuff comes from, and how far it came.",
-    "text": "Grocery trips get slower after this, in a good way. If they flip a jar to read the label, or ask why something's out of stock, the detective habit has come home with you.",
+    "text": "Grocery trips get slower after this, in a good way. If they turn over a toy to see where it was made, or wonder how the store never runs out of milk, the detective habit has come home with you.",
     "celebrate": "When they tell someone where something really came from, say: 'You followed that all the way back.'",
     "extensions": [
       "Trace a piece of clothing from the field to the store",
       "Map a whole meal and count the countries on the plate",
       "Visit a farm or a maker, like a coffee farm or a chocolate maker, and draw their chain",
-      "Track one product's price for a few months and find out why it moves"
+      "Pick one thing and find a version made in your own province or state"
     ]
   },
   "signs": [

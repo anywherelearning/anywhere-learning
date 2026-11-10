@@ -1111,7 +1111,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A worked example that shows why money in is not money made',
       'Business ideas card and Ask first card',
       'Count it card and What next card',
-      'My business page with price, cost and profit for one job',
+      'My business page with price, cost, profit per hour and the decision',
     ],
     skillTags: ['Entrepreneurship', 'Money Math', 'Customer Research', 'Reliability', 'Decision-Making'],
     insideTheLearning: {
@@ -1890,7 +1890,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'marketing-campaign': {
     opening:
-      'Your child gets real people to notice something real. They pick one kind of person to reach, give it a name, colours and a simple logo, and write one clear message. Then they put it where that person will see it, with a code word on each sign, and count the responses to find out which one actually worked.',
+      'Your child gets real people to notice something real. They pick one kind of person to reach, give it a name, colours and a simple logo, and write one clear message. Then they put it where that person will see it, with a way to tell which sign worked, and count the responses to find out which one actually worked.',
     whatsIncluded: [
       'A 5-step guide from picking who to reach to counting what worked',
       'A worked example that shows why one person beats everyone',
