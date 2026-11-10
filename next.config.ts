@@ -79,6 +79,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Retired Nov 2026: merged into Micro-Business Challenge.
+      {
+        source: "/shop/community-service-business",
+        destination: "/shop/micro-business",
+        permanent: true,
+      },
+      {
+        source: "/shop/business-failure-lab",
+        destination: "/shop/micro-business",
+        permanent: true,
+      },
+
       // Retired Nov 2026: merged into Problem-Solver Studio.
       {
         source: "/shop/everyday-redesign",

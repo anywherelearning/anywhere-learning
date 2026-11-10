@@ -136,7 +136,7 @@ export const TERRITORIES: readonly Territory[] = [
     activities: [
       'garage-sale-math', 'snack-mission', 'party-planner-math', 'kitchen-math-challenge',
       'clothing-swap-thrift-math', 'currency-market-math', 'nature-data-tracker', 'sports-stats-lab',
-      'savings-goal-tracker', 'family-electricity-audit', 'budget-challenge', 'road-trip-calculator',
+      'savings-goal-tracker', 'family-electricity-audit', 'budget-challenge', 'micro-business', 'road-trip-calculator',
       'garden-plot-planner', 'smart-shopper', 'pricing-experiment', 'backyard-campout-planner',
     ],
   },
@@ -163,7 +163,7 @@ export const TERRITORIES: readonly Territory[] = [
     activities: [
       'media-info-check', 'customer-discovery', 'what-if-scenario-lab', 'rube-goldberg-machine',
       'decomposition-detective', 'supply-chain-detective', 'seed-travelers', 'hallucination-detective',
-      'family-debate-night', 'bias-fairness-lab', 'business-failure-lab', 'comeback-journal',
+      'family-debate-night', 'bias-fairness-lab', 'comeback-journal',
       'pricing-experiment', 'camouflage-challenge', 'problem-solver', 'three-ais-one-question',
     ],
   },
@@ -271,7 +271,7 @@ export const TERRITORIES: readonly Territory[] = [
     activities: [
       'time-energy-planner', 'travel-day', 'hard-thing-challenge',
       'boredom-toolkit', 'calm-down-toolkit', 'disappointment-lab', 'comeback-journal',
-      'business-failure-lab', 'worry-sorter', 'healthy-tech-boundaries',
+      'worry-sorter', 'healthy-tech-boundaries',
     ],
   },
   {
@@ -322,7 +322,7 @@ export const TERRITORIES: readonly Territory[] = [
       ],
     },
     activities: [
-      'kindness-missions', 'decision-lab', 'community-impact', 'community-service-business',
+      'kindness-missions', 'decision-lab', 'community-impact',
       'neighbourhood-problem-spotter', 'privacy-footprint', 'world-food-detective',
       'cultural-celebration-journal', 'everyday-life-comparison', 'people-stories-interview',
       'local-language-mission', 'solo-mission',

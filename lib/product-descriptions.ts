@@ -1105,24 +1105,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'micro-business': {
     opening:
-      'Your child designs a real business from scratch. They pick an idea, figure out who would actually pay for it, set prices that make money, build a brand, create a marketing plan, and pitch the whole thing out loud. Whether they actually launch or just walk through every step, the thinking is identical to what real entrepreneurs do.',
+      'Your child starts a tiny business that keeps going, not a one-day sale. They pick something neighbours will pay for again and again, ask real people first, work out the costs and set a price. Then they run it for a few weeks, keep the books and decide if it was worth their time: keep it, change it, hire help or hand it over.',
     whatsIncluded: [
-      'Business idea selection with 12 starter cards',
-      'Customer research and problem-solving',
-      'Pricing strategy with real profit math',
-      'Brand building and marketing plan',
-      'Pitch practice and Version 2 revision',
+      'A 5-step guide from a first idea to deciding what happens next',
+      'A worked example that shows why money in is not money made',
+      'Business ideas card and Ask first card',
+      'Count it card and What next card',
+      'My business page with price, cost and profit for one job',
     ],
-    skillTags: ['Entrepreneurship', 'Problem-Solving', 'Communication'],
+    skillTags: ['Entrepreneurship', 'Money Math', 'Customer Research', 'Reliability', 'Decision-Making'],
     insideTheLearning: {
       lead:
-        'Your child runs a genuinely small business, start to finish. They pick the idea, ask customers what they actually want, price it with real profit maths, build the brand, and pitch it. Some of it will not work, and fixing it is the part that teaches.',
+        'Your child learns that money coming in is not the same as money made. They ask real people before they start, count every cost, keep the books for a few weeks and use their own numbers to decide what happens next.',
       skills: [
-        { skill: 'Research', where: 'Asking real customers what they need before building anything' },
-        { skill: 'Financial Literacy', where: 'Pricing it with real profit maths rather than a number that sounds nice' },
-        { skill: 'Problem-Solving', where: 'Working out what is not landing and changing it' },
-        { skill: 'Communication', where: 'Building the brand and pitching it to people who might buy' },
-        { skill: 'Resilience', where: 'Keeping going when the first version does not sell' },
+        { skill: 'Math', where: 'Working out costs, profit for one job and profit per hour' },
+        { skill: 'Customer Research', where: 'Asking real people what they would pay and how often' },
+        { skill: 'Planning', where: 'Scheduling jobs, supplies and paying back a loan' },
+        { skill: 'Reliability', where: 'Showing up for every job and handling a customer who cancels' },
+        { skill: 'Decision-Making', where: 'Using the books to keep, change, hire help or hand it over' },
       ],
     },
     format: 'Project Guide',

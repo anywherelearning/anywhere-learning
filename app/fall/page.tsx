@@ -40,7 +40,7 @@ const MONTHLY_HREF = '/start-trial?plan=monthly';
 const MOMENTS: { src: string; guide: string; skill: string; alt: string; rot: number }[] = [
   { src: '/images/fall/party-planner-math.jpg', guide: 'Party Planner Math', skill: 'budgets + fractions', alt: 'Two kids icing cupcakes for a party they planned', rot: -3 },
   { src: '/images/fall/market-stall.jpg', guide: 'Market Stall Pitch', skill: 'pricing + persuasive writing', alt: 'A girl at her popcorn stand with a $2 sign she made', rot: 2 },
-  { src: '/images/fall/community-service-business.jpg', guide: 'Community Service Business', skill: 'planning + pitching', alt: 'A boy at a table presenting the babysitting service he designed', rot: -1.5 },
+  { src: '/images/fall/community-service-business.jpg', guide: 'Micro-Business Challenge', skill: 'planning + pitching', alt: 'A boy at a table presenting the babysitting service he designed', rot: -1.5 },
   { src: '/images/fall/grow-it-eat-it.jpg', guide: 'Grow It, Eat It', skill: 'biology', alt: 'A girl planting tomatoes in pots on the deck', rot: 2.5 },
   { src: '/images/fall/garden-plot-planner.jpg', guide: 'Garden Plot Planner', skill: 'measuring + area', alt: 'A girl and her dad building a garden box with a drill', rot: -2 },
   { src: '/images/fall/kitchen-math.jpg', guide: 'Kitchen Math Challenge', skill: 'fractions + measuring', alt: 'A girl mixing batter in a big bowl', rot: 1.5 },

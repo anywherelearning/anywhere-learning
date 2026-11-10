@@ -1,0 +1,344 @@
+{
+  "slug": "micro-business",
+  "category": "Entrepreneurship",
+  "title": "Micro-Business Challenge",
+  "tagline": "Spot · Ask · Count · Run",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid starts a tiny business that keeps going, not a one-day sale. They pick something people nearby will pay for again and again, ask before they start, work out what it costs, run it for a few weeks while keeping track of every dollar and minute, then decide if it's worth keeping, changing or handing over.",
+  "need": [
+    "An idea for something people nearby need",
+    "A small notebook for the money",
+    "A jar or envelope for the cash",
+    "A little start-up money, only if it's needed"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "costs, profit and earnings per hour"
+    },
+    {
+      "subject": "Economics",
+      "text": "customers, prices and why people come back"
+    },
+    {
+      "subject": "Communication",
+      "text": "asking real people what they'd pay"
+    },
+    {
+      "subject": "Planning",
+      "text": "schedules, supplies and keeping promises"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You're the first customer, the bank and the ride, not the boss. Let them choose, even an idea you doubt. Your most useful question is 'Was it worth it?' Ask it about every job, in money and in time. Don't buy anything before Step 3, and keep any loan small and real: they pay it back.",
+    "plan": [
+      {
+        "when": "Week 1",
+        "what": "Pick the business, ask real people and set the price (Steps 1 to 3)."
+      },
+      {
+        "when": "Weeks 2 and 3",
+        "what": "Run it and keep the books (Step 4)."
+      },
+      {
+        "when": "At the end",
+        "what": "Add it up and decide what's next (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Nobody wants it",
+        "a": "That's a result, not a failure. Ask the people who said no what they would pay for, and try that instead."
+      },
+      {
+        "q": "A customer cancels or forgets to pay",
+        "a": "It happens to every business. Let your kid handle it politely, and decide together whether they need a rule, like paying first."
+      },
+      {
+        "q": "They want to spend it all",
+        "a": "Costs and loans get paid back first, then the rest is theirs. Seeing what's left after costs is the whole lesson."
+      },
+      {
+        "q": "They lose interest after a week",
+        "a": "Look at the books together. Sometimes the honest answer is that it isn't worth it, and that's worth knowing. Finishing the jobs they promised still counts."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Money coming in isn't the same as money made. A business works when what's left after the costs is worth the time it took, and when people come back.",
+    "before": "I made $40 washing cars!",
+    "model": [
+      {
+        "part": "In",
+        "line": "4 cars at $10 each is $40."
+      },
+      {
+        "part": "Costs",
+        "line": "Soap and sponges, $8."
+      },
+      {
+        "part": "Kept",
+        "line": "$32 for 4 hours, so $8 an hour."
+      },
+      {
+        "part": "Back",
+        "line": "Two neighbours want it again next month."
+      }
+    ],
+    "modelNote": "$40 sounded like the answer. Now they know what they really kept, what an hour of their time earned and that the business has a future."
+  },
+  "steps": [
+    {
+      "title": "Find something people need again",
+      "why": "One sale is a sale. People coming back is a business.",
+      "kid": "Your kid lists what they're good at and what people around them keep needing, using the Business ideas card in the Business Toolkit at the end of the guide. They circle the ideas someone would need again next week or next month, and pick one.",
+      "you": "Say what you'd honestly pay for. Steer them away from anything that needs a big shopping trip to start.",
+      "ask": [
+        "Who needs this, and how often?",
+        "Why would they pay you instead of doing it themselves?"
+      ],
+      "tip": "Services are the easiest start. Walking a dog, watering plants or collecting bottles needs almost nothing to begin.",
+      "levels": {
+        "explore": "Pick one idea and say who would need it.",
+        "develop": "List five ideas, circle the ones people need again and choose one.",
+        "extend": "Compare three ideas by what they cost to start, how often people need them and who already does them."
+      }
+    },
+    {
+      "title": "Ask before you start",
+      "why": "A yes from a real person beats a great idea in your head.",
+      "kid": "Your kid asks at least three real people, using the Ask first card: would they use it, how often and what would they pay? They write down every answer, the no's too, and change the idea if they need to. Then they write a one-line offer.",
+      "you": "Help them reach people, like a neighbour, a grandparent or a family friend. Stand nearby and let them do the asking.",
+      "ask": [
+        "What did people say that surprised you?",
+        "What would turn a no into a yes?"
+      ],
+      "tip": "'Would you buy it?' gets a polite yes. 'Would you pay $5 for it this Saturday?' gets the truth.",
+      "levels": {
+        "explore": "Ask two people if they'd use it, and tell someone what they said.",
+        "develop": "Ask three to five people what they'd pay and how often, then change one thing.",
+        "extend": "Ask five people, then do one test job before you commit to anything."
+      }
+    },
+    {
+      "title": "Count the costs and set the price",
+      "why": "If you don't know your costs, you don't know if you made money.",
+      "kid": "Your kid lists everything it takes, using the Count it card: supplies, anything borrowed and their own time. They work out the cost of one job, pick a price people said they'd pay and check there's something left over. Then they fill in My business at the end of the guide.",
+      "you": "Be the bank if they need supplies. Write the loan down and agree when it gets paid back. Let them do the math, even when it's slow.",
+      "ask": [
+        "What's left after the costs?",
+        "Is that worth an hour of your time?"
+      ],
+      "tip": "Have them count their time as a cost too. It changes how they price things.",
+      "levels": {
+        "explore": "Write down what you need and what it costs, then pick a price that's higher.",
+        "develop": "Work out the cost of one job and the profit at your price.",
+        "extend": "Work out profit per hour at two prices, then choose one and say why."
+      }
+    },
+    {
+      "title": "Run it and keep the books",
+      "why": "This is where it gets real: promises, people and money.",
+      "kid": "Your kid runs the business for two or three weeks. They write a line in the notebook for every job: the date, money in, money out and how long it took. They pay back costs first, and keep a list of customers who want it again.",
+      "you": "Drive, and stay close for anything with strangers or roads. Otherwise step back. If they forget a job, let them be the one to talk to the customer.",
+      "ask": [
+        "Who came back?",
+        "What took longer than you expected?"
+      ],
+      "tip": "Count the jar together once a week. It stops the money from turning into a mystery.",
+      "levels": {
+        "explore": "Do three jobs or sales, and write each one in the notebook.",
+        "develop": "Run it for two weeks and keep every number, in and out.",
+        "extend": "Run it for three weeks, work out profit per hour each week and change one thing halfway."
+      }
+    },
+    {
+      "title": "Keep it, change it or hand it over",
+      "why": "Deciding to stop is a business decision too.",
+      "kid": "Your kid adds up the books: money in, money out, profit, hours and customers who came back. Then they use the What next card to decide what happens now, and explain their decision to someone using their numbers.",
+      "you": "Ask, don't decide. If it's struggling, go through the four usual reasons together: the wrong customers, the wrong price, the wrong place or doing too much. If they want to grow, ask who could help and what they'd pay them.",
+      "ask": [
+        "Was it worth it?",
+        "What would you change if you started again tomorrow?"
+      ],
+      "tip": "Hiring a sibling or friend is a great next step. Suddenly they have to work out a fair wage, and find out whether the other person agrees.",
+      "levels": {
+        "explore": "Count what you kept and say if you want to keep going.",
+        "develop": "Work out profit and profit per hour, then choose keep, change or stop.",
+        "extend": "Write a plan for next month, including whether to hire help and what you'd pay."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Business Toolkit",
+    "intro": "Ideas to start from, what to ask, what to count and what to decide.",
+    "items": [
+      {
+        "name": "Business ideas",
+        "lines": [
+          {
+            "k": "Pets:",
+            "v": "walking, feeding, visiting"
+          },
+          {
+            "k": "Plants:",
+            "v": "watering while people travel"
+          },
+          {
+            "k": "Bottles:",
+            "v": "collecting them for the refund"
+          },
+          {
+            "k": "Baking:",
+            "v": "a weekly order for a neighbour"
+          },
+          {
+            "k": "Tech help:",
+            "v": "phones, photos, new apps"
+          }
+        ],
+        "ask": "Would they need it again?"
+      },
+      {
+        "name": "Ask first",
+        "lines": [
+          {
+            "k": "Use:",
+            "v": "would you use this?"
+          },
+          {
+            "k": "How often:",
+            "v": "once, every week, every month?"
+          },
+          {
+            "k": "Price:",
+            "v": "would you pay $5 for it?"
+          },
+          {
+            "k": "Now:",
+            "v": "what do you do about it now?"
+          },
+          {
+            "k": "Better:",
+            "v": "what would make it worth it?"
+          }
+        ],
+        "ask": "Was that a real yes?"
+      },
+      {
+        "name": "Count it",
+        "lines": [
+          {
+            "k": "Supplies:",
+            "v": "everything you use up"
+          },
+          {
+            "k": "Borrowed:",
+            "v": "what you have to pay back"
+          },
+          {
+            "k": "Time:",
+            "v": "how long one job takes"
+          },
+          {
+            "k": "Profit:",
+            "v": "price minus costs"
+          },
+          {
+            "k": "Per hour:",
+            "v": "profit divided by hours"
+          }
+        ],
+        "ask": "What's left after the costs?"
+      },
+      {
+        "name": "What next",
+        "lines": [
+          {
+            "k": "Keep:",
+            "v": "it works, so keep going"
+          },
+          {
+            "k": "Change:",
+            "v": "the price, the time or the customers"
+          },
+          {
+            "k": "Hire:",
+            "v": "someone does part of it"
+          },
+          {
+            "k": "Hand over:",
+            "v": "teach someone else to run it"
+          },
+          {
+            "k": "Stop:",
+            "v": "and say why"
+          }
+        ],
+        "ask": "Was it worth it?"
+      }
+    ],
+    "after": {
+      "label": "My business",
+      "lines": [
+        "What I do and for who",
+        "My price",
+        "What one job costs me",
+        "What I keep from one job"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Money sense",
+      "text": "knowing what's really left"
+    },
+    {
+      "name": "Customer sense",
+      "text": "asking before building"
+    },
+    {
+      "name": "Reliability",
+      "text": "showing up for every job"
+    },
+    {
+      "name": "Decision making",
+      "text": "using numbers to decide what's next"
+    }
+  ],
+  "conclusion": {
+    "headline": "They ran something real, and they know what it was worth.",
+    "text": "Watch for it in the weeks after. If they ask what something costs to make, or work out what an hour of their time is worth, they've started to think like a business owner.",
+    "celebrate": "When a customer comes back, say: 'They came back because you did it well.'",
+    "extensions": [
+      "Hire a sibling or friend and work out a fair wage",
+      "Give the profit a job with a savings goal",
+      "Ask a local business owner what they wish they'd known at the start",
+      "Keep a notebook of problems nobody around you is solving yet"
+    ]
+  },
+  "signs": [
+    "They count the costs before they get excited",
+    "They keep their promises to customers",
+    "They ask if something is worth the time"
+  ],
+  "makeItReal": "Give the business a real spot in the week, like Saturday morning, and a notebook that lives beside the cash jar.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/micro-business.jpg",
+    "alt": "A girl with her arms spread wide behind tall stacks of crates full of cans and bottles at a bottle depot",
+    "caption": "About $80 a month from the neighbours' bottles."
+  },
+  "fromHome": {
+    "text": "My daughter collects bottles and cans from our neighbours and takes them to the depot. She makes about $80 a month. She hired her brother for 20 to 25 percent, but he quit. He didn't think it was enough.",
+    "quotes": []
+  }
+}
