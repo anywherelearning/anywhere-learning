@@ -3148,27 +3148,27 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'secret-code-lab': {
     opening:
-      'Your child learns to write and crack secret codes, from simple ciphers to a keyword cipher they build themselves, then breaks a message with no key using letter-frequency detective work. They finish with a coded treasure hunt and discover how the same basic idea keeps passwords and messages safe. Logic and pattern-hunting disguised as a spy game.',
+      'Your child learns to make and crack real codes. They break an easy one, find out how a key works, invent their own and fill in a code page, then crack a message with no key using the same clues real codebreakers use. To finish, they swap coded notes with someone for a week and see how the same idea keeps passwords and messages safe.',
     whatsIncluded: [
-      'Crack a starter code and learn how ciphers work',
-      'Build your own cipher, including a keyword code',
-      'Break a coded message with no key, using frequency',
-      'See how encryption protects real secrets',
-      'Design a coded treasure hunt',
+      'A 5-step guide from a first easy code to keeping a secret for a week',
+      'A worked example that shows how a rule and a key turn a message into code',
+      'Starter codes card and Stronger codes card',
+      'Crack-in clues card and Real secrets card',
+      'My code page to fill in for the code they invent',
     ],
-    skillTags: ['STEM', 'Logic', 'Pattern Recognition', 'Cryptography', 'Problem-Solving'],
+    skillTags: ['STEM', 'Logic', 'Pattern Recognition', 'Cryptography', 'Digital Safety'],
     insideTheLearning: {
       lead:
-        'Your child makes and breaks real ciphers. A shift cipher is arithmetic wearing a disguise: move each letter by a number and wrap around. Cracking one leans on letter frequency, which is statistics. Mostly it teaches staying with a hard puzzle past the stuck part.',
+        'Your child learns that every code is a rule and a key, easy with the key and hard without it. A shift code is counting in disguise, and breaking one with no key leans on which letters show up most. Along the way they find out why a password is a key that only they should have.',
       skills: [
-        { skill: 'STEM', where: 'Real cryptography and the statistics that break it' },
-        { skill: 'Logic', where: 'Working out the rule that governs the whole message' },
-        { skill: 'Pattern Recognition', where: 'Spotting the rule hidden in a jumble of letters' },
-        { skill: 'Cryptography', where: 'Building ciphers that hold up and then breaking someone else\'s' },
-        { skill: 'Problem-Solving', where: 'Trying one approach after another and pushing through the stuck feeling' },
+        { skill: 'STEM', where: 'Shifting letters by a number and counting which ones show up most' },
+        { skill: 'Logic', where: 'Testing a guess and working out what else has to be true' },
+        { skill: 'Pattern Recognition', where: 'Spotting short words, doubles and the rule hidden in a jumble' },
+        { skill: 'Cryptography', where: 'Inventing a code that holds up and finding the slip when it does not' },
+        { skill: 'Digital Safety', where: 'Seeing how passwords and web locks use the same idea as their code' },
       ],
     },
-    format: 'Activity Guide',
+    format: 'Project Guide',
   },
   'body-owners-manual': {
     opening:

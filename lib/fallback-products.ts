@@ -2874,15 +2874,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Secret Code Lab",
     slug: "secret-code-lab",
     description:
-      "Your child learns to write and crack secret codes, from simple ciphers to a keyword cipher they build themselves, then breaks a message with no key using letter-frequency detective work. They finish with a coded treasure hunt and discover how the same basic idea keeps passwords and messages safe. Logic and pattern-hunting disguised as a spy game.",
+      "Your child learns to make and crack real codes. They break an easy one, find out how a key works, invent their own and fill in a code page, then crack a message with no key using the same clues real codebreakers use. To finish, they swap coded notes with someone for a week and see how the same idea keeps passwords and messages safe.",
     shortDescription:
-      "STEM logic for kids ages 6-14: write and crack secret codes, break a cipher with no key, and see how encryption keeps secrets safe.",
+      "STEM logic for kids ages 6-14: crack and invent secret codes, break one with no key and see how keys keep passwords safe.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/secret-code-lab.jpg",
-    previewFile: "Preview Planning & Problem-Solving Secret Code Lab.pdf",
+    previewFile: "Preview Planning & Problem-Solving Secret Code Lab v3.pdf",
     category: "planning-problem-solving",
     isBundle: false,
     bundleProductIds: null,

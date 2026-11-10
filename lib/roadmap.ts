@@ -403,7 +403,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'grow-it-eat-it': ['self-management', 'critical-thinking', 'life-skills'],
   'kitchen-science-lab': ['critical-thinking', 'math'],
   'probability-lab': ['math', 'critical-thinking'],
-  'secret-code-lab': ['critical-thinking', 'math'],
+  'secret-code-lab': ['critical-thinking', 'math', 'ai-digital'],
   'body-owners-manual': ['physical', 'critical-thinking', 'math'],
   'family-history-detective': ['communication', 'writing', 'citizenship'],
   'teach-it-to-learn-it': ['communication', 'emotional'],
