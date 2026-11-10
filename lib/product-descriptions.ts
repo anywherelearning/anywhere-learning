@@ -1962,24 +1962,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'supply-chain-detective': {
     opening:
-      'Trace a product\'s journey from raw materials to your front door, and discover the global systems that connect everything. Kids investigate supply chains, think about geography, labour, and sustainability, and develop systems thinking. Critical analysis meets global awareness.',
+      'Your child finds out how everyday things get to your kitchen. They read the labels in your cupboard, trace one product back to where it started and ask a real person in the chain, like someone at the store or a farmer at the market. Then they count the miles and the people it took, and find the weak link that breaks first.',
     whatsIncluded: [
-      'Supply chain investigation guide',
-      'Product journey mapping activities',
-      'Geography and global trade connections',
-      'Sustainability and ethics discussion prompts',
-      'Systems thinking and interconnection mapping',
+      'A 5-step guide from the cupboard labels to the weak link',
+      'A worked example that follows a banana back to the farm',
+      'Label clues card and The links card',
+      'Ask the chain card and Weak links card',
+      'My chain page to fill in for their product',
     ],
-    skillTags: ['Systems Thinking', 'Geography', 'Critical Thinking', 'Sustainability', 'Research'],
+    skillTags: ['Systems Thinking', 'Geography', 'Research', 'Economics', 'Global Awareness'],
     insideTheLearning: {
       lead:
-        'Your child picks one ordinary object and traces where it actually came from. Raw material, factory, ship, shelf. It crosses more of the world than they expect. Then they imagine a disruption at one step and work out what breaks downstream.',
+        'Your child learns that nothing comes from the store. The store is the last stop on a long trip, and every stop has a place and a person behind it. They read real labels, ask real people and tell a fact from a guess.',
       skills: [
-        { skill: 'Systems Thinking', where: 'Seeing how each step depends on the one before it' },
-        { skill: 'Research', where: 'Finding the clues and piecing the journey together from partial information' },
-        { skill: 'Geography', where: 'Tracing how trade physically connects places on a map' },
-        { skill: 'Problem-Solving', where: 'Imagining a disruption and working out what it would take to fix it' },
-        { skill: 'Communication', where: 'Presenting the whole journey clearly enough that it makes sense to someone else' },
+        { skill: 'Geography', where: 'Mapping where each product and ingredient started' },
+        { skill: 'Research', where: 'Reading labels, looking things up and marking every guess' },
+        { skill: 'Communication', where: 'Asking a store worker, a farmer or a company about their link' },
+        { skill: 'Math', where: 'Estimating distances and counting the jobs behind one product' },
+        { skill: 'Systems Thinking', where: 'Finding the weak link and what happens when it breaks' },
       ],
     },
     format: 'Project Guide',

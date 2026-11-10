@@ -121,7 +121,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "square-foot-safari": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20Square%20Foot%20Safari%20v5.pdf",
   "street-explorer-map-maker": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Street%20Explorer%20Map%20Maker%20v2.pdf",
   "summer-outdoor-pack": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Anywhere%20Learning%20Summer%20v2.pdf",
-  "supply-chain-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Supply%20Chain%20Detective%20v2.pdf",
+  "supply-chain-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Supply%20Chain%20Detective%20v3.pdf",
   "survival-base": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Build%20a%20Survival%20Base%20for%20an%20Imaginary%20Expedition%20v5.pdf",
   "swap-day-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20The%20Swap%20Day%20Challenge%20v5.pdf",
   "teach-it-to-learn-it": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Teach%20It%20To%20Learn%20It%20v6.pdf",

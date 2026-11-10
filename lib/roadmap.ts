@@ -322,7 +322,7 @@ export const TERRITORIES: readonly Territory[] = [
       ],
     },
     activities: [
-      'kindness-missions', 'decision-lab', 'community-impact',
+      'kindness-missions', 'decision-lab', 'community-impact', 'supply-chain-detective',
       'neighbourhood-problem-spotter', 'privacy-footprint', 'world-food-detective',
       'cultural-celebration-journal', 'everyday-life-comparison', 'people-stories-interview',
       'local-language-mission', 'solo-mission',

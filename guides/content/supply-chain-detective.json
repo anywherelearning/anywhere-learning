@@ -1,0 +1,341 @@
+{
+  "slug": "supply-chain-detective",
+  "category": "Entrepreneurship",
+  "title": "Supply Chain Detective",
+  "tagline": "Clues · Trace · Ask · Weak link",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds out how everyday things get to your kitchen. They read the labels in your cupboard, trace one product back to where it started, ask a real person in the chain, count the miles and the people it took, then find the weak link that breaks first.",
+  "need": [
+    "Five things from your cupboard or fridge",
+    "A world map, on paper or a phone",
+    "Paper and coloured pencils",
+    "A trip to a store or market"
+  ],
+  "academics": [
+    {
+      "subject": "Geography",
+      "text": "maps, countries and how trade connects them"
+    },
+    {
+      "subject": "Math",
+      "text": "distances, counting and estimating"
+    },
+    {
+      "subject": "Economics",
+      "text": "everyone who shares in a price"
+    },
+    {
+      "subject": "Research",
+      "text": "reading labels and asking real people"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need to know where anything comes from. You're the label reader and the driver, and you look things up together. Your most useful question is 'Where was it before this?' Ask it at every stop until the trail runs out.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Hunt for clues and trace one thing back (Steps 1 and 2)."
+      },
+      {
+        "when": "A store visit",
+        "what": "Ask someone in the chain (Step 3)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Count the miles and find the weak link (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "The label doesn't say much",
+        "a": "That's a clue too. Check the company's website together, or write and ask them."
+      },
+      {
+        "q": "It's getting too complicated",
+        "a": "Pick something with fewer parts. A bag of rice or a jar of jam is much easier to follow than a phone."
+      },
+      {
+        "q": "They want to trace a phone",
+        "a": "Go for it at Extend, but pick one part, like the battery. A whole phone is made of hundreds of parts."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Nothing comes from the store. The store is the last stop on a long trip, and every stop has a place and a person behind it.",
+    "before": "Bananas come from the grocery store.",
+    "model": [
+      {
+        "part": "Sticker",
+        "line": "The sticker says Costa Rica."
+      },
+      {
+        "part": "Picked",
+        "line": "Picked green, then shipped cold by boat."
+      },
+      {
+        "part": "Ripened",
+        "line": "Ripened in a special room near our city."
+      },
+      {
+        "part": "Shelf",
+        "line": "Trucked to the store, then onto our counter."
+      }
+    ],
+    "modelNote": "The first answer stopped at the store. The second found four stops, two countries and a lot of people's jobs, all from one little sticker."
+  },
+  "steps": [
+    {
+      "title": "Hunt for clues in the cupboard",
+      "why": "Everything in your kitchen has been on a trip.",
+      "kid": "Your kid pulls five things from the cupboard and fridge and reads every label, using the Label clues card in the Supply Chain Toolkit at the end of the guide. They write down where each one says it's from, and mark it on a map.",
+      "you": "Point them to the small print on the back and bottom. Help with the trickier words, like 'product of' and 'packed for'.",
+      "ask": [
+        "Which one came the farthest?",
+        "Where was it before this?"
+      ],
+      "tip": "Fruit stickers and the bottoms of jars are great places to look for clues.",
+      "levels": {
+        "explore": "Find where two things came from, and point to the places on a map.",
+        "develop": "Check five labels, and mark every place on a map.",
+        "extend": "Check ten labels and sort them into near, far and can't tell."
+      }
+    },
+    {
+      "title": "Trace one thing back",
+      "why": "The label is only the last stop.",
+      "kid": "Your kid picks one product and works backwards through The links card: where the main ingredient or material started, where it was made, how it travelled and where it waited before the store. They mark every guess with a question mark.",
+      "you": "Look things up together, and help them tell a fact from a guess. 'We don't know yet' is a good answer.",
+      "ask": [
+        "What's it made of, and where does that come from?",
+        "What do you know, and what are you guessing?"
+      ],
+      "tip": "Pick something with one or two main ingredients, like jam, pasta or a cotton T-shirt. A granola bar has twenty.",
+      "levels": {
+        "explore": "Draw three stops: where it grew, where it was made and the store.",
+        "develop": "Trace five stops, and say how it travelled between each one.",
+        "extend": "Trace two ingredients from different countries, and find where their paths meet."
+      }
+    },
+    {
+      "title": "Ask someone in the chain",
+      "why": "The people who move things know what no label says.",
+      "kid": "Your kid asks a real person about one link, using the Ask the chain card: someone at the store about deliveries, a farmer at the market, or an email to the company asking where it's made. They write down what they learned and fix their map.",
+      "you": "Go with them in the store and help them pick a quiet moment. Read any email before it's sent.",
+      "ask": [
+        "What did they know that the label didn't say?",
+        "Who would know the next link back?"
+      ],
+      "tip": "Go at a quiet time, like a weekday morning. Busy staff can't stop to chat on a Saturday.",
+      "levels": {
+        "explore": "Ask one question at the store, with a grown-up beside you.",
+        "develop": "Ask two people in the chain, and add what you learned to the map.",
+        "extend": "Email the company, and compare their answer with what you found."
+      }
+    },
+    {
+      "title": "Count the miles and the people",
+      "why": "A cheap thing can still have travelled halfway around the world.",
+      "kid": "Your kid adds up roughly how far their product travelled, using a map or an online distance tool. Then they list every job it took to get here, from the person who grew it to the person who stocked the shelf.",
+      "you": "Help with the distances. Then ask how many people they think got a share of the price, and let them count.",
+      "ask": [
+        "How many people touched this before you did?",
+        "Who do you think gets the biggest share of the price?"
+      ],
+      "tip": "Make your town the last stop. Seeing your own street at the end of a long line makes it real.",
+      "levels": {
+        "explore": "Name four jobs it took to get your product to you.",
+        "develop": "Estimate the total distance, and list at least eight jobs.",
+        "extend": "Compare the distance with a similar product made close to home."
+      }
+    },
+    {
+      "title": "Find the weak link",
+      "why": "Every chain has a link that breaks first.",
+      "kid": "Your kid finds out about a time something was hard to get or got more expensive, by asking at the store or looking it up with you. Using the Weak links card, they work out which link broke. Then they finish the map and fill in My chain at the end of the guide.",
+      "you": "Share a time you couldn't find something in a store. Help them find out what really happened, not just a guess.",
+      "ask": [
+        "Which link broke?",
+        "Is there a version made closer to home?"
+      ],
+      "tip": "Older relatives often remember what was hard to get when they were young. It makes a great question at the next family dinner.",
+      "levels": {
+        "explore": "Pick the weakest link on your map, and say why.",
+        "develop": "Find out why one real thing was hard to get, and mark that link on your map.",
+        "extend": "Find a version made closer to home, compare the two chains and decide which to buy next time."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Supply Chain Toolkit",
+    "intro": "Where to find clues, the links in every chain, who to ask and what breaks first.",
+    "items": [
+      {
+        "name": "Label clues",
+        "lines": [
+          {
+            "k": "Made in:",
+            "v": "where it was put together"
+          },
+          {
+            "k": "Product of:",
+            "v": "where it was grown or made"
+          },
+          {
+            "k": "Packed for:",
+            "v": "the company, not the place"
+          },
+          {
+            "k": "Distributed by:",
+            "v": "who moved it, not who made it"
+          },
+          {
+            "k": "Small print:",
+            "v": "the back, the bottom, the sticker"
+          }
+        ],
+        "ask": "Where was it before this?"
+      },
+      {
+        "name": "The links",
+        "lines": [
+          {
+            "k": "Start:",
+            "v": "grown, caught or dug up"
+          },
+          {
+            "k": "Made:",
+            "v": "a factory, a mill or a kitchen"
+          },
+          {
+            "k": "Packed:",
+            "v": "boxes, bags and labels"
+          },
+          {
+            "k": "Moved:",
+            "v": "ship, train, truck or plane"
+          },
+          {
+            "k": "Waited:",
+            "v": "a warehouse, then the shelf"
+          }
+        ],
+        "ask": "Which link is the longest?"
+      },
+      {
+        "name": "Ask the chain",
+        "lines": [
+          {
+            "k": "Deliveries:",
+            "v": "when does the truck come?"
+          },
+          {
+            "k": "From:",
+            "v": "where does this one come from?"
+          },
+          {
+            "k": "How much:",
+            "v": "how many do you order at once?"
+          },
+          {
+            "k": "Runs out:",
+            "v": "what happens when it's gone?"
+          },
+          {
+            "k": "Company:",
+            "v": "an email asking where it's made"
+          }
+        ],
+        "ask": "Who knows the next link back?"
+      },
+      {
+        "name": "Weak links",
+        "lines": [
+          {
+            "k": "Weather:",
+            "v": "a bad harvest or a storm"
+          },
+          {
+            "k": "Distance:",
+            "v": "one very long trip"
+          },
+          {
+            "k": "One place:",
+            "v": "only one factory makes it"
+          },
+          {
+            "k": "Cost:",
+            "v": "fuel and shipping prices"
+          },
+          {
+            "k": "Closer:",
+            "v": "is there a version made nearby?"
+          }
+        ],
+        "ask": "What would break first?"
+      }
+    ],
+    "after": {
+      "label": "My chain",
+      "lines": [
+        "The product",
+        "Where it started",
+        "Stops on the way",
+        "Its weakest link"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Detective work",
+      "text": "following clues back to the start"
+    },
+    {
+      "name": "Systems thinking",
+      "text": "seeing how one link affects the rest"
+    },
+    {
+      "name": "Fact checking",
+      "text": "telling a fact from a guess"
+    },
+    {
+      "name": "Global awareness",
+      "text": "finding the world in the cupboard"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know where their stuff comes from, and how far it came.",
+    "text": "Grocery trips get slower after this, in a good way. If they flip a jar to read the label, or ask why something's out of stock, the detective habit has come home with you.",
+    "celebrate": "When they tell someone where something really came from, say: 'You followed that all the way back.'",
+    "extensions": [
+      "Trace a piece of clothing from the field to the store",
+      "Map a whole meal and count the countries on the plate",
+      "Visit a farm or a maker, like a coffee farm or a chocolate maker, and draw their chain",
+      "Track one product's price for a few months and find out why it moves"
+    ]
+  },
+  "signs": [
+    "They read labels without being asked",
+    "They ask where things come from",
+    "They notice when something's out of stock and wonder why"
+  ],
+  "makeItReal": "Keep the world map up, and add a pin every time someone in the family finds a new label.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/supply-chain-detective.jpg",
+    "alt": "A boy in a cap and glasses picking red coffee cherries from a leafy coffee plant",
+    "caption": "Coffee in Panama, the very first link.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "In Panama, we visited a coffee plantation. The kids picked the coffee, washed the seeds, ground them, roasted them and tried three different coffees.",
+    "quotes": []
+  }
+}
