@@ -3172,27 +3172,27 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'body-owners-manual': {
     opening:
-      'Your child becomes the scientist of their own body, running real self-experiments: resting heart rate, reaction time, senses, reflexes, and quirks. They measure, record, and compile it all into a real body manual for the one machine they will use every day. Hands-on STEM science that turns body literacy into something they discovered, not something they were told.',
+      'Your child writes the owner manual for the one machine they use every day: their own body. They find their pulse, push their heart and time how fast it comes back, find the edges of their senses and catch a falling ruler to measure their reaction time. Then they write it all up with their real numbers, ready to retest next month.',
     whatsIncluded: [
-      'Take baseline body readings',
-      'Test the heart, reflexes, and reaction time',
-      'Run experiments on the senses',
-      'Find personal quirks and bests',
-      'Compile it all into a real body manual',
+      'A 5-step guide from a first pulse to a finished body manual',
+      'A worked example that turns one reading into a real experiment',
+      'Engine tests card and Sensor tests card',
+      'Control centre tests card and Quirks and bests card',
+      'My specs page for their own numbers',
     ],
     skillTags: ['STEM', 'Science', 'Measurement', 'Body Literacy', 'Data'],
     insideTheLearning: {
       lead:
-        'Your child runs experiments on their own body and trusts the readings over their assumptions. Pulse before and after exercise. What sleep does to the numbers. What food does. It is a fair test where they are both the scientist and the subject, and the data is theirs.',
+        'Your child learns that a reading on its own is just a number. Take it, change one thing and take it again, and now they know something about how their body works. They are the scientist and the subject, and every number in the manual is theirs.',
       skills: [
-        { skill: 'STEM', where: 'Designing a fair test on themselves and changing one variable at a time' },
-        { skill: 'Science', where: 'Seeing cause and effect directly as exercise, food and rest move the numbers' },
-        { skill: 'Measurement', where: 'Taking real readings off their own body and recording them accurately' },
-        { skill: 'Body Literacy', where: 'Learning how their own body actually behaves rather than how they assumed it did' },
-        { skill: 'Data', where: 'Building a record over time and reading the pattern that comes out of it' },
+        { skill: 'STEM', where: 'Running a fair test on themselves and changing one thing at a time' },
+        { skill: 'Science', where: 'Seeing the heart speed up and recover, and finding where each sense runs out' },
+        { skill: 'Measurement', where: 'Timing a pulse, counting breaths and reading a falling ruler' },
+        { skill: 'Body Literacy', where: 'Knowing their own resting heart rate, recovery time and quirks' },
+        { skill: 'Data', where: 'Taking three readings, keeping the middle one and comparing before and after' },
       ],
     },
-    format: 'Activity Guide',
+    format: 'Project Guide',
   },
   'family-history-detective': {
     opening:

@@ -2897,15 +2897,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "The Body Owner's Manual",
     slug: "body-owners-manual",
     description:
-      "Your child becomes the scientist of their own body, running real self-experiments: resting heart rate, reaction time, senses, reflexes, and quirks. They measure, record, and compile it all into a real owner's manual for the one machine they will use every day. Hands-on STEM science that turns body literacy into something they discovered, not something they were told.",
+      "Your child writes the owner manual for the one machine they use every day: their own body. They find their pulse, push their heart and time how fast it comes back, find the edges of their senses and catch a falling ruler to measure their reaction time. Then they write it all up with their real numbers, ready to retest next month.",
     shortDescription:
-      "STEM science for kids ages 6-14: run self-experiments on heart rate, reaction time, and the senses, and compile a body owner's manual.",
+      "STEM science for kids ages 6-14: measure your pulse, recovery and reaction time, test your senses and write your body manual.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/body-owners-manual.jpg",
-    previewFile: "Preview Planning & Problem-Solving THE BODY OWNER'S MANUAL.pdf",
+    previewFile: "Preview Planning & Problem-Solving THE BODY OWNER'S MANUAL v3.pdf",
     category: "planning-problem-solving",
     isBundle: false,
     bundleProductIds: null,

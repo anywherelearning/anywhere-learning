@@ -1,0 +1,337 @@
+{
+  "slug": "body-owners-manual",
+  "category": "Planning & Problem-Solving",
+  "title": "The Body Owner's Manual",
+  "tagline": "Measure · Push · Test · Write",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid writes the owner's manual for the one machine they'll use every day: their own body. They find their pulse, push their heart and time how fast it comes back, find the edges of their senses, catch a falling ruler to measure their reaction time, then write it all up with their real numbers.",
+  "need": [
+    "A phone with a stopwatch",
+    "A 30 cm ruler",
+    "Paper and a pencil, or a notebook",
+    "A few foods with a strong smell, and a scarf for a blindfold"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "running a fair test and changing one thing"
+    },
+    {
+      "subject": "Math",
+      "text": "multiplying, timing and comparing numbers"
+    },
+    {
+      "subject": "Health",
+      "text": "how the heart, senses and nerves work"
+    },
+    {
+      "subject": "Writing",
+      "text": "turning readings into a manual someone could use"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need to know any biology. You hold the stopwatch, drop the ruler and keep every test fair and gentle. Your most useful question is 'What changed the number?' Run the tests on yourself too. Kids love beating your reaction time.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Find your pulse and push the engine (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Test the senses and catch the ruler (Steps 3 and 4)."
+      },
+      {
+        "when": "Session 3",
+        "what": "Write the manual (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They can't find their pulse",
+        "a": "Try the side of the neck, just beside the windpipe, with two fingers and not the thumb. Sitting still for a minute first makes it much easier to feel."
+      },
+      {
+        "q": "They want to win every test",
+        "a": "Run it on yourself and let your numbers be ordinary. The manual is about what's true for their body, not what's best."
+      },
+      {
+        "q": "A test makes them dizzy or sore",
+        "a": "Stop, sit down and skip it. Nothing in here is worth pushing through, and leave breath-holding contests out altogether."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A reading on its own is just a number. Take it, change one thing and take it again, and now you know something about how your body works.",
+    "before": "My heart beats fast.",
+    "model": [
+      {
+        "part": "Reading",
+        "line": "Sitting still, 22 beats in 15 seconds. That's 88 a minute."
+      },
+      {
+        "part": "Change",
+        "line": "One minute of jumping jacks."
+      },
+      {
+        "part": "Again",
+        "line": "37 beats in 15 seconds. That's 148 a minute."
+      },
+      {
+        "part": "Back",
+        "line": "Down to 88 again after 2 minutes 40 seconds."
+      }
+    ],
+    "modelNote": "Fast could mean anything. Now there's a starting number, what changed it and how long it took to come back, and they can test it again next month."
+  },
+  "steps": [
+    {
+      "title": "Find your pulse",
+      "why": "Every manual starts with the specs.",
+      "kid": "Your kid sits still for a minute, finds their pulse at the wrist or neck and counts the beats for 15 seconds while you time it. They multiply by four, do it three times and keep the middle number. Then they count their breaths for a minute, using the Engine tests card in the Body Toolkit at the end of the guide.",
+      "you": "Show them where to press, with two fingers and not the thumb, then say 'Go' and 'Stop'. Then swap and let them time you.",
+      "ask": [
+        "What's your heart doing when you're perfectly still?",
+        "Why do you think we took it three times?"
+      ],
+      "tip": "Have them put a hand flat on their chest first. Feeling the beat there makes it much easier to find at the wrist.",
+      "levels": {
+        "explore": "Find your pulse and count it for a whole minute while someone times it.",
+        "develop": "Take your heart rate and breaths three times, and write down the middle number.",
+        "extend": "Take your resting heart rate at three times of day, and explain why it changes."
+      }
+    },
+    {
+      "title": "Push the engine",
+      "why": "The number that matters most is how fast it comes back.",
+      "kid": "Your kid does one minute of movement, like jumping jacks or running on the spot, and takes their pulse straight away. Then they check it every 30 seconds until it's back near their resting number, and write down how long that took. That's their recovery time.",
+      "you": "Pick something safe for the space and keep it to one minute. Time it while they count, then do it yourself and compare.",
+      "ask": [
+        "How much did your heart jump?",
+        "What do you think it was doing in there?"
+      ],
+      "tip": "Count the second they stop. The number starts dropping right away.",
+      "levels": {
+        "explore": "Take your pulse before and after a minute of jumping.",
+        "develop": "Add your recovery time, then compare two kinds of movement.",
+        "extend": "Predict which of three movements will push it most, test all three and chart them."
+      }
+    },
+    {
+      "title": "Find the edges of your senses",
+      "why": "Your senses have limits, and you can find exactly where they are.",
+      "kid": "Your kid picks tests from the Sensor tests card, like finding their blind spot, naming foods by smell with their eyes closed or finding how far away a whisper still works. For each one, they write down exactly where the edge is.",
+      "you": "Set up each test the same way every time, and be the one who whispers or holds the food. Tell them what's going on: the blind spot is where the nerve leaves the eye, so there's nothing there to see with.",
+      "ask": [
+        "Which sense turned out sharper or stranger than you thought?",
+        "What changed the number?"
+      ],
+      "tip": "Do the smell test with their nose held, then open. A lot of what we call taste turns out to be smell.",
+      "levels": {
+        "explore": "Run one sense test and say what surprised you.",
+        "develop": "Test three senses and write down exactly where each edge is.",
+        "extend": "Change one thing in each test, like distance or light, and record what it does."
+      }
+    },
+    {
+      "title": "Catch the ruler",
+      "why": "It shows how fast a message gets from your eyes to your fingers.",
+      "kid": "Your kid holds their thumb and finger open around the zero end of a ruler while you hold the top. You let go with no warning, and they catch it. The number at their fingers is how far it fell. They do it five times, then test what changes it, using the Control centre tests card.",
+      "you": "Hold the ruler still and drop it at random moments, with no countdown. Keep track of the numbers, then let them drop it for you.",
+      "ask": [
+        "What was your best catch?",
+        "What made you slower?"
+      ],
+      "tip": "A catch at 20 cm means about a fifth of a second. A catch at 10 cm, about a seventh.",
+      "levels": {
+        "explore": "Catch the ruler five times and circle your best.",
+        "develop": "Compare your left and right hands, and your best and worst catch.",
+        "extend": "Test what slows you down, like talking or being tired, and keep everything else the same."
+      }
+    },
+    {
+      "title": "Write the manual",
+      "why": "Nobody knows this machine better than they do now.",
+      "kid": "Your kid gathers every reading and writes their owner's manual, with a section for the engine, the senses and the control centre, plus a page from the Quirks and bests card. They fill in My specs at the end of the guide and add a warning lights page: what their body does when it's tired, hungry or upset, and what helps.",
+      "you": "Treat it like a real document. Read it slowly, ask about anything that isn't clear, and put a retest date on the calendar for a month from now.",
+      "ask": [
+        "What do you know about your body now that you didn't before?",
+        "What would someone need to know to look after this machine?"
+      ],
+      "tip": "Give it a cover and a model number, like 'Model: 9 years old'. It suddenly feels official.",
+      "levels": {
+        "explore": "Write or draw one page with your five favourite readings.",
+        "develop": "Write a section for each part of the body you tested, with your real numbers.",
+        "extend": "Write the whole manual with a warning lights page, then retest one number a month later."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Body Toolkit",
+    "intro": "Tests for the engine, the senses and the control centre, and the quirks that make yours yours.",
+    "items": [
+      {
+        "name": "Engine tests",
+        "lines": [
+          {
+            "k": "Resting:",
+            "v": "beats in 15 seconds, times 4"
+          },
+          {
+            "k": "Breaths:",
+            "v": "count for a minute, sitting still"
+          },
+          {
+            "k": "After:",
+            "v": "one minute of jumping"
+          },
+          {
+            "k": "Recovery:",
+            "v": "how long until it's back"
+          },
+          {
+            "k": "Stairs:",
+            "v": "up and down for one minute"
+          }
+        ],
+        "ask": "What changed the number?"
+      },
+      {
+        "name": "Sensor tests",
+        "lines": [
+          {
+            "k": "Blind spot:",
+            "v": "an X, a dot and one eye closed"
+          },
+          {
+            "k": "Smell:",
+            "v": "name foods with your eyes closed"
+          },
+          {
+            "k": "Whisper:",
+            "v": "how far away does it still work?"
+          },
+          {
+            "k": "Two points:",
+            "v": "fingertip versus back"
+          },
+          {
+            "k": "Afterimage:",
+            "v": "stare at a colour, then at white"
+          }
+        ],
+        "ask": "Where's the edge?"
+      },
+      {
+        "name": "Control centre tests",
+        "lines": [
+          {
+            "k": "Ruler:",
+            "v": "best of five catches"
+          },
+          {
+            "k": "Hands:",
+            "v": "left versus right"
+          },
+          {
+            "k": "Busy brain:",
+            "v": "catch while answering a question"
+          },
+          {
+            "k": "Nose:",
+            "v": "touch it with your eyes shut"
+          },
+          {
+            "k": "Sound:",
+            "v": "point to it with your eyes shut"
+          }
+        ],
+        "ask": "What slowed you down?"
+      },
+      {
+        "name": "Quirks and bests",
+        "lines": [
+          {
+            "k": "Eye:",
+            "v": "which one does the aiming?"
+          },
+          {
+            "k": "Balance:",
+            "v": "one foot, eyes shut"
+          },
+          {
+            "k": "Reach:",
+            "v": "sit and reach past your toes"
+          },
+          {
+            "k": "Wall sit:",
+            "v": "how long can you hold it?"
+          },
+          {
+            "k": "Party tricks:",
+            "v": "roll your tongue, raise one eyebrow"
+          }
+        ],
+        "ask": "What's only true for you?"
+      }
+    ],
+    "after": {
+      "label": "My specs",
+      "lines": [
+        "Resting heart rate",
+        "Recovery time",
+        "Best catch",
+        "My strangest quirk"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Fair testing",
+      "text": "changing one thing at a time"
+    },
+    {
+      "name": "Measurement",
+      "text": "getting real, honest numbers"
+    },
+    {
+      "name": "Body literacy",
+      "text": "knowing how their own machine works"
+    },
+    {
+      "name": "Writing it up",
+      "text": "turning readings into something useful"
+    }
+  ],
+  "conclusion": {
+    "headline": "They wrote the manual for their own body.",
+    "text": "Watch for it in the weeks after. If they check their pulse after running up the stairs, or say 'Let's test it' when someone makes a claim, they've started thinking like a scientist.",
+    "celebrate": "When they read you a number they measured themselves, say: 'Nobody else in the world has that manual.'",
+    "extensions": [
+      "Retest everything in a month and see what changed",
+      "Make manuals for the whole family and compare specs",
+      "Pick one number, like recovery time, and work on it for a few weeks",
+      "Look up a mouse's heart rate and an elephant's, and compare them with yours"
+    ]
+  },
+  "signs": [
+    "They measure before they guess",
+    "They notice what their body is telling them",
+    "They change one thing to find out why"
+  ],
+  "makeItReal": "Keep the manual somewhere handy and add a new reading whenever they grow, run further or catch the ruler faster.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/body-owners-manual.jpg",
+    "alt": "Two kids seen from behind, sprinting through the shallow water on a wide sandy beach under a big blue sky",
+    "caption": "Every engine needs a test run.",
+    "tall": true
+  }
+}
