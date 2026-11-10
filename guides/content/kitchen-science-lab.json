@@ -56,6 +56,10 @@
       {
         "q": "They want to taste it to check",
         "a": "Hold the lab rule: no tasting, ever. Real scientists don't taste unknown powders, and the tests can tell them everything."
+      },
+      {
+        "q": "The cabbage juice came out blue",
+        "a": "Tap water can do that. Compare every cup with your plain-water cup and the test still works, or try bottled water."
       }
     ]
   },
@@ -128,7 +132,7 @@
       "levels": {
         "explore": "Run 2 tests on every powder.",
         "develop": "Run all 4 tests and fill in the whole table.",
-        "extend": "Repeat one test to check you get the same result twice."
+        "extend": "Design a fifth test that tells sugar from salt without tasting, and add it to the table."
       }
     },
     {
@@ -150,7 +154,7 @@
     {
       "title": "Ask your own question",
       "why": "Real scientists test questions nobody handed them.",
-      "kid": "Your kid picks a 'what would happen if' question, like does warm vinegar fizz more than cold? They change just one thing, keep everything else the same using the Fair test card, predict, run it and share what they found with the family like a real scientist.",
+      "kid": "Your kid picks a 'what would happen if' question from the Question ideas card or their own, like does warm vinegar fizz more than cold? They change just one thing, keep everything else the same using the Fair test card, predict, run it and share what they found with the family like a real scientist.",
       "you": "Treat their question like real research. Ask what they're changing and what stays the same.",
       "ask": [
         "What's the one thing you're changing?",
@@ -281,8 +285,8 @@
       "text": "noticing small differences"
     },
     {
-      "name": "Fair testing",
-      "text": "changing one thing at a time"
+      "name": "Control tests",
+      "text": "comparing against plain water"
     },
     {
       "name": "Logic",
@@ -298,7 +302,7 @@
     "text": "Tomorrow, put a spoonful of one powder in a cup and ask which it is. Watch which test they reach for first. If it's vinegar, they know one drop splits the five suspects into two groups, and they can tell you why.",
     "celebrate": "Save your praise for the reveal: 'You didn't guess once. Every test crossed something off, and that's how you knew.'",
     "extensions": [
-      "Hide a mix of two powders and solve it",
+      "Test a pantry mix, like pancake mix, and work out which suspects are inside",
       "Use the cabbage juice to test every drink in the fridge",
       "Write up a one-page lab report with a chart",
       "Set a mystery for a friend or grandparent to solve"

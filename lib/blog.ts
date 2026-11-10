@@ -7923,7 +7923,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'A routine the kids helped design is a routine they will actually follow. Before the year starts, sit down together for fifteen minutes and build it as a family. Ask them what worked last year and what did not. Ask what they want to learn about. Ask when they focus best. Kids are surprisingly honest and often more ambitious than you expect.' },
       { type: 'paragraph', text: 'When a kid has a say in the shape of their day, the daily battle mostly disappears, because it stopped being your rule and became their plan. Even small choices help: which subject comes first, whether the read-aloud is morning or bedtime, what the reward is for finishing the focused block. Ownership does more for cooperation than any sticker chart.' },
 
-      { type: 'product-callout', slug: 'time-energy-planner', context: 'A kid-led way to map out the week together, so the routine is something they own rather than something you enforce.', pinned: true },
+      { type: 'product-callout', slug: 'time-energy-planner', context: 'A way to track their energy together and plan a day around it, so the routine is something they own rather than something you enforce.', pinned: true },
 
       { type: 'heading', level: 2, text: 'The mistakes that wreck the first month' },
       { type: 'paragraph', text: 'A few predictable traps, and how to sidestep them:' },
@@ -9273,7 +9273,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'The logistics are the point. Someone will not show up. The paint will be the wrong colour. The library will have double-booked the room. Let it be imperfect and finished, which is a skill most adults are still working on.' },
       { type: 'heading', level: 3, text: 'Step 7: Go back and look' },
       { type: 'paragraph', text: 'A week later, stand in the same spot. Is it different? Count again. Take the after photo to go with the before. Tell the people who helped what happened, and ask your kid what version 2 would be. That last question is where the learning gets filed.' },
-      { type: 'product-callout', slug: 'community-impact', context: 'If you want the steps laid out with project idea cards, a who-does-this-affect research sheet and the version 2 reflection, our Community Impact guide is this project, written for the parent to run alongside the kid.' },
+      { type: 'product-callout', slug: 'community-impact', context: 'If you want the steps laid out, from asking people what would help to going back to see if it worked, our Community Impact guide is this project, written for the parent to run alongside the kid.' },
 
       { type: 'heading', level: 2, text: '8 community impact projects a family can actually run' },
       { type: 'paragraph', text: 'Each one names the age it fits best and the school subjects hiding inside it. Pick the one closest to something your kid has already complained about.' },
@@ -9890,7 +9890,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '10. Pack their own small kit' },
       { type: 'paragraph', text: 'Give your kid their own small pack for outings and let them be responsible for it. A good kid kit is short: a whistle on a string, a water bottle, a snack, an extra warm layer and hat, a small flashlight, and a big bright garbage bag that works as a rain poncho or a windbreak to sit in. Write the list together and tape it inside the pack.' },
       { type: 'paragraph', text: 'My kids pack their own bags for day trips now. My daughter still gets a quick last check from me, and my son is fully on his own. The trade-offs are where the thinking happens: everything has to fit, it all has to be carried, and “I might need it” isn’t a good enough reason to bring the heavy thing.' },
-      { type: 'product-callout', slug: 'outdoor-survival-planner', pinned: true, context: 'If your kid loves the planning part, Outdoor Survival Planner has them plan a real expedition: research the terrain, weigh the risks, choose what makes the pack and work through shelter, water and navigation scenarios when the plan changes.' },
+      { type: 'product-callout', slug: 'outdoor-survival-planner', pinned: true, context: 'If your kid loves the planning part, Outdoor Survival Planner has them pick a scenario, put the priorities in order, test a shelter and a whistle outside with you, then write a real trip plan for your next outing.' },
 
       { type: 'heading', level: 2, text: 'Survival skills by age' },
       { type: 'paragraph', text: 'All ten work from 6 to 14. What changes is how much your kid decides on their own.' },

@@ -12,36 +12,78 @@
     "Simple supplies, depending on what they choose"
   ],
   "academics": [
-    { "subject": "Social Studies", "text": "how a community works and who looks after what" },
-    { "subject": "Communication", "text": "asking real people real questions" },
-    { "subject": "Math", "text": "counting, timing and measuring what changed" },
-    { "subject": "Planning", "text": "steps, permission and follow-through" }
+    {
+      "subject": "Social Studies",
+      "text": "how a community works and who looks after what"
+    },
+    {
+      "subject": "Communication",
+      "text": "asking real people real questions"
+    },
+    {
+      "subject": "Math",
+      "text": "counting, timing and measuring what changed"
+    },
+    {
+      "subject": "Planning",
+      "text": "steps, permission and follow-through"
+    }
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
     "intro": "You don't need to organize anything. You're the reality check and the ride. Keep asking 'What's the smallest version of this that would really help someone?' Go with them when they talk to people, and let them do the talking. It'll probably take longer than you think and go sideways once. That's part of it.",
     "plan": [
-      { "when": "Session 1", "what": "Pick your people and ask what they need (Steps 1 and 2)." },
-      { "when": "Session 2", "what": "Plan the smallest useful thing, then do it (Steps 3 and 4)." },
-      { "when": "A week later", "what": "Go back, find out if it helped and keep it going (Step 5)." }
+      {
+        "when": "Session 1",
+        "what": "Pick your people and ask what they need (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Plan the smallest useful thing, then do it (Steps 3 and 4)."
+      },
+      {
+        "when": "A week later",
+        "what": "Go back, find out if it helped and keep it going (Step 5)."
+      }
     ],
     "tips": [],
     "troubleshoot": [
-      { "q": "They want to save the whole world", "a": "Good. Ask 'What's one part of that you can see from here?' Then ask what they could finish this week." },
-      { "q": "They're too shy to ask anyone", "a": "Practise in the car, let them bring the question on a card, and stand right beside them. One person is plenty." },
-      { "q": "Nobody seems to need anything", "a": "Ask what's annoying instead of what's needed. Or start close to home: a grandparent, a neighbour and a sibling all count." }
+      {
+        "q": "They want to save the whole world",
+        "a": "Good. Ask 'What's one part of that you can see from here?' Then ask what they could finish this week."
+      },
+      {
+        "q": "They're too shy to ask anyone",
+        "a": "Practise in the car, let them bring the question on a card, and stand right beside them. One person is plenty."
+      },
+      {
+        "q": "Nobody seems to need anything",
+        "a": "Ask what's annoying instead of what's needed. Or start close to home: a grandparent, a neighbour and a sibling all count."
+      }
     ]
   },
   "lesson": {
     "text": "Helping isn't doing what you think people need. It starts with asking them, and it isn't finished until you've gone back to see if it worked.",
-    "before": "I'll make a poster that says don't litter.",
+    "before": "I'll make cards for everyone on our street.",
     "model": [
-      { "part": "Ask", "line": "The park volunteer says the bins overflow after the weekend." },
-      { "part": "Plan", "line": "Pick up on Sunday evening, with gloves and two bags." },
-      { "part": "Do", "line": "Two full bags in 30 minutes. Before and after photos." },
-      { "part": "Go back", "line": "She says it helped. Next month, a friend's family takes a turn." }
+      {
+        "part": "Ask",
+        "line": "Our neighbour says since her knee surgery, the stairs with groceries are the hard part."
+      },
+      {
+        "part": "Plan",
+        "line": "Meet her car on Thursdays and carry the bags up."
+      },
+      {
+        "part": "Do",
+        "line": "Four Thursdays, about ten minutes each."
+      },
+      {
+        "part": "Go back",
+        "line": "She says it helped. A friend takes over when we travel."
+      }
     ],
-    "modelNote": "The poster was a guess. The second plan came from someone who's there every week, and it didn't end on the first day."
+    "modelNote": "The cards were a guess. The groceries came from asking her, and the plan doesn't stop when the family's away."
   },
   "steps": [
     {
@@ -96,7 +138,7 @@
       "title": "Do it",
       "why": "Now it's real, and real things go sideways.",
       "kid": "Your kid runs the project and follows the plan, taking a before photo and counting what they can: bags, minutes, people. When the plan stops working, they decide what to change and carry on.",
-      "you": "Work alongside them and let them lead, even if you'd do it differently. Stay close around traffic, water and people you don't know. If it stalls, ask 'What's the version we can finish today?'",
+      "you": "Work alongside them and let them lead, even if you'd do it differently. Stay close around traffic, water and people you don't know. If there's litter, gloves on, and nobody touches needles or broken glass.",
       "ask": [
         "What's harder than you expected?",
         "What do you need to change?"
@@ -132,44 +174,104 @@
       {
         "name": "Who's around you",
         "lines": [
-          { "k": "Home:", "v": "family, grandparents, whoever visits" },
-          { "k": "Street:", "v": "who's new, who's on their own?" },
-          { "k": "Places:", "v": "library, park, shop, beach" },
-          { "k": "Groups:", "v": "team, club, class" },
-          { "k": "Travelling:", "v": "wherever you're staying" }
+          {
+            "k": "Home:",
+            "v": "family, grandparents, whoever visits"
+          },
+          {
+            "k": "Street:",
+            "v": "who's new, who's on their own?"
+          },
+          {
+            "k": "Places:",
+            "v": "library, park, shop, beach"
+          },
+          {
+            "k": "Groups:",
+            "v": "team, club, class"
+          },
+          {
+            "k": "Travelling:",
+            "v": "wherever you're staying"
+          }
         ],
         "ask": "Who could use a hand?"
       },
       {
         "name": "Good questions",
         "lines": [
-          { "k": "Annoying:", "v": "what's the annoying part?" },
-          { "k": "Wish:", "v": "what do you wish someone would do?" },
-          { "k": "Tried:", "v": "has anyone tried to fix it?" },
-          { "k": "Not helpful:", "v": "what wouldn't help?" },
-          { "k": "Who else:", "v": "who else should I ask?" }
+          {
+            "k": "Annoying:",
+            "v": "what's the annoying part?"
+          },
+          {
+            "k": "Wish:",
+            "v": "what do you wish someone would do?"
+          },
+          {
+            "k": "Tried:",
+            "v": "has anyone tried to fix it?"
+          },
+          {
+            "k": "Not helpful:",
+            "v": "what wouldn't help?"
+          },
+          {
+            "k": "Who else:",
+            "v": "who else should I ask?"
+          }
         ],
         "ask": "What did you not expect?"
       },
       {
         "name": "Ways to help",
         "lines": [
-          { "k": "Clean up:", "v": "a spot that's always a mess" },
-          { "k": "Make:", "v": "a sign, a map or a guide" },
-          { "k": "Welcome:", "v": "someone new or left out" },
-          { "k": "Give time:", "v": "read, rake, carry, visit" },
-          { "k": "Thank:", "v": "people whose work nobody sees" }
+          {
+            "k": "Teach:",
+            "v": "something you're good at"
+          },
+          {
+            "k": "Make:",
+            "v": "a sign, a map or a guide"
+          },
+          {
+            "k": "Welcome:",
+            "v": "someone new or left out"
+          },
+          {
+            "k": "Give time:",
+            "v": "read, rake, carry, visit"
+          },
+          {
+            "k": "Thank:",
+            "v": "people whose work nobody sees"
+          }
         ],
         "ask": "What's the smallest version?"
       },
       {
         "name": "Keep it going",
         "lines": [
-          { "k": "Again:", "v": "same thing, next month" },
-          { "k": "Hand over:", "v": "who could take it on?" },
-          { "k": "Teach it:", "v": "show someone how" },
-          { "k": "Fix it:", "v": "one change for Version 2" },
-          { "k": "Tell it:", "v": "who should know what happened?" }
+          {
+            "k": "Again:",
+            "v": "same thing, next month"
+          },
+          {
+            "k": "Hand over:",
+            "v": "who could take it on?"
+          },
+          {
+            "k": "Teach it:",
+            "v": "show someone how"
+          },
+          {
+            "k": "Fix it:",
+            "v": "one change for next time"
+          },
+          {
+            "k": "Tell it:",
+            "v": "who should know what happened?"
+          }
         ],
         "ask": "Who keeps this going without you?"
       }
@@ -185,14 +287,26 @@
     }
   },
   "skills": [
-    { "name": "Citizenship", "text": "deciding to do something about it" },
-    { "name": "Listening", "text": "finding out what people really need" },
-    { "name": "Follow-through", "text": "finishing, even the boring part" },
-    { "name": "Leadership", "text": "starting something that lasts" }
+    {
+      "name": "Citizenship",
+      "text": "deciding to do something about it"
+    },
+    {
+      "name": "Listening",
+      "text": "finding out what people really need"
+    },
+    {
+      "name": "Follow-through",
+      "text": "finishing, even the boring part"
+    },
+    {
+      "name": "Leadership",
+      "text": "starting something that lasts"
+    }
   ],
   "conclusion": {
     "headline": "They saw something, and they did something about it.",
-    "text": "Watch for it in the weeks after. If they notice who's struggling with the door, or say 'We could do something about that', they've started to see themselves as someone who can.",
+    "text": "You'll see it in small moments after this. If they notice who's struggling with the door, or say 'We could do something about that', they've started to see themselves as someone who can.",
     "celebrate": "Stand back and look at it together, and say: 'That's better now because of you.'",
     "extensions": [
       "Do a project somewhere you're visiting",

@@ -12,34 +12,80 @@
     "A few days to test it"
   ],
   "academics": [
-    { "subject": "Science", "text": "testing an idea and changing one thing" },
-    { "subject": "Math", "text": "counting, timing, before and after" },
-    { "subject": "Writing", "text": "saying exactly what the problem is" },
-    { "subject": "Planning", "text": "steps, timing and follow-through" }
+    {
+      "subject": "Science",
+      "text": "testing an idea and changing one thing"
+    },
+    {
+      "subject": "Math",
+      "text": "counting, timing, before and after"
+    },
+    {
+      "subject": "Writing",
+      "text": "saying exactly what the problem is"
+    },
+    {
+      "subject": "Planning",
+      "text": "steps, timing and follow-through"
+    }
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
     "intro": "You're the coach, not the problem-solver. Let them pick something that truly annoys them, even if it isn't what annoys you. Slow them down at 'why', because kids want to jump straight to fixing. And keep it light: a test that fails is the most useful part.",
     "plan": [
-      { "when": "Session 1", "what": "Pick the problem and find the because (Steps 1 and 2)." },
-      { "when": "Session 2", "what": "Get every idea out, then pick one and build it (Steps 3 and 4)." },
-      { "when": "Over a few days", "what": "Test it and make Version 2 (Step 5)." }
+      {
+        "when": "Session 1",
+        "what": "Pick the problem and find the because (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Get every idea out, then pick one and build it (Steps 3 and 4)."
+      },
+      {
+        "when": "Over a few days",
+        "what": "Test it and make Version 2 (Step 5)."
+      }
     ],
     "tips": [],
     "troubleshoot": [
-      { "q": "The problem seems small to me", "a": "Small is perfect. A hook for a water bottle teaches the same thinking as a big fix, and they can finish it this week." },
-      { "q": "Their fix depends on someone else", "a": "Ask 'What part of this is yours?' Putting up a divider works. 'My sister should stop' doesn't." },
-      { "q": "The test failed", "a": "Good, now you've got something to work with. Ask what happened right before it failed, and change one thing." }
+      {
+        "q": "The problem seems small to me",
+        "a": "Small is perfect. A hook for a water bottle teaches the same thinking as a big fix, and they can finish it this week."
+      },
+      {
+        "q": "It's a problem the whole family shares",
+        "a": "Have your kid interview everyone it affects first, one question each: what happens, when, and what would make it easy? Now the fix has to work for all of them, not just for your kid."
+      },
+      {
+        "q": "Their fix depends on someone else",
+        "a": "Ask 'What part of this is yours?' Putting up a divider works. 'My sister should stop' doesn't."
+      },
+      {
+        "q": "The test failed",
+        "a": "Good, now you've got something to work with. Ask what happened right before it failed, and change one thing."
+      }
     ]
   },
   "lesson": {
     "text": "Most fixes fail because they go after the part you can see. A good fix goes after the reason it keeps happening, and it still works on a tired day.",
     "before": "I'll try harder to remember my water bottle.",
     "model": [
-      { "part": "Problem", "line": "I lose my water bottle about three times a week." },
-      { "part": "Because", "line": "I put it down wherever I am when I walk in." },
-      { "part": "Fix", "line": "A hook right by the door, at my height." },
-      { "part": "Test", "line": "Four days, lost it once. Moved the hook closer." }
+      {
+        "part": "Problem",
+        "line": "I lose my water bottle about three times a week."
+      },
+      {
+        "part": "Because",
+        "line": "I put it down wherever I am when I walk in."
+      },
+      {
+        "part": "Fix",
+        "line": "A hook right by the door, at my height."
+      },
+      {
+        "part": "Test",
+        "line": "Four days, lost it once. Moved the hook closer."
+      }
     ],
     "modelNote": "Trying harder lasts about a day. The hook keeps working when they're tired, because there's nothing to remember."
   },
@@ -63,7 +109,7 @@
     {
       "title": "Find the because",
       "why": "Fix the wrong thing and it comes right back.",
-      "kid": "Your kid watches the problem happen and uses the Keep asking card to dig into it. Then they finish this sentence: 'When I ___, I often ___, because ___.' That last blank is the whole point.",
+      "kid": "Your kid watches the problem happen and uses the Why questions card to dig into it. Then they finish this sentence: 'When I ___, I often ___, because ___.' That last blank is the whole point.",
       "you": "Keep asking why, and hold them back from fixing it yet. Watch it happen with them, and tell them what you notice.",
       "ask": [
         "What happens right before it goes wrong?",
@@ -73,7 +119,7 @@
       "levels": {
         "explore": "Finish the sentence with your because.",
         "develop": "Finish the sentence and find two different causes.",
-        "extend": "Find the causes, then write down one limit you can't change, like time, space or rules."
+        "extend": "Interview everyone the problem affects, then write down the causes and one limit you can't change."
       }
     },
     {
@@ -98,7 +144,7 @@
       "kid": "Your kid runs their circled ideas through The tests card and picks one. Then they fill in My fix at the end of the guide and build it for real: a hook, a label, a box, a checklist, an alarm.",
       "you": "Steer them toward simple, and help with anything that needs a drill. Otherwise let it be a bit wonky. Help them pick something to count.",
       "ask": [
-        "What's the simplest version of this?",
+        "What could you build in ten minutes?",
         "Will it work on a tired day?"
       ],
       "tip": "Put the fix exactly where the problem happens. A checklist in a drawer doesn't check anything.",
@@ -132,44 +178,104 @@
       {
         "name": "Everyday problems",
         "lines": [
-          { "k": "Lost stuff:", "v": "the same thing, over and over" },
-          { "k": "Shared space:", "v": "their stuff ends up on your side" },
-          { "k": "Food:", "v": "it keeps going bad in the fridge" },
-          { "k": "Getting started:", "v": "45 minutes and nothing yet" },
-          { "k": "Screens:", "v": "30 minutes turned into two hours" }
+          {
+            "k": "Lost stuff:",
+            "v": "the same thing, over and over"
+          },
+          {
+            "k": "Shared space:",
+            "v": "their stuff ends up on your side"
+          },
+          {
+            "k": "Food:",
+            "v": "it keeps going bad in the fridge"
+          },
+          {
+            "k": "Getting started:",
+            "v": "45 minutes and nothing yet"
+          },
+          {
+            "k": "Screens:",
+            "v": "30 minutes turned into two hours"
+          }
         ],
         "ask": "What bugs you every week?"
       },
       {
-        "name": "Keep asking",
+        "name": "Why questions",
         "lines": [
-          { "k": "When:", "v": "what time, what day?" },
-          { "k": "Where:", "v": "exactly where does it happen?" },
-          { "k": "Just before:", "v": "what happened right before?" },
-          { "k": "Why:", "v": "and why is that?" },
-          { "k": "Worse:", "v": "what makes it worse?" }
+          {
+            "k": "When:",
+            "v": "what time, what day?"
+          },
+          {
+            "k": "Where:",
+            "v": "exactly where does it happen?"
+          },
+          {
+            "k": "Just before:",
+            "v": "what happened right before?"
+          },
+          {
+            "k": "Why:",
+            "v": "and why is that?"
+          },
+          {
+            "k": "Worse:",
+            "v": "what makes it worse?"
+          }
         ],
         "ask": "What's your because?"
       },
       {
         "name": "Idea starters",
         "lines": [
-          { "k": "Move it:", "v": "put it where you use it" },
-          { "k": "Fewer:", "v": "what if there was less of it?" },
-          { "k": "A cue:", "v": "something you can't miss" },
-          { "k": "Stack it:", "v": "tie it to something you already do" },
-          { "k": "Swap:", "v": "change who, or change when" }
+          {
+            "k": "Move it:",
+            "v": "put it where you use it"
+          },
+          {
+            "k": "Fewer:",
+            "v": "what if there was less of it?"
+          },
+          {
+            "k": "A cue:",
+            "v": "something you can't miss"
+          },
+          {
+            "k": "Stack it:",
+            "v": "tie it to something you already do"
+          },
+          {
+            "k": "Swap:",
+            "v": "change who, or change when"
+          }
         ],
         "ask": "What would make it easy?"
       },
       {
         "name": "The tests",
         "lines": [
-          { "k": "This week:", "v": "can you start it now?" },
-          { "k": "Because:", "v": "does it fix the real cause?" },
-          { "k": "Tired day:", "v": "would it still work?" },
-          { "k": "Alone:", "v": "no one has to remind you" },
-          { "k": "Proof:", "v": "what will you count?" }
+          {
+            "k": "This week:",
+            "v": "can you start it now?"
+          },
+          {
+            "k": "Because:",
+            "v": "does it fix the real cause?"
+          },
+          {
+            "k": "Tired day:",
+            "v": "would it still work?"
+          },
+          {
+            "k": "Alone:",
+            "v": "no one has to remind you"
+          },
+          {
+            "k": "Proof:",
+            "v": "what will you count?"
+          }
         ],
         "ask": "Will you still do it next week?"
       }
@@ -185,14 +291,26 @@
     }
   },
   "skills": [
-    { "name": "Finding causes", "text": "asking why it keeps happening" },
-    { "name": "Idea making", "text": "going past the first idea" },
-    { "name": "Testing", "text": "trying, counting, changing one thing" },
-    { "name": "Independence", "text": "solving it without being reminded" }
+    {
+      "name": "Finding causes",
+      "text": "asking why it keeps happening"
+    },
+    {
+      "name": "Idea making",
+      "text": "going past the first idea"
+    },
+    {
+      "name": "Testing",
+      "text": "trying, counting, changing one thing"
+    },
+    {
+      "name": "Independence",
+      "text": "solving it without being reminded"
+    }
   ],
   "conclusion": {
     "headline": "One less thing bugging them, and they fixed it themselves.",
-    "text": "Listen for it in the weeks after. If they say 'Why does that keep happening?' instead of complaining, or quietly put up another hook, they've started to see problems as something they can work on.",
+    "text": "The real sign comes later, when something new starts bugging them. If they ask 'Why does that keep happening?' instead of complaining, or quietly put up another hook, they've started to see problems as something they can work on.",
     "celebrate": "The first time it works on a tired day, say: 'You built that, and it's still working.'",
     "extensions": [
       "Solve a shared family problem the same way, like what's for supper",

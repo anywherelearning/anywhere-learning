@@ -12,34 +12,76 @@
     "Coloured pencils for the energy line (optional)"
   ],
   "academics": [
-    { "subject": "Science", "text": "collecting real data and finding a pattern" },
-    { "subject": "Math", "text": "elapsed time and drawing a line graph" },
-    { "subject": "Health", "text": "how food, sleep and movement change a day" },
-    { "subject": "Planning", "text": "priorities, order and breathing room" }
+    {
+      "subject": "Science",
+      "text": "collecting real data and finding a pattern"
+    },
+    {
+      "subject": "Math",
+      "text": "elapsed time and drawing a line graph"
+    },
+    {
+      "subject": "Health",
+      "text": "how food, sleep and movement change a day"
+    },
+    {
+      "subject": "Planning",
+      "text": "priorities, order and breathing room"
+    }
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
     "intro": "You don't need to be organized yourself. Your job is to be honest about your own day and to keep asking 'Is that a best-brain job?' instead of fixing their plan. Track your own energy too. Kids love finding out exactly when you run out.",
     "plan": [
-      { "when": "Day 1", "what": "List what fills the day, then check your fuel as you go (Steps 1 and 2)." },
-      { "when": "That evening", "what": "Match the jobs and build tomorrow's plan (Steps 3 and 4)." },
-      { "when": "Day 2", "what": "Live the plan, use a reset and change what didn't work (Step 5)." }
+      {
+        "when": "Day 1",
+        "what": "List what fills the day, then check your fuel as you go (Steps 1 and 2)."
+      },
+      {
+        "when": "That evening",
+        "what": "Match the jobs and build tomorrow's plan (Steps 3 and 4)."
+      },
+      {
+        "when": "Day 2",
+        "what": "Live the plan, use a reset and change what didn't work (Step 5)."
+      }
     ],
     "tips": [],
     "troubleshoot": [
-      { "q": "Every number is the same", "a": "Go first and be specific: 'I'm a 2, and the dishes are annoying me.' Then ask how their body feels, not how their day is going." },
-      { "q": "They keep forgetting to check in", "a": "Tie it to things that already happen, like breakfast, lunch and getting dressed. Or set a phone alarm with a silly sound." },
-      { "q": "Their plan has no room in it", "a": "Leave it. Ask 'What happens if that takes longer?' and let the day answer. They'll add room themselves next time." }
+      {
+        "q": "Every number is the same",
+        "a": "Go first and be specific: 'I'm a 2, and the dishes are annoying me.' Then ask how their body feels, not how their day is going."
+      },
+      {
+        "q": "They keep forgetting to check in",
+        "a": "Tie it to things that already happen, like breakfast, lunch and getting dressed. Or set a phone alarm with a silly sound."
+      },
+      {
+        "q": "Their plan has no room in it",
+        "a": "Leave it. Ask 'What happens if that takes longer?' and let the day answer. They'll add room themselves next time."
+      }
     ]
   },
   "lesson": {
     "text": "A good plan doesn't squeeze more in. It puts the hard things where you've got the most to give, and it leaves room for the part of the day when you don't.",
     "before": "I'll work on my project after supper.",
     "model": [
-      { "part": "Energy", "line": "I'm sharpest around 9:30, and I'm done by 3:00." },
-      { "part": "Job", "line": "My project needs my best brain." },
-      { "part": "Plan", "line": "Project from 9:30 to 10:15, then outside." },
-      { "part": "Low point", "line": "At 3:00, a snack and something easy. Nothing hard." }
+      {
+        "part": "Energy",
+        "line": "I'm sharpest around 9:30, and I'm done by 3:00."
+      },
+      {
+        "part": "Job",
+        "line": "My project needs my best brain."
+      },
+      {
+        "part": "Plan",
+        "line": "Project from 9:30 to 10:15, then outside."
+      },
+      {
+        "part": "Low point",
+        "line": "At 3:00, a snack and something easy. Nothing hard."
+      }
     ],
     "modelNote": "After supper sounded fine, but it's when they've got the least to give. The second plan starts with how the day really feels."
   },
@@ -132,44 +174,104 @@
       {
         "name": "Where the day hides",
         "lines": [
-          { "k": "Waking up:", "v": "the first 20 minutes" },
-          { "k": "In between:", "v": "getting from one thing to the next" },
-          { "k": "Food:", "v": "making it, eating it, cleaning up" },
-          { "k": "Screens:", "v": "how long, really?" },
-          { "k": "Nothing:", "v": "wandering, staring, being bored" }
+          {
+            "k": "Waking up:",
+            "v": "the first 20 minutes"
+          },
+          {
+            "k": "In between:",
+            "v": "getting from one thing to the next"
+          },
+          {
+            "k": "Food:",
+            "v": "making it, eating it, cleaning up"
+          },
+          {
+            "k": "Screens:",
+            "v": "how long, really?"
+          },
+          {
+            "k": "Nothing:",
+            "v": "wandering, staring, being bored"
+          }
         ],
         "ask": "Where did the time go?"
       },
       {
         "name": "Fuel check",
         "lines": [
-          { "k": "5:", "v": "I could take on anything" },
-          { "k": "4:", "v": "ready to think" },
-          { "k": "3:", "v": "fine, but nothing tricky" },
-          { "k": "2:", "v": "slow and easily annoyed" },
-          { "k": "1:", "v": "done for now" }
+          {
+            "k": "5:",
+            "v": "I could take on anything"
+          },
+          {
+            "k": "4:",
+            "v": "ready to think"
+          },
+          {
+            "k": "3:",
+            "v": "fine, but nothing tricky"
+          },
+          {
+            "k": "2:",
+            "v": "slow and easily annoyed"
+          },
+          {
+            "k": "1:",
+            "v": "done for now"
+          }
         ],
         "ask": "What's your number right now?"
       },
       {
         "name": "Match it",
         "lines": [
-          { "k": "Best brain:", "v": "new, tricky or important" },
-          { "k": "Okay brain:", "v": "things you know how to do" },
-          { "k": "Tired brain:", "v": "tidying, sorting, easy jobs" },
-          { "k": "Fixed:", "v": "meals, sleep, set times" },
-          { "k": "Putting off:", "v": "try it in your best time" }
+          {
+            "k": "Best brain:",
+            "v": "new, tricky or important"
+          },
+          {
+            "k": "Okay brain:",
+            "v": "things you know how to do"
+          },
+          {
+            "k": "Tired brain:",
+            "v": "tidying, sorting, easy jobs"
+          },
+          {
+            "k": "Fixed:",
+            "v": "meals, sleep, set times"
+          },
+          {
+            "k": "Putting off:",
+            "v": "try it in your best time"
+          }
         ],
         "ask": "Does this need your best brain?"
       },
       {
         "name": "Resets",
         "lines": [
-          { "k": "Five minutes:", "v": "just start, then decide" },
-          { "k": "Move:", "v": "stretch, jump, walk around" },
-          { "k": "New spot:", "v": "another room or outside" },
-          { "k": "Shrink it:", "v": "one sentence, one shelf" },
-          { "k": "Swap:", "v": "do something easy first" }
+          {
+            "k": "Five minutes:",
+            "v": "just start, then decide"
+          },
+          {
+            "k": "Move:",
+            "v": "stretch, jump, walk around"
+          },
+          {
+            "k": "New spot:",
+            "v": "another room or outside"
+          },
+          {
+            "k": "Shrink it:",
+            "v": "one sentence, one shelf"
+          },
+          {
+            "k": "Swap:",
+            "v": "do something easy first"
+          }
         ],
         "ask": "Which one really helped?"
       }
@@ -185,14 +287,26 @@
     }
   },
   "skills": [
-    { "name": "Self-awareness", "text": "knowing when they're at their best" },
-    { "name": "Priorities", "text": "deciding what matters most" },
-    { "name": "Time sense", "text": "seeing where the day really goes" },
-    { "name": "Self-regulation", "text": "having a way back when energy drops" }
+    {
+      "name": "Self-awareness",
+      "text": "knowing when they're at their best"
+    },
+    {
+      "name": "Priorities",
+      "text": "deciding what matters most"
+    },
+    {
+      "name": "Time sense",
+      "text": "seeing where the day really goes"
+    },
+    {
+      "name": "Self-regulation",
+      "text": "having a way back when energy drops"
+    }
   ],
   "conclusion": {
     "headline": "They know when they've got the most to give.",
-    "text": "Listen for it in the weeks after. If they say 'I'll do that in the morning' or 'I'm a 2 right now, I need a minute', they've started to read themselves.",
+    "text": "You'll hear it in how they talk about their day. If they say 'I'll do that in the morning' or 'I'm a 2 right now, I need a minute', they've started to read themselves.",
     "celebrate": "When they save a hard thing for the right time and it goes well, say: 'You knew exactly when to do that.'",
     "extensions": [
       "Plan a family day out around everyone's low points",

@@ -4,7 +4,7 @@
   "title": "Pack Like a Pro",
   "tagline": "Read the trip · Cut · Pack · Test",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid packs their own bag for a real trip or outing. They work out what the trip actually needs, list everything they want, cut it down to fit real limits, pack it, test it with some what-ifs, and build a packing list they can use year after year.",
+  "goal": "Your kid packs their own bag for a real trip or outing. They work out what the trip actually needs, list everything they want, cut it down to fit real limits, pack it, put it to the test, and build a packing list they can use year after year.",
   "need": [
     "A real trip, sleepover or day out coming up",
     "The bag they'll actually carry",
@@ -131,13 +131,13 @@
       "levels": {
         "explore": "Cut your list to seven things you'd really bring.",
         "develop": "Use two limits, and say why each thing got cut.",
-        "extend": "Use three limits, weigh the bag, and defend every single thing that stays."
+        "extend": "Pack the same trip for a carry-on, then for a car trunk, and compare."
       }
     },
     {
       "title": "Pack it and test it",
       "why": "A list always fits. A bag might not.",
-      "kid": "Your kid packs the real bag using the Packing tricks card. Then they carry it around the block, time how long it takes to find something, and face the What-ifs card. Anything that fails gets fixed.",
+      "kid": "Your kid packs the real bag using the Packing tricks card. Then they carry it around the block, time how long it takes to find something, and run the Trip tests card. Anything that fails gets fixed.",
       "you": "Play the trip. Call out 'It's raining!' or 'Where's your toothbrush?' and watch them dig. Keep it light, and let them repack.",
       "ask": [
         "Can you carry it for 15 minutes?",
@@ -146,8 +146,8 @@
       "tip": "Last in, first out. What they'll need first goes on top.",
       "levels": {
         "explore": "Pack your bag and check that it closes and you can lift it.",
-        "develop": "Pack it, carry it around the block and answer two what-ifs.",
-        "extend": "Pack it, time how fast you can find five things, and handle every what-if. Then repack it faster."
+        "develop": "Pack it, carry it around the block and pass two trip tests.",
+        "extend": "Pack it, time how fast you can find five things and pass every trip test. Then repack it faster."
       }
     },
     {
@@ -250,7 +250,7 @@
         "ask": "Can you find it without unpacking?"
       },
       {
-        "name": "What-ifs",
+        "name": "Trip tests",
         "lines": [
           {
             "k": "Rain:",

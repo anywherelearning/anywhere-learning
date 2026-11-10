@@ -79,6 +79,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Retired Nov 2026: merged into Problem-Solver Studio.
+      {
+        source: "/shop/everyday-redesign",
+        destination: "/shop/problem-solver",
+        permanent: true,
+      },
+
       // Retired Nov 2026: too close to Travel Day.
       {
         source: "/shop/plan-a-mini-adventure",

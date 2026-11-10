@@ -89,8 +89,8 @@
     {
       "title": "Walk the house and find two ways out",
       "why": "Every room needs a second way out, in case the first one is where the danger is.",
-      "kid": "Your kid walks every room with you and finds two ways out of each, usually the door and a window. They check the windows open, test the smoke alarms with you, then draw the home from above, marking both exits from every room and the path outside. The Two ways out card in the Ready Toolkit at the end of the guide lists what to check.",
-      "you": "Press the smoke alarm test buttons (warn everyone, they're loud), and show them where the water shut-off and the electrical panel are. A stuck or high window is a finding, not a failure: write it down.",
+      "kid": "Your kid walks every room with you and finds two ways out of each, usually the door and a window, using the Two ways out card in the Ready Toolkit at the end of the guide. Then they draw the home from above, marking both exits from every room and the path outside.",
+      "you": "Test the smoke alarms together (warn everyone, they're loud), and show them the water shut-off and the electrical panel. An upstairs window only counts with an escape ladder, and nobody practises climbing out.",
       "ask": [
         "If the hallway is full of smoke, how do you get out of your room?",
         "Which room is the hardest to get out of, and why?"
@@ -121,8 +121,8 @@
     {
       "title": "Build the two-minute plan, then run the drill",
       "why": "When the alarm goes, there's no time to think. The thinking happens now.",
-      "kid": "Your kid writes the fire plan: the nearest safe way out, crawl low under smoke, close doors behind you, meet at one spot outside that everyone can find, and never go back in. They give everyone a job, like who helps the youngest. Then the whole family runs the drill, from the bedrooms to the meeting spot, while they time it.",
-      "you": "Start the drill with the alarm test button and walk it with everyone. Teach the rule that matters most: once you're out, stay out, and call the emergency number (911 in Canada and the US) from outside.",
+      "kid": "Your kid writes the fire plan: the nearest safe way out, crawl low under smoke, close doors behind you, meet at one spot outside and never go back in. They give everyone a job, like who helps the youngest. Then the whole family runs the drill while they time it.",
+      "you": "Start the drill with the alarm test button and walk it with everyone. Teach the rule that matters most: once you're out, stay out, and call the emergency number from outside.",
       "ask": [
         "Where do we meet, and why there?",
         "What's the one thing you never go back in for?"
@@ -137,8 +137,8 @@
     {
       "title": "Pack the three-day kit",
       "why": "If the power is out for three days, the plan is mostly maths.",
-      "kid": "Your kid works out what the family needs to stay home for three days without power or running water, using the Three-day kit card. Water first: people × litres per day × 3 days. Then food that needs no cooking, light, warmth, first aid and a phone charger. They find what's already in the house, gather it in one bag or bin, and list what's missing.",
-      "you": "Help them find what's at home before anything gets bought. Pick a spot for the kit everyone can reach, and add what only you can: medications and copies of important documents.",
+      "kid": "Your kid works out what the family needs to stay home for three days without power or running water, using the Three-day kit card. Water first: people × litres per day × 3 days. Then they gather what's already in the house in one bag or bin, and list what's missing.",
+      "you": "Help them find what's at home before anything gets bought, and add what only you can: medications and copies of important documents. Pick a spot for the kit everyone can reach.",
       "ask": [
         "How much water does our family need for three days?",
         "What would be hardest to go without?"
@@ -153,7 +153,7 @@
     {
       "title": "Make the contact cards, then the surprise drill",
       "why": "A good plan still works when something goes wrong.",
-      "kid": "Your kid makes a small card for every pocket or backpack, using the Contact card: the emergency number, a trusted adult nearby, a relative in another town, the meeting spot and a short text to send ('We're OK, at the big tree'). Then you call a surprise drill with a twist from the Twist cards, and they adjust the plan as it happens.",
+      "kid": "Your kid makes a small card for every pocket or bag, using the Contact card, and fills in Our emergency plan at the end of the guide. Then you call a surprise drill with a twist from the Twist cards, and they adjust the plan as it happens.",
       "you": "Pick a twist that fits your kid's age. Afterward, ask what broke and fix one thing on the plan. Put the next drill on the calendar, at night this time.",
       "ask": [
         "What part of the plan broke?",
@@ -210,11 +210,11 @@
           },
           {
             "k": "Light:",
-            "v": "a flashlight and spare batteries"
+            "v": "flashlights and batteries, never candles"
           },
           {
             "k": "Warmth:",
-            "v": "a blanket for each person"
+            "v": "blankets, never a barbecue or generator inside"
           },
           {
             "k": "First aid:",
@@ -232,7 +232,7 @@
         "lines": [
           {
             "k": "Emergency:",
-            "v": "911 in Canada and the US"
+            "v": "911 in Canada and the US, 112 in Europe"
           },
           {
             "k": "Nearby:",
@@ -281,12 +281,12 @@
       }
     ],
     "after": {
-      "label": "Emergency rules",
+      "label": "Our emergency plan",
       "lines": [
-        "Get out, stay out.",
-        "Crawl low under smoke.",
-        "Call from outside.",
-        "Never go back in."
+        "Our meeting spot",
+        "Our out-of-town contact",
+        "Where the kit lives",
+        "Our next drill"
       ]
     }
   },

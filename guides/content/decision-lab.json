@@ -12,34 +12,76 @@
     "Somewhere to talk: supper or the car works well"
   ],
   "academics": [
-    { "subject": "Communication", "text": "explaining and defending a choice" },
-    { "subject": "Social Studies", "text": "fairness and how choices touch others" },
-    { "subject": "Writing", "text": "putting reasoning into words" },
-    { "subject": "Planning", "text": "thinking ahead to what comes next" }
+    {
+      "subject": "Communication",
+      "text": "explaining and defending a choice"
+    },
+    {
+      "subject": "Social Studies",
+      "text": "fairness and how choices touch others"
+    },
+    {
+      "subject": "Writing",
+      "text": "putting reasoning into words"
+    },
+    {
+      "subject": "Planning",
+      "text": "thinking ahead to what comes next"
+    }
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need the right answers. Your job is to be the curious one. Ask why instead of whether it's right, share how you'd think it through, and let them change their mind. It works best at supper or in the car, one card at a time.",
+    "intro": "You don't need the right answers. Your job is to be the curious one. Ask why instead of whether it's right, share how you'd think it through, and let them change their mind. Your most useful question is 'Who's on the other side of this?' It works best at supper or in the car, one card at a time.",
     "plan": [
-      { "when": "Session 1", "what": "Sort the cards, say your gut answers and find the options (Steps 1 and 2)." },
-      { "when": "Session 2", "what": "Follow each option, decide and face the pressure (Steps 3 and 4)." },
-      { "when": "This week", "what": "Make a real decision, and check back after a week (Step 5)." }
+      {
+        "when": "Session 1",
+        "what": "Sort the cards, say your gut answers and find the options (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Follow each option, decide and face the pressure (Steps 3 and 4)."
+      },
+      {
+        "when": "This week",
+        "what": "Make a real decision, and check back after a week (Step 5)."
+      }
     ],
     "tips": [],
     "troubleshoot": [
-      { "q": "They just say what I want to hear", "a": "Go first and give the less noble answer. Or have everyone write it down secretly and flip at the same time." },
-      { "q": "Their answer worries me", "a": "Don't pounce. Ask 'Who's on the other side of this?' and then say what you'd want them to know. A secret that could hurt a friend is one to tell a trusted adult, whatever they promised." },
-      { "q": "They can't decide", "a": "Good, that means it's a hard one. Ask which option they could live with if it went badly." }
+      {
+        "q": "They just say what I want to hear",
+        "a": "Go first and give the less noble answer. Or have everyone write it down secretly and flip at the same time."
+      },
+      {
+        "q": "Their answer worries me",
+        "a": "Don't pounce. Ask 'Who's on the other side of this?' and then say what you'd want them to know. A secret that could hurt a friend is one to tell a trusted adult, whatever they promised."
+      },
+      {
+        "q": "They can't decide",
+        "a": "Good, that means it's a hard one. Ask which option they could live with if it went badly."
+      }
     ]
   },
   "lesson": {
     "text": "A good decision isn't one that turns out perfectly. It's one where you looked past the first two options and thought about who it touches before you chose.",
     "before": "I'd keep the extra change. Nobody would know.",
     "model": [
-      { "part": "Gut", "line": "Keep it. Nobody would know." },
-      { "part": "Options", "line": "Keep it, go back now, bring it next time, ask Mom." },
-      { "part": "Other side", "line": "The clerk has to explain why the till is short." },
-      { "part": "Choose", "line": "Go back. Five minutes in line. I'm 8 out of 10 sure." }
+      {
+        "part": "Gut",
+        "line": "Keep it. Nobody would know."
+      },
+      {
+        "part": "Options",
+        "line": "Keep it, go back now, bring it next time, ask Mom."
+      },
+      {
+        "part": "Other side",
+        "line": "The clerk has to explain why the till is short."
+      },
+      {
+        "part": "Choose",
+        "line": "Go back. Five minutes in line. I'm 8 out of 10 sure."
+      }
     ],
     "modelNote": "The first answer only looked at one person. The second found four options and thought about who was on the other side of the counter."
   },
@@ -63,7 +105,7 @@
     {
       "title": "Find the options",
       "why": "Most people see two choices. There are usually five.",
-      "kid": "Your kid picks one situation and uses the Four options card to find every way out of it: the obvious one, the safe one, the brave one and the one nobody's said yet. They count them on their fingers and keep going.",
+      "kid": "Your kid picks one situation and uses the Ways out card to find every way out of it: the obvious one, the safe one, the brave one and the one nobody's said yet. They count them on their fingers and keep going.",
       "you": "Add one they wouldn't think of, even a silly one. Then ask 'Is there one we haven't said?' and wait longer than feels comfortable.",
       "ask": [
         "What would someone you admire do here?",
@@ -132,44 +174,104 @@
       {
         "name": "Nobody would know",
         "lines": [
-          { "k": "Extra change:", "v": "the clerk gave you too much" },
-          { "k": "The spill:", "v": "nobody saw you do it" },
-          { "k": "Lucky mistake:", "v": "a score wrongly in your favour" },
-          { "k": "Found wallet:", "v": "cash, a name, nobody around" },
-          { "k": "Last treat:", "v": "you had yesterday's, they forgot" }
+          {
+            "k": "Extra change:",
+            "v": "the clerk gave you too much"
+          },
+          {
+            "k": "The spill:",
+            "v": "nobody saw you do it"
+          },
+          {
+            "k": "Lucky mistake:",
+            "v": "a score wrongly in your favour"
+          },
+          {
+            "k": "Found wallet:",
+            "v": "cash, a name, nobody around"
+          },
+          {
+            "k": "Last treat:",
+            "v": "you had yesterday's, they forgot"
+          }
         ],
         "ask": "What would you do?"
       },
       {
         "name": "With other people",
         "lines": [
-          { "k": "The dare:", "v": "risky, and everyone's watching" },
-          { "k": "New kid:", "v": "friends say don't go over" },
-          { "k": "A secret:", "v": "it worries you, and you promised" },
-          { "k": "Mean plan:", "v": "you overhear someone being left out" },
-          { "k": "Double booked:", "v": "you promised, then got invited" }
+          {
+            "k": "The dare:",
+            "v": "risky, and everyone's watching"
+          },
+          {
+            "k": "New kid:",
+            "v": "friends say don't go over"
+          },
+          {
+            "k": "A secret:",
+            "v": "it worries you, and you promised"
+          },
+          {
+            "k": "Mean plan:",
+            "v": "you overhear someone being left out"
+          },
+          {
+            "k": "Double booked:",
+            "v": "you promised, then got invited"
+          }
         ],
         "ask": "Who else does this touch?"
       },
       {
-        "name": "Four options",
+        "name": "Ways out",
         "lines": [
-          { "k": "Obvious:", "v": "what most people would do" },
-          { "k": "Safe:", "v": "the one with the least risk" },
-          { "k": "Brave:", "v": "the one that costs you something" },
-          { "k": "Unexpected:", "v": "the one nobody's said yet" },
-          { "k": "Not yet:", "v": "can you wait, or ask someone?" }
+          {
+            "k": "Obvious:",
+            "v": "what most people would do"
+          },
+          {
+            "k": "Safe:",
+            "v": "the one with the least risk"
+          },
+          {
+            "k": "Brave:",
+            "v": "the one that costs you something"
+          },
+          {
+            "k": "Unexpected:",
+            "v": "the one nobody's said yet"
+          },
+          {
+            "k": "Not yet:",
+            "v": "can you wait, or ask someone?"
+          }
         ],
-        "ask": "Is there a fifth one?"
+        "ask": "Is there another one?"
       },
       {
         "name": "Pressure",
         "lines": [
-          { "k": "Everyone:", "v": "says they've all done it" },
-          { "k": "Teasing:", "v": "they say you're being boring" },
-          { "k": "A reward:", "v": "someone offers to pay you" },
-          { "k": "Family:", "v": "someone you love disagrees" },
-          { "k": "Two minutes:", "v": "that's all the time you've got" }
+          {
+            "k": "Everyone:",
+            "v": "says they've all done it"
+          },
+          {
+            "k": "Teasing:",
+            "v": "they say you're being boring"
+          },
+          {
+            "k": "A reward:",
+            "v": "someone offers to pay you"
+          },
+          {
+            "k": "Family:",
+            "v": "someone you love disagrees"
+          },
+          {
+            "k": "Two minutes:",
+            "v": "that's all the time you've got"
+          }
         ],
         "ask": "Does it change your mind?"
       }
@@ -185,14 +287,26 @@
     }
   },
   "skills": [
-    { "name": "Weighing options", "text": "seeing more than two choices" },
-    { "name": "Empathy", "text": "standing where someone else stands" },
-    { "name": "Steadiness", "text": "thinking clearly under pressure" },
-    { "name": "Self-knowledge", "text": "knowing what matters to them" }
+    {
+      "name": "Weighing options",
+      "text": "seeing more than two choices"
+    },
+    {
+      "name": "Empathy",
+      "text": "standing where someone else stands"
+    },
+    {
+      "name": "Steadiness",
+      "text": "thinking clearly under pressure"
+    },
+    {
+      "name": "Self-knowledge",
+      "text": "knowing what matters to them"
+    }
   ],
   "conclusion": {
     "headline": "They know how to think through a hard call now.",
-    "text": "Listen for it over the next few weeks. If they stop and say 'Wait, what else could we do?' or ask who else a choice affects before you've said anything, it's starting to be how they think.",
+    "text": "The change is quiet. If they stop and say 'Wait, what else could we do?' or ask who else a choice affects before you've said anything, it's starting to be how they think.",
     "celebrate": "When they tell you how the real decision went, however it went, say: 'You thought that through yourself.'",
     "extensions": [
       "Write three new situations to try on a friend or a sibling",

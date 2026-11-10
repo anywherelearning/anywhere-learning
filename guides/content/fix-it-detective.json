@@ -53,7 +53,7 @@
       },
       {
         "q": "It can't be fixed",
-        "a": "That's a real answer. Log why it failed, then take it apart, unplugged with the batteries out, to see how it worked."
+        "a": "That's a real answer. Log why it failed, then take it apart, unplugged with the batteries out, to see how it worked. Skip camera flashes and power bricks, which hold a charge, and never puncture a battery."
       },
       {
         "q": "It's beyond what we can do",
@@ -152,7 +152,7 @@
     {
       "title": "Fix it, test it, log it",
       "why": "It's only fixed if it still works on the third try.",
-      "kid": "Your kid does the fix with you beside them, then tests it three times the way the problem first showed up. They finish the Fix-it log on the Fix-It Toolkit page and tell the family what they found.",
+      "kid": "Your kid does the fix with you beside them, then tests it three times the way the problem first showed up. They finish the Fix-it log at the end of the guide and tell the family what they found.",
       "you": "Hand over the tools and stay close. If it doesn't work, say 'Good, that's one suspect ruled out' and go back to the card together.",
       "ask": [
         "Does it pass the same test that failed before?",
@@ -239,7 +239,7 @@
           },
           {
             "k": "Never open:",
-            "v": "wall wiring, gas, microwaves, TVs"
+            "v": "wall wiring, gas, microwaves, TVs, camera flashes"
           },
           {
             "k": "Stop if:",

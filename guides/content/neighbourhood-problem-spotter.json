@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need to know anything about city planning. Your job is to be the walking partner: go slowly, ask why, and take what they notice seriously. A kid's eye level catches things adults stopped seeing years ago.",
+    "intro": "You don't need to know anything about city planning. Your job is to be the walking partner: go slowly, take what they notice seriously and keep asking 'Who would have trouble here?' A kid's eye level catches things adults stopped seeing years ago.",
     "plan": [
       {
         "when": "Session 1",
@@ -38,7 +38,7 @@
       },
       {
         "when": "Session 2",
-        "what": "Find the real cause and design the fix (Steps 3 and 4)."
+        "what": "Dig for evidence and design the fix (Steps 3 and 4)."
       },
       {
         "when": "Session 3",
@@ -98,7 +98,7 @@
       "levels": {
         "explore": "Find two things that could be better and draw or describe each one.",
         "develop": "Find three or four and sort them by type: safety, clean, access, nature, together.",
-        "extend": "Find five or more, photograph each place, and note who is most affected."
+        "extend": "Walk the same loop at night or in the rain, and compare what you find."
       }
     },
     {
@@ -118,15 +118,15 @@
       }
     },
     {
-      "title": "Find the real cause",
-      "why": "Fix the symptom and it comes back next week.",
+      "title": "Dig for evidence",
+      "why": "A count and a photo get taken seriously. A feeling doesn't.",
       "kid": "Your kid goes back and gathers evidence: a count, a few visits at different times, a photo. They talk to one or two people it affects, then keep asking why until they reach a cause, and use the Who looks after it card to find out whose job it is.",
       "you": "Come along for every conversation with a neighbour or shop owner, and stand beside them while they ask. Help them find the right page on your town's website.",
       "ask": [
-        "If someone fixed it today, would it come back?",
+        "What does your count tell you?",
         "Whose job is this, really?"
       ],
-      "tip": "Go back at a different time of day. Lots of problems only show up at school pickup or after a weekend.",
+      "tip": "Go back at a different time of day. Lots of problems only show up at rush hour or after a weekend.",
       "levels": {
         "explore": "Come up with two reasons the problem might be happening.",
         "develop": "Count it on three visits, ask one person about it, and name the cause and who looks after it.",
@@ -139,7 +139,7 @@
       "kid": "Your kid comes up with at least two fixes, then picks the simplest one that could really work. They write down what it needs, who would have to agree and how long it would take, then fill in the Proposal page in the Spotter Toolkit.",
       "you": "Ask 'How would that actually work?' Then play the other side: 'There's no money for this' or 'My neighbour likes it the way it is.' Let them answer.",
       "ask": [
-        "What's the smallest version that would still help?",
+        "What would it cost, and who would pay?",
         "Who might say no, and why?"
       ],
       "tip": "Cheap and small gets a yes more often. A sign, a bin or a painted line is easier to agree to than a new park.",

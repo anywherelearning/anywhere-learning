@@ -164,7 +164,7 @@ export const TERRITORIES: readonly Territory[] = [
       'media-info-check', 'customer-discovery', 'what-if-scenario-lab', 'rube-goldberg-machine',
       'decomposition-detective', 'supply-chain-detective', 'seed-travelers', 'hallucination-detective',
       'family-debate-night', 'bias-fairness-lab', 'business-failure-lab', 'comeback-journal',
-      'pricing-experiment', 'camouflage-challenge', 'everyday-redesign', 'three-ais-one-question',
+      'pricing-experiment', 'camouflage-challenge', 'problem-solver', 'three-ais-one-question',
     ],
   },
   {
@@ -298,7 +298,7 @@ export const TERRITORIES: readonly Territory[] = [
       'imaginary-world', 'invent-a-sport', 'theme-park', 'product-design-lab', 'rube-goldberg-machine',
       'board-game-studio', 'land-art-challenges', 'mini-movie', 'household-orchestra', 'survival-base',
       'nature-crafts', 'kinetic-sculpture', 'build-a-museum', 'creature-habitat', 'micro-business',
-      'marketing-campaign', 'brand-builder', 'everyday-redesign', 'complaint-to-product', 'shark-tank-pitch',
+      'marketing-campaign', 'brand-builder', 'problem-solver', 'complaint-to-product', 'shark-tank-pitch',
     ],
   },
   {

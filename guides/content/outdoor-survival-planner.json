@@ -2,9 +2,9 @@
   "slug": "outdoor-survival-planner",
   "category": "Planning & Problem-Solving",
   "title": "Outdoor Survival Planner",
-  "tagline": "Priorities · Supplies · Skills · Plan B",
+  "tagline": "Priorities · Supplies · Skills · Trip plan",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid works through an outdoor emergency the calm way. They pick a scenario, put the priorities in order, take stock of what's in the pack, practise real skills outside with you, handle a twist, then write the plan your family takes on its next real outing.",
+  "goal": "Your kid works through an outdoor emergency the calm way. They pick a scenario, put the priorities in order, work out what they could use around them, practise real skills outside with you, handle a change of plan, then write the plan your family takes on its next real outing.",
   "need": [
     "An outdoor space: a yard, a park or a trail",
     "Sticks and leaves, or a tarp and some rope",
@@ -43,7 +43,7 @@
       },
       {
         "when": "Session 3",
-        "what": "Throw a twist and write the real trip plan (Step 5)."
+        "what": "Change the plan and write the real trip plan (Step 5)."
       }
     ],
     "tips": [],
@@ -58,7 +58,7 @@
       },
       {
         "q": "They keep giving action-movie answers",
-        "a": "Don't correct it. Ask 'And then what happens?' or go try it. Walking off to find the trail stops sounding smart once you talk through who's looking where."
+        "a": "Don't correct it. Ask 'Who's looking for you, and where?' or go try it. Walking off to find the trail stops sounding smart once you talk through who's looking where."
       }
     ]
   },
@@ -95,7 +95,7 @@
         "What's the biggest danger here?",
         "How much daylight is left?"
       ],
-      "tip": "Doing the storm? If you hear thunder, the safe places are a building or a metal-roofed car. Tall trees, hilltops and picnic shelters are the wrong places.",
+      "tip": "Doing the storm? If you hear thunder, the safe places are a building or a hard-topped metal car. Tall trees, hilltops and picnic shelters are the wrong places.",
       "levels": {
         "explore": "Pick one scenario and draw or describe what's happening around you.",
         "develop": "Pick two scenarios and compare the biggest challenge in each.",
@@ -119,19 +119,19 @@
       }
     },
     {
-      "title": "See what you've got",
+      "title": "Use what's around you",
       "why": "Survival is mostly using ordinary things in clever ways.",
-      "kid": "Your kid unpacks a real day pack on the floor and lists everything in it, plus what's around them in the scenario. For each thing they find a use, then a second use. Then they decide the five things they'd always bring.",
-      "you": "Limit it to keep it interesting: 'Your bottle is half full and that's all you've got.' Pack it together the way you'd really pack it.",
+      "kid": "Your kid lists what they'd have in their scenario: what's in the pack and what's lying around, like branches, rocks or a spare jacket. For each thing, they work out which priority on the Priorities card it could help with.",
+      "you": "Set a limit to keep it interesting: 'Your bottle is half full and that's all you've got.' Then point at something on the ground and ask what it could become.",
       "ask": [
-        "What in this pack can do two jobs?",
-        "What do you wish you had?"
+        "What could this become if you needed it to?",
+        "Which priority does it help with?"
       ],
       "tip": "A garbage bag weighs almost nothing and can be a rain poncho, a ground sheet or a shelter roof.",
       "levels": {
-        "explore": "Pick five things from the pack and say how each one could help.",
-        "develop": "List everything and match each item to a priority.",
-        "extend": "Cut the pack down to five items only, and argue for each one."
+        "explore": "Pick five things around you and say how each one could help.",
+        "develop": "List everything in your scenario and match each one to a priority.",
+        "extend": "Solve one priority, like staying dry, using only what's lying around."
       }
     },
     {
@@ -147,23 +147,23 @@
       "levels": {
         "explore": "Try one skill and tell someone how it went.",
         "develop": "Try two skills, test them and rate how well each one worked.",
-        "extend": "Try three, fix what failed and test them again."
+        "extend": "Test your shelter in real rain or wind, fix what failed and test it again."
       }
     },
     {
-      "title": "Handle the twist, write the real plan",
+      "title": "When the plan changes",
       "why": "Plans change. The calm person is the one who's already thought about it.",
-      "kid": "You announce a twist from the Twists line of the Scenarios card, and your kid reworks the plan. Then they turn everything into a real Trip plan for your next outing: where you're going, when you'll be back, who knows, and what each person carries.",
-      "you": "Throw the twist with no warning. Then go on the outing, leave the plan with someone at home, and let them check it at the trailhead.",
+      "kid": "You announce a change from the Changes line of the Scenarios card, and your kid reworks the plan. Then they turn everything into a real Trip plan for your next outing: where you're going, when you'll be back, who knows, and what each person carries.",
+      "you": "Throw in the change with no warning. Then go on the outing, leave the plan with someone at home, and let them check it at the trailhead.",
       "ask": [
         "Does this change the first thing you'd do?",
         "Who needs to know where we are today?"
       ],
       "tip": "The most useful survival skill is boring: telling someone where you're going and when you'll be back.",
       "levels": {
-        "explore": "Hear one twist and say what you'd change. Pick what goes in your own pack.",
-        "develop": "Handle two twists, then fill in the Trip plan.",
-        "extend": "Handle every twist, write a worst-case plan, and teach the If you're lost card to someone younger."
+        "explore": "Hear one change and say what you'd do differently. Pick what goes in your own pack.",
+        "develop": "Handle two changes, then fill in the Trip plan.",
+        "extend": "Handle every change, write a worst-case plan and teach the If you're lost card to someone younger."
       }
     }
   ],
@@ -191,7 +191,7 @@
             "v": "a twisted ankle, far from the car"
           },
           {
-            "k": "Twists:",
+            "k": "Changes:",
             "v": "dark comes early, bottle leaks, someone wants to split up"
           }
         ],
@@ -292,8 +292,8 @@
       "text": "knowing what comes first"
     },
     {
-      "name": "Calm thinking",
-      "text": "stopping before acting"
+      "name": "Staying put",
+      "text": "knowing when not to move"
     },
     {
       "name": "Resourcefulness",

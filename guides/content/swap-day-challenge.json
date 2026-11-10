@@ -137,17 +137,17 @@
     {
       "title": "Run the day",
       "why": "This is the part you can't learn from a list.",
-      "kid": "Your kid runs Swap Day: following the plan, checking things off and noting what took longer. When something goes wrong, they decide what to do, using the Twists card if the day is going too smoothly.",
+      "kid": "Your kid runs Swap Day: following the plan, checking things off and noting what took longer. When something goes wrong, they decide what to do, using the Interruptions card if the day is going too smoothly.",
       "you": "Clock in as the employee. Ask 'What would you like me to do next?' Stay in the kitchen for anything with heat or knives. Otherwise only step in for safety, or when you're asked.",
       "ask": [
         "How's it going compared to the plan?",
         "When two things clash, what comes first?"
       ],
-      "tip": "A real twist will almost certainly turn up by itself. Only add one if the day needs it.",
+      "tip": "A real interruption will almost certainly turn up by itself. Only add one if the day needs it.",
       "levels": {
         "explore": "Do your three jobs and check them off.",
         "develop": "Run the full day and write down what went on time and what didn't.",
-        "extend": "Run the day, handle a twist, and rework the rest of the schedule on the spot."
+        "extend": "Run the day, handle an interruption, and rework the rest of the schedule on the spot."
       }
     },
     {
@@ -247,10 +247,10 @@
             "v": "can call a time-out"
           }
         ],
-        "ask": "Who's the adult for this one?"
+        "ask": "Is this one mine?"
       },
       {
-        "name": "Twists",
+        "name": "Interruptions",
         "lines": [
           {
             "k": "New mess:",
@@ -292,8 +292,8 @@
       "text": "feeling what someone else carries"
     },
     {
-      "name": "Time sense",
-      "text": "learning how long things really take"
+      "name": "Mental load",
+      "text": "holding the whole day in your head"
     },
     {
       "name": "Priorities",
@@ -310,7 +310,7 @@
     "celebrate": "When you all sit down that night, say: 'Thank you for today. I know exactly what that took.'",
     "extensions": [
       "Swap with a sibling and compare how each of you ran the day",
-      "Run a Swap Day for a grandparent or a neighbour who could use one",
+      "Give someone a Swap Day as a birthday present",
       "Plan and cook the family's meals for a whole week",
       "Hold a family meeting to share out the invisible work"
     ]

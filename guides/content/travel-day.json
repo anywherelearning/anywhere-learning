@@ -136,7 +136,7 @@
     {
       "title": "Plan for what goes wrong",
       "why": "Something always changes. With a Plan B, it's a decision, not a meltdown.",
-      "kid": "Your kid lists what could go wrong: a closed ride or exhibit, rain, a long line, a tired sibling, a late start. For each one, they write the swap on the Plan B card: what moves, what gets cut, and what never gets cut.",
+      "kid": "Your kid lists what could go wrong: a closed ride or exhibit, rain, a long line, a tired sibling, a late start. For each one, they write the swap on the Plan B swaps card: what moves, what gets cut, and what never gets cut.",
       "you": "Add the curveball you know your family has, like the kid who melts at 3 pm. Then agree on who makes the call on the day.",
       "ask": [
         "What's the one thing we never cut?",
@@ -152,7 +152,7 @@
     {
       "title": "Lead the day and compare",
       "why": "Plan versus real is where the next plan gets better.",
-      "kid": "On the day, your kid holds the plan: they call the time, lead to the next stop and make the swap when a curveball hits. Afterwards, they fill in the Plan vs real table on the Day Planner Toolkit page and find the stop that ran furthest off, and why.",
+      "kid": "On the day, your kid holds the plan: they call the time, lead to the next stop and make the swap when a curveball hits. Afterwards, they fill in Plan vs real at the end of the guide and find the stop that ran furthest off, and why.",
       "you": "Follow their plan even when you'd do it differently, and step in only for safety. When it goes wrong, ask 'What's your Plan B?' before offering yours.",
       "ask": [
         "What ran later than planned, and why?",
@@ -178,7 +178,7 @@
             "v": "one must-do"
           },
           {
-            "k": "Everyone:",
+            "k": "Plus:",
             "v": "one nice-to-have"
           },
           {

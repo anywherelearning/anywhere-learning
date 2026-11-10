@@ -1133,7 +1133,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     whatsIncluded: [
       'A 5-step guide from what keeps bugging you to Version 2',
       'A worked example that shows why trying harder never lasts',
-      'Everyday problems card and Keep asking card',
+      'Everyday problems card and Why questions card',
       'Idea starters card and The tests card',
       'My fix page to fill in and keep',
     ],
@@ -2114,7 +2114,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'outdoor-survival-planner': {
     opening:
-      'Your child learns what to do when something goes wrong outside, the calm way. They pick a scenario like a lost trail or a storm, put the priorities in order, take stock of what is in the pack and practise real skills with you. Then they handle a twist and write the trip plan your family takes on its next outing.',
+      'Your child learns what to do when something goes wrong outside, the calm way. They pick a scenario like a lost trail or a storm, put the priorities in order, work out what they could use around them and practise real skills with you. Then they handle a change of plan and write the trip plan your family takes on its next outing.',
     whatsIncluded: [
       'A 5-step guide from choosing a scenario to a real trip plan',
       'A worked example of what to do if you get lost',
@@ -2125,11 +2125,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Planning', 'Critical Thinking', 'Outdoor Skills', 'Resourcefulness', 'Life Skills'],
     insideTheLearning: {
       lead:
-        'Your child learns that the first job in an emergency is to stop and think. They work out what comes first in a realistic situation, use what is actually in the pack, then go outside with you and test whether their shelter and signals really work.',
+        'Your child learns that the first job in an emergency is to stop and think. They work out what comes first in a realistic situation, use what is around them, then go outside with you and test whether their shelter and signals really work.',
       skills: [
         { skill: 'Critical Thinking', where: 'Deciding what comes first and when the usual order changes' },
         { skill: 'Planning', where: 'Writing a real trip plan and leaving it with someone at home' },
-        { skill: 'Problem-Solving', where: 'Finding two uses for ordinary things and handling a twist' },
+        { skill: 'Problem-Solving', where: 'Turning ordinary things into what they need and handling a change of plan' },
         { skill: 'Science', where: 'Weather, body heat and how to stay warm and dry' },
         { skill: 'Geography', where: 'Using landmarks and directions to read a place' },
       ],
@@ -2138,12 +2138,12 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'pack-like-a-pro': {
     opening:
-      'Your child packs their own bag for a real trip. They work out what the trip actually needs, list everything they want, cut it down to fit real limits, then pack it and test it with some what-ifs. After the trip, they see what came home unused and build a packing list they can use year after year.',
+      'Your child packs their own bag for a real trip. They work out what the trip actually needs, list everything they want, cut it down to fit real limits, then pack it and put it to the test. After the trip, they see what came home unused and build a packing list they can use year after year.',
     whatsIncluded: [
       'A 5-step guide from reading the trip to a reusable list',
       'A worked example that cuts one overstuffed bag down',
       'Read the trip card and Sort it card',
-      'Packing tricks card and What-ifs card',
+      'Packing tricks card and Trip tests card',
       'My always list to use on every trip',
     ],
     skillTags: ['Planning', 'Life Skills', 'Critical Thinking', 'Independence', 'Decision-Making'],
@@ -2154,7 +2154,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
         { skill: 'Planning', where: 'Working out what the trip actually needs before packing' },
         { skill: 'Critical Thinking', where: 'Sorting need from want and defending every choice' },
         { skill: 'Math', where: 'Counting days, outfits and what fits the limit' },
-        { skill: 'Problem-Solving', where: 'Finding things that do two jobs and handling the what-ifs' },
+        { skill: 'Problem-Solving', where: 'Finding things that do two jobs and passing the trip tests' },
         { skill: 'Life Skills', where: 'Being in charge of their own things, year after year' },
       ],
     },
@@ -2167,7 +2167,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A 5-step guide from theme to a full event',
       'A worked example that tests and fixes one clue',
       'Themes card and Clue types card',
-      'Rules to decide card and Twists card',
+      'Rules to decide card and Hiccups card',
       'Hunt plan page for every spot, clue and hint',
     ],
     skillTags: ['Planning', 'Creative Writing', 'Problem-Solving', 'Leadership', 'Communication'],
@@ -2196,7 +2196,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A 5-step guide from finding the work to keeping one job',
       'A worked example that shows what is inside one chore',
       'Where to look card and The invisible work card',
-      'Swap rules card and Twists card',
+      'Swap rules card and Interruptions card',
       'Swap Day plan to fill in and compare with the real day',
     ],
     skillTags: ['Life Skills', 'Planning', 'Empathy', 'Time Management', 'Responsibility'],
@@ -2215,24 +2215,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'what-if-scenario-lab': {
     opening:
-      'Your child takes a big what-if, like a week with no electricity, and thinks it all the way through. They map what would really happen by Day 3 and Day 7, ask someone who has lived something like it, make a plan, try a small slice of it for real, then handle a twist and convince the family.',
+      'Your child takes a big what-if, like keeping only ten things, and thinks it all the way through. They map what would really happen by Day 3 and Day 7, ask someone who has lived something like it, make a plan, try a small slice of it for real, then take it back to someone who knows.',
     whatsIncluded: [
-      'A 5-step guide from the first reaction to a plan the family agrees on',
+      'A 5-step guide from a big question to a plan someone who knows has checked',
       'A worked example that shows how to go past the first answer',
       'What-ifs card and Keep asking card',
-      'Try a slice card and Twists card',
+      'Try a slice card and Ask them card',
       'Our plan page to fill in and present',
     ],
     skillTags: ['Critical Thinking', 'Planning', 'Curiosity', 'Trade-Offs', 'Communication'],
     insideTheLearning: {
       lead:
-        'Your child follows one big question past the first easy answer. They talk to someone who has lived something like it, make hard choices, test a small piece for real and then have to convince the family.',
+        'Your child follows one big question past the first easy answer. They talk to someone who has lived something like it, make hard choices, test a small piece for real and then take it back to be checked.',
       skills: [
         { skill: 'Critical Thinking', where: 'Asking and then what, day by day, until the real problems show up' },
         { skill: 'Research', where: 'Asking someone who has lived it and finding out what surprised them' },
         { skill: 'Planning', where: 'Working out Day 1, the biggest problems and what to give up' },
         { skill: 'Science', where: 'Seeing how food, energy and water actually reach a home' },
-        { skill: 'Communication', where: 'Presenting the plan and answering every doubt' },
+        { skill: 'Communication', where: 'Asking for honest feedback and changing the plan' },
       ],
     },
     format: 'Project Guide',
@@ -2244,7 +2244,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A 5-step guide from gut reaction to a real decision',
       'A worked example that shows how to look past the first two options',
       'Nobody would know card and With other people card',
-      'Four options card and Pressure card',
+      'Ways out card and Pressure card',
       'My real decision page to fill in and check a week later',
     ],
     skillTags: ['Decision-Making', 'Critical Thinking', 'Empathy', 'Communication', 'Independence'],

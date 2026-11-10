@@ -50,7 +50,7 @@
     "troubleshoot": [
       {
         "q": "They can't find their pulse",
-        "a": "Try the side of the neck, just beside the windpipe, with two fingers and not the thumb. Sitting still for a minute first makes it much easier to feel."
+        "a": "Try the side of the neck, just beside the windpipe, with two fingers and not the thumb. Press gently, on one side only. Sitting still for a minute first makes it much easier to feel."
       },
       {
         "q": "They want to win every test",
@@ -153,7 +153,7 @@
     {
       "title": "Write the manual",
       "why": "Nobody knows this machine better than they do now.",
-      "kid": "Your kid gathers every reading and writes their owner's manual, with a section for the engine, the senses and the control centre, plus a page from the Quirks and bests card. They fill in My specs at the end of the guide and add a warning lights page: what their body does when it's tired, hungry or upset, and what helps.",
+      "kid": "Your kid gathers every reading and writes their owner's manual, with a section for the engine, the senses and the control centre, plus a page from the Quirks and bests card. Then they fill in My specs at the end of the guide.",
       "you": "Treat it like a real document. Read it slowly, ask about anything that isn't clear, and put a retest date on the calendar for a month from now.",
       "ask": [
         "What do you know about your body now that you didn't before?",
@@ -306,7 +306,7 @@
   ],
   "conclusion": {
     "headline": "They wrote the manual for their own body.",
-    "text": "Watch for it in the weeks after. If they check their pulse after running up the stairs, or say 'Let's test it' when someone makes a claim, they've started thinking like a scientist.",
+    "text": "Give it a month. If they check their pulse after running up the stairs, or say 'Let's test it' when someone makes a claim, they've started thinking like a scientist.",
     "celebrate": "When they read you a number they measured themselves, say: 'Nobody else in the world has that manual.'",
     "extensions": [
       "Retest everything in a month and see what changed",
@@ -318,7 +318,7 @@
   "signs": [
     "They measure before they guess",
     "They notice what their body is telling them",
-    "They change one thing to find out why"
+    "They test it before they believe it"
   ],
   "makeItReal": "Keep the manual somewhere handy and add a new reading whenever they grow, run further or catch the ruler faster.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",

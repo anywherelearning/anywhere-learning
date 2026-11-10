@@ -115,7 +115,7 @@
       "levels": {
         "explore": "Pick five spots in one small area.",
         "develop": "Pick eight spots along a route and note a landmark for each.",
-        "extend": "Pick ten or more, and plan which spots will be easy, medium and hard."
+        "extend": "Design one spot where players have to work as a team to reach the clue."
       }
     },
     {
@@ -147,14 +147,14 @@
       "levels": {
         "explore": "Draw a simple map with numbered spots and say three rules.",
         "develop": "Draw the route with time estimates, and write rules that include a hint system.",
-        "extend": "Add scoring or rounds, and write a Plan B for rain using the Twists card."
+        "extend": "Add scoring or rounds, and write a rain version using the Hiccups card."
       }
     },
     {
       "title": "Test it, run it, make it better",
       "why": "Nothing survives first contact with real players. That's the fun part.",
-      "kid": "Your kid walks the route and tests every clue, then hides them and runs the event: gives the welcome, starts the clock, gives hints and hands out the prize. Afterwards they collect every clue, ask the players what to change, and make Version 2.",
-      "you": "Be a real player and play to win. Throw in a twist if it's going too smoothly. Save your feedback for the end, and start with what worked.",
+      "kid": "Your kid walks the route and tests every clue, then hides them and runs the event: gives the welcome, starts the clock, gives hints and hands out the prize. Afterwards they collect every clue, ask the players what to change, and make the next round better.",
+      "you": "Be a real player and play to win. Throw in a surprise if it's going too smoothly. Save your feedback for the end, and start with what worked.",
       "ask": [
         "Which clue was the favourite, and why?",
         "Where did people get stuck?"
@@ -163,7 +163,7 @@
       "levels": {
         "explore": "Hide your clues, run the hunt and pick one thing to change.",
         "develop": "Test it first, run it, then fix at least two clues.",
-        "extend": "Time it, collect feedback from every player, and run Version 2 for a new group."
+        "extend": "Time it, collect feedback from every player, and run round two for a new group."
       }
     }
   ],
@@ -250,7 +250,7 @@
         "ask": "Could they start without asking you?"
       },
       {
-        "name": "Twists",
+        "name": "Hiccups",
         "lines": [
           {
             "k": "Rain:",

@@ -2,9 +2,9 @@
   "slug": "what-if-scenario-lab",
   "category": "Planning & Problem-Solving",
   "title": "The What-If Scenario Lab",
-  "tagline": "Imagine · Dig · Plan · Test",
+  "tagline": "Imagine · Dig · Plan · Check",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid takes a big what-if, like a week with no electricity, and thinks it all the way through. They map what would really happen, find someone who has lived something like it, make a plan, try a small slice of it for real, then handle a twist and convince the family.",
+  "goal": "Your kid takes a big what-if, like keeping only ten things, and thinks it all the way through. They map what would really happen, find someone who has lived something like it, make a plan, try a small slice of it for real, then take the plan back to someone who knows and find out what they missed.",
   "need": [
     "Paper and a pencil",
     "Someone to ask who has lived something like it",
@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need any expertise. Your job is to wonder alongside them, take every idea seriously, and keep asking 'And then what?' Share what you'd worry about too. Good what-ifs happen at the supper table and in the car, and then one evening you try a piece of it for real.",
+    "intro": "You don't need any expertise. Your job is to wonder alongside them, take every idea seriously and keep asking 'And then what?' Share what you'd worry about too. Then try a piece of it for real, because that's where the plan learns the most.",
     "plan": [
       {
         "when": "Session 1",
@@ -39,11 +39,11 @@
       },
       {
         "when": "Session 2",
-        "what": "Ask someone who knows, and make the plan (Steps 3 and 4)."
+        "what": "Ask someone who knows, then make the plan and try a slice (Steps 3 and 4)."
       },
       {
-        "when": "One evening",
-        "what": "Try a slice, handle a twist and convince the family (Steps 4 and 5)."
+        "when": "A few days later",
+        "what": "Take the plan back to someone who knows (Step 5)."
       }
     ],
     "tips": [],
@@ -64,23 +64,23 @@
   },
   "lesson": {
     "text": "A good what-if answer doesn't stop at the first idea. It keeps going: and then what, and then what, and who does that affect?",
-    "before": "If there was no electricity, we'd use flashlights.",
+    "before": "If I could only keep ten things, I'd keep my toys.",
     "model": [
       {
         "part": "Day 1",
-        "line": "Flashlights, and everyone keeps the fridge shut."
+        "line": "Ten favourite toys. Easy."
       },
       {
         "part": "Day 3",
-        "line": "The food's going bad and the phones are dead."
+        "line": "No toothbrush, no jacket, no pillow."
       },
       {
         "part": "Trade-off",
-        "line": "Cook it all now and share it, or try to save some?"
+        "line": "Give up three toys for a toothbrush, a jacket and a blanket?"
       },
       {
         "part": "Test",
-        "line": "One evening with the lights off. Supper was the hardest part."
+        "line": "One day using only ten things. The cold walk was the hardest part."
       }
     ],
     "modelNote": "The first answer solved the first hour. The second kept going, ran into a hard choice and then got tested for real."
@@ -89,17 +89,17 @@
     {
       "title": "Choose your what-if",
       "why": "The best question is the one they can't stop thinking about.",
-      "kid": "Your kid picks a question from the What-ifs card in the Lab Toolkit at the end of the guide, or invents their own. They say their very first reaction out loud or on paper, before thinking too hard.",
-      "you": "Give your own first reaction too. Then ask what makes it hard, and not just different.",
+      "kid": "Your kid picks a question from the What-ifs card in the Scenario Toolkit at the end of the guide, or invents their own. Then they say what would make it hard, not just different.",
+      "you": "Pick one too and say what would bother you most. Then help them choose the one they're most curious about.",
       "ask": [
-        "What's the first thing you thought of?",
-        "What would you miss the most?"
+        "What would you miss the most?",
+        "What might be better in that world?"
       ],
-      "tip": "Write the first reaction down and keep it. It's fun to compare at the end.",
+      "tip": "Pick the one they keep arguing about. Arguing means they care.",
       "levels": {
         "explore": "Pick one what-if and say or draw what you'd do first.",
         "develop": "Pick two and name the biggest problem in each.",
-        "extend": "Pick three, rank them from easiest to hardest, and defend the order."
+        "extend": "Invent your own what-if, and check it's hard enough to think about for a week."
       }
     },
     {
@@ -121,13 +121,13 @@
     {
       "title": "Ask someone who knows",
       "why": "Somebody has already lived some version of this.",
-      "kid": "Your kid finds out how real people have handled something like it. Best of all, they ask someone: a grandparent who remembers a long power cut, a neighbour who grew up on a farm, a friend who moved countries. Then they write down what surprised them.",
+      "kid": "Your kid finds out how real people have handled something like it. Best of all, they ask someone, using the Ask them card: a grandparent who remembers a long power cut, a neighbour who grew up on a farm, a friend who moved countries. Then they write down what surprised them.",
       "you": "Help them think of who to ask, and make the call or visit together. Look things up with them if there's no one to ask.",
       "ask": [
         "What did they do that you wouldn't have thought of?",
         "What was the hardest part for them?"
       ],
-      "tip": "Ask 'What did you not expect?' It gets better stories than 'What happened?'",
+      "tip": "A video call counts. Grandparents far away often love being asked.",
       "levels": {
         "explore": "Ask one person, or find one story, and share what you learned.",
         "develop": "Ask one person and find two facts, and say how each changes your thinking.",
@@ -145,75 +145,135 @@
       ],
       "tip": "Keep the slice short, and pick a real start and end time. A few hours is plenty to feel it.",
       "levels": {
-        "explore": "Make a five-step plan for the first day, and try the slice with your family.",
+        "explore": "Say three things you'd do first, and try the slice with your family.",
         "develop": "Plan for each big problem, name a trade-off, try the slice and change one thing.",
         "extend": "Plan for the first week, the first month and beyond, name three trade-offs, and use the slice to test your riskiest idea."
       }
     },
     {
-      "title": "Handle the twist and convince the family",
-      "why": "A plan isn't finished until someone tries to poke a hole in it.",
-      "kid": "You throw a twist from the Twists card and your kid changes the plan. Then they fill in Our plan at the end of the guide and present it to the family as if everyone had to live by it. They answer every doubt, and compare it with their first reaction.",
-      "you": "Be the toughest person in the room, kindly. Ask 'Why should I agree to that?' Then tell them which part convinced you.",
+      "title": "Take it back to someone who knows",
+      "why": "The person who lived it will spot what you missed.",
+      "kid": "Your kid fills in Our plan at the end of the guide and takes it back to the person they asked in Step 3, or someone new who's lived it. They ask what's missing and add it. Then they put the final plan beside their Day 1 column and see how far it's come.",
+      "you": "Make the call or visit together. If the answer stings a bit, help them hear it as a good sign: it means the person took the plan seriously.",
       "ask": [
-        "Does this twist break the plan or only stretch it?",
-        "How is your thinking different from the start?"
+        "What did they spot that you missed?",
+        "What changed most since Day 1?"
       ],
-      "tip": "Read their first reaction out loud at the end. It's usually very funny, and a good way to see how far they've come.",
+      "tip": "Ask 'What would you have needed that isn't here?' It's an easy question to answer honestly.",
       "levels": {
-        "explore": "Hear one twist, say what you'd change, and tell the family your plan.",
-        "develop": "Handle two twists, fill in Our plan and answer the family's questions.",
-        "extend": "Handle every twist at once, then present a final version with your evidence and your trade-offs."
+        "explore": "Show your plan to one person and add one thing they suggest.",
+        "develop": "Fill in Our plan, take it to someone who knows and change two things.",
+        "extend": "Ask two people who've lived it to check the plan, and decide what to do where they disagree."
       }
     }
   ],
   "reference": {
-    "title": "Lab Toolkit",
-    "intro": "Big questions to start with, ways to keep going and small slices to try for real.",
+    "title": "Scenario Toolkit",
+    "intro": "Big questions to start with, ways to keep going, small slices to try and what to ask people who've lived it.",
     "items": [
       {
         "name": "What-ifs",
         "lines": [
-          { "k": "No power:", "v": "a week with no electricity" },
-          { "k": "Grow it:", "v": "we eat only what we grow" },
-          { "k": "Ten things:", "v": "you can only keep 10 things" },
-          { "k": "Move:", "v": "a new country, tomorrow" },
-          { "k": "Kids in charge:", "v": "kids run the town for a month" }
+          {
+            "k": "No power:",
+            "v": "a week with no electricity"
+          },
+          {
+            "k": "Grow it:",
+            "v": "we eat only what we grow"
+          },
+          {
+            "k": "Ten things:",
+            "v": "you can only keep 10 things"
+          },
+          {
+            "k": "Move:",
+            "v": "a new country, tomorrow"
+          },
+          {
+            "k": "Kids in charge:",
+            "v": "kids run the town for a month"
+          }
         ],
         "ask": "What makes it hard, not just different?"
       },
       {
         "name": "Keep asking",
         "lines": [
-          { "k": "First:", "v": "what changes right away?" },
-          { "k": "Day 3:", "v": "what's running out?" },
-          { "k": "Day 7:", "v": "what's different now?" },
-          { "k": "Who:", "v": "who's it hardest for?" },
-          { "k": "Argue:", "v": "what would people fight about?" }
+          {
+            "k": "First:",
+            "v": "what changes right away?"
+          },
+          {
+            "k": "Day 3:",
+            "v": "what's running out?"
+          },
+          {
+            "k": "Day 7:",
+            "v": "what's different now?"
+          },
+          {
+            "k": "Who:",
+            "v": "who's it hardest for?"
+          },
+          {
+            "k": "Argue:",
+            "v": "what would people fight about?"
+          }
         ],
         "ask": "And then what?"
       },
       {
         "name": "Try a slice",
         "lines": [
-          { "k": "No power:", "v": "one evening, lights and screens off" },
-          { "k": "Grow it:", "v": "one meal from your garden or nearby" },
-          { "k": "Ten things:", "v": "one day using only ten things" },
-          { "k": "Move:", "v": "learn to say 10 things in a new language" },
-          { "k": "Kids in charge:", "v": "kids decide, for one day" }
+          {
+            "k": "No power:",
+            "v": "one evening, lights and screens off"
+          },
+          {
+            "k": "Grow it:",
+            "v": "one meal from your garden or nearby"
+          },
+          {
+            "k": "Ten things:",
+            "v": "one day using only ten things"
+          },
+          {
+            "k": "Move:",
+            "v": "learn to say 10 things in a new language"
+          },
+          {
+            "k": "Kids in charge:",
+            "v": "kids decide, for one day"
+          }
         ],
         "ask": "What was harder than you planned?"
       },
       {
-        "name": "Twists",
+        "name": "Ask them",
         "lines": [
-          { "k": "New person:", "v": "someone joins who needs help" },
-          { "k": "Runs out:", "v": "your main supply is gone" },
-          { "k": "Longer:", "v": "it lasts twice as long" },
-          { "k": "Wrong:", "v": "you got something important wrong" },
-          { "k": "Rivals:", "v": "someone wants the same thing" }
+          {
+            "k": "Before:",
+            "v": "what did you wish you'd known?"
+          },
+          {
+            "k": "Hardest:",
+            "v": "which day was the worst?"
+          },
+          {
+            "k": "Surprise:",
+            "v": "what worked that you didn't expect?"
+          },
+          {
+            "k": "Others:",
+            "v": "who had it hardest?"
+          },
+          {
+            "k": "Missing:",
+            "v": "what's missing from our plan?"
+          }
         ],
-        "ask": "What's the first thing you'd change?"
+        "ask": "What did they spot that we missed?"
       }
     ],
     "after": {
@@ -227,28 +287,40 @@
     }
   },
   "skills": [
-    { "name": "Thinking ahead", "text": "following an idea past the first step" },
-    { "name": "Curiosity", "text": "asking people what they lived" },
-    { "name": "Trade-offs", "text": "choosing when two good things clash" },
-    { "name": "Reasoning", "text": "making a case that holds up" }
+    {
+      "name": "Thinking ahead",
+      "text": "following an idea past the first step"
+    },
+    {
+      "name": "Curiosity",
+      "text": "asking people what they lived"
+    },
+    {
+      "name": "Trade-offs",
+      "text": "choosing when two good things clash"
+    },
+    {
+      "name": "Reasoning",
+      "text": "making a case that holds up"
+    }
   ],
   "conclusion": {
     "headline": "They didn't stop at the first answer.",
-    "text": "Listen for it over the next few weeks. If they say 'But then what would happen?' about something in the news, a family plan or a story they're reading, the habit is sticking.",
-    "celebrate": "At the end, read their first reaction beside the final plan and say: 'Look how far you took that.'",
+    "text": "It shows up in ordinary conversations. If they say 'But then what would happen?' about something in the news, a family plan or a story they're reading, the habit is sticking.",
+    "celebrate": "Put their Day 1 column beside the final plan and say: 'Look how far you took that.'",
     "extensions": [
       "Pick a what-if about history, and find out what really happened",
-      "Interview someone else who lived it and compare",
+      "Try a bigger slice, like a whole weekend",
       "Write the story of Day 7 from your plan",
-      "Make What-If Wednesday a supper table habit"
+      "Swap what-ifs with another family and compare plans"
     ]
   },
   "signs": [
     "They ask what happens next instead of stopping at the first answer",
-    "They think about who a decision affects",
-    "They change their mind when they learn something new"
+    "They try a small piece of something before deciding",
+    "They ask people who've lived it"
   ],
-  "makeItReal": "Keep a running list of what-ifs on the fridge, and take one out at supper once a week.",
+  "makeItReal": "Keep a running list of what-ifs on the fridge, and pull one out whenever someone says they're bored.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {
