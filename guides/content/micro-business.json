@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You're the first customer, the bank and the ride, not the boss. Let them choose, even an idea you doubt. Your most useful question is 'Was it worth it?' Ask it about every job, in money and in time. Don't buy anything before Step 3, and keep any loan small and real: they pay it back.",
+    "intro": "You're the first customer and the bank, not the boss. Let them choose, even an idea you doubt. Your most useful question is 'Was it worth it?' Ask it about every job, in money and in time. Don't buy anything before Step 3, and keep any loan small and real: they pay it back.",
     "plan": [
       {
         "when": "Week 1",
@@ -50,7 +50,7 @@
     "troubleshoot": [
       {
         "q": "Nobody wants it",
-        "a": "That's a result, not a failure. Ask the people who said no what they would pay for, and try that instead."
+        "a": "Good to know before you buy anything. Ask the people who said no what they would pay for, and try that instead."
       },
       {
         "q": "A customer cancels or forgets to pay",
@@ -113,9 +113,9 @@
       "you": "Help them reach people, like a neighbour, a grandparent or a family friend. Stand nearby and let them do the asking.",
       "ask": [
         "What did people say that surprised you?",
-        "What would turn a no into a yes?"
+        "What did the no's have in common?"
       ],
-      "tip": "'Would you buy it?' gets a polite yes. 'Would you pay $5 for it this Saturday?' gets the truth.",
+      "tip": "Ask what they'd pay and how often. 'Every Saturday' tells you far more than 'Sure, sounds good.'",
       "levels": {
         "explore": "Ask two people if they'd use it, and tell someone what they said.",
         "develop": "Ask three to five people what they'd pay and how often, then change one thing.",
@@ -142,7 +142,7 @@
       "title": "Run it and keep the books",
       "why": "This is where it gets real: promises, people and money.",
       "kid": "Your kid runs the business for two or three weeks. They write a line in the notebook for every job: the date, money in, money out and how long it took. They pay back costs first, and keep a list of customers who want it again.",
-      "you": "Drive, and stay close for anything with strangers or roads. Otherwise step back. If they forget a job, let them be the one to talk to the customer.",
+      "you": "Drive, and stay close for anything with strangers or roads. Otherwise step back. If they forget a job, let them be the one to talk to the customer. For food, ask about allergies first, list the ingredients and check your local rules.",
       "ask": [
         "Who came back?",
         "What took longer than you expected?"
@@ -166,7 +166,7 @@
       "tip": "Hiring a sibling or friend is a great next step. Suddenly they have to work out a fair wage, and find out whether the other person agrees.",
       "levels": {
         "explore": "Count what you kept and say if you want to keep going.",
-        "develop": "Work out profit and profit per hour, then choose keep, change or stop.",
+        "develop": "Work out profit and profit per hour, then choose keep, change, hand over or stop.",
         "extend": "Write a plan for next month, including whether to hire help and what you'd pay."
       }
     }
@@ -179,24 +179,24 @@
         "name": "Business ideas",
         "lines": [
           {
-            "k": "Pets:",
-            "v": "walking, feeding, visiting"
+            "k": "Bins:",
+            "v": "out and back every week"
           },
           {
             "k": "Plants:",
-            "v": "watering while people travel"
+            "v": "watering on a schedule"
+          },
+          {
+            "k": "Pets:",
+            "v": "walks or feeding while people travel"
           },
           {
             "k": "Bottles:",
-            "v": "collecting them for the refund"
+            "v": "for the refund, where there's a deposit"
           },
           {
-            "k": "Baking:",
-            "v": "a weekly order for a neighbour"
-          },
-          {
-            "k": "Tech help:",
-            "v": "phones, photos, new apps"
+            "k": "Seasons:",
+            "v": "leaves or snow, all season long"
           }
         ],
         "ask": "Would they need it again?"
@@ -225,7 +225,7 @@
             "v": "what would make it worth it?"
           }
         ],
-        "ask": "Was that a real yes?"
+        "ask": "How often would they really use it?"
       },
       {
         "name": "Count it",
@@ -286,7 +286,7 @@
         "What I do and for who",
         "My price",
         "What one job costs me",
-        "What I keep from one job"
+        "What I decided, and why"
       ]
     }
   },
@@ -297,7 +297,7 @@
     },
     {
       "name": "Customer sense",
-      "text": "asking before building"
+      "text": "knowing why people come back"
     },
     {
       "name": "Reliability",
@@ -310,7 +310,7 @@
   ],
   "conclusion": {
     "headline": "They ran something real, and they know what it was worth.",
-    "text": "Watch for it in the weeks after. If they ask what something costs to make, or work out what an hour of their time is worth, they've started to think like a business owner.",
+    "text": "Watch for it in the weeks after. If they ask what something costs to make, or work out what an hour of their time is worth, they're thinking like an owner, not a seller.",
     "celebrate": "When a customer comes back, say: 'They came back because you did it well.'",
     "extensions": [
       "Hire a sibling or friend and work out a fair wage",

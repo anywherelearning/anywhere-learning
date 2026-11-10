@@ -1,0 +1,336 @@
+{
+  "slug": "trade-it-up",
+  "category": "Entrepreneurship",
+  "title": "Trade It Up",
+  "tagline": "Start · Match · Offer · Climb",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid starts with one tiny, nearly worthless object and trades their way up through real swaps, with no money changing hands. They find who wants what they've got, make real offers, hear real no's, keep a log of the climb, then lay out the chain and see how far a paperclip can go.",
+  "need": [
+    "One small starting object",
+    "A notebook or phone for the trade log",
+    "A trading circle you agree on together",
+    "A week or two of chances to trade"
+  ],
+  "academics": [
+    {
+      "subject": "Economics",
+      "text": "value, wants and fair trades"
+    },
+    {
+      "subject": "Communication",
+      "text": "making an offer and handling a no"
+    },
+    {
+      "subject": "Math",
+      "text": "estimating worth and tracking the climb"
+    },
+    {
+      "subject": "Writing",
+      "text": "a trade log that tells a story"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You set the boundaries, they make the deals. Your most useful question is 'Who wants it more than you do?' No money changes hands, ever. Let them hear no, let them make the odd bad trade, and only step in to keep it safe and fair.",
+    "plan": [
+      {
+        "when": "Day 1",
+        "what": "Pick the paperclip, find who wants it and make the first trade (Steps 1 to 3)."
+      },
+      {
+        "when": "Over a week or two",
+        "what": "Trade up and keep the log (Step 4)."
+      },
+      {
+        "when": "At the end",
+        "what": "Lay out the chain (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Nobody wants to trade",
+        "a": "Go back to Step 2. The object is probably fine, it's the wrong person. Or add something small to sweeten the offer."
+      },
+      {
+        "q": "They traded down",
+        "a": "Let it stand if it was fair. Ask what they'd do differently next time, then keep trading."
+      },
+      {
+        "q": "A trade feels unfair to someone",
+        "a": "Undo it kindly and talk about why. A good trade leaves both people happy."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A thing isn't worth one fixed amount. It's worth more to the person who wants it, and every good trade gives both people something they want more than what they had.",
+    "before": "Nobody wants a paperclip.",
+    "model": [
+      {
+        "part": "Start",
+        "line": "One paperclip."
+      },
+      {
+        "part": "Trade 1",
+        "line": "To our neighbour, who'd run out of clips, for a sheet of stickers."
+      },
+      {
+        "part": "Trade 2",
+        "line": "The stickers to my cousin for a yo-yo."
+      },
+      {
+        "part": "Trade 3",
+        "line": "The yo-yo to a friend for a book he'd finished."
+      }
+    ],
+    "modelNote": "Nothing in the chain was worth much on its own. Each trade worked because the other person wanted what they got more than what they gave."
+  },
+  "steps": [
+    {
+      "title": "Pick your paperclip",
+      "why": "The smaller the start, the better the story.",
+      "kid": "Your kid picks one small, humble object, like a paperclip, a marble or a cool rock. Together you set the trading circle, using the Trading circle card in the Trade Toolkit at the end of the guide.",
+      "you": "Set the circle first, and steer them away from starting with something good. Then tell them about Kyle MacDonald, a Canadian who started with one red paperclip in 2005 and had a house 14 trades later. He traded with strangers online. Yours stays with people you know.",
+      "ask": [
+        "Who might want this little thing?",
+        "What would you love to end up with?"
+      ],
+      "tip": "A start that means something to them, like a rock they found, makes the first offer easier.",
+      "levels": {
+        "explore": "Pick a small object, and say who might want it.",
+        "develop": "Pick a humble object, and name three people who might want it.",
+        "extend": "Pick a humble object and a dream item to aim for, and guess how many trades it'll take."
+      }
+    },
+    {
+      "title": "Find who wants it",
+      "why": "Something nobody needs is perfect for the one person who does.",
+      "kid": "Your kid thinks like a trader, using the Who wants it card: who in the trading circle would actually want this, and why? They match their object to the person who'd value it most.",
+      "you": "Ask 'Who wants it more than you do?' and let them work through the people they know. Share one thing you'd happily trade for, so they hear what a real want sounds like.",
+      "ask": [
+        "Who wants it more than you do?",
+        "Why would it matter to them?"
+      ],
+      "tip": "Listen for what people say they've run out of or are collecting. That's where the yes is.",
+      "levels": {
+        "explore": "Name one person who might want it, and say why.",
+        "develop": "List three people, and what each one might trade for it.",
+        "extend": "Rank everyone in the circle by how much they'd want it, and start at the top."
+      }
+    },
+    {
+      "title": "Make the first trade",
+      "why": "The first ask is the hardest. After that, the game opens up.",
+      "kid": "Your kid makes the offer out loud, using the Making the offer card. If the answer is no, they listen for what the person does want and try again. When someone says yes, they write down both sides of the trade.",
+      "you": "Stay close and let them do the asking, even when it's slow. Afterwards, tell them what you saw them do well.",
+      "ask": [
+        "What would make it a yes?",
+        "What did they actually want?"
+      ],
+      "tip": "Practise the first offer on you, twice. The real one feels much less scary after that.",
+      "levels": {
+        "explore": "Make one trade, with a grown-up beside you.",
+        "develop": "Make a trade, and write down what each of you gave and why.",
+        "extend": "Make a trade where you had to listen and change your offer to get a yes."
+      }
+    },
+    {
+      "title": "Trade up and keep the log",
+      "why": "A list of swaps turns into a story you can watch climb.",
+      "kid": "Your kid logs each trade, picks the next target and looks for the person who might want what they're holding now. Before they shake on any deal, they run it through the Fair trade check card.",
+      "you": "Let a bad trade happen if it's fair. A small loss now is the cheapest lesson in what things are worth. Anything big needs your yes before it changes hands.",
+      "ask": [
+        "What could this become next?",
+        "Was that a step up, and for who?"
+      ],
+      "tip": "Take a photo of every object. The chain looks amazing laid out at the end.",
+      "levels": {
+        "explore": "Make two more trades, and draw each one in the log.",
+        "develop": "Make five trades, and write why each one was a step up.",
+        "extend": "Aim for your dream item, and change your plan when a trade goes sideways."
+      }
+    },
+    {
+      "title": "Lay out the chain",
+      "why": "Value isn't stuck to a thing. It changes with who's holding it.",
+      "kid": "Your kid lays out the photos or objects in a line, from the paperclip to the end, and tells the story of the chain to someone new. Then they fill in My trade chain at the end of the guide: the best trade, the hardest no and what they ended with.",
+      "you": "Ask what made each trade work. Then ask if everyone came out happy, not just them.",
+      "ask": [
+        "Which trade was the biggest jump?",
+        "Did everyone you traded with come out happy?"
+      ],
+      "tip": "Keep the final object somewhere they'll see it. It's proof of what a paperclip can turn into.",
+      "levels": {
+        "explore": "Show your chain, and say which trade you're proudest of.",
+        "develop": "Tell the whole story of your chain, including the hardest no.",
+        "extend": "Estimate what each object was worth, and explain why the value kept changing."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Trade Toolkit",
+    "intro": "Who you can trade with, who might want it, how to ask and how to keep it fair.",
+    "items": [
+      {
+        "name": "Trading circle",
+        "lines": [
+          {
+            "k": "Family:",
+            "v": "the easiest yes"
+          },
+          {
+            "k": "Neighbours:",
+            "v": "the ones you know"
+          },
+          {
+            "k": "Friends:",
+            "v": "and their families"
+          },
+          {
+            "k": "Never:",
+            "v": "strangers or online"
+          },
+          {
+            "k": "Grown-up:",
+            "v": "okays anything big"
+          }
+        ],
+        "ask": "Who can you trade with?"
+      },
+      {
+        "name": "Who wants it",
+        "lines": [
+          {
+            "k": "Collectors:",
+            "v": "people who keep this kind of thing"
+          },
+          {
+            "k": "Makers:",
+            "v": "crafty people always need supplies"
+          },
+          {
+            "k": "Grandparents:",
+            "v": "love a thing with a story"
+          },
+          {
+            "k": "Ran out:",
+            "v": "someone who needs one today"
+          },
+          {
+            "k": "Fans:",
+            "v": "someone who loves the thing it's from"
+          }
+        ],
+        "ask": "Who wants it more than you do?"
+      },
+      {
+        "name": "Making the offer",
+        "lines": [
+          {
+            "k": "Ask:",
+            "v": "would you trade your ___ for my ___?"
+          },
+          {
+            "k": "Why:",
+            "v": "say why it's useful to them"
+          },
+          {
+            "k": "Listen:",
+            "v": "what do they really want?"
+          },
+          {
+            "k": "Sweeten:",
+            "v": "add a little something"
+          },
+          {
+            "k": "No:",
+            "v": "is fine, on both sides"
+          }
+        ],
+        "ask": "What would make it a yes?"
+      },
+      {
+        "name": "Fair trade check",
+        "lines": [
+          {
+            "k": "Both:",
+            "v": "are you both happy?"
+          },
+          {
+            "k": "Honest:",
+            "v": "nothing broken or hidden"
+          },
+          {
+            "k": "Big things:",
+            "v": "sleep on it, then ask both families"
+          },
+          {
+            "k": "Undo:",
+            "v": "agree first if it can be undone"
+          },
+          {
+            "k": "Log it:",
+            "v": "who, what for what, and when"
+          }
+        ],
+        "ask": "Would you make this trade again?"
+      }
+    ],
+    "after": {
+      "label": "My trade chain",
+      "lines": [
+        "I started with",
+        "My best trade",
+        "My hardest no",
+        "I ended with"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Negotiation",
+      "text": "making an offer and coming back after a no"
+    },
+    {
+      "name": "Reading people",
+      "text": "noticing what someone actually wants"
+    },
+    {
+      "name": "Courage",
+      "text": "asking a real person for a real deal"
+    },
+    {
+      "name": "Fairness",
+      "text": "trades where both sides win"
+    }
+  ],
+  "conclusion": {
+    "headline": "They started with almost nothing, and talked their way up.",
+    "text": "Their sense of what something's worth shifts after this. If they say 'That's junk to me, but my friend would love it,' they've got the whole idea.",
+    "celebrate": "When you look at the chain laid out together, say: 'All of that started with a paperclip and you asking.'",
+    "extensions": [
+      "Start again with a different object, and try to beat your chain",
+      "Trade a skill instead of a thing, like teaching someone to juggle",
+      "Trade a favour chain: one small chore traded up to a bigger one",
+      "Read the full red paperclip story together and compare it with yours"
+    ]
+  },
+  "signs": [
+    "They notice what other people want",
+    "They can hear a no and try again",
+    "They talk about fair, not just about winning"
+  ],
+  "makeItReal": "Keep the trade log and the first object. They're a great story to tell, and proof that asking works.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/trade-it-up.jpg",
+    "alt": "Watercolour of a wooden table with a row of objects growing in size, a red paperclip, a sheet of stickers, a wooden yo-yo, a green book and a vintage camera, beside an open notebook with a pencil",
+    "caption": "From a paperclip to a camera, one trade at a time."
+  }
+}

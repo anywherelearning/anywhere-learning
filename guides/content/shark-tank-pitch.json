@@ -72,7 +72,7 @@
     "model": [
       {
         "part": "Need",
-        "line": "$30 for flour, chocolate chips and bags."
+        "line": "$30 for thread, beads and clasps."
       },
       {
         "part": "Have",
@@ -80,11 +80,11 @@
       },
       {
         "part": "Deal",
-        "line": "I'll pay you back $22 by March 1, from cookie sales."
+        "line": "I'll pay you back $22 by March 1, from bracelet sales."
       },
       {
         "part": "Proof",
-        "line": "I keep $1.50 from each bag, so 15 bags pays you back."
+        "line": "I keep $1.50 from each bracelet, so 15 bracelets pays you back."
       }
     ],
     "modelNote": "The first ask was a favour. The second tells the shark what it's for, what they get and how it gets paid, so they can say yes for a reason."
@@ -93,7 +93,7 @@
     {
       "title": "Build your numbers",
       "why": "Sharks invest in numbers, not just ideas.",
-      "kid": "Your kid picks a business, one they've already started or a new idea, and works out the basics with the Numbers card in the Shark Toolkit at the end of the guide: the price, the cost of one, what's left from each sale and what they need to get started.",
+      "kid": "Your kid brings the numbers from a business they've run, or works out new ones, with the Numbers card in the Shark Toolkit at the end of the guide: what they need to start, what they have, the gap and how many sales it takes to pay back.",
       "you": "Check the costs against real prices, in a shop or online. Let them do the math, and ask 'How do you know?' about every number.",
       "ask": [
         "What do you need to get started?",
@@ -142,7 +142,7 @@
       "title": "Face the sharks",
       "why": "The questions are where a pitch is really won.",
       "kid": "Your kid pitches to a panel of family sharks, who ask questions and score it using the Shark panel card. Each shark makes an offer, changes the terms or says 'I'm out'. Your kid decides: accept, ask for something different or walk away.",
-      "you": "Be a real shark: kind, but not easy. Only offer what you'd honestly put in. Let a sibling take a turn as a shark too.",
+      "you": "Be a real shark: kind, but not easy. Only offer what you'd honestly put in. Let a sibling take a turn as a shark too. Keep sibling deals small, and okay them before anyone signs.",
       "ask": [
         "What did a shark ask that you hadn't thought of?",
         "Why did you take that deal, or walk away?"
@@ -179,24 +179,24 @@
         "name": "Numbers",
         "lines": [
           {
-            "k": "Price:",
-            "v": "what one sells for"
-          },
-          {
-            "k": "Cost:",
-            "v": "what one costs to make"
-          },
-          {
-            "k": "Left:",
-            "v": "price minus cost"
-          },
-          {
             "k": "Start-up:",
             "v": "what you need before the first sale"
           },
           {
             "k": "Have:",
             "v": "what you can put in yourself"
+          },
+          {
+            "k": "Gap:",
+            "v": "start-up minus have, that's your ask"
+          },
+          {
+            "k": "Pay back:",
+            "v": "how many sales it takes"
+          },
+          {
+            "k": "Date:",
+            "v": "when the shark gets it back"
           }
         ],
         "ask": "How do you know?"
@@ -296,7 +296,7 @@
       "text": "making a clear case with numbers"
     },
     {
-      "name": "Money sense",
+      "name": "Deal making",
       "text": "knowing exactly what the shark gets"
     },
     {

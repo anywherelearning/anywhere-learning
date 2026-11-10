@@ -64,7 +64,7 @@
   },
   "lesson": {
     "text": "A good product doesn't start with an idea. It starts with listening to someone else's complaint, and it isn't finished until they'd actually choose it.",
-    "before": "I'll invent a robot that cleans my room.",
+    "before": "I'll invent a backpack with a built-in snack fridge.",
     "model": [
       {
         "part": "Complaint",
@@ -83,7 +83,7 @@
         "line": "Three of four used it without help. One wanted it smaller."
       }
     ],
-    "modelNote": "The robot fixed a problem only your kid had. The clip came from listening, and the test showed it works for other people."
+    "modelNote": "The snack fridge fixed a problem only your kid had. The clip came from listening, and the test showed it works for other people."
   },
   "steps": [
     {
@@ -97,7 +97,7 @@
       ],
       "tip": "'Tell me about your mornings' gets far more than 'What bugs you?' People complain freely once they're telling a story.",
       "levels": {
-        "explore": "Ask two people what bugs them, and draw what they said.",
+        "explore": "Ask two people to tell you about their mornings, and draw what they said.",
         "develop": "Ask five people about one part of the day and write their exact words.",
         "extend": "Ask eight people of different ages, and note who complained most and about what."
       }
@@ -122,7 +122,7 @@
       "title": "Invent it and build a rough model",
       "why": "A cardboard model answers questions a drawing can't.",
       "kid": "Your kid sketches a few ways to fix it, picks one and builds a rough model from cardboard, tape and whatever's around, using the Make it real card. They label what each part does.",
-      "you": "Ask 'How would they hold it?' and 'Where would it live?' Help with the cutting, and leave the design to them.",
+      "you": "Ask 'How would they hold it?' and 'Where would it live?' Help with the cutting, and leave the design to them. If they get stuck, ask what the person does now and build one small step up from that.",
       "ask": [
         "How would they use it on a busy morning?",
         "What's the one part it can't do without?"

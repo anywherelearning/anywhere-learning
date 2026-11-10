@@ -1895,7 +1895,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A 5-step guide from picking who to reach to counting what worked',
       'A worked example that shows why one person beats everyone',
       'Who are they card and Look and feel card',
-      'One message card and Where they will see it card',
+      'One message card and Where they\'ll see it card',
       'My campaign page to fill in with real numbers',
     ],
     skillTags: ['Entrepreneurship', 'Marketing', 'Persuasive Writing', 'Design', 'Data'],
@@ -1988,7 +1988,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     seo: {
       title: 'Shark Tank Pitch for Kids: Business Pitch Project, Ages 6-14',
       description:
-        'A ready-to-run Shark Tank style pitch project. Kids work out the numbers, write the pitch, face family sharks and sign a real deal. Ages 6-14, no prep.',
+        'A ready-to-run Shark Tank style pitch project. Kids work out the numbers, write the pitch, face family sharks and sign a real deal. Ages 6-14, low prep.',
     },
     opening:
       'Your child asks the family for real backing, Shark Tank style. They build the numbers for their business, decide exactly what they are asking for and what the shark gets back, and write a one-minute pitch. Then they face a panel of family sharks, choose a deal, sign it and pay it back on time.',
@@ -3245,24 +3245,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'trade-it-up': {
     opening:
-      'Your child starts with one small, nearly worthless object and trades their way up through a chain of real swaps, no money, just deal after deal. Along the way they hit the question that drives all of business: what is a thing worth, and worth to whom? Real negotiation, value, and resourcefulness, inspired by the famous red-paperclip-to-a-house story.',
+      'Your child starts with one tiny, nearly worthless object, like a paperclip, and trades their way up through real swaps with no money changing hands. They find who wants what they have, make real offers, hear a real no and keep a log of the climb. At the end, they lay out the chain and see how far a paperclip can go.',
     whatsIncluded: [
-      'Pick a humble starting object',
-      'Find the person who values it most',
-      'Make real trades and log every swap',
-      'Learn the moves that turn a no into a yes',
-      'Aim for win-win deals and count the climb',
+      'A 5-step guide from a paperclip to a laid-out trade chain',
+      'A worked example where every trade leaves both people happier',
+      'Trading circle card and Who wants it card',
+      'Making the offer card and Fair trade check card',
+      'My trade chain page for the best trade and the hardest no',
     ],
-    skillTags: ['Negotiation', 'Value', 'Resourcefulness', 'Persuasion', 'Entrepreneurship'],
+    skillTags: ['Negotiation', 'Understanding Value', 'Communication', 'Courage', 'Fairness'],
     insideTheLearning: {
       lead:
-        'Your child starts with something small and trades their way up. Every trade is a real negotiation with a real person who can say no. What something is worth turns out not to be fixed, and the same object is treasure to one person and junk to another.',
+        'Your child learns that a thing is not worth one fixed amount. It is worth more to the person who wants it, and every good trade gives both people something they want more than what they had.',
       skills: [
-        { skill: 'Negotiation', where: 'Making an offer, hearing no, and coming back with something better' },
-        { skill: 'Value', where: 'Seeing that worth is not fixed and depends entirely on who is asked' },
-        { skill: 'Resourcefulness', where: 'Turning almost nothing into something real through nerve and timing' },
-        { skill: 'Persuasion', where: 'Making the case for a trade without pushing too hard' },
-        { skill: 'Entrepreneurship', where: 'Running the whole thing themselves, deal after deal' },
+        { skill: 'Communication', where: 'Making an offer out loud and listening for what the other person wants' },
+        { skill: 'Economics', where: 'Seeing value change from one person to the next' },
+        { skill: 'Math', where: 'Estimating what each object is worth and tracking the climb' },
+        { skill: 'Life Skills', where: 'Hearing no, trying again and checking every deal is fair' },
+        { skill: 'Writing', where: 'Keeping a trade log that tells the story of the chain' },
       ],
     },
     format: 'Project Guide',

@@ -31,15 +31,11 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need to know anything about business. You're the receipt-keeper and the honest customer. Your most useful question is 'More sales, or more money?' Let them pick prices you think are wrong. The test will tell them, and that sticks far better than you telling them.",
+    "intro": "You're the receipt-keeper and the honest customer. Your most useful question is 'More sales, or more money?' Let them pick prices you think are wrong. The test will tell them, and that sticks far better than you telling them.",
     "plan": [
       {
         "when": "Session 1",
-        "what": "Find the floor and check the market (Steps 1 and 2)."
-      },
-      {
-        "when": "Session 2",
-        "what": "Pick two prices and predict (Step 3)."
+        "what": "Find the floor, check the market and pick two prices (Steps 1 to 3)."
       },
       {
         "when": "Two selling times",
@@ -58,7 +54,7 @@
       },
       {
         "q": "They have nothing to sell",
-        "a": "A service works too, like washing cars or raking leaves. Price it per job, and test two prices with different neighbours."
+        "a": "A service works too, like raking leaves or walking a dog. Price it per job, and test two prices with different neighbours."
       },
       {
         "q": "The two days weren't fair",
@@ -94,7 +90,7 @@
       "title": "Find your floor",
       "why": "Below this price, every sale loses money.",
       "kid": "Your kid picks something to sell and works out what one costs, using the Cost of one card in the Pricing Toolkit at the end of the guide. They split shared costs, like a bag of flour, across everything it makes, and remember the packaging.",
-      "you": "Show them the receipts and let them do the dividing. If they want to count their time, ask what an hour of their time should be worth.",
+      "you": "Show them the receipts and let them do the dividing. Ask what they nearly forgot, because there's almost always something.",
       "ask": [
         "What does one really cost you?",
         "What did you almost forget to count?"
@@ -103,7 +99,7 @@
       "levels": {
         "explore": "Add up what goes into one, with a grown-up helping with the math.",
         "develop": "Work out the cost of one, including packaging and shared costs.",
-        "extend": "Work out the cost of one with and without your time, and see how far your floor moves."
+        "extend": "Work out how many you'd need to sell just to cover what you spent on supplies."
       }
     },
     {
@@ -135,14 +131,14 @@
       "levels": {
         "explore": "Pick a low price and a high price, and guess which will sell more.",
         "develop": "Predict sales and money kept at both prices.",
-        "extend": "Add a third price, and predict where the most money kept will be."
+        "extend": "Predict the price where people would stop buying, and plan how to check it."
       }
     },
     {
       "title": "Run the test",
       "why": "Only real buyers can tell you what it's worth.",
       "kid": "Your kid sells at one price for a set time, then at the other price on another day, in the same place at the same time of day. They keep a tally using the Test tally card, and work out what they kept at each price.",
-      "you": "Help set up and stay close. Keep everything the same except the price, and count the money together at the end of each session.",
+      "you": "Help set up and stay close. Keep everything the same except the price, and count the money together at the end of each session. Check your local rules for selling homemade food, and label what's in it.",
       "ask": [
         "Did more people walk away at the higher price?",
         "Which price kept more money?"
@@ -151,7 +147,7 @@
       "levels": {
         "explore": "Sell at both prices, and count how many you sold each time.",
         "develop": "Tally sales, money in and money kept at both prices, then compare.",
-        "extend": "Run each price twice, and work out the average before you decide."
+        "extend": "Test both prices in a different place, and see if the winner changes."
       }
     },
     {
@@ -167,7 +163,7 @@
       "levels": {
         "explore": "Try one value idea, and say which price you'll keep.",
         "develop": "Test one value idea with real buyers, then fill in My price.",
-        "extend": "Work out what you'd do if your costs went up by a dollar, and explain your new price."
+        "extend": "Work out what you'd do if your flour doubled in price, and explain your new price."
       }
     }
   ],
@@ -191,8 +187,8 @@
             "v": "a $4 bag of flour ÷ 40 cookies"
           },
           {
-            "k": "Time:",
-            "v": "what's an hour of yours worth?"
+            "k": "Extras:",
+            "v": "napkins, a sign, a tip jar"
           },
           {
             "k": "Floor:",
@@ -262,7 +258,7 @@
           },
           {
             "k": "Bundle:",
-            "v": "3 for $5"
+            "v": "3 for $5 when one is $2"
           },
           {
             "k": "Extras:",
@@ -310,17 +306,17 @@
   ],
   "conclusion": {
     "headline": "They found their price, and they can prove it.",
-    "text": "Next time you're shopping together, see what they notice. If they check the price of one piece, or wonder out loud why one brand costs double, they've started to see how prices really work.",
+    "text": "Next time you're shopping together, see what they notice. If they wonder whether a café would sell more at a lower price, or why a sale only lasts a week, they've started to see how prices really work.",
     "celebrate": "When they explain their price with their own numbers, say: 'You didn't guess. You tested it.'",
     "extensions": [
       "Test a sale price, like half off in the last hour",
-      "Price a service by the job and by the hour, and compare",
+      "Try a pay-what-you-want hour and compare it with your fixed price",
       "Find the same item in three stores and work out who charges most, and why",
       "Ask a shop owner how they decide their prices"
     ]
   },
   "signs": [
-    "They check the price of one piece, not the package",
+    "They ask 'More sales, or more money?' about other people's prices",
     "They ask what something costs to make",
     "They test before they decide"
   ],

@@ -42,7 +42,7 @@
         "what": "Ask someone in the chain (Step 3)."
       },
       {
-        "when": "Session 3",
+        "when": "Session 2",
         "what": "Count the miles and find the weak link (Steps 4 and 5)."
       }
     ],
@@ -147,7 +147,7 @@
       "levels": {
         "explore": "Name four jobs it took to get your product to you.",
         "develop": "Estimate the total distance, and list at least eight jobs.",
-        "extend": "Compare the distance with a similar product made close to home."
+        "extend": "Guess what share of the price each job gets, then check one guess by asking or looking it up."
       }
     },
     {
@@ -188,7 +188,7 @@
           },
           {
             "k": "Distributed by:",
-            "v": "who moved it, not who made it"
+            "v": "the company selling it, not who made it"
           },
           {
             "k": "Small print:",
