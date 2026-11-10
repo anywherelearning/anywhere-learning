@@ -225,5 +225,11 @@
     "alt": "A boy showing his younger sister how to shape pupusa dough at the kitchen counter",
     "caption": "My son teaching his sister to make pupusas, our favourite meal from El Salvador.",
     "tall": true
-  }
+  },
+  "onTheRoad": [
+    "Learn a game from local kids at a playground, with you nearby, then teach it to your family that evening.",
+    "Teach a quick trick to a kid who doesn't speak your language, with you close by, using only showing and trying together.",
+    "Ask a local, with your help, to teach you a small skill, and notice which teaching moves they use."
+  ],
+  "backHome": "Teach one skill you learned on the road to a friend at home, and tell them where you learned it."
 }

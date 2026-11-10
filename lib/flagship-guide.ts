@@ -23,7 +23,7 @@ export const FLAGSHIP_GUIDE = {
   shopHref: "/shop/kitchen-math-challenge",
   // One warm line describing the bonus, reused wherever it's promoted.
   blurb:
-    "Your kid plans a real family meal, prices out the ingredients, scales the recipes, and keeps it all within a grocery budget. It normally sells for $5.99, and it's yours free.",
+    "Your kid plans real family meals, checks what's already home, prices the list by the package and shops it. It normally sells for $5.99, and it's yours free.",
 } as const;
 
 // Direct download for the flagship PDF (on Vercel Blob). Used by the instant

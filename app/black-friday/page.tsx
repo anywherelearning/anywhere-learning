@@ -46,28 +46,27 @@ const MONTHLY_HREF = '/start-trial?plan=monthly';
 const MOMENTS: { src: string; guide: string; skill: string; alt: string; rot: number }[] = [
   { src: '/images/fall/party-planner-math.jpg', guide: 'Party Planner Math', skill: 'budgets + fractions', alt: 'Two kids icing cupcakes for a party they planned', rot: -3 },
   { src: '/images/fall/market-stall.jpg', guide: 'Market Stall Pitch', skill: 'pricing + persuasive writing', alt: 'A girl at her popcorn stand with a $2 sign she made', rot: 2 },
-  { src: '/images/fall/community-service-business.jpg', guide: 'Micro-Business Challenge', skill: 'planning + pitching', alt: 'A boy at a table presenting the babysitting service he designed', rot: -1.5 },
+  { src: '/images/fall/community-service-business.jpg', guide: 'Marketing Campaign Creator', skill: 'persuasive writing + counting', alt: 'A boy at a table with the banner he made for his babysitting app', rot: -1.5 },
   { src: '/images/fall/grow-it-eat-it.jpg', guide: 'Grow It, Eat It', skill: 'biology', alt: 'A girl planting tomatoes in pots on the deck', rot: 2.5 },
   { src: '/images/fall/garden-plot-planner.jpg', guide: 'Garden Plot Planner', skill: 'measuring + area', alt: 'A girl and her dad building a garden box with a drill', rot: -2 },
-  { src: '/images/fall/kitchen-math.jpg', guide: 'Kitchen Math Challenge', skill: 'fractions + measuring', alt: 'A girl mixing batter in a big bowl', rot: 1.5 },
+  { src: '/images/fall/kitchen-math-v2.jpg', guide: 'Kitchen Math & Meal Planning', skill: 'servings + package prices', alt: 'A girl in a store aisle reading her own shopping list', rot: 1.5 },
 ];
 
 // Invent a New Sport, word for word from the guide.
 const SPORT_STEPS = [
-  'Pick your sport',
-  'Design the playing area',
-  'Write the rules and scoring',
+  'Pick the type and the win',
+  'Mark out the field',
+  'Write the rules and the scoring',
   'Make the equipment',
-  'Playtest and fix',
-  'The championship game',
+  'Playtest, fix and play the championship',
 ];
-const SPORT_SKILLS = ['Design thinking', 'Math and measurement', 'Fairness and ethics', 'Communication'];
+const SPORT_SKILLS = ['Fair thinking', 'Design thinking', 'Clear explaining', 'Sportsmanship'];
 
 const PEEK_PINS: { n: number; top: string; title: string; body: string }[] = [
-  { n: 1, top: '26.5%', title: "Your kid's job", body: 'the part they own, so they do the thinking.' },
-  { n: 2, top: '31%', title: 'Your job', body: 'so you always know which part to hand over.' },
-  { n: 3, top: '56%', title: 'Questions to ask', body: 'so you guide with a question instead of the answer.' },
-  { n: 4, top: '77%', title: 'Three levels', body: 'pick the one that fits each kid, from 6 to 14.' },
+  { n: 1, top: '34.3%', title: "Your kid's job", body: 'the part they own, so they do the thinking.' },
+  { n: 2, top: '45.9%', title: 'Your job', body: 'so you always know which part to hand over.' },
+  { n: 3, top: '57.1%', title: 'Questions to ask', body: 'so you guide with a question instead of the answer.' },
+  { n: 4, top: '80.7%', title: 'Three levels', body: 'pick the one that fits each kid, from 6 to 14.' },
 ];
 
 // Short, word-for-word excerpts from the testimonials on the homepage.
@@ -288,14 +287,14 @@ export default async function BlackFridayPage({
                 </h2>
                 <p className="mt-3 text-lg leading-[1.65] text-gray-600">
                   In <strong className="font-semibold text-ink">Invent a New Sport</strong>, your kid creates a brand-new
-                  sport in six steps, from the playing field to the rulebook to a family championship. Here&apos;s
-                  Step 2, where they design the playing area.
+                  sport in five steps, from the playing field to the rulebook to a family championship. Here&apos;s
+                  Step 2, where they mark out the field.
                 </p>
               </div>
             </ScrollReveal>
 
-            {/* The six steps, Step 2 highlighted, so the page has context. */}
-            <ol className="m-0 mt-8 flex list-none gap-2 overflow-x-auto p-0 pb-2 [scrollbar-width:none] md:grid md:grid-cols-6 md:overflow-visible">
+            {/* The five steps, Step 2 highlighted, so the page has context. */}
+            <ol className="m-0 mt-8 flex list-none gap-2 overflow-x-auto p-0 pb-2 [scrollbar-width:none] md:grid md:grid-cols-5 md:overflow-visible">
               {SPORT_STEPS.map((s, i) => (
                 <li
                   key={s}
@@ -329,10 +328,10 @@ export default async function BlackFridayPage({
                   </div>
                   <div className={`relative ml-auto w-full rotate-[1.5deg] bg-white p-1.5 sm:w-[82%] ${PAPER_SHADOW}`}>
                     <Tape className="left-1/2 -translate-x-1/2 -rotate-2" />
-                    <div className="relative aspect-[900/1272] overflow-hidden">
+                    <div className="relative aspect-[900/1165] overflow-hidden">
                       <Image
-                        src="/images/fall/invent-a-sport-step-2.jpg"
-                        alt="Step 2 of Invent a New Sport: design the playing area, with the child's job, the parent's job, prompts to ask and three levels"
+                        src="/images/fall/invent-a-sport-step-2-v2.jpg"
+                        alt="Step 2 of Invent a New Sport: mark out the field, with what your kid does, what you do, questions to ask and three levels"
                         fill
                         sizes="(max-width: 640px) 90vw, 390px"
                         className="object-cover"

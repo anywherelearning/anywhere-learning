@@ -331,5 +331,11 @@
     "src": "guides/assets/neighbourhood-problem-spotter.jpg",
     "alt": "Watercolour of a quiet neighbourhood street corner with a bench, a tree, a crosswalk and a clipboard on a low wall",
     "caption": "Walk slowly. Look closely."
-  }
+  },
+  "onTheRoad": [
+    "Spot one thing this place does better than home, like shade, benches, bins or crossings, and work out why it works.",
+    "Count how people get around here for ten minutes, walking, biking, buses or scooters, and compare it with your street.",
+    "Photograph three clever small fixes around town, like a sign, a ramp or a shared shelf, and guess who made each one."
+  ],
+  "backHome": "Pick one fix you saw on the road, check whether it would help your own street, and pitch it to whoever looks after it."
 }

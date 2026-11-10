@@ -190,7 +190,7 @@
     "extensions": [
       "Mark new squares in new places as the seasons turn",
       "Run two squares side by side, one in sun and one in shade",
-      "Do a square at the beach, in a forest, or on a trip, and compare",
+      "Do the same square at night with a flashlight, and compare who comes out",
       "Try a night safari with a flashlight"
     ]
   },
@@ -212,5 +212,11 @@
     "src": "guides/assets/square-foot-safari.jpg",
     "alt": "Two kids crouched over a small patch of sand, looking closely",
     "caption": "One small patch, looked at closely."
-  }
+  },
+  "onTheRoad": [
+    "Mark a square on the most different ground you can find here, like beach sand, a jungle floor or a desert patch.",
+    "Look for something living in both your home square and this one, like ants or moss, and compare how they differ.",
+    "Ask a local, with your help, what one creature from your square is called here, and add that name to your notes."
+  ],
+  "backHome": "Revisit your home square with your road notes beside you, and count what lives there that the other square didn't have."
 }

@@ -270,5 +270,11 @@
     "src": "guides/assets/nature-crafts.jpg",
     "alt": "Watercolour illustration of six finished nature crafts on a wooden picnic table",
     "caption": "All six crafts, made from what was lying on the ground."
-  }
+  },
+  "onTheRoad": [
+    "Mix earth paint from the soil or sand where you're staying, like red clay or black volcanic sand, and compare the colours with home.",
+    "Find a local craft made from natural materials at a market and, with your help, ask the seller how it's made.",
+    "Build a wind chime from what's lying around here, like driftwood or seed pods, and tune it by ear before you leave."
+  ],
+  "backHome": "Paint a story stone with one creature or place from the trip, and use it to tell that story at home."
 }

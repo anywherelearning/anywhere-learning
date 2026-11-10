@@ -210,8 +210,8 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
       "This Saturday, pick one thing they'd normally ask you to do (make their own lunch, fix the bike tire) and say “you've got this, I'm right here if you're stuck.” Then sit on your hands through the wobbly part. The win is theirs to feel.",
     activities: [
       { slug: 'solo-mission', name: 'The Solo Mission', category: 'emotional-social-skills', note: 'A real thing, start to finish, on their own' },
-      { slug: 'trade-it-up', name: 'Trade It Up', category: 'entrepreneurship', note: 'Every trade is theirs, you just watch' },
-      { slug: 'fix-it-detective', name: 'Fix-It Detective', category: 'planning-problem-solving', note: 'They wrestle the fix, no stepping in' },
+      { slug: 'trade-it-up', name: 'Trade It Up', category: 'entrepreneurship', note: 'Every trade is theirs, you keep it safe and fair' },
+      { slug: 'fix-it-detective', name: 'Fix-It Detective', category: 'planning-problem-solving', note: 'They find the cause, you stay beside them' },
     ],
   },
   'non-finisher': {

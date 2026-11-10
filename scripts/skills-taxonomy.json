@@ -212,10 +212,11 @@
     },
     "adventure-story-map": {
       "canonical": [
-        "Creative Thinking",
-        "Observation",
-        "Spatial Thinking",
-        "Writing"
+        "Creative Writing",
+        "Storytelling",
+        "Planning",
+        "Narrative",
+        "Art"
       ],
       "families": [
         "Communication & Writing",
@@ -226,12 +227,11 @@
     },
     "community-tour-guide": {
       "canonical": [
-        "Audience Awareness",
-        "Confidence",
-        "Organisation",
-        "Public Speaking",
+        "Writing",
+        "Presentation",
         "Research",
-        "Storytelling"
+        "Communication",
+        "Community"
       ],
       "families": [
         "Communication & Writing",
@@ -242,9 +242,11 @@
     },
     "directions-challenge": {
       "canonical": [
-        "Empathy",
-        "Observation",
-        "Problem-Solving"
+        "Procedural Writing",
+        "Clarity",
+        "Communication",
+        "Logic",
+        "Testing"
       ],
       "families": [
         "Critical Thinking & Reasoning",
@@ -254,10 +256,11 @@
     },
     "family-debate-night": {
       "canonical": [
+        "Persuasion",
         "Critical Thinking",
         "Listening",
-        "Persuasion",
-        "Public Speaking"
+        "Public Speaking",
+        "Respect"
       ],
       "families": [
         "Communication & Writing",
@@ -267,8 +270,11 @@
     },
     "family-recipe-book": {
       "canonical": [
-        "Organisation",
-        "Writing"
+        "Procedural Writing",
+        "Interviewing",
+        "Design",
+        "Family History",
+        "Storytelling"
       ],
       "families": [
         "Communication & Writing",
@@ -277,11 +283,11 @@
     },
     "market-stall-pitch": {
       "canonical": [
-        "Audience Awareness",
-        "Confidence",
-        "Creative Thinking",
+        "Persuasion",
+        "Communication",
         "Entrepreneurship",
-        "Persuasion"
+        "Public Speaking",
+        "Confidence"
       ],
       "families": [
         "Communication & Writing",
@@ -293,9 +299,11 @@
     },
     "mini-magazine-creator": {
       "canonical": [
-        "Audience Awareness",
-        "Research",
-        "Writing"
+        "Writing",
+        "Design",
+        "Multiple Text Types",
+        "Creativity",
+        "Publishing"
       ],
       "families": [
         "Communication & Writing",
@@ -305,9 +313,11 @@
     },
     "my-review-column": {
       "canonical": [
-        "Audience Awareness",
-        "Critical Thinking",
-        "Writing"
+        "Opinion Writing",
+        "Critical Analysis",
+        "Communication",
+        "Voice",
+        "Math"
       ],
       "families": [
         "Communication & Writing",
@@ -317,9 +327,11 @@
     },
     "neighbourhood-interview": {
       "canonical": [
-        "Communication",
+        "Interviewing",
+        "Listening",
         "Empathy",
-        "Listening"
+        "Writing",
+        "Communication"
       ],
       "families": [
         "Communication & Writing",
@@ -328,10 +340,11 @@
     },
     "trail-guide-creator": {
       "canonical": [
-        "Audience Awareness",
+        "Descriptive Writing",
         "Observation",
-        "Organisation",
-        "Writing"
+        "Nature",
+        "Geography",
+        "Design"
       ],
       "families": [
         "Communication & Writing",
@@ -343,9 +356,9 @@
     },
     "write-like-a-pro": {
       "canonical": [
-        "Audience Awareness",
-        "Confidence",
-        "Persuasion"
+        "Writing",
+        "Communication",
+        "Creative Thinking"
       ],
       "families": [
         "Communication & Writing",
@@ -355,9 +368,11 @@
     },
     "board-game-studio": {
       "canonical": [
-        "Creative Thinking",
         "Design Thinking",
-        "Math"
+        "Maths",
+        "Writing",
+        "Strategy",
+        "Art"
       ],
       "families": [
         "Creativity & Making",
@@ -366,10 +381,12 @@
     },
     "rube-goldberg-machine": {
       "canonical": [
-        "Communication",
+        "STEM",
         "Engineering",
+        "Physics",
         "Problem-Solving",
-        "Science"
+        "Design",
+        "Cause & Effect"
       ],
       "families": [
         "Communication & Writing",
@@ -380,10 +397,11 @@
     },
     "survival-base": {
       "canonical": [
-        "Communication",
-        "Creative Thinking",
-        "Planning",
-        "Science"
+        "Geography",
+        "Engineering",
+        "Science",
+        "Design",
+        "Presentation"
       ],
       "families": [
         "Communication & Writing",
@@ -394,9 +412,11 @@
     },
     "imaginary-world": {
       "canonical": [
-        "Creative Thinking",
-        "Storytelling",
-        "Systems Thinking"
+        "Writing",
+        "Art",
+        "Geography",
+        "Worldbuilding",
+        "Imagination"
       ],
       "families": [
         "Communication & Writing",
@@ -406,10 +426,11 @@
     },
     "creature-habitat": {
       "canonical": [
-        "Communication",
+        "Biology",
+        "Art",
         "Engineering",
-        "Problem-Solving",
-        "Science"
+        "Scientific Thinking",
+        "Design"
       ],
       "families": [
         "Communication & Writing",
@@ -420,10 +441,11 @@
     },
     "mini-movie": {
       "canonical": [
-        "Planning",
-        "Problem-Solving",
-        "Public Speaking",
-        "Storytelling"
+        "Storytelling",
+        "Writing",
+        "Performing",
+        "Art",
+        "Collaboration"
       ],
       "families": [
         "Communication & Writing",
@@ -433,10 +455,11 @@
     },
     "theme-park": {
       "canonical": [
-        "Communication",
+        "Maths",
+        "Design",
         "Engineering",
-        "Entrepreneurship",
-        "Spatial Thinking"
+        "Planning",
+        "Art"
       ],
       "families": [
         "Communication & Writing",
@@ -448,10 +471,11 @@
     },
     "invent-a-sport": {
       "canonical": [
-        "Communication",
         "Design Thinking",
-        "Ethics",
-        "Math"
+        "Writing",
+        "Physical Literacy",
+        "Problem-Solving",
+        "Creativity"
       ],
       "families": [
         "Communication & Writing",
@@ -463,10 +487,12 @@
     },
     "kinetic-sculpture": {
       "canonical": [
+        "STEM",
+        "Physics",
         "Art",
-        "Communication",
         "Engineering",
-        "Problem-Solving"
+        "Design",
+        "Expression"
       ],
       "families": [
         "Communication & Writing",
@@ -547,11 +573,11 @@
     },
     "marketing-campaign": {
       "canonical": [
-        "Adaptability",
-        "Creative Thinking",
-        "Critical Thinking",
-        "Design Thinking",
-        "Persuasion"
+        "Entrepreneurship",
+        "Marketing",
+        "Persuasive Writing",
+        "Design",
+        "Data"
       ],
       "families": [
         "Communication & Writing",
@@ -562,11 +588,11 @@
     },
     "micro-business": {
       "canonical": [
-        "Communication",
-        "Financial Literacy",
-        "Problem-Solving",
-        "Research",
-        "Resilience"
+        "Entrepreneurship",
+        "Money Math",
+        "Customer Research",
+        "Reliability",
+        "Decision-Making"
       ],
       "families": [
         "Communication & Writing",
@@ -579,11 +605,11 @@
     },
     "pricing-experiment": {
       "canonical": [
-        "Communication",
-        "Critical Thinking",
         "Financial Literacy",
-        "Problem-Solving",
-        "Research"
+        "Math",
+        "Experimentation",
+        "Critical Thinking",
+        "Decision-Making"
       ],
       "families": [
         "Communication & Writing",
@@ -609,11 +635,11 @@
     },
     "supply-chain-detective": {
       "canonical": [
-        "Communication",
+        "Systems Thinking",
         "Geography",
-        "Problem-Solving",
         "Research",
-        "Systems Thinking"
+        "Economics",
+        "Global Awareness"
       ],
       "families": [
         "Communication & Writing",
@@ -624,10 +650,11 @@
     },
     "shark-tank-pitch": {
       "canonical": [
-        "Financial Literacy",
-        "Persuasion",
         "Public Speaking",
-        "Resilience"
+        "Financial Thinking",
+        "Persuasion",
+        "Entrepreneurship",
+        "Confidence"
       ],
       "families": [
         "Communication & Writing",
@@ -639,9 +666,11 @@
     },
     "community-impact": {
       "canonical": [
-        "Communication",
+        "Citizenship",
+        "Listening",
         "Planning",
-        "Reflection"
+        "Leadership",
+        "Follow-Through"
       ],
       "families": [
         "Communication & Writing",
@@ -651,11 +680,11 @@
     },
     "emergency-ready": {
       "canonical": [
-        "Communication",
         "Critical Thinking",
-        "Executive Functioning",
         "Life Skills",
-        "Planning"
+        "Planning",
+        "Decision-Making",
+        "Resilience"
       ],
       "families": [
         "Communication & Writing",
@@ -680,11 +709,11 @@
     },
     "fix-it-detective": {
       "canonical": [
-        "Critical Thinking",
-        "Life Skills",
-        "Planning",
         "Problem-Solving",
-        "Research"
+        "Life Skills",
+        "Critical Thinking",
+        "Planning",
+        "Practical Skills"
       ],
       "families": [
         "Critical Thinking & Reasoning",
@@ -693,10 +722,11 @@
     },
     "neighbourhood-problem-spotter": {
       "canonical": [
-        "Communication",
         "Critical Thinking",
+        "Civic Engagement",
         "Problem-Solving",
-        "Research"
+        "Observation",
+        "Communication"
       ],
       "families": [
         "Communication & Writing",
@@ -705,11 +735,11 @@
     },
     "outdoor-survival-planner": {
       "canonical": [
-        "Critical Thinking",
-        "Nature Connection",
         "Planning",
-        "Problem-Solving",
-        "Resilience"
+        "Critical Thinking",
+        "Outdoor Skills",
+        "Resourcefulness",
+        "Life Skills"
       ],
       "families": [
         "Critical Thinking & Reasoning",
@@ -720,11 +750,11 @@
     },
     "pack-like-a-pro": {
       "canonical": [
-        "Adaptability",
-        "Critical Thinking",
-        "Decision-Making",
+        "Planning",
         "Life Skills",
-        "Planning"
+        "Critical Thinking",
+        "Independence",
+        "Decision-Making"
       ],
       "families": [
         "Critical Thinking & Reasoning",
@@ -733,10 +763,11 @@
     },
     "problem-solver": {
       "canonical": [
-        "Communication",
+        "Problem-Solving",
         "Critical Thinking",
-        "Planning",
-        "Problem-Solving"
+        "Creativity",
+        "Testing",
+        "Independence"
       ],
       "families": [
         "Communication & Writing",
@@ -746,10 +777,11 @@
     },
     "scavenger-hunt-designer": {
       "canonical": [
-        "Communication",
-        "Creative Thinking",
         "Planning",
-        "Problem-Solving"
+        "Creative Writing",
+        "Problem-Solving",
+        "Leadership",
+        "Communication"
       ],
       "families": [
         "Communication & Writing",
@@ -761,7 +793,10 @@
     "swap-day-challenge": {
       "canonical": [
         "Life Skills",
-        "Planning"
+        "Planning",
+        "Empathy",
+        "Time Management",
+        "Responsibility"
       ],
       "families": [
         "Planning & Self-Management"
@@ -769,11 +804,11 @@
     },
     "what-if-scenario-lab": {
       "canonical": [
-        "Communication",
-        "Creative Thinking",
         "Critical Thinking",
         "Planning",
-        "Research"
+        "Curiosity",
+        "Trade-Offs",
+        "Communication"
       ],
       "families": [
         "Communication & Writing",
@@ -784,10 +819,11 @@
     },
     "time-energy-planner": {
       "canonical": [
-        "Emotional Regulation",
-        "Executive Functioning",
+        "Self-Awareness",
         "Planning",
-        "Problem-Solving"
+        "Time Management",
+        "Self-Regulation",
+        "Life Skills"
       ],
       "families": [
         "Critical Thinking & Reasoning",
@@ -797,10 +833,11 @@
     },
     "travel-day": {
       "canonical": [
-        "Communication",
-        "Decision-Making",
         "Planning",
-        "Problem-Solving"
+        "Time Management",
+        "Budgeting",
+        "Problem-Solving",
+        "Flexibility"
       ],
       "families": [
         "Communication & Writing",
@@ -810,10 +847,11 @@
     },
     "decision-lab": {
       "canonical": [
-        "Communication",
-        "Critical Thinking",
         "Decision-Making",
-        "Empathy"
+        "Critical Thinking",
+        "Empathy",
+        "Communication",
+        "Independence"
       ],
       "families": [
         "Communication & Writing",
@@ -823,8 +861,11 @@
     },
     "backyard-campout-planner": {
       "canonical": [
-        "Math",
-        "Number Sense"
+        "Measurement",
+        "Budgeting",
+        "Time Planning",
+        "Estimation",
+        "Organisation"
       ],
       "families": [
         "Math & Money"
@@ -832,10 +873,10 @@
     },
     "clothing-swap-thrift-math": {
       "canonical": [
-        "Critical Thinking",
         "Financial Literacy",
-        "Number Sense",
-        "Percentages"
+        "Budgeting",
+        "Value Assessment",
+        "Sustainability"
       ],
       "families": [
         "Critical Thinking & Reasoning",
@@ -845,10 +886,11 @@
     },
     "family-electricity-audit": {
       "canonical": [
-        "Number Sense",
-        "Organisation",
-        "Percentages",
-        "Problem-Solving"
+        "STEM",
+        "Measurement",
+        "Data Analysis",
+        "Energy",
+        "Budgeting"
       ],
       "families": [
         "Critical Thinking & Reasoning",
@@ -858,12 +900,10 @@
     },
     "farmers-market-challenge": {
       "canonical": [
-        "Communication",
-        "Financial Literacy",
-        "Math",
-        "Number Sense",
-        "Planning",
-        "Pricing & Sales"
+        "Mental Maths",
+        "Budgeting",
+        "Estimation",
+        "Decision-Making"
       ],
       "families": [
         "Communication & Writing",
@@ -874,8 +914,11 @@
     },
     "garage-sale-math": {
       "canonical": [
-        "Number Sense",
-        "Pricing & Sales"
+        "Money Handling",
+        "Pricing",
+        "Percentages",
+        "Multiplication",
+        "Entrepreneurship"
       ],
       "families": [
         "Entrepreneurship & Money",
@@ -884,11 +927,12 @@
     },
     "garden-plot-planner": {
       "canonical": [
-        "Math",
-        "Number Sense",
-        "Observation",
-        "Research",
-        "Spatial Thinking"
+        "STEM",
+        "Geometry",
+        "Measurement",
+        "Budgeting",
+        "Science",
+        "Planning"
       ],
       "families": [
         "Critical Thinking & Reasoning",
@@ -898,11 +942,10 @@
     },
     "kitchen-math-challenge": {
       "canonical": [
-        "Budgeting",
-        "Math",
+        "STEM",
+        "Real-World Math",
         "Planning",
-        "Problem-Solving",
-        "Self-Direction"
+        "Life Skills"
       ],
       "families": [
         "Critical Thinking & Reasoning",
@@ -913,8 +956,11 @@
     },
     "party-planner-math": {
       "canonical": [
-        "Financial Literacy",
-        "Number Sense"
+        "Multiplication",
+        "Budgeting",
+        "Estimation",
+        "Planning",
+        "Division"
       ],
       "families": [
         "Entrepreneurship & Money",
@@ -923,11 +969,9 @@
     },
     "budget-challenge": {
       "canonical": [
+        "STEM",
+        "Real-World Math",
         "Budgeting",
-        "Communication",
-        "Decision-Making",
-        "Number Sense",
-        "Planning",
         "Problem-Solving"
       ],
       "families": [
@@ -940,8 +984,10 @@
     },
     "road-trip-calculator": {
       "canonical": [
+        "Geography",
+        "Estimation",
         "Budgeting",
-        "Math",
+        "Distance",
         "Planning"
       ],
       "families": [
@@ -952,10 +998,9 @@
     },
     "savings-goal-tracker": {
       "canonical": [
-        "Budgeting",
-        "Data & Graphs",
-        "Decision-Making",
-        "Number Sense",
+        "Financial Literacy",
+        "Goal Setting",
+        "Data Tracking",
         "Percentages"
       ],
       "families": [
@@ -966,11 +1011,10 @@
     },
     "smart-shopper": {
       "canonical": [
-        "Communication",
+        "STEM",
+        "Real-World Math",
         "Critical Thinking",
-        "Decision-Making",
-        "Financial Literacy",
-        "Media Literacy"
+        "Decision-Making"
       ],
       "families": [
         "Communication & Writing",
@@ -982,8 +1026,12 @@
     },
     "sports-stats-lab": {
       "canonical": [
-        "Organisation",
-        "Percentages"
+        "STEM",
+        "Statistics",
+        "Data Visualisation",
+        "Averages",
+        "Percentages",
+        "Analysis"
       ],
       "families": [
         "Math & Money",

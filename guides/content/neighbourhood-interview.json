@@ -225,5 +225,11 @@
   "fromHome": {
     "text": "My son and I went to a bakery in our town to learn about baking and about the baker. He asked his questions, then we learned to make sourdough bread, fougasse and cookies.",
     "quotes": []
-  }
+  },
+  "onTheRoad": [
+    "Interview someone whose work is part of travel here, like a host, a ferry crew member or a market seller, with your help.",
+    "Ask an older person here, with your help, how this place has changed since they were your age.",
+    "Ask the same three questions to two people in different places you visit, with you alongside, and compare their answers."
+  ],
+  "backHome": "Ask a neighbour at home the questions you asked on the road, and put the two profiles side by side."
 }

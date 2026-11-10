@@ -216,5 +216,11 @@
     "src": "guides/assets/seed-travelers.jpg",
     "alt": "Left: a smiling girl holding orange flowers. Right: a boy holding a branch of red and green coffee cherries",
     "caption": "Every flower makes seeds, and every seed needs a way to travel."
-  }
+  },
+  "onTheRoad": [
+    "Look for seeds that only grow here, like a coconut, a mangrove pod or a desert burr, and guess how each one travels.",
+    "Cut open a local market fruit you've never tried, and work out how its seeds would travel without anyone's help.",
+    "Ask a gardener or guide, with your help, which plant here spreads fastest, and how its seeds get around."
+  ],
+  "backHome": "Leave the trip's seeds behind, since most borders ban carrying them, then find a seed at home that travels the same way."
 }

@@ -623,7 +623,7 @@ export default async function ProductPage({
               {/* Meta line */}
               <p className="mt-6 text-[12.5px] text-gray-500 tracking-[0.02em]">
                 {ageRangeDisplay} · {formatLabel}
-                {hasSkillLevels && " · 3 skill levels"}
+                {product.slug === "nature-choice-boards" ? " · 5 boards by age" : hasSkillLevels && " · 3 skill levels"}
               </p>
 
               {/* Skill tags */}

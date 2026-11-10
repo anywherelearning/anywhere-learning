@@ -659,7 +659,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A field that starts smaller than they think',
       'Scoring that matches how hard each move is',
       'Equipment swaps from around the house',
-      'Fair play checks and the 5 rules every sport needs',
+      'Fair play checks and the 5 referee\'s questions every rulebook answers',
     ],
     skillTags: ['Design Thinking', 'Writing', 'Physical Literacy', 'Problem-Solving', 'Creativity'],
     faqs: [
@@ -926,7 +926,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
         { skill: 'Financial Literacy', where: 'Staying inside a fixed budget and making the trade-offs that requires' },
         { skill: 'Pricing & Sales', where: 'Evaluating value across different vendors selling the same thing' },
         { skill: 'Planning', where: 'Choosing ingredients that work together as meals and still fit the budget' },
-        { skill: 'Communication', where: 'Talking to vendors, asking real questions, and negotiating' },
+        { skill: 'Communication', where: 'Talking to growers, asking real questions, and asking how much for two or for half' },
       ],
     },
     format: 'Project Guide',
@@ -992,7 +992,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     seo: {
       title: 'Party Planner Math: A Parent-Led Project Guide for Kids',
       description:
-        'The guide your family follows to plan a real party on a budget: guest list, food quantities, price comparisons and a timeline, all worked out by your kid.',
+        'The guide your family follows to plan a real party on $5 per guest: guest list, budget split, food per guest, pack sizes and a timeline, all worked out by your kid.',
     },
     insideTheLearning: {
       lead:
@@ -1213,7 +1213,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     whatsIncluded: [
       'A 5-step guide from picking your people to keeping it going',
       'A worked example that shows why asking beats guessing',
-      'Who is around you card and Good questions card',
+      'Who\'s around you card and Good questions card',
       'Ways to help card and Keep it going card',
       'Our project page to fill in together',
     ],
@@ -1241,10 +1241,10 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'Your child picks a real writing style (review, opinion piece, how-to guide, letter, short story, news report, or song), chooses a topic they care about, and writes a finished piece for a real audience. Drafting, editing, and revising the way actual writers work, not a five-paragraph essay for nobody.',
     whatsIncluded: [
-      'Seven Writing Style Cards with real-world examples',
+      'Seven Writing Style Cards: the job, the build and the sound of each',
       'Topic selection and audience targeting',
       'Drafting with structure and voice',
-      'Self-editing and revision process',
+      'Reading it out loud to a real person for feedback',
       'Final draft and Version 2 polish',
     ],
     skillTags: ['Writing', 'Communication', 'Creative Thinking'],
@@ -1566,11 +1566,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'Research, write, and present a guided tour of your community. Kids choose what matters most about where they live, dig up its stories, and lead a real walking tour. A project that connects writing skills with local knowledge and pride in place.',
     whatsIncluded: [
-      'Community research and tour planning guide',
+      'Choosing the stops that matter most, and planning the route',
       'Point, tell, ask: a three-part formula for every stop',
       'A practice house tour, then facts and stories from signs, neighbours and local sources',
       'Presentation and delivery practice',
-      'Extension ideas for digital or illustrated guides',
+      'Leading the real tour, getting the group involved, then a look back',
     ],
     skillTags: ['Writing', 'Presentation', 'Research', 'Communication', 'Community'],
     insideTheLearning: {
@@ -1613,11 +1613,11 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'A structured debate framework for the whole family. Kids prepare arguments, present their case, respond to counterpoints, and learn to disagree respectfully. Builds persuasive speaking, active listening, and the confidence to express opinions clearly.',
     whatsIncluded: [
-      'Family debate structure and rules guide',
+      'Silly one-minute warm-up debates to get everyone talking',
       'Topic ideas and a check that both sides are arguable',
-      'Argument preparation framework',
-      'Active listening and rebuttal practice',
-      'Reflection prompts on persuasion and respect',
+      'Researching the best reasons on both sides, then building the case',
+      'A timed debate with openings, answers and closings',
+      'A fair verdict and a look back at what convinced people',
     ],
     skillTags: ['Persuasion', 'Critical Thinking', 'Listening', 'Public Speaking', 'Respect'],
     insideTheLearning: {
@@ -1657,10 +1657,10 @@ export const productDescriptions: Record<string, ProductDescription> = {
     opening:
       'Your kid picks something to sell, prices it to make a profit, writes a 30-second pitch and sells it to real customers at a stall, then counts up the money. Persuasion, money math and the nerve to handle a no.',
     whatsIncluded: [
-      'Pitch planning and writing guide',
-      'Persuasive language and techniques',
-      'Audience awareness and adaptation tips',
-      'Delivery and presentation practice',
+      'A sell-me-this warm-up with any object in the room',
+      'Knowing the product: what it does and why someone wants it',
+      'A 30-second pitch: hook, benefit, price, ask',
+      'Setting up a stall and selling to real customers',
       'Pricing that covers costs, making change and working out profit',
     ],
     skillTags: ['Persuasion', 'Communication', 'Entrepreneurship', 'Public Speaking', 'Confidence'],
@@ -1723,7 +1723,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'neighbourhood-interview': {
     opening:
-      'Interview people in your community, from neighbours and shop owners to local heroes, and share their stories. Kids prepare questions, practise active listening, and present what they learn. Builds interviewing skills, empathy, and the ability to tell someone else\'s story with care.',
+      'Your kid interviews someone in your community, a neighbour, the baker, the librarian, about their work and their life, then writes a short profile that opens with a scene and uses their exact words, and gives a copy back to them. Interviewing, listening and the nerve to go and ask first.',
     whatsIncluded: [
       'A 2-minute reporter warm-up',
       'Turning closed questions into open ones',
@@ -1890,7 +1890,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'marketing-campaign': {
     opening:
-      'Your child gets real people to notice something real. They pick one kind of person to reach, give it a name, colours and a simple logo, and write one clear message. Then they put it where that person will see it, with a way to tell which sign worked, and count the responses to find out which one actually worked.',
+      'Your child gets real people to notice something real. They pick one kind of person to reach, give it a name, colours and a simple logo, and write one clear message. Then they put it where that person will see it, with a way to tell the signs apart, and count the responses to find out which one actually worked.',
     whatsIncluded: [
       'A 5-step guide from picking who to reach to counting what worked',
       'A worked example that shows why one person beats everyone',
@@ -2231,7 +2231,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
         { skill: 'Critical Thinking', where: 'Asking and then what, day by day, until the real problems show up' },
         { skill: 'Research', where: 'Asking someone who has lived it and finding out what surprised them' },
         { skill: 'Planning', where: 'Working out Day 1, the biggest problems and what to give up' },
-        { skill: 'Science', where: 'Seeing how food, energy and water actually reach a home' },
+        { skill: 'Science', where: 'Working out what a home really runs on, and what runs out first' },
         { skill: 'Communication', where: 'Asking for honest feedback and changing the plan' },
       ],
     },

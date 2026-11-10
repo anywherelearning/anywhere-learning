@@ -219,5 +219,11 @@
     "text": "Done? Tap it on your trail so it shows up in your kid's record.",
     "url": "https://anywherelearning.co/account/home",
     "label": "Open my trail"
-  }
+  },
+  "onTheRoad": [
+    "Write directions from where you're staying to the nearest bakery or shop, then follow them together, word for word.",
+    "Ask a local for directions, with your help, and notice whether they use landmarks, street names or just point.",
+    "Learn the local words for left, right, straight and stop, and guide a family member using only those words."
+  ],
+  "backHome": "Rewrite one set of directions at home in the landmark style you heard on the road, and test it on someone."
 }

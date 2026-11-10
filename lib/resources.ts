@@ -2392,7 +2392,7 @@ const resources: ResourcePage[] = [
         type: 'list',
         ordered: false,
         items: [
-          'Kitchen chemistry: baking, fermenting, freezing, dissolving. Why does bread rise? What happens to the eggs? Our [Kitchen Math & Meal Planning Challenge](/shop/kitchen-math-challenge) bakes this in.',
+          'Kitchen chemistry: baking, fermenting, freezing, dissolving. Why does bread rise? What happens to the eggs? Our [Kitchen Science Lab](/shop/kitchen-science-lab) turns this into a mystery-powder investigation.',
           'Backyard biology and ecology: the same trail walked weekly, a nature journal, seasonal observation. Forest school principles apply at any scale.',
           'Weather, water, and sky: a window thermometer, a homemade rain gauge, mapping shadows across a season.',
           'Backyard experiments with controls: which surface keeps an ice cube longest, which soil grows seedlings fastest. The post on [backyard science experiments](/blog/backyard-science-experiments) collects 15 no-prep ideas.',
@@ -2472,8 +2472,8 @@ const resources: ResourcePage[] = [
         type: 'list',
         ordered: false,
         items: [
-          'Cooking and baking (fractions, ratios, scaling). Our [Kitchen Math Challenge](/shop/kitchen-math-challenge) is built around this.',
-          'Grocery shopping with a real budget. Unit pricing, estimation, percentages. The [Real-Life Budget Challenge](/shop/budget-challenge) is one of our most popular activities for this reason.',
+          'Planning and shopping for real meals (servings, package sizes, cost per plate). Our [Kitchen Math & Meal Planning Challenge](/shop/kitchen-math-challenge) is built around this.',
+          'Planning a real day out on a real budget: real prices, a 10% buffer and a cut list. The [Real-Life Budget Challenge](/shop/budget-challenge) is one of our most popular activities for this reason.',
           'Sports stats: batting averages, win percentages, comparing players over a season. See [Sports Stats Lab](/shop/sports-stats-lab).',
           'Travel and road trips: estimating arrival time, calculating gas cost, currency conversion.',
           'Personal projects with a budget: a birthday party, a small business, a home garden plot.',

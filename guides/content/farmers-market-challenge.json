@@ -333,5 +333,11 @@
     "src": "guides/assets/farmers-market-challenge.jpg",
     "alt": "A girl and a boy walking up to a fruit stand piled with pineapples, bananas and watermelons",
     "caption": "Their daily job in Panama: the fruit run."
-  }
+  },
+  "onTheRoad": [
+    "Learn the local coins and notes first, then let your kid pay for each purchase and count the change in local money.",
+    "Convert three market prices into your home money in your head, using a rounded exchange rate, then check them on a calculator.",
+    "Notice how food is sold here, by the kilo, the pile, the bunch or the piece, and work out what one really costs."
+  ],
+  "backHome": "Price the same three foods at your market at home, and compare them with what they cost on the road in your home money."
 }

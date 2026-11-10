@@ -334,5 +334,11 @@
     "src": "guides/assets/nature-data-tracker.jpg",
     "alt": "Watercolour illustration of a homemade jar rain gauge on a fence post beside a garden thermometer and an open notebook with a hand-drawn line chart",
     "caption": "One jar, one ruler, two weeks of data."
-  }
+  },
+  "onTheRoad": [
+    "Look up the temperature back home each morning, and chart it beside your own reading to see how far apart the two lines run.",
+    "Record the sunset time every evening as you travel, and work out how many minutes the day gains or loses with each move.",
+    "Ask a local, with your help, what the weather usually does this month, then check their answer against a week of your readings."
+  ],
+  "backHome": "Track the same thing at home for a week, and compare its average with the one you recorded on the road."
 }

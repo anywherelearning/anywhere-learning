@@ -329,5 +329,11 @@
   "fromHome": {
     "text": "Before our drive to Orlando, my daughter worked out the trip: she estimated the gas at $39.70. When we filled up, the pump said $42.38. We talked about why. Gas cost a little more that day, maybe daddy drove a bit faster, and we probably did a few more miles than planned. Still, a good estimate.",
     "quotes": []
-  }
+  },
+  "onTheRoad": [
+    "Read the fuel price at a local station and convert it into your home money and units, then compare it with home.",
+    "Ride one leg on local transport, log every wait and transfer, and compare the real time with what the timetable promised.",
+    "Read the speed limit signs here, in kilometres or miles, and redo your driving time with the local numbers."
+  ],
+  "backHome": "Plan a day trip from home with the same maths, and compare what an hour of driving costs there and here."
 }

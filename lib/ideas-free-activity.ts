@@ -39,11 +39,11 @@ const CATEGORY_TO_ACTIVITY: Record<string, string> = {
 /** One warm line per activity, describing what the family actually does. */
 const BLURBS: Record<string, string> = {
   'nature-walk-task-cards':
-    'Thirty task cards that turn any ordinary walk into a proper expedition. Pull one, hand it over, follow where it goes.',
+    'Sixty-six read-aloud cards that turn any ordinary walk into a proper expedition. Read one out, let your kid do the noticing, and follow where it goes.',
   'kitchen-science-lab':
-    'Real experiments using what is already in your cupboards. Your kid runs the test, predicts the result, and figures out why it happened.',
+    'Five white powders that look the same, one mystery cup and a colour-changing juice made from red cabbage. Your kid rules suspects out, test by test, until only one fits.',
   'body-owners-manual':
-    'Your kid maps how their own body actually works, from what fuels it to why sleep matters, and builds a manual for running it well.',
+    'Your kid finds their pulse, times how fast their heart comes back, tests their senses and reaction time, then writes it all into an owner\'s manual with their real numbers.',
   'rube-goldberg-machine':
     'Build a gloriously overcomplicated machine to do one simple job. Every failed attempt teaches more than the working one.',
   'board-game-studio':

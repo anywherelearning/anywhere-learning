@@ -3,6 +3,7 @@
   "category": "Outdoor Learning",
   "title": "Outdoor STEM Challenge Cards",
   "tagline": "24 engineering challenges · Design · Testing",
+  "compactCards": true,
   "ages": "Ages 6 to 14",
   "goal": "24 hands-on building and problem-solving challenges you do outside with sticks, rocks, leaves and whatever else is lying around. Your kid plans, builds, tests and improves, just like a real engineer: a shelter that blocks the wind, a bridge that holds five stones, a raft that carries pebbles. No kits, just a few kitchen extras, and the first design is supposed to fail.",
   "need": [

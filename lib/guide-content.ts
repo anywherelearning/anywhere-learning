@@ -26,6 +26,7 @@ export interface GuideCard {
   t: string;
   d?: string;
   art?: string;
+  swatch?: string;
 }
 
 export interface GuideContent {

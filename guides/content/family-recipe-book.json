@@ -207,7 +207,7 @@
     "extensions": [
       "Keep adding recipes and make a second volume",
       "Cook a whole family meal from the book, start to finish",
-      "Make a trip edition: one recipe from every place you've been",
+      "Make a holiday edition with the dishes your family only cooks once a year",
       "Interview someone from a different generation or background about their food",
       "Photograph each dish and make a photo cookbook"
     ]
@@ -230,5 +230,11 @@
     "src": "guides/assets/family-recipe-book.jpg",
     "alt": "A girl holding up a spoonful of her chili over the pot",
     "caption": "My daughter's chili. It's her dish now."
-  }
+  },
+  "onTheRoad": [
+    "Ask a cook where you're staying, with your help, to show you one local dish, and write down every step.",
+    "Buy the ingredients for one local recipe at the market, and find out what each one is called here.",
+    "Cook a recipe in your rental kitchen with whatever pans and measures it has, and rewrite the amounts to match."
+  ],
+  "backHome": "Cook one dish from the trip for the family at home, and add its card to the book with the story behind it."
 }

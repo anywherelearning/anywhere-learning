@@ -332,5 +332,11 @@
   "fromHome": {
     "text": "My daughter invented a fantastic, magical world inspired by her favourite books, filled with mystical creatures with superpowers, mushroom houses, a tree of life, and magic spells. Then she recorded her story.",
     "quotes": []
-  }
+  },
+  "onTheRoad": [
+    "Find out what this place was called long ago, with your help, and invent the story of how it got its name.",
+    "Ask a local, with your help, for a legend about a mountain, a lake or a building here, and retell it at dinner.",
+    "Borrow one real custom you see here, like a greeting, a rest time or a festival, and give it a reason in your world."
+  ],
+  "backHome": "Map your own town like a traveller would, and explain to the family why each place is where it is."
 }

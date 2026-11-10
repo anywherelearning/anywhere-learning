@@ -513,10 +513,10 @@ export default async function HomePage() {
                 </div>
                 <div className={`absolute right-0 top-0 w-[70%] rotate-[2deg] bg-white p-1.5 ${PAPER_SHADOW}`}>
                   <Tape className="left-1/2 -translate-x-1/2 -rotate-2" />
-                  <div className="relative aspect-[707/1000] overflow-hidden">
+                  <div className="relative aspect-[900/1165] overflow-hidden">
                     <Image
-                      src="/images/home/party-planner-step3.jpg"
-                      alt="Step 3 of Party Planner Math: the child's job, the parent's job, prompts to ask, and three levels"
+                      src="/images/home/party-planner-step3-v2.jpg"
+                      alt="Step 3 of Party Planner Math: what your kid does, what you do, questions to ask, and three levels"
                       fill
                       sizes="(max-width: 640px) 70vw, 320px"
                       className="object-cover"

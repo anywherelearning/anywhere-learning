@@ -85,13 +85,13 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'emergency-ready': 'Half-Day',
   'everyday-redesign': 'Half-Day',
   'fix-it-detective': 'Half-Day',
-  'neighbourhood-problem-spotter': 'Half-Day',
+  'neighbourhood-problem-spotter': 'Project',
   'outdoor-survival-planner': 'Half-Day',
-  'pack-like-a-pro': 'Quick',
+  'pack-like-a-pro': 'Project',
   'scavenger-hunt-designer': 'Project',
   'swap-day-challenge': 'Project',
   'what-if-scenario-lab': 'Half-Day',
-  'decision-lab': 'Quick',
+  'decision-lab': 'Project',
 
   // Communication & Writing
   'write-like-a-pro': 'Half-Day',
@@ -113,10 +113,10 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'customer-discovery': 'Project',
   'investor-pitch': 'Half-Day',
   'marketing-campaign': 'Half-Day',
-  'pricing-experiment': 'Half-Day',
+  'pricing-experiment': 'Project',
   'product-design-lab': 'Project',
   'supply-chain-detective': 'Half-Day',
-  'shark-tank-pitch': 'Half-Day',
+  'shark-tank-pitch': 'Project',
 
   // Worldschooling
   'cultural-celebration-journal': 'Project',

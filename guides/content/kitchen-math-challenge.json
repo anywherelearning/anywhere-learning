@@ -355,5 +355,11 @@
     "alt": "A girl in a store aisle reading her handwritten shopping list, with a basket of party food at her feet",
     "caption": "Shopping from her own list for a board game afternoon.",
     "tall": true
-  }
+  },
+  "onTheRoad": [
+    "Plan meals around packages you can finish before you move on, since half a bag of rice can't come in the suitcase.",
+    "Price your list at a local supermarket, where the package sizes, brands and units may be nothing like the ones at home.",
+    "Ask your host or a shopkeeper, with your help, what goes into one local dish, then cook it and find the cost per serving."
+  ],
+  "backHome": "Cook that local dish again at home, and compare what one serving costs with ingredients from your own store."
 }

@@ -220,5 +220,11 @@
     "src": "guides/assets/camouflage-challenge.jpg",
     "alt": "A brown frog on a brown rock beside a stream, almost invisible",
     "caption": "Brown frog, brown rock: the colour and texture match. That's camouflage."
-  }
+  },
+  "onTheRoad": [
+    "Hide one object against the ground where you're staying, like pale sand, red dirt or dark volcanic rock, and time the search.",
+    "Hunt for a local animal that matches this landscape, like a lizard on a stone wall or a crab on wet sand.",
+    "Ask a local guide or ranger, with your help, which animal here is hardest to spot, then try to find one together."
+  ],
+  "backHome": "Hide the same object in your own yard or park, and compare its time with the one you got on the road."
 }

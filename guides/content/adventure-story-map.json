@@ -197,7 +197,7 @@
     "celebrate": "Read back the line built from something you both noticed on the walk, and add: 'I remember that exact sound. You put me right back there.'",
     "extensions": [
       "Record it as an audiobook, reading every scene out loud",
-      "Make a story map for a place from a trip",
+      "Make a story map for a book you love, and add the scenes the author skipped",
       "Write the same adventure from another character's point of view",
       "Illustrate the key scenes at their real spots on the map",
       "Write a sequel in the same place"
@@ -225,5 +225,11 @@
   "fromHome": {
     "text": "Last year in Florida, my kids each set a story in the places around us: one in a mysterious old house in the Keys, one about baby sea turtles hatching on the beach. Once the stories were written, they recorded them as audiobooks, reading every line themselves with pictures for each scene.",
     "quotes": []
-  }
+  },
+  "onTheRoad": [
+    "Ask a local, with your help, for a legend or old story about this place, and build the adventure around it.",
+    "Start from the free map at the tourist office or your rental, then redraw it with your own story spots marked.",
+    "Collect the sounds, smells and words you only hear here, like a market call or a local greeting, for the story."
+  ],
+  "backHome": "Write a sequel where the same character turns up on your own street, carrying one thing from the trip."
 }

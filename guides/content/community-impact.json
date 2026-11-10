@@ -309,7 +309,7 @@
     "text": "You'll see it in small moments after this. If they notice who's struggling with the door, or say 'We could do something about that', they've started to see themselves as someone who can.",
     "celebrate": "Stand back and look at it together, and say: 'That's better now because of you.'",
     "extensions": [
-      "Do a project somewhere you're visiting",
+      "Run the same project again in six months, and see what changed",
       "Write a how-to so another kid could do the same thing",
       "Bring another family in on it",
       "Pick a bigger problem and find the piece you can do"
@@ -336,5 +336,11 @@
   "fromHome": {
     "text": "At Loggerhead Park in Florida, we joined a program to clean the beach and help the sea turtles. More than 12,000 loggerhead nests were counted along that stretch of coast in a single season. We each took a bucket and walked the sand.",
     "quotes": []
-  }
+  },
+  "onTheRoad": [
+    "With your help, ask your host, campground manager or a neighbour where you're staying what would really help them.",
+    "Find a cleanup or community event that locals already run, join in for an hour, and count what changed.",
+    "Leave something useful for the next family who stays here, like a map of the best walks or nearby essentials."
+  ],
+  "backHome": "Bring home one way you saw people help each other on the trip, and try it with a group you belong to."
 }

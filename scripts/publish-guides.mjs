@@ -46,7 +46,7 @@ for (const slug of slugs) {
 
   for (const flag of [[], ['--preview']]) {
     const out = run('node', ['guides/render/render.mjs', `guides/content/${slug}.json`, ...flag]);
-    if (/OVERFLOW/.test(out)) console.warn(`${slug}: overflow ${flag.join('')}\n${out}`);
+    if (/OVERFLOW|CLASH/.test(out)) console.warn(`${slug}: overflow ${flag.join('')}\n${out}`);
   }
   const files = {
     member: [`notes/guides/${slug}-color.pdf`, memberName],

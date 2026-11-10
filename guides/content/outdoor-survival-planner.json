@@ -336,5 +336,11 @@
   "fromHome": {
     "text": "Before we head into the mountains, we go over the plan with the kids: if we get separated, stop, stay put and blow the whistle. They've heard it enough times to say it back to us.",
     "quotes": []
-  }
+  },
+  "onTheRoad": [
+    "Check tonight's sunset time and the local weather pattern before a hike, and see how they change your turn-back rules.",
+    "Read the trailhead signs and visitor centre notices together, and list the dangers here that your usual trails don't have.",
+    "Rework the priorities for this climate, like water first in desert heat or staying dry in the tropics, and explain why."
+  ],
+  "backHome": "Take one habit from the trip, like checking sunset time or packing extra water, and add it to your home Trip plan."
 }

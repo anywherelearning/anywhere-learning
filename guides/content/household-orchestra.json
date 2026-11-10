@@ -320,5 +320,11 @@
     "src": "guides/assets/household-orchestra.jpg",
     "alt": "Watercolour illustration of five homemade instruments on a kitchen rug: a pot and wooden spoon, a jar of dried beans, a box with rubber bands, a cheese grater and fork, and water glasses",
     "caption": "Five objects, one orchestra."
-  }
+  },
+  "onTheRoad": [
+    "Listen to local music in a square, market or café and clap along until you find its steady beat.",
+    "Pick your five instruments from where you're staying or a local market, like a gourd, a tin or a clay cup.",
+    "Ask a street musician, with your help, what their instrument is called and how it makes a high or low sound."
+  ],
+  "backHome": "Rebuild one rhythm you heard on the trip with your home instruments, and teach it to the family as a piece."
 }

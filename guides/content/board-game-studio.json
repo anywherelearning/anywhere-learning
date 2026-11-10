@@ -331,5 +331,11 @@
     "quotes": [
       "Change one rule at a time. If you change five rules at once and the game gets better, you will not know which change did it."
     ]
-  }
+  },
+  "onTheRoad": [
+    "Watch a game being played in a café, plaza or park, and work out the rules just from watching a few turns.",
+    "Ask a host or shopkeeper, with your help, which game families here play at home, then learn it together that evening.",
+    "Build a version of your game on the place you're in, using local coins as tokens and real streets or stops as spaces."
+  ],
+  "backHome": "Teach the family the game you learned on the trip, then borrow one of its rules for your own Version 2."
 }

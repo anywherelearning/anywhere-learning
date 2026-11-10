@@ -221,7 +221,7 @@
     "extensions": [
       "Keep the column going: one new review after every outing",
       "Review five things of the same kind, like five parks, and make a ranking",
-      "Score your next trip or holiday out of 100, by category",
+      "Score a family movie night out of 100, by category",
       "Review the same thing as a sibling and compare your scores",
       "Read a real newspaper review together and find its opinion, reason and proof"
     ]
@@ -244,5 +244,11 @@
     "src": "guides/assets/my-review-column.jpg",
     "alt": "A girl with a fork raised over a chocolate crêpe at a café in El Zonte, El Salvador",
     "caption": "El Zonte, El Salvador: the restaurant we ranked number one."
-  }
+  },
+  "onTheRoad": [
+    "Review a local street food or snack you've never tried, and say who back home would love it.",
+    "Compare your review of a place with what online reviews say about it, and decide which details they missed.",
+    "Review a bus, train or ferry ride for comfort, price and views, and say whether you'd take it again."
+  ],
+  "backHome": "Review the same kind of thing at home, like a playground or a bakery, and compare it with the one from the road."
 }

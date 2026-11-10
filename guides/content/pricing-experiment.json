@@ -312,7 +312,7 @@
       "Test a sale price, like half off in the last hour",
       "Try a pay-what-you-want hour and compare it with your fixed price",
       "Price a service, like dog walking, per job and per hour, and test both",
-      "Ask a shop owner how they decide their prices"
+      "Price a bundle and a single side by side for a whole session, and see which sells more"
     ]
   },
   "signs": [

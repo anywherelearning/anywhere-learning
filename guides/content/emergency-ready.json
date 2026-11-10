@@ -336,5 +336,11 @@
     "src": "guides/assets/emergency-ready.jpg",
     "alt": "Watercolour of a family emergency kit on a kitchen table: a backpack, water bottles, a flashlight, a blanket, a first aid kit, canned food, a battery pack and a hand-drawn floor plan with arrows to a meeting-spot tree",
     "caption": "Two ways out, one meeting spot, three days covered."
-  }
+  },
+  "onTheRoad": [
+    "Find the local emergency number and write it on a card with the address where you're staying, in the local language too.",
+    "Look for warning signs and evacuation arrows around town, and work out which emergencies this place plans for that home doesn't.",
+    "With your help, ask your host what usually goes wrong here, like power cuts or storms, and what they keep ready."
+  ],
+  "backHome": "Compare the hazards you learned about on the trip with the ones at home, and add anything missing to your three-day kit."
 }

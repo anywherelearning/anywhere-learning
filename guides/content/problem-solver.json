@@ -141,7 +141,7 @@
     {
       "title": "Pick one and build it",
       "why": "The best idea is the one you'll still do when you're tired.",
-      "kid": "Your kid runs their circled ideas through Tired-day tests card and picks one. Then they fill in My fix at the end of the guide and build it for real: a hook, a label, a box, a checklist, an alarm.",
+      "kid": "Your kid runs their circled ideas through the Tired-day tests card and picks one. Then they fill in My fix at the end of the guide and build it for real: a hook, a label, a box, a checklist, an alarm.",
       "you": "Steer them toward simple, and help with anything that needs a drill. Otherwise let it be a bit wonky. Help them pick something to count.",
       "ask": [
         "What could you build in ten minutes?",
@@ -336,5 +336,11 @@
     "src": "guides/assets/problem-solver.jpg",
     "alt": "Watercolour of a homemade rope and pulley basket carrying folded laundry and a stuffed toy up a staircase, with a squashed cardboard first attempt on the bottom step",
     "caption": "Will it work on a tired day?"
-  }
+  },
+  "onTheRoad": [
+    "Pick a problem that keeps happening on this trip, like a charger left at every stay, and build a fix that travels.",
+    "Ask a local, with your help, how they handle something that keeps bugging your family here, like the heat or the mosquitoes.",
+    "Notice which fix from home stops working here, like a morning checklist when every day starts somewhere new, and rebuild it for the road."
+  ],
+  "backHome": "Bring home one way people solved a problem where you were, and try it on something that bugs your family."
 }

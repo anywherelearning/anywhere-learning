@@ -146,7 +146,6 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Three teaspoons make a tablespoon. Sixteen tablespoons make a cup. Have them work it out the first time, then refer to it whenever a recipe asks for an awkward amount. Unit conversion is a hidden math superpower.' },
       { type: 'heading', level: 3, text: '10. Read time on a timer' },
       { type: 'paragraph', text: 'Set a 22-minute timer. How will they know when it is halfway? When there is only five minutes left? Reading time, calculating elapsed time, and predicting when something will be done are all real math, dressed up as cooking.' },
-      { type: 'product-callout', slug: 'kitchen-math-challenge' },
       { type: 'heading', level: 2, text: 'Geometry and spatial reasoning (ages 7 to 11)' },
       { type: 'paragraph', text: 'Cutting and arranging food teaches shapes, angles, fractions of a whole, and packing problems. The kitchen is a geometry classroom that smells like garlic.' },
       { type: 'heading', level: 3, text: '11. Slice into equal parts' },
@@ -172,6 +171,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Two activities that pull every previous skill together. These are the ones that make kids feel competent and adults feel a little redundant.' },
       { type: 'heading', level: 3, text: '19. Plan a meal on a budget' },
       { type: 'paragraph', text: 'Hand them $20, a meal to plan, and the grocery flyer. Total it before going. Adjust if it is over. This is [real-world money math](/blog/teach-kids-about-money), the kind no worksheet can replicate.' },
+      { type: 'product-callout', slug: 'kitchen-math-challenge' },
       { type: 'heading', level: 3, text: '20. Triple a recipe for a gathering' },
       { type: 'paragraph', text: 'A recipe that serves four, scaled up for twelve. Every measurement triples. Every cook time may not. They will have to think about pan size, oven space, and how cooking time changes with volume. Genuine applied math.' },
       { type: 'tip', title: 'Quick Tip', text: 'Start with one meal per week as your "math meal." Let the kids choose the recipe, do the shopping list, and lead the cooking. Keep it low-pressure. The goal is not a perfect dish; it is the math practice that comes from doing it for real.' },
@@ -7341,7 +7341,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Doing it for them. Judges spot a parent-made poster across the room. Crooked letters with a kid who can defend the project beat perfect typography with a kid who shrugs.' },
       { type: 'paragraph', text: 'Starting the night before. Most of these projects need a week. The biology ones need three. Last-minute forces a kid to fake data, and faking data is the only thing worse than a volcano.' },
       { type: 'paragraph', text: 'No real variable. "Will my plant grow if I water it?" is not a project, it is a chore. You have to change one thing on purpose so you can see the effect.' },
-      { type: 'cta', text: 'Want a structured outdoor project pack your kid can run with minimal help? Our Outdoor STEM Challenges guide has 30 testable activities ready to go.', href: '/shop/outdoor-stem-challenges', label: 'Get Outdoor STEM Challenges' },
+      { type: 'cta', text: 'Want a structured outdoor project your kid can test and improve, with you alongside? Our Outdoor STEM Challenge Cards have 24 build-and-test challenges ready to go.', href: '/shop/outdoor-stem-challenges', label: 'Get Outdoor STEM Challenge Cards' },
       { type: 'faq', items: [
         { question: 'What are good science fair project ideas for 4th and 5th grade?', answer: 'At ages 9 to 11, the best projects are physical and visible. Parachute tests, paper plane variables, insulation comparisons, the Mpemba effect, and seed germination conditions all work well. Pick something they can measure with a ruler, a timer, or a thermometer.' },
         { question: 'What are good science fair project ideas for middle school?', answer: 'Middle schoolers can handle more variables and longer timelines. Light pollution counts, pollinator counts, reaction-time studies, font readability, micro-climate mapping, and pH testing stretch into more sophisticated analysis. Aim for at least 10 data points so they can make a real graph.' },
@@ -7692,7 +7692,7 @@ const posts: BlogPost[] = [
 
       { type: 'pull-quote', text: 'A kid who can be bored without panicking has a superpower that most adults have lost.' },
 
-      { type: 'product-callout', slug: 'invent-a-sport', context: 'When boredom needs a nudge, not a rescue. This is a kid-led project that turns an empty afternoon into an invented game with its own rules. You set it up once and step back.', pinned: true },
+      { type: 'product-callout', slug: 'invent-a-sport', context: 'When boredom needs a nudge, not a rescue. Your kid invents a game nobody has played before, with its own field, rules and scoring, and you play it with them and react honestly when a rule breaks.', pinned: true },
 
       { type: 'heading', level: 2, text: 'What healthy boredom looks like by age' },
       { type: 'paragraph', text: 'Tolerating boredom is a skill, which means it develops in stages. What you can expect, and how much you step back, changes as kids grow.' },
@@ -8859,7 +8859,7 @@ const posts: BlogPost[] = [
 
       { type: 'paragraph', text: 'Somewhere in every road trip there is a kid asking how much longer, and a parent doing arithmetic in their head to answer. Distance left, speed, the stop for gas, whether you will make it before dark. That arithmetic is the whole math lesson. The only change worth making is handing it to the kid.' },
       { type: 'paragraph', text: 'Road trip math is my favourite kind of [real-world math](/blog/real-world-math-activities) because nothing about it has to be invented. The trip is real, the gas price is real, the motel costs what it costs, and if the numbers are wrong you find out at the pump. A kid who plans one real trip does more multi-step arithmetic with decimals, rates, and percentages than a month of practice pages, and remembers all of it, because they were in the car when the answer came true.' },
-      { type: 'paragraph', text: 'This post has two halves. The first is the big project: your child plans the trip before you leave. The second is the in-the-car half, nine games sorted by age for when the planning is done and the highway is long, and every one of them has something to win. If you want the planning half laid out step by step with the sheets already made, that is the [Road Trip Calculator](/shop/road-trip-calculator) in the library. Everything below works without it.' },
+      { type: 'paragraph', text: 'This post has two halves. The first is the big project: your child plans the trip before you leave. The second is the in-the-car half, nine games sorted by age for when the planning is done and the highway is long, and every one of them has something to win. If you want the planning half laid out step by step, with the numbers you need and twist cards to test the plan, that is the [Road Trip Calculator](/shop/road-trip-calculator) in the library. Everything below works without it.' },
 
       { type: 'heading', level: 2, text: 'Why a road trip is the best math project you will run this year' },
       { type: 'paragraph', text: 'Most math practice has a right answer that someone else already knows. Trip math has a right answer that nobody knows yet, and the family needs it. That changes how a kid works. They check. They redo the multiplication because a wrong fuel estimate means an awkward moment at a gas station three hours from home. They argue for the shorter route and then discover it is slower. They see a percentage go up on a real odometer.' },
@@ -8899,7 +8899,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Finally, the whole trip in one table. Categories work best: fuel, food, sleeping, doing things, and the everything-else line. For our example day: fuel $60, two meals out for four at about $12 a head is $96, snacks $20, one night in a motel $130, one activity for the family $60. That is $366. Then teach the single most useful budgeting habit there is: add a contingency. Ten percent of $366 is about $37, so the trip budget is $400. Ask them why the cushion matters, and let them find out on the trip when the motel charges for parking.' },
       { type: 'tip', title: 'Make them the treasurer', text: 'On the trip, have your child keep the running total. Every receipt goes to them, they subtract it from the budget, and at each stop they report the number left. A kid tracking $400 down to $38 learns more about money than any allowance conversation.' },
 
-      { type: 'product-callout', slug: 'road-trip-calculator', context: 'If you want all five steps laid out with the distance, fuel, time, route comparison, and budget sheets ready to fill in, the Road Trip Calculator does exactly that for ages 8 to 14. Open it the night before and hand it over.' },
+      { type: 'product-callout', slug: 'road-trip-calculator', context: 'If you want all five steps laid out, from mapping the route to the driving time, the fuel and the whole budget, plus twist cards to test the plan, the Road Trip Calculator does exactly that for ages 8 to 14. Open it the night before and follow along together.' },
 
       { type: 'heading', level: 2, text: 'Road trip math games that are actually games' },
       { type: 'paragraph', text: 'Once the planning is done, the drive itself can carry the math, but only if it feels like a game and not a quiz. The difference is a guess before the reveal, something to win, or someone to beat. Every game below has one of those built in. Pick the age band, play a round or two, and quit while they are still asking for another. Prizes are optional: points, a running tally to the next stop, or nothing at all. In our family we say the prize is the pride, and that has always been enough.' },
@@ -9058,7 +9058,7 @@ const posts: BlogPost[] = [
 
       { type: 'heading', level: 2, text: 'Take it further: a real micro-business' },
       { type: 'paragraph', text: 'For the kid who catches fire, do not stop at the pretend pitch. Let them actually build the thing. A real lemonade stand, a small craft business, a service for neighbors. Turning a Shark Tank pitch into an actual [micro-business](/blog/micro-business) is where the biggest learning lives, because now the numbers are real and the customers are real. Some of the most capable teenagers you will meet started exactly here. If they need a starting point, the [kid business ideas checklist](/ideas/kid-business-ideas) has twenty real ones sorted by age, each with the number to work out first.' },
-      { type: 'paragraph', text: 'Each stage of a real business has its own project in the library. [Complaint to Product](/shop/complaint-to-product) turns complaints from real people into a prototype they can try, [Pricing Experiment](/shop/pricing-experiment) tests what customers will actually pay, [Supply Chain Detective](/shop/supply-chain-detective) traces a real product from the cupboard back to where it started, and [Trade It Up](/shop/trade-it-up) starts the whole thing from one small object and a few good trades.' },
+      { type: 'paragraph', text: 'Each stage of a real business has its own project in the library. [Complaint to Product](/shop/complaint-to-product) turns complaints from real people into a prototype they can try, [Pricing Experiment](/shop/pricing-experiment) tests what customers will actually pay, [Marketing Campaign Creator](/shop/marketing-campaign) gets real people to notice it and counts what worked, [Supply Chain Detective](/shop/supply-chain-detective) traces a real product from the cupboard back to where it started, and [Trade It Up](/shop/trade-it-up) starts the whole thing from one small object and a few good trades.' },
 
       { type: 'cta', text: 'Want more real-world projects that teach the skills school skips, with almost no prep? Our free guide is full of hands-on activities you can run this week, at home or in a classroom.', href: '/free-guide', label: 'Get the Free Guide' },
 
@@ -9149,7 +9149,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'image', src: '/images/first-grade-garden-carrot.jpeg', alt: 'Grinning kid holding up a freshly pulled carrot from the backyard garden on a sunny summer day', caption: 'Growing a garden is science, math, patience, and pride all at once. And then you eat the results.' },
       { type: 'paragraph', text: 'If you want a deeper list of specific activities, [real-world math activities that replace worksheets](/blog/real-world-math-activities) has 20+ ideas organized by skill. And our [kitchen learning lab](/blog/kitchen-learning-lab) is built around exactly this approach.' },
-      { type: 'product-callout', slug: 'kitchen-math-challenge' },
+      { type: 'product-callout', slug: 'garden-plot-planner' },
 
       { type: 'heading', level: 2, text: 'The subjects you are probably overthinking' },
       { type: 'paragraph', text: 'First-grade parents tend to worry about three things that genuinely do not need formal instruction at age 6:' },
@@ -9224,7 +9224,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['homeschool-kindergarten-without-curriculum', 'sample-homeschool-schedules', 'real-world-math-activities', 'curriculum-guilt-permission-slip', 'five-stages-deschooling'],
-    recommendedProduct: 'kitchen-math-challenge',
+    recommendedProduct: 'garden-plot-planner',
   },
 
   // ── Build a Museum Exhibit at Home ──
@@ -9273,7 +9273,8 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'The logistics are the point. Someone will not show up. The paint will be the wrong colour. The library will have double-booked the room. Let it be imperfect and finished, which is a skill most adults are still working on.' },
       { type: 'heading', level: 3, text: 'Step 7: Go back and look' },
       { type: 'paragraph', text: 'A week later, stand in the same spot. Is it different? Count again. Take the after photo to go with the before. Tell the people who helped what happened, and ask your kid what version 2 would be. That last question is where the learning gets filed.' },
-      { type: 'product-callout', slug: 'community-impact', context: 'If you want the steps laid out, from asking people what would help to going back to see if it worked, our Community Impact guide is this project, written for the parent to run alongside the kid.' },
+      { type: 'product-callout', slug: 'community-impact', context: 'If you would rather start with people than a place, our Community Impact guide has your kid pick a group they belong to, ask what would really help, do the smallest useful thing and go back to check it worked.' },
+      { type: 'product-callout', slug: 'neighbourhood-problem-spotter', context: 'If the walk-the-block version is the one that clicks, Neighbourhood Problem Spotter lays out those steps: notice, count, find the cause, design the simplest fix and pitch it to whoever can say yes.' },
 
       { type: 'heading', level: 2, text: '8 community impact projects a family can actually run' },
       { type: 'paragraph', text: 'Each one names the age it fits best and the school subjects hiding inside it. Pick the one closest to something your kid has already complained about.' },
@@ -9565,7 +9566,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Last piece: work backward from when guests arrive. If the party starts at 2:00, the cupcakes need 25 minutes in the oven and an hour to cool before icing, and icing 18 cupcakes takes half an hour, when does the baking have to start? That is elapsed time, the kind that matters.' },
       { type: 'paragraph', text: 'Then run the party. Afterwards, sit down with the receipts and compare the plan with what was actually spent and eaten. How close were the estimates? Which number was furthest off? That comparison is where estimating gets better, and the next party’s numbers will be closer.' },
 
-      { type: 'product-callout', slug: 'party-planner-math', context: 'If you want it laid out for your kid, the Party Planner Math guide walks them from guest list to final cost: food quantities, supply price comparisons, a timeline and a budget tracker.' },
+      { type: 'product-callout', slug: 'party-planner-math', context: 'If you want it laid out for your kid, the Party Planner Math guide walks them from guest list to final cost: a budget split, food per guest rounded up to whole packs, a timeline counted back from the start, and the real cost per guest.' },
 
       { type: 'heading', level: 2, text: 'Adapting it by age' },
       { type: 'heading', level: 3, text: 'Ages 6 to 8' },
@@ -9742,7 +9743,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '5. Cardboard snowshoes' },
       { type: 'paragraph', text: 'Have your kid walk across deep snow in boots and measure how far they sink. Then challenge them to build something that keeps them on top: cardboard rectangles, a baking tray, branches tied with string, an old tennis racket. Strap each design on, take five steps, and measure how deep the footprints are.' },
       { type: 'paragraph', text: 'What they will find is that bigger is better, up to the point where it is too clumsy to walk in. A wider footprint spreads the same body weight over more snow, so each part of the snow holds less, and you sink less. That is pressure, and it is the same reason a moose sinks and a snowshoe hare doesn’t. Older kids can trace each design on graph paper, count the squares to find the area, and graph area against how deep they sank.' },
-      { type: 'product-callout', slug: 'outdoor-stem-challenges', pinned: true, context: 'If your kid loves building things that have to pass a real test, Outdoor STEM Challenge Cards has 20 more: bridges, shelters, boats and towers built from what you find outside, each with a test to pass.' },
+      { type: 'product-callout', slug: 'outdoor-stem-challenges', pinned: true, context: 'If your kid loves building things that have to pass a real test, Outdoor STEM Challenge Cards has 24 more: bridges, shelters, boats and towers built from what you find outside, each with a test to pass.' },
 
       { type: 'heading', level: 3, text: '6. The sled lab' },
       { type: 'paragraph', text: 'Which slides fastest: a plastic sled, a piece of cardboard, a garbage bag, a baking tray? Pick one short hill, mark a start line and a finish line, and time each one three times from the same spot with the same rider. Average the three runs. Kids will want to push off harder for their favourite, so the rule is no pushing, just let go.' },
@@ -9752,7 +9753,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'On a very cold day, take two thermometers outside. Leave one in the air, in the shade. Push the other one down to the bottom of a deep snowbank, right against the ground, and leave it for fifteen minutes. Compare the two. Under 15 to 20 centimetres (6 to 8 inches) of snow or more, the ground stays close to 0°C, even when the air above is far colder.' },
       { type: 'paragraph', text: 'That pocket under the snow is where mice, voles and shrews spend the winter, running through tunnels that are much warmer than the air above them. Ask your kid: why does snow keep things warm when it is made of frozen water? (It is mostly trapped air, the same reason a puffy coat works.) Then build a small snow shelter for a toy with a thermometer inside, and see if they can beat the outside temperature.' },
       { type: 'image', src: '/images/winter-stem-snow-window.jpeg', alt: 'A smiling girl in a flowered hat and blue mittens peeking through a window cut into a thick snow wall', caption: 'A snow wall is mostly trapped air, which is why it keeps the cold out.' },
-      { type: 'product-callout', slug: 'survival-base', pinned: true, context: 'For kids who want to design a whole shelter, Build a Survival Base has them pick a harsh place on Earth, from the Arctic to the desert, research what they would be up against, and plan and build a base to survive it.' },
+      { type: 'product-callout', slug: 'survival-base', pinned: true, context: 'For kids who want to design a whole shelter, Build a Survival Base has them pick an expedition, from the Arctic to an alien planet, map its dangers, build a base where every zone answers one, then survive a surprise scenario.' },
 
       { type: 'heading', level: 3, text: '8. Ice block engineering' },
       { type: 'paragraph', text: 'For a stretch of days below freezing, fill milk cartons, yogurt tubs and ice cube trays with water and leave them outside. Add food colouring if you like. Once you have a stack of blocks, the challenge is to build the tallest tower or a bridge between two snowbanks. Kids figure out that a little slushy water poured into the joints freezes and acts like glue.' },
@@ -9869,7 +9870,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'A real emergency shelter is small and quick, not a fort. The idea is to get off the ground, out of the wind and wrapped in something that traps air. Leaves and dry pine needles are great insulation because they’re mostly trapped air, which is why a thick pile of them is warmer than it looks.' },
       { type: 'paragraph', text: 'Turn it into an experiment before you build. Fill two jars or bottles with warm tap water and check the temperature of each. Bury one in a big pile of dry leaves and leave the other on bare ground. After 30 minutes, check both again. Your kid predicts first which one will lose more heat and by how much. Then build a lean-to: a long branch propped against a tree or a fallen log, with shorter sticks leaned along one side and piled thick with leaves. My son built one with a friend in the woods near our house, and it’s a great first build because the materials are lying right there.' },
       { type: 'image', src: '/images/outdoor-survival-lean-to.jpeg', alt: 'A lean-to shelter made of long sticks propped against a tall tree in a forest, a child standing beside it', caption: 'My son’s stick shelter in the woods near our house. Long branches against a tree, and the forest floor supplies the rest.' },
-      { type: 'product-callout', slug: 'survival-base', pinned: true, context: 'For kids who want to go bigger, Build a Survival Base has them pick a harsh place on Earth, research what they would be up against, and design and build a base that could survive it.' },
+      { type: 'product-callout', slug: 'survival-base', pinned: true, context: 'For kids who want to go bigger, Build a Survival Base has them pick an expedition, map its dangers, and build a base where every zone answers one, then upgrade it when a surprise hits.' },
 
       { type: 'heading', level: 3, text: '6. Find north without a compass' },
       { type: 'paragraph', text: 'On a sunny day, push a straight stick into flat ground and put a small stone at the tip of its shadow. Wait 15 minutes and put a second stone at the new tip. The shadow moves the opposite way to the sun, so the first stone is west and the second is east, anywhere on Earth. Stand with the first stone on your left and the second on your right, and you’re facing roughly north.' },
@@ -10039,7 +10040,7 @@ const posts: BlogPost[] = [
     heroImageAlt: 'A boy in glasses raising a red pencil as he makes his point at the dining table while his dad smiles and listens, written arguments on the table between them',
     heroImageAspect: '4 / 3',
     content: [
-      { type: 'summary', text: 'A family debate night is a set time when kids and parents each argue their own opinion on a question in turns: a few minutes to write down reasons, an opening statement, a rebuttal that answers what the others actually said, and a closing. Then the family talks through which arguments were strongest, with no judge and often no winner. It builds persuasive speaking, listening and writing in one sitting, and it works from about age 6 with simple topics. The best topics are the ones where the answer changes something real in your house.' },
+      { type: 'summary', text: 'A family debate night is a set time when kids and parents each argue their own opinion on a question in turns: a few minutes to write down reasons, an opening statement, a rebuttal that answers what the others actually said, and a closing. Then a judge, or the whole family, talks through which arguments were strongest; the reasons matter more than the winner. It builds persuasive speaking, listening and writing in one sitting, and it works from about age 6 with simple topics. The best topics are the ones where the answer changes something real in your house.' },
 
       { type: 'paragraph', text: 'Kids argue all day anyway. About bedtime, about whose turn it is, about why they should get to stay up for the end of the movie. Most of it is volume. Whoever says it louder, longer, or with the saddest face usually wins.' },
       { type: 'paragraph', text: 'A family debate night takes that energy and gives it rules. Everyone gets a turn, a time limit, and reasons instead of whining. Same kids, same opinions, but now they have to build a case, listen to everyone else’s, and answer them. That is persuasive writing, public speaking and critical thinking, and nobody has to call it a lesson.' },
@@ -10145,7 +10146,7 @@ const posts: BlogPost[] = [
         'Ready for an upgrade: assign the opinions. Write them on slips of paper and draw one each. Arguing an opinion you did not choose is where the hardest thinking happens, because you have to find reasons you had not considered. Save it for when the format feels easy.',
       ] },
 
-      { type: 'product-callout', slug: 'family-debate-night', context: 'Our Family Debate Night guide has the full structure, topic cards by age, an argument prep framework and reflection prompts, so you can open it and run the first round tonight.' },
+      { type: 'product-callout', slug: 'family-debate-night', context: 'Our Family Debate Night guide walks you through it step by step: silly warm-up debates, researching both sides, a timed format with openings and answers, and a fair verdict, so you can open it and run the first round tonight.' },
 
       { type: 'faq', items: [
         { question: 'How do you run a family debate night?', answer: 'Pick a question, yes or no or wide open, let everyone choose their own opinion, and give five to ten minutes to write down reasons. Then take turns: opening statements, rebuttals that answer each other’s points, and short closings. Finish by talking together about which arguments were strongest. For real decisions, keep going until the family agrees.' },

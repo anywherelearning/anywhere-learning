@@ -332,5 +332,11 @@
     "src": "guides/assets/what-if-scenario-lab.jpg",
     "alt": "Watercolour of a glowing lantern on a wooden table at dusk, with an open sketchbook, a pencil and a globe",
     "caption": "And then what?"
-  }
+  },
+  "onTheRoad": [
+    "Ask someone who lives here, with your help, how they get through the hard part of their year, like storms or drought.",
+    "Run the Move what-if on your own family, talking through what changed for each of you by Day 1, Day 3 and Day 7.",
+    "Count everything you're living with on this trip, then pick the ten you'd keep if you had to leave the rest behind."
+  ],
+  "backHome": "Pick one thing you lived without on the trip and try going without it at home for a week."
 }

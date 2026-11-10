@@ -319,5 +319,11 @@
     "src": "guides/assets/sports-stats-lab.jpg",
     "alt": "A boy in a white shirt shooting a free throw in a gym, the ball in the air toward the hoop while players wait along the lane",
     "caption": "Free throws: made ÷ tries."
-  }
+  },
+  "onTheRoad": [
+    "Watch a local game of a sport that's big here, and pick the one stat that would tell you who's playing best.",
+    "Ask a fan at the game, with your help, who their best player is, then check whether the numbers agree.",
+    "Look up the local team's results this season, and work out their win percentage to compare with your home team's."
+  ],
+  "backHome": "Track a game at home with the stat you learned on the road, and see if it changes who looks best."
 }

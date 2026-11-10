@@ -320,5 +320,11 @@
   "fromHome": {
     "text": "My son and his friend turned the living room into a gaming room. They planned it like a real base: a sitting spot, a snack corner, a door, and one rule, no girls allowed. Then they wanted to sleep in it, and found out it was too small. That's exactly the kind of surprise Step 5 is for: change the plan, upgrade the base.",
     "quotes": []
-  }
+  },
+  "onTheRoad": [
+    "Make where you're staying the destination, and list the real dangers here, like heat, storms, insects or steep ground.",
+    "Study how local houses answer those dangers, like stilts, thick walls, steep roofs or shutters, and borrow one for your base.",
+    "Ask your host, with your help, what people here do when the power or water goes out, and write it into your manual."
+  ],
+  "backHome": "Name the dangers your own home is built for, like cold or rain, and point out the feature that handles each one."
 }

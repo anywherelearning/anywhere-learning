@@ -501,7 +501,7 @@ export default function StepReader({ guide: g, title, tier, imageUrl, trialEndsA
                       {cd.d && <small><b>Deeper</b> {cd.d}</small>}
                     </div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    {art(cd.art) ? <img src={art(cd.art)} alt="" loading="lazy" /> : <span />}
+                    {art(cd.art) ? <img src={art(cd.art)} alt="" loading="lazy" /> : cd.swatch ? <span aria-hidden="true" style={{ width: 44, height: 44, borderRadius: '50%', background: cd.swatch, justifySelf: 'center', alignSelf: 'center', boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.12)' }} /> : <span />}
                   </div>
                 ))}
               </div>

@@ -337,5 +337,11 @@
         "Unit price = price ÷ amount"
       ]
     }
-  }
+  },
+  "onTheRoad": [
+    "Run the mission at a local market in the local money, rounding each price in that currency as it goes in the bag.",
+    "Fit one food nobody in the family has tried into the budget, and decide what comes off the list to make room.",
+    "Ask a stallholder, with your help, the price per kilo or pound of one fruit, then work out roughly what one piece costs."
+  ],
+  "backHome": "Run the same mission at home with the same amount, and compare what the money bought in each place."
 }

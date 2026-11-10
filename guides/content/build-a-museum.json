@@ -325,5 +325,11 @@
     "src": "guides/assets/build-a-museum.jpg",
     "alt": "Watercolour illustration of a homemade museum on a table: three rocks with label cards, a volcano poster, a shoebox diorama, a magnifying glass and paper arrows showing the visitor path",
     "caption": "Three rocks, three labels, one story."
-  }
+  },
+  "onTheRoad": [
+    "Collect 5 to 8 small pieces from this place, like tickets, coins, wrappers or a leaf, for a pocket museum about where you are.",
+    "Ask a local guide, with your help, the one thing visitors get wrong about this place, and make that your angle.",
+    "Write each label in two languages, using a translation app or a local you ask together, so someone from here could read it."
+  ],
+  "backHome": "Open the pocket museum for family or friends back home, and see which label makes them want to visit."
 }
