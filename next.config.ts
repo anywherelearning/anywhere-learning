@@ -79,6 +79,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Retired Nov 2026: merged into Marketing Campaign Creator.
+      {
+        source: "/shop/brand-builder",
+        destination: "/shop/marketing-campaign",
+        permanent: true,
+      },
+
       // Retired Nov 2026: merged into Complaint to Product.
       {
         source: "/shop/product-design-lab",

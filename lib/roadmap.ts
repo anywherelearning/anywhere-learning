@@ -215,7 +215,7 @@ export const TERRITORIES: readonly Territory[] = [
     },
     activities: [
       'directions-challenge', 'community-tour-guide', 'two-minute-story', 'neighbourhood-interview',
-      'people-stories-interview', 'complaint-to-product', 'shark-tank-pitch', 'market-stall-pitch',
+      'people-stories-interview', 'complaint-to-product', 'marketing-campaign', 'shark-tank-pitch', 'market-stall-pitch',
       'mini-movie', 'investor-pitch', 'board-game-studio', 'family-debate-night',
     ],
   },
@@ -298,7 +298,7 @@ export const TERRITORIES: readonly Territory[] = [
       'imaginary-world', 'invent-a-sport', 'theme-park', 'rube-goldberg-machine',
       'board-game-studio', 'land-art-challenges', 'mini-movie', 'household-orchestra', 'survival-base',
       'nature-crafts', 'kinetic-sculpture', 'build-a-museum', 'creature-habitat', 'micro-business',
-      'marketing-campaign', 'brand-builder', 'problem-solver', 'complaint-to-product', 'shark-tank-pitch',
+      'marketing-campaign', 'problem-solver', 'complaint-to-product', 'shark-tank-pitch',
     ],
   },
   {

@@ -1,0 +1,341 @@
+{
+  "slug": "marketing-campaign",
+  "category": "Entrepreneurship",
+  "title": "Marketing Campaign Creator",
+  "tagline": "Who · Look · Message · Count",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid gets real people to notice something real. They pick one kind of person to reach, give the thing a name and a look, write one clear message, put it where that person will see it, then count the responses to find out which sign actually worked.",
+  "need": [
+    "Something real with a date coming up",
+    "Paper, markers and tape",
+    "Permission for the places you post",
+    "A notebook to count responses"
+  ],
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "headlines and short, clear messages"
+    },
+    {
+      "subject": "Art",
+      "text": "a name, colours and a simple logo"
+    },
+    {
+      "subject": "Math",
+      "text": "counting and comparing responses"
+    },
+    {
+      "subject": "Communication",
+      "text": "choosing words for one kind of person"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You don't need to know anything about marketing. You're the honest first reader and the ride to the places that need asking. Your most useful question is 'What do you want them to do?' Keep it about something real with a date, so there's something to count at the end.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Pick who to reach, then name it and give it a look (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Write the message and put it up (Steps 3 and 4)."
+      },
+      {
+        "when": "After the date",
+        "what": "Count what worked and change one thing (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Nothing real is coming up",
+        "a": "Offer them a family thing to market: a yard sale, a sibling's recital or a dinner you're hosting. Or a local event that needs people."
+      },
+      {
+        "q": "They want to spend hours on the logo",
+        "a": "Give the look one session, then move on. A plain sign in the right place beats a beautiful one in a drawer."
+      },
+      {
+        "q": "Nobody came",
+        "a": "That's a real result. Ask where their person actually was that day, and what would have made them stop."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A good campaign doesn't talk to everyone. It picks one kind of person, says one clear thing in the place they'll see it, and counts what happened.",
+    "before": "Come to my bake sale!!! Lots of stuff!!!",
+    "model": [
+      {
+        "part": "Who",
+        "line": "Neighbours walking their dogs past our house on Saturday mornings."
+      },
+      {
+        "part": "Message",
+        "line": "Warm muffins for your walk. Saturday, 9 to 11."
+      },
+      {
+        "part": "Where",
+        "line": "A sign at the corner where the dogs turn, and one on the community board."
+      },
+      {
+        "part": "Count",
+        "line": "Asked every buyer how they heard: 9 said the corner sign, 2 the board."
+      }
+    ],
+    "modelNote": "The first poster was for everyone, so it spoke to no one. The second picked a person, a time and a place, and the counting showed which sign did the work."
+  },
+  "steps": [
+    {
+      "title": "Pick who to reach",
+      "why": "A campaign for everyone talks to no one.",
+      "kid": "Your kid picks something real to get people to, like their own stand, a family yard sale or a local event that needs people. Then they describe one kind of person to reach, using the Who are they card in the Campaign Toolkit at the end of the guide.",
+      "you": "Help them pick something that's actually happening soon. Ask 'Who exactly?' until the answer is someone they could point to.",
+      "ask": [
+        "Who would be glad to know about this?",
+        "Where are they on a normal Saturday?"
+      ],
+      "tip": "Pick something with a date. A real deadline makes it easy to count what worked.",
+      "levels": {
+        "explore": "Pick something real, and name one kind of person who'd want it.",
+        "develop": "Describe one person to reach: their age, where they go and what they care about.",
+        "extend": "Describe two different kinds of people, and decide which one to aim at first."
+      }
+    },
+    {
+      "title": "Give it a name and a look",
+      "why": "People remember a name and a look long before the details.",
+      "kid": "Your kid gives it a name, picks two colours and draws a simple logo, using the Look and feel card. Then they write a tagline of a few words that says why someone should care.",
+      "you": "Say each name out loud with them and react honestly. Ask 'Would you remember it tomorrow?'",
+      "ask": [
+        "Would someone remember this tomorrow?",
+        "Does the look fit the people you want to reach?"
+      ],
+      "tip": "Shrink the logo to the size of a stamp. If you can still tell what it is, it works.",
+      "levels": {
+        "explore": "Pick a name and draw a simple logo.",
+        "develop": "Choose a name, two colours, a logo and a tagline.",
+        "extend": "Make two versions of the look, ask three people which they'd notice first, then pick one."
+      }
+    },
+    {
+      "title": "Write one message",
+      "why": "One clear thing beats ten things nobody reads.",
+      "kid": "Your kid writes the message using the One message card: one thing to know, one feeling and one thing to do. Then they write a headline that would make their person stop, and put it all on a sign, a flyer or a short post.",
+      "you": "Read it from across the room. If you can't tell what it's for and when in five seconds, ask them what to cut.",
+      "ask": [
+        "What do you want them to do?",
+        "What can you cut?"
+      ],
+      "tip": "Questions make great headlines. 'Out of snacks for the hike?' stops exactly the right person.",
+      "levels": {
+        "explore": "Write what it is, when and where, in big letters.",
+        "develop": "Write a headline, the one message and the one thing to do.",
+        "extend": "Write two headlines, see which one three people notice first and use the winner."
+      }
+    },
+    {
+      "title": "Put it where they'll see it",
+      "why": "The best sign in the wrong place does nothing.",
+      "kid": "Your kid picks two or three places where their person will really see it, using the Where they'll see it card, and puts it up. They add a way to tell which place worked: a different code word on each sign, or asking everyone how they heard.",
+      "you": "Ask for permission together anywhere that isn't yours, like a shop window or a community board. Keep your address and phone number off anything public.",
+      "ask": [
+        "Where will your person be when they see this?",
+        "How will you know which one worked?"
+      ],
+      "tip": "A code word makes it a game: 'Say pumpkin for a free sticker.' Every pumpkin tells you which sign they saw.",
+      "levels": {
+        "explore": "Put up one sign where your person walks by.",
+        "develop": "Put it in two places, each with its own code word.",
+        "extend": "Use three places, including one online with a grown-up, and track every response."
+      }
+    },
+    {
+      "title": "Count what worked, change one thing",
+      "why": "Marketing is a guess until you count.",
+      "kid": "Your kid counts every response, like sales, visitors, replies or code words, and where each one came from. They fill in My campaign at the end of the guide. Then they change one thing, like the headline or a place, and try again.",
+      "you": "Ask what the numbers say before you say anything. Let them be surprised.",
+      "ask": [
+        "Which place worked best?",
+        "What one change would you try next?"
+      ],
+      "tip": "A sign that brought nobody is still useful. Now you know where your person isn't.",
+      "levels": {
+        "explore": "Count how many people came, and ask a few how they heard.",
+        "develop": "Count the responses from each place, and say which worked best.",
+        "extend": "Change one thing, run it again and compare the two counts."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Campaign Toolkit",
+    "intro": "Who you're reaching, how it looks, what it says and where it goes.",
+    "items": [
+      {
+        "name": "Who are they",
+        "lines": [
+          {
+            "k": "Who:",
+            "v": "age, family, what they do"
+          },
+          {
+            "k": "Where:",
+            "v": "places they go every week"
+          },
+          {
+            "k": "When:",
+            "v": "the time they'd see it"
+          },
+          {
+            "k": "Care:",
+            "v": "what they want or worry about"
+          },
+          {
+            "k": "Why you:",
+            "v": "why yours, and not another?"
+          }
+        ],
+        "ask": "Could you point to this person?"
+      },
+      {
+        "name": "Look and feel",
+        "lines": [
+          {
+            "k": "Name:",
+            "v": "short, easy to say and spell"
+          },
+          {
+            "k": "Colours:",
+            "v": "two, maybe three"
+          },
+          {
+            "k": "Logo:",
+            "v": "simple enough to draw in 5 seconds"
+          },
+          {
+            "k": "Tagline:",
+            "v": "a few words on why it matters"
+          },
+          {
+            "k": "Same:",
+            "v": "the same look everywhere"
+          }
+        ],
+        "ask": "Would they remember it tomorrow?"
+      },
+      {
+        "name": "One message",
+        "lines": [
+          {
+            "k": "Know:",
+            "v": "the one thing they must know"
+          },
+          {
+            "k": "Feel:",
+            "v": "the one feeling you want"
+          },
+          {
+            "k": "Do:",
+            "v": "the one thing to do next"
+          },
+          {
+            "k": "Details:",
+            "v": "always when and where"
+          },
+          {
+            "k": "5 seconds:",
+            "v": "can you get it from across the room?"
+          }
+        ],
+        "ask": "What do you want them to do?"
+      },
+      {
+        "name": "Where they'll see it",
+        "lines": [
+          {
+            "k": "Boards:",
+            "v": "library, café, community centre"
+          },
+          {
+            "k": "Corners:",
+            "v": "where people walk or wait"
+          },
+          {
+            "k": "Windows:",
+            "v": "a shop that says yes"
+          },
+          {
+            "k": "Doors:",
+            "v": "a hanger on the handle, not the mailbox"
+          },
+          {
+            "k": "Online:",
+            "v": "a post, with a grown-up"
+          }
+        ],
+        "ask": "How will you know which one worked?"
+      }
+    ],
+    "after": {
+      "label": "My campaign",
+      "lines": [
+        "What I'm getting people to",
+        "Who I'm reaching",
+        "My message",
+        "What worked, by the numbers"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Audience thinking",
+      "text": "speaking to one kind of person"
+    },
+    {
+      "name": "Clear writing",
+      "text": "saying one thing well"
+    },
+    {
+      "name": "Design sense",
+      "text": "a look people remember"
+    },
+    {
+      "name": "Measuring",
+      "text": "counting what actually worked"
+    }
+  ],
+  "conclusion": {
+    "headline": "They got real people to notice, and they know which sign did it.",
+    "text": "Ads will start to look different to them. If they point at a billboard and say who it's for, or notice a sign with no date on it, they're reading marketing like an insider.",
+    "celebrate": "When someone shows up because of their sign, say: 'You found them. That was your sign.'",
+    "extensions": [
+      "Market the same thing to a different kind of person, and compare",
+      "Make a 30-second video ad with a grown-up",
+      "Find three ads for the same kind of thing and work out who each one is for",
+      "Help a local club get the word out about something real"
+    ]
+  },
+  "signs": [
+    "They ask who something is for",
+    "They notice when a sign leaves out the important part",
+    "They count before they say it worked"
+  ],
+  "makeItReal": "The next time the family has something to share, from a yard sale to a fundraiser, hand them the sign.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/marketing-campaign.jpg",
+    "alt": "A smiling boy in a cap and glasses standing behind a table with a laptop and a hand-painted banner for SitterMatch, with a map-pin logo and a tagline in French",
+    "caption": "A name, a logo and one line: the sitter you need, when you need it.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "My son came up with SitterMatch, an app idea to help francophone families in our town find a babysitter. He presented it at a table with this banner: a name, a simple logo and one line that says what it's for. People stopped to ask how the app worked, and asked about pricing too.",
+    "quotes": []
+  }
+}

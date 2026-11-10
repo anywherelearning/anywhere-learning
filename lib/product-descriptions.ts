@@ -1890,24 +1890,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'marketing-campaign': {
     opening:
-      'Design and execute a marketing campaign to reach a real audience. Kids learn about target audiences, messaging, creative assets, and campaign strategy. Persuasion, creativity, and analytical thinking applied to a real marketing project.',
+      'Your child gets real people to notice something real. They pick one kind of person to reach, give it a name, colours and a simple logo, and write one clear message. Then they put it where that person will see it, with a code word on each sign, and count the responses to find out which one actually worked.',
     whatsIncluded: [
-      'Marketing campaign planning guide',
-      'Target audience research and persona building',
-      'Message crafting and creative brief',
-      'Campaign asset creation (posters, social, etc.)',
-      'Results tracking and campaign reflection',
+      'A 5-step guide from picking who to reach to counting what worked',
+      'A worked example that shows why one person beats everyone',
+      'Who are they card and Look and feel card',
+      'One message card and Where they will see it card',
+      'My campaign page to fill in with real numbers',
     ],
-    skillTags: ['Marketing', 'Communication', 'Creativity', 'Persuasion', 'Analysis'],
+    skillTags: ['Entrepreneurship', 'Marketing', 'Persuasive Writing', 'Design', 'Data'],
     insideTheLearning: {
       lead:
-        'Your child runs a real campaign for something: works out who it is for, writes the message, makes the posters and posts, then puts it in front of people. The feedback comes back and usually it says the message was not as clear as they thought.',
+        'Your child learns that a good campaign talks to one kind of person. They give it a name and a look, say one clear thing in the place that person will see it, and count the responses so they know what worked instead of guessing.',
       skills: [
-        { skill: 'Critical Thinking', where: 'Researching who the audience actually is instead of assuming' },
-        { skill: 'Persuasion', where: 'Crafting a message built to move a specific group of people' },
-        { skill: 'Design Thinking', where: 'Making visuals and words work together across the campaign assets' },
-        { skill: 'Adaptability', where: 'Reading the response and reworking the campaign from it' },
-        { skill: 'Creative Thinking', where: 'Finding an original angle rather than copying what they have seen' },
+        { skill: 'Writing', where: 'Writing a headline and one clear message' },
+        { skill: 'Creativity', where: 'Choosing a name, colours, a logo and a tagline' },
+        { skill: 'Communication', where: 'Picking words for one kind of person' },
+        { skill: 'Math', where: 'Counting and comparing responses from each place' },
+        { skill: 'Critical Thinking', where: 'Changing one thing and checking if it worked better' },
       ],
     },
     format: 'Project Guide',

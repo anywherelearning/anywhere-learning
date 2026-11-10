@@ -70,7 +70,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "land-art-challenges": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Land%20Art%20Challenge%20Cards%20v9.pdf",
   "local-language-mission": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Local%20Language%20Mission%20v2.pdf",
   "market-stall-pitch": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Market%20Stall%20Pitch%20v6.pdf",
-  "marketing-campaign": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Marketing%20Campaign%20Creator%20v2.pdf",
+  "marketing-campaign": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Marketing%20Campaign%20Creator%20v3.pdf",
   "media-info-check": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%2B%20Digital%20Literacy%20-%20MEDIA%20%26%20INFO%20CHECK%20v2.pdf",
   "micro-business": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Micro-business%20challenge%20v3.pdf",
   "mini-magazine-creator": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Mini%20Magazine%20Creator%20v6.pdf",
