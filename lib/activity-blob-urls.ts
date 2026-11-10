@@ -109,7 +109,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "scavenger-hunt-designer": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Scavenger%20Hunt%20Designer%20v5.pdf",
   "secret-code-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Secret%20Code%20Lab%20v5.pdf",
   "seed-travelers": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20Seed%20Travelers%20v5.pdf",
-  "shark-tank-pitch": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20The%20Shark%20Tank%20Pitch%20v2.pdf",
+  "shark-tank-pitch": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20The%20Shark%20Tank%20Pitch%20v3.pdf",
   "skills-map-bw": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Member%20-%20Skills%20Map%202026%20-%20Black%20and%20White.pdf",
   "skills-map-color": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Member%20-%20Skills%20Map%202026%20-%20Color.pdf",
   "skills-map-phone": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Member%20-%20Skills%20Map%202026%20-%20Phone.pdf",

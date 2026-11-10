@@ -1986,28 +1986,28 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'shark-tank-pitch': {
     seo: {
-      title: 'Shark Tank Pitch for Kids: Business Pitch Project, Ages 8-14',
+      title: 'Shark Tank Pitch for Kids: Business Pitch Project, Ages 6-14',
       description:
-        'A ready-to-run Shark Tank pitch project. Kids build a business, work out profit, write the pitch and present it live. Ages 8-14, no prep.',
+        'A ready-to-run Shark Tank style pitch project. Kids work out the numbers, write the pitch, face family sharks and sign a real deal. Ages 6-14, no prep.',
     },
     opening:
-      'Develop and deliver a high-stakes business pitch, Shark Tank style. Kids create a business concept, build financial projections, design their presentation, and pitch to family. Public speaking, financial thinking, and entrepreneurial confidence all in one thrilling project.',
+      'Your child asks the family for real backing, Shark Tank style. They build the numbers for their business, decide exactly what they are asking for and what the shark gets back, and write a one-minute pitch. Then they face a panel of family sharks, choose a deal, sign it and pay it back on time.',
     whatsIncluded: [
-      'Shark Tank pitch project guide',
-      'Business concept development framework',
-      'Financial projections and break-even basics',
-      'Pitch presentation design and delivery tips',
-      'Q&A preparation and confidence building',
+      'A 5-step guide from the numbers to a deal they pay back',
+      'A worked example that turns a favour into a real ask',
+      'Numbers card and Deal options card',
+      'Pitch parts card and Shark panel card with questions and scoring',
+      'Our deal page that both sides sign',
     ],
     skillTags: ['Public Speaking', 'Financial Thinking', 'Persuasion', 'Entrepreneurship', 'Confidence'],
     insideTheLearning: {
       lead:
-        'Your child builds a business concept and pitches it to the family for real. Underneath that, they are working out profit and revenue, structuring an argument so it actually persuades, and presenting it out loud to people who ask hard questions. Then they revise it from the feedback and go again. None of it feels like schoolwork, because the pitch night is real and they want to win it.',
+        'Your child learns that a good ask is not a favour. They work out what they need, decide what the shark gets back, pitch it in a minute to family sharks who ask hard questions, then sign a real deal and keep it.',
       skills: [
-        { skill: 'Financial Literacy', where: 'Working out profit and revenue so the numbers in the pitch hold up' },
-        { skill: 'Persuasion', where: 'Building a structured argument instead of just saying why they like the idea' },
-        { skill: 'Public Speaking', where: 'Presenting the idea clearly and out loud, not reading it off a page' },
-        { skill: 'Resilience', where: 'Handling the surprise questions calmly, then revising the pitch from what came back' },
+        { skill: 'Financial Literacy', where: 'Working out the start-up money, what is left from each sale and how many sales pay it back' },
+        { skill: 'Persuasion', where: 'Building a one-minute pitch with a hook, a problem, a solution, the numbers and the ask' },
+        { skill: 'Public Speaking', where: 'Pitching out loud and answering the sharks calmly' },
+        { skill: 'Responsibility', where: 'Signing a deal, tracking payments and checking in on the dates they agreed' },
       ],
     },
     format: 'Project Guide',

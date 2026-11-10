@@ -1,0 +1,340 @@
+{
+  "slug": "shark-tank-pitch",
+  "category": "Entrepreneurship",
+  "title": "Shark Tank Style Pitch",
+  "tagline": "Numbers · Deal · Pitch · Sharks",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid asks the family for real backing, Shark Tank style. They build the numbers for their business, decide exactly what they're asking for and what the shark gets back, write a one-minute pitch, face a panel of family sharks, then sign a real deal and keep it.",
+  "need": [
+    "A business idea, new or already running",
+    "A little real money to invest, or another kind of help",
+    "Family members to be the sharks",
+    "Paper for the pitch and the deal"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "costs, profit and paying money back"
+    },
+    {
+      "subject": "Communication",
+      "text": "a one-minute pitch and hard questions"
+    },
+    {
+      "subject": "Financial Literacy",
+      "text": "loans, shares and what investors expect"
+    },
+    {
+      "subject": "Writing",
+      "text": "a clear pitch and a written deal"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You're a shark, and a fair one. Your most useful question is 'What does the shark get?' Use real money and keep it small, because a $20 loan they actually pay back teaches more than a pretend million. Anyone in the family can be a shark, siblings included.",
+    "plan": [
+      {
+        "when": "Session 1",
+        "what": "Build the numbers and choose the deal (Steps 1 and 2)."
+      },
+      {
+        "when": "Session 2",
+        "what": "Write and practise the pitch (Step 3)."
+      },
+      {
+        "when": "Pitch night",
+        "what": "Face the sharks (Step 4)."
+      },
+      {
+        "when": "The next few weeks",
+        "what": "Make the deal real (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They don't have a business yet",
+        "a": "Borrow one from Micro-Business Challenge or Complaint to Product, or keep it tiny. A batch of cookies to sell counts."
+      },
+      {
+        "q": "Pitch night makes them nervous",
+        "a": "Start with one shark, sitting down. Nerves usually drop once they hear the first question."
+      },
+      {
+        "q": "They can't pay it back on time",
+        "a": "That's a real lesson, if it's handled well. Help them ask the shark for new terms before the date, then keep the new promise."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A good ask isn't a favour. It says exactly what the money is for, what the shark gets back and how it gets paid.",
+    "before": "Can I have $30 for my business? Please?",
+    "model": [
+      {
+        "part": "Need",
+        "line": "$30 for flour, chocolate chips and bags."
+      },
+      {
+        "part": "Have",
+        "line": "$10 saved, so I'm asking for $20."
+      },
+      {
+        "part": "Deal",
+        "line": "I'll pay you back $22 by March 1, from cookie sales."
+      },
+      {
+        "part": "Proof",
+        "line": "I keep $1.50 from each bag, so 15 bags pays you back."
+      }
+    ],
+    "modelNote": "The first ask was a favour. The second tells the shark what it's for, what they get and how it gets paid, so they can say yes for a reason."
+  },
+  "steps": [
+    {
+      "title": "Build your numbers",
+      "why": "Sharks invest in numbers, not just ideas.",
+      "kid": "Your kid picks a business, one they've already started or a new idea, and works out the basics with the Numbers card in the Shark Toolkit at the end of the guide: the price, the cost of one, what's left from each sale and what they need to get started.",
+      "you": "Check the costs against real prices, in a shop or online. Let them do the math, and ask 'How do you know?' about every number.",
+      "ask": [
+        "What do you need to get started?",
+        "How much is left from each sale?"
+      ],
+      "tip": "Count what they already have first. Asking for $20 sounds very different when they've saved $10 themselves.",
+      "levels": {
+        "explore": "Say what you'd sell, the price and what you need to buy first.",
+        "develop": "Work out the cost of one, what's left from each sale and the total you need.",
+        "extend": "Work out how many you'd need to sell to pay back the start-up money."
+      }
+    },
+    {
+      "title": "Choose your deal",
+      "why": "The ask isn't 'Can I have money?' It's what the shark gets back.",
+      "kid": "Your kid decides what they're asking for and what they'll offer in return, using the Deal options card: a loan they pay back with a little extra, a share of the profits for a set time, or help instead of money. They work out exactly what the shark gets.",
+      "you": "Explain how a loan and a share are different, with an example from your own life if you have one. Keep the amounts small and real.",
+      "ask": [
+        "What does the shark get?",
+        "When will they get it?"
+      ],
+      "tip": "A deal needs a date. 'I'll pay you back' becomes a real offer the moment it has one.",
+      "levels": {
+        "explore": "Ask for something small, and say how you'll pay it back.",
+        "develop": "Write a loan offer with an amount, a date and a little extra.",
+        "extend": "Compare a loan and a share, work out what the shark gets from each and choose one."
+      }
+    },
+    {
+      "title": "Write the one-minute pitch",
+      "why": "Sharks decide fast, so every second needs a job.",
+      "kid": "Your kid writes a pitch using the Pitch parts card: the hook, the problem, the solution, the numbers and the ask. They time it at a minute or less, then practise until they can say it without reading.",
+      "you": "Be the practice audience twice. The first time, just listen. The second time, tell them the one part you didn't understand.",
+      "ask": [
+        "What's your hook?",
+        "Could a shark repeat your ask after hearing it once?"
+      ],
+      "tip": "End with the ask, in one sentence with numbers in it. It's the line the sharks will remember.",
+      "levels": {
+        "explore": "Say each part of the pitch out loud, with a grown-up helping.",
+        "develop": "Write and time a one-minute pitch, then practise it three times.",
+        "extend": "Add a sample or one picture, and practise answering the two questions you're most worried about."
+      }
+    },
+    {
+      "title": "Face the sharks",
+      "why": "The questions are where a pitch is really won.",
+      "kid": "Your kid pitches to a panel of family sharks, who ask questions and score it using the Shark panel card. Each shark makes an offer, changes the terms or says 'I'm out'. Your kid decides: accept, ask for something different or walk away.",
+      "you": "Be a real shark: kind, but not easy. Only offer what you'd honestly put in. Let a sibling take a turn as a shark too.",
+      "ask": [
+        "What did a shark ask that you hadn't thought of?",
+        "Why did you take that deal, or walk away?"
+      ],
+      "tip": "'I'm out' isn't a failure. Ask that shark what would have changed their mind, and write it down.",
+      "levels": {
+        "explore": "Pitch to one shark and answer two questions.",
+        "develop": "Pitch to two or three sharks, answer every question and choose a deal.",
+        "extend": "Pitch twice to different sharks, change one thing in between and compare the offers."
+      }
+    },
+    {
+      "title": "Make the deal real",
+      "why": "A handshake is easy. Paying it back is the real test.",
+      "kid": "Your kid writes the deal on Our deal at the end of the guide: how much, what it's for, what the shark gets back and by when. Both sign it. Then they run the business, track every payment and check in with their shark on the dates they agreed.",
+      "you": "Hold them to it, kindly. If they're going to be late, help them ask for more time before the date, not after.",
+      "ask": [
+        "Are you on track to pay it back?",
+        "What will you tell your shark at the check-in?"
+      ],
+      "tip": "Put the deal on the fridge and tick off each payment. Watching what they owe shrink is very satisfying.",
+      "levels": {
+        "explore": "Write the deal with a grown-up, and make the first payment.",
+        "develop": "Sign the deal, keep a payment record and check in once.",
+        "extend": "Pay it all back, then write what you'd ask for differently next time."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Shark Toolkit",
+    "intro": "The numbers to know, deals to offer, what goes in a pitch and how the sharks decide.",
+    "items": [
+      {
+        "name": "Numbers",
+        "lines": [
+          {
+            "k": "Price:",
+            "v": "what one sells for"
+          },
+          {
+            "k": "Cost:",
+            "v": "what one costs to make"
+          },
+          {
+            "k": "Left:",
+            "v": "price minus cost"
+          },
+          {
+            "k": "Start-up:",
+            "v": "what you need before the first sale"
+          },
+          {
+            "k": "Have:",
+            "v": "what you can put in yourself"
+          }
+        ],
+        "ask": "How do you know?"
+      },
+      {
+        "name": "Deal options",
+        "lines": [
+          {
+            "k": "Loan:",
+            "v": "$20 now, $22 back by a date"
+          },
+          {
+            "k": "Share:",
+            "v": "part of the profits for 3 months"
+          },
+          {
+            "k": "Help:",
+            "v": "time, tools or a ride instead of money"
+          },
+          {
+            "k": "Date:",
+            "v": "every deal needs one"
+          },
+          {
+            "k": "Walk away:",
+            "v": "if the deal doesn't work for you"
+          }
+        ],
+        "ask": "What does the shark get?"
+      },
+      {
+        "name": "Pitch parts",
+        "lines": [
+          {
+            "k": "Hook:",
+            "v": "a question or a surprising fact"
+          },
+          {
+            "k": "Problem:",
+            "v": "what's annoying or missing"
+          },
+          {
+            "k": "Solution:",
+            "v": "your idea, and why it works"
+          },
+          {
+            "k": "Numbers:",
+            "v": "price, cost and what's left"
+          },
+          {
+            "k": "Ask:",
+            "v": "how much, for what, and what they get"
+          }
+        ],
+        "ask": "Could they repeat your ask?"
+      },
+      {
+        "name": "Shark panel",
+        "lines": [
+          {
+            "k": "Ask:",
+            "v": "who exactly will buy this?"
+          },
+          {
+            "k": "Ask:",
+            "v": "what if it doesn't sell?"
+          },
+          {
+            "k": "Ask:",
+            "v": "why are you the one to do this?"
+          },
+          {
+            "k": "Score:",
+            "v": "clear, believable, worth it, each out of 5"
+          },
+          {
+            "k": "Decide:",
+            "v": "offer, change the terms or I'm out"
+          }
+        ],
+        "ask": "Would you put your own money in?"
+      }
+    ],
+    "after": {
+      "label": "Our deal",
+      "lines": [
+        "How much, and what it's for",
+        "What the shark gets back",
+        "By when",
+        "Signed by both of us"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Persuasion",
+      "text": "making a clear case with numbers"
+    },
+    {
+      "name": "Money sense",
+      "text": "knowing exactly what the shark gets"
+    },
+    {
+      "name": "Poise",
+      "text": "answering hard questions calmly"
+    },
+    {
+      "name": "Keeping promises",
+      "text": "paying it back on time"
+    }
+  ],
+  "conclusion": {
+    "headline": "They asked for real backing, and they kept their word.",
+    "text": "Their asks change after this. If the next request comes with a reason, an amount and a payback date, the pitch has stuck.",
+    "celebrate": "On the day they make the last payment, say: 'You said you would, and you did.'",
+    "extensions": [
+      "Pitch to a shark outside the family, like an aunt or a family friend",
+      "Turn the profit into a second, bigger ask",
+      "Be the shark for a sibling or a friend, and use the Shark panel card",
+      "Write down the best question any shark asked, and why it was hard"
+    ]
+  },
+  "signs": [
+    "They ask with numbers, not just please",
+    "They think about what the other person gets",
+    "They keep track of what they owe"
+  ],
+  "makeItReal": "The next time they ask for something big, ask for the pitch instead of a yes or no.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/shark-tank-pitch.jpg",
+    "alt": "Watercolour of a wooden table with a handwritten agreement signed twice, folded bills and coins, a calculator, a notebook of numbers with a small bar chart, a pen and a paper bag of cookies",
+    "caption": "What does the shark get?"
+  }
+}

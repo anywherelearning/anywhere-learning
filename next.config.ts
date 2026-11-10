@@ -79,6 +79,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Retired Nov 2026: merged into Shark Tank Style Pitch.
+      {
+        source: "/shop/investor-pitch",
+        destination: "/shop/shark-tank-pitch",
+        permanent: true,
+      },
+
       // Retired Nov 2026: merged into Marketing Campaign Creator.
       {
         source: "/shop/brand-builder",

@@ -110,7 +110,7 @@ export const TERRITORIES: readonly Territory[] = [
     activities: [
       'write-like-a-pro', 'mini-magazine-creator', 'my-review-column', 'adventure-story-map',
       'two-minute-story', 'trail-guide-creator', 'family-recipe-book', 'travel-reflection-postcards',
-      'scavenger-hunt-designer', 'prompt-like-a-coach', 'investor-pitch',
+      'scavenger-hunt-designer', 'prompt-like-a-coach', 'shark-tank-pitch',
     ],
   },
   {
@@ -136,7 +136,7 @@ export const TERRITORIES: readonly Territory[] = [
     activities: [
       'garage-sale-math', 'snack-mission', 'party-planner-math', 'kitchen-math-challenge',
       'clothing-swap-thrift-math', 'currency-market-math', 'nature-data-tracker', 'sports-stats-lab',
-      'savings-goal-tracker', 'family-electricity-audit', 'budget-challenge', 'micro-business', 'road-trip-calculator',
+      'savings-goal-tracker', 'family-electricity-audit', 'budget-challenge', 'micro-business', 'shark-tank-pitch', 'road-trip-calculator',
       'garden-plot-planner', 'smart-shopper', 'pricing-experiment', 'backyard-campout-planner',
     ],
   },
@@ -216,7 +216,7 @@ export const TERRITORIES: readonly Territory[] = [
     activities: [
       'directions-challenge', 'community-tour-guide', 'two-minute-story', 'neighbourhood-interview',
       'people-stories-interview', 'complaint-to-product', 'marketing-campaign', 'shark-tank-pitch', 'market-stall-pitch',
-      'mini-movie', 'investor-pitch', 'board-game-studio', 'family-debate-night',
+      'mini-movie', 'board-game-studio', 'family-debate-night',
     ],
   },
   {
