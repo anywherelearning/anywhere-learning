@@ -337,5 +337,11 @@
   "fromHome": {
     "text": "We finished this hike in the pouring rain, trying to find shelter here and there. My daughter was cold and whining. My son was having fun. Ask them for a number on that trail and you'd have got a 1 and a 5.",
     "quotes": []
-  }
+  },
+  "onTheRoad": [
+    "Track your energy on a travel day and on a normal day where you're staying, and compare the two lines.",
+    "Notice when local families eat, rest and go out, and how that's different from your day at home.",
+    "After a long trip or a time change, plan the next day around everyone's numbers, with an easy morning."
+  ],
+  "backHome": "Keep one rhythm from the trip that helped, like an afternoon rest, and try it at home for a week."
 }

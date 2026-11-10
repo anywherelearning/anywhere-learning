@@ -264,7 +264,7 @@ export default function StepReader({ guide: g, title, tier, imageUrl, trialEndsA
         .sr-fold summary::after{content:'+';font-size:18px;color:var(--ac);font-weight:600}
         .sr-fold[open] summary::after{content:'−'}
         .sr-fold-in{padding:0 16px 14px;font-size:15px}
-        .sr-fold-in ul{margin:0;padding-left:18px}.sr-fold-in li{margin:5px 0;line-height:1.45}
+        .sr-road-lead{margin:0 0 8px;font-style:italic;color:#5a5a52}.sr-road-art{display:block;width:100%;height:auto;margin:0 0 10px;-webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 92%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 92%,transparent);mask-composite:intersect}.sr-road{list-style:none;margin:0;padding:0}.sr-road li{display:flex;gap:10px;align-items:flex-start;background:#eef4f5;border-radius:12px;padding:10px 12px;margin:0 0 8px;line-height:1.45}.sr-road li span{flex:none;width:24px;height:24px;border-radius:50%;background:#4f8aa0;color:#fff;font-weight:800;font-size:13px;display:grid;place-items:center;margin-top:1px}.sr-road-home{margin:0;background:#f8efe3;border-radius:12px;padding:10px 12px;line-height:1.45;border-left:4px solid #c48a4f}.sr-fold-in ul{margin:0;padding-left:18px}.sr-fold-in li{margin:5px 0;line-height:1.45}
         .sr-ask li{font-style:italic}
         .sr-dl dt{font-weight:700;margin-top:10px}.sr-dl dd{margin:2px 0 0}
         .sr-learn{display:grid;gap:8px}.sr-learn div{border-left:3px solid var(--ac);padding-left:10px}.sr-learn b{display:block;font-size:14px}.sr-learn span{font-size:14px;color:#5a5243}
@@ -539,6 +539,14 @@ export default function StepReader({ guide: g, title, tier, imageUrl, trialEndsA
                 <p>{g.makeItReal}</p>
               </div>
             )}
+            {g.onTheRoad?.length ? (
+              <Fold label="On the road">
+                <p className="sr-road-lead">Travelling right now? Make it part of where you are.</p>
+                <img className="sr-road-art" src="/guides/on-the-road.jpg" alt="Watercolour of a worn suitcase, a passport, postcards, a bus ticket, coins and a market bag with a mango" />
+                <ol className="sr-road">{g.onTheRoad.map((s, i) => <li key={i}><span>{i + 1}</span>{s}</li>)}</ol>
+                {g.backHome ? <p className="sr-road-home"><b>Back home:</b> {g.backHome}</p> : null}
+              </Fold>
+            ) : null}
             {g.signs?.length ? <Fold label="Signs it's working"><ul>{g.signs.map((s, i) => <li key={i}>{s}</li>)}</ul></Fold> : null}
             {g.conclusion?.extensions?.length ? <Fold label="Keep it going"><ul>{g.conclusion.extensions.map((s, i) => <li key={i}>{s}</li>)}</ul></Fold> : null}
             <div className="sr-actions">

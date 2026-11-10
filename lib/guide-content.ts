@@ -53,6 +53,8 @@ export interface GuideContent {
   conclusion?: { headline?: string; text?: string; celebrate?: string; extensions?: string[] };
   signs?: string[] | null;
   makeItReal?: string | null;
+  onTheRoad?: string[] | null;
+  backHome?: string | null;
 }
 
 export async function loadGuideContent(slug: string): Promise<GuideContent | null> {

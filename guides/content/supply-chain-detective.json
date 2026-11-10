@@ -337,5 +337,11 @@
   "fromHome": {
     "text": "In Panama, we visited a coffee plantation. The kids picked the coffee, washed the seeds, ground them, roasted them and tried three different coffees.",
     "quotes": []
-  }
+  },
+  "onTheRoad": [
+    "Find something grown or made right where you are, like coffee, cacao, fruit or cloth, and visit where it starts if you can.",
+    "Read the labels in a local grocery store: what's from here, what's imported, and from where?",
+    "Ask a market seller where one thing they sell comes from, and how it got to their stall."
+  ],
+  "backHome": "Find the same thing in your own store, and compare the price and the trip it took to get there."
 }

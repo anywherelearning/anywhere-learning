@@ -283,6 +283,20 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   ${foot(R.title)}
 </section>` : '';
 
+  const road = g.onTheRoad?.length ? `
+<section class="pg roadpg">
+  ${contours()}
+  <div class="eyebrow">On the road</div>
+  <h2>Travelling right now?</h2>
+  <p class="lead">Make it part of where you are.</p>
+  <div class="roadart">${art('wc/on-the-road.jpg')}</div>
+  <div class="roadcards">${g.onTheRoad.map((x, i) => `
+    <div class="roadcard"><span class="roadn">${i + 1}</span><p>${esc(x)}</p></div>`).join('')}${g.backHome ? `
+    <div class="roadcard home"><span class="roadn">&#8962;</span><p><b>Back home:</b> ${esc(g.backHome)}</p></div>` : ''}
+  </div>
+  ${foot('On the road')}
+</section>` : '';
+
   const c = g.conclusion;
   const finish = `
 <section class="pg finish">
@@ -309,7 +323,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>${css(layout, accent, soft, bw, paper)}</style></head>
-<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${cards}${journal}${reference}${finish}</body></html>`;
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${cards}${journal}${reference}${road}${finish}</body></html>`;
 }
 
 function css(mode, accent, soft, bw, paper = '#f7f2e8') {
@@ -389,6 +403,7 @@ ul{list-style:none}
 .acad{display:grid;gap:0;margin:0}.acad div{padding:8px 0;border-top:1px solid rgba(58,44,23,.12)}.acad div:first-child{border-top:0;padding-top:2px}
 .acad dt{font:700 1em/1.3 'DM Sans';color:var(--accent)}.acad dd{margin:2px 0 0;line-height:1.45}
 .box.real{border-left:4px solid var(--trail)}
+.roadpg .eyebrow{color:#3d6f82}.roadpg h2{margin:4px 0 4px}.roadpg .lead{margin:0;font-size:1.25em;color:#5a5a52}.roadart{margin:14px -10px 20px}.roadart .bart.wc{width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 91%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 91%,transparent);mask-composite:intersect}.phone .roadcards{grid-template-columns:1fr;gap:14px}.phone .roadcard{padding:18px 18px 20px}.phone .roadart{margin:10px -6px 16px}.bw .roadart .bart.wc{filter:grayscale(1) contrast(1.05);opacity:.75}.pg.roadpg{justify-content:flex-start!important}.roadart,.roadcards{position:relative;z-index:2}.roadcards{display:grid;grid-template-columns:1fr 1fr;gap:18px}.roadcard{display:flex;gap:14px;align-items:flex-start;background:#eef4f5;border-radius:18px;padding:22px 22px 24px;border-top:5px solid #4f8aa0}.roadcard p{margin:0;font-size:1.12em;line-height:1.5;padding-top:3px}.roadcard.home{background:#f8efe3;border-top-color:#c48a4f}.roadcard.home .roadn{background:#c48a4f}.roadn{flex:none;font:800 1.05em 'Bricolage Grotesque';color:#fff;background:#4f8aa0;border-radius:50%;width:32px;height:32px;display:grid;place-items:center}.bw .roadcard{background:#fff!important;border:1.5px solid #000!important}.bw .roadn{background:#000!important}
 .cardgrid{display:grid;gap:10px;margin-top:8px}
 .tcard{background:#fff;border:1.5px dashed rgba(58,44,23,.28);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .tchead{display:flex;align-items:center;gap:8px}.tcnum{font:800 1.05em 'Bricolage Grotesque';color:#fff;background:var(--accent);border-radius:8px;min-width:30px;height:28px;display:grid;place-items:center;padding:0 6px}
