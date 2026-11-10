@@ -54,7 +54,7 @@
       },
       {
         "q": "They give one-line answers",
-        "a": "Say 'And then what?' three times in a row. Or go first, and share your own answer badly."
+        "a": "Ask 'And then what?' three times in a row. Short answers usually get longer by the third one."
       },
       {
         "q": "Their ideas are wild",
@@ -72,7 +72,7 @@
       },
       {
         "part": "Day 3",
-        "line": "No toothbrush, no jacket, no pillow."
+        "line": "No toothbrush, no jacket, no blanket."
       },
       {
         "part": "Trade-off",
@@ -137,11 +137,11 @@
     {
       "title": "Make the plan, then try a slice",
       "why": "A plan on paper has never had to make supper.",
-      "kid": "Your kid writes what you'd do on Day 1, how you'd handle the biggest problems and what you'd have to give up. Then they pick a small slice from the Try a slice card and you all live it for a few hours, and fix the plan with what you learned.",
+      "kid": "Your kid writes what you'd do on Day 1, how you'd handle the biggest problems and what you'd have to give up. Then you all live a small slice from the Try a slice card for a few hours, and they fix the plan with what they learned.",
       "you": "Ask 'What about...?' to find the gaps, and then really do the slice. No cheating, for the agreed time. Use flashlights rather than candles, and keep the safety rules you always have.",
       "ask": [
         "Which part could fall apart?",
-        "If two important things clash, which one wins?"
+        "If you can only keep one, which one?"
       ],
       "tip": "Keep the slice short, and pick a real start and end time. A few hours is plenty to feel it.",
       "levels": {
@@ -154,7 +154,7 @@
       "title": "Take it back to someone who knows",
       "why": "The person who lived it will spot what you missed.",
       "kid": "Your kid fills in Our plan at the end of the guide and takes it back to the person they asked in Step 3, or someone new who's lived it. They ask what's missing and add it. Then they put the final plan beside their Day 1 column and see how far it's come.",
-      "you": "Make the call or visit together. If the answer stings a bit, help them hear it as a good sign: it means the person took the plan seriously.",
+      "you": "Go with them. If the answer stings a bit, help them hear it as a good sign: it means the person took the plan seriously.",
       "ask": [
         "What did they spot that you missed?",
         "What changed most since Day 1?"
@@ -306,13 +306,13 @@
   ],
   "conclusion": {
     "headline": "They didn't stop at the first answer.",
-    "text": "It shows up in ordinary conversations. If they say 'But then what would happen?' about something in the news, a family plan or a story they're reading, the habit is sticking.",
+    "text": "Listen at supper. If they say 'But then what would happen?' about something in the news, a family plan or a story they're reading, the habit is sticking.",
     "celebrate": "Put their Day 1 column beside the final plan and say: 'Look how far you took that.'",
     "extensions": [
       "Pick a what-if about history, and find out what really happened",
       "Try a bigger slice, like a whole weekend",
       "Write the story of Day 7 from your plan",
-      "Swap what-ifs with another family and compare plans"
+      "Run your what-if on a story you love: what would the main character do on Day 3?"
     ]
   },
   "signs": [

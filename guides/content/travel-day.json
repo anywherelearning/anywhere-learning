@@ -49,7 +49,7 @@
     "troubleshoot": [
       {
         "q": "No big day out coming up",
-        "a": "Plan an ordinary Saturday instead: the library, the park, groceries and one treat. Same steps, smaller map."
+        "a": "Plan an ordinary Saturday instead: the library, the park, groceries and one treat. It's still a real day to plan."
       },
       {
         "q": "Everyone wants something different",
@@ -146,7 +146,7 @@
       "levels": {
         "explore": "Pick one thing that could go wrong and say what we'd do instead.",
         "develop": "Write a Plan B for three things that could go wrong, and mark what never gets cut.",
-        "extend": "Rank every stop from 'cut first' to 'never cut', then have someone throw a curveball and rework the afternoon in five minutes."
+        "extend": "Rank every stop from 'cut first' to 'never cut', then have a sibling pick a stop to close, and rework the afternoon in five minutes."
       }
     },
     {
@@ -239,7 +239,7 @@
           },
           {
             "k": "Fits?",
-            "v": "total ≤ closing − opening"
+            "v": "everything fits between opening and closing"
           },
           {
             "k": "Money:",
@@ -305,11 +305,11 @@
   ],
   "conclusion": {
     "headline": "They ran the day, Plan B and all.",
-    "text": "Watch the next outing. If they ask 'What time does it close?' before 'Can we go?', the planning habit has stuck.",
+    "text": "Mention a place you might go this weekend. If they ask 'What time does it close?' before 'Can we go?', the planning habit has stuck.",
     "celebrate": "When the Plan B kicks in and works, say it right then: 'It started raining and you already knew what we'd do. That was your plan.'",
     "extensions": [
-      "Plan a real travel day with an airport, train or ferry, check-in and connection times",
-      "Plan a day around a grandparent's pace",
+      "Plan a day with no car: walking, transit or bikes, using real timetables",
+      "Plan a rainy-day version of the same day",
       "Plan a day out on a set budget, like $20 a person",
       "Plan the same place for a different season and compare"
     ]

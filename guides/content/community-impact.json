@@ -50,7 +50,7 @@
     "troubleshoot": [
       {
         "q": "They want to save the whole world",
-        "a": "Good. Ask 'What's one part of that you can see from here?' Then ask what they could finish this week."
+        "a": "Good. Ask 'Who's one person you could help this week?' Big causes start with someone you can see."
       },
       {
         "q": "They're too shy to ask anyone",
@@ -58,7 +58,7 @@
       },
       {
         "q": "Nobody seems to need anything",
-        "a": "Ask what's annoying instead of what's needed. Or start close to home: a grandparent, a neighbour and a sibling all count."
+        "a": "Start close to home: a grandparent, a neighbour and a sibling all count. Ask what's been hard for them lately."
       }
     ]
   },
@@ -153,8 +153,8 @@
     {
       "title": "Go back and keep it going",
       "why": "It's not done when you leave. It's done when it lasts.",
-      "kid": "Your kid goes back to the person they asked and finds out if it helped. Then they use the Keep it going card to decide what happens next, and tell someone in 60 seconds what the problem was, what they did and what happened.",
-      "you": "Help them find someone real to tell, just outside their comfort zone. Then tell them exactly what you saw them do.",
+      "kid": "Your kid goes back to the person they asked and finds out if it helped. Then they use the Keep it going card to decide what happens next, and write a short note to the person they helped: what they did and what's next.",
+      "you": "Help them get the note to the right person. Then tell them exactly what you saw them do.",
       "ask": [
         "How do you know it helped?",
         "Who could keep this going without you?"
@@ -162,7 +162,7 @@
       "tip": "'A little' and 'I'm not sure' are honest answers. Write those down too.",
       "levels": {
         "explore": "Ask one person if it helped, and say one thing you'd change.",
-        "develop": "Tell someone outside the family what happened, and choose how to keep it going.",
+        "develop": "Write a note to the person you helped, and choose how to keep it going.",
         "extend": "Write down who does what and how often, and hand it over to someone who'll keep it going."
       }
     }
@@ -188,7 +188,7 @@
           },
           {
             "k": "Groups:",
-            "v": "team, club, class"
+            "v": "team, club, choir"
           },
           {
             "k": "Travelling:",

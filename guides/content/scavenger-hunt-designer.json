@@ -127,7 +127,7 @@
         "Could someone who's never been here follow this?",
         "What's the hint if they get stuck?"
       ],
-      "tip": "Work backwards. Write the last clue first, then keep going back to the start, so each one points to the right place.",
+      "tip": "Work backwards: write the last clue first, then the one before it, all the way to the start.",
       "levels": {
         "explore": "Write or draw five clues that describe each spot.",
         "develop": "Write eight clues using at least two clue types.",
@@ -154,7 +154,7 @@
       "title": "Test it, run it, make it better",
       "why": "Nothing survives first contact with real players. That's the fun part.",
       "kid": "Your kid walks the route and tests every clue, then hides them and runs the event: gives the welcome, starts the clock, gives hints and hands out the prize. Afterwards they collect every clue, ask the players what to change, and make the next round better.",
-      "you": "Be a real player and play to win. Throw in a surprise if it's going too smoothly. Save your feedback for the end, and start with what worked.",
+      "you": "Be a real player and play to win. Throw in a surprise from the Hiccups card if it's going too smoothly. Save your feedback for the end, and start with what worked.",
       "ask": [
         "Which clue was the favourite, and why?",
         "Where did people get stuck?"
@@ -306,10 +306,10 @@
   ],
   "conclusion": {
     "headline": "They ran the whole thing, and everyone had fun because of it.",
-    "text": "Watch how they talk about it afterwards. If they're already saying 'Next time, I'd put that clue later' or planning one for the cousins, they've started thinking like someone who makes things happen for other people.",
+    "text": "Listen while they gather up the clues. If they're already saying 'Next time, I'd put that clue later' or planning one for the cousins, they've started thinking like someone who makes things happen for other people.",
     "celebrate": "Ask them to take a bow at the finish, and say: 'You made this whole afternoon happen.'",
     "extensions": [
-      "Design a hunt for a birthday party or a family visit",
+      "Design a hunt for players who can't read yet: pictures, sounds and colours only",
       "Make a hunt for a new place you're visiting",
       "Build a hunt around a story they've written",
       "Swap hunts with another family and play each other's"
@@ -320,7 +320,7 @@
     "They test their ideas on people before they call them done",
     "They offer to plan the next family event"
   ],
-  "makeItReal": "Hand them the next family celebration: they design a hunt for the birthday kid or the visiting grandparents.",
+  "makeItReal": "Hand them the next family celebration: they design a hunt for the birthday kid or friends coming over.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

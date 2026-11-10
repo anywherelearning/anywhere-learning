@@ -75,7 +75,7 @@
       },
       {
         "part": "Fix",
-        "line": "A second bin near the picnic tables, or emptying it on Monday."
+        "line": "A second bin near the picnic tables, or an extra pickup on Friday afternoon."
       },
       {
         "part": "Ask",
@@ -136,7 +136,7 @@
     {
       "title": "Design the simplest fix",
       "why": "The fix that gets done beats the perfect one that doesn't.",
-      "kid": "Your kid comes up with at least two fixes, then picks the simplest one that could really work. They write down what it needs, who would have to agree and how long it would take, then fill in the Proposal page in the Spotter Toolkit.",
+      "kid": "Your kid comes up with at least two fixes, then picks the simplest one that could really work. They write down what it needs, who would have to agree and how long it would take, then fill in the Proposal page at the end of the guide.",
       "you": "Ask 'How would that actually work?' Then play the other side: 'There's no money for this' or 'My neighbour likes it the way it is.' Let them answer.",
       "ask": [
         "What would it cost, and who would pay?",
@@ -305,7 +305,7 @@
   ],
   "conclusion": {
     "headline": "They'll never walk that street the same way again.",
-    "text": "Watch what happens on your next walk. If they point at something and say 'Why is it like that?' or 'Who looks after that?', they've started to see their neighbourhood as something people make, and something they can have a say in.",
+    "text": "Walk the same loop in a month. If they point at something and say 'Why is it like that?' or 'Who looks after that?', they've started to see their neighbourhood as something people make, and something they can have a say in.",
     "celebrate": "Go back together to the spot it all started and do their small fix there. Then say: 'You noticed this. Most people just walk by.'",
     "extensions": [
       "Do the same walk in a different neighbourhood and compare",

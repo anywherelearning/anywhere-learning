@@ -4,7 +4,7 @@
   "title": "Outdoor Survival Planner",
   "tagline": "Priorities · Supplies · Skills · Trip plan",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid works through an outdoor emergency the calm way. They pick a scenario, put the priorities in order, work out what they could use around them, practise real skills outside with you, handle a change of plan, then write the plan your family takes on its next real outing.",
+  "goal": "Your kid works through an outdoor emergency the calm way. They pick a scenario, put the priorities in order, work out what they could use around them, practise real skills outside with you, set turn-back rules, then write the plan your family takes on its next real outing.",
   "need": [
     "An outdoor space: a yard, a park or a trail",
     "Sticks and leaves, or a tarp and some rope",
@@ -43,7 +43,7 @@
       },
       {
         "when": "Session 3",
-        "what": "Change the plan and write the real trip plan (Step 5)."
+        "what": "Set turn-back rules and write the real trip plan (Step 5)."
       }
     ],
     "tips": [],
@@ -99,13 +99,13 @@
       "levels": {
         "explore": "Pick one scenario and draw or describe what's happening around you.",
         "develop": "Pick two scenarios and compare the biggest challenge in each.",
-        "extend": "Rank all five from easiest to hardest to handle, and defend the order."
+        "extend": "Rank all four from easiest to hardest to handle, and defend the order."
       }
     },
     {
       "title": "Put the priorities in order",
       "why": "Most people think about food first. It's almost always last.",
-      "kid": "Your kid uses the Priorities card to decide what comes first in their scenario, and why. Then they check whether their scenario changes the usual order, like water moving up on a very hot day.",
+      "kid": "Your kid uses the Priorities card to decide what comes first in their scenario, and why. Then they check whether their scenario changes the usual order, like water moving up on a very hot day. If the scenario is Lost, they check their order against the If you're lost card.",
       "you": "Ask 'Why that first?' and hold your answer for a minute. Being wrong and working it out sticks much better than being told.",
       "ask": [
         "Why does staying warm come before eating?",
@@ -127,7 +127,7 @@
         "What could this become if you needed it to?",
         "Which priority does it help with?"
       ],
-      "tip": "A garbage bag weighs almost nothing and can be a rain poncho, a ground sheet or a shelter roof.",
+      "tip": "A garbage bag weighs almost nothing and can be a rain poncho, a ground sheet or a shelter roof. Cut a face hole, and never put a bag over anyone's head.",
       "levels": {
         "explore": "Pick five things around you and say how each one could help.",
         "develop": "List everything in your scenario and match each one to a priority.",
@@ -140,7 +140,7 @@
       "kid": "Your kid goes outside with you and tries real skills from the Skills to try card: a shelter from sticks or a tarp, three whistle blasts, finding the way back using landmarks, or a ground signal you could see from far away. Then they test each one.",
       "you": "Be the tester. Pour a cup of water on the shelter roof with them inside, or walk away until you can't hear the whistle. Do this one with them, start to finish.",
       "ask": [
-        "What was harder than you expected?",
+        "What would fail first in real weather?",
         "How would you build it differently now?"
       ],
       "tip": "Skip real fires and tasting anything wild. Those stay out of this project.",
@@ -151,19 +151,19 @@
       }
     },
     {
-      "title": "When the plan changes",
-      "why": "Plans change. The calm person is the one who's already thought about it.",
-      "kid": "You announce a change from the Changes line of the Scenarios card, and your kid reworks the plan. Then they turn everything into a real Trip plan for your next outing: where you're going, when you'll be back, who knows, and what each person carries.",
-      "you": "Throw in the change with no warning. Then go on the outing, leave the plan with someone at home, and let them check it at the trailhead.",
+      "title": "Set your turn-back rules",
+      "why": "Deciding when to turn around is easiest before you're tired.",
+      "kid": "Your kid writes three turn-back rules for your next outing, starting from the Turn back line of the Scenarios card. Then they turn everything into a real Trip plan: where you're going, when you'll be back, who knows and what each person carries.",
+      "you": "Go on the outing and leave the plan with someone at home. Let them check the rules at the trailhead and again halfway.",
       "ask": [
-        "Does this change the first thing you'd do?",
+        "What would make us turn back?",
         "Who needs to know where we are today?"
       ],
       "tip": "The most useful survival skill is boring: telling someone where you're going and when you'll be back.",
       "levels": {
-        "explore": "Hear one change and say what you'd do differently. Pick what goes in your own pack.",
-        "develop": "Handle two changes, then fill in the Trip plan.",
-        "extend": "Handle every change, write a worst-case plan and teach the If you're lost card to someone younger."
+        "explore": "Pick one turn-back rule, and choose what goes in your own pack.",
+        "develop": "Write three turn-back rules, then fill in the Trip plan.",
+        "extend": "Write a worst-case plan, and teach the If you're lost card to someone younger."
       }
     }
   ],
@@ -191,8 +191,8 @@
             "v": "a twisted ankle, far from the car"
           },
           {
-            "k": "Changes:",
-            "v": "dark comes early, bottle leaks, someone wants to split up"
+            "k": "Turn back if:",
+            "v": "it's past 3 pm, there's thunder, someone can't keep going"
           }
         ],
         "ask": "What's the biggest danger here?"
@@ -306,7 +306,7 @@
   ],
   "conclusion": {
     "headline": "They know what to do now, and that's a calm feeling.",
-    "text": "Watch them on your next outing. If they look back at the trail to name a landmark, ask who knows where you're going, or check there's a whistle in the pack, the thinking has come with them.",
+    "text": "Let them lead the first ten minutes of your next trail. If they look back at the trail to name a landmark, ask who knows where you're going, or check there's a whistle in the pack, the thinking has come with them.",
     "celebrate": "Clip the whistle to their pack for good and say: 'You know what to do now. That's yours to keep.'",
     "extensions": [
       "Plan for a different season in the same place",

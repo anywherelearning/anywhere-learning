@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need to be organized yourself. Your job is to be honest about your own day and to keep asking 'Is that a best-brain job?' instead of fixing their plan. Track your own energy too. Kids love finding out exactly when you run out.",
+    "intro": "You don't need to be organized yourself. Your job is to be honest about your own day and to keep asking 'Is that a best-brain job?' instead of fixing their plan. Track your own energy too, and compare lines at supper.",
     "plan": [
       {
         "when": "Day 1",
@@ -92,7 +92,7 @@
       "kid": "Your kid sets a timer for five minutes and writes down everything in an ordinary day, including the doing nothing. They use the Where the day hides card in the Energy Toolkit at the end of the guide, then mark each one must, should or want.",
       "you": "Walk them through it: 'What's the very first thing you do?' Make sure the real stuff goes on the list, not only what sounds useful. Then share your own honest list.",
       "ask": [
-        "What takes longer than you think it does?",
+        "What's the smallest thing that eats the most time?",
         "What happens in between things?"
       ],
       "tip": "Ask them to guess how long getting dressed really takes, then time it tomorrow.",
@@ -131,7 +131,7 @@
       "levels": {
         "explore": "Sort four jobs into two piles, best brain and tired brain.",
         "develop": "Label every job and put each one on your line, then circle anything that clashes.",
-        "extend": "Label every job and decide what has to happen first, and what you'd drop if two things clash."
+        "extend": "Label every job and decide what has to happen first, and what you'd drop if the day gets short."
       }
     },
     {
@@ -143,7 +143,7 @@
         "Where's your gap if something runs long?",
         "What are you looking forward to at the end?"
       ],
-      "tip": "End the plan with something easy or fun. It makes it much more likely they'll start it.",
+      "tip": "End the plan with something easy or fun. It gives them something to work toward.",
       "levels": {
         "explore": "Plan one morning or afternoon in three or four blocks, with one gap.",
         "develop": "Plan a full day with six blocks, a gap after each one and some empty time.",
@@ -306,13 +306,13 @@
   ],
   "conclusion": {
     "headline": "They know when they've got the most to give.",
-    "text": "You'll hear it in how they talk about their day. If they say 'I'll do that in the morning' or 'I'm a 2 right now, I need a minute', they've started to read themselves.",
+    "text": "Their words change first. If they say 'I'll do that in the morning' or 'I'm a 2 right now, I need a minute', they've started to read themselves.",
     "celebrate": "When they save a hard thing for the right time and it goes well, say: 'You knew exactly when to do that.'",
     "extensions": [
       "Plan a family day out around everyone's low points",
-      "Compare an ordinary day with a travel day",
+      "Track the day after a late night and compare",
       "Try one new reset each week and keep score",
-      "Ask a grandparent when they do their best thinking, and whether it's changed"
+      "Plan a day around the youngest person's low point"
     ]
   },
   "signs": [

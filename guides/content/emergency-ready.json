@@ -4,7 +4,7 @@
   "title": "Emergency Ready Challenge",
   "tagline": "Two minutes · Three days · One plan",
   "ages": "Ages 8 to 14",
-  "goal": "Your kid builds your family's emergency plan for real: a map with two ways out of every room, a meeting spot, a fire drill you actually run, a three-day stay-home kit with the water worked out, and a contact card in every pocket. Planning, maths and calm thinking, for the kind of day nobody wants and every family should be ready for.",
+  "goal": "Your kid builds your family's emergency plan for real: a map with two ways out of every room, a meeting spot, a fire drill you actually run, a three-day stay-home kit with the water worked out, and a contact card in every pocket. Planning, math and calm thinking, for the kind of day nobody wants and every family should be ready for.",
   "need": [
     "Paper and a pencil, and a timer",
     "Your home and its smoke alarms (and a step stool to reach them)",
@@ -121,8 +121,8 @@
     {
       "title": "Build the two-minute plan, then run the drill",
       "why": "When the alarm goes, there's no time to think. The thinking happens now.",
-      "kid": "Your kid writes the fire plan: the nearest safe way out, crawl low under smoke, close doors behind you, meet at one spot outside and never go back in. They give everyone a job, like who helps the youngest. Then the whole family runs the drill while they time it.",
-      "you": "Start the drill with the alarm test button and walk it with everyone. Teach the rule that matters most: once you're out, stay out, and call the emergency number from outside.",
+      "kid": "Your kid writes the fire plan: the nearest safe way out, crawl low under smoke, close doors behind you, feel a door with the back of your hand before opening it, meet at one spot outside and never go back in. They give everyone a job, like who helps the youngest. Then the whole family runs the drill while they time it.",
+      "you": "Start the drill with the alarm test button and walk it with everyone. Once you're out, you stay out and call the emergency number from outside.",
       "ask": [
         "Where do we meet, and why there?",
         "What's the one thing you never go back in for?"
@@ -136,7 +136,7 @@
     },
     {
       "title": "Pack the three-day kit",
-      "why": "If the power is out for three days, the plan is mostly maths.",
+      "why": "If the power is out for three days, the plan is mostly math.",
       "kid": "Your kid works out what the family needs to stay home for three days without power or running water, using the Three-day kit card. Water first: people × litres per day × 3 days. Then they gather what's already in the house in one bag or bin, and list what's missing.",
       "you": "Help them find what's at home before anything gets bought, and add what only you can: medications and copies of important documents. Pick a spot for the kit everyone can reach.",
       "ask": [
@@ -183,8 +183,8 @@
             "v": "open easily, not stuck or painted shut"
           },
           {
-            "k": "Smoke alarms:",
-            "v": "in bedrooms, outside sleeping areas, every level"
+            "k": "Alarms:",
+            "v": "smoke and carbon monoxide, on every level"
           },
           {
             "k": "Path:",
@@ -311,11 +311,11 @@
   "conclusion": {
     "headline": "Everyone knows where to meet.",
     "text": "Any day this month, ask how they'd get out of their room if the door were blocked. They should answer without stopping to think. That quick answer is what the drill was for.",
-    "celebrate": "After the timed drill, tell them the number and what it means: 'Everyone out in 48 seconds. You made that plan.'",
+    "celebrate": "After the timed drill, tell them the number and what it means: 'Everyone out in 52 seconds. You made that plan.'",
     "extensions": [
       "Run the drill at night, as fire departments recommend",
       "Make a smaller kit for the car",
-      "Plan for another home: a cabin, a rental, a grandparent's",
+      "Plan for another home: a cabin, a rental, wherever you stay most",
       "Check the kit every six months and swap anything that expires"
     ]
   },

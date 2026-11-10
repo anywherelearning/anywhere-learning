@@ -91,7 +91,7 @@
       "title": "Set up the lab",
       "why": "Good science starts with careful looking.",
       "kid": "Your kid sets up a lab corner on a tray and labels five cups with the names of the suspects: baking soda, baking powder, cornstarch, sugar and salt. They put a spoonful in each, then look closely, rub a pinch between their fingers and write down what they notice about each one.",
-      "you": "Go over the Lab rules in the Lab Toolkit at the end of the guide together: no tasting, a tray under everything, a grown-up for anything hot.",
+      "you": "Go over the lab rules together: no tasting, a tray under everything, a grown-up for anything hot.",
       "ask": [
         "Which two look the most alike?",
         "Could you tell them apart just by looking?"
@@ -106,7 +106,7 @@
     {
       "title": "Make the colour-changing juice",
       "why": "Some liquids are acids, some are bases. Cabbage can tell.",
-      "kid": "Your kid chops up red cabbage. A grown-up pours hot water over it, and after 15 to 30 minutes it turns purple. Strain it. First they add a splash to plain water: that's the 'nothing happening' colour to compare against. Then they test lemon juice, vinegar and baking soda water, and line the cups up by colour using the Cabbage colours card in the Lab Toolkit at the end of the guide.",
+      "kid": "Your kid chops the cabbage, you pour hot water over it, and after 15 to 30 minutes they strain out a purple juice. They add a splash to plain water first: that's the 'nothing happening' colour. Then they test lemon juice, vinegar and baking soda water, and line the cups up using the Cabbage colours card in the Lab Toolkit at the end of the guide.",
       "you": "Handle the hot water. Then step back and let them name the colours.",
       "ask": [
         "What colour did the lemon juice turn it?",
@@ -132,14 +132,14 @@
       "levels": {
         "explore": "Run 2 tests on every powder.",
         "develop": "Run all 4 tests and fill in the whole table.",
-        "extend": "Design a fifth test that tells sugar from salt without tasting, and add it to the table."
+        "extend": "Design a fifth test that tells sugar from salt without tasting or heat, like what's left when the water dries."
       }
     },
     {
       "title": "Solve the mystery powder",
       "why": "Now the table becomes a tool.",
-      "kid": "While your kid looks away, you put a spoonful of one suspect in a cup marked 'Mystery'. Your kid uses their results table and the Clue key card to pick which test to run first, then the next, until only one suspect is left. The challenge: solve it in as few tests as possible.",
-      "you": "Keep the secret. If sugar and salt are the last two left, run the heat test with them: a pinch of each in a dry pan on low heat. Sugar melts and turns brown. Salt does nothing.",
+      "kid": "While your kid looks away, you put a spoonful of one suspect in a cup marked 'Mystery'. They use their results table and the Clue key card to choose each test until only one suspect is left, in as few tests as possible.",
+      "you": "Keep the secret. If it's down to sugar and salt, do the heat test yourself: a pinch of each in a dry pan on low. Sugar melts and browns, salt doesn't. Melted sugar burns badly, so no touching.",
       "ask": [
         "What did that test rule out?",
         "Why did you pick that test first?"
@@ -154,7 +154,7 @@
     {
       "title": "Ask your own question",
       "why": "Real scientists test questions nobody handed them.",
-      "kid": "Your kid picks a 'what would happen if' question from the Question ideas card or their own, like does warm vinegar fizz more than cold? They change just one thing, keep everything else the same using the Fair test card, predict, run it and share what they found with the family like a real scientist.",
+      "kid": "Your kid picks a 'what would happen if' question from the Question ideas card or their own, like does warm vinegar fizz more than cold? They change just one thing, keep everything else the same using the Fair test card, predict, run it and share what they found with the family like a real scientist. Then they fill in Mystery solved at the end of the guide.",
       "you": "Treat their question like real research. Ask what they're changing and what stays the same.",
       "ask": [
         "What's the one thing you're changing?",
@@ -270,12 +270,12 @@
       }
     ],
     "after": {
-      "label": "Lab rules",
+      "label": "Mystery solved",
       "lines": [
-        "No tasting, ever.",
-        "A tray under everything.",
-        "A grown-up for anything hot.",
-        "Label every cup."
+        "The mystery powder was",
+        "Tests I ran, in order",
+        "What each test ruled out",
+        "My own question and what happened"
       ]
     }
   },
@@ -305,12 +305,12 @@
       "Test a pantry mix, like pancake mix, and work out which suspects are inside",
       "Use the cabbage juice to test every drink in the fridge",
       "Write up a one-page lab report with a chart",
-      "Set a mystery for a friend or grandparent to solve"
+      "Add a sixth suspect, like flour, and find a test that tells it apart"
     ]
   },
   "signs": [
     "They ask 'how do you know?' about everyday claims",
-    "They change one thing at a time when something doesn't work",
+    "They ask for a control before they trust a result",
     "They notice small differences other people miss"
   ],
   "makeItReal": "If the bread doesn't rise or the cookies spread flat, ask what changed, and let them pick one thing to change on the next batch.",

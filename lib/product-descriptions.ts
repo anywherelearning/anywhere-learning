@@ -1134,7 +1134,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A 5-step guide from what keeps bugging you to Version 2',
       'A worked example that shows why trying harder never lasts',
       'Everyday problems card and Why questions card',
-      'Idea starters card and The tests card',
+      'Idea starters card and Tired-day tests card',
       'My fix page to fill in and keep',
     ],
     skillTags: ['Problem-Solving', 'Critical Thinking', 'Creativity', 'Testing', 'Independence'],
@@ -1229,7 +1229,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
         'Your child finds out that helping starts with asking. They talk to real people, do something small and useful with their own hands, then go back to see if it made a difference and who could keep it going.',
       skills: [
         { skill: 'Citizenship', where: 'Noticing who could use a hand and choosing to do something about it' },
-        { skill: 'Communication', where: 'Asking real people what would help and telling someone what happened' },
+        { skill: 'Communication', where: 'Asking real people what would help and writing to them afterwards' },
         { skill: 'Planning', where: 'Working out the smallest useful thing and who has to say yes' },
         { skill: 'Math', where: 'Counting and timing what changed from before to after' },
         { skill: 'Follow-Through', where: 'Going back to check and deciding how to keep it going' },
@@ -2023,7 +2023,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       '5 steps from walking the house to a surprise drill',
       'Two ways out of every room, mapped and tested',
       'A timed fire drill and a meeting spot',
-      'Three-day kit maths: people × litres × days',
+      'Three-day kit math: people × litres × days',
       'Contact cards and twist cards in a Ready Toolkit',
     ],
     skillTags: ['Critical Thinking', 'Life Skills', 'Planning', 'Decision-Making', 'Resilience'],
@@ -2114,7 +2114,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'outdoor-survival-planner': {
     opening:
-      'Your child learns what to do when something goes wrong outside, the calm way. They pick a scenario like a lost trail or a storm, put the priorities in order, work out what they could use around them and practise real skills with you. Then they handle a change of plan and write the trip plan your family takes on its next outing.',
+      'Your child learns what to do when something goes wrong outside, the calm way. They pick a scenario like a lost trail or a storm, put the priorities in order, work out what they could use around them and practise real skills with you. Then they set turn-back rules and write the trip plan your family takes on its next outing.',
     whatsIncluded: [
       'A 5-step guide from choosing a scenario to a real trip plan',
       'A worked example of what to do if you get lost',
@@ -2129,7 +2129,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       skills: [
         { skill: 'Critical Thinking', where: 'Deciding what comes first and when the usual order changes' },
         { skill: 'Planning', where: 'Writing a real trip plan and leaving it with someone at home' },
-        { skill: 'Problem-Solving', where: 'Turning ordinary things into what they need and handling a change of plan' },
+        { skill: 'Problem-Solving', where: 'Turning ordinary things into what they need and setting turn-back rules' },
         { skill: 'Science', where: 'Weather, body heat and how to stay warm and dry' },
         { skill: 'Geography', where: 'Using landmarks and directions to read a place' },
       ],

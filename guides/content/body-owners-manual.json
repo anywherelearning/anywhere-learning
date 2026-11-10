@@ -97,7 +97,7 @@
       ],
       "tip": "Have them put a hand flat on their chest first. Feeling the beat there makes it much easier to find at the wrist.",
       "levels": {
-        "explore": "Find your pulse and count it for a whole minute while someone times it.",
+        "explore": "Count your pulse for 15 seconds while a grown-up times it, then work out the minute together.",
         "develop": "Take your heart rate and breaths three times, and write down the middle number.",
         "extend": "Take your resting heart rate at three times of day, and explain why it changes."
       }
@@ -109,7 +109,7 @@
       "you": "Pick something safe for the space and keep it to one minute. Time it while they count, then do it yourself and compare.",
       "ask": [
         "How much did your heart jump?",
-        "What do you think it was doing in there?"
+        "Why do you think it sped up?"
       ],
       "tip": "Count the second they stop. The number starts dropping right away.",
       "levels": {
@@ -122,12 +122,12 @@
       "title": "Find the edges of your senses",
       "why": "Your senses have limits, and you can find exactly where they are.",
       "kid": "Your kid picks tests from the Sensor tests card, like finding their blind spot, naming foods by smell with their eyes closed or finding how far away a whisper still works. For each one, they write down exactly where the edge is.",
-      "you": "Set up each test the same way every time, and be the one who whispers or holds the food. Tell them what's going on: the blind spot is where the nerve leaves the eye, so there's nothing there to see with.",
+      "you": "Set up each test the same way every time, and be the one who whispers or holds the food. Tell them the blind spot is where the nerve leaves the eye. Check for food allergies first.",
       "ask": [
         "Which sense turned out sharper or stranger than you thought?",
-        "What changed the number?"
+        "Where exactly did it stop working?"
       ],
-      "tip": "Do the smell test with their nose held, then open. A lot of what we call taste turns out to be smell.",
+      "tip": "Try a taste test with their nose held, then let go. A lot of what we call taste turns out to be smell.",
       "levels": {
         "explore": "Run one sense test and say what surprised you.",
         "develop": "Test three senses and write down exactly where each edge is.",
@@ -318,7 +318,7 @@
   "signs": [
     "They measure before they guess",
     "They notice what their body is telling them",
-    "They test it before they believe it"
+    "They notice when their body is telling them to slow down"
   ],
   "makeItReal": "Keep the manual somewhere handy and add a new reading whenever they grow, run further or catch the ruler faster.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",

@@ -141,7 +141,7 @@
     {
       "title": "Pick one and build it",
       "why": "The best idea is the one you'll still do when you're tired.",
-      "kid": "Your kid runs their circled ideas through The tests card and picks one. Then they fill in My fix at the end of the guide and build it for real: a hook, a label, a box, a checklist, an alarm.",
+      "kid": "Your kid runs their circled ideas through Tired-day tests card and picks one. Then they fill in My fix at the end of the guide and build it for real: a hook, a label, a box, a checklist, an alarm.",
       "you": "Steer them toward simple, and help with anything that needs a drill. Otherwise let it be a bit wonky. Help them pick something to count.",
       "ask": [
         "What could you build in ten minutes?",
@@ -161,7 +161,7 @@
       "you": "Don't remind them, because reminding ruins the test. Check in after a few days and ask what they noticed.",
       "ask": [
         "Did it work on the tired day?",
-        "What's the smallest change that would help the most?"
+        "What one change would help the most?"
       ],
       "tip": "Count before and after, even roughly. Finding your shoes in ten seconds is very satisfying.",
       "levels": {
@@ -254,7 +254,7 @@
         "ask": "What would make it easy?"
       },
       {
-        "name": "The tests",
+        "name": "Tired-day tests",
         "lines": [
           {
             "k": "This week:",
@@ -285,7 +285,7 @@
       "lines": [
         "The problem",
         "Because",
-        "My fix",
+        "What I built",
         "What I'll count"
       ]
     }
@@ -316,7 +316,7 @@
       "Solve a shared family problem the same way, like what's for supper",
       "Turn your fix into a seven-day challenge and track it",
       "Make a list of three small systems that make life easier",
-      "Help a friend or a grandparent fix something that bugs them"
+      "Spot a fix someone else made, like a hook or a label, and work out the problem it solved"
     ]
   },
   "signs": [

@@ -137,8 +137,8 @@
     {
       "title": "Run the day",
       "why": "This is the part you can't learn from a list.",
-      "kid": "Your kid runs Swap Day: following the plan, checking things off and noting what took longer. When something goes wrong, they decide what to do, using the Interruptions card if the day is going too smoothly.",
-      "you": "Clock in as the employee. Ask 'What would you like me to do next?' Stay in the kitchen for anything with heat or knives. Otherwise only step in for safety, or when you're asked.",
+      "kid": "Your kid runs Swap Day: following the plan, checking things off and noting what took longer. When something goes wrong, they decide what comes first.",
+      "you": "Clock in as the employee. Ask 'What would you like me to do next?' Stay in the kitchen for anything with heat or knives. Otherwise only step in for safety, or when you're asked. If the day is going too smoothly, pull one from the Interruptions card.",
       "ask": [
         "How's it going compared to the plan?",
         "When two things clash, what comes first?"
@@ -306,7 +306,7 @@
   ],
   "conclusion": {
     "headline": "They've run the place, and now they know what it takes.",
-    "text": "Watch the week after. If they notice the dishwasher is full, write something on the list, or ask 'Do you need help with that?', they've started to see the work that used to be invisible.",
+    "text": "The week after is the real test. If they notice the dishwasher is full, write something on the list, or ask 'Do you need help with that?', they've started to see the work that used to be invisible.",
     "celebrate": "When you all sit down that night, say: 'Thank you for today. I know exactly what that took.'",
     "extensions": [
       "Swap with a sibling and compare how each of you ran the day",
@@ -317,7 +317,7 @@
   },
   "signs": [
     "They notice what needs doing without being asked",
-    "They say thank you for things they used not to see",
+    "They say thank you for work they never used to notice",
     "They think about what has to happen first"
   ],
   "makeItReal": "They keep one job from Swap Day for good, and that includes remembering it.",

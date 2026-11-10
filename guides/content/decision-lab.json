@@ -2,7 +2,7 @@
   "slug": "decision-lab",
   "category": "Planning & Problem-Solving",
   "title": "What Would You Do? Decision Lab",
-  "tagline": "Gut · Options · Weigh · Decide",
+  "tagline": "Gut · Options · Follow · Decide",
   "ages": "Ages 6 to 14",
   "goal": "Your kid takes on tough little decisions, the kind with no easy answer. They say their gut reaction, find the options nobody mentioned, follow each one to see who it touches, decide and hold up under pressure, then use what they learned on a real decision of their own.",
   "need": [
@@ -99,7 +99,7 @@
       "levels": {
         "explore": "Pick two situations and say or draw what you'd do.",
         "develop": "Pick four, at least two of them tough. Write your answer and who else it affects.",
-        "extend": "Pick six, add one from your own life, and predict what most people would choose."
+        "extend": "Rewrite one easy call so it becomes a tough choice, and say what changed it."
       }
     },
     {
@@ -137,7 +137,7 @@
     {
       "title": "Decide, then get pushed",
       "why": "It's easy to decide when nothing's pushing back.",
-      "kid": "Your kid stands on the option they choose, says why and gives their sureness out of 10. Then you lean on them with something from the Pressure card and they decide again, and say whether it changed their mind or just made it harder.",
+      "kid": "Your kid stands on the option they chose, says why and rates how sure they are out of 10. Then you push back with something from the Pressure card, and they decide again: did it change their mind, or just make it harder?",
       "you": "Listen to the reasoning, not the answer. Then play the friend and really lean on them. Afterwards, tell them which part of their thinking you noticed.",
       "ask": [
         "What's the main reason behind your choice?",
@@ -146,7 +146,7 @@
       "tip": "Save Two minutes for last. Set a timer and notice together what rushing does to good thinking.",
       "levels": {
         "explore": "Pick your option, say why in one sentence and have someone lean on you once.",
-        "develop": "Pick, explain, add a backup plan, and face the pressure on two situations.",
+        "develop": "Pick, explain, add the option you'd pick second, and face the pressure on two situations.",
         "extend": "Argue your choice with someone who disagrees, face a different pressure each time and name the one that's hardest for you."
       }
     },
@@ -157,7 +157,7 @@
       "you": "Hand over one decision that's truly theirs, and let the result stand. Tell them about a hard decision of your own too, and what you'd do now.",
       "ask": [
         "Which question made the biggest difference?",
-        "What would you tell yourself from the beginning?"
+        "What would you tell yourself before you started?"
       ],
       "tip": "Pick something small enough to live with if it goes badly. That's where most of the learning is.",
       "levels": {
@@ -310,7 +310,7 @@
     "celebrate": "When they tell you how the real decision went, however it went, say: 'You thought that through yourself.'",
     "extensions": [
       "Write three new situations to try on a friend or a sibling",
-      "Ask a grandparent about the hardest decision they've made, and map it",
+      "Keep a decision journal for a month: the call, how sure you were out of 10 and how it turned out",
       "Find a hard choice in a book or a film and argue what should have happened",
       "Make Decision of the Week a family habit"
     ]

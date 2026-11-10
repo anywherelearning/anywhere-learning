@@ -49,7 +49,7 @@
     "troubleshoot": [
       {
         "q": "Nothing's broken at our house",
-        "a": "Listen for squeaks and look for wobbles and sticky drawers. Or ask a grandparent or neighbour for their list."
+        "a": "Listen for squeaks and look for wobbles and sticky drawers. Or check the bikes, the car's wiper blades or the garden tools."
       },
       {
         "q": "It can't be fixed",
@@ -305,11 +305,11 @@
   ],
   "conclusion": {
     "headline": "Something works again, and they're the reason.",
-    "text": "Watch what happens the next time something stops working. If they ask 'Is it plugged in? Is it loose?' before 'Can we buy a new one?', the detective habit has stuck.",
+    "text": "Next time the remote dies, say nothing. If they ask 'Is it plugged in? Is it loose?' before 'Can we buy a new one?', the detective habit has stuck.",
     "celebrate": "Use the fixed thing together right away and say: 'This was broken this morning. You found out why.'",
     "extensions": [
-      "Take apart something already broken, unplugged with the batteries out, to see how it worked",
-      "Fix something for a grandparent or a neighbour",
+      "Sew a button back on or patch a hole, and log it",
+      "Fix something on the bikes or the garden tools",
       "Keep a family fix-it log for a month",
       "Learn one bike repair, like putting a chain back on"
     ]
