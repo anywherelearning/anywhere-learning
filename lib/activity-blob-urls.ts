@@ -130,7 +130,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "time-energy-planner": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Time%20%26%20Energy%20Planner%20v8.pdf",
   "trade-it-up": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Trade%20It%20Up%20v7.pdf",
   "trail-guide-creator": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Trail%20Guide%20Creator%20v6.pdf",
-  "transport-navigation-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Transport%20%26%20Navigation%20Challenge%20v2.pdf",
+  "transport-navigation-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Transport%20%26%20Navigation%20Challenge%20v3.pdf",
   "travel-day": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Travel%20Day%20Itinerary%20Challenge%20v5.pdf",
   "travel-reflection-postcards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20Travel%20Reflection%20%26%20Postcards%20v2.pdf",
   "two-minute-story": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20The%20Two%20Minute%20Story%20v6.pdf",

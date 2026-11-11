@@ -2162,7 +2162,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: null,
     ageRange: "Ages 6–14",
     sortOrder: 206,
-    active: true,
+    active: false, // retired Nov 2026: merged into transport-navigation-challenge
     createdAt: new Date("2026-04-30"),
   },
   {
@@ -2170,15 +2170,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Transport & Navigation Challenge",
     slug: "transport-navigation-challenge",
     description:
-      "Navigate a new place using local transport. Kids read maps, decode public transport systems, plan routes, and practise getting from A to B in unfamiliar territory. Independence, problem-solving, and real-world geography skills built through real journeys.",
+      "Your kid works out how to get the family to a real place you want to reach while you travel. They find out how people get there, compare the options and the prices, plan each leg and help book it, then lead the family there on the day and handle whatever changes. Back where you are staying, they draw the whole route from memory.",
     shortDescription:
-      "Worldschooling navigation challenge for kids ages 6-14: read maps, decode transport, and plan real routes in new places.",
+      "Worldschooling navigation challenge for kids ages 6-14: find the way in, compare and book the trip, then lead the family there.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TS08jAkIBECpwGmI2C7uWqZ",
     blobUrl: "",
     imageUrl: "/products/transport-navigation-challenge.jpg",
-    previewFile: "Preview Worldschooling - Transport & Navigation Challenge.pdf",
+    previewFile: "Preview Worldschooling - Transport & Navigation Challenge v3.pdf",
     category: "worldschooling",
     isBundle: false,
     bundleProductIds: null,

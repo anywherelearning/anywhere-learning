@@ -122,6 +122,7 @@ const nextConfig: NextConfig = {
       { source: "/shop/people-stories-interview", destination: "/shop/neighbourhood-interview", permanent: true },
       { source: "/shop/everyday-life-comparison", destination: "/shop?track=worldschooling#full-library", permanent: true },
       { source: "/shop/travel-reflection-postcards", destination: "/shop?track=worldschooling#full-library", permanent: true },
+      { source: "/shop/street-explorer-map-maker", destination: "/shop/transport-navigation-challenge", permanent: true },
 
       // Retired seasonal packs (debundled): send to the Outdoor Learning listing.
       {

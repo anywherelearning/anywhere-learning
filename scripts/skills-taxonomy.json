@@ -1146,12 +1146,11 @@
     },
     "transport-navigation-challenge": {
       "canonical": [
-        "Critical Thinking",
+        "Navigation",
         "Geography",
-        "Math",
-        "Observation",
+        "Planning",
         "Problem-Solving",
-        "Self-Direction"
+        "Math"
       ],
       "families": [
         "Critical Thinking & Reasoning",

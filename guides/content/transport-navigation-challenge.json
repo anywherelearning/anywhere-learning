@@ -1,0 +1,341 @@
+{
+  "slug": "transport-navigation-challenge",
+  "category": "Worldschooling",
+  "title": "Transport & Navigation Challenge",
+  "tagline": "Find the way · Compare · Book · Lead",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid works out how to get the family to a real place you want to reach while you travel. They find out how people get there, compare the options and the prices, plan each leg and help book it, then lead the family there on the day and handle whatever changes on the way.",
+  "need": [
+    "A real place you want to reach, that takes a bit of getting to",
+    "A map, on paper or a phone",
+    "The real budget, and the times you need to be back",
+    "A notebook for the route log"
+  ],
+  "academics": [
+    {
+      "subject": "Geography",
+      "text": "maps, routes and how places connect"
+    },
+    {
+      "subject": "Math",
+      "text": "time, distance and cost for the whole family"
+    },
+    {
+      "subject": "Reading",
+      "text": "timetables, bookings and signs"
+    },
+    {
+      "subject": "Social studies",
+      "text": "how people here get around, and why"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is booking it yourself because it's faster. Let them do the searching and the comparing, keep the money and the passports with you, and on the day follow them unless it isn't safe.",
+    "plan": [
+      {
+        "when": "Before the trip",
+        "what": "Find the way in, compare the options and book it (Steps 1 to 3)."
+      },
+      {
+        "when": "The day",
+        "what": "Lead the way (Step 4)."
+      },
+      {
+        "when": "On the way and after",
+        "what": "Handle the change, then map it (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "There's only one way to get there",
+        "a": "Then compare what's left: the time of day, the company, what's included and what it costs for the whole family. There's always a choice inside the one route."
+      },
+      {
+        "q": "They lead us the wrong way",
+        "a": "If it's safe, let them notice it themselves. Ask 'What does your plan say?' and wait. Finding their own way back teaches more than being corrected."
+      },
+      {
+        "q": "Leading the whole trip feels like too much",
+        "a": "Give them one leg to lead, like finding the stop or the meeting point, and lead the rest yourself. Next trip, give them two."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Getting somewhere new is a chain of legs. Each leg needs a way to travel, a place to catch it, a time and a cost, plus a plan for when something changes.",
+    "before": "Let's just get a taxi there.",
+    "model": [
+      {
+        "part": "The way in",
+        "line": "The village is on a river. The only way in is by boat."
+      },
+      {
+        "part": "The choice",
+        "line": "Three tours compared on price and what's included."
+      },
+      {
+        "part": "The legs",
+        "line": "Shuttle from where we're staying, then about 30 minutes by boat."
+      },
+      {
+        "part": "The change",
+        "line": "Heavy rain on the way back. The boat crew handed out ponchos."
+      }
+    ],
+    "modelNote": "A taxi couldn't have reached it at all. Finding out how people really get there turned a guess into a trip that worked."
+  },
+  "steps": [
+    {
+      "title": "Find the way in",
+      "why": "Some places can only be reached one way, and finding that out is the first real piece of navigation.",
+      "kid": "Your kid picks a real place your family wants to reach and reads about it first: what it is, who lives there and how people get there. Then they list every way in on the Ways to get there card in the Navigator Toolkit at the end of the guide, even the ones that seem unlikely.",
+      "you": "Pick a place that's a genuine trip, not around the corner. Sit with them while they search, and ask 'How do the people who live there get to town?'",
+      "ask": [
+        "Is there only one way in, or a few?",
+        "What do we need to know before we go?"
+      ],
+      "tip": "A place with a surprise in the route, like a boat, a cable car or a ferry, makes kids want to work it out.",
+      "levels": {
+        "explore": "Look at a map with a grown-up, and point to where we are and where we want to go.",
+        "develop": "List every way to get there, and find out which ones really run.",
+        "extend": "Find out why the place is reached the way it is: a river, mountains, the roads, or who built them."
+      }
+    },
+    {
+      "title": "Compare the options",
+      "why": "The first option you find is rarely the best one for your family.",
+      "kid": "Your kid compares two or three ways to get there, or two or three tours, using the Compare it card: how long it takes, what it costs for the whole family, what's included and what you'll see on the way. They pick one and say why.",
+      "you": "Give them the real budget and the real limits, like 'back before dark' or 'no more than an hour in a car'. Ask 'What does this one give us that the cheaper one doesn't?'",
+      "ask": [
+        "Which is cheapest for all of us, not just one person?",
+        "What are we paying extra for?"
+      ],
+      "tip": "Prices are often per person. Multiplying by the whole family is usually where the surprise is.",
+      "levels": {
+        "explore": "Compare two options with pictures: which is faster, and which is cheaper?",
+        "develop": "Compare three options for time, cost for the family and what's included, then choose.",
+        "extend": "Work out what each option costs per hour of travel, and decide if the faster one is worth it."
+      }
+    },
+    {
+      "title": "Plan the legs and book it",
+      "why": "Booking is where the plan becomes real, and details like a pickup time suddenly matter.",
+      "kid": "Your kid breaks the trip into legs on the Read the route card: where each leg starts, how you catch it, when it leaves and one landmark to watch for. Then they help book it, reading every line of the confirmation out loud: the date, the time, the meeting point and what to bring.",
+      "you": "You handle the payment and the passports. Let them fill in everything else, then have them read the confirmation back to you.",
+      "ask": [
+        "Where exactly do we get picked up, and when?",
+        "What happens if we're late for the first leg?"
+      ],
+      "tip": "Have them write the meeting point and the time somewhere you'll both see it on the day.",
+      "levels": {
+        "explore": "Draw the trip as a picture strip, like car, then boat, then village.",
+        "develop": "Write each leg with its start, time and landmark, and check the booking matches.",
+        "extend": "Work out the latest time you can leave and still make the first leg, with a buffer."
+      }
+    },
+    {
+      "title": "Lead the way",
+      "why": "Following a plan is easy. Holding one, with the family waiting on you, is the skill.",
+      "kid": "On the day, your kid holds the plan and leads: they check the time, find the pickup or the stop, tell everyone what's next and watch for the landmark that says you're nearly there. If they're unsure, they ask someone, with you beside them.",
+      "you": "Follow them even when you'd go a different way, and step in only for safety. When they hesitate, ask 'What does your plan say?' before you say anything else.",
+      "ask": [
+        "What's the next leg, and how will we know we're there?",
+        "Who could we ask if we're not sure?"
+      ],
+      "tip": "If it's safe, let a small wrong turn happen. Finding the way back is the part they'll remember.",
+      "levels": {
+        "explore": "Hold the picture strip and tell everyone what comes next.",
+        "develop": "Lead every leg, checking the time and the landmarks yourself.",
+        "extend": "Note the real time of each leg as you go, and spot the one that took longest."
+      }
+    },
+    {
+      "title": "Handle the change, then map it",
+      "why": "Something always changes on a trip, and what they do next is the real test.",
+      "kid": "When something changes, like rain, a late bus or a closed road, your kid uses the When plans change card to decide what to do. Back where you're staying, they draw a map of the whole trip from memory, with each leg and landmark, then fill in My route log at the end of the guide.",
+      "you": "Let them make the call on small changes. Afterwards, ask them to draw the map before they look at a real one. What they remember shows you what they noticed.",
+      "ask": [
+        "What changed, and what did you do about it?",
+        "What would you do differently next time?"
+      ],
+      "tip": "Drawing from memory first, then checking a real map, shows them how much they noticed on the way.",
+      "levels": {
+        "explore": "Draw the trip from memory, with three things you saw on the way.",
+        "develop": "Draw the map with every leg and landmark, then fill in the route log.",
+        "extend": "Compare your map with a real one, and work out the real distance of each leg."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Navigator Toolkit",
+    "intro": "Every way to get somewhere, how to compare them, how to read a route and what to do when plans change.",
+    "items": [
+      {
+        "name": "Ways to get there",
+        "lines": [
+          {
+            "k": "Walk:",
+            "v": "free, slow, and you see the most"
+          },
+          {
+            "k": "Local bus:",
+            "v": "cheap, but check where it stops"
+          },
+          {
+            "k": "Shuttle or taxi:",
+            "v": "door to door, for a price"
+          },
+          {
+            "k": "Boat or ferry:",
+            "v": "sometimes the only way in"
+          },
+          {
+            "k": "Train or metro:",
+            "v": "fast, with a map to read"
+          }
+        ],
+        "ask": "Which ways do people who live here use?"
+      },
+      {
+        "name": "Compare it",
+        "lines": [
+          {
+            "k": "Time:",
+            "v": "door to door, waiting included"
+          },
+          {
+            "k": "Cost:",
+            "v": "per person, times the family"
+          },
+          {
+            "k": "Included:",
+            "v": "a guide, a meal, the entry"
+          },
+          {
+            "k": "Comfort:",
+            "v": "heat, rain, sitting still"
+          },
+          {
+            "k": "On the way:",
+            "v": "what you'll see that you'd miss"
+          }
+        ],
+        "ask": "What are we paying extra for?"
+      },
+      {
+        "name": "Read the route",
+        "lines": [
+          {
+            "k": "Start:",
+            "v": "where each leg begins"
+          },
+          {
+            "k": "Catch it:",
+            "v": "the stop, dock, desk or pickup"
+          },
+          {
+            "k": "Leaves:",
+            "v": "the time, and how often"
+          },
+          {
+            "k": "Watch for:",
+            "v": "one landmark near the end"
+          },
+          {
+            "k": "Next:",
+            "v": "what happens when you arrive"
+          }
+        ],
+        "ask": "What's the one detail we can't get wrong?"
+      },
+      {
+        "name": "When plans change",
+        "lines": [
+          {
+            "k": "Late:",
+            "v": "is there a next one, and when?"
+          },
+          {
+            "k": "Missed stop:",
+            "v": "get off at the next one and go back"
+          },
+          {
+            "k": "Rain:",
+            "v": "cover, wait, or change the order"
+          },
+          {
+            "k": "Closed:",
+            "v": "what's the second-best way?"
+          },
+          {
+            "k": "Lost:",
+            "v": "stop, check the plan, ask with a grown-up"
+          }
+        ],
+        "ask": "What's our Plan B for the first leg?"
+      }
+    ],
+    "after": {
+      "label": "My route log",
+      "lines": [
+        "The place and why we went",
+        "Each leg: how, where we caught it, how long",
+        "What changed, and what I did",
+        "What I'd change next time"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Planning",
+      "text": "breaking a trip into legs that work"
+    },
+    {
+      "name": "Problem-solving",
+      "text": "deciding what to do when plans change"
+    },
+    {
+      "name": "Leadership",
+      "text": "getting the family there"
+    },
+    {
+      "name": "Asking for help",
+      "text": "checking with locals, with a grown-up beside them"
+    }
+  ],
+  "conclusion": {
+    "headline": "They found the way in, and got everyone there.",
+    "text": "Watch the next time you arrive somewhere new. If they reach for the map before you do, or ask how the locals get around, the challenge has done its job.",
+    "celebrate": "When you arrive, say: 'We're here because you worked out how to get us here.'",
+    "extensions": [
+      "Find out how people reached the place before roads or motors, and compare it with your trip",
+      "Plan the same trip the cheapest way and the fastest way, and work out what the extra speed costs",
+      "Cross a city on public transport using only the map and the signs",
+      "Draw one map of every kind of transport you've used on this trip"
+    ]
+  },
+  "signs": [
+    "They check the map before asking you where you're going",
+    "They ask how locals get somewhere",
+    "They spot what could go wrong before you leave"
+  ],
+  "makeItReal": "Hand them the research for your next outing before you open your own laptop.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "In Panama, the kids wanted to visit an Emberá village. They read about the Emberá first and found out the only way in was by boat. They compared a few tours, checked the prices and helped book one. A shuttle picked us up where we were staying, then it was about 30 minutes up the river. On the way back it rained hard, and the boat crew handed out ponchos.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/transport-navigation-challenge.jpg",
+    "alt": "Two kids in life jackets and rain ponchos sitting in a long wooden boat on a brown river, a boatman standing at the front, jungle ahead",
+    "caption": "About 30 minutes up the river, by boat.",
+    "tall": true
+  }
+}

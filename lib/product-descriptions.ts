@@ -2440,28 +2440,27 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'transport-navigation-challenge': {
     opening:
-      'Navigate a new place using local transport. Kids read maps, decode public transport systems, plan routes, and practise getting from A to B in unfamiliar territory. Independence, problem-solving, and real-world geography skills built through real journeys.',
+      'Your kid works out how to get the family to a real place you want to reach while you travel. They find out how people get there, compare the options and the prices, plan each leg and help book it, then lead the family there on the day and handle whatever changes. Back where you are staying, they draw the whole route from memory.',
     whatsIncluded: [
-      'Public transport decoding activities',
-      'Map reading and route planning challenges',
-      'Real navigation missions with progressive difficulty',
-      'Time and cost calculations for journeys',
-      'Reflection on independence and problem-solving',
+      'Five steps, from finding the way in to leading the family there',
+      'Ways to get there, Compare it, Read the route and When plans change cards',
+      'A worked example: a river village reached only by boat',
+      'My route log, and a map of the trip drawn from memory',
+      'Three levels per step, for any trip, anywhere',
     ],
-    skillTags: ['Navigation', 'Geography', 'Problem-Solving', 'Independence', 'Maths'],
+    skillTags: ['Navigation', 'Geography', 'Planning', 'Problem-Solving', 'Math'],
     insideTheLearning: {
       lead:
-        'Your child navigates a real transport system, working out routes, fares and timings themselves. Missions get harder as they go. Reading a schedule under time pressure and deciding to ask a stranger for help is independence you cannot teach from a chair.',
+        'Your kid works out how to reach a real place, compares the ways in and the prices, books it and leads the family there. When something changes on the way, the call is theirs. Holding the plan with the whole family waiting on you is independence you cannot teach from a chair.',
       skills: [
-        { skill: 'Problem-Solving', where: 'Working out a route in an unfamiliar system, and troubleshooting when it goes wrong' },
-        { skill: 'Math', where: 'Reading costs, calculating journey times and understanding the distances' },
-        { skill: 'Observation', where: 'Reading signs, schedules and routes, and noticing how the system actually works' },
-        { skill: 'Geography', where: 'Seeing how transport connects places and shapes how a city works' },
-        { skill: 'Critical Thinking', where: 'Comparing systems and asking why one works better than another' },
-        { skill: 'Self-Direction', where: 'Navigating it themselves, making the calls, asking when they need to' },
+        { skill: 'Geography', where: 'Reading maps and seeing why a place is reached the way it is' },
+        { skill: 'Math', where: 'Time, distance and what the trip costs for the whole family' },
+        { skill: 'Reading', where: 'Timetables, booking confirmations and signs' },
+        { skill: 'Problem-Solving', where: 'Deciding what to do when the rain comes or the bus is late' },
+        { skill: 'Self-Direction', where: 'Leading every leg, and asking for help when they need it' },
       ],
     },
-    format: 'Activity Guide',
+    format: 'Project Guide',
   },
   'travel-reflection-postcards': {
     opening:
