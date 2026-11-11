@@ -107,11 +107,9 @@ export async function GET(req: NextRequest) {
 
   // No account yet → create one first (sign-up returns here when done).
   if (clerkConfigured && !clerkId) {
-    const back = offer
-      ? `/start-trial?plan=${plan}&offer=${offer}`
-      : plan === 'monthly'
-        ? '/start-trial?plan=monthly'
-        : '/start-trial';
+    // Always carry the plan: a bare /start-trial bounces to /choose-plan, which
+    // sent every new yearly sign-up back to the plan picker instead of Stripe.
+    const back = `/start-trial?plan=${plan}${offer ? `&offer=${offer}` : ''}`;
     return withOffer(
       NextResponse.redirect(`${origin}/sign-up?redirect_url=${encodeURIComponent(back)}`, 303),
     );

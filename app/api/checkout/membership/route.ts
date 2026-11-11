@@ -62,8 +62,10 @@ export async function POST(req: NextRequest) {
         {
           error: 'sign_in_required',
           message: 'Create a free account to start your trial. Takes a few seconds, and your library remembers where you left off.',
+          // Always carry the plan: a bare /start-trial bounces to /choose-plan,
+          // which made yearly buyers pick their plan a second time after sign-up.
           signInUrl: `/sign-up?redirect_url=${encodeURIComponent(
-            plan === 'monthly' ? '/start-trial?plan=monthly' : '/start-trial',
+            `/start-trial?plan=${plan === 'monthly' ? 'monthly' : 'annual'}`,
           )}`,
         },
         { status: 401 },
