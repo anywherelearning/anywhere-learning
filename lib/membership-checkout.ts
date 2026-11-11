@@ -122,7 +122,7 @@ export async function createMembershipCheckout(opts: {
   // after buying the Map. The coupon is limited to the yearly products.
   const applyMapOffer =
     !applyBlackFriday && opts.offer === 'map' && plan === 'annual' && (await hasRecentMapPurchase(email));
-  // Co-op code: $79/year for life on the yearly founder rate. Looked up at
+  // Co-op code: $79 for the first year, then the $99 founder rate for life. Looked up at
   // Stripe so an expired, used-up or unknown code just falls back to a normal
   // checkout (where the family can still type a code).
   let coopPromo: { id: string; code: string } | null = null;
@@ -160,8 +160,8 @@ export async function createMembershipCheckout(opts: {
       : `$${offerFounderRate ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD}/year`;
   const submitMessage = coopPromo
     ? applyTrial
-      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${COOP_OFFER.priceUsd}/year with your co-op code ${coopPromo.code}, kept for life. Cancel anytime before your trial ends and pay nothing.`
-      : `Co-op code ${coopPromo.code}: $${COOP_OFFER.priceUsd}/year, kept for life.`
+      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${COOP_OFFER.priceUsd} for your first year (co-op code ${coopPromo.code}), and $${FOUNDER_PRICE_USD}/year after that, your founder rate locked in for life. Cancel anytime before your trial ends and pay nothing.`
+      : `Co-op code ${coopPromo.code}: $${COOP_OFFER.priceUsd} for your first year, then $${FOUNDER_PRICE_USD}/year, your founder rate locked in for life.`
     : applyMapOffer
     ? applyTrial
       ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${mapFirstYear.toFixed(2)} for your first year (Skills Map owner, ${OWNER_OFFER.percentOff}% off), and ${priceLine} after that. Cancel anytime before your trial ends and pay nothing.`

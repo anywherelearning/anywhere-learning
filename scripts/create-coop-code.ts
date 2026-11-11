@@ -33,23 +33,27 @@ async function ensureCoupon() {
     requirePriceId(STRIPE_PRICES.MEMBERSHIP_FOUNDER, 'Membership Founder'),
   );
   const productId = typeof founderPrice.product === 'string' ? founderPrice.product : founderPrice.product.id;
+  // `repeating` 12 months, not `once`: the discount attaches during the free
+  // trial, so 12 months covers the first yearly invoice at trial end and has
+  // run out by the first renewal, which bills the $99 founder rate.
   const coupon = await stripe.coupons.create({
     id: COOP_OFFER.couponId,
     amount_off: COOP_OFFER.amountOffUsd * 100,
     currency: founderPrice.currency,
-    duration: 'forever',
-    name: 'Co-op rate: $79/year for life',
+    duration: 'repeating',
+    duration_in_months: 12,
+    name: 'Co-op rate: first year $79',
     applies_to: { products: [productId] },
     metadata: { campaign: 'coop_2026' },
   });
-  console.log(`Created coupon "${coupon.id}" ($${COOP_OFFER.amountOffUsd} off forever, product ${productId})`);
+  console.log(`Created coupon "${coupon.id}" ($${COOP_OFFER.amountOffUsd} off the first year, product ${productId})`);
 }
 
 async function main() {
   console.log(`Stripe mode: ${process.env.STRIPE_SECRET_KEY!.startsWith('sk_live_') ? 'LIVE' : 'TEST'}`);
   await ensureCoupon();
 
-  const existing = await stripe.promotionCodes.list({ code: code!, limit: 1 });
+  const existing = await stripe.promotionCodes.list({ code: code!, active: true, limit: 1 });
   if (existing.data[0]) {
     const p = existing.data[0];
     console.log(`Code ${p.code} already exists (${p.times_redeemed}/${p.max_redemptions ?? '∞'} used, active: ${p.active})`);

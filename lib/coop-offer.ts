@@ -1,9 +1,9 @@
 /**
  * Co-op offer (Nov 2026): each homeschool co-op gets its own promotion code.
- * Any family who joins the yearly plan with it pays $79/year, kept for life
- * ($20 off the $99 founder rate, every year). Codes stop working at the end of
- * the founder phase (Tue Jan 12 2027, 11:59 PM ET) and each one is capped at
- * 30 families. All codes share one Stripe coupon, so Stripe's redemption
+ * Any family who joins the yearly plan with it pays $79 for the first year
+ * ($20 off), then renews at the $99 founder rate, kept for life. Codes stop
+ * working at the end of the founder phase (Tue Jan 12 2027, 11:59 PM ET) and
+ * each one is capped at 30 families. All codes share one Stripe coupon, so Stripe's redemption
  * count per code tells us how many families each co-op brought.
  *
  * The flyer link /coop/<code> sends families to /start-trial with `?code=`,
@@ -15,8 +15,9 @@
 
 export const COOP_OFFER = {
   slug: 'coop',
-  couponId: 'coop-79-for-life',
+  couponId: 'coop-79-first-year',
   amountOffUsd: 20,
+  /** First-year price; renewals bill the $99 founder rate. */
   priceUsd: 79,
   maxFamiliesPerCode: 30,
   /** Tue Jan 12 2027, 11:59:59 PM Eastern (EST, UTC-5). */
