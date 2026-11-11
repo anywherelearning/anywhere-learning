@@ -27,6 +27,7 @@ import {
 import { BLACK_FRIDAY_OFFER, BLACK_FRIDAY_PRICE_USD, isBlackFridayActive } from '@/lib/black-friday';
 import { metaMatchToMetadata, type MetaUserData } from '@/lib/meta-capi';
 import { OWNER_OFFER, OWNER_OFFER_HOURS } from '@/lib/skills-map';
+import { COOP_OFFER } from '@/lib/coop-offer';
 import { db } from '@/lib/db';
 import { mapPurchases } from '@/lib/db/schema';
 import { and, eq, gt } from 'drizzle-orm';
@@ -49,7 +50,7 @@ async function hasRecentMapPurchase(email: string | undefined): Promise<boolean>
 }
 
 export type MembershipCheckoutResult =
-  | { ok: true; url: string }
+  | { ok: true; url: string; /** The co-op code applied, if any. */ coopCode?: string }
   | { ok: false; reason: 'already_member' | 'no_url' };
 
 export async function createMembershipCheckout(opts: {
@@ -64,6 +65,9 @@ export async function createMembershipCheckout(opts: {
    *  the sale window) or 'map' (Skills Map owners, verified against
    *  map_purchases by email). */
   offer?: 'bf' | 'map';
+  /** Co-op code from a flyer link (already sanitized). Applied only if it's a
+   *  live promotion code on the co-op coupon (lib/coop-offer.ts). */
+  coopCode?: string | null;
   /**
    * The buyer's Meta matching data (from userDataFromRequest). The Stripe
    * webhook that sends the server-side StartTrial runs on Stripe's request,
@@ -118,6 +122,20 @@ export async function createMembershipCheckout(opts: {
   // after buying the Map. The coupon is limited to the yearly products.
   const applyMapOffer =
     !applyBlackFriday && opts.offer === 'map' && plan === 'annual' && (await hasRecentMapPurchase(email));
+  // Co-op code: $79/year for life on the yearly founder rate. Looked up at
+  // Stripe so an expired, used-up or unknown code just falls back to a normal
+  // checkout (where the family can still type a code).
+  let coopPromo: { id: string; code: string } | null = null;
+  if (opts.coopCode && !applyBlackFriday && !applyMapOffer && plan === 'annual' && offerFounderRate) {
+    try {
+      const found = await stripe.promotionCodes.list({ code: opts.coopCode, active: true, limit: 1 });
+      const p = found.data[0];
+      if (p && p.coupon.id === COOP_OFFER.couponId) coopPromo = { id: p.id, code: p.code };
+    } catch (err) {
+      console.error('[membership-checkout] co-op code lookup failed:', err);
+    }
+  }
+
   const mapFirstYear = Math.round((offerFounderRate ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD) * (100 - OWNER_OFFER.percentOff)) / 100;
 
   // Debug log (dev only): what the route decided about credit/trial/rate per
@@ -140,7 +158,11 @@ export async function createMembershipCheckout(opts: {
     plan === 'monthly'
       ? `$${MONTHLY_PRICE_USD}/month`
       : `$${offerFounderRate ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD}/year`;
-  const submitMessage = applyMapOffer
+  const submitMessage = coopPromo
+    ? applyTrial
+      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${COOP_OFFER.priceUsd}/year with your co-op code ${coopPromo.code}, kept for life. Cancel anytime before your trial ends and pay nothing.`
+      : `Co-op code ${coopPromo.code}: $${COOP_OFFER.priceUsd}/year, kept for life.`
+    : applyMapOffer
     ? applyTrial
       ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${mapFirstYear.toFixed(2)} for your first year (Skills Map owner, ${OWNER_OFFER.percentOff}% off), and ${priceLine} after that. Cancel anytime before your trial ends and pay nothing.`
       : `Skills Map owner: ${OWNER_OFFER.percentOff}% off your first year ($${mapFirstYear.toFixed(2)}), then ${priceLine}.`
@@ -170,7 +192,9 @@ export async function createMembershipCheckout(opts: {
       ? { discounts: [{ coupon: BLACK_FRIDAY_OFFER.couponId }] }
       : applyMapOffer
         ? { discounts: [{ coupon: OWNER_OFFER.couponId }] }
-        : { allow_promotion_codes: true }),
+        : coopPromo
+          ? { discounts: [{ promotion_code: coopPromo.id }] }
+          : { allow_promotion_codes: true }),
     billing_address_collection: 'auto',
     customer_email: email,
     client_reference_id: clerkId || undefined,
@@ -189,6 +213,7 @@ export async function createMembershipCheckout(opts: {
         trial_applied: String(applyTrial),
         ...(applyBlackFriday && { offer: BLACK_FRIDAY_OFFER.slug }),
         ...(applyMapOffer && { offer: OWNER_OFFER.slug }),
+        ...(coopPromo && { offer: COOP_OFFER.slug, coop_code: coopPromo.code }),
         ...(clerkId && { clerk_id: clerkId }),
         // For the trial-to-paid Subscribe event 7 days later.
         ...metaMatchToMetadata(opts.meta),
@@ -210,11 +235,12 @@ export async function createMembershipCheckout(opts: {
       plan,
       ...(applyBlackFriday && { offer: BLACK_FRIDAY_OFFER.slug }),
       ...(applyMapOffer && { offer: OWNER_OFFER.slug }),
+      ...(coopPromo && { offer: COOP_OFFER.slug, coop_code: coopPromo.code }),
       ...(clerkId && { clerk_id: clerkId }),
       ...metaMatchToMetadata(opts.meta),
     },
   });
 
   if (!session.url) return { ok: false, reason: 'no_url' };
-  return { ok: true, url: session.url };
+  return { ok: true, url: session.url, ...(coopPromo && { coopCode: coopPromo.code }) };
 }

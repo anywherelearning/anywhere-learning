@@ -25,6 +25,7 @@ import { OWNER_OFFER, OWNER_OFFER_HOURS } from '@/lib/skills-map';
 import { sendMetaEvent, userDataFromRequest } from '@/lib/meta-capi';
 import { applyAndRemoveTags } from '@/lib/convertkit';
 import { SOURCE_COOKIE, sanitizeSource } from '@/lib/attribution';
+import { COOP_CODE_COOKIE, sanitizeCoopCode } from '@/lib/coop-offer';
 
 export const dynamic = 'force-dynamic';
 
@@ -74,7 +75,23 @@ export async function GET(req: NextRequest) {
       : offerParam === OWNER_OFFER.slug
         ? 'map'
         : undefined;
+  // Co-op code from a flyer link (/coop/<code>), or the cookie set on the way
+  // to sign-up. Only yearly checkouts use it; createMembershipCheckout checks
+  // that it's a real, live co-op code before applying it.
+  const coopCode =
+    plan === 'annual' && !offer
+      ? sanitizeCoopCode(req.nextUrl.searchParams.get('code') || req.cookies.get(COOP_CODE_COOKIE)?.value)
+      : null;
   const withOffer = (res: NextResponse) => {
+    if (coopCode) {
+      res.cookies.set(COOP_CODE_COOKIE, coopCode, {
+        maxAge: 30 * 24 * 60 * 60,
+        path: '/',
+        sameSite: 'lax',
+        httpOnly: true,
+        secure: origin.startsWith('https'),
+      });
+    }
     if (offer) {
       res.cookies.set(OFFER_COOKIE, offer, {
         expires:
@@ -109,7 +126,7 @@ export async function GET(req: NextRequest) {
   if (clerkConfigured && !clerkId) {
     // Always carry the plan: a bare /start-trial bounces to /choose-plan, which
     // sent every new yearly sign-up back to the plan picker instead of Stripe.
-    const back = `/start-trial?plan=${plan}${offer ? `&offer=${offer}` : ''}`;
+    const back = `/start-trial?plan=${plan}${offer ? `&offer=${offer}` : ''}${coopCode ? `&code=${coopCode}` : ''}`;
     return withOffer(
       NextResponse.redirect(`${origin}/sign-up?redirect_url=${encodeURIComponent(back)}`, 303),
     );
@@ -122,6 +139,7 @@ export async function GET(req: NextRequest) {
       origin,
       plan,
       offer,
+      coopCode,
       meta: userDataFromRequest(req),
     });
     if (result.ok) {
@@ -136,7 +154,7 @@ export async function GET(req: NextRequest) {
         const email = clerkEmail;
         after(() =>
           applyAndRemoveTags(email, {
-            add: [`from-${source}`, ...(offer ? [`offer:${offer}`] : [])],
+            add: [`from-${source}`, ...(offer ? [`offer:${offer}`] : []), ...(result.coopCode ? ['offer:coop'] : [])],
           }).catch((err) => console.error('[start-trial] kit tag failed:', err)),
         );
       }
