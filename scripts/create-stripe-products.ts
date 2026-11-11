@@ -43,7 +43,7 @@ const catalog = [
   { slug: 'media-info-check', name: 'Media & Info Check', priceCents: 599, description: 'Spot misinformation, check sources, and think critically about media.' },
   { slug: 'micro-business', name: 'Micro-Business Challenge', priceCents: 599, description: 'Entrepreneurship for kids ages 6-14: run a small business for real, keep the books and work out profit per hour.' },
   { slug: 'problem-solver', name: 'Problem-Solver Studio', priceCents: 599, description: 'Project for kids ages 6-14: find out why a problem keeps coming back, build a simple fix, test it and make Version 2.' },
-  { slug: 'smart-shopper', name: 'Smart Shopper Lab', priceCents: 599, description: 'Real-world maths (STEM) for kids ages 9-14: compare two real options, work out cost per use, spot the marketing, then wait before buying.' },
+  { slug: 'smart-shopper', name: 'Smart Shopper Lab', priceCents: 599, description: 'Real-world maths (STEM) for kids ages 8-14: compare two real options, work out cost per use, spot the marketing, then wait before buying.' },
   { slug: 'time-energy-planner', name: 'Time & Energy Planner', priceCents: 599, description: 'Project for kids ages 6-14: track your own energy for a day, match jobs to the right time and find what brings you back.' },
   { slug: 'travel-day', name: 'Travel Day Itinerary Challenge', priceCents: 599, description: 'Planning activity for kids ages 6-14: plan a real day out with must-dos, a timeline, a budget and a Plan B.' },
   { slug: 'write-like-a-pro', name: 'Write It Like a Pro', priceCents: 599, description: 'Writing for kids ages 6-14: pick a style, write for a real audience, edit, and revise. Seven writing styles, one finished piece.' },
