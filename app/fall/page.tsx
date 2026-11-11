@@ -145,7 +145,9 @@ function OfferBox({ endsAt }: { endsAt: string }) {
 export default async function FallOfferPage() {
   // Founder-only offer ($20 off $99). If the offer is over or the founder
   // rate has closed, don't advertise it.
-  if (!isFallOfferActive() || !(await isFounderPhaseOpen())) redirect('/choose-plan');
+  // Old Fall ad links still get taps: send them to the full trial page, not
+  // the bare price table (cold visitors left /choose-plan in seconds).
+  if (!isFallOfferActive() || !(await isFounderPhaseOpen())) redirect('/try');
 
   const endsAt = FALL_OFFER.endsAt.toISOString();
 

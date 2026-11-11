@@ -15,6 +15,17 @@ export default clerkMiddleware(async (auth, req) => {
     return NextResponse.redirect(url, 301);
   }
 
+  // Cold Meta ad traffic gets the full trial page (/try) instead of the bare
+  // /choose-plan price table, which GA4 showed Facebook visitors leaving in
+  // seconds (Nov 2026). Done here, not in the page, so it's a real redirect
+  // before the store layout starts streaming. Ads already pointing at
+  // /choose-plan?source=meta-* follow without an edit; ?source is kept.
+  if (pathname === '/choose-plan' && req.nextUrl.searchParams.get('source')?.startsWith('meta-')) {
+    const url = req.nextUrl.clone();
+    url.pathname = '/try';
+    return NextResponse.redirect(url, 307);
+  }
+
   if (isProtectedRoute(req) && !isPublicAppRoute(req)) {
     await auth.protect();
   }
