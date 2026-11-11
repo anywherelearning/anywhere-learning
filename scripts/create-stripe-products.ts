@@ -39,7 +39,7 @@ const catalog = [
   // ─── Real-World Skills singles ($4.99) ───
   { slug: 'budget-challenge', name: 'Real-Life Budget Challenge', priceCents: 599, description: 'Real-world maths (STEM) for kids ages 9-14: plan a real day out on a real budget, then run the money on the day.' },
   { slug: 'community-impact', name: 'Community Impact Project', priceCents: 599, description: 'Project for kids ages 6-14: ask people what would really help, do it yourself, then go back and keep it going.' },
-  { slug: 'kitchen-math-challenge', name: 'Kitchen Math & Meal Planning Challenge', priceCents: 599, description: 'Real-world maths (STEM) for kids ages 9-14: plan real family meals, price them by the package, shop the list and cook it.' },
+  { slug: 'kitchen-math-challenge', name: 'Kitchen Math & Meal Planning Challenge', priceCents: 599, description: 'Real-world maths (STEM) for kids ages 6-14: plan real family meals, price them by the package, shop the list and cook it.' },
   { slug: 'media-info-check', name: 'Media & Info Check', priceCents: 599, description: 'Spot misinformation, check sources, and think critically about media.' },
   { slug: 'micro-business', name: 'Micro-Business Challenge', priceCents: 599, description: 'Entrepreneurship for kids ages 6-14: run a small business for real, keep the books and work out profit per hour.' },
   { slug: 'problem-solver', name: 'Problem-Solver Studio', priceCents: 599, description: 'Project for kids ages 6-14: find out why a problem keeps coming back, build a simple fix, test it and make Version 2.' },
@@ -60,7 +60,7 @@ const catalog = [
   { slug: 'prompt-like-a-coach', name: 'Prompt Like a Coach', priceCents: 599, description: 'Master the art of talking to AI effectively.' },
   // ─── Real-World Math singles ($4.99) ───
   { slug: 'backyard-campout-planner', name: 'Backyard Campout Planner', priceCents: 599, description: 'Real-world math for kids ages 6-14: measure the site, budget the gear, plan the food and the schedule, then camp out.' },
-  { slug: 'clothing-swap-thrift-math', name: 'Clothing Swap & Thrift Math', priceCents: 599, description: 'Real-world math for kids ages 8-14: cost per wear, pricing, a swap or thrift trip, and the percentage saved.' },
+  { slug: 'clothing-swap-thrift-math', name: 'Clothing Swap & Thrift Math', priceCents: 599, description: 'Real-world math for kids ages 6-14: cost per wear, pricing, a swap or thrift trip, and the percentage saved.' },
   { slug: 'family-electricity-audit', name: 'Family Electricity Audit', priceCents: 599, description: 'STEM project for kids ages 8-14: audit electricity use, calculate kilowatt-hours, and find real ways to save. Math and science combined.' },
   { slug: 'farmers-market-challenge', name: 'Farmers Market Challenge', priceCents: 599, description: 'Real-world math for kids ages 6-14: scout a farmers market, compare unit prices, shop on a budget and cook what\'s in season.' },
   { slug: 'garage-sale-math', name: 'Garage Sale Math', priceCents: 599, description: 'Real-world math for kids ages 6-14: price, haggle, make change and work out the real profit at a garage sale.' },
@@ -68,7 +68,7 @@ const catalog = [
   { slug: 'party-planner-math', name: 'Party Planner Math', priceCents: 599, description: 'Real-world math for kids ages 6-14: plan and host a real party on $5 per guest, from food per guest to the party-day timeline.' },
   { slug: 'road-trip-calculator', name: 'Road Trip Calculator', priceCents: 599, description: 'Real-world math for kids ages 8-14: plan a real road trip, from driving time and gas to the full budget, then navigate it.' },
   { slug: 'savings-goal-tracker', name: 'Savings Goal Tracker', priceCents: 599, description: 'Real-world math for kids ages 6-14: save for a real goal, work out the timeline, earn more and track the percent saved.' },
-  { slug: 'sports-stats-lab', name: 'Sports Stats Lab', priceCents: 599, description: 'STEM math activity for kids ages 8-14: track real sports stats, compare fairly with percentages and predict the next game.' },
+  { slug: 'sports-stats-lab', name: 'Sports Stats Lab', priceCents: 599, description: 'STEM math activity for kids ages 6-14: track real sports stats, compare fairly with percentages and predict the next game.' },
   // ─── Life Skills ───
   { slug: 'future-ready-skills-map', name: 'The Future-Ready Skills Map', priceCents: 999, description: 'A 44-page parent guide to the 12 skill areas that matter most for kids ages 0-16+, organised into three age phases (Play, Build, Apply).' },
   // ─── Communication & Writing singles ($4.99) ───
@@ -94,7 +94,7 @@ const catalog = [
   { slug: 'supply-chain-detective', name: 'Supply Chain Detective', priceCents: 599, description: 'Entrepreneurship and geography for kids ages 6-14: trace a real product from your cupboard back to where it started.' },
   { slug: 'shark-tank-pitch', name: 'Shark Tank Style Pitch', priceCents: 599, description: 'Business pitch for kids ages 6-14: build the numbers, pitch to family sharks and sign a real deal you pay back.' },
   // ─── Planning & Problem-Solving singles ($4.99) ───
-  { slug: 'emergency-ready', name: 'Emergency Ready Challenge', priceCents: 599, description: 'Life skills for kids ages 8-14: build a real family emergency plan, run the fire drill and pack a three-day kit.' },
+  { slug: 'emergency-ready', name: 'Emergency Ready Challenge', priceCents: 599, description: 'Life skills for kids ages 6-14: build a real family emergency plan, run the fire drill and pack a three-day kit.' },
   { slug: 'everyday-redesign', name: 'Everyday Redesign Challenge', priceCents: 599, description: 'Examine everyday objects and redesign them for better function.' },
   { slug: 'fix-it-detective', name: 'Fix-It Detective', priceCents: 599, description: 'Problem-solving for kids ages 6-14: diagnose and fix real things around the house, safely and step by step.' },
   { slug: 'neighbourhood-problem-spotter', name: 'Neighbourhood Problem Spotter', priceCents: 599, description: 'Civic problem-solving for kids ages 6-14: spot a real problem nearby, find the cause and pitch a simple fix.' },

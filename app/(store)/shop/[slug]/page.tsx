@@ -1141,7 +1141,7 @@ export default async function ProductPage({
               <ul className="list-none p-0 m-0 flex flex-col gap-2.5">
                 {[
                   "All 120+ activities (every category)",
-                  "3 levels per activity (ages 6 to 14)",
+                  "3 levels per activity, for ages 6 to 14 across the library",
                   "New activities every quarter",
                   "The Future-Ready Skills Map (parent guide)",
                   "Member-only resources",
