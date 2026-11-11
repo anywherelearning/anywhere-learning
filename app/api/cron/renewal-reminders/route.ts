@@ -32,6 +32,7 @@ import { STRIPE_PRICES } from '@/lib/stripe-prices';
 import { runGrantLifecycle } from '@/lib/access-grants';
 import { runMemberCheckins } from '@/lib/member-checkin';
 import { runBasecampReminders } from '@/lib/basecamp-reminders';
+import { runCoopMilestones } from '@/lib/coop-milestones';
 
 export const dynamic = 'force-dynamic';
 
@@ -70,6 +71,15 @@ export async function GET(req: NextRequest) {
     basecamp = { error: err instanceof Error ? err.message : 'unknown' };
   }
 
+  // Co-op codes reaching 5 or 10 families: one email to the owner per milestone.
+  let coops: Awaited<ReturnType<typeof runCoopMilestones>> | { error: string };
+  try {
+    coops = await runCoopMilestones();
+  } catch (err) {
+    console.error('[cron] co-op milestones failed:', err);
+    coops = { error: err instanceof Error ? err.message : 'unknown' };
+  }
+
   const now = new Date();
   const windowStart = new Date(now.getTime() + 14 * 24 * 60 * 60 * 1000);
   const windowEnd = new Date(now.getTime() + 15 * 24 * 60 * 60 * 1000);
@@ -102,7 +112,7 @@ export async function GET(req: NextRequest) {
     );
 
   if (rows.length === 0) {
-    return NextResponse.json({ sent: 0, message: 'No renewals in the 14-day window.', grants, checkins, basecamp });
+    return NextResponse.json({ sent: 0, message: 'No renewals in the 14-day window.', grants, checkins, basecamp, coops });
   }
 
   // Try to grab first names from Clerk in one round-trip. Clerk doesn't
@@ -192,5 +202,6 @@ export async function GET(req: NextRequest) {
     grants,
     checkins,
     basecamp,
+    coops,
   });
 }
