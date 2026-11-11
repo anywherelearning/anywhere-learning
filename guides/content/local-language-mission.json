@@ -335,10 +335,6 @@
   "photo": {
     "src": "guides/assets/local-language-mission.jpg",
     "alt": "A girl reading a Spanish juice menu at a small shop counter, finger on her chin, deciding what to order",
-    "caption": "Reading the menu first, then ordering in Spanish.",
-    "inset": {
-      "src": "guides/assets/local-language-mission-tienda.jpg",
-      "alt": "Two kids sitting outside Zonte Shop, the little tienda where they practised ordering"
-    }
+    "caption": "Reading the menu first, then ordering in Spanish."
   }
 }
