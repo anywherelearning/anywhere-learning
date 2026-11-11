@@ -146,7 +146,7 @@
       ],
       "tip": "8 + 12 + 6 + 10 + 9 = 45, and 45 ÷ 5 = 9. With 30 instead of 9, it's 66 ÷ 5 = 13.2, higher than 4 of the 5 games.",
       "levels": {
-        "explore": "Deal all the goals out as counters, one pile per game. A pile is the average.",
+        "explore": "Count out a counter for every goal, then deal them out evenly into one pile per game, like cards. One pile is the average.",
         "develop": "Find the averages for every stat, plus the highest, lowest and range.",
         "extend": "Find the median too. For 8, 12, 6, 10 and 30, the average is 13.2 but the median is 10. Which fits a typical game?"
       }

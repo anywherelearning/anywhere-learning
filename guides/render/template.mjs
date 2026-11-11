@@ -507,7 +507,7 @@ ul{list-style:none}
 .snap figcaption{margin-top:8px;font-size:12.5px;line-height:1.35;color:var(--muted);text-align:center}
 .snapin{position:absolute;right:-16px;bottom:74px;width:34%;background:#fff;padding:5px 5px 7px;border-radius:3px;box-shadow:0 8px 18px -6px rgba(50,40,20,.5);transform:rotate(-6deg)}.snapin img{display:block;width:100%;border-radius:2px}
 .start{margin:20px 0 14px;font:800 30px 'Bricolage Grotesque';color:var(--trail);transform:rotate(-2deg)}
-.finish h2{font-size:28px}
+.finish h2{font-size:28px;text-wrap:balance}
 .finish .lead{position:relative}
 .cta{position:relative;margin-top:16px;background:var(--forest);color:#fff;border-radius:16px;padding:18px 20px}
 .cta p{font-weight:500}.ctaurl{display:inline-block;margin-top:8px;font:700 13px 'JetBrains Mono';color:var(--gold)}

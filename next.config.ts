@@ -117,6 +117,28 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Retired seasonal packs (debundled): send to the Outdoor Learning listing.
+      {
+        source: "/shop/spring-outdoor-pack",
+        destination: "/shop?track=outdoor-learning#full-library",
+        permanent: true,
+      },
+      {
+        source: "/shop/summer-outdoor-pack",
+        destination: "/shop?track=outdoor-learning#full-library",
+        permanent: true,
+      },
+      {
+        source: "/shop/fall-outdoor-pack",
+        destination: "/shop?track=outdoor-learning#full-library",
+        permanent: true,
+      },
+      {
+        source: "/shop/winter-outdoor-pack",
+        destination: "/shop?track=outdoor-learning#full-library",
+        permanent: true,
+      },
+
       // Retired Nov 2026: merged into Problem-Solver Studio.
       {
         source: "/shop/everyday-redesign",

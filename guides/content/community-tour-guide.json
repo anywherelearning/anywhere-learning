@@ -115,7 +115,7 @@
         "Should you start with your best stop, or save it for the end?",
         "How will you grab everyone's attention at the very first stop?"
       ],
-      "tip": "Plan about 3 minutes per stop plus the walking: 10 minutes is plenty for a first tour, and 30 is the most.",
+      "tip": "Plan about 2 minutes per stop plus the walking: 15 minutes is plenty for a first tour, and 30 is the most.",
       "levels": {
         "explore": "Draw each stop on its own card, lay the cards in walking order, and say one line for each.",
         "develop": "Time the walk, adjust the order, and write a full script with an introduction, notes for each stop, transitions and a closing.",
@@ -230,7 +230,7 @@
   "onTheRoad": [
     "Read the plaques, signs and old dates around where you're staying, and ask a local, with your help, what they mean.",
     "Join a local walking tour together, and notice how the guide points, tells and asks at each stop.",
-    "Lead a family who just arrived on a short tour of the essentials, like the bakery and the playground, plus one surprising fact."
+    "With you alongside, give a family who just arrived a short tour of the essentials, like the bakery and the playground, plus one surprising fact."
   ],
   "backHome": "Give a tour of your own town as if you were the visitor, pointing out what travelling made you notice."
 }

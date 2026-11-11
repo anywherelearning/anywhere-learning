@@ -264,8 +264,8 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
       "This Saturday, hand them one real grown-up job to own end to end: plan Sunday dinner on a $30 budget, or price out and run a small yard sale. Give them the wheel, then genuinely stay out of it. Capable kids grow on real stakes.",
     activities: [
       { slug: 'micro-business', name: 'Micro-Business Challenge', category: 'entrepreneurship', note: 'Run something real' },
-      { slug: 'community-impact', name: 'Community Impact Project', category: 'planning-problem-solving', note: 'Big, real-world, matters' },
-      { slug: 'mini-movie', name: 'Create a Mini Movie', category: 'creativity-maker', note: 'Write, film, and edit a real movie' },
+      { slug: 'community-impact', name: 'Community Impact Project', category: 'planning-problem-solving', note: 'Ask real people, do the smallest useful thing' },
+      { slug: 'mini-movie', name: 'Create a Mini Movie or Radio Drama', category: 'creativity-maker', note: 'Write, film, and edit a real movie' },
     ],
   },
 };

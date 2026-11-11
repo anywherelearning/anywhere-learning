@@ -3,10 +3,17 @@
   Trigger: subscriber receives tag "lead"
   Send: Immediately
   Subject: Here's your free guide
-  Preview: 7 Days of Real-World Learning, ready to open on any device.
+  Preview: Ready to open on any device.
 
   Download link points to the live Vercel Blob PDF.
   No Google Fonts link (Kit strips it); the wordmark and signature are pre-rendered PNGs.
+
+  PERSONALIZED: nine different free guides now feed this one sequence (the
+  7-day guide, the Capable Kid guide, and one complete activity per idea-list
+  category). The app writes two Kit custom fields on every signup:
+    {{ subscriber.last_guide }}        the guide's name, mid-sentence ready
+    {{ subscriber.last_guide_cover }}  absolute URL of that guide's cover
+  Both fall back to the 7-day guide, so they are never blank.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -51,29 +58,29 @@
               <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:8px;">Your free guide</div>
               <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 8px;">{{ message_content }}</div>
               <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">I'm Amelie. I taught for fifteen years, then started homeschooling my own two, and Anywhere Learning grew straight out of that.</p>
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Thanks for grabbing <strong style="color:#2f3a2e;">7 Days of Real-World Learning</strong>. I made it for parents who already feel it: the best learning rarely looks like school. It looks like a kid counting out coins at the till, or planning a Saturday outing and actually being in charge of it.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Thanks for grabbing <strong style="color:#2f3a2e;">{{ subscriber.last_guide }}</strong>. I made it for parents who already feel it: the best learning rarely looks like school. It looks like a kid counting out coins at the till, or planning a Saturday outing and actually being in charge of it.</p>
             </td>
           </tr>
 
           <!-- COVER IMAGE -->
           <tr>
             <td align="center" style="padding:8px 40px 4px;">
-              <img src="https://anywherelearning.co/images/free-guide-cover.jpg" alt="7 Days of Real-World Learning" width="300" style="display:inline-block; width:300px; max-width:70%; height:auto; border:0; border-radius:12px; box-shadow:0 10px 26px rgba(60,50,30,0.18);">
+              <img src="{{ subscriber.last_guide_cover }}" alt="{{ subscriber.last_guide }}" width="300" style="display:inline-block; width:300px; max-width:70%; height:auto; border:0; border-radius:12px; box-shadow:0 10px 26px rgba(60,50,30,0.18);">
             </td>
           </tr>
 
           <!-- BODY -->
           <tr>
             <td class="lm-pad" style="padding:18px 40px 0;">
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Inside are seven small, hands-on activities, one for each real-world muscle: outdoor and nature, real-world math, creativity, AI and digital, entrepreneurship, communication, and planning. Each one fits into an afternoon, with no prep beyond what's already in your kitchen drawer.</p>
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 4px;">You don't need to do all seven, or do them in order. Pick the one that fits today and let your kid run with it.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">It's hands-on, it fits into an afternoon, and it needs no prep beyond what's already in your kitchen drawer. Open it on any device and follow along, or print it if that suits you better.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 4px;">You lead, your kid runs with it. There are three levels inside, so it works whether you've got a six year old or a twelve year old, and you can use it again next year.</p>
 
               <!-- CTA -->
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
                 <td align="center" style="padding:26px 0 22px;">
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
                     <td align="center" bgcolor="#588157" style="background:#588157; border-radius:16px;">
-                      <a href="https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Free%20guide%20-%207%20Days%20of%20Real-World%20Learning%20-%20compressed.pdf" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:600; color:#faf9f6; text-decoration:none; line-height:1;">Download the guide</a>
+                      <a href="{{ subscriber.last_guide_download }}" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:600; color:#faf9f6; text-decoration:none; line-height:1;">Download the guide</a>
                     </td>
                   </tr></table>
                 </td>

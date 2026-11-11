@@ -102,7 +102,7 @@
     {
       "title": "Pick the destination and the mission",
       "why": "Where you are decides every danger you'll face.",
-      "kid": "Your kid picks a destination, real-ish like a desert or the arctic, or imaginary like an alien planet. Then they write the mission in one sentence: 'We're here to...'",
+      "kid": "Your kid picks a destination, real-ish like a desert or the Arctic, or imaginary like an alien planet. Then they write the mission in one sentence: 'We're here to...'",
       "you": "Help them commit to one idea. If they're stuck, offer two choices: 'hot and dry, or cold and icy?' gets an answer faster than 'where do you want to go?'",
       "ask": [
         "What's the main goal of the expedition?",
@@ -156,7 +156,7 @@
         "What if you run out of water? What's Plan B?",
         "What are the 3 rules everyone has to follow?"
       ],
-      "tip": "Ration maths: 4 people × 2 litres to drink a day × 3 days = 24 litres of water to store.",
+      "tip": "Ration maths: each person drinks about 2 litres a day. Multiply by people, then by days, to find what to store.",
       "levels": {
         "explore": "Tell how one system works, out loud or in a drawing.",
         "develop": "Write 2 systems with a Plan B, and 3 base rules.",

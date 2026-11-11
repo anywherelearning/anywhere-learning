@@ -172,7 +172,7 @@
         "Which step was the hardest to get working?",
         "If you built Version 2, what would you change?"
       ],
-      "tip": "Extend challenge: run it 10 times and count the full successes. 7 out of 10 is a 70% success rate. Then fix the weakest step and try again.",
+      "tip": "If it fails during the demo, narrate the fix out loud. Audiences love watching an engineer work a problem.",
       "levels": {
         "explore": "Run it for someone and tell them your favourite step.",
         "develop": "Run it, explain each step in order and film it.",

@@ -144,7 +144,7 @@
       "tip": "Simple scoring is fine. '1 point per goal' works. If there are bonus points, they must say exactly when each one counts.",
       "levels": {
         "explore": "Say the rules out loud with one way to score.",
-        "develop": "Write the 5 rules and a scoring system.",
+        "develop": "Write a rulebook that answers the 5 referee's questions, plus a scoring system.",
         "extend": "Take 10 shots from each line. If close shots go in 6 times and far ones 2, a far shot is worth 3, because 6 × 1 = 2 × 3."
       }
     },

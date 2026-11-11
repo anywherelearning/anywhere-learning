@@ -283,7 +283,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       '66 read-aloud cards in 7 themes, each with a Deeper question',
       'Each card asks for one specific find, then a Deeper why',
       'Works in parks, backyards, trails, beaches, or neighbourhoods',
-      'Designed for parent-led or independent use',
+      'Read aloud by you, or handed to an older kid to lead a younger sibling',
       'Reusable across seasons, with different results every time',
     ],
     skillTags: ['Observation', 'Nature', 'Sensory Learning', 'Science'],
@@ -354,7 +354,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       '24 outdoor STEM challenge cards in 5 themes',
       'Engineering: bridges, shelters, boats, towers, and structures',
       'Science: measurement, forces, materials, buoyancy',
-      'Found natural materials, plus a cup, a bottle and an egg for three cards',
+      'Found natural materials, plus an egg, a cup, a watering can and a bottle for four cards',
       'Includes testing criteria and reflection prompts',
     ],
     skillTags: ['STEM', 'Engineering', 'Science', 'Problem-Solving', 'Nature'],
@@ -435,7 +435,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     whatsIncluded: [
       '48 land art challenge cards in 4 themes',
       'Mandalas, rock towers, colour sorts, story paths, and sculptures',
-      'Uses only natural materials: stones, leaves, sticks, petals, fallen bark',
+      'Uses what is on the ground: stones, leaves, sticks, petals, fallen bark',
       'Teaches pattern, symmetry, colour theory, and composition',
       'Temporary art: photograph and leave no trace',
     ],
@@ -1745,7 +1745,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'trail-guide-creator': {
     opening:
-      'Create a written guide to a local trail or walking path. Kids walk the route, observe carefully, take notes, and write a guide someone else could follow. Outdoor observation meets descriptive writing in a project that connects kids to nature and place.',
+      'Your kid designs a walking trail in a real place they know, a park, a trail, your street or the garden, and writes a trail guide someone else can follow alone. Descriptive writing, a numbered map and a real test walk.',
     whatsIncluded: [
       'Find-my-tree blindfold game',
       'Walk-and-notice with all the senses',
@@ -3053,7 +3053,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'nature-data-tracker': {
     opening:
-      'Your child picks one thing in nature that changes day to day, temperature, rainfall or sunset time, and tracks it for one to two weeks. They build a jar rain gauge, guess before every reading, work out the daily changes, chart the numbers and use averages to find the real trend. Then they predict tomorrow and race a weather app. Real-world STEM maths, done with a jar and a notebook.',
+      'Your child picks one thing in nature that changes day to day (the temperature, the rain or the sunset time) and tracks it for one to two weeks. They build a jar rain gauge, guess before every reading, work out the daily changes, chart the numbers and use averages to find the real trend. Then they predict tomorrow and race a weather app. Real-world STEM maths, done with a jar and a notebook.',
     whatsIncluded: [
       'Pick what to track and build a jar rain gauge',
       'Guess, check and record every day',
