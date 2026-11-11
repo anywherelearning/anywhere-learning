@@ -258,7 +258,7 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
     colorText: '#588157',
     time: 'Multi-day',
     photo: '/products/local-language-mission.jpg',
-    blurb: 'Missions that make a language stick.',
+    blurb: 'One real job, done in another language.',
   },
   {
     slug: 'cultural-celebration-journal',

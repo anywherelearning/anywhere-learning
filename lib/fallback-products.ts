@@ -2078,15 +2078,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Local Language Mission",
     slug: "local-language-mission",
     description:
-      "Build confidence speaking a new language through real-world missions. Kids learn key phrases, practise greetings, order food, ask for directions, and complete language challenges with locals. Communication built on courage and curiosity, not perfection.",
+      "Your kid uses a language they barely speak to do one real job, like buying fruit, ordering a snack or asking the way. They pick the mission, learn just the words it needs, rehearse with you as the shopkeeper, then do it for real with a real person. Being understood is the goal, not getting it perfect. Works for any language, anywhere you travel.",
     shortDescription:
-      "Worldschooling language activity for kids ages 6-14: build confidence in a new language through real-world missions.",
+      "Worldschooling language activity for kids ages 6-14: pick a real mission, learn the words, rehearse, then do it with a real person.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TS08gAkIBECpwGmAQk4fwgK",
     blobUrl: "",
     imageUrl: "/products/local-language-mission.jpg",
-    previewFile: "Preview Worldschooling - Local Language Mission.pdf",
+    previewFile: "Preview Worldschooling - Local Language Mission v3.pdf",
     category: "worldschooling",
     isBundle: false,
     bundleProductIds: null,

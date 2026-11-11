@@ -1084,11 +1084,11 @@
     },
     "local-language-mission": {
       "canonical": [
+        "Languages",
         "Communication",
         "Confidence",
-        "Critical Thinking",
         "Cultural Awareness",
-        "Observation"
+        "Listening"
       ],
       "families": [
         "Communication & Writing",

@@ -2344,27 +2344,27 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'local-language-mission': {
     opening:
-      'Build confidence speaking a new language through real-world missions. Kids learn key phrases, practise greetings, order food, ask for directions, and complete language challenges with locals. Communication built on courage and curiosity, not perfection.',
+      'Your kid uses a language they barely speak to do one real job, like buying fruit, ordering a snack or asking the way. They pick the mission, learn just the words it needs, rehearse with you as the shopkeeper, then do it for real with a real person. Being understood is the goal, not getting it perfect. Works for any language, anywhere you travel.',
     whatsIncluded: [
-      'Language mission cards with progressive challenges',
-      'Key phrase and pronunciation practice prompts',
-      'Real-world communication missions (greetings, ordering, asking)',
-      'Reflection prompts on confidence and progress',
-      'Works for any language, anywhere',
+      'Five steps, from picking the mission to doing it with a real person',
+      'The Mission ladder: greet, buy, ask, order, then chat',
+      'Survival phrases, Listen for and When you\'re stuck cards',
+      'My language log to track each mission and pick the next one',
+      'Three levels per step, for any language, anywhere',
     ],
-    skillTags: ['Languages', 'Communication', 'Confidence', 'Cultural Awareness'],
+    skillTags: ['Languages', 'Communication', 'Confidence', 'Cultural Awareness', 'Listening'],
     insideTheLearning: {
       lead:
-        'Your child uses a language they do not speak to do real things: greet someone, order food, ask for directions. Missions get harder as they go. Perfection is explicitly not the goal, being understood is, and that difference is what gets a shy kid talking.',
+        'Your kid uses a language they barely speak to get one real thing done, with a real person who answers back. The mission is small on purpose so they can finish it, and every success becomes the next rung on the ladder. Being understood, not perfection, is what gets a shy kid talking.',
       skills: [
-        { skill: 'Communication', where: 'Expressing what they need and being understood without getting it perfect' },
-        { skill: 'Confidence', where: 'Building courage through interactions with actual people who reply' },
-        { skill: 'Observation', where: 'Noticing the language on signs and in conversations happening around them' },
-        { skill: 'Critical Thinking', where: 'Comparing languages, spotting the patterns, and asking why they exist' },
-        { skill: 'Cultural Awareness', where: 'Seeing what a language carries about how people live' },
+        { skill: 'Languages', where: 'Speaking and listening for a real job, not a drill' },
+        { skill: 'Math', where: 'Numbers, prices and checking the change in another language' },
+        { skill: 'Literacy', where: 'Sounds, spelling patterns and the words on signs and menus' },
+        { skill: 'Cultural Awareness', where: 'How people here greet, talk and shop' },
+        { skill: 'Confidence', where: 'Doing it for real, then going one rung higher' },
       ],
     },
-    format: 'Activity Guide',
+    format: 'Project Guide',
   },
   'nature-geography-field-study': {
     opening:

@@ -1,0 +1,344 @@
+{
+  "slug": "local-language-mission",
+  "category": "Worldschooling",
+  "title": "Local Language Mission",
+  "tagline": "Pick · Learn · Rehearse · Go",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid uses a language they barely speak to do one real job, like buying fruit, ordering a snack or asking the way. They pick the mission, learn just the words it needs, rehearse with you, then do it for real with a real person. Being understood is the goal, not getting it perfect.",
+  "need": [
+    "A language that's spoken around you",
+    "A real place to use it, like a shop, market or café",
+    "A little money, if the mission is buying something",
+    "A notebook or phone for the language log"
+  ],
+  "academics": [
+    {
+      "subject": "Languages",
+      "text": "speaking and listening for a real job"
+    },
+    {
+      "subject": "Math",
+      "text": "numbers, prices and checking the change"
+    },
+    {
+      "subject": "Literacy",
+      "text": "sounds, spelling patterns and signs"
+    },
+    {
+      "subject": "Social studies",
+      "text": "how people here talk, greet and shop"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "You're the practice shopkeeper and the quiet backup, not the translator. Your most useful question is 'What words does this job need?' Stay close enough to help, and far enough that they have to do the talking.",
+    "plan": [
+      {
+        "when": "Day 1",
+        "what": "Pick the mission, learn the words and rehearse (Steps 1 to 3)."
+      },
+      {
+        "when": "Day 1 or 2",
+        "what": "Go do it for real (Step 4)."
+      },
+      {
+        "when": "Afterwards",
+        "what": "Log it and pick the next mission (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They freeze at the counter",
+        "a": "Stand beside them and wait. Point to the first word on their card. If it's still too much, buy it yourself this time and try again tomorrow with a smaller mission."
+      },
+      {
+        "q": "The person answers in English",
+        "a": "Keep going in the new language anyway, with a smile. Many people switch back once they see the kid wants to try."
+      },
+      {
+        "q": "There's no other language around you",
+        "a": "Look for one nearby: a family restaurant, a grocery store, a grandparent or a neighbour who grew up speaking something else. One real person is enough."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "You don't need to speak a language well to use it. You need the few words for one real job, and the courage to try them on a real person.",
+    "before": "I can't, I don't speak Spanish.",
+    "model": [
+      {
+        "part": "Mission",
+        "line": "Buy two mangoes at the tienda."
+      },
+      {
+        "part": "Words",
+        "line": "Hola. Quiero dos mangos, por favor. ¿Cuánto cuesta? Gracias."
+      },
+      {
+        "part": "Surprise",
+        "line": "She asked '¿Algo más?' Anything else? 'No, gracias.'"
+      },
+      {
+        "part": "Result",
+        "line": "She understood, and the change was right."
+      }
+    ],
+    "modelNote": "Four lines and one surprise was all the mission needed. It wasn't perfect Spanish, and it didn't have to be."
+  },
+  "steps": [
+    {
+      "title": "Pick the mission",
+      "why": "A real job gives the words a reason to stick.",
+      "kid": "Your kid picks one small, real job to do in the language, using the Mission ladder card in the Language Toolkit at the end of the guide. Buying one thing, ordering a snack or asking where something is all work. They say exactly what success looks like.",
+      "you": "Ask 'What words does this job need?' and steer them toward something they can finish in under a minute. Pick a place where people are patient, like a small shop, a market stall or a quiet café, and a time that isn't busy.",
+      "ask": [
+        "What do you want to come home with?",
+        "How will you know it worked?"
+      ],
+      "tip": "Start with something they actually want, like their favourite snack. Wanting it makes them braver.",
+      "levels": {
+        "explore": "Pick a one-word mission, like saying hello and thank you to a shopkeeper.",
+        "develop": "Pick a mission with a question in it, like buying something and asking the price.",
+        "extend": "Pick a mission with a back-and-forth, like asking for a recommendation and ordering it."
+      }
+    },
+    {
+      "title": "Learn the words",
+      "why": "A handful of the right words beats a hundred of the wrong ones.",
+      "kid": "Your kid writes the five to eight words the mission needs, using the Survival phrases card: the greeting, what they want, the numbers for the price and the thank you. They look them up, ask a local or listen for them, and practise saying each one out loud.",
+      "you": "Learn them alongside your kid, and let them correct you. Look for the words around you too, on signs, menus and price tags. Write them the way they sound if spelling gets in the way.",
+      "ask": [
+        "Which word is the hardest to say?",
+        "Where have you already seen this word?"
+      ],
+      "tip": "Add 'more slowly, please' in the language. It's the phrase that rescues every mission.",
+      "levels": {
+        "explore": "Learn three words, and say each one with a gesture to help remember it.",
+        "develop": "Learn the full mission card, including the numbers for the price.",
+        "extend": "Learn the words, and spot one pattern, like how questions sound or how numbers are built."
+      }
+    },
+    {
+      "title": "Rehearse it",
+      "why": "The scary part is the surprise, so practise the surprise.",
+      "kid": "Your kid runs the mission with you as the shopkeeper, twice. The second time you throw in a surprise from the Listen for card, like 'Anything else?' or a price they didn't expect, and they work out what to say back.",
+      "you": "Play the shopkeeper for real, in the language as much as you can. Answer a little fast the second time, so they practise asking you to slow down. Tell them one thing they did well before they go.",
+      "ask": [
+        "What could they say that you don't expect?",
+        "What will you do if you don't understand?"
+      ],
+      "tip": "Act out the When you're stuck card too: point, gesture, show the number on your fingers. Stuck has a plan.",
+      "levels": {
+        "explore": "Rehearse with you once, then do it again with no card in your hand.",
+        "develop": "Rehearse twice, and handle one surprise question.",
+        "extend": "Rehearse with two surprises, and answer one question about yourself, like where you're from."
+      }
+    },
+    {
+      "title": "Go do it",
+      "why": "One real conversation does more than a week of practice.",
+      "kid": "Your kid walks up and does the mission for real, with a real person. They do the talking, listen for the answer and use the When you're stuck card if they need it. If they're understood and get what they came for, the mission is a success.",
+      "you": "Stay close but a step back, and don't translate unless they ask. If the person is patient, thank them warmly together afterwards. Then, out of earshot, tell your kid exactly what they did that worked.",
+      "ask": [
+        "What did they say back?",
+        "How did it feel right after?"
+      ],
+      "tip": "Go back to the same place again. The second visit is easier, and some shopkeepers start teaching them new words.",
+      "levels": {
+        "explore": "Do the greeting and the thank you yourself, with a grown-up doing the middle.",
+        "develop": "Do the whole mission yourself, with a grown-up nearby.",
+        "extend": "Do the mission, then add one extra question you didn't rehearse."
+      }
+    },
+    {
+      "title": "Log it and level up",
+      "why": "Seeing the words pile up is what makes them want the next mission.",
+      "kid": "Your kid fills in My language log at the end of the guide: the mission, the words they used, what the person said back and one new word they heard. Then they choose the next mission, one rung higher on the Mission ladder.",
+      "you": "Ask what surprised them, and add any new words to the log together. Notice out loud what got braver since the first mission. Plan the next one while it still feels good.",
+      "ask": [
+        "What new word did you hear?",
+        "What's your next mission?"
+      ],
+      "tip": "Keep the log going across missions. A page full of real conversations is proof they speak more than they think.",
+      "levels": {
+        "explore": "Draw the mission, and say the words you used.",
+        "develop": "Fill in the log, and pick the next mission on the ladder.",
+        "extend": "Fill in the log, and write the next mission's words before you start."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Language Toolkit",
+    "intro": "Missions to choose from, the words every mission needs, what to listen for and what to do when you're stuck.",
+    "items": [
+      {
+        "name": "Mission ladder",
+        "lines": [
+          {
+            "k": "Greet:",
+            "v": "hello, thank you and goodbye"
+          },
+          {
+            "k": "Buy:",
+            "v": "one thing, and ask the price"
+          },
+          {
+            "k": "Ask:",
+            "v": "where something is, or what it's called"
+          },
+          {
+            "k": "Order:",
+            "v": "a snack or a meal for the family"
+          },
+          {
+            "k": "Chat:",
+            "v": "answer where you're from, ask one question back"
+          }
+        ],
+        "ask": "Which rung are you ready for?"
+      },
+      {
+        "name": "Survival phrases",
+        "lines": [
+          {
+            "k": "Hello:",
+            "v": "and the polite word for please"
+          },
+          {
+            "k": "I'd like:",
+            "v": "plus the thing and how many"
+          },
+          {
+            "k": "How much:",
+            "v": "and the numbers to hear the answer"
+          },
+          {
+            "k": "Slowly:",
+            "v": "more slowly, please"
+          },
+          {
+            "k": "Thank you:",
+            "v": "and goodbye"
+          }
+        ],
+        "ask": "Which one do you need most?"
+      },
+      {
+        "name": "Listen for",
+        "lines": [
+          {
+            "k": "Anything else:",
+            "v": "the most common surprise"
+          },
+          {
+            "k": "Numbers:",
+            "v": "the price and the change"
+          },
+          {
+            "k": "Yes or no:",
+            "v": "and the little words around them"
+          },
+          {
+            "k": "Where from:",
+            "v": "people love to ask"
+          },
+          {
+            "k": "A new word:",
+            "v": "catch one and bring it home"
+          }
+        ],
+        "ask": "What did they say back?"
+      },
+      {
+        "name": "When you're stuck",
+        "lines": [
+          {
+            "k": "Point:",
+            "v": "at what you want"
+          },
+          {
+            "k": "Fingers:",
+            "v": "to show how many"
+          },
+          {
+            "k": "Slowly:",
+            "v": "ask them to say it again"
+          },
+          {
+            "k": "How do you say:",
+            "v": "then repeat it back"
+          },
+          {
+            "k": "Smile:",
+            "v": "trying is the polite part"
+          }
+        ],
+        "ask": "What's your plan if you freeze?"
+      }
+    ],
+    "after": {
+      "label": "My language log",
+      "lines": [
+        "My mission",
+        "The words I used",
+        "What they said back",
+        "A new word, and my next mission"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Courage",
+      "text": "talking to a real person in a new language"
+    },
+    {
+      "name": "Listening",
+      "text": "catching meaning without every word"
+    },
+    {
+      "name": "Getting by",
+      "text": "pointing, gesturing and asking when stuck"
+    },
+    {
+      "name": "Respect",
+      "text": "showing people you're trying their language"
+    }
+  ],
+  "conclusion": {
+    "headline": "They walked in with a few words, and came out understood.",
+    "text": "Listen for the new words they start dropping into their day. If they greet a shopkeeper first without being asked, or come home with a word nobody taught them, the mission has done its job.",
+    "celebrate": "On the walk back, say: 'You just bought that in another language, all by yourself.'",
+    "extensions": [
+      "Go back to the same place every day for a week, and add one new phrase each time",
+      "Teach the family the words from your mission at dinner",
+      "Make a mission card for a younger kid, and coach them through it",
+      "Find a song, a game or a story in the language, and learn one line from it"
+    ]
+  },
+  "signs": [
+    "They start greeting people in the language on their own",
+    "They ask 'How do you say...?' about things they want",
+    "They care more about being understood than being perfect"
+  ],
+  "makeItReal": "Keep the language log going. A page of real conversations, with real people, is the best proof of a language there is.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "In El Zonte, El Salvador, the kids had a Spanish lesson every day after lunch and walked to the tienda to practise ordering. Nobody there was going to switch to English for them, and the lady at the counter was patient.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/local-language-mission.jpg",
+    "alt": "A girl reading a Spanish juice menu at a small shop counter, finger on her chin, deciding what to order",
+    "caption": "Reading the menu first, then ordering in Spanish.",
+    "inset": {
+      "src": "guides/assets/local-language-mission-tienda.jpg",
+      "alt": "Two kids sitting outside Zonte Shop, the little tienda where they practised ordering"
+    }
+  }
+}
