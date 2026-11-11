@@ -118,7 +118,7 @@ export const productSkills: Record<string, ProductSkills> = {
   "travel-day": { canonical: ["Planning","Time Management","Budgeting","Problem-Solving","Flexibility"], families: ["communication-and-writing","critical-thinking-and-reasoning","planning-and-self-management"] },
   "travel-reflection-postcards": { canonical: ["Communication","Observation","Reflection","Writing"], families: ["communication-and-writing","critical-thinking-and-reasoning","nature-and-science"] },
   "what-if-scenario-lab": { canonical: ["Critical Thinking","Planning","Curiosity","Trade-Offs","Communication"], families: ["communication-and-writing","creativity-and-making","critical-thinking-and-reasoning","planning-and-self-management"] },
-  "world-food-detective": { canonical: ["Communication","Critical Thinking","Observation","Research"], families: ["communication-and-writing","critical-thinking-and-reasoning","nature-and-science"] },
+  "world-food-detective": { canonical: ["Cultural Awareness","Geography","Science","Cooking","Observation"], families: ["communication-and-writing","critical-thinking-and-reasoning","nature-and-science"] },
   "write-like-a-pro": { canonical: ["Writing","Communication","Creative Thinking"], families: ["communication-and-writing","empathy-and-people","planning-and-self-management"] },
 };
 

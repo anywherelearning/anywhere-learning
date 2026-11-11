@@ -2216,15 +2216,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "World Food Detective",
     slug: "world-food-detective",
     description:
-      "Investigate the food of every place you visit. Kids identify ingredients, trace dishes to their origins, learn cooking traditions, and document what they taste. Food becomes a window into culture, history, and geography in this hands-on (and delicious) investigation.",
+      "Your kid picks the dish people here eat most and investigates it like a detective. They taste it in a few places, trace where each ingredient comes from, learn to make it from a local cook, then make it again somewhere else and work out why it does not taste quite the same.",
     shortDescription:
-      "Worldschooling food activity for kids ages 6-14: explore local cuisine, trace ingredient origins, and document culinary traditions.",
+      "Worldschooling food activity for kids ages 6-14: taste a local dish, trace its ingredients, learn it from a local cook and make it again.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TS08kAkIBECpwGmQeQ2dPds",
     blobUrl: "",
     imageUrl: "/products/world-food-detective.jpg",
-    previewFile: "Preview Worldschooling - World Food Detective.pdf",
+    previewFile: "Preview Worldschooling - World Food Detective v3.pdf",
     category: "worldschooling",
     isBundle: false,
     bundleProductIds: null,

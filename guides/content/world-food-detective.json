@@ -1,0 +1,345 @@
+{
+  "slug": "world-food-detective",
+  "category": "Worldschooling",
+  "title": "World Food Detective",
+  "tagline": "Find · Taste · Trace · Learn · Make",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid picks the dish people here eat most and investigates it like a detective. They taste it in a few places, trace where each ingredient comes from, learn to make it from a local cook, then make it again somewhere else and work out why it doesn't taste quite the same.",
+  "need": [
+    "A place you're staying long enough to eat the same dish more than once",
+    "A local cook, a cooking class or a market stall willing to show you",
+    "A notebook for the food file",
+    "A kitchen to try it again, here or back home"
+  ],
+  "academics": [
+    {
+      "subject": "Social studies",
+      "text": "why people here eat what they eat"
+    },
+    {
+      "subject": "Science",
+      "text": "how corn, heat and time change food"
+    },
+    {
+      "subject": "Geography",
+      "text": "what grows here, and where the rest comes from"
+    },
+    {
+      "subject": "Math",
+      "text": "measuring, ratios and what a meal costs here"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The easy version is eating the dish and moving on. Your job is to slow it down: order it again somewhere else, ask the person who made it one question, and keep the hot pan and the sharp knife on your side of the counter.",
+    "plan": [
+      {
+        "when": "The first days",
+        "what": "Find the dish, then taste it in a few places (Steps 1 and 2)."
+      },
+      {
+        "when": "At the market or the mill",
+        "what": "Trace the ingredients (Step 3)."
+      },
+      {
+        "when": "The lesson",
+        "what": "Learn it from a local cook (Step 4)."
+      },
+      {
+        "when": "Later, anywhere",
+        "what": "Make it again and compare (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "There's no cooking class nearby",
+        "a": "Ask the person who sells it. Many cooks will let a curious kid watch for a few minutes at a quiet time, especially if you buy one first."
+      },
+      {
+        "q": "They won't try it",
+        "a": "Let them investigate it without eating it first: the smell, the ingredients, who orders it. Curiosity usually wins by the second visit."
+      },
+      {
+        "q": "The family has allergies or diets",
+        "a": "Pick a dish everyone can eat, or investigate one dish while eating another."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A dish is a set of answers about a place: what grows here, how people cook, and what they eat together. You find the answers by tasting, asking and making it yourself.",
+    "before": "Pupusas are just stuffed tortillas.",
+    "model": [
+      {
+        "part": "Taste",
+        "line": "We ate them at the pupusería a few times before the class."
+      },
+      {
+        "part": "Trace",
+        "line": "The corn is ground into masa at a mill, right there."
+      },
+      {
+        "part": "Learn",
+        "line": "Fillings of cheese, beans and chicharrón, with curtido and salsa on the side."
+      },
+      {
+        "part": "Compare",
+        "line": "Made at home in the spring, they didn't taste the same at all."
+      }
+    ],
+    "modelNote": "'Just stuffed tortillas' missed everything that made them taste like El Salvador. Following the corn back to the mill, and failing to copy them at home, is what showed how much the place was part of the recipe."
+  },
+  "steps": [
+    {
+      "title": "Find the dish",
+      "why": "Every place has a dish people eat without thinking, and that's the one worth investigating.",
+      "kid": "Your kid finds out which dish people here eat most, using the Find the dish card in the Food Detective Toolkit at the end of the guide: what's on every menu, what locals order, what a cook says is the traditional meal. They read a little about it before they taste it.",
+      "you": "Ask 'What do people here eat most often?' rather than 'What's famous?' Help them read about it, and keep a list of where it's sold.",
+      "ask": [
+        "What do you think is in it?",
+        "Why might people here eat it so often?"
+      ],
+      "tip": "Reading about the dish before you go makes the first bite feel like a discovery, not just dinner.",
+      "levels": {
+        "explore": "Spot one dish you see everywhere, and draw what you think is inside.",
+        "develop": "Find the traditional dish and three facts about it before you taste it.",
+        "extend": "Find out how long people here have eaten it, and what it was made with before."
+      }
+    },
+    {
+      "title": "Taste it like a detective",
+      "why": "Tasting it in more than one place shows what stays the same and what each cook does differently.",
+      "kid": "Your kid tastes the dish in two or three places and fills in the Taste notes card each time: the texture, the flavour, the smell and what it comes with. They notice what's the same everywhere and what changes.",
+      "you": "Order it again, even when it's tempting to try something new. Ask 'What's different about this one?' and let them find words for it.",
+      "ask": [
+        "What's the same in every one you've tried?",
+        "Which was your favourite, and why?"
+      ],
+      "tip": "Watch what locals add to it at the table. That's often part of the dish too.",
+      "levels": {
+        "explore": "Taste it once, and say one word for how it feels and one for how it tastes.",
+        "develop": "Taste it in two places, fill in the Taste notes, and pick a favourite.",
+        "extend": "Taste it in three places, and work out what one cook does that the others don't."
+      }
+    },
+    {
+      "title": "Trace the ingredients",
+      "why": "Following an ingredient back to where it comes from turns a meal into geography.",
+      "kid": "Your kid lists every ingredient and traces as many as they can, using the Trace it card: does it grow here, is it made by hand, where would you buy it, what does it cost? If they can, they see one ingredient being made, like corn ground into dough at a mill.",
+      "you": "Take them to the market, the mill or the shop where the ingredients are sold. Ask the seller, with them beside you, where it comes from.",
+      "ask": [
+        "Which ingredients grow right here?",
+        "What would be hardest to find back home?"
+      ],
+      "tip": "Seeing one ingredient made from scratch, like corn becoming dough, is often the moment the whole dish makes sense.",
+      "levels": {
+        "explore": "Find two ingredients at a market, and say if they grow here.",
+        "develop": "Trace every ingredient: grown here, made here, or brought in.",
+        "extend": "Price the ingredients for one serving, and compare it with what the dish costs to buy."
+      }
+    },
+    {
+      "title": "Learn it from a local cook",
+      "why": "A cook's hands know things no recipe writes down.",
+      "kid": "Your kid learns to make the dish from someone local: a cooking class, a cook at a stall or a host. They watch first, ask the questions on the Ask the cook card, then make it with their own hands, including what's served with it.",
+      "you": "Find the lesson and help with the asking. You handle anything hot or sharp. Let the cook correct your kid, not you, and take photos of their hands at work.",
+      "ask": [
+        "What's the one thing beginners always get wrong?",
+        "What do you put on the side, and why?"
+      ],
+      "tip": "Ask the cook how they learned it. The answer is often a story about their family.",
+      "levels": {
+        "explore": "Watch the cook, then shape or fill one yourself.",
+        "develop": "Make the whole dish with the cook, side dishes included, and ask two questions.",
+        "extend": "Write the recipe as the cook explains it, with their tips, in amounts you could follow later."
+      }
+    },
+    {
+      "title": "Make it again and compare",
+      "why": "When the dish doesn't taste the same somewhere else, working out why is the best detective work of all.",
+      "kid": "Your kid makes the dish again in a new kitchen, here or back home, from the recipe they wrote. Then they compare it with the real thing and fill in My food file at the end of the guide: what was different, and why they think so.",
+      "you": "Shop for the ingredients with them, and let them find substitutes when the real ones aren't there. Taste it together and be honest.",
+      "ask": [
+        "What tastes different, and what do you think caused it?",
+        "What would you need to make it taste like there?"
+      ],
+      "tip": "It almost never tastes the same, and that's the point. The reasons are the place itself: the corn, the cook's hands, the griddle.",
+      "levels": {
+        "explore": "Help make it again, and say one thing that tastes different.",
+        "develop": "Make it from your recipe, then list what was different and why.",
+        "extend": "Change one thing, like the flour or the heat, and test whether it gets closer."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Food Detective Toolkit",
+    "intro": "How to find the dish, what to notice when you taste it, how to trace it and what to ask the cook.",
+    "items": [
+      {
+        "name": "Find the dish",
+        "lines": [
+          {
+            "k": "Every menu:",
+            "v": "the dish that's on all of them"
+          },
+          {
+            "k": "Locals:",
+            "v": "what the people at the next table order"
+          },
+          {
+            "k": "Street:",
+            "v": "what's cooked on corners and stalls"
+          },
+          {
+            "k": "Ask:",
+            "v": "'What's the traditional meal here?'"
+          },
+          {
+            "k": "Read:",
+            "v": "one short piece about it before you taste"
+          }
+        ],
+        "ask": "Which dish do people here eat without thinking?"
+      },
+      {
+        "name": "Taste notes",
+        "lines": [
+          {
+            "k": "Texture:",
+            "v": "soft, crisp, chewy, gooey"
+          },
+          {
+            "k": "Flavour:",
+            "v": "salty, sweet, sour, spicy"
+          },
+          {
+            "k": "Smell:",
+            "v": "before the first bite"
+          },
+          {
+            "k": "On the side:",
+            "v": "what it's always served with"
+          },
+          {
+            "k": "At the table:",
+            "v": "what locals add to it"
+          }
+        ],
+        "ask": "What's the same everywhere you've tried it?"
+      },
+      {
+        "name": "Trace it",
+        "lines": [
+          {
+            "k": "Grown here?",
+            "v": "or brought from somewhere else"
+          },
+          {
+            "k": "Made by hand?",
+            "v": "or bought ready"
+          },
+          {
+            "k": "Where to buy:",
+            "v": "market, mill, shop"
+          },
+          {
+            "k": "Cost:",
+            "v": "for one serving"
+          },
+          {
+            "k": "Old or new:",
+            "v": "what was it made with long ago?"
+          }
+        ],
+        "ask": "Which ingredient would be hardest to find back home?"
+      },
+      {
+        "name": "Ask the cook",
+        "lines": [
+          {
+            "k": "Learned:",
+            "v": "'Who taught you to make it?'"
+          },
+          {
+            "k": "Mistake:",
+            "v": "'What do beginners get wrong?'"
+          },
+          {
+            "k": "Secret:",
+            "v": "'What makes yours taste like this?'"
+          },
+          {
+            "k": "Side:",
+            "v": "'What goes with it, and why?'"
+          },
+          {
+            "k": "When:",
+            "v": "'When do families here eat it?'"
+          }
+        ],
+        "ask": "Which answer surprised you most?"
+      }
+    ],
+    "after": {
+      "label": "My food file",
+      "lines": [
+        "The dish, and where it comes from",
+        "What I learned from the cook",
+        "My version: what was different",
+        "Why I think it tasted different"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Curiosity",
+      "text": "asking where food really comes from"
+    },
+    {
+      "name": "Observation",
+      "text": "noticing what each cook does differently"
+    },
+    {
+      "name": "Respect",
+      "text": "learning a dish from the people who make it"
+    },
+    {
+      "name": "Trying again",
+      "text": "working out why a copy isn't the same"
+    }
+  ],
+  "conclusion": {
+    "headline": "They tasted a place, and found out what made it taste that way.",
+    "text": "Listen at the next meal somewhere new. If they ask what's in it or where it comes from before they pick up a fork, the detective work has become a habit.",
+    "celebrate": "When they serve their own version, say: 'You learned this from the person who makes it best, and now you can share it.'",
+    "extensions": [
+      "Find a dish from this place that's eaten on one special day of the year, and find out why",
+      "Track down the same ingredient in three dishes here, and see how it changes",
+      "Cook the dish for a family back home who has never tried it, and tell them its story",
+      "Compare the dish with one from home that's built the same way, and list what's different"
+    ]
+  },
+  "signs": [
+    "They ask what's in a dish before they decide if they like it",
+    "They want to see where ingredients are sold",
+    "They order something because locals do"
+  ],
+  "makeItReal": "Make the dish for someone who's never had it, and tell them where you learned it.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "Pupusas are the traditional meal in El Salvador, so we read about them before we went. We ate them at the pupusería a few times, then our Spanish school offered a cooking class. The kids saw the corn being ground into masa, filled pupusas with cheese, beans and chicharrón, and made curtido and salsa to go with them. In the spring we tried making them at home. They didn't taste the same at all.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/world-food-detective.jpg",
+    "alt": "A girl flipping pupusas on a big flat griddle with a spatula while her brother watches behind her",
+    "caption": "Flipping pupusas at the cooking class in El Salvador.",
+    "tall": true
+  }
+}

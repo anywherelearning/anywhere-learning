@@ -114,7 +114,7 @@ const catalog = [
   { slug: 'street-explorer-map-maker', name: 'Street Explorer Map Maker', priceCents: 599, description: 'Walk new neighbourhoods and create hand-drawn maps with landmarks.' },
   { slug: 'transport-navigation-challenge', name: 'Transport & Navigation Challenge', priceCents: 599, description: 'Worldschooling navigation challenge for kids ages 6-14: find the way in, compare and book the trip, then lead the family there.' },
   { slug: 'travel-reflection-postcards', name: 'Travel Reflection & Postcards', priceCents: 599, description: 'Capture travel memories through hand-made postcards and reflective writing.' },
-  { slug: 'world-food-detective', name: 'World Food Detective', priceCents: 599, description: 'Investigate local cuisine: identify ingredients, trace origins, and document tastes.' },
+  { slug: 'world-food-detective', name: 'World Food Detective', priceCents: 599, description: 'Worldschooling food activity for kids ages 6-14: taste a local dish, trace its ingredients, learn it from a local cook and make it again.' },
   // ─── Emotional & Social Skills singles ($5.99) ───
   { slug: 'calm-down-toolkit', name: 'The Calm-Down Toolkit', priceCents: 599, description: 'Build a real reset kit and a when-I\'m-flooded plan from household stuff.' },
   { slug: 'big-feelings-lab', name: 'The Big Feelings Lab', priceCents: 599, description: 'Name a feeling, map it in the body, rate its size, watch it pass.' },

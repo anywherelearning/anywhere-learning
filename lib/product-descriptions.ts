@@ -2487,31 +2487,28 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'world-food-detective': {
     opening:
-      'Investigate the food of every place you visit. Kids identify ingredients, trace dishes to their origins, learn cooking traditions, and document what they taste. Food becomes a window into culture, history, and geography in this hands-on (and delicious) investigation.',
+      'Your kid picks the dish people here eat most and investigates it like a detective. They taste it in a few places, trace where each ingredient comes from, learn to make it from a local cook, then make it again somewhere else and work out why it does not taste quite the same.',
     whatsIncluded: [
-      'Food detective investigation guide',
-      'Ingredient identification and origin tracing',
-      'Cooking tradition research prompts',
-      'Tasting notes and personal review templates',
-      'Cultural connections between food and place',
+      'Five steps, from finding the dish to making it again in a new kitchen',
+      'Find the dish, Taste notes, Trace it and Ask the cook cards',
+      'A worked example: pupusas in El Salvador, from the corn mill to the griddle',
+      'My food file, with why your version tasted different',
+      'Three levels per step, for any dish, anywhere',
     ],
-    skillTags: ['Cultural Awareness', 'Geography', 'Research', 'Observation', 'Writing'],
+    skillTags: ['Cultural Awareness', 'Geography', 'Science', 'Cooking', 'Observation'],
     insideTheLearning: {
       lead:
-        'Your child investigates one dish like a case: where the ingredients come from, who cooked it first, why it exists in that place at all. Then they cook or taste it and write it up. Food turns out to be history that you can eat.',
+        'Your kid investigates the dish people here eat most: they taste it in a few places, follow its ingredients back to the market and the mill, and learn it from someone who makes it every day. When their own version does not taste the same, working out why is the best detective work of all.',
       skills: [
-        { skill: 'Research', where: 'Tracing ingredients and origins, and weighing whether a source is any good' },
-        { skill: 'Observation', where: 'Paying real attention to flavour, texture, ingredients and how it is made' },
-        { skill: 'Critical Thinking', where: 'Asking why a dish exists where it does, and spotting the patterns' },
-        { skill: 'Communication', where: 'Describing, sketching and explaining what they found' },
+        { skill: 'Social Studies', where: 'Why people here eat what they eat, and who taught the cook' },
+        { skill: 'Science', where: 'How corn, heat and time change food' },
+        { skill: 'Geography', where: 'What grows here, and where the rest comes from' },
+        { skill: 'Math', where: 'Measuring, and what one serving costs here' },
+        { skill: 'Observation', where: 'Noticing what each cook does differently' },
       ],
     },
-    format: 'Activity Guide',
+    format: 'Project Guide',
   },
-
-  // ═══════════════════════════════════════════════════════════════════
-  // EMOTIONAL & SOCIAL SKILLS
-  // ═══════════════════════════════════════════════════════════════════
   'calm-down-toolkit': {
     opening:
       'Your child builds their own physical reset kit and a "when I\'m flooded" plan using stuff already around the house. They test different tools to find what actually settles their body, then turn it into a 3-line plan they can run on their own. Real self-regulation, not a poster on the wall.',

@@ -128,7 +128,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'street-explorer-map-maker': 'Half-Day',
   'transport-navigation-challenge': 'Project',
   'travel-reflection-postcards': 'Half-Day',
-  'world-food-detective': 'Half-Day',
+  'world-food-detective': 'Project',
 
   // Emotional & Social Skills
   'calm-down-toolkit': 'Half-Day',
