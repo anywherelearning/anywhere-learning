@@ -166,24 +166,7 @@ export default function FreeGuidePage() {
               <div className="mt-7 max-w-[480px]">
                 <EmailForm variant="light" buttonText="Send me the free guide" />
               </div>
-              <figure className="mt-6 flex max-w-[400px] gap-2.5 rounded-[12px] border border-[#E2DCC8] bg-cream/70 px-3.5 py-3">
-                <span
-                  aria-hidden="true"
-                  className="grid h-6 w-6 shrink-0 place-items-center rounded-full text-[11px] font-bold"
-                  style={{ background: 'rgba(58,90,64,0.12)', color: '#3A5A40' }}
-                >
-                  V
-                </span>
-                <blockquote className="m-0">
-                  <p className="m-0 text-[12.5px] leading-[1.5] text-gray-700">
-                    &ldquo;We tried the Square Foot Safari and my son kept saying how much fun he was
-                    having. Best afternoon outdoors we&apos;ve had together lately.&rdquo;
-                  </p>
-                  <figcaption className="mt-1 text-[11.5px] font-semibold text-forest-dark">
-                    Vickie <span className="font-normal text-gray-500">&middot; mom of two</span>
-                  </figcaption>
-                </blockquote>
-              </figure>
+
             </div>
 
             <div className="relative mx-auto h-[380px] w-full max-w-[480px] sm:h-[460px]">
