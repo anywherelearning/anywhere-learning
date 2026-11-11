@@ -2047,7 +2047,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: null,
     ageRange: "Ages 6–14",
     sortOrder: 201,
-    active: true,
+    active: false, // retired Nov 2026: merged into farmers-market-challenge
     createdAt: new Date("2026-04-30"),
   },
   {
@@ -2070,7 +2070,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: null,
     ageRange: "Ages 6–14",
     sortOrder: 202,
-    active: true,
+    active: false, // retired Nov 2026: no real task; ideas live in other worldschooling guides
     createdAt: new Date("2026-04-30"),
   },
   {
@@ -2139,7 +2139,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: null,
     ageRange: "Ages 6–14",
     sortOrder: 205,
-    active: true,
+    active: false, // retired Nov 2026: merged into neighbourhood-interview
     createdAt: new Date("2026-04-30"),
   },
   {
@@ -2208,7 +2208,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: null,
     ageRange: "Ages 6–14",
     sortOrder: 208,
-    active: true,
+    active: false, // retired Nov 2026: no real task; ideas live in other worldschooling guides
     createdAt: new Date("2026-04-30"),
   },
   {

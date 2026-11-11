@@ -10,7 +10,7 @@ const HERO_CARDS = [
   { slug: 'family-debate-night' },
   { slug: 'shark-tank-pitch' },
   { slug: 'rube-goldberg-machine' },
-  { slug: 'currency-market-math' },
+  { slug: 'farmers-market-challenge' },
   { slug: 'nature-walk-task-cards' },
   { slug: 'travel-day' },
 ];

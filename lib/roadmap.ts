@@ -109,7 +109,7 @@ export const TERRITORIES: readonly Territory[] = [
     },
     activities: [
       'write-like-a-pro', 'mini-magazine-creator', 'my-review-column', 'adventure-story-map',
-      'two-minute-story', 'trail-guide-creator', 'family-recipe-book', 'travel-reflection-postcards',
+      'two-minute-story', 'trail-guide-creator', 'family-recipe-book',
       'scavenger-hunt-designer', 'prompt-like-a-coach', 'shark-tank-pitch',
     ],
   },
@@ -135,7 +135,7 @@ export const TERRITORIES: readonly Territory[] = [
     },
     activities: [
       'garage-sale-math', 'snack-mission', 'party-planner-math', 'kitchen-math-challenge',
-      'clothing-swap-thrift-math', 'currency-market-math', 'nature-data-tracker', 'sports-stats-lab',
+      'clothing-swap-thrift-math', 'farmers-market-challenge', 'nature-data-tracker', 'sports-stats-lab',
       'savings-goal-tracker', 'family-electricity-audit', 'budget-challenge', 'micro-business', 'shark-tank-pitch', 'road-trip-calculator',
       'garden-plot-planner', 'smart-shopper', 'pricing-experiment', 'backyard-campout-planner',
     ],
@@ -214,8 +214,7 @@ export const TERRITORIES: readonly Territory[] = [
       ],
     },
     activities: [
-      'directions-challenge', 'community-tour-guide', 'two-minute-story', 'neighbourhood-interview',
-      'people-stories-interview', 'complaint-to-product', 'marketing-campaign', 'shark-tank-pitch', 'market-stall-pitch',
+      'directions-challenge', 'community-tour-guide', 'two-minute-story', 'neighbourhood-interview', 'complaint-to-product', 'marketing-campaign', 'shark-tank-pitch', 'market-stall-pitch',
       'mini-movie', 'board-game-studio', 'family-debate-night',
     ],
   },
@@ -324,7 +323,7 @@ export const TERRITORIES: readonly Territory[] = [
     activities: [
       'kindness-missions', 'decision-lab', 'community-impact', 'supply-chain-detective',
       'neighbourhood-problem-spotter', 'privacy-footprint', 'world-food-detective',
-      'cultural-celebration-journal', 'everyday-life-comparison', 'people-stories-interview',
+      'cultural-celebration-journal', 'neighbourhood-interview',
       'local-language-mission', 'solo-mission',
     ],
   },

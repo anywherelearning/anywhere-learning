@@ -198,7 +198,7 @@ const NOVEMBER_2026 = {
       'community-impact',              // pick a real local problem and do something about it
       'neighbourhood-problem-spotter', // walk the block and notice what needs fixing
       'kindness-missions',             // small, real acts of kindness for people nearby
-      'people-stories-interview',      // listen to someone's story and tell it with care
+      'neighbourhood-interview',       // listen to someone's story and tell it with care
       'family-history-detective',      // the oldest person you know, and the stories nobody wrote down
       'decision-lab',                  // weigh what's fair and what's right, then choose
     ],
