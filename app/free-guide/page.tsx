@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   // Absolute so the site suffix doesn't push it past the SERP cutoff
   title: { absolute: 'Real-World Activities for Kids: Free 7-Day Guide' },
   description:
-    'A free, low-prep activity guide for families who love hands-on, real-world learning. Seven real-world activities across seven categories. Zero worksheets.',
+    'A free, low-prep activity guide for families who love hands-on, real-world learning. Seven real-world activities, each building a different skill. Zero worksheets.',
   alternates: {
     canonical: 'https://anywherelearning.co/free-guide',
   },
   openGraph: {
     title: 'Real-World Activities for Kids: Free 7-Day Guide for Families',
     description:
-      'A free, low-prep activity guide for families who love hands-on, real-world learning. Seven real-world activities across seven categories. Zero worksheets.',
+      'A free, low-prep activity guide for families who love hands-on, real-world learning. Seven real-world activities, each building a different skill. Zero worksheets.',
     url: 'https://anywherelearning.co/free-guide',
     type: 'website',
     images: [
@@ -61,80 +61,79 @@ const freeGuideLd = {
 const days = [
   {
     num: 'Day 1',
-    cat: 'Outdoor & Nature',
-    title: 'Square Foot Safari',
-    body: 'Your kid picks one small patch of ground, stays with it, and discovers everything living inside. Real field scientists call this a quadrat study.',
-    color: '#3A5A40',
+    cat: 'Outdoor Learning',
+    title: 'Land Art Challenge',
+    slug: 'land-art-challenges',
+    body: "Whatever nature leaves on the ground becomes the art: a mandala, the tallest tower of loose stones, or art that shows a feeling. Then your kid names it and tells you the story behind it.",
+    color: '#588157',
   },
   {
     num: 'Day 2',
     cat: 'Real-World Math',
     title: 'The $20 Snack Mission',
-    body: 'A real budget, real money, and real trade-offs at a real store. Math sticks when the numbers point at something kids care about.',
-    color: '#588157',
+    slug: 'snack-mission',
+    body: 'A real budget, real money and real trade-offs at a real store. Math sticks when the numbers point at something kids care about.',
+    color: '#8b7355',
   },
   {
     num: 'Day 3',
     cat: 'Creativity',
-    title: 'Household Orchestra',
-    body: 'Five random objects, twenty minutes, zero musical training. Real creativity comes from constraints, not unlimited options.',
-    color: '#C97B5C',
+    title: 'Invent a Sport',
+    slug: 'invent-a-sport',
+    body: 'Your kid designs a game nobody has played: the field, the rules and a fair way to win. Then everyone plays, finds what breaks, and fixes it.',
+    color: '#c47a8f',
   },
   {
     num: 'Day 4',
-    cat: 'AI & Digital',
-    title: 'Three AIs, One Question',
-    body: "Ask the same question to ChatGPT, Claude, and Gemini, then watch your kid figure out when AI is bluffing. The single most important AI skill they can learn.",
-    color: '#B6913F',
+    cat: 'Decisions',
+    title: 'What Would You Do?',
+    slug: 'decision-lab',
+    body: "Tough little choices with no easy answer, talked through in the car or at dinner. Your kid finds every way out, who each one affects, and decides.",
+    color: '#7a6da8',
   },
   {
     num: 'Day 5',
-    cat: 'Entrepreneurship',
-    title: 'Complaint to Product',
-    body: "Every great business started as somebody's complaint. Your kid turns one family annoyance into a real product idea.",
-    color: '#C97B5C',
+    cat: 'Communication',
+    title: 'The Two-Minute Story',
+    slug: 'two-minute-story',
+    body: 'One true moment from their life, told clearly in two minutes. It is how we make friends and hold a room, and every kid already has the stories.',
+    color: '#5b8fa8',
   },
   {
     num: 'Day 6',
-    cat: 'Communication',
-    title: 'The Two-Minute Story',
-    body: 'Telling a clear, interesting story in two minutes is one of the most useful skills a person can have. It gets you jobs, friends, and dinner-party invitations.',
-    color: '#588157',
+    cat: 'Entrepreneurship',
+    title: 'Pricing Experiment',
+    slug: 'pricing-experiment',
+    body: 'Cookies or lemonade, two prices and real buyers. Your kid works out what one costs to make, tests both prices and keeps the one their numbers support.',
+    color: '#c4836a',
   },
   {
     num: 'Day 7',
     cat: 'Planning',
-    title: 'Plan a Mini Adventure',
-    body: 'Your kid plans a real two-hour family outing, and the family actually goes. Real ownership of a real decision, from start to finish.',
-    color: '#3A5A40',
+    title: 'Scavenger Hunt Designer',
+    slug: 'scavenger-hunt-designer',
+    body: 'Your kid designs a hunt for someone else: a theme, five hiding spots and a clue for each. Then they run it, from the welcome to the prize.',
+    color: '#7a6da8',
   },
 ];
 
-// The illustrated header from each day's page in the PDF, cut out as PNGs.
-const DAY_ICONS = [
-  'square-foot-safari',
-  'snack-mission',
-  'household-orchestra',
-  'three-ais',
-  'complaint-to-product',
-  'two-minute-story',
-  'mini-adventure',
-].map((n) => `/images/free-guide-${n}.png`);
+// A photo from each day, taken while we did the activity.
+const DAY_ICONS = days.map((d) => `/images/free-guide-day-${d.slug}.jpg`);
 
 // Real inside pages, fanned behind the cover in the hero (back to front).
 const INSIDE_PAGES = [
-  '/images/free-guide-page-06.jpg',
-  '/images/free-guide-page-05.jpg',
-  '/images/free-guide-page-04.jpg',
+  '/images/free-guide-v2-page-06.jpg',
+  '/images/free-guide-v2-page-05.jpg',
+  '/images/free-guide-v2-page-04.jpg',
 ];
 
 // What every activity page holds, as labelled on the pages themselves.
 const PAGE_PARTS = [
-  ['Written for you', 'A guide for the parent, not a worksheet for the kid'],
+  ['Why it matters', 'The real-world skill behind it, in one line'],
+  ['Practising', 'The math, writing or science inside it, plus the life skill'],
   ["You'll need", 'A short list of things you already have'],
-  ['Explore, Develop, Extend', 'Three steps, so it grows with your kid'],
-  ['Why this works', 'The real-world skill behind it, in plain words'],
-  ['Try asking', 'Questions that get them thinking, not answers'],
+  ['Do it together', 'Four moves: what your kid does and what you do'],
+  ['Explore, Develop, Extend', 'Three levels, so it fits your kid'],
 ];
 
 export default function FreeGuidePage() {
@@ -158,7 +157,7 @@ export default function FreeGuidePage() {
                 7 days of <span className="italic text-forest">real-world</span> learning.
               </h1>
               <p className="mt-5 max-w-[520px] text-[18px] leading-[1.6] text-gray-600">
-                Seven real-world activities across seven categories. Do them in a week, a month,
+                Seven real-world activities, each building a different skill. Do them in a week, a month,
                 or whenever life makes room. A free guide for parents who want their kids growing
                 into{' '}
                 <span className="font-display italic text-forest-dark">capable, curious</span>{' '}
@@ -200,7 +199,7 @@ export default function FreeGuidePage() {
               ))}
               <div className="absolute left-[3%] top-[2%] z-10 aspect-[8.5/11] w-[58%] -rotate-[4deg] overflow-hidden rounded-[12px] border border-[#D8D4C5] shadow-[0_34px_64px_-30px_rgba(45,58,46,0.6)]">
                 <Image
-                  src="/images/free-guide-cover.jpg"
+                  src="/images/free-guide-v2-cover.jpg"
                   alt="7 Days of Real-World Learning free guide cover"
                   fill
                   sizes="(max-width: 768px) 60vw, 280px"
@@ -236,8 +235,8 @@ export default function FreeGuidePage() {
               <div className="lg:sticky lg:top-24">
                 <div className="relative mx-auto aspect-[8.5/11] w-full max-w-[340px] overflow-hidden rounded-[12px] border border-[#D8D4C5] bg-white shadow-[0_30px_60px_-34px_rgba(45,58,46,0.55)]">
                   <Image
-                    src="/images/free-guide-page-04.jpg"
-                    alt="Inside the guide: the Day 1 page, Square Foot Safari"
+                    src="/images/free-guide-v2-page-04.jpg"
+                    alt="Inside the guide: the Day 1 page, Land Art Challenge"
                     fill
                     sizes="340px"
                     className="object-cover object-top"
@@ -260,7 +259,7 @@ export default function FreeGuidePage() {
                 {days.map((d, i) => (
                   <li key={d.num} className="grid grid-cols-[64px_1fr] gap-4 px-5 py-5 md:grid-cols-[76px_1fr] md:gap-5 md:px-7">
                     <div className="relative h-16 w-16 md:h-[76px] md:w-[76px]">
-                      <Image src={DAY_ICONS[i]} alt="" fill sizes="76px" className="object-contain" />
+                      <Image src={DAY_ICONS[i]} alt="" fill sizes="76px" className="rounded-full object-cover" />
                     </div>
                     <div>
                       <p className="text-[11.5px] font-semibold uppercase tracking-[0.14em]" style={{ color: d.color }}>

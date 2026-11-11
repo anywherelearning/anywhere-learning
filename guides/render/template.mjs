@@ -879,3 +879,176 @@ ${bw ? `
 .bandbanner,.tochead,.bandpill{background:#fff!important;color:#000!important;border:2.5px solid #000}
 .tocareas a span:before{background:#fff;border:1.5px solid #000}` : ''}`;
 }
+
+// Free guide: 7 short activities, one per day, each in its own category colour.
+// Same look as the library guides, lighter: why, what you need, four moves, three levels.
+export function buildDaysHtml(g, mode) {
+  const bw = mode === 'print-bw';
+  const layout = mode === 'phone' ? 'phone' : 'print';
+  const base = ACCENTS['Outdoor Learning'];
+  const n = g.days.length;
+  const foot = (label) => `<footer class="foot"><span>${esc(g.title)}</span><span>${esc(label)}</span></footer>`;
+  // The website's category colours (shop pills and card accents), so each day matches its category on the site.
+  const WEB = { 'Outdoor Learning': '#588157', 'Real-World Math': '#8b7355', 'Creativity & Maker': '#c47a8f', 'Writing & Communication': '#5b8fa8', 'Entrepreneurship': '#c4836a', 'Planning & Problem-Solving': '#7a6da8' };
+  const mix = (hex, w) => { const n = parseInt(hex.slice(1), 16); const c = [n >> 16, (n >> 8) & 255, n & 255].map((v) => Math.round(v + (255 - v) * w)); return '#' + c.map((v) => v.toString(16).padStart(2, '0')).join(''); };
+  const acc = (cat) => { const a = WEB[cat] ?? '#588157'; return { accent: a, soft: mix(a, 0.8), paper: mix(a, 0.93) }; };
+  const tint = (cat) => { const a = acc(cat); return `--accent:${a.accent};--soft:${a.soft};--paper:${a.paper};--trail:${a.accent}`; };
+
+  const cover = `
+<section class="pg cover">
+  ${contours()}
+  <div class="cover-in">
+    <div class="ctitle"><div class="eyebrow">Free guide</div>
+    <h1 class="longtitle">${esc(g.title)}</h1>
+    <p class="tagline">${esc(g.tagline)}</p>
+    <div class="chips">${g.chips.map((c) => `<span>${esc(c)}</span>`).join('')}</div></div>
+    <div class="polas">${g.days.map((d, k) => `<figure class="pola pl${k}"><img src="${img(d.photo)}" alt="" style="object-position:${d.focus}"><figcaption>${esc(d.coverSkill)}</figcaption></figure>`).join('')}</div>
+    <ol class="htrail ctrail">${g.days.map((d, i) => `<li>${blaze(i + 1, 'sm')}<span>${esc(d.title)}</span></li>`).join('')}</ol>
+  </div>
+  <div class="brand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
+</section>`;
+
+  const L = g.letter;
+  const letter = `
+<section class="pg letter spread">
+  ${contours()}
+  <div class="grp"><div class="eyebrow">Welcome</div><h2>${esc(L.hello)}</h2></div>
+  <div class="grp">${L.paras.map((p) => `<p class="lead">${esc(p)}</p>`).join('')}</div>
+  <div class="box"><ul class="daylist">${L.list.map((x, i) => `<li><span class="ddot" style="background:${acc(g.days[i].category).accent}"></span><span><b>${esc(x.k)}</b>: ${esc(x.v)}</span></li>`).join('')}</ul></div>
+  <p class="lead">${esc(L.close)}</p>
+  <div class="grp"><p class="pull">${esc(L.pull)}</p><div class="byline"><img src="${img(g.avatar)}" alt="Amelie"><p>Made by <b>Amelie Drouin</b>,<br>former teacher and homeschooling mom</p></div></div>
+  ${foot('Welcome')}
+</section>`;
+
+  const H = g.howto;
+  const howto = `
+<section class="pg howdays spread">
+  <div class="grp"><div class="eyebrow">Before you start</div><h2>How to use this guide</h2></div>
+  <p class="lead">${esc(H.intro)}</p>
+  <div class="tips">${H.tips.map((t, i) => `
+    <div class="tip"><span class="tipn">${i + 1}</span><div><h3>${esc(t.title)}</h3><p>${esc(t.text)}</p></div></div>`).join('')}
+  </div>
+  <div class="start">Let's start.</div>
+  ${foot('How to use it')}
+</section>`;
+
+  const days = g.days.map((d, i) => `
+<section class="pg day" style="${tint(d.category)}">
+  <header class="stephead">
+    ${blaze(i + 1)}
+    <div><div class="eyebrow">Day ${i + 1} &middot; ${esc(d.category)} &middot; ${esc(d.time)}</div><h2>${esc(d.title)}</h2></div>
+  </header>
+  ${trail(n, i + 1)}
+  <p class="dwhy">${esc(d.why)}</p>
+  <p class="dlearn"><b>Practising</b> ${esc(d.learn)}</p>
+  ${d.cards ? `<div class="dcards">${d.cards.map((c) => `
+    <div class="dcard"><span class="dcl">Card</span><h3>${esc(c.name)}</h3><p>${esc(c.t)}</p></div>`).join('')}</div>` : ''}
+  <div class="dgrid">
+    <div class="dside">
+      <div class="dneed"><div class="rolel">You'll need</div><p>${esc(d.need)}</p></div>
+      <figure class="snap dsnap"><img src="${img(d.photo)}" alt="" style="object-position:${d.focus || '50% 40%'}"><figcaption>${esc(d.caption)}</figcaption></figure>
+    </div>
+    <div class="dmain">
+      <div class="label">Do it together</div>
+      <ol class="together">${d.together.map((t) => `<li><p>${esc(t)}</p></li>`).join('')}</ol>
+    </div>
+  </div>
+  <div class="label lvlabel">Adjust the level</div>
+  ${levelRow(d.levels)}
+  <p class="dnext"><b>Loved this? Try next:</b> <a href="https://anywherelearning.co/shop/${d.next.slug}">${esc(d.next.t)}</a>, ${esc(d.next.v)}. It's in the library.</p>
+  ${foot(`Day ${i + 1}`)}
+</section>`).join('');
+
+  const F = g.finish;
+  const finish = `
+<section class="pg finish spread">
+  ${contours()}
+  <div class="grp"><div class="eyebrow">You made it</div><h2>${esc(F.headline)}</h2></div>
+  <p class="lead">${esc(F.text)}</p>
+  <p class="pull">${esc(F.quote)}</p>
+  <div class="box"><div class="label">${esc(F.fullTitle)}</div><p>${esc(F.fullText)}</p>
+    <ul class="daylist full">${g.days.map((d, i) => `<li><span class="ddot" style="background:${acc(d.category).accent}"></span><span>Day ${i + 1}: <a href="https://anywherelearning.co/shop/${d.slug}"><b>${esc(d.full)}</b></a></span></li>`).join('')}</ul></div>
+  <a class="cta" href="${esc(F.href)}"><p>${esc(F.cta)}</p><span class="ctaurl">${esc(F.url)} &rarr;</span></a>
+  <div class="grp"><div class="byline"><img src="${img(g.avatar)}" alt="Amelie"><p>Made by <b>Amelie Drouin</b>,<br>former teacher and homeschooling mom</p></div><p class="legal">&copy; Anywhere Learning &middot; Free to use with your family &middot; anywherelearning.co</p></div>
+</section>`;
+
+  const extra = `
+a.cta{display:block;text-decoration:none;color:#fff}.daylist a,.dnext a{color:inherit;text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 35%,transparent);text-underline-offset:2px}.dnext a{font-weight:700}
+.byline{display:flex;align-items:center;gap:14px;justify-content:flex-end}.byline img{width:62px;height:62px;border-radius:50%;object-fit:cover;object-position:50% 35%;border:3px solid #fff;box-shadow:0 4px 12px -6px rgba(50,40,20,.5)}.byline p{font-size:14px;line-height:1.45;color:var(--muted)}.byline b{color:var(--forest)}.grp > .byline{margin-top:16px}.bw .byline img{filter:grayscale(1)}
+.day .dgrid{align-items:stretch!important}.day .dside{display:flex;flex-direction:column}.day .dside .dsnap{flex:1;display:flex;flex-direction:column;margin-bottom:0}.day .dside .dsnap img{flex:1 1 0;min-height:1.05in;height:0!important}.day .dside .dsnap{transform:rotate(-1deg)!important;margin-top:0!important}
+.day .dmain{justify-content:flex-start!important}.day .dmain .together{flex:1;justify-content:flex-start!important}
+.day .levels .lv1{background:var(--soft)}.day .levels .lv2{background:color-mix(in srgb,var(--accent) 30%,white)}.day .levels .lv3{background:color-mix(in srgb,var(--accent) 42%,white)}.day .lvname{color:var(--accent)}.day .lvlabel,.day .dmain .label,.day .dneed .rolel{color:var(--accent)}
+.day .dgrid{grid-template-columns:2.25in 1fr!important;gap:24px!important}.day .dsnap img{height:2.05in!important}.day .dsnap figcaption{font-size:11.5px!important}
+.day .together li{padding:10px 14px!important}.day .together li p{font-size:14.5px!important;line-height:1.45!important}.day .together{gap:9px!important}.day .together li:before{width:26px!important;height:26px!important;font-size:14px!important}
+.day .dwhy{font-size:16.5px!important}.day .lv p{font-size:13.5px!important}.day .dnext{font-size:13.5px!important}.day .dneed p{font-size:14px!important}.day .dcard p{font-size:13px!important}.day .dcard h3{font-size:14.5px!important}
+.day > :is(.dwhy,.dcards,.dgrid,.lvlabel,.levels,.dnext,.trail){margin-top:calc(var(--sp,1) * 22px)!important}.day > .dlearn{margin-top:8px!important}.day > .levels{margin-top:10px!important}.day .dmain .label,.day .dside{margin:0}
+.polas{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 0;margin:30px auto 0;max-width:6.6in}
+.pola{width:1.62in;margin:0 -4px;background:#fff;padding:7px 7px 0;border-radius:3px;box-shadow:0 8px 18px -8px rgba(50,40,20,.45)}
+.pola img{display:block;width:100%;height:1.42in;object-fit:cover;border-radius:2px}
+.pola figcaption{font:italic 500 13px 'DM Sans';color:var(--ink);text-align:center;padding:8px 0 10px}
+.pl0{transform:rotate(-4deg)}.pl1{transform:rotate(3deg) translateY(8px)}.pl2{transform:rotate(-2deg)}.pl3{transform:rotate(4deg) translateY(6px)}.pl4{transform:rotate(-3deg) translateY(4px)}.pl5{transform:rotate(2deg)}.pl6{transform:rotate(-4deg) translateY(6px)}
+.cover .ctrail{margin-top:0}.cover .cover-in{flex:1;display:flex;flex-direction:column;justify-content:space-evenly}.cover .cover-in > .polas{margin:0 auto}.pola{width:1.7in!important}.pola img{height:1.38in!important}.pola figcaption{font-size:13.5px!important;white-space:nowrap;letter-spacing:-.01em}
+.phone .polas{max-width:100%}.phone .pola{width:31%}.phone .pola img{height:.95in}.phone .pola figcaption{font-size:10.5px}
+.bw .pola img{filter:grayscale(1)}.bw .pola{border:1px solid #000}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1.65in);gap:8px;margin-top:26px;grid-template-areas:'a a b c' 'a a b d' 'e f g g'}
+.mt{position:relative;overflow:hidden;border-radius:12px;box-shadow:0 6px 16px -8px rgba(50,40,20,.45);border:3px solid #fff}.mt img{width:100%;height:100%;object-fit:cover;display:block}
+.mt0{grid-area:a}.mt1{grid-area:b}.mt2{grid-area:c}.mt3{grid-area:d}.mt4{grid-area:e}.mt5{grid-area:f}.mt6{grid-area:g}
+.mtn{position:absolute;left:8px;top:8px;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;color:#fff;font:800 14px 'Bricolage Grotesque';transform:rotate(-4deg);box-shadow:0 2px 0 rgba(0,0,0,.15)}
+.cover .coverbody{flex:none!important;gap:0!important}
+.phone .mosaic{grid-template-rows:repeat(3,.85in);gap:5px}.bw .mt img{filter:grayscale(1)}.bw .mtn{background:#000!important}
+.dgrid{grid-template-columns:2.55in 1fr!important;align-items:start!important;gap:26px!important}.dsnap img{width:100%!important;height:2.35in!important;object-fit:cover!important}.dside{gap:16px!important}
+.together li{padding:12px 16px!important}.together li p{font-size:15px!important;line-height:1.5!important}.day .together{gap:11px!important}.dwhy{font-size:17.5px!important}.day .lv p{font-size:14px!important}
+.pg.spread{justify-content:center!important}.spread > *:not(.foot):not(.topo) + *:not(.foot){margin-top:calc(var(--sp,1) * 18px)!important}
+.letter .lead,.howdays .lead,.finish .lead{font-size:17px!important;line-height:1.5}
+.day .dside{justify-content:flex-start}.day .dside .snap{order:0}.day .dside .dneed{order:0}.day .together{justify-content:flex-start}.day .together li{flex:none}.day .dmain{justify-content:center}
+.week .wkimg img{height:1.55in!important}.week .wkt b{font-size:16px!important}.week .wks{font-size:13px!important}.week .wkd{font-size:10.5px!important}
+.hgrid{display:grid;grid-template-columns:1fr 2.6in;gap:24px;align-items:center}.hgrid .tips{grid-template-columns:1fr!important;gap:12px}.hsnap{order:0!important;margin:0;width:100%;max-width:none;transform:rotate(2deg)}.hsnap img{height:3.3in;object-fit:cover}.pg > .hgrid{margin-top:calc(var(--sp,1) * 16px)}
+.wkany{display:flex;flex-direction:column;justify-content:center;gap:6px;padding:14px;background:var(--soft);border-top-color:var(--gold)}.wkany b{font:700 16px 'Bricolage Grotesque'}.wkany span{font-size:13px;line-height:1.4;color:var(--muted)}
+.strip .snap{width:2.25in!important}.strip img{height:2.5in!important}.pg.spread{display:flex!important;flex-direction:column!important}.spread > .foot{position:absolute}.grp > h2{margin-top:6px}.grp > .lead + .lead{margin-top:12px}.grp > .sign{margin-top:10px}.grp > .legal{margin-top:14px}
+.daylist li{display:flex;align-items:baseline;gap:10px;margin:0 0 8px}.daylist li:last-child{margin:0}.ddot{flex:none;width:11px;height:11px;border-radius:50%;transform:translateY(1px)}.daylist.full{margin-top:10px;columns:2;column-gap:22px}.daylist.full li{break-inside:avoid}.letter .daylist li{font-size:15.5px}.finish .lead{font-size:18px!important}
+.phone .hgrid{grid-template-columns:1fr}.phone .hsnap{width:70%;margin:0 auto}
+.howdays .tips{grid-template-columns:1fr 1fr!important;gap:14px}.phone .howdays .tips{grid-template-columns:1fr!important}.howdays .tip{flex-direction:row!important}.howdays .tip h3{font-size:17px}.howdays .tip p{font-size:15px}.howdays .lv p,.day .lv p{font-size:14.5px}.howdays .tip{padding:16px 18px}
+.dwhy{font-size:19px!important}.day:has(.dcards) .gtall .dsnap img{height:2.45in!important}.dlearn{font-size:14px;color:var(--muted)}.dlearn b{font:700 11px 'JetBrains Mono';letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-right:8px}.dnext{font-size:14px;padding:11px 16px;border-radius:12px;background:var(--soft)}.dnext b{color:var(--accent)}.pg > :is(.dlearn){margin-top:6px!important}.pg > .dnext{margin-top:calc(var(--sp,1) * 14px)}.bw .dnext{background:#fff;border:1.5px solid #000}.bw .dnext b,.bw .dlearn b{color:#000}
+.dgrid.gwide{grid-template-columns:3.2in 1fr!important}.dgrid.gtall{grid-template-columns:2.6in 1fr!important}.gtall .dsnap img{height:2.95in!important}.dgrid{align-items:start!important}
+.dsnap figcaption{font-size:13px!important}
+.dneed p{font-size:15px!important}
+.together li{padding:13px 16px!important}.together li p{font-size:15.5px!important}.day .together{gap:12px!important}.together li:before{width:32px!important;height:32px!important;font-size:17px!important}
+.dcard p{font-size:14px!important}.dcard h3{font-size:16px!important}
+.strip .snap{width:2.3in!important}.strip img{height:1.75in!important}.finish .box p{font-size:15.5px}
+.phone .week .wkimg img{height:1.1in!important}.phone .dgrid{grid-template-columns:1fr!important}.phone .gtall .dsnap img{height:auto!important;aspect-ratio:3/4}.phone .strip .snap{width:30%!important}.phone .strip img{height:1in!important}
+.pull{font:500 italic 18px/1.4 'DM Sans';color:var(--forest);border-left:4px solid var(--gold);padding-left:14px}
+.sign{font:800 22px 'Bricolage Grotesque';text-align:right}.sign span{display:block;font:500 12px 'DM Sans';color:var(--muted)}
+.letter .lead,.howdays .lead,.finish .lead{font-size:15.5px}
+.week{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.wk{background:var(--card);border:1px solid rgba(93,125,83,.16);border-radius:14px;overflow:hidden;border-top:4px solid var(--accent)}
+.wkimg img{display:block;width:100%;height:1.05in;object-fit:cover;object-position:50% 30%}
+.wkt{padding:8px 10px 10px;display:flex;flex-direction:column;gap:2px}.wkd{font:700 10px 'JetBrains Mono';letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}.wkt b{font:700 14px/1.2 'Bricolage Grotesque'}.wks{font-size:12px;line-height:1.35;color:var(--muted)}
+.howdays .tips{grid-template-columns:1fr 1fr}.howdays .tip{flex-direction:row;gap:12px}
+.day .eyebrow{letter-spacing:.12em}
+.dwhy{font-size:17px;line-height:1.45;color:var(--ink)}
+.dgrid{display:grid;gap:22px;align-items:stretch}.dgrid.gwide{grid-template-columns:2.7in 1fr}.dgrid.gtall{grid-template-columns:2.2in 1fr}
+.dside{display:flex;flex-direction:column;gap:14px}
+.dsnap{margin:4px 0 0;width:100%;max-width:none;transform:rotate(-1.5deg);padding:8px 8px 10px}.dsnap img{width:100%;height:auto}.gtall .dsnap img{height:2.4in;object-fit:cover;object-position:50% 30%}
+.dsnap figcaption{font-size:12px;line-height:1.35;margin-top:7px;text-wrap:balance}.dsnap:before{width:70px;height:18px;margin-left:-35px;top:-8px}
+.dneed{padding:12px 16px;border-radius:14px;border:1.5px dashed rgba(93,125,83,.35)}.dneed .rolel{color:var(--forest)}.dneed p{font-size:14px}
+.dmain{display:flex;flex-direction:column}
+.together{list-style:none;counter-reset:t;display:flex;flex-direction:column;justify-content:space-between;gap:10px;flex:1}
+.together li{counter-increment:t;display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid rgba(93,125,83,.16);border-radius:14px;padding:12px 16px;flex:1}
+.together li p{font-size:15px;line-height:1.45}
+.together li:before{content:counter(t);flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;font:800 15px 'Bricolage Grotesque';transform:rotate(-4deg)}
+.dcards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.dcard{background:var(--soft);border-radius:14px;padding:10px 13px}.dcl{font:700 9.5px 'JetBrains Mono';letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}.dcard h3{font-size:15px;margin:2px 0 3px}.dcard p{font-size:13px;line-height:1.4}
+.strip{display:flex;justify-content:center;gap:18px}.strip .snap{margin:0;width:2in;max-width:none;padding:7px 7px 9px}.strip img{height:1.45in;object-fit:cover}.strip .sp0{transform:rotate(-3deg)}.strip .sp1{transform:rotate(2deg) translateY(8px)}.strip .sp2{transform:rotate(-1deg)}
+.pg > :is(.dwhy,.dcards,.dgrid,.week,.weeklabel,.sign,.strip,.pull){margin-top:calc(var(--sp,1) * 14px)}
+.phone .week{grid-template-columns:1fr 1fr}.phone .dgrid{grid-template-columns:1fr!important}.phone .gtall .dsnap{width:70%;margin:0 auto}.phone .dcards{grid-template-columns:1fr}.phone .strip .snap{width:30%}.phone .strip img{height:1in}.phone .howdays .tips{grid-template-columns:1fr}
+.bw .together li:before{background:#000}.bw .together li,.bw .dcard,.bw .wk{border:1.5px solid #000;background:#fff}.bw img{filter:grayscale(1)}.bw .dneed{border-color:#000}`;
+
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(g.title)}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>${css(layout, base.accent, base.soft, bw, base.paper)}${extra}</style></head>
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${letter}${howto}${days}${finish}</body></html>`;
+}
+

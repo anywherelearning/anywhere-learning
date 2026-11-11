@@ -1,0 +1,330 @@
+{
+  "type": "days",
+  "slug": "free-guide-7-days",
+  "title": "7 Days of Real-World Learning",
+  "tagline": "One activity a day. Done together. Zero worksheets.",
+  "ages": "Ages 6 to 14",
+  "chips": [
+    "Ages 6 to 14",
+    "7 activities",
+    "Three levels"
+  ],
+  "photo": {
+    "src": "guides/assets/snack-mission.jpg",
+    "alt": "A boy and his younger sister choosing a loaf of bread together in a grocery store",
+    "caption": "Day 2: $40, a grocery store, and dinner is their call.",
+    "tall": true
+  },
+  "letter": {
+    "hello": "Hi, I'm Amelie.",
+    "paras": [
+      "I'm the mom behind Anywhere Learning. The skills kids need most don't come from textbooks. They come from real life: counting the change at a checkout, pricing cookies for a stand, telling a story at dinner that makes everyone lean in.",
+      "These 7 activities are ones we've done ourselves. Each one mixes real math, writing or science with a life skill, inside something you actually do together. Most fit into an hour or two, with what's already at home:"
+    ],
+    "list": [
+      {
+        "k": "Day 1, Outdoor Learning",
+        "v": "patterns and observation"
+      },
+      {
+        "k": "Day 2, Real-World Math",
+        "v": "budgeting with real money"
+      },
+      {
+        "k": "Day 3, Creativity",
+        "v": "design thinking"
+      },
+      {
+        "k": "Day 4, Decisions",
+        "v": "making a tough call and standing by it"
+      },
+      {
+        "k": "Day 5, Communication",
+        "v": "storytelling and public speaking"
+      },
+      {
+        "k": "Day 6, Entrepreneurship",
+        "v": "financial literacy with real buyers"
+      },
+      {
+        "k": "Day 7, Planning",
+        "v": "planning an event for someone else"
+      }
+    ],
+    "close": "No need to follow the order or do all seven. Pick the one that fits today, and do it together.",
+    "pull": "This is what learning looks like when real life does the teaching."
+  },
+  "howto": {
+    "intro": "Every day works the same way: four moves you do together, and three levels so it fits your kid.",
+    "tips": [
+      {
+        "title": "You do it with them",
+        "text": "Your part is small but it matters: set it up, ask, play along, then let them make the calls."
+      },
+      {
+        "title": "Starting points, not scripts",
+        "text": "If your kid takes it somewhere unexpected, follow them. The best moments are the ones you didn't plan."
+      },
+      {
+        "title": "Pick the level",
+        "text": "Explore, Develop or Extend: choose what fits today. Siblings can each do their own."
+      },
+      {
+        "title": "Ask, then wait",
+        "text": "The best answers come after the pause, often later at dinner or in the car."
+      },
+      {
+        "title": "Low prep is the point",
+        "text": "If it starts to feel like work, stop and come back another day."
+      },
+      {
+        "title": "Use it again",
+        "text": "A land art piece in spring is a new activity in fall. Keep this guide and come back to it."
+      }
+    ]
+  },
+  "days": [
+    {
+      "category": "Outdoor Learning",
+      "title": "Land Art Challenge",
+      "time": "About an hour",
+      "photo": "guides/assets/land-art-challenges.jpg",
+      "caption": "My daughter's inukshuk family, with a story for each one.",
+      "why": "No art lessons and no supplies: whatever nature leaves on the ground becomes the material.",
+      "need": "Fallen leaves, sticks, rocks, pinecones or petals, and a phone for photos",
+      "together": [
+        "Your kid picks a challenge: a mandala using 4 different natural materials, the tallest tower of loose stones, or art that shows a feeling.",
+        "They gather only fallen things: nothing alive, nothing from an animal's home, and towers away from trails and water.",
+        "They build it while you stay close and curious. Then you ask for a title and the story behind it, instead of just 'beautiful'.",
+        "Photograph it, then put every piece back where it came from."
+      ],
+      "levels": {
+        "explore": "Make the art.",
+        "develop": "Add a twist: one material only, or twice the size.",
+        "extend": "Title it, and explain one choice you made and why."
+      },
+      "full": "Land Art Challenge Cards",
+      "shape": "tall",
+      "skill": "Making art from what's on the ground",
+      "learn": "Patterns, symmetry and shapes, plus observation and leaving no trace",
+      "next": {
+        "t": "Nature Crafts for Kids",
+        "v": "six crafts from what's on the ground, like soil paint and a wind chime tuned by ear",
+        "slug": "nature-crafts"
+      },
+      "focus": "50% 35%",
+      "coverCap": "Land art",
+      "coverSkill": "Observation",
+      "slug": "land-art-challenges"
+    },
+    {
+      "category": "Real-World Math",
+      "title": "The $20 Snack Mission",
+      "time": "About an hour, plus the store",
+      "photo": "guides/assets/snack-mission.jpg",
+      "caption": "Choosing the bread, with $40 for the whole meal.",
+      "why": "A real budget in a real store turns adding, rounding and trade-offs into math kids actually want to get right.",
+      "need": "$20 in cash (any amount works), paper and a pencil, and any grocery or corner store",
+      "together": [
+        "You set a real mission, like snacks for the week or a movie night, and the budget. Say it once: whatever is left, they keep.",
+        "Your kid writes the list and guesses each price before you go. Wrong guesses are part of it.",
+        "In the store, they round each price up and keep a running total. You walk beside them and let them do the adding.",
+        "When the total bumps the budget, they choose what goes back, and you ask why that one. Then they pay and count the change."
+      ],
+      "levels": {
+        "explore": "Pick two or three things and check each one fits the budget before it goes in the basket.",
+        "develop": "Keep the running total on your own and finish under budget.",
+        "extend": "Is '2 for $5' cheaper than $2.29 each? Work it out at the shelf."
+      },
+      "full": "The $20 Snack Mission",
+      "shape": "tall",
+      "skill": "Budgeting with real money",
+      "learn": "Adding, rounding, estimating and unit prices, plus making trade-offs",
+      "next": {
+        "t": "Farmers Market Challenge",
+        "v": "a real budget at a market, unit prices stall to stall, and a meal planned from what's in season",
+        "slug": "farmers-market-challenge"
+      },
+      "focus": "50% 15%",
+      "coverCap": "The snack mission",
+      "coverSkill": "Budgeting",
+      "slug": "snack-mission"
+    },
+    {
+      "category": "Creativity & Maker",
+      "title": "Invent a Sport",
+      "time": "About an hour",
+      "photo": "guides/assets/invent-a-sport.jpg",
+      "caption": "Get Blocked: their own trampoline sport.",
+      "why": "Inventing a game nobody has played means designing a field, rules and a fair way to win, then watching it break and fixing it.",
+      "need": "A ball (rolled-up socks indoors), shoes or buckets as markers, and chalk or painter's tape",
+      "together": [
+        "Your kid picks how you win: hit a target, race, capture something or last the longest. They try the idea with a ball for two minutes first.",
+        "They mark a start, a goal and the edges. You check the space together: no glass, no stairs, no hard corners.",
+        "They say the rules out loud, with one way to score. You find the gaps: 'What if two people grab it at once?'",
+        "Everyone plays a round. Play for real, no fake-losing. Then they change one rule and play again."
+      ],
+      "levels": {
+        "explore": "Pick how you win, mark the field and play one round.",
+        "develop": "Name the sport, write the rules down and fix two things after the first round.",
+        "extend": "Play 6 games, swapping who starts. If whoever starts wins most, change the start and test again."
+      },
+      "full": "Invent a Sport",
+      "shape": "wide",
+      "skill": "Inventing something new",
+      "learn": "Scoring, distances and clear written rules, plus design thinking and movement",
+      "next": {
+        "t": "Board Game Studio",
+        "v": "a board game invented from nothing, then handed to someone new to see what breaks",
+        "slug": "board-game-studio"
+      },
+      "focus": "50% 50%",
+      "coverCap": "A brand-new sport",
+      "coverSkill": "Design thinking",
+      "slug": "invent-a-sport"
+    },
+    {
+      "category": "Planning & Problem-Solving",
+      "title": "What Would You Do?",
+      "time": "15 minutes, anywhere",
+      "photo": "guides/assets/decision-lab.jpg",
+      "caption": "One question, on the way somewhere.",
+      "why": "Tough little decisions with no easy answer build the thinking kids need when nobody's there to tell them what's right.",
+      "need": "Nothing at all. The car, a walk or dinner works best.",
+      "together": [
+        "Read out a situation: 'The clerk gave you too much change, and nobody would know.' Everyone says their gut answer at the same time.",
+        "Your kid finds every way out of it: the obvious one, the safe one, the brave one and the one nobody's said yet.",
+        "For each option, they work out who's glad, who's upset and what happens next. You keep asking: who's on the other side of this?",
+        "They choose and say why. Then you push back the way a friend would, and they decide again."
+      ],
+      "levels": {
+        "explore": "Find two options, with one good and one bad thing about each.",
+        "develop": "Find three or four options, including one nobody expected, and who each one affects.",
+        "extend": "Compare tomorrow with a year from now for each option, then rank them and defend the order."
+      },
+      "full": "What Would You Do? Decision Lab",
+      "shape": "tall",
+      "skill": "Making a tough call",
+      "learn": "Explaining and defending a choice, plus fairness and empathy",
+      "next": {
+        "t": "Family Debate Night",
+        "v": "a real debate with research, a timer, a judge and a verdict",
+        "slug": "family-debate-night"
+      },
+      "focus": "50% 70%",
+      "coverCap": "What would you do?",
+      "coverSkill": "Decision-making",
+      "slug": "decision-lab"
+    },
+    {
+      "category": "Writing & Communication",
+      "title": "The Two-Minute Story",
+      "time": "About 45 minutes",
+      "photo": "guides/assets/two-minute-story.jpg",
+      "caption": "Two stories, two minutes each, told at the kitchen counter.",
+      "why": "Telling one real moment clearly, in about two minutes, is how we make friends and hold a room. Every kid already has the stories.",
+      "need": "A timer (a phone works). That's it.",
+      "together": [
+        "Play two truths and a lie as a family, and notice which stories sounded true, and why.",
+        "Your kid picks one true moment from their life. Not 'my whole trip': one small moment.",
+        "You listen once without interrupting, then ask: where were you, what changed, and why does it matter?",
+        "They tell it again with a timer running, cut what the story doesn't need, and tell it for real at dinner."
+      ],
+      "levels": {
+        "explore": "Tell a true moment with a clear beginning and end.",
+        "develop": "Find the beginning, the turn and the point, and get it to about two minutes.",
+        "extend": "Cut it to 60 seconds, then add back only what you missed."
+      },
+      "full": "The Two-Minute Story",
+      "shape": "wide",
+      "skill": "Telling a story that lands",
+      "learn": "Story structure and speaking out loud, plus confidence",
+      "next": {
+        "t": "Neighbourhood Interview Project",
+        "v": "an interview with someone in your community, turned into a profile others want to read",
+        "slug": "neighbourhood-interview"
+      },
+      "focus": "50% 40%",
+      "coverCap": "Two-minute stories",
+      "coverSkill": "Storytelling",
+      "slug": "two-minute-story"
+    },
+    {
+      "category": "Entrepreneurship",
+      "title": "Pricing Experiment",
+      "time": "An afternoon of selling",
+      "photo": "guides/assets/pricing-experiment.jpg",
+      "caption": "$1 a cookie, or buy four, get one free.",
+      "why": "Most kids guess a price. Testing two prices with real buyers teaches cost, profit and what people value.",
+      "need": "Something to sell, like cookies or lemonade, the supply receipt, a place to sell and paper for a tally",
+      "together": [
+        "Your kid works out what one costs to make from the receipt. You help with the math and ask what they nearly forgot, like cups or bags.",
+        "They pick two prices above that cost, a lower one and a higher one, and predict which will earn more.",
+        "They sell for an hour at each price, in the same spot, keeping a tally. You stay close, and check your local rules for selling homemade food.",
+        "They count what they kept at each price. You ask: more sales, or more money? Then they choose the price their numbers support."
+      ],
+      "levels": {
+        "explore": "Pick a low and a high price, and count how many sell at each.",
+        "develop": "Tally sales, money in and money kept at both prices, then compare.",
+        "extend": "Work out how many you'd need to sell just to cover the supplies."
+      },
+      "full": "Pricing Experiment",
+      "shape": "wide",
+      "skill": "Pricing with real buyers",
+      "learn": "Cost of one, profit and a fair test, plus what buyers will pay",
+      "next": {
+        "t": "Micro-Business Challenge",
+        "v": "a tiny business that keeps going for weeks, with every cost and sale tracked",
+        "slug": "micro-business"
+      },
+      "focus": "50% 50%",
+      "coverCap": "The cookie stand",
+      "coverSkill": "Financial literacy",
+      "slug": "pricing-experiment"
+    },
+    {
+      "category": "Planning & Problem-Solving",
+      "title": "Scavenger Hunt Designer",
+      "time": "About an hour",
+      "photo": "guides/assets/scavenger-hunt-designer.jpg",
+      "caption": "The rockstar host, reading the next riddle.",
+      "why": "Designing a hunt for someone else means thinking like a player: where they'll look, what they'll miss and how long it takes.",
+      "need": "A yard, a park or the house, paper and a pencil, and at least one player who isn't the designer",
+      "together": [
+        "Your kid picks a theme, who's playing and the prize at the finish.",
+        "You walk the space together and set the boundaries: no roads, nothing to climb. They pick five hiding spots inside them.",
+        "They write or draw a clue for each spot that leads to the next. You read each one as a newcomer would, and say so if you'd be stuck.",
+        "They hide the clues and run the hunt: the welcome, the hints, the prize. Play to win, then ask what they'd change."
+      ],
+      "levels": {
+        "explore": "Five spots and five clues, written or drawn.",
+        "develop": "Eight spots and at least two kinds of clue, tested before the hunt.",
+        "extend": "Ten clues that get harder, including one code players have to crack."
+      },
+      "full": "Scavenger Hunt Designer",
+      "shape": "wide",
+      "skill": "Designing for someone else",
+      "learn": "Writing riddles, mapping a route and timing, plus planning an event",
+      "next": {
+        "t": "Secret Code Lab",
+        "v": "real codes to make and crack, including one with no key at all",
+        "slug": "secret-code-lab"
+      },
+      "focus": "45% 50%",
+      "coverCap": "The rockstar hunt",
+      "coverSkill": "Planning",
+      "slug": "scavenger-hunt-designer"
+    }
+  ],
+  "finish": {
+    "headline": "You just did the hard part.",
+    "text": "If you did even one of these days, you stepped in beside your kid and let real life do the teaching. That's the whole thing.",
+    "quote": "The families raising curious, capable kids aren't the ones who found the perfect workbook. They're the ones who said yes to the real-world stuff, again and again.",
+    "fullTitle": "Want the full version?",
+    "fullText": "Each day is the short version of a full guide in the membership, with step-by-step help, a toolkit and three levels for ages 6 to 14. There are 120+ guides in all.",
+    "cta": "Come see what's inside. Free for 7 days.",
+    "url": "anywherelearning.co/join",
+    "href": "https://anywherelearning.co/join"
+  },
+  "avatar": "guides/assets/amelie-portrait.jpg"
+}

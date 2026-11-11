@@ -5,7 +5,7 @@
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
-import { buildHtml, buildMapHtml } from './template.mjs';
+import { buildHtml, buildMapHtml, buildDaysHtml } from './template.mjs';
 
 const args = process.argv.slice(2);
 const bonus = args.includes('--bonus');
@@ -17,7 +17,7 @@ const g = JSON.parse(fs.readFileSync(contentPath, 'utf8'));
 // The cover's time chip uses the member zone's label for this activity
 // (lib/activity-effort.ts + minsLabel in lib/activity-visuals.tsx), so the
 // two can never disagree.
-if (g.type !== 'map') {
+if (g.type !== 'map' && g.type !== 'days') {
   const effortSrc = fs.readFileSync(new URL('../../lib/activity-effort.ts', import.meta.url), 'utf8');
   const effort = effortSrc.match(new RegExp(`'${g.slug}':\\s*'(Quick|Half-Day|Project)'`))?.[1];
   if (effort) g.time = { Quick: 'Under an hour', 'Half-Day': 'Half-day', Project: 'Multi-day' }[effort];
@@ -32,7 +32,7 @@ if (backRefs?.length) {
   console.error(`Says "at the back" for a page in the guide. Name the page and say "at the end of the guide":\n  ${backRefs.join('\n  ')}`);
   process.exit(1);
 }
-const build = (m, o) => (g.type === 'map' ? buildMapHtml(g, m, { ...o, review, tpt }) : buildHtml(g, m, o));
+const build = (m, o) => (g.type === 'map' ? buildMapHtml(g, m, { ...o, review, tpt }) : g.type === 'days' ? buildDaysHtml(g, m) : buildHtml(g, m, o));
 const tag = (bonus ? '-bonus' : '') + (review ? '-review' : '') + (tpt ? '-tpt' : '') + (preview ? '-preview' : '');
 const outDir = outArg ?? path.join('notes', 'guides');
 fs.mkdirSync(outDir, { recursive: true });
