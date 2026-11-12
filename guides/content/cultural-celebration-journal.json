@@ -1,0 +1,341 @@
+{
+  "slug": "cultural-celebration-journal",
+  "category": "Worldschooling",
+  "title": "Cultural Celebration Journal",
+  "tagline": "Find out · Watch · Ask · Join · Write",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid goes to a real festival or celebration where you're staying and works out what it says about the place. They find out what it celebrates, watch closely, ask someone it belongs to, join in like locals do, then write it up in their celebration journal.",
+  "need": [
+    "A festival, fair, holiday or celebration happening where you are",
+    "A little time to read about it before you go",
+    "A notebook, a phone for photos, or both",
+    "Some local money for food or a small purchase"
+  ],
+  "academics": [
+    {
+      "subject": "Social studies",
+      "text": "why people here celebrate what they do"
+    },
+    {
+      "subject": "Geography",
+      "text": "how the land and climate shape a celebration"
+    },
+    {
+      "subject": "History",
+      "text": "how a tradition started and how it changed"
+    },
+    {
+      "subject": "Writing",
+      "text": "a journal entry that explains, not just lists"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The easy version is walking through, taking photos and leaving. Your job is to give them the why before they go, so everything they see becomes a clue, and to stay close in the crowd while they do the noticing.",
+    "plan": [
+      {
+        "when": "A few days before",
+        "what": "Find out what it celebrates (Step 1)."
+      },
+      {
+        "when": "At the celebration",
+        "what": "Watch, ask and join in (Steps 2, 3 and 4)."
+      },
+      {
+        "when": "That evening or the next day",
+        "what": "Write the celebration page (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "There's no festival while we're here",
+        "a": "Look smaller: a market day, a village saint's day, a Sunday gathering in the square. Every place celebrates something."
+      },
+      {
+        "q": "It's too crowded or loud for them",
+        "a": "Go early, pick one area, and agree on a meeting spot. One hour of real noticing beats a whole tired day."
+      },
+      {
+        "q": "They don't want to write afterwards",
+        "a": "Let them talk it through while you jot down their words, or start the page with photos and labels."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A celebration shows what a place is proud of. You read it by finding out why it happens, watching closely, and writing down what it shows about the people who hold it.",
+    "before": "It's a big flower show with rides.",
+    "model": [
+      {
+        "part": "Find out",
+        "line": "Boquete has held a flower and coffee fair every January for decades."
+      },
+      {
+        "part": "Watch",
+        "line": "Flowers shaped into giant displays, music, food stalls and a fair."
+      },
+      {
+        "part": "Connect",
+        "line": "The flowers and the coffee both grow in this valley."
+      },
+      {
+        "part": "Write",
+        "line": "What it celebrates, what we saw, and why it happens here."
+      }
+    ],
+    "modelNote": "'A flower show' was only what it looked like. Knowing what it celebrated turned every display into a clue about what this valley grows and is proud of."
+  },
+  "steps": [
+    {
+      "title": "Find out what it celebrates",
+      "why": "Knowing the why before you go turns a crowd and some decorations into something you can actually read.",
+      "kid": "Your kid finds out what the celebration is for, using the Find out first card in the Celebration Toolkit at the end of the guide: what it celebrates, why it happens here, when it started and who it belongs to. They write down two things they expect to see.",
+      "you": "Help them find one short article or ask your host about it. Ask 'Why do you think they celebrate this here, and not somewhere else?'",
+      "ask": [
+        "What do you think you'll see there?",
+        "Why might this place care about this?"
+      ],
+      "tip": "Your host, a shop owner or a café worker will often tell you more than any website, and how they talk about it is part of the answer.",
+      "levels": {
+        "explore": "Find out what the celebration is for, and draw one thing you think you'll see.",
+        "develop": "Find out what it celebrates, when it started and why it happens here.",
+        "extend": "Find out how it has changed since it started, and what people say it was like before."
+      }
+    },
+    {
+      "title": "Watch like a guest",
+      "why": "The details people choose to show, cook, sell and wear are the real story of a celebration.",
+      "kid": "At the celebration, your kid notices before they rush in, using the Watch for card: what's on display, what people eat, what music plays, what's for sale and who is there. They take a few photos or quick notes of the details that match what they read.",
+      "you": "Slow the first part of the visit down. Stand somewhere with a good view and ask 'What do you see that matches what we read?' Keep them close in crowds.",
+      "ask": [
+        "What's here that you didn't expect?",
+        "What's everywhere you look?"
+      ],
+      "tip": "Ask before photographing people, especially performers and children. Displays, food and decorations are always fair game.",
+      "levels": {
+        "explore": "Find three things that match what you read, and take a photo of each.",
+        "develop": "Fill in the Watch for card, and find one detail that matches what you read.",
+        "extend": "Notice who is celebrating and who is visiting, and what each group does differently."
+      }
+    },
+    {
+      "title": "Ask someone it belongs to",
+      "why": "A local's answer tells you what the celebration means, not just what it looks like.",
+      "kid": "Your kid asks one person who belongs to the celebration a question from the Ask someone card: a stall holder, a performer, a volunteer or your host. They listen to the answer and remember one thing to write down later.",
+      "you": "Pick a person who isn't busy and stand beside your kid while they ask. Help with the language if you need to, but let the question be theirs.",
+      "ask": [
+        "What did they say that you couldn't have found out by reading?",
+        "How could you tell it mattered to them?"
+      ],
+      "tip": "Stall holders are usually the easiest to ask, especially after you buy something from them.",
+      "levels": {
+        "explore": "Ask one person 'What's your favourite part?' with a parent beside you.",
+        "develop": "Ask one question from the Ask someone card, and write down what they said.",
+        "extend": "Ask two people the same question, and compare their answers."
+      }
+    },
+    {
+      "title": "Join in the right way",
+      "why": "Doing what locals do, the way they do it, is how a visitor becomes a guest.",
+      "kid": "Your kid joins in one part of the celebration, using the Be a good guest card: they eat the festival food, buy something from a local maker, dance, play or watch a performance to the end. They follow what locals do first.",
+      "you": "Help them choose what to join, and check together that it's open to visitors. Handle the money with them, and step back so they can take part.",
+      "ask": [
+        "What did you join in, and how did it feel?",
+        "What did locals do that you copied?"
+      ],
+      "tip": "Buying from a local maker at a festival is one of the best ways to support the people who keep it going.",
+      "levels": {
+        "explore": "Try the festival food, and say what you think it is made of.",
+        "develop": "Join in one thing the way locals do, and buy one thing from a local maker.",
+        "extend": "Find out which part of the celebration is only for locals, and why."
+      }
+    },
+    {
+      "title": "Write the celebration page",
+      "why": "Writing it up is where the noticing turns into understanding.",
+      "kid": "Your kid writes a page in their celebration journal, using My celebration page at the end of the guide: what it celebrates, what they saw, what someone told them and what it shows about the place. Then they compare it with a celebration from home.",
+      "you": "Sit with them, look through the photos together, and ask 'So what is this place proud of?' Help them choose the best photo or sketch for the page.",
+      "ask": [
+        "If a friend had never heard of it, how would you explain it?",
+        "What celebration from home is a little like this one?"
+      ],
+      "tip": "A page with one great photo, a few labels and three good sentences beats a long list of everything you saw.",
+      "levels": {
+        "explore": "Make a page with one photo or drawing and a sentence about what it celebrates.",
+        "develop": "Write a page that explains what it celebrates, what you saw and what it shows about the place.",
+        "extend": "Write the page, then compare it with a celebration from home: what's the same, and what's different."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Celebration Toolkit",
+    "intro": "What to find out first, what to watch for, what to ask and how to join in like a guest.",
+    "items": [
+      {
+        "name": "Find out first",
+        "lines": [
+          {
+            "k": "What:",
+            "v": "what it celebrates"
+          },
+          {
+            "k": "Why here:",
+            "v": "what this place has to do with it"
+          },
+          {
+            "k": "When:",
+            "v": "how often, and since when"
+          },
+          {
+            "k": "Who:",
+            "v": "who it belongs to, who comes"
+          },
+          {
+            "k": "Expect:",
+            "v": "two things you think you'll see"
+          }
+        ],
+        "ask": "Why does it happen here, and not somewhere else?"
+      },
+      {
+        "name": "Watch for",
+        "lines": [
+          {
+            "k": "Display:",
+            "v": "what's shown off, and how"
+          },
+          {
+            "k": "Food:",
+            "v": "what people eat and drink"
+          },
+          {
+            "k": "Sound:",
+            "v": "music, words, bells, cheers"
+          },
+          {
+            "k": "For sale:",
+            "v": "what local makers sell"
+          },
+          {
+            "k": "People:",
+            "v": "who's celebrating, who's visiting"
+          }
+        ],
+        "ask": "What's everywhere you look?"
+      },
+      {
+        "name": "Ask someone",
+        "lines": [
+          {
+            "k": "Favourite:",
+            "v": "'What's your favourite part?'"
+          },
+          {
+            "k": "Why:",
+            "v": "'Why do you celebrate this here?'"
+          },
+          {
+            "k": "Then:",
+            "v": "'What was it like when you were young?'"
+          },
+          {
+            "k": "Must do:",
+            "v": "'What shouldn't we miss?'"
+          },
+          {
+            "k": "Family:",
+            "v": "'What does your family do for it?'"
+          }
+        ],
+        "ask": "Which answer couldn't you have found by reading?"
+      },
+      {
+        "name": "Be a good guest",
+        "lines": [
+          {
+            "k": "Photos:",
+            "v": "ask before photographing people"
+          },
+          {
+            "k": "Follow:",
+            "v": "watch what locals do first"
+          },
+          {
+            "k": "Buy local:",
+            "v": "from the makers, not resellers"
+          },
+          {
+            "k": "Open to all?",
+            "v": "check before you join in"
+          },
+          {
+            "k": "Thank:",
+            "v": "learn how to say it here"
+          }
+        ],
+        "ask": "What did locals do that you copied?"
+      }
+    ],
+    "after": {
+      "label": "My celebration page",
+      "lines": [
+        "The celebration, where and when",
+        "What it celebrates, and why here",
+        "What I saw, and what someone told me",
+        "What it shows about this place"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Curiosity",
+      "text": "finding out the why before going"
+    },
+    {
+      "name": "Observation",
+      "text": "noticing the details a crowd walks past"
+    },
+    {
+      "name": "Respect",
+      "text": "joining in the way locals do"
+    },
+    {
+      "name": "Writing",
+      "text": "explaining a celebration, not just listing it"
+    }
+  ],
+  "conclusion": {
+    "headline": "They didn't just see a festival. They read it.",
+    "text": "Listen at the next celebration, wherever it is. If they ask what it's for before they ask what there is to eat, the journal has done its job.",
+    "celebrate": "When they show you the finished page, say: 'Someone who's never been there could understand it now, because of you.'",
+    "extensions": [
+      "Find a celebration here that's only for locals, and find out what visitors never see",
+      "Go back to the same celebration next year, or a similar one somewhere else, and compare the pages",
+      "Find out how a celebration from home started, and write its page the same way",
+      "Teach someone back home one thing from the celebration: a food, a song or a game"
+    ]
+  },
+  "signs": [
+    "They ask what a celebration is for before they go",
+    "They notice details and point them out to you",
+    "They compare celebrations from different places without being asked"
+  ],
+  "makeItReal": "Share the finished page with a family member back home, and tell them the one thing that surprised you.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "In January we were in Boquete, Panama, for the Feria de las Flores y del Café, the flower and coffee fair. We read about it before we went, so the kids knew it celebrates the flowers and the coffee grown in the valley. There were flowers everywhere, some shaped into huge displays, plus music, food and a fair. Afterwards the kids wrote about it.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/cultural-celebration-journal.jpg",
+    "alt": "A girl and a boy sitting in front of giant colourful letters spelling Boquete, surrounded by flowers",
+    "caption": "At the flower and coffee fair in Boquete, Panama.",
+    "tall": true
+  }
+}

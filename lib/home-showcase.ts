@@ -268,7 +268,7 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
     colorText: '#588157',
     time: 'Multi-day',
     photo: '/products/cultural-celebration-journal.jpg',
-    blurb: 'Capture a festival like a traveller.',
+    blurb: 'Read a real festival, then write it up.',
   },
   {
     slug: 'decision-lab',

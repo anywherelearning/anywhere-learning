@@ -2267,27 +2267,27 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'cultural-celebration-journal': {
     opening:
-      'A guided journal for documenting festivals, holidays, and cultural celebrations wherever you go. Kids observe traditions, ask thoughtful questions, sketch what they see, and reflect on what makes each celebration meaningful. Cultural curiosity meets meaningful journaling.',
+      'Your kid goes to a real festival or celebration where you are staying and works out what it says about the place. They find out what it celebrates, watch closely, ask someone it belongs to, join in like locals do, then write it up in their celebration journal.',
     whatsIncluded: [
-      'Guided journal prompts for documenting celebrations',
-      'Observation questions for traditions and customs',
-      'Sketching and visual storytelling pages',
-      'Reflection prompts on meaning and connection',
-      'Reusable format: works for any festival, anywhere',
+      'Five steps, from finding out what it celebrates to writing the page',
+      'Find out first, Watch for, Ask someone and Be a good guest cards',
+      'A worked example: the flower and coffee fair in Boquete, Panama',
+      'My celebration page, with a comparison to a celebration from home',
+      'Three levels per step, for any festival, anywhere',
     ],
-    skillTags: ['Cultural Awareness', 'Journaling', 'Observation', 'Reflection', 'Writing'],
+    skillTags: ['Cultural Awareness', 'Observation', 'Writing', 'Geography', 'Communication'],
     insideTheLearning: {
       lead:
-        'Your child documents a real celebration, their own or someone else\'s, and works out what it says about what people value. It runs on asking respectful questions and listening to the answers, then recording what they found in writing and sketches. Research with actual people in it.',
+        'Your kid finds out what a real celebration is for before they go, so every display, dish and song becomes a clue. They ask someone it belongs to, join in the way locals do, then write a page that explains what the celebration shows about the place.',
       skills: [
-        { skill: 'Cultural Awareness', where: 'Understanding what a celebration reveals about people\'s values and beliefs' },
-        { skill: 'Research', where: 'Investigating the history, customs and significance across several sources' },
-        { skill: 'Communication', where: 'Asking respectful questions and genuinely listening to personal stories' },
-        { skill: 'Empathy', where: 'Understanding why it matters to the people it belongs to' },
-        { skill: 'Critical Thinking', where: 'Looking past the surface of a tradition to what sits underneath it' },
+        { skill: 'Social Studies', where: 'Why people here celebrate what they do' },
+        { skill: 'Geography', where: 'How the land and climate shape a celebration' },
+        { skill: 'History', where: 'How a tradition started and how it changed' },
+        { skill: 'Writing', where: 'A journal page that explains, not just lists' },
+        { skill: 'Communication', where: 'Asking a local one good question and listening to the answer' },
       ],
     },
-    format: 'Activity Guide',
+    format: 'Project Guide',
   },
   'currency-market-math': {
     opening:

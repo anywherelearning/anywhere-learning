@@ -2009,15 +2009,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Cultural Celebration Journal",
     slug: "cultural-celebration-journal",
     description:
-      "A guided journal for documenting festivals, holidays, and cultural celebrations wherever you go. Kids observe traditions, ask thoughtful questions, sketch what they see, and reflect on what makes each celebration meaningful. Cultural curiosity meets meaningful journaling.",
+      "Your kid goes to a real festival or celebration where you are staying and works out what it says about the place. They find out what it celebrates, watch closely, ask someone it belongs to, join in like locals do, then write it up in their celebration journal.",
     shortDescription:
-      "Worldschooling activity for kids ages 6-14: document cultural celebrations and traditions through observation and reflection.",
+      "Worldschooling activity for kids ages 6-14: find out what a real festival celebrates, ask a local about it, join in and write it up.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TS08fAkIBECpwGmmkgwZ26F",
     blobUrl: "",
     imageUrl: "/products/cultural-celebration-journal.jpg",
-    previewFile: "Preview Worldschooling - Cultural Celebration Journal.pdf",
+    previewFile: "Preview Worldschooling - Cultural Celebration Journal v3.pdf",
     category: "worldschooling",
     isBundle: false,
     bundleProductIds: null,
