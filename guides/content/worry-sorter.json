@@ -1,0 +1,329 @@
+{
+  "slug": "worry-sorter",
+  "category": "Emotional & Social",
+  "title": "Worry Sorter",
+  "tagline": "Dump · Pin · Sort · Plan · Check",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns that most worries are two things stuck together: a part they can't change, and a part they can. They get their worries out, pin down the real one, sort what's theirs from what isn't, plan their part, and check back afterwards to see what really happened.",
+  "need": [
+    "Slips of paper and two bowls or envelopes",
+    "A notebook and a pencil",
+    "A calm moment, not the worried one",
+    "One real worry of your own to share"
+  ],
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "putting a worry into exact words"
+    },
+    {
+      "subject": "Logic",
+      "text": "sorting what's in their control and what isn't"
+    },
+    {
+      "subject": "Health",
+      "text": "why doing their part makes a worry smaller"
+    },
+    {
+      "subject": "Data",
+      "text": "comparing what they feared with what happened"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is 'Don't worry, it'll be fine.' It ends the talk, and the worry stays. Your job is to take the worry seriously enough to sort it with them, then help them find the part that's theirs.",
+    "plan": [
+      {
+        "when": "One calm moment",
+        "what": "Get the worries out, pin down the real one and sort it (Steps 1 to 3)."
+      },
+      {
+        "when": "Before the worried-about thing",
+        "what": "Plan their part (Step 4)."
+      },
+      {
+        "when": "During and after",
+        "what": "Set the rest down, then check back (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Everything goes in the 'not mine' pile",
+        "a": "Look for the half that's theirs. They can't control who wins the game, but they can control how they practise and what they do if they lose."
+      },
+      {
+        "q": "The worry is about something serious, like a sick grandparent",
+        "a": "Don't rush to sort it. Listen first, tell them what's true at their level, and look for one small thing they can do, like a call or a card. If worries start taking over their days, talk to your doctor."
+      },
+      {
+        "q": "The worry comes back at bedtime",
+        "a": "Write it on a slip, put it in the 'later' envelope and agree on a time to look at it together the next day. Then keep that promise."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A worry feels like one big thing. Most worries are two things stuck together: a part nobody can change, and a part your kid can. Finding their part gives them something to do, and makes it easier to set the rest down.",
+    "before": "'Don't worry, you won't fall.'",
+    "model": [
+      {
+        "part": "Worry",
+        "line": "'What if I fall on the way down?'"
+      },
+      {
+        "part": "Not mine",
+        "line": "How high it is. The open steps."
+      },
+      {
+        "part": "Mine",
+        "line": "Hold the rail. Go slow. Breathe slowly."
+      },
+      {
+        "part": "Set down",
+        "line": "Talk about something else on the way."
+      }
+    ],
+    "modelNote": "The lighthouse stayed just as high. What changed was where her attention went: to her hands, her feet and her breathing, then to a conversation about something else."
+  },
+  "steps": [
+    {
+      "title": "Get the worries out",
+      "why": "A worry kept inside spins and grows. On paper, it has edges.",
+      "kid": "Your kid writes or draws every worry they can think of, big and small, one per slip of paper. Nothing is too silly to go on a slip.",
+      "you": "Go first with a small, real worry of your own: 'I'm worried we'll miss the bus tomorrow.' Then write theirs down if writing slows them down. Don't comment on any of them yet.",
+      "ask": [
+        "What's the worry that keeps coming back?",
+        "Which one feels biggest right now?"
+      ],
+      "tip": "Small worries count. Kids often start with a small one to test whether you'll laugh, before they share the big one.",
+      "levels": {
+        "explore": "Draw two or three worries, and tell a parent about each one.",
+        "develop": "Write every worry on its own slip, at least five.",
+        "extend": "Write them all, then mark how often each one comes up: every day, sometimes or once."
+      }
+    },
+    {
+      "title": "Pin down the real worry",
+      "why": "'I'm scared of the lighthouse' is too big to work with. 'I'm scared I'll slip on the way down' is something you can plan for.",
+      "kid": "Your kid picks one slip and makes it exact, using the Pin it down card in the Worry Toolkit at the end of the guide: what exactly might happen, when, and how likely it really is.",
+      "you": "Ask 'And then what?' until you reach the real fear. Don't argue with it. Your job here is to understand it, not to talk them out of it.",
+      "ask": [
+        "What exactly are you scared will happen?",
+        "Has it ever happened before?"
+      ],
+      "tip": "The real worry is often smaller and more specific than the first one, and much easier to plan for.",
+      "levels": {
+        "explore": "Finish the sentence 'What if...' with a parent, for one worry.",
+        "develop": "Pin down three worries with the card, and rate how likely each one is.",
+        "extend": "Pin one down, then write the worst, the best and the most likely ending."
+      }
+    },
+    {
+      "title": "Sort mine from not mine",
+      "why": "Trying to control the part you can't is exhausting. Ignoring the part you can leaves the worry stuck.",
+      "kid": "Your kid sorts the slips into two bowls, 'mine' and 'not mine', using the Mine or not mine card. When a worry has both, they tear the slip in half and write each part on its own.",
+      "you": "Help them find the half that's theirs in the 'not mine' worries. The weather isn't theirs. What they pack for it is.",
+      "ask": [
+        "Which part of this could you change?",
+        "Whose job is the other part?"
+      ],
+      "tip": "Most worries end up torn in half. That's the whole point: there's almost always a part that's theirs.",
+      "levels": {
+        "explore": "Sort three worries into two bowls with a parent.",
+        "develop": "Sort all the slips, and tear in half any worry that has both parts.",
+        "extend": "Sort them, then add a third bowl for 'someone else's, but I can ask them' and explain each choice."
+      }
+    },
+    {
+      "title": "Plan their part",
+      "why": "A worry with a plan feels smaller, because the kid knows what they'll do instead of waiting to see what happens.",
+      "kid": "For each worry in the 'mine' bowl, your kid picks one small thing to do before or during it, from the My part card: hold on to something steady, slow down, breathe slowly, ask a question, get ready ahead of time.",
+      "you": "Practise the plan once, for real, on a calm day. Walk slowly down the stairs holding the rail, or ask the question together. A plan they've tried is one they'll use.",
+      "ask": [
+        "What's one thing you could do before it starts?",
+        "What will you do if it gets bigger?"
+      ],
+      "tip": "Keep the plan short: one or two actions. In a worried moment, nobody remembers a list of six.",
+      "levels": {
+        "explore": "Pick one thing from the card, and practise it with a parent.",
+        "develop": "Plan one action for each worry in the 'mine' bowl.",
+        "extend": "Plan a before, a during and an 'if it gets bigger' action for the biggest worry."
+      }
+    },
+    {
+      "title": "Set the rest down, and check back",
+      "why": "The part they can't change still needs somewhere to go. And looking back at what really happened is what makes the next worry smaller.",
+      "kid": "For the 'not mine' bowl, your kid picks a way to set it down from the Set it down card. After the worried-about thing is over, they fill in My worry check at the end of the guide: what they were worried about, what they did, and what really happened.",
+      "you": "In the moment, help them set it down: start talking about something else, or point out what's around you. Afterwards, sit down with My worry check together and let them tell you how it went.",
+      "ask": [
+        "What really happened?",
+        "Was it as bad as the worry said it would be?"
+      ],
+      "tip": "Keep every worry check in one place. A pile of worries that turned out fine is the best proof they can handle the next one.",
+      "levels": {
+        "explore": "After it's over, tell a parent what happened and draw a face for how it went.",
+        "develop": "Fill in My worry check after the event.",
+        "extend": "Fill in three worry checks over a few weeks, and look for a pattern in what you worried about and what happened."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Worry Toolkit",
+    "intro": "Ways to pin a worry down, sort it, do your part and set the rest down.",
+    "items": [
+      {
+        "name": "Pin it down",
+        "lines": [
+          {
+            "k": "What if:",
+            "v": "finish the sentence, exactly"
+          },
+          {
+            "k": "When:",
+            "v": "right now, soon or someday?"
+          },
+          {
+            "k": "How likely:",
+            "v": "almost never, maybe or very likely"
+          },
+          {
+            "k": "Three endings:",
+            "v": "the worst, the best, the most likely"
+          }
+        ],
+        "ask": "Which ending is most likely?"
+      },
+      {
+        "name": "Mine or not mine",
+        "lines": [
+          {
+            "k": "Mine:",
+            "v": "what I do, say, practise, ask or get ready"
+          },
+          {
+            "k": "Not mine:",
+            "v": "weather, other people's choices, the past"
+          },
+          {
+            "k": "Not mine:",
+            "v": "how high, how far or how big something is"
+          },
+          {
+            "k": "Both:",
+            "v": "a game: the score isn't mine, my effort is"
+          }
+        ],
+        "ask": "Which worry tore in half?"
+      },
+      {
+        "name": "My part",
+        "lines": [
+          {
+            "k": "Hold on:",
+            "v": "a rail, a hand, something steady"
+          },
+          {
+            "k": "Slow down:",
+            "v": "one step at a time"
+          },
+          {
+            "k": "Breathe:",
+            "v": "slowly, longer out than in"
+          },
+          {
+            "k": "Ask:",
+            "v": "a question that gets real information"
+          },
+          {
+            "k": "Get ready:",
+            "v": "practise, pack or plan ahead"
+          }
+        ],
+        "ask": "Which one have you already tried?"
+      },
+      {
+        "name": "Set it down",
+        "lines": [
+          {
+            "k": "Talk:",
+            "v": "about something else entirely"
+          },
+          {
+            "k": "Look:",
+            "v": "name three things you can see"
+          },
+          {
+            "k": "Later:",
+            "v": "write it, fold it, put it away"
+          },
+          {
+            "k": "Remind:",
+            "v": "'That part isn't my job right now.'"
+          }
+        ],
+        "ask": "Which one works fastest for you?"
+      }
+    ],
+    "after": {
+      "label": "My worry check",
+      "lines": [
+        "What I was worried about",
+        "My part, and what I did",
+        "What I set down",
+        "What really happened"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Naming the real worry",
+      "text": "turning a big fear into an exact one"
+    },
+    {
+      "name": "Sorting control",
+      "text": "telling their part from the rest"
+    },
+    {
+      "name": "Planning ahead",
+      "text": "one small action for the hard moment"
+    },
+    {
+      "name": "Checking reality",
+      "text": "comparing the worry with what happened"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know which part of a worry is theirs.",
+    "text": "Listen for 'I can't change that, but I can...' the next time something worries them. That's the sorting happening in their own head, without the bowls.",
+    "celebrate": "When they do their part of a worry, say: 'You couldn't change all of it, and you still did your part. That took courage.'",
+    "extensions": [
+      "Sort a family worry together, like a long travel day, and split the jobs",
+      "Read a story and sort a character's worries into mine and not mine",
+      "Reread the old worry checks before the next big new thing",
+      "Ask a grandparent about a worry they had at your age, and how it turned out"
+    ]
+  },
+  "signs": [
+    "They split a worry on their own: 'I can't change that, but I can...'",
+    "They ask a question to get real information instead of guessing",
+    "They do their part and move on more quickly"
+  ],
+  "makeItReal": "Before the next thing that worries them, take five minutes to sort it together: their part on one side, the rest on the other. Then pick the first thing they'll do.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "At the top of a lighthouse, my daughter noticed how high we were, and the worry started. On the way down, she was scared to fall. She couldn't change the height, but she could hold the rail, go slowly and breathe slowly. Then we talked about something else, and that changed what her mind was on. She made it all the way down.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/worry-sorter.jpg",
+    "alt": "A girl gripping the rail on a black metal spiral staircase inside a lighthouse, looking up",
+    "caption": "On the way down the lighthouse stairs.",
+    "tall": true
+  }
+}

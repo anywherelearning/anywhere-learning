@@ -143,7 +143,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'reading-the-room': 'Half-Day',
   'conflict-fix': 'Quick',
   'solo-mission': 'Project',
-  'worry-sorter': 'Quick',
+  'worry-sorter': 'Project',
 
   // Free-guide full versions
   'square-foot-safari': 'Half-Day',

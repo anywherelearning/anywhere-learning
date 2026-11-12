@@ -137,7 +137,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "what-if-scenario-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20The%20What%20If%20Scenario%20Lab%20v7.pdf",
   "winter-outdoor-pack": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Anywhere%20Learning%20Winter%20v2.pdf",
   "world-food-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20World%20Food%20Detective%20v4.pdf",
-  "worry-sorter": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Worry%20Sorter%20v2.pdf",
+  "worry-sorter": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Worry%20Sorter%20v3.pdf",
   "write-like-a-pro": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Write%20it%20like%20a%20pro%20v5.pdf",
 };
 

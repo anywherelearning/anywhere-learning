@@ -2786,22 +2786,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'worry-sorter': {
     opening:
-      'Your child takes what\'s spinning in their head, sorts it into can-control vs cannot-control, makes a plan for the controllable, and practises letting go of the rest. A real anxiety tool, not a calming poster.',
+      'Your kid learns that most worries are two things stuck together: a part they cannot change and a part they can. They get their worries out, pin down the real one, sort theirs from the rest, plan their part, then check back afterwards to see what really happened.',
     whatsIncluded: [
-      'Brain-dump step: get the spin out on paper',
-      'Can-control vs cannot-control sorting framework',
-      'Action plan for the controllable list',
-      'Let-it-go practice for the rest',
-      'Version 2 review after a week of using it',
+      'Five steps, from getting the worries out to checking what really happened',
+      'Pin it down, Mine or not mine, My part and Set it down cards',
+      'A worked example: scared to fall on the way down a lighthouse',
+      'My worry check, to compare the worry with what happened',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Emotional Regulation', 'Anxiety Tools', 'Problem-Solving'],
+    skillTags: ['Coping Skills', 'Emotional Regulation', 'Problem-Solving', 'Planning', 'Resilience'],
     insideTheLearning: {
       lead:
-        'Your child takes a spinning, shapeless worry and breaks it into specific named ones. Then they sort them: what they can act on, and what they cannot. A plan for the first pile, and practice at setting down the second.',
+        'A worry feels like one big thing. Your kid learns to split it: the part nobody can change, like how high a lighthouse is, and the part they can, like holding the rail and going slowly. Doing their part, and checking back on what really happened, makes the next worry smaller.',
       skills: [
-        { skill: 'Emotional Regulation', where: 'Turning a spinning feeling into specific, named worries' },
-        { skill: 'Anxiety Tools', where: 'Telling apart what they can act on from what they cannot, and setting the rest down' },
-        { skill: 'Problem-Solving', where: 'Building a real plan for the things that are actually in their control' },
+        { skill: 'Coping Skills', where: 'Setting down the part of a worry they cannot change' },
+        { skill: 'Emotional Regulation', where: 'Turning a spinning worry into one exact, named fear' },
+        { skill: 'Problem-Solving', where: 'Sorting what is theirs from what is not' },
+        { skill: 'Planning', where: 'Picking one small action to do before or during the hard moment' },
+        { skill: 'Resilience', where: 'Checking back on worries that turned out fine' },
       ],
     },
     format: 'Project Guide',

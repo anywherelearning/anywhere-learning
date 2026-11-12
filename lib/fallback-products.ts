@@ -2516,18 +2516,18 @@ export const fallbackProducts: FallbackProduct[] = [
   },
   {
     id: "fb-worry-sorter",
-    name: "The Worry Sorter",
+    name: "Worry Sorter",
     slug: "worry-sorter",
     description:
-      "Your child takes what's spinning in their head, sorts it into can-control vs cannot-control, makes a plan for the controllable, and practises letting go of the rest. A real anxiety tool, not a calming poster.",
+      "Your kid learns that most worries are two things stuck together: a part they cannot change and a part they can. They get their worries out, pin down the real one, sort theirs from the rest, plan their part, then check back afterwards to see what really happened.",
     shortDescription:
-      "Anxiety tool for kids ages 6-14: sort worries into can-control vs cannot-control, plan the controllable, let go of the rest.",
+      "Worry activity for kids ages 6-14: pin down the real worry, sort what they can change from what they cannot, plan their part and let the rest go.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TdZpkAkIBECpwGmGO1cFkPF",
     blobUrl: "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Worry%20Sorter.pdf",
-    imageUrl: "/products/worry-sorter.jpg?v=2",
-    previewFile: "Preview Emotional & Social Skills - The Worry Sorter.pdf",
+    imageUrl: "/products/worry-sorter.jpg?v=3",
+    previewFile: "Preview Emotional & Social Skills - The Worry Sorter v3.pdf",
     category: "emotional-social-skills",
     isBundle: false,
     bundleProductIds: null,

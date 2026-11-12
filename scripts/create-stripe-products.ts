@@ -128,7 +128,7 @@ const catalog = [
   { slug: 'reading-the-room', name: 'Reading the Room', priceCents: 599, description: 'Scan a room, read body language, infer the backstory.' },
   { slug: 'conflict-fix', name: 'The Conflict Fix', priceCents: 599, description: 'A real script for working through fights with siblings or friends.' },
   { slug: 'solo-mission', name: 'The Solo Mission', priceCents: 599, description: 'Age-right do-it-without-me challenges that build real independence.' },
-  { slug: 'worry-sorter', name: 'The Worry Sorter', priceCents: 599, description: 'Sort worries into can-control vs cannot-control, plan the rest.' },
+  { slug: 'worry-sorter', name: 'Worry Sorter', priceCents: 599, description: 'Worry activity for kids ages 6-14: pin down the real worry, sort what they can change from what they cannot, plan their part and let the rest go.' },
 ];
 
 // Slugs where the image filename doesn't match {slug}.jpg
