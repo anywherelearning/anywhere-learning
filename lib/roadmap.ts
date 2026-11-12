@@ -397,7 +397,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'outdoor-movement-challenge-cards': ['physical', 'self-management'],
   'problem-solver': ['critical-thinking', 'creativity', 'self-management'],
   'farmers-market-challenge': ['math', 'life-skills'],
-  'nature-geography-field-study': ['physical', 'critical-thinking'],
+  'nature-geography-field-study': ['physical', 'critical-thinking', 'writing'],
   'transport-navigation-challenge': ['critical-thinking', 'math', 'self-management'],
   'world-food-detective': ['life-skills', 'critical-thinking'],
   'cultural-celebration-journal': ['writing', 'communication'],

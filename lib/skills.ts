@@ -88,7 +88,7 @@ export const productSkills: Record<string, ProductSkills> = {
   "mini-magazine-creator": { canonical: ["Writing","Design","Multiple Text Types","Creativity","Publishing"], families: ["communication-and-writing","critical-thinking-and-reasoning","empathy-and-people"] },
   "mini-movie": { canonical: ["Storytelling","Writing","Performing","Art","Collaboration"], families: ["communication-and-writing","critical-thinking-and-reasoning","planning-and-self-management"] },
   "my-review-column": { canonical: ["Opinion Writing","Critical Analysis","Communication","Voice","Math"], families: ["communication-and-writing","critical-thinking-and-reasoning","empathy-and-people"] },
-  "nature-geography-field-study": { canonical: ["Art","Critical Thinking","Geography","Observation","Science"], families: ["creativity-and-making","critical-thinking-and-reasoning","nature-and-science","world-and-geography"] },
+  "nature-geography-field-study": { canonical: ["Science","Geography","Observation","Research","Nature"], families: ["creativity-and-making","critical-thinking-and-reasoning","nature-and-science","world-and-geography"] },
   "neighbourhood-interview": { canonical: ["Interviewing","Listening","Empathy","Writing","Communication"], families: ["communication-and-writing","empathy-and-people"] },
   "neighbourhood-problem-spotter": { canonical: ["Critical Thinking","Civic Engagement","Problem-Solving","Observation","Communication"], families: ["communication-and-writing","critical-thinking-and-reasoning"] },
   "outdoor-survival-planner": { canonical: ["Planning","Critical Thinking","Outdoor Skills","Resourcefulness","Life Skills"], families: ["critical-thinking-and-reasoning","empathy-and-people","nature-and-science","planning-and-self-management"] },

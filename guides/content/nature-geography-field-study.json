@@ -1,0 +1,341 @@
+{
+  "slug": "nature-geography-field-study",
+  "category": "Worldschooling",
+  "title": "Nature & Geography Field Study",
+  "tagline": "Spot · Wonder · Research · See · Explain",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid picks one thing in the landscape where you're staying, like a volcano, a swamp, a reef or a mountain, and studies it like a field scientist. They ask one big why question, research it, go and see it for themselves, then explain what they found and how it shapes life here.",
+  "need": [
+    "One landscape feature you can visit safely: a volcano, swamp, beach, forest or river",
+    "A little time to read about it before you go",
+    "A notebook and a phone for photos",
+    "A local guide or ranger if you can find one"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "what makes a landscape look the way it does"
+    },
+    {
+      "subject": "Geography",
+      "text": "landforms, water and climate in a real place"
+    },
+    {
+      "subject": "Research",
+      "text": "turning a why question into an answer"
+    },
+    {
+      "subject": "Writing",
+      "text": "explaining it clearly to someone who wasn't there"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The easy version is a nice hike and a photo at the top. Your job is to turn it into a question before you go, so the hike becomes the evidence, and to keep everyone on the trail or with the guide in places that can be dangerous.",
+    "plan": [
+      {
+        "when": "A few days before",
+        "what": "Spot the feature, ask the why, research it (Steps 1, 2 and 3)."
+      },
+      {
+        "when": "The visit",
+        "what": "See it for yourselves (Step 4)."
+      },
+      {
+        "when": "That evening or the next day",
+        "what": "Explain it (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Nothing here looks special",
+        "a": "Ask what's different from home: the soil, the trees, the water, the weather. The ordinary local landscape is often the best study."
+      },
+      {
+        "q": "The research is too hard to read",
+        "a": "Read it together and find one sentence that answers the question. Park rangers and guides explain it better than most websites."
+      },
+      {
+        "q": "They lose interest on the hike",
+        "a": "Give them the evidence job: three photos that help answer the why. A job with a goal carries tired legs a long way."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A landscape is full of clues about how it was made. You read it by asking one good why question, finding out the answer, then going to see the evidence with your own eyes.",
+    "before": "It's a big hole with green water.",
+    "model": [
+      {
+        "part": "Wonder",
+        "line": "Why is the water at the bottom of the crater so green?"
+      },
+      {
+        "part": "Research",
+        "line": "The volcano sends up gases and sulfur, and the lake is very acidic."
+      },
+      {
+        "part": "See",
+        "line": "We hiked to the rim and looked straight down at it."
+      },
+      {
+        "part": "Explain",
+        "line": "The colour is a sign the volcano is still active."
+      }
+    ],
+    "modelNote": "'A hole with green water' described it. One why question, answered before the hike, turned the view from the rim into evidence."
+  },
+  "steps": [
+    {
+      "title": "Spot the feature",
+      "why": "Picking one feature turns a whole landscape into something a kid can actually study.",
+      "kid": "Your kid looks at the landscape where you're staying and picks one feature to study, using the Read the landscape card in the Field Study Toolkit at the end of the guide: the land, the water, the plants, the animals or the weather. They choose the one that's most different from home.",
+      "you": "Help them see what's unusual here. Ask 'What do you see here that we don't have at home?' and list the options together.",
+      "ask": [
+        "What's the biggest thing in this landscape?",
+        "What would surprise a friend from home?"
+      ],
+      "tip": "Locals often point to the feature without being asked. Listen for what people here are proud of, or warn you about.",
+      "levels": {
+        "explore": "Pick one thing in the landscape that's different from home, and draw it.",
+        "develop": "Pick one feature, and say why it's worth studying.",
+        "extend": "Pick one feature, and find out how it was formed before you choose your question."
+      }
+    },
+    {
+      "title": "Ask one big why",
+      "why": "One good question gives the whole study a direction.",
+      "kid": "Your kid writes one why question about the feature, using the Good why questions card, like 'Why is the water green?' or 'Why do these trees grow in water?' Then they write their best guess before looking anything up.",
+      "you": "Help them sharpen the question so it has a real answer. Write their guess down exactly as they say it, so they can check it later.",
+      "ask": [
+        "What do you most want to know about it?",
+        "What's your guess, and why?"
+      ],
+      "tip": "A guess written down first makes the research feel like checking a theory, not homework.",
+      "levels": {
+        "explore": "Ask one why question out loud, and say your guess.",
+        "develop": "Write one why question and a guess with a reason.",
+        "extend": "Write the question, a guess and what evidence would prove it right or wrong."
+      }
+    },
+    {
+      "title": "Research it before you go",
+      "why": "Knowing what to look for is what turns a visit into fieldwork.",
+      "kid": "Your kid finds the answer to their question from one or two sources: a park sign, a museum, a guidebook, an article or a local who knows. They compare it with their guess and list what to look for when they get there.",
+      "you": "Help them find a source that fits their reading level, and read it with them. Ask 'Was your guess right, partly right or wrong?'",
+      "ask": [
+        "What did you find out?",
+        "What will you look for when we get there?"
+      ],
+      "tip": "Visitor centres, park signs and small local museums are made for exactly this, and they're usually right at the trailhead.",
+      "levels": {
+        "explore": "Listen to the answer read aloud, and say if your guess was right.",
+        "develop": "Find the answer in one source, and list two things to look for.",
+        "extend": "Check two sources, note anything they disagree on, and list three things to look for."
+      }
+    },
+    {
+      "title": "See it for yourselves",
+      "why": "Seeing the evidence with your own eyes is what makes the answer stick.",
+      "kid": "Your kid visits the feature and collects evidence, using the Field notes card: photos, sketches, what they see, hear and smell. If there's a guide, they ask a question from the Ask the guide card.",
+      "you": "Book a guide where it makes sense, and stay on marked trails. Keep them beside you near edges, water and wildlife. Point out evidence quietly and let them find the rest.",
+      "ask": [
+        "What did you see that matches what you read?",
+        "What did the guide say that you couldn't have read?"
+      ],
+      "tip": "Guides are walking libraries. One question from your kid usually gets a story no website has.",
+      "levels": {
+        "explore": "Take three photos of things that match what you read.",
+        "develop": "Fill in the Field notes card, and ask the guide one question.",
+        "extend": "Collect evidence for your answer, and find one thing that doesn't fit."
+      }
+    },
+    {
+      "title": "Explain it",
+      "why": "If they can explain it to someone else, they've really understood it.",
+      "kid": "Your kid makes My field study page at the end of the guide: the question, the guess, the answer, the evidence and how the feature shapes life here, like what grows, what lives there and where people build.",
+      "you": "Look through the photos together and help them pick the best evidence. Ask 'So how does this change life for people here?'",
+      "ask": [
+        "How would you explain it to a friend in one minute?",
+        "How does it change life for the people or animals here?"
+      ],
+      "tip": "A labelled photo is often the clearest explanation of all.",
+      "levels": {
+        "explore": "Make a page with one photo and a sentence that answers your question.",
+        "develop": "Make the full page: question, guess, answer, evidence and one way it shapes life here.",
+        "extend": "Make the page, then compare the feature with one from another place you've been."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Field Study Toolkit",
+    "intro": "How to read a landscape, ask a good why, take field notes and get the most from a guide.",
+    "items": [
+      {
+        "name": "Read the landscape",
+        "lines": [
+          {
+            "k": "Land:",
+            "v": "mountains, volcanoes, cliffs, valleys"
+          },
+          {
+            "k": "Water:",
+            "v": "rivers, lakes, swamps, the sea"
+          },
+          {
+            "k": "Plants:",
+            "v": "what grows here and not at home"
+          },
+          {
+            "k": "Animals:",
+            "v": "what lives here, and where"
+          },
+          {
+            "k": "Weather:",
+            "v": "rain, heat, wind, seasons"
+          }
+        ],
+        "ask": "What's here that isn't at home?"
+      },
+      {
+        "name": "Good why questions",
+        "lines": [
+          {
+            "k": "Colour:",
+            "v": "'Why is it this colour?'"
+          },
+          {
+            "k": "Shape:",
+            "v": "'How did it get this shape?'"
+          },
+          {
+            "k": "Living:",
+            "v": "'Why does this live or grow here?'"
+          },
+          {
+            "k": "Change:",
+            "v": "'Is it still changing?'"
+          },
+          {
+            "k": "People:",
+            "v": "'How does it change life here?'"
+          }
+        ],
+        "ask": "Which question would you most like answered?"
+      },
+      {
+        "name": "Field notes",
+        "lines": [
+          {
+            "k": "Where:",
+            "v": "the place, the date, the weather"
+          },
+          {
+            "k": "See:",
+            "v": "colours, shapes, sizes"
+          },
+          {
+            "k": "Hear and smell:",
+            "v": "water, animals, wind, sulfur"
+          },
+          {
+            "k": "Evidence:",
+            "v": "photos or sketches that answer the why"
+          },
+          {
+            "k": "Surprise:",
+            "v": "one thing you didn't expect"
+          }
+        ],
+        "ask": "Which evidence answers your question best?"
+      },
+      {
+        "name": "Ask the guide",
+        "lines": [
+          {
+            "k": "Why:",
+            "v": "your big why question"
+          },
+          {
+            "k": "Change:",
+            "v": "'How has it changed since you were young?'"
+          },
+          {
+            "k": "Danger:",
+            "v": "'What should we never do here?'"
+          },
+          {
+            "k": "Life:",
+            "v": "'What lives here that visitors miss?'"
+          },
+          {
+            "k": "People:",
+            "v": "'How does it affect people who live nearby?'"
+          }
+        ],
+        "ask": "What did the guide know that no website said?"
+      }
+    ],
+    "after": {
+      "label": "My field study page",
+      "lines": [
+        "The feature, where and when",
+        "My why question and my guess",
+        "The answer, and my best evidence",
+        "How it shapes life here"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Curiosity",
+      "text": "asking why a place looks the way it does"
+    },
+    {
+      "name": "Observation",
+      "text": "collecting real evidence in the field"
+    },
+    {
+      "name": "Research",
+      "text": "checking a guess against good sources"
+    },
+    {
+      "name": "Explaining",
+      "text": "making it clear to someone who wasn't there"
+    }
+  ],
+  "conclusion": {
+    "headline": "They didn't just see the view. They understood it.",
+    "text": "Listen on the next trail, wherever it is. If they ask why something looks the way it does before they ask how far it is, they're reading landscapes now.",
+    "celebrate": "When they explain it to you, say: 'You went and checked it with your own eyes. That's what scientists do.'",
+    "extensions": [
+      "Study the same kind of feature in a new place, like a second volcano or another swamp, and compare them",
+      "Find out how the feature has changed people's lives here over a hundred years",
+      "Find a feature near home and study it the same way",
+      "Map every feature you've studied on your travels, with one line on each"
+    ]
+  },
+  "signs": [
+    "They ask why a landscape looks the way it does",
+    "They read park signs and want to stop at visitor centres",
+    "They compare landscapes from different places on their own"
+  ],
+  "makeItReal": "Explain your feature to someone who has never seen it, using your best photo as evidence.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "In El Salvador we hiked the Santa Ana volcano. Before we went, the kids researched why the water at the bottom of the crater is so green, so when we looked down from the rim they knew what they were seeing. In Florida, we walked through a swamp in Jupiter with a guide, who taught us about the alligators, the water and the trees.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/nature-geography-field-study.jpg",
+    "alt": "A girl with her arms wide open at the rim of a volcano crater, with a bright green lake far below",
+    "caption": "At the rim of the Santa Ana volcano, El Salvador.",
+    "tall": true
+  }
+}

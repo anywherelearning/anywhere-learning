@@ -2101,15 +2101,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Nature & Geography Field Study",
     slug: "nature-geography-field-study",
     description:
-      "Turn any landscape into a field study. Kids observe local plants, wildlife, climate, and geography. They sketch ecosystems, track weather, identify landforms, and connect what they see to bigger geographical patterns. Earth science through direct experience.",
+      "Your kid picks one feature in the landscape where you are staying, like a volcano, a swamp or a mountain, and studies it like a field scientist. They ask one big why question, research it, go and see the evidence for themselves, then explain what they found.",
     shortDescription:
-      "Worldschooling field study for kids ages 6-14: observe local nature and geography wherever you travel.",
+      "Worldschooling field study for kids ages 6-14: ask one big why about a volcano, swamp or mountain, research it, then go and see the evidence.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TS08hAkIBECpwGmAdyMW1AM",
     blobUrl: "",
     imageUrl: "/products/nature-geography-field-study.jpg",
-    previewFile: "Preview Worldschooling - Nature and Geography Field Study.pdf",
+    previewFile: "Preview Worldschooling - Nature and Geography Field Study v3.pdf",
     category: "worldschooling",
     isBundle: false,
     bundleProductIds: null,

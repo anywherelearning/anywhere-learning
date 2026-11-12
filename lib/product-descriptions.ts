@@ -2368,27 +2368,27 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'nature-geography-field-study': {
     opening:
-      'Turn any landscape into a field study. Kids observe local plants, wildlife, climate, and geography. They sketch ecosystems, track weather, identify landforms, and connect what they see to bigger geographical patterns. Earth science through direct experience.',
+      'Your kid picks one feature in the landscape where you are staying, like a volcano, a swamp or a mountain, and studies it like a field scientist. They ask one big why question, research it, go and see the evidence for themselves, then explain what they found.',
     whatsIncluded: [
-      'Field study observation framework',
-      'Plant, wildlife, and ecosystem sketching prompts',
-      'Weather and climate tracking activities',
-      'Landform identification and geography connections',
-      'Reflection on patterns across regions',
+      'Five steps, from spotting the feature to explaining it',
+      'Read the landscape, Good why questions, Field notes and Ask the guide cards',
+      'A worked example: why the crater lake on the Santa Ana volcano is green',
+      'My field study page, with your question, evidence and answer',
+      'Three levels per step, for any landscape, anywhere',
     ],
-    skillTags: ['Geography', 'Science', 'Observation', 'Nature', 'Sketching'],
+    skillTags: ['Science', 'Geography', 'Observation', 'Research', 'Nature'],
     insideTheLearning: {
       lead:
-        'Your child does real field study outdoors: observing slowly, sketching what they see, tracking the weather, identifying landforms. Then the question shifts from what do I see to why is it like this, and how does that shape the people who live here.',
+        'Your kid turns a hike into fieldwork: one why question asked before you go, a little research, then evidence collected with their own eyes. They finish by explaining what they found and how the landscape shapes life for the people and animals there.',
       skills: [
-        { skill: 'Observation', where: 'Noticing colours, textures, patterns and movement without rushing past them' },
-        { skill: 'Science', where: 'Asking questions, predicting, gathering evidence and drawing a conclusion' },
-        { skill: 'Geography', where: 'Seeing how climate, landscape, plants, animals and people connect to a place' },
-        { skill: 'Critical Thinking', where: 'Moving from what is there to why it is there and what it means for people' },
-        { skill: 'Art', where: 'Sketching plants, wildlife and landforms closely enough to record them properly' },
+        { skill: 'Science', where: 'What makes a landscape look the way it does' },
+        { skill: 'Geography', where: 'Landforms, water and climate in a real place' },
+        { skill: 'Research', where: 'Checking a guess against good sources and a local guide' },
+        { skill: 'Observation', where: 'Collecting real evidence in the field' },
+        { skill: 'Writing', where: 'Explaining it clearly to someone who was not there' },
       ],
     },
-    format: 'Activity Guide',
+    format: 'Project Guide',
   },
   'people-stories-interview': {
     opening:
