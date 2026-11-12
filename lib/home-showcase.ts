@@ -246,7 +246,7 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
     category: 'Worldschooling',
     color: '#588157',
     colorText: '#588157',
-    time: 'Half-day',
+    time: 'Multi-day',
     photo: '/products/play-the-world.jpg',
     blurb: 'Learn a game from local kids, wherever you are.',
   },
@@ -262,7 +262,7 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
   },
   {
     slug: 'cultural-celebration-journal',
-    title: 'Celebration Journal',
+    title: 'Cultural Celebration Journal',
     category: 'Worldschooling',
     color: '#588157',
     colorText: '#588157',

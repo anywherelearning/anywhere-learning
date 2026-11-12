@@ -349,7 +349,7 @@ export default function AdventureMapHome({
   // own added activities never hijack it; they only earn that kid extra gear.
   // A "whole family" pick added from the Library queues onto the shared trail as
   // a manual next-stop that overrides the engine until it's completed.
-  const familyPick = family ? items.find((it) => it.child === FAMILY_TARGET) : undefined;
+  const familyPick = family ? items.find((it) => it.child === FAMILY_TARGET && bySlug.has(it.slug)) : undefined;
   const enginePick = nextForKid({ age: engineAge, doneSlugs, recentDone, doneAt, passed: eng.passed, skips: eng.skips, nudge: nudgeFor(engineScope), activities, enabledTerritories, enabledEfforts });
   const nextSlug = familyPick?.slug ?? enginePick?.slug;
   const nextAct = nextSlug ? bySlug.get(nextSlug) : undefined;

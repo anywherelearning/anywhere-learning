@@ -329,6 +329,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 
 function css(mode, accent, soft, bw, paper = '#f7f2e8') {
   return `
+*{font-variant-ligatures:none;font-feature-settings:'liga' 0,'clig' 0}
 :root{--paper:${paper};--paper2:#efe7d6;--card:#fffdf8;--ink:#32302a;--muted:#6b6152;--forest:#5d7d53;--forest2:#7d9c6d;--trail:#bf7c48;--gold:#d6a24e;--accent:${accent};--soft:${soft};
 --l1:#eef3e6;--l2:#dde9cf;--l3:#c7dbb3}
 *{box-sizing:border-box;margin:0;padding:0}

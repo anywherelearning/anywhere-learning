@@ -170,7 +170,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'body-owners-manual': 'Project',
   'people-scientist': 'Half-Day',
   'teach-it-to-learn-it': 'Half-Day',
-  'play-the-world': 'Half-Day',
+  'play-the-world': 'Project',
 };
 
 /** Returns the effort bucket for a slug, or null if it's not an individual activity. */

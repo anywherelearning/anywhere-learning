@@ -3285,7 +3285,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
         { skill: 'Physical Play', where: 'New ways to move, aim, run and play' },
       ],
     },
-    format: 'Activity Guide',
+    format: 'Project Guide',
   },
   'people-scientist': {
     opening:

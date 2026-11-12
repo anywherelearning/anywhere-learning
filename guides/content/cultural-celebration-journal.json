@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The easy version is walking through, taking photos and leaving. Your job is to give them the why before they go, so everything they see becomes a clue, and to stay close in the crowd while they do the noticing.",
+    "intro": "Your main job happens before you go: find out with them what it celebrates, so they arrive knowing what to look for. In the crowd, stay within arm's reach and agree on a meeting spot, then let them do the noticing and the asking.",
     "plan": [
       {
         "when": "A few days before",
@@ -63,7 +63,7 @@
     ]
   },
   "lesson": {
-    "text": "A celebration shows what a place is proud of. You read it by finding out why it happens, watching closely, and writing down what it shows about the people who hold it.",
+    "text": "A celebration shows what a place is proud of. Find out why it happens, watch closely, ask someone it belongs to, and write down what it shows about the people who hold it.",
     "before": "It's a big flower show with rides.",
     "model": [
       {
@@ -83,7 +83,7 @@
         "line": "What it celebrates, what we saw, and why it happens here."
       }
     ],
-    "modelNote": "'A flower show' was only what it looked like. Knowing what it celebrated turned every display into a clue about what this valley grows and is proud of."
+    "modelNote": "'A flower show' was only what it looked like. Knowing what it celebrated meant every display said something about what this valley grows."
   },
   "steps": [
     {
@@ -113,8 +113,8 @@
       ],
       "tip": "Ask before photographing people, especially performers and children. Displays, food and decorations are always fair game.",
       "levels": {
-        "explore": "Find three things that match what you read, and take a photo of each.",
-        "develop": "Fill in the Watch for card, and find one detail that matches what you read.",
+        "explore": "Find the thing you drew before you came, and take a photo of it.",
+        "develop": "Fill in the Watch for card, and tick off the two things you expected to see.",
         "extend": "Notice who is celebrating and who is visiting, and what each group does differently."
       }
     },
@@ -153,17 +153,17 @@
     {
       "title": "Write the celebration page",
       "why": "Writing it up is where the noticing turns into understanding.",
-      "kid": "Your kid writes a page in their celebration journal, using My celebration page at the end of the guide: what it celebrates, what they saw, what someone told them and what it shows about the place. Then they compare it with a celebration from home.",
+      "kid": "Your kid writes a page in their celebration journal, using My celebration page at the end of the guide: what it celebrates, what they saw, what someone told them and what it shows about the place.",
       "you": "Sit with them, look through the photos together, and ask 'So what is this place proud of?' Help them choose the best photo or sketch for the page.",
       "ask": [
         "If a friend had never heard of it, how would you explain it?",
-        "What celebration from home is a little like this one?"
+        "What would you put on the page if you only had room for one photo?"
       ],
       "tip": "A page with one great photo, a few labels and three good sentences beats a long list of everything you saw.",
       "levels": {
         "explore": "Make a page with one photo or drawing and a sentence about what it celebrates.",
         "develop": "Write a page that explains what it celebrates, what you saw and what it shows about the place.",
-        "extend": "Write the page, then compare it with a celebration from home: what's the same, and what's different."
+        "extend": "Write the page, and add how the land or the season here shapes the celebration, like what grows in time for it."
       }
     }
   ],
@@ -221,7 +221,7 @@
             "v": "who's celebrating, who's visiting"
           }
         ],
-        "ask": "What's everywhere you look?"
+        "ask": "What would a visitor walk right past?"
       },
       {
         "name": "Ask someone",
@@ -247,7 +247,7 @@
             "v": "'What does your family do for it?'"
           }
         ],
-        "ask": "Which answer couldn't you have found by reading?"
+        "ask": "Whose answer will go on your page?"
       },
       {
         "name": "Be a good guest",
@@ -273,7 +273,7 @@
             "v": "learn how to say it here"
           }
         ],
-        "ask": "What did locals do that you copied?"
+        "ask": "Which of these did you see a visitor forget?"
       }
     ],
     "after": {
@@ -288,11 +288,11 @@
   },
   "skills": [
     {
-      "name": "Curiosity",
+      "name": "Background research",
       "text": "finding out the why before going"
     },
     {
-      "name": "Observation",
+      "name": "Noticing details",
       "text": "noticing the details a crowd walks past"
     },
     {
@@ -305,11 +305,11 @@
     }
   ],
   "conclusion": {
-    "headline": "They didn't just see a festival. They read it.",
-    "text": "Listen at the next celebration, wherever it is. If they ask what it's for before they ask what there is to eat, the journal has done its job.",
+    "headline": "They went to a festival, and came home knowing why it happens.",
+    "text": "When you hear about the next fair, parade or holiday, mention it in passing and wait. Their first question tells you: 'What's it for?' means the journal stuck, and 'Is there food?' means it's time for another page.",
     "celebrate": "When they show you the finished page, say: 'Someone who's never been there could understand it now, because of you.'",
     "extensions": [
-      "Find a celebration here that's only for locals, and find out what visitors never see",
+      "Find a celebration here that happens in homes rather than the street, and ask someone what their family does",
       "Go back to the same celebration next year, or a similar one somewhere else, and compare the pages",
       "Find out how a celebration from home started, and write its page the same way",
       "Teach someone back home one thing from the celebration: a food, a song or a game"
@@ -320,7 +320,7 @@
     "They notice details and point them out to you",
     "They compare celebrations from different places without being asked"
   ],
-  "makeItReal": "Share the finished page with a family member back home, and tell them the one thing that surprised you.",
+  "makeItReal": "Keep the celebration pages together as you travel. When you choose your next stop, have your kid find out what that place celebrates and when, and plan your dates around one of them.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

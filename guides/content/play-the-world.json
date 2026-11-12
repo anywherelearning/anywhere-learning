@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The easy version is a fun afternoon at the park and a game nobody remembers a week later. Your job is to make sure the rules get written down the same day, and to stay close enough to watch while they play with kids they've just met.",
+    "intro": "Games vanish fast: kids learn three on a trip and can't name one a month later. Your job is the game card, written the same day, and staying close enough to watch while they play with kids they've just met.",
     "plan": [
       {
         "when": "Wherever kids play",
@@ -42,7 +42,7 @@
         "what": "Write the game card (Step 3)."
       },
       {
-        "when": "Later, anywhere",
+        "when": "Over the next few days",
         "what": "Play it as a family, then compare (Steps 4 and 5)."
       }
     ],
@@ -147,13 +147,13 @@
       "levels": {
         "explore": "Show the family how to play, with a parent's help.",
         "develop": "Teach the whole game, and fix the card if anything was missing.",
-        "extend": "Teach it to kids somewhere new, and watch how they play it."
+        "extend": "Change one rule so it works for the family, like fewer players or a smaller space, and test whether it's still the same game."
       }
     },
     {
       "title": "Compare it with home",
       "why": "Comparing two games shows what kids everywhere share, and what's special about here.",
-      "kid": "Your kid compares the game with one from home and fills in My game collection at the end of the guide: what's the same, what's different, and what the game shows about the place. If they can, they teach a game from home to kids here.",
+      "kid": "Your kid compares the game with one from home and fills in My game collection at the end of the guide: what's the same, what's different, and what the game shows about the place.",
       "you": "Ask 'What game from home is most like this one?' Help them spot the things all games share, like taking turns, chasing and keeping score.",
       "ask": [
         "What's the same about kids everywhere?",
@@ -180,7 +180,7 @@
           },
           {
             "k": "Beach:",
-            "v": "games in the sand and the waves"
+            "v": "games in the sand, with you at the water's edge"
           },
           {
             "k": "Plaza:",
@@ -213,12 +213,12 @@
             "v": "'What's it called?'"
           },
           {
-            "k": "Again:",
+            "k": "Show me:",
             "v": "'Can you show me again?'"
           },
           {
-            "k": "Thanks:",
-            "v": "learn how to say it here"
+            "k": "Again:",
+            "v": "'Can I play tomorrow?'"
           }
         ],
         "ask": "Which words do you need to learn first?"
@@ -247,7 +247,7 @@
             "v": "what players shout, and what it means"
           }
         ],
-        "ask": "Could someone play it from this card alone?"
+        "ask": "Which line would a new player need first?"
       },
       {
         "name": "Teach it",
@@ -273,7 +273,7 @@
             "v": "say where you learned it"
           }
         ],
-        "ask": "What was hardest to explain?"
+        "ask": "Who will you teach it to first?"
       }
     ],
     "after": {
@@ -306,8 +306,8 @@
   ],
   "conclusion": {
     "headline": "They brought home a game, not just a memory of one.",
-    "text": "Watch at the next park, wherever it is. If they stop to watch what local kids are playing before they run to the swings, the collecting has become a habit.",
-    "celebrate": "When they teach the family the game, say: 'You learned this from kids on the other side of the world, and now we all know it.'",
+    "text": "At the next park, see where they go first. If they stop to watch what the local kids are playing, and ask what it's called before they run to the swings, they're collecting games on their own now.",
+    "celebrate": "When they teach the family the game, say: 'You learned this from kids who'd never met you, and now we all know it.'",
     "extensions": [
       "Collect one game from every place you stay, and keep the cards together",
       "Find out how old the game is, and whether kids in other countries play a version of it",
@@ -320,7 +320,7 @@
     "They ask what a game is called and write it down",
     "They teach games from other places without being asked"
   ],
-  "makeItReal": "Teach the game to friends or cousins back home, and tell them where you learned it.",
+  "makeItReal": "Send one game card to a friend or cousin back home this week. Ask them to play it from the card alone, then have your kid fix whatever they found unclear.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

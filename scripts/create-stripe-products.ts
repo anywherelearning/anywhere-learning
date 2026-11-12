@@ -105,11 +105,11 @@ const catalog = [
   { slug: 'what-if-scenario-lab', name: 'The What-If Scenario Lab', priceCents: 599, description: 'Critical thinking activity for kids ages 6-14: follow a big what-if all the way through, then try a slice of it for real.' },
   { slug: 'decision-lab', name: 'What Would You Do? Decision Lab', priceCents: 599, description: 'Life skill for kids ages 6-14: think through tough choices, handle pressure and make a real decision of their own.' },
   // ─── Worldschooling singles ($5.99) ───
-  { slug: 'cultural-celebration-journal', name: 'Cultural Celebration Journal', priceCents: 599, description: 'Find out what a real festival celebrates, watch closely, ask a local, join in and write it up in a celebration journal.' },
+  { slug: 'cultural-celebration-journal', name: 'Cultural Celebration Journal', priceCents: 599, description: 'Worldschooling activity for kids ages 6-14: find out what a real festival celebrates, ask a local about it, join in and write it up.' },
   { slug: 'currency-market-math', name: 'Currency & Market Math', priceCents: 599, description: 'Convert currencies, compare prices, and practise mental maths in real markets.' },
   { slug: 'everyday-life-comparison', name: 'Everyday Life Comparison', priceCents: 599, description: 'Compare daily life across cultures: transport, food, school, and play.' },
   { slug: 'local-language-mission', name: 'Local Language Mission', priceCents: 599, description: 'Worldschooling language activity for kids ages 6-14: pick a real mission, learn the words, rehearse, then do it with a real person.' },
-  { slug: 'nature-geography-field-study', name: 'Nature & Geography Field Study', priceCents: 599, description: 'Ask one big why about a real landscape feature, research it, go and see the evidence, then explain it.' },
+  { slug: 'nature-geography-field-study', name: 'Nature & Geography Field Study', priceCents: 599, description: 'Worldschooling field study for kids ages 6-14: ask one big why about a volcano, swamp or mountain, research it, then go and see the evidence.' },
   { slug: 'people-stories-interview', name: 'People & Stories Interview Project', priceCents: 599, description: 'Interview locals and travellers, listen carefully, and record their stories.' },
   { slug: 'street-explorer-map-maker', name: 'Street Explorer Map Maker', priceCents: 599, description: 'Walk new neighbourhoods and create hand-drawn maps with landmarks.' },
   { slug: 'transport-navigation-challenge', name: 'Transport & Navigation Challenge', priceCents: 599, description: 'Worldschooling navigation challenge for kids ages 6-14: find the way in, compare and book the trip, then lead the family there.' },

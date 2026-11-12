@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You're the practice shopkeeper and the quiet backup, not the translator. Your most useful question is 'What words does this job need?' Stay close enough to help, and far enough that they have to do the talking.",
+    "intro": "Your hardest job is keeping quiet at the counter. Play the shopkeeper at home, then at the real one stand a step back and don't translate, even when they hesitate. Your most useful question is 'What words does this job need?'",
     "plan": [
       {
         "when": "Day 1",
@@ -68,19 +68,19 @@
     "model": [
       {
         "part": "Mission",
-        "line": "Buy two mangoes at the tienda."
+        "line": "Buy a treat at the tienda: chips, candy or an ice cream."
       },
       {
         "part": "Words",
-        "line": "Hola. Quiero dos mangos, por favor. ¿Cuánto cuesta? Gracias."
+        "line": "Hola. ¿Tiene helado de chocolate? Uno, por favor. ¿Cuánto es? Gracias."
       },
       {
         "part": "Surprise",
-        "line": "She asked '¿Algo más?' Anything else? 'No, gracias.'"
+        "line": "The seller asks '¿Algo más?' Anything else? 'No, gracias.'"
       },
       {
         "part": "Result",
-        "line": "She understood, and the change was right."
+        "line": "Understood, paid, and the change is right."
       }
     ],
     "modelNote": "Four lines and one surprise was all the mission needed. It wasn't perfect Spanish, and it didn't have to be."
@@ -105,7 +105,7 @@
     {
       "title": "Learn the words",
       "why": "A handful of the right words beats a hundred of the wrong ones.",
-      "kid": "Your kid writes the five to eight words the mission needs, using the Survival phrases card: the greeting, what they want, the numbers for the price and the thank you. They look them up, ask a local or listen for them, and practise saying each one out loud.",
+      "kid": "Your kid writes the five to eight words the mission needs, using the Survival phrases card: the greeting, what they want, the numbers for the price and the thank you. They look them up, ask a local with you beside them or listen for them, and practise saying each one out loud.",
       "you": "Learn them alongside your kid, and let them correct you. Look for the words around you too, on signs, menus and price tags. Write them the way they sound if spelling gets in the way.",
       "ask": [
         "Which word is the hardest to say?",
@@ -129,7 +129,7 @@
       ],
       "tip": "Act out the When you're stuck card too: point, gesture, show the number on your fingers. Stuck has a plan.",
       "levels": {
-        "explore": "Rehearse with you once, then do it again with no card in your hand.",
+        "explore": "Rehearse with a parent once, then do it again with no card in your hand.",
         "develop": "Rehearse twice, and handle one surprise question.",
         "extend": "Rehearse with two surprises, and answer one question about yourself, like where you're from."
       }
@@ -145,8 +145,8 @@
       ],
       "tip": "Go back to the same place again. The second visit is easier, and some shopkeepers start teaching them new words.",
       "levels": {
-        "explore": "Do the greeting and the thank you yourself, with a grown-up doing the middle.",
-        "develop": "Do the whole mission yourself, with a grown-up nearby.",
+        "explore": "Do the greeting and the thank you yourself, with a parent doing the middle.",
+        "develop": "Do the whole mission yourself, with a parent nearby.",
         "extend": "Do the mission, then add one extra question you didn't rehearse."
       }
     },
@@ -163,7 +163,7 @@
       "levels": {
         "explore": "Draw the mission, and say the words you used.",
         "develop": "Fill in the log, and pick the next mission on the ladder.",
-        "extend": "Fill in the log, and write the next mission's words before you start."
+        "extend": "Fill in the log, and find the one word that came up in every mission so far."
       }
     }
   ],
@@ -247,7 +247,7 @@
             "v": "catch one and bring it home"
           }
         ],
-        "ask": "What did they say back?"
+        "ask": "Which surprise are you ready for?"
       },
       {
         "name": "When you're stuck",
@@ -300,14 +300,14 @@
       "text": "pointing, gesturing and asking when stuck"
     },
     {
-      "name": "Respect",
+      "name": "Politeness",
       "text": "showing people you're trying their language"
     }
   ],
   "conclusion": {
     "headline": "They walked in with a few words, and came out understood.",
-    "text": "Listen for the new words they start dropping into their day. If they greet a shopkeeper first without being asked, or come home with a word nobody taught them, the mission has done its job.",
-    "celebrate": "On the walk back, say: 'You just bought that in another language, all by yourself.'",
+    "text": "At the next counter, hand them the money and stay by the door. Count how many words they say before they look back at you. Try it again a week later and compare the count.",
+    "celebrate": "On the walk back, say: 'You said that in their language, and they understood you.'",
     "extensions": [
       "Go back to the same place every day for a week, and add one new phrase each time",
       "Teach the family the words from your mission at dinner",
@@ -320,7 +320,7 @@
     "They ask 'How do you say...?' about things they want",
     "They care more about being understood than being perfect"
   ],
-  "makeItReal": "Keep the language log going. A page of real conversations, with real people, is the best proof of a language there is.",
+  "makeItReal": "In every new place you stay, let your kid make the first purchase in the local language, before anyone else speaks. Add it to the log, and let them pick the next rung on the Mission ladder.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {
@@ -329,7 +329,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "In El Zonte, El Salvador, the kids had a Spanish lesson every day after lunch and walked to the tienda to practise ordering. Nobody there was going to switch to English for them, and the lady at the counter was patient.",
+    "text": "In El Zonte, El Salvador, the kids had a Spanish lesson every day after lunch and walked to the tienda to practise. They bought whatever was missing for that day's meals, or treats like chips, candy, ice cream and chocolate. Nobody there was going to switch to English for them, and the lady at the counter was patient.",
     "quotes": []
   },
   "photo": {

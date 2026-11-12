@@ -72,7 +72,7 @@
       },
       {
         "part": "The choice",
-        "line": "Three tours compared on price and what's included."
+        "line": "A few tours compared on price and what's included."
       },
       {
         "part": "The legs",
@@ -97,7 +97,7 @@
       ],
       "tip": "A place with a surprise in the route, like a boat, a cable car or a ferry, makes kids want to work it out.",
       "levels": {
-        "explore": "Look at a map with a grown-up, and point to where we are and where we want to go.",
+        "explore": "Look at a map with a parent, and point to where we are and where we want to go.",
         "develop": "List every way to get there, and find out which ones really run.",
         "extend": "Find out why the place is reached the way it is: a river, mountains, the roads, or who built them."
       }
@@ -138,7 +138,7 @@
       "title": "Lead the way",
       "why": "Following a plan is easy. Holding one, with the family waiting on you, is the skill.",
       "kid": "On the day, your kid holds the plan and leads: they check the time, find the pickup or the stop, tell everyone what's next and watch for the landmark that says you're nearly there. If they're unsure, they ask someone, with you beside them.",
-      "you": "Follow them even when you'd go a different way, and step in only for safety. When they hesitate, ask 'What does your plan say?' before you say anything else.",
+      "you": "Follow them even when you'd go a different way, and step in only for safety. When they hesitate, ask 'What does your plan say?' before you say anything else. On boats, life jackets go on before anyone boards.",
       "ask": [
         "What's the next leg, and how will we know we're there?",
         "Who could we ask if we're not sure?"
@@ -221,7 +221,7 @@
             "v": "what you'll see that you'd miss"
           }
         ],
-        "ask": "What are we paying extra for?"
+        "ask": "Which line decided it for you?"
       },
       {
         "name": "Read the route",
@@ -270,10 +270,10 @@
           },
           {
             "k": "Lost:",
-            "v": "stop, check the plan, ask with a grown-up"
+            "v": "stop, check the plan, ask with a parent"
           }
         ],
-        "ask": "What's our Plan B for the first leg?"
+        "ask": "What's the second-best way in, if the first one fails?"
       }
     ],
     "after": {
@@ -301,12 +301,12 @@
     },
     {
       "name": "Asking for help",
-      "text": "checking with locals, with a grown-up beside them"
+      "text": "checking with locals, with a parent beside them"
     }
   ],
   "conclusion": {
     "headline": "They found the way in, and got everyone there.",
-    "text": "Watch the next time you arrive somewhere new. If they reach for the map before you do, or ask how the locals get around, the challenge has done its job.",
+    "text": "On your next move between places, ask how you'll get from where you land to where you're staying. Listen for legs, a pickup point and a buffer, before you've opened a map yourself.",
     "celebrate": "When you arrive, say: 'We're here because you worked out how to get us here.'",
     "extensions": [
       "Find out how people reached the place before roads or motors, and compare it with your trip",
@@ -320,7 +320,7 @@
     "They ask how locals get somewhere",
     "They spot what could go wrong before you leave"
   ],
-  "makeItReal": "Hand them the research for your next outing before you open your own laptop.",
+  "makeItReal": "When you arrive somewhere new, give your kid one day to find out how locals get around: which bus or boat, where it stops and what it costs. Then ride it together, with them leading.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

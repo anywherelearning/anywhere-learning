@@ -299,7 +299,7 @@ const TRACKS: Track[] = [
         </em>
       </>
     ),
-    lead: "Whether you're worldschooling full-time or just on a two-week trip. These are the activities that turn travel into learning. Cultural curiosity, currency math, and real-world communication wherever you land.",
+    lead: "Whether you're worldschooling full-time or just on a two-week trip. These are the activities that turn travel into learning. Local language, getting around, food, festivals, landscapes and games, wherever you land.",
     ornamentAlt: 'Plane symbol',
     skills: [
       'Cultural curiosity',
