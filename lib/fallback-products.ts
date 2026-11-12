@@ -2240,18 +2240,18 @@ export const fallbackProducts: FallbackProduct[] = [
   // ─────────────────────────────────────────────────────────────
   {
     id: "fb-calm-down-toolkit",
-    name: "The Calm-Down Toolkit",
+    name: "Calm-Down Toolkit",
     slug: "calm-down-toolkit",
     description:
-      "Your child builds their own physical reset kit and a \"when I'm flooded\" plan using stuff already around the house. They test different tools to find what actually settles their body, then turn it into a 3-line plan they can run on their own. Real self-regulation, not a poster on the wall.",
+      "Your kid finds out what actually settles their body when a big feeling floods in. They learn their early signs, test reset tools on a calm day, keep the ones that work for them, and turn them into a short plan they can reach for on their own.",
     shortDescription:
-      "Self-regulation activity for kids ages 6-14: build a real calm-down toolkit and a personal reset plan that actually works.",
+      "Self-regulation activity for kids ages 6-14: spot the early signs, test calm-down tools on a good day and make a plan that works for your kid.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TdZpeAkIBECpwGmsTn643dE",
     blobUrl: "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Calm-Down%20Toolkit.pdf",
     imageUrl: "/products/calm-down-toolkit.jpg?v=2",
-    previewFile: "Preview Emotional & Social Skills - The Calm-Down Toolkit.pdf",
+    previewFile: "Preview Emotional & Social Skills - The Calm-Down Toolkit v3.pdf",
     category: "emotional-social-skills",
     isBundle: false,
     bundleProductIds: null,

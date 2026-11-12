@@ -2511,22 +2511,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'calm-down-toolkit': {
     opening:
-      'Your child builds their own physical reset kit and a "when I\'m flooded" plan using stuff already around the house. They test different tools to find what actually settles their body, then turn it into a 3-line plan they can run on their own. Real self-regulation, not a poster on the wall.',
+      'Your kid finds out what actually settles their body when a big feeling floods in. They learn their early signs, test reset tools on a calm day, keep the ones that work for them, and turn them into a short plan they can reach for on their own.',
     whatsIncluded: [
-      'Body-signal check-in: spot the flooded state early',
-      'Household tool hunt with 6 starter reset options',
-      'Test-and-rate framework to find what actually works',
-      '3-line personal plan kids can run on their own',
-      'Version 2 revision after a real hard moment',
+      'Five steps, from spotting the early signs to version 2 of the plan',
+      'Early signs, Reset tools, Rate it and What helps from you cards',
+      'A worked example: music and singing to calm down in the car',
+      'My calm-down plan, short enough to remember in a hard moment',
+      'Three levels per step, so siblings can each make their own plan',
     ],
-    skillTags: ['Self-Regulation', 'Emotional Awareness', 'Coping Skills'],
+    skillTags: ['Self-Regulation', 'Emotional Awareness', 'Coping Skills', 'Self-Knowledge', 'Asking for Help'],
     insideTheLearning: {
       lead:
-        'Your child builds a calm-down kit that works for their body specifically, not the one a poster says should work. First they learn to catch a feeling on the way up. Then they test what actually brings it down, and keep only what does.',
+        'Your kid tests calm-down tools on a good day, so they already know what works when a hard moment comes. Siblings often need opposite things, music and movement for one, quiet and space for the other, and each kid ends up with a plan that fits them.',
       skills: [
-        { skill: 'Self-Regulation', where: 'Noticing a feeling rising and acting on it before it takes over' },
-        { skill: 'Emotional Awareness', where: 'Connecting a feeling to what it physically feels like inside' },
-        { skill: 'Coping Skills', where: 'Testing strategies and keeping the ones that work for their body' },
+        { skill: 'Self-Regulation', where: 'Using a tool to settle their own body' },
+        { skill: 'Emotional Awareness', where: 'Catching the early signs of a big feeling' },
+        { skill: 'Coping Skills', where: 'Testing tools and keeping the ones that work' },
+        { skill: 'Self-Knowledge', where: 'Noticing what works for them, not for everyone' },
+        { skill: 'Asking for Help', where: 'Telling you exactly what they need from you' },
       ],
     },
     format: 'Project Guide',

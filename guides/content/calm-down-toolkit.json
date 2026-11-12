@@ -1,0 +1,340 @@
+{
+  "slug": "calm-down-toolkit",
+  "category": "Emotional & Social",
+  "title": "Calm-Down Toolkit",
+  "tagline": "Notice · Test · Pick · Plan · Use",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds out what actually settles their body when a big feeling floods in. They learn their early signs, test reset tools on a calm day, keep the ones that work for them, and turn them into a short plan they can reach for on their own.",
+  "need": [
+    "A calm afternoon to test things, not a hard moment",
+    "Things already at home: music, a pillow, a book, a blanket",
+    "Paper for the plan, and a spot to keep it",
+    "A few weeks of real life to try it out"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "what a big feeling does to the body"
+    },
+    {
+      "subject": "Health",
+      "text": "how movement, sound and rest help it settle"
+    },
+    {
+      "subject": "Writing",
+      "text": "a short plan in their own words"
+    },
+    {
+      "subject": "Self-knowledge",
+      "text": "noticing what works for them, not for everyone"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is teaching this in the middle of a meltdown, when nobody can learn anything. Your job is to do the testing on a calm day, and in the hard moment, to say less and follow the plan they made.",
+    "plan": [
+      {
+        "when": "One calm afternoon",
+        "what": "Spot the signs, test the tools and pick three (Steps 1, 2 and 3)."
+      },
+      {
+        "when": "The same day or the next",
+        "what": "Make the plan (Step 4)."
+      },
+      {
+        "when": "Over the next few weeks",
+        "what": "Use it, then fix it (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They say nothing works",
+        "a": "Test when they're calm, not upset, and try tools from every group on the Reset tools card. Most kids find one surprise."
+      },
+      {
+        "q": "Siblings need opposite things",
+        "a": "That's normal. One may need music and movement, the other quiet and space. Each kid gets their own plan, and their own spot."
+      },
+      {
+        "q": "They won't use it in the moment",
+        "a": "Say one word from their plan, like 'music?' or 'space?', then step back. Talking about it waits until they're calm."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Nobody calms down on command. A kid calms down when they already know, from testing it on a good day, which tool settles their body, and someone lets them use it.",
+    "before": "Just calm down!",
+    "model": [
+      {
+        "part": "Notice",
+        "line": "Upset in the back seat of the car."
+      },
+      {
+        "part": "Tool",
+        "line": "The music goes on, and she sings along."
+      },
+      {
+        "part": "Result",
+        "line": "Calm again, pretty quickly."
+      },
+      {
+        "part": "Plan",
+        "line": "In the car, music is her first move."
+      }
+    ],
+    "modelNote": "'Just calm down' asks for something a flooded kid can't do. A tool they already know works gives them a way to get there, and a parent who knows it can offer it with one word."
+  },
+  "steps": [
+    {
+      "title": "Spot the early signs",
+      "why": "A big feeling is much easier to settle when you catch it early, before it takes over.",
+      "kid": "On a calm day, your kid remembers the last time they got really upset and finds the signs that came first, using the Early signs card in the Reset Toolkit at the end of the guide: a hot face, tight hands, a loud voice, a racing heart. They circle the two they notice first.",
+      "you": "Pick a moment that's over and not too raw. Share one of your own early signs first, then ask 'What happens in your body just before you explode?'",
+      "ask": [
+        "What's the very first thing you notice?",
+        "Where in your body do you feel it?"
+      ],
+      "tip": "Ask about a time that's over, never one that's still happening. It's much easier to remember the signs once the feeling has gone.",
+      "levels": {
+        "explore": "Point to where you feel it on your body, and show a face for how big it gets.",
+        "develop": "Find your two first signs on the Early signs card, and say which comes first.",
+        "extend": "Work out what usually comes before the signs, like being hungry, tired or rushed."
+      }
+    },
+    {
+      "title": "Test the tools",
+      "why": "Every kid is different. The only way to know what works for yours is to try things out.",
+      "kid": "Your kid tries tools from each group on the Reset tools card: move, sound, squeeze, quiet and space. They do each one for a minute or two, then rate it on the Rate it card: did it calm me, could I do it anywhere, did I like it?",
+      "you": "Try the tools with them, and make it a bit silly. Wind them up first with a quick game or a fast run, so there's something to settle. Write down their ratings, not yours.",
+      "ask": [
+        "Which one did your body like best?",
+        "Which one surprised you?"
+      ],
+      "tip": "Siblings often need opposite things. One may need to move and make noise, the other needs quiet and to be left alone. Both are right.",
+      "levels": {
+        "explore": "Try four tools with a parent, and give each a thumbs up or down.",
+        "develop": "Try a tool from every group, and rate each one on the Rate it card.",
+        "extend": "Time how long each tool takes to slow your breathing, and compare."
+      }
+    },
+    {
+      "title": "Pick your three",
+      "why": "Three tools is enough to always have one that fits, and few enough to remember.",
+      "kid": "Your kid picks their three keepers: one that works anywhere, one for home and one for when they need to let it out. They check that each one is safe and doesn't hurt anyone or anything.",
+      "you": "Ask 'Which one could you do in the car, or at a shop?' so at least one works anywhere. Accept their picks, even the ones you'd never choose.",
+      "ask": [
+        "Which one could you do anywhere?",
+        "Which one is just for home?"
+      ],
+      "tip": "Screaming into a pillow or stomping on the spot is a perfectly good tool. Letting it out safely is the whole point.",
+      "levels": {
+        "explore": "Pick your favourite tool, and practise it once more with a parent.",
+        "develop": "Pick three: one for anywhere, one for home and one to let it out.",
+        "extend": "Pick three, then find a quiet version of your loudest tool for places where you can't be loud."
+      }
+    },
+    {
+      "title": "Make the plan",
+      "why": "A short plan, made when they're calm, is what they can follow when they're not.",
+      "kid": "Your kid makes My calm-down plan at the end of the guide: when I notice my signs, I'll use this tool first, then this one, and this is what helps from my grown-up. They keep it short enough to remember, and decide where it lives.",
+      "you": "Ask 'What do you need from me when you're upset?' and write down exactly what they say, like 'leave me alone for a bit' or 'put music on'. That line is your job in the plan.",
+      "ask": [
+        "What should I do, and what should I not do?",
+        "Where should the plan live?"
+      ],
+      "tip": "Put a copy where hard moments happen: the bedroom door, the car, the kitchen. A plan in a drawer doesn't get used.",
+      "levels": {
+        "explore": "Draw your plan: your sign, your tool and what you need from your parent.",
+        "develop": "Write the full plan, with your three tools in order.",
+        "extend": "Write the plan, plus a version for a place without your tools, like a classroom or a friend's house."
+      }
+    },
+    {
+      "title": "Use it, then fix it",
+      "why": "The plan only gets good after it's been tested in real hard moments.",
+      "kid": "Over the next few weeks, your kid uses the plan in real moments. Each time, once they're calm, they say what worked and what didn't, and change the plan if they need to. After a few weeks, they make version 2.",
+      "you": "In the moment, say one word from their plan and step back. Talk about it later, when they're calm, and only for a minute. Notice out loud when they use a tool on their own.",
+      "ask": [
+        "What worked last time?",
+        "What would you change in your plan?"
+      ],
+      "tip": "Keep the review short and kind. 'Music worked, shall we keep it first?' is enough.",
+      "levels": {
+        "explore": "After a hard moment, tell your parent which tool helped.",
+        "develop": "Use the plan for a few weeks, then make version 2.",
+        "extend": "Track how long it takes to feel calm, and see if it gets shorter over the weeks."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Reset Toolkit",
+    "intro": "The signs to watch for, the tools to try, how to rate them and what helps from you.",
+    "items": [
+      {
+        "name": "Early signs",
+        "lines": [
+          {
+            "k": "Face:",
+            "v": "hot, red, frowning, close to tears"
+          },
+          {
+            "k": "Hands:",
+            "v": "tight fists, grabbing, throwing"
+          },
+          {
+            "k": "Voice:",
+            "v": "louder, faster, shouting"
+          },
+          {
+            "k": "Body:",
+            "v": "racing heart, tight chest, shaky legs"
+          },
+          {
+            "k": "Words:",
+            "v": "'It's not fair!', 'I hate this!'"
+          }
+        ],
+        "ask": "Which sign shows up first for you?"
+      },
+      {
+        "name": "Reset tools",
+        "lines": [
+          {
+            "k": "Move:",
+            "v": "dance, jump, run, a fast walk"
+          },
+          {
+            "k": "Sound:",
+            "v": "music on, singing along, humming"
+          },
+          {
+            "k": "Squeeze:",
+            "v": "scream into a pillow, hug a cushion"
+          },
+          {
+            "k": "Quiet:",
+            "v": "read, draw, a blanket, slow breaths"
+          },
+          {
+            "k": "Space:",
+            "v": "a few minutes alone, in your spot"
+          }
+        ],
+        "ask": "Which group does your body like best?"
+      },
+      {
+        "name": "Rate it",
+        "lines": [
+          {
+            "k": "Calm:",
+            "v": "did it settle me? A lot, a bit, no"
+          },
+          {
+            "k": "Speed:",
+            "v": "fast, or slow but sure"
+          },
+          {
+            "k": "Anywhere:",
+            "v": "home only, or car and shop too"
+          },
+          {
+            "k": "Safe:",
+            "v": "hurts nobody and nothing"
+          },
+          {
+            "k": "Like:",
+            "v": "would I actually choose it?"
+          }
+        ],
+        "ask": "Which tool scored best on 'anywhere'?"
+      },
+      {
+        "name": "What helps from you",
+        "lines": [
+          {
+            "k": "Space:",
+            "v": "'Leave me alone for a bit'"
+          },
+          {
+            "k": "Words:",
+            "v": "fewer, or none at all"
+          },
+          {
+            "k": "Offer:",
+            "v": "one word: 'music?', 'book?'"
+          },
+          {
+            "k": "Near:",
+            "v": "sit close, without talking"
+          },
+          {
+            "k": "Later:",
+            "v": "talk once they're calm"
+          }
+        ],
+        "ask": "What's the one thing your grown-up should never do?"
+      }
+    ],
+    "after": {
+      "label": "My calm-down plan",
+      "lines": [
+        "When I notice:",
+        "First I'll:",
+        "If I need more, I'll:",
+        "What helps from my grown-up:"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Self-awareness",
+      "text": "catching the early signs of a big feeling"
+    },
+    {
+      "name": "Self-regulation",
+      "text": "using a tool to settle their own body"
+    },
+    {
+      "name": "Testing",
+      "text": "finding what works by trying it"
+    },
+    {
+      "name": "Asking for help",
+      "text": "telling you what they need from you"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know what calms them, and they can reach for it.",
+    "text": "Watch the next hard moment from a little distance. If they head for their music, their book or their spot before you say anything, even once, the plan is theirs now.",
+    "celebrate": "The first time they use a tool on their own, say: 'You noticed it coming and you knew what to do.'",
+    "extensions": [
+      "Make a travel version of the plan that fits in the car door or a pocket",
+      "Find a tool for a place where your favourite won't work, like a shop or a friend's house",
+      "Help a younger sibling or cousin find their own tools",
+      "Ask your parent to make their own calm-down plan, and swap"
+    ]
+  },
+  "signs": [
+    "They say 'I need a minute' instead of exploding",
+    "They ask for their tool on their own, like music or a book",
+    "They come back to talk once they're calm"
+  ],
+  "makeItReal": "Put the plan where it's needed: a copy in the car, one by their bed and one for anyone who looks after them. Read it together once a month and update it.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "My two calm down in completely different ways. My daughter needs to move, put music on or scream into a pillow, then have a little time alone. My son needs to be left alone for a bit, usually with a book. When my daughter gets upset in the car, putting music on and singing along calms her down pretty quickly.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/calm-down-toolkit.jpg",
+    "alt": "A boy with glasses reading a book in a green hammock in the forest",
+    "caption": "His reset: a book and a little time alone."
+  }
+}

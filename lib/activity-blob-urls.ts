@@ -23,7 +23,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "build-a-museum": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20build%20a%20museum%20or%20interactive%20exhibit%20v6.pdf",
   "build-ai-helper": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20BUILD%20YOUR%20OWN%20AI%20HELPER%20v2.pdf",
   "business-failure-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Business%20Failure%20Lab%20v2.pdf",
-  "calm-down-toolkit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Calm-Down%20Toolkit%20v2.pdf",
+  "calm-down-toolkit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Calm-Down%20Toolkit%20v3.pdf",
   "camouflage-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20Camouflage%20Challenge%20v6.pdf",
   "clothing-swap-thrift-math": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Clothing%20Swap%20%26%20Thrift%20Math%20v8.pdf",
   "comeback-journal": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Comeback%20Journal%20v2.pdf",

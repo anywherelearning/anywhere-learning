@@ -131,7 +131,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'world-food-detective': 'Project',
 
   // Emotional & Social Skills
-  'calm-down-toolkit': 'Half-Day',
+  'calm-down-toolkit': 'Project',
   'big-feelings-lab': 'Project',
   'boredom-toolkit': 'Half-Day',
   'disappointment-lab': 'Project',
