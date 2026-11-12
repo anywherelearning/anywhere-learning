@@ -14,7 +14,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "algorithm-awareness": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20ALGORITHM%20AWARENESS%20WHY%20AM%20I%20SEEING%20THIS%20v2.pdf",
   "backyard-campout-planner": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Backyard%20Campout%20Planner%20v6.pdf",
   "bias-fairness-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20BIAS%20%26%20FAIRNESS%20LAB%20v2.pdf",
-  "big-feelings-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Big%20Feelings%20Lab%20v2.pdf",
+  "big-feelings-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Big%20Feelings%20Lab%20v3.pdf",
   "board-game-studio": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Board%20Game%20Studio%20v7.pdf",
   "body-owners-manual": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20THE%20BODY%20OWNER%27S%20MANUAL%20v7.pdf",
   "boredom-toolkit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Boredom%20Toolkit%20v2.pdf",

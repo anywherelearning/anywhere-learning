@@ -117,7 +117,7 @@ const catalog = [
   { slug: 'world-food-detective', name: 'World Food Detective', priceCents: 599, description: 'Worldschooling food activity for kids ages 6-14: taste a local dish, trace its ingredients, learn it from a local cook and make it again.' },
   // ─── Emotional & Social Skills singles ($5.99) ───
   { slug: 'calm-down-toolkit', name: 'Calm-Down Toolkit', priceCents: 599, description: 'Spot the early signs, test calm-down tools on a good day and make a short plan your kid can reach for on their own.' },
-  { slug: 'big-feelings-lab', name: 'The Big Feelings Lab', priceCents: 599, description: 'Name a feeling, map it in the body, rate its size, watch it pass.' },
+  { slug: 'big-feelings-lab', name: 'Big Feelings Lab', priceCents: 599, description: 'Emotional awareness activity for kids ages 6-14: learn feeling words, spot the body clues and find the real feeling underneath, then watch it pass.' },
   { slug: 'boredom-toolkit', name: 'The Boredom Toolkit', priceCents: 599, description: 'Build the skill of handling boredom without a screen. Self-direction, creativity, independence.' },
   { slug: 'disappointment-lab', name: 'The Disappointment Lab', priceCents: 599, description: 'Sit through small planned letdowns and track bounce-back time.' },
   { slug: 'frustration-tolerance-cards', name: 'Frustration Tolerance Challenge Cards', priceCents: 799, description: '20 frustration challenges, each with a coping move to practice mid-feeling.' },

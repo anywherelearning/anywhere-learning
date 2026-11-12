@@ -2263,18 +2263,18 @@ export const fallbackProducts: FallbackProduct[] = [
   },
   {
     id: "fb-big-feelings-lab",
-    name: "The Big Feelings Lab",
+    name: "Big Feelings Lab",
     slug: "big-feelings-lab",
     description:
-      "Your child learns to name a feeling, find where it sits in the body, rate its size, and watch it pass without trying to fix it. They build a personal feelings map and track a week of real moments. Emotional intelligence the way real adults wish they'd learned it.",
+      "Your kid learns to put the right name on a big feeling. They collect feeling words, find where each feeling shows up in the body, dig for the real feeling under words like tired or fine, size it and let it pass, then track a week of real moments on their own feelings map.",
     shortDescription:
-      "Emotional intelligence activity for kids ages 6-14: name feelings, map them in the body, and watch them pass. Real self-awareness practice.",
+      "Emotional awareness activity for kids ages 6-14: learn feeling words, spot the body clues and find the real feeling underneath, then watch it pass.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TdZpfAkIBECpwGmOwJg9l88",
     blobUrl: "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Big%20Feelings%20Lab.pdf",
-    imageUrl: "/products/big-feelings-lab.jpg?v=2",
-    previewFile: "Preview Emotional & Social Skills - The Big Feelings Lab.pdf",
+    imageUrl: "/products/big-feelings-lab.jpg?v=3",
+    previewFile: "Preview Emotional & Social Skills - The Big Feelings Lab v3.pdf",
     category: "emotional-social-skills",
     isBundle: false,
     bundleProductIds: null,

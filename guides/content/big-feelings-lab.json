@@ -1,0 +1,340 @@
+{
+  "slug": "big-feelings-lab",
+  "category": "Emotional & Social",
+  "title": "Big Feelings Lab",
+  "tagline": "Name · Find · Dig · Size · Track",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns to put the right name on a big feeling. They build their own feeling words, find where each feeling shows up in their body, spot the feeling hiding under what they say, and track a week of real moments until they can tell nervous from tired, and know both are normal.",
+  "need": [
+    "A quiet moment to talk, not a hard one",
+    "Paper and pencils for a body outline",
+    "A notebook for a week of real moments",
+    "Your own feelings, shared out loud"
+  ],
+  "academics": [
+    {
+      "subject": "Language",
+      "text": "precise words for what they feel"
+    },
+    {
+      "subject": "Science",
+      "text": "how feelings show up in the body"
+    },
+    {
+      "subject": "Health",
+      "text": "why naming a feeling helps it pass"
+    },
+    {
+      "subject": "Data",
+      "text": "tracking real moments and spotting patterns"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is fixing the feeling before anyone has named it. Your job is to get curious instead: ask where they feel it, offer a word or two, and tell them it's normal.",
+    "plan": [
+      {
+        "when": "One quiet afternoon",
+        "what": "Collect the words and map the body (Steps 1 and 2)."
+      },
+      {
+        "when": "The next few days",
+        "what": "Dig under the surface and size it (Steps 3 and 4)."
+      },
+      {
+        "when": "For one week",
+        "what": "Track real moments (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They say 'I don't know'",
+        "a": "Ask about the body instead: 'Where do you feel it?' Then offer two words to choose from. Picking is easier than naming."
+      },
+      {
+        "q": "They say they're fine when they clearly aren't",
+        "a": "Don't push. Say what you notice once, like 'Your shoulders look tight,' and leave the door open for later."
+      },
+      {
+        "q": "They get upset talking about it",
+        "a": "Stop and come back on a calmer day. This is a guide for after the feeling, never in the middle of it."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Kids often name the wrong feeling, or give a reason instead of a feeling. The body usually knows first. Matching what the body does to the right word, and knowing the feeling is normal, makes it easier to understand.",
+    "before": "She says she's tired, so she must be tired.",
+    "model": [
+      {
+        "part": "Said",
+        "line": "'I don't want to go anymore. I'm tired.'"
+      },
+      {
+        "part": "Body",
+        "line": "A stomach ache, shaky legs, cranky."
+      },
+      {
+        "part": "Name",
+        "line": "Nervous, about the new acting class."
+      },
+      {
+        "part": "Normal",
+        "line": "Nervous before something new is normal."
+      }
+    ],
+    "modelNote": "'Tired' was the word she had. Her body was saying something else. Once the stomach ache and the shaky legs had the right name, the feeling made sense."
+  },
+  "steps": [
+    {
+      "title": "Collect the feeling words",
+      "why": "You can't name a feeling you don't have a word for, and most kids only have three or four.",
+      "kid": "Your kid collects feeling words, starting with the big families on the Feeling words card in the Feelings Toolkit at the end of the guide: scared, mad, sad, happy and mixed. They add words of their own, and pick the five they feel most often.",
+      "you": "Share a feeling of your own first, with a precise word: 'I was frustrated this morning, not angry.' Then ask which words they know and which are new.",
+      "ask": [
+        "Which feeling do you have most often?",
+        "Which two words mean almost the same thing?"
+      ],
+      "tip": "Use the words yourself all week. Kids pick them up from hearing them used for real, not from a list.",
+      "levels": {
+        "explore": "Name a feeling for each family, and make the face that goes with it.",
+        "develop": "Find three words in each family, and pick your top five.",
+        "extend": "Find two words that are close but different, like nervous and scared, and explain the difference."
+      }
+    },
+    {
+      "title": "Find it in the body",
+      "why": "The body usually notices a feeling before the mind has a word for it.",
+      "kid": "Your kid draws an outline of a body and marks where each of their top feelings shows up, using the Body clues card: a stomach ache, shaky legs, a tight chest, a hot face, a cranky mood. They use a different colour for each feeling.",
+      "you": "Ask about a time that's over: 'Last time you were nervous, what did your body do?' Mark your own body clues on the same page, so it's something you do together.",
+      "ask": [
+        "Where do you feel nervous?",
+        "Which feeling lives in your stomach?"
+      ],
+      "tip": "Keep the word list somewhere they can see it. A word they can read is easier to reach for than one they have to remember.",
+      "levels": {
+        "explore": "Colour where you feel happy and where you feel scared on the outline.",
+        "develop": "Map your top five feelings on the body, with a colour for each.",
+        "extend": "Map them, then find two feelings that show up in the same place and how you tell them apart."
+      }
+    },
+    {
+      "title": "Find the feeling underneath",
+      "why": "What a kid says, like 'I'm tired' or 'I don't care', is often covering a different feeling.",
+      "kid": "Your kid looks at things people say when they're upset, using the Under the surface card, and guesses what feeling might be underneath. Then they think of a time they said one of these themselves, and what they were really feeling.",
+      "you": "Share a time you said one thing and felt another. Ask, gently, 'When you said you were tired, was something else going on?' Accept their answer, even if it's 'no'.",
+      "ask": [
+        "What do you say when you don't want to say how you feel?",
+        "What could be under 'I don't care'?"
+      ],
+      "tip": "Body clues are the best detectives here. A stomach ache before something new often means nervous, not sick or tired.",
+      "levels": {
+        "explore": "Pick one thing from the card, and guess the feeling with a parent.",
+        "develop": "Match every line on the card to a feeling that could be underneath.",
+        "extend": "Think of a time you covered a feeling, and write what you said and what you really felt."
+      }
+    },
+    {
+      "title": "Size it, and let it pass",
+      "why": "Knowing a feeling is normal, and that it gets smaller on its own, takes away half its power.",
+      "kid": "Next time a big feeling comes and goes, your kid rates its size on the Size it card, from tiny to huge, then rates it again a little later. They notice that it shrank, even without fixing anything.",
+      "you": "Name it, then say it's normal: 'That sounds like nervous. Everybody feels that before something new.' Then wait, and let the feeling move through without rushing to solve it.",
+      "ask": [
+        "How big was it at the start?",
+        "How big is it now?"
+      ],
+      "tip": "Don't try to make the feeling go away. Naming it and waiting is usually what helps it shrink.",
+      "levels": {
+        "explore": "Show how big the feeling is with your hands, then again later.",
+        "develop": "Rate the feeling from 1 to 5 twice, and notice how long it took to shrink.",
+        "extend": "Rate it every few minutes, and draw a little graph of the feeling going down."
+      }
+    },
+    {
+      "title": "Track a week of real moments",
+      "why": "A week of real feelings shows patterns no conversation can.",
+      "kid": "For one week, your kid notes real feelings in a notebook: what happened, the name, the body clue and the size. At the end of the week, they fill in My feelings map at the end of the guide, and look for patterns.",
+      "you": "Keep it light: one quick note at bedtime is enough. At the end of the week, read it together and ask what surprised them.",
+      "ask": [
+        "Which feeling came up most?",
+        "What usually happens just before it?"
+      ],
+      "tip": "Patterns are the prize. 'I always feel nervous before something new' is a sentence that helps for years.",
+      "levels": {
+        "explore": "Each evening, point to the face that matches your day, and say why.",
+        "develop": "Track a week of feelings, then fill in My feelings map.",
+        "extend": "Track a week, then find one pattern and plan what would help next time."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Feelings Toolkit",
+    "intro": "Words for feelings, where they show up, what they hide under and how big they are.",
+    "items": [
+      {
+        "name": "Feeling words",
+        "lines": [
+          {
+            "k": "Scared:",
+            "v": "nervous, worried, shy, unsure"
+          },
+          {
+            "k": "Mad:",
+            "v": "frustrated, annoyed, jealous"
+          },
+          {
+            "k": "Sad:",
+            "v": "disappointed, lonely, left out"
+          },
+          {
+            "k": "Happy:",
+            "v": "proud, excited, calm, grateful"
+          },
+          {
+            "k": "Mixed:",
+            "v": "embarrassed, overwhelmed, confused"
+          }
+        ],
+        "ask": "Which word is new to you?"
+      },
+      {
+        "name": "Body clues",
+        "lines": [
+          {
+            "k": "Stomach:",
+            "v": "an ache, butterflies, no appetite"
+          },
+          {
+            "k": "Legs:",
+            "v": "shaky, restless, heavy"
+          },
+          {
+            "k": "Chest:",
+            "v": "tight, fast heartbeat"
+          },
+          {
+            "k": "Face:",
+            "v": "hot, red, tears, a frown"
+          },
+          {
+            "k": "Mood:",
+            "v": "cranky, loud, very quiet"
+          }
+        ],
+        "ask": "Which clue shows up first for you?"
+      },
+      {
+        "name": "Under the surface",
+        "lines": [
+          {
+            "k": "'I'm tired.'",
+            "v": "could be nervous"
+          },
+          {
+            "k": "'I don't care.'",
+            "v": "could be disappointed"
+          },
+          {
+            "k": "'It's stupid.'",
+            "v": "could be embarrassed"
+          },
+          {
+            "k": "'Leave me alone!'",
+            "v": "could be overwhelmed"
+          },
+          {
+            "k": "'I'm bored.'",
+            "v": "could be lonely, or stuck"
+          }
+        ],
+        "ask": "Which one do you say most?"
+      },
+      {
+        "name": "Size it",
+        "lines": [
+          {
+            "k": "1:",
+            "v": "tiny, I barely notice it"
+          },
+          {
+            "k": "2:",
+            "v": "small, I can still do things"
+          },
+          {
+            "k": "3:",
+            "v": "medium, it's hard to focus"
+          },
+          {
+            "k": "4:",
+            "v": "big, it's all I can think about"
+          },
+          {
+            "k": "5:",
+            "v": "huge, it's taking over"
+          }
+        ],
+        "ask": "How long did it take to drop a number?"
+      }
+    ],
+    "after": {
+      "label": "My feelings map",
+      "lines": [
+        "The feeling I had most this week",
+        "Where I feel it in my body",
+        "What usually happens just before it",
+        "What I'll remember: it's normal, and it passes"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Emotional vocabulary",
+      "text": "the right word for what they feel"
+    },
+    {
+      "name": "Body awareness",
+      "text": "noticing where a feeling shows up"
+    },
+    {
+      "name": "Looking deeper",
+      "text": "finding the feeling under the words"
+    },
+    {
+      "name": "Spotting patterns",
+      "text": "seeing what brings a feeling on"
+    }
+  ],
+  "conclusion": {
+    "headline": "They can name what they feel, and they know it's normal.",
+    "text": "The next time they say 'I'm tired' before something new, ask where they feel it. If they answer 'my stomach, I think I'm nervous', they're reading their own body now.",
+    "celebrate": "When they name a feeling on their own, say: 'You figured out what was really going on. That's not easy, even for grown-ups.'",
+    "extensions": [
+      "Read a story together and name what each character is feeling, and how you can tell",
+      "Find the feeling words in another language you're learning",
+      "Make a family feelings check-in at dinner: one word each, no fixing",
+      "Notice a feeling in someone else, and ask them about it instead of guessing"
+    ]
+  },
+  "signs": [
+    "They use more precise feeling words, like frustrated or nervous",
+    "They mention a body clue: 'my stomach feels funny'",
+    "They tell you a feeling before it turns into a meltdown"
+  ],
+  "makeItReal": "Before the next new thing, like a class, a trip or a first day, ask them to check their body and name what they feel. Then tell them it's normal, and go together.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "When my daughter started a new acting class, she said she didn't want to do it anymore, that she was tired. She had a stomach ache, shaky legs and she was cranky. She was nervous. Linking the feeling to what her body was doing, and knowing it was normal, helped her understand it.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/big-feelings-lab.jpg",
+    "alt": "A child in a green hat crouched in a forest clearing, frowning, with a pile of sticks nearby",
+    "caption": "Not every feeling is a happy one."
+  }
+}

@@ -2535,22 +2535,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'big-feelings-lab': {
     opening:
-      'Your child learns to name a feeling, find where it sits in the body, rate its size, and watch it pass without trying to fix it. They build a personal feelings map and track a week of real moments. Emotional intelligence the way real adults wish they\'d learned it.',
+      'Your kid learns to put the right name on a big feeling. They collect feeling words, find where each feeling shows up in the body, dig for the real feeling under words like tired or fine, size it and let it pass, then track a week of real moments on their own feelings map.',
     whatsIncluded: [
-      'Feelings vocabulary beyond happy, sad, mad',
-      'Body-map activity: where the feeling lives',
-      'Size-rating scale to name how big it is',
-      'Week-long real-moments tracker',
-      'Version 2 reflection on patterns and triggers',
+      'Five steps, from collecting feeling words to a week of real moments',
+      'Feeling words, Body clues, Under the surface and Size it cards',
+      'A worked example: "I\'m tired" before a new acting class turns out to be nervous',
+      'My feelings map, to spot the feeling that shows up most and what comes before it',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Emotional Intelligence', 'Self-Awareness', 'Mindfulness'],
+    skillTags: ['Emotional Vocabulary', 'Emotional Awareness', 'Body Awareness', 'Self-Reflection', 'Mindfulness'],
     insideTheLearning: {
       lead:
-        'Your child studies their own feelings the way a scientist studies anything. Name it, find where it sits in the body, rate how big it is, then watch it pass on its own. A feeling that can be named loses some of its power. I am a terrible person is stuck. I am disappointed, about a seven, is something a kid can ride out.',
+        'Kids often say one feeling and mean another. "I\'m tired" can mean nervous, and "I don\'t care" can mean disappointed. Your kid learns to link a feeling to what their body is doing, give it the right name and know it is normal, which makes it much easier to ride out.',
       skills: [
-        { skill: 'Emotional Intelligence', where: 'Building a feelings vocabulary well past happy, sad and mad' },
-        { skill: 'Self-Awareness', where: 'Mapping where a feeling physically sits and inventing their own scale for how big it is' },
-        { skill: 'Mindfulness', where: 'Tracking real moments across a week and watching feelings pass without acting on them' },
+        { skill: 'Emotional Vocabulary', where: 'Collecting precise words well past happy, sad and mad' },
+        { skill: 'Emotional Awareness', where: 'Finding the real feeling under words like tired or fine' },
+        { skill: 'Body Awareness', where: 'Mapping where each feeling shows up in the body' },
+        { skill: 'Self-Reflection', where: 'Tracking a week of real moments and looking for patterns' },
+        { skill: 'Mindfulness', where: 'Naming a feeling and letting it pass instead of acting on it' },
       ],
     },
     format: 'Project Guide',

@@ -282,13 +282,13 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
   },
   {
     slug: 'big-feelings-lab',
-    title: 'The Big Feelings Lab',
+    title: 'Big Feelings Lab',
     category: 'Emotional & Social Skills',
     color: '#b6748a',
     colorText: '#b6748a',
-    time: '1 hr',
+    time: 'Multi-day',
     photo: '/products/big-feelings-lab.jpg',
-    blurb: 'Name it, feel it, watch it pass.',
+    blurb: 'Find the real feeling under the words.',
   },
   {
     slug: 'conflict-fix',
