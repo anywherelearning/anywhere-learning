@@ -2989,15 +2989,15 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Play the World",
     slug: "play-the-world",
     description:
-      "While travelling, your child finds a real game that local kids play, learns it properly, the rules, the words, the gear, and plays it right where you are. Then they figure out what the game reveals about the place. Worldschooling through the one language every child speaks: play. There is no faster way inside a culture.",
+      "Your kid finds a game that kids where you are staying really play, learns it from them, and writes down the rules the same day so it is not forgotten. Then they teach it to the family and compare it with a game from home.",
     shortDescription:
-      "Worldschooling activity for kids ages 6-14: learn and play a real local game while travelling, and read what it reveals about the culture.",
+      "Worldschooling activity for kids ages 6-14: learn a game from local kids, write the rules down the same day, then teach it to the family.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/play-the-world.jpg",
-    previewFile: "Preview Worldschooling - Play The World.pdf",
+    previewFile: "Preview Worldschooling - Play The World v3.pdf",
     category: "worldschooling",
     isBundle: false,
     bundleProductIds: null,

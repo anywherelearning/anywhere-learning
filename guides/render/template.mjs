@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 // Local photos are inlined so the PDF never depends on the network.
+const WORDMARK = `data:image/png;base64,${fs.readFileSync(path.resolve('public/email-anywhere-learning-wordmark.png')).toString('base64')}`;
 const img = (src) => src.startsWith('http') ? src : `data:image/jpeg;base64,${fs.readFileSync(path.resolve(src)).toString('base64')}`;
 
 // Card icons: Lucide line icons (ISC licence, guides/icons/LICENSE-lucide.txt),
@@ -110,7 +111,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
       ${g.photo ? `<figure class="snap${g.photo.tall ? ' tall' : ''}"><img src="${img(g.photo.src)}" alt="${esc(g.photo.alt || g.photo.caption)}"><figcaption>${esc(g.photo.caption)}</figcaption>${g.photo.inset ? `<div class="snapin"><img src="${img(g.photo.inset.src)}" alt="${esc(g.photo.inset.alt || '')}"></div>` : ''}</figure>` : ''}
     </div>
   </div>
-  <div class="brand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
+  <div class="brand"><img src="${WORDMARK}" alt="Anywhere Learning"></div>
 </section>`;
 
   // The core skill in plain words, shown as one worked example: the weak
@@ -246,7 +247,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   <div class="jframe">
     ${[['journal-13.jpg','tl'],['journal-04.jpg','tr'],['journal-18.jpg','bl'],['journal-34.jpg','br'],['journal-17.jpg','ml'],['journal-33.jpg','mr'],['journal-23.jpg','tm'],['journal-29.jpg','bm']].map(([f, pos]) => `<span class="jdeco ${pos}">${art('wc/' + f)}</span>`).join('')}
     <div class="jcin">
-      <div class="jbrand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
+      <div class="jbrand"><img src="${WORDMARK}" alt="Anywhere Learning"></div>
       <h2><span class="jmy">My</span>Nature<br>Journal</h2>
       <div class="jseasons"><span>Fall</span><i></i><span>Winter</span><i></i><span>Spring</span><i></i><span>Summer</span></div>
       <div class="jname"><span>Name</span><i></i></div>
@@ -550,7 +551,7 @@ h2{font-size:40px}
 
 .cover-in{flex:1;display:flex;flex-direction:column;text-align:center;max-width:none}
 .cover .chips{justify-content:center}
-.coverbody{flex:1;display:flex;flex-direction:column;justify-content:center;gap:.45in;margin-top:.15in}
+.coverbody{flex:1;display:flex;flex-direction:column;justify-content:space-evenly;gap:.3in;margin-top:.15in}
 .cover-trail{display:none}
 .snap{order:1;width:5.4in;max-width:none;margin:0 auto;padding:14px 14px 16px;transform:rotate(1.5deg)}
 .snap figcaption{font-size:14px;margin-top:10px}
@@ -660,7 +661,7 @@ export function buildMapHtml(g, mode, { bonus = false, review = false, tpt = fal
       <div class="areadots">${g.areas.map((a) => `<span style="--ac:${a.color}">${esc(a.name)}</span>`).join('')}</div>
     </div>
   </div>
-  <div class="brand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
+  <div class="brand"><img src="${WORDMARK}" alt="Anywhere Learning"></div>
 </section>`;
 
   const terms = tpt ? `
@@ -905,7 +906,7 @@ export function buildDaysHtml(g, mode) {
     <div class="polas">${g.days.map((d, k) => `<figure class="pola pl${k}"><img src="${img(d.photo)}" alt="" style="object-position:${d.focus}"><figcaption>${esc(d.coverSkill)}</figcaption></figure>`).join('')}</div>
     <ol class="htrail ctrail">${g.days.map((d, i) => `<li>${blaze(i + 1, 'sm')}<span>${esc(d.title)}</span></li>`).join('')}</ol>
   </div>
-  <div class="brand"><img src="https://anywherelearning.co/email-anywhere-learning-wordmark.png" alt="Anywhere Learning"></div>
+  <div class="brand"><img src="${WORDMARK}" alt="Anywhere Learning"></div>
 </section>`;
 
   const L = g.letter;

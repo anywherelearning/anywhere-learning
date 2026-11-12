@@ -1,0 +1,340 @@
+{
+  "slug": "play-the-world",
+  "category": "Worldschooling",
+  "title": "Play the World",
+  "tagline": "Find · Learn · Write · Play · Compare",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds a game that kids where you're staying really play, learns it from them, and writes down the rules the same day so it isn't forgotten. Then they teach it to the family and compare it with a game from home.",
+  "need": [
+    "A place where local kids play: a park, a beach, a plaza or a school",
+    "A few words in the local language, like 'Can I play?'",
+    "A notebook for the game cards",
+    "Whatever the game needs: a ball, stones, chalk or nothing at all"
+  ],
+  "academics": [
+    {
+      "subject": "Social studies",
+      "text": "what kids here play, and why"
+    },
+    {
+      "subject": "Language",
+      "text": "the words and calls that go with a game"
+    },
+    {
+      "subject": "Writing",
+      "text": "rules clear enough for someone else to follow"
+    },
+    {
+      "subject": "Physical",
+      "text": "new ways to move, aim, run and play"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The easy version is a fun afternoon at the park and a game nobody remembers a week later. Your job is to make sure the rules get written down the same day, and to stay close enough to watch while they play with kids they've just met.",
+    "plan": [
+      {
+        "when": "Wherever kids play",
+        "what": "Find a game and learn it (Steps 1 and 2)."
+      },
+      {
+        "when": "That same day",
+        "what": "Write the game card (Step 3)."
+      },
+      {
+        "when": "Later, anywhere",
+        "what": "Play it as a family, then compare (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They're too shy to ask",
+        "a": "Watch a round together first. Kids often wave a watcher in. You can also ask a parent, a teacher or your host to make the introduction."
+      },
+      {
+        "q": "They don't share a language",
+        "a": "Games are easy to learn by watching and copying. Learn 'Can I play?' and 'What's it called?', and point."
+      },
+      {
+        "q": "There are no kids around",
+        "a": "Ask an adult what they played as a kid. Hosts, guides and shop owners usually light up, and many will show you."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A game is easy to learn and easy to forget. Writing it down the same day, with its name, rules and words, is what turns a fun afternoon into a game you can bring home.",
+    "before": "We played a fun game at recess. I don't remember what it was called.",
+    "model": [
+      {
+        "part": "Name",
+        "line": "What it's called, in the local language, spelled out."
+      },
+      {
+        "part": "Rules",
+        "line": "How many play, how you win, and what's not allowed."
+      },
+      {
+        "part": "Words",
+        "line": "What players shout, and what it means."
+      },
+      {
+        "part": "Place",
+        "line": "Where kids here play it, and with what."
+      }
+    ],
+    "modelNote": "Kids learn a game in minutes and forget its name in days. Four lines written that evening are what let them play it again, and teach it, months later."
+  },
+  "steps": [
+    {
+      "title": "Find a game kids play here",
+      "why": "The games kids play show what's normal here, from the space they have to what they play with.",
+      "kid": "Your kid looks for kids playing, using the Where to find games card in the Game Collector Toolkit at the end of the guide: a park, a beach, a plaza, a school or your host's kids. They watch for a while and pick a game they don't know.",
+      "you": "Go where kids play at the time they play, like after school or on weekends. Watch together from a friendly distance and ask 'What do you think the rules are?'",
+      "ask": [
+        "What are they playing with?",
+        "How do you think you win?"
+      ],
+      "tip": "Watch first. Working out the rules by watching is half the fun, and it shows the kids you're interested.",
+      "levels": {
+        "explore": "Watch kids play a game, and say one thing they do that's different from home.",
+        "develop": "Watch a game, and guess its rules before you ask.",
+        "extend": "Find two different games here, and work out what they have in common."
+      }
+    },
+    {
+      "title": "Learn it from the kids who play it",
+      "why": "Learning a game from the kids who play it is one of the fastest ways into a place.",
+      "kid": "Your kid asks to join or to be taught, using the Ask to play card: 'Can I play?' and 'How do you play?' They learn the rules by playing, and ask what the game is called.",
+      "you": "Stay close and keep watch, but let them do the asking. Help with the words if they're stuck. If kids aren't open to it, ask a parent, a teacher or your host.",
+      "ask": [
+        "What was the hardest rule to understand?",
+        "What did they shout during the game?"
+      ],
+      "tip": "Getting a rule wrong usually makes everyone laugh, and that laugh is often how the friendship starts.",
+      "levels": {
+        "explore": "Ask 'Can I play?' with a parent beside you, and play one round.",
+        "develop": "Learn the game by playing, and ask what it's called.",
+        "extend": "Learn the game, then ask one player where they learned it."
+      }
+    },
+    {
+      "title": "Write the game card",
+      "why": "Games are easy to forget. A card written that evening keeps it for good.",
+      "kid": "That evening, your kid fills in a Game card from the toolkit: the name, the players, what you need, how to play, how you win and the words you shout. They add a quick drawing of the playing area.",
+      "you": "Make it part of the evening, while it's fresh. Ask questions until the rules are clear enough for someone who wasn't there.",
+      "ask": [
+        "Could someone play it from your card alone?",
+        "What rule did you almost forget?"
+      ],
+      "tip": "Do it the same day. Kids who learn several games on a trip often can't remember a single name a week later.",
+      "levels": {
+        "explore": "Tell a parent the rules while they write, and draw the game.",
+        "develop": "Write the full Game card yourself, with a drawing.",
+        "extend": "Write the card so clearly that someone else can play it from the card alone, and test it."
+      }
+    },
+    {
+      "title": "Play it as a family",
+      "why": "Teaching a game is the best test of whether you really learned it.",
+      "kid": "Your kid teaches the game to the family, using the Teach it card: show, play a slow round, then play for real. They fix the Game card if something was missing.",
+      "you": "Be a good student: ask questions, make mistakes and let them correct you. Bring the game along on travel days and rainy afternoons.",
+      "ask": [
+        "What was hard to explain?",
+        "What did you add to the card?"
+      ],
+      "tip": "Play it again a few weeks later. If they can still teach it, it's theirs.",
+      "levels": {
+        "explore": "Show the family how to play, with a parent's help.",
+        "develop": "Teach the whole game, and fix the card if anything was missing.",
+        "extend": "Teach it to kids somewhere new, and watch how they play it."
+      }
+    },
+    {
+      "title": "Compare it with home",
+      "why": "Comparing two games shows what kids everywhere share, and what's special about here.",
+      "kid": "Your kid compares the game with one from home and fills in My game collection at the end of the guide: what's the same, what's different, and what the game shows about the place. If they can, they teach a game from home to kids here.",
+      "you": "Ask 'What game from home is most like this one?' Help them spot the things all games share, like taking turns, chasing and keeping score.",
+      "ask": [
+        "What's the same about kids everywhere?",
+        "What does this game tell you about this place?"
+      ],
+      "tip": "Kids everywhere play some version of tag, hide and seek and catch. The differences are the interesting part.",
+      "levels": {
+        "explore": "Name a game from home that's a little like this one.",
+        "develop": "Compare the two games: two things the same, two things different.",
+        "extend": "Compare them, then teach your game from home to kids here."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Game Collector Toolkit",
+    "intro": "Where to find games, how to ask to play, what to write down and how to teach it.",
+    "items": [
+      {
+        "name": "Where to find games",
+        "lines": [
+          {
+            "k": "Park:",
+            "v": "after school and on weekends"
+          },
+          {
+            "k": "Beach:",
+            "v": "games in the sand and the waves"
+          },
+          {
+            "k": "Plaza:",
+            "v": "in the evening, when families come out"
+          },
+          {
+            "k": "School:",
+            "v": "recess, if you visit or join one"
+          },
+          {
+            "k": "Grown-ups:",
+            "v": "'What did you play as a kid?'"
+          }
+        ],
+        "ask": "Where do kids here play?"
+      },
+      {
+        "name": "Ask to play",
+        "lines": [
+          {
+            "k": "Join:",
+            "v": "'Can I play?'"
+          },
+          {
+            "k": "Learn:",
+            "v": "'How do you play?'"
+          },
+          {
+            "k": "Name:",
+            "v": "'What's it called?'"
+          },
+          {
+            "k": "Again:",
+            "v": "'Can you show me again?'"
+          },
+          {
+            "k": "Thanks:",
+            "v": "learn how to say it here"
+          }
+        ],
+        "ask": "Which words do you need to learn first?"
+      },
+      {
+        "name": "Game card",
+        "lines": [
+          {
+            "k": "Name:",
+            "v": "spelled out, in the local language"
+          },
+          {
+            "k": "Players:",
+            "v": "how many, what ages"
+          },
+          {
+            "k": "Need:",
+            "v": "ball, stones, chalk, nothing"
+          },
+          {
+            "k": "Play:",
+            "v": "how a round works, and how you win"
+          },
+          {
+            "k": "Words:",
+            "v": "what players shout, and what it means"
+          }
+        ],
+        "ask": "Could someone play it from this card alone?"
+      },
+      {
+        "name": "Teach it",
+        "lines": [
+          {
+            "k": "Show:",
+            "v": "play a round while they watch"
+          },
+          {
+            "k": "Slow:",
+            "v": "play a practice round together"
+          },
+          {
+            "k": "Real:",
+            "v": "play for real"
+          },
+          {
+            "k": "Fix:",
+            "v": "add what was missing to the card"
+          },
+          {
+            "k": "Credit:",
+            "v": "say where you learned it"
+          }
+        ],
+        "ask": "What was hardest to explain?"
+      }
+    ],
+    "after": {
+      "label": "My game collection",
+      "lines": [
+        "The game, and where I learned it",
+        "A game from home that's like it",
+        "What's the same, and what's different",
+        "What the game shows about this place"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Courage",
+      "text": "asking to join kids they've just met"
+    },
+    {
+      "name": "Communication",
+      "text": "learning a game across a language gap"
+    },
+    {
+      "name": "Writing",
+      "text": "rules clear enough for someone else to follow"
+    },
+    {
+      "name": "Connection",
+      "text": "finding what kids everywhere share"
+    }
+  ],
+  "conclusion": {
+    "headline": "They brought home a game, not just a memory of one.",
+    "text": "Watch at the next park, wherever it is. If they stop to watch what local kids are playing before they run to the swings, the collecting has become a habit.",
+    "celebrate": "When they teach the family the game, say: 'You learned this from kids on the other side of the world, and now we all know it.'",
+    "extensions": [
+      "Collect one game from every place you stay, and keep the cards together",
+      "Find out how old the game is, and whether kids in other countries play a version of it",
+      "Make the gear for a game yourself, like a ball, a board or a set of stones",
+      "Teach your game collection to friends back home, and tell them where each one came from"
+    ]
+  },
+  "signs": [
+    "They watch what local kids are playing",
+    "They ask what a game is called and write it down",
+    "They teach games from other places without being asked"
+  ],
+  "makeItReal": "Teach the game to friends or cousins back home, and tell them where you learned it.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "In Panama and in Costa Rica, the kids went to a local school for a while. They learned new games at recess, and played Christmas games at the school Christmas party. Months later, they couldn't remember what any of the games were called. That's why this guide has your kid write the rules down the same day.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/play-the-world.jpg",
+    "alt": "Kids playing together on a covered court in Costa Rica",
+    "caption": "Playing with local kids in Costa Rica."
+  }
+}

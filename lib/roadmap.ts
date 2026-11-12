@@ -409,7 +409,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'family-history-detective': ['communication', 'writing', 'citizenship'],
   'teach-it-to-learn-it': ['communication', 'emotional'],
   'trade-it-up': ['communication', 'math', 'life-skills'],
-  'play-the-world': ['citizenship', 'physical'],
+  'play-the-world': ['citizenship', 'physical', 'communication'],
   'people-scientist': ['emotional', 'critical-thinking'],
   'frustration-tolerance-cards': ['emotional', 'self-management'],
   // bias-fairness-lab is an AI-bias activity but was never tagged AI & Digital.

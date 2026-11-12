@@ -3265,24 +3265,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'play-the-world': {
     opening:
-      'While travelling, your child finds a real game that local kids play, learns it properly, the rules, the words, the gear, and plays it right where you are. Then they figure out what the game reveals about the place. Worldschooling through the one language every child speaks: play. There is no faster way inside a culture.',
+      'Your kid finds a game that kids where you are staying really play, learns it from them, and writes down the rules the same day so it is not forgotten. Then they teach it to the family and compare it with a game from home.',
     whatsIncluded: [
-      'Find a game local kids really play',
-      'Learn the real rules, from locals if you can',
-      'Make or gather the gear',
-      'Learn the words that go with the game',
-      'Play it for real and read the culture in it',
+      'Five steps, from finding a game to comparing it with one from home',
+      'Where to find games, Ask to play, Game card and Teach it cards',
+      'The words to ask to join, learn the rules and find out the name',
+      'My game collection, with what the game shows about the place',
+      'Three levels per step, for any game, anywhere',
     ],
-    skillTags: ['Cultural Immersion', 'Observation', 'Cross-Cultural Connection', 'Curiosity', 'Worldschooling'],
+    skillTags: ['Cultural Awareness', 'Communication', 'Writing', 'Courage', 'Physical Play'],
     insideTheLearning: {
       lead:
-        'Your child plays the games local kids play, in the place they are. Not watching from the outside, joining in. It is the fastest way into a culture, and it makes them look at a new place closely enough to notice how it actually works.',
+        'Your kid learns a game from the kids who play it, then writes the rules down the same day so it is not forgotten. Teaching it to the family is the test, and comparing it with a game from home shows what kids everywhere share.',
       skills: [
-        { skill: 'Cultural Immersion', where: 'Stepping into local life by doing what local kids do, not observing it' },
-        { skill: 'Observation', where: 'Looking at a new place closely enough to see how it works' },
-        { skill: 'Cross-Cultural Connection', where: 'Playing alongside kids they cannot fully talk to yet' },
-        { skill: 'Curiosity', where: 'Following what is different instead of retreating to the familiar' },
-        { skill: 'Worldschooling', where: 'Turning being somewhere new into actual learning' },
+        { skill: 'Social Studies', where: 'What kids here play, and why' },
+        { skill: 'Communication', where: 'Asking to join and learning a game across a language gap' },
+        { skill: 'Writing', where: 'Rules clear enough for someone else to follow' },
+        { skill: 'Courage', where: 'Asking to play with kids they have just met' },
+        { skill: 'Physical Play', where: 'New ways to move, aim, run and play' },
       ],
     },
     format: 'Activity Guide',
