@@ -1,0 +1,324 @@
+{
+  "slug": "comeback-journal",
+  "category": "Emotional & Social",
+  "title": "Comeback Journal",
+  "tagline": "Land · Facts · Focus · Goal · Look back",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns what to do after a letdown: a lost game, a flop, a plan that fell through. They let the disappointment land, separate what happened from the story in their head, focus on their own part, set a personal goal for next time, and keep a journal that shows them, over weeks and seasons, how far they've come back.",
+  "need": [
+    "A real letdown, big or small",
+    "A notebook that becomes the comeback journal",
+    "A day or two before you talk it through"
+  ],
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "telling what happened in plain facts"
+    },
+    {
+      "subject": "Data",
+      "text": "tracking a personal goal over time"
+    },
+    {
+      "subject": "Thinking",
+      "text": "separating facts from the story in their head"
+    },
+    {
+      "subject": "Health",
+      "text": "how disappointment rises, peaks and passes"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is cheering them up too fast, or fixing it for them. Your job is to let the letdown land, then keep pointing them back to their own game.",
+    "plan": [
+      {
+        "when": "Right after the letdown",
+        "what": "Let it land (Step 1)."
+      },
+      {
+        "when": "A day or two later",
+        "what": "Look at the facts, find their focus and set a goal (Steps 2 to 4)."
+      },
+      {
+        "when": "Over weeks, or a whole season",
+        "what": "Keep the journal and look back (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They blame everyone else",
+        "a": "Let them vent first. Later, ask: 'And what about your game?' Blame fades when there's something of their own to work on."
+      },
+      {
+        "q": "They want to quit after one bad day",
+        "a": "Agree not to decide for a few days. A decision made on the day of a letdown often looks different a week later."
+      },
+      {
+        "q": "It's a big letdown, like a move",
+        "a": "Stay longer in Step 1, and keep the goal tiny. Some letdowns need weeks."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "After a letdown, the result is often out of their hands. What they can always work on is their own part: their effort, how they played, one thing to do better next time. That focus is what turns a string of losses into a comeback.",
+    "before": "'We lose every game. What's the point?'",
+    "model": [
+      {
+        "part": "Felt",
+        "line": "Discouraged, frustrated with teammates, tears."
+      },
+      {
+        "part": "Facts",
+        "line": "The team lost almost every game. He gave his best."
+      },
+      {
+        "part": "Focus",
+        "line": "His own game: how he played, what he could do."
+      },
+      {
+        "part": "Goal",
+        "line": "A personal goal for each game, not the team score."
+      }
+    ],
+    "modelNote": "He couldn't make the whole team better. He could make his own game better, one game at a time. The team grew too, year after year, and this year they won their championship. He was named MVP."
+  },
+  "steps": [
+    {
+      "title": "Let it land",
+      "why": "A disappointment that gets rushed comes back later. One that's allowed to land passes sooner.",
+      "kid": "Your kid says what happened and how they feel, in their own words, using the Let it land card in the Comeback Toolkit at the end of the guide. Crying, going quiet or needing a walk all count.",
+      "you": "Listen, and don't fix anything yet. Say what you see: 'You gave everything today, and it still didn't go your way. That's really disappointing.'",
+      "ask": [
+        "What part hurts the most?",
+        "What do you need right now?"
+      ],
+      "tip": "Leave the lessons for another day. Right after a letdown, kids hear advice as 'you did it wrong'.",
+      "levels": {
+        "explore": "Say or draw what happened, and the face that shows how you feel.",
+        "develop": "Write what happened and one feeling word for it.",
+        "extend": "Write it, then notice how the feeling changes over the next day or two."
+      }
+    },
+    {
+      "title": "Look at the facts",
+      "why": "Disappointment tells a bigger story than what really happened. Facts make it the right size.",
+      "kid": "A day or two later, your kid writes what really happened, using the Facts or story? card: what they'd say if they were a reporter, not what it felt like.",
+      "you": "Gently trade each story for a fact: 'We always lose' becomes 'We lost nine games out of ten.' 'I'm bad at this' becomes 'I made three shots, up from one.'",
+      "ask": [
+        "What would a reporter write about it?",
+        "Which part is a fact, and which part is a feeling?"
+      ],
+      "tip": "Look for one fact that's better than the story. There's almost always one.",
+      "levels": {
+        "explore": "Tell a parent one thing that really happened, and one thing that went okay.",
+        "develop": "Write three facts about what happened, and cross out the story words.",
+        "extend": "Write the facts, then find one number you could track next time."
+      }
+    },
+    {
+      "title": "Focus on your game",
+      "why": "The score, the referee and other people's effort are out of their hands. Their own game never is.",
+      "kid": "Your kid sorts what happened using the My game card: their effort, how they played, what they practised and how they treated others, apart from the score and everyone else's choices.",
+      "you": "Keep pointing them back to themselves: 'Don't forget to focus on you and what you can do, how you played.' Then ask what they're proud of in their own game.",
+      "ask": [
+        "What did you do well, even though it didn't work out?",
+        "What's one thing in your own game you'd like to get better at?"
+      ],
+      "tip": "Frustration with teammates is normal. Listen to it, then bring the talk back to the part that's theirs.",
+      "levels": {
+        "explore": "Name one thing you did well, and one thing you'd like to do better.",
+        "develop": "Fill in the My game card for this letdown.",
+        "extend": "Fill it in, and ask a coach or grown-up what they saw in your game."
+      }
+    },
+    {
+      "title": "Set a personal goal",
+      "why": "A team result can take years. A personal goal can go better next time, and that's what keeps them going.",
+      "kid": "Your kid picks one small, countable goal for next time, using the Personal goal card: something in their own game, like one more rebound, a full song with no stops, or asking one more customer.",
+      "you": "Help them make it small enough to reach soon. Next time, ask about the goal before you ask about the result.",
+      "ask": [
+        "What's one thing you'll try next time?",
+        "How will you know you did it?"
+      ],
+      "tip": "Ask 'Did you hit your goal?' before 'Did you win?' It tells them which one you care about more.",
+      "levels": {
+        "explore": "Pick one thing to try next time, with a parent.",
+        "develop": "Set one countable goal for next time, and check it after.",
+        "extend": "Set a goal for each game or try, and change it when you reach it."
+      }
+    },
+    {
+      "title": "Keep the comeback journal",
+      "why": "One comeback is a story. A journal of them, over weeks or seasons, is proof they can come back from anything.",
+      "kid": "Your kid writes each new letdown on a page of the journal, with the facts, their goal and how it went, using My comeback page at the end of the guide as a model. Every so often, they read back through the old pages.",
+      "you": "Read the old pages together now and then, especially before a big game or a new try. Point out how long it took to bounce back then, and how long now.",
+      "ask": [
+        "Which comeback are you proudest of?",
+        "How long does a letdown last for you now?"
+      ],
+      "tip": "Note how many days each letdown took to fade. Watching that number shrink is its own comeback.",
+      "levels": {
+        "explore": "Draw one comeback picture each time something goes wrong, then look back at them together.",
+        "develop": "Fill in a comeback page after each letdown for a month.",
+        "extend": "Keep it for a whole season, then write how your game changed from the first page to the last."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Comeback Toolkit",
+    "intro": "What to do in the first hours, the next day, and every time after.",
+    "items": [
+      {
+        "name": "Let it land",
+        "lines": [
+          {
+            "k": "Say it:",
+            "v": "'I'm disappointed.'"
+          },
+          {
+            "k": "Feel it:",
+            "v": "cry, go quiet, take a walk"
+          },
+          {
+            "k": "Wait:",
+            "v": "don't decide anything today"
+          },
+          {
+            "k": "Come back:",
+            "v": "talk it through tomorrow"
+          }
+        ],
+        "ask": "What helps you most in the first hour?"
+      },
+      {
+        "name": "Facts or story?",
+        "lines": [
+          {
+            "k": "Story:",
+            "v": "'We always lose.'"
+          },
+          {
+            "k": "Fact:",
+            "v": "'We lost nine games out of ten.'"
+          },
+          {
+            "k": "Story:",
+            "v": "'I'm bad at this.'"
+          },
+          {
+            "k": "Fact:",
+            "v": "'I made three shots, up from one.'"
+          }
+        ],
+        "ask": "What's a story you tell yourself after a bad day?"
+      },
+      {
+        "name": "My game",
+        "lines": [
+          {
+            "k": "My game:",
+            "v": "my effort, how I played"
+          },
+          {
+            "k": "My game:",
+            "v": "what I practised, how I treated others"
+          },
+          {
+            "k": "Not my game:",
+            "v": "the score, the referee"
+          },
+          {
+            "k": "Not my game:",
+            "v": "how hard other people try"
+          }
+        ],
+        "ask": "What in your game are you proud of?"
+      },
+      {
+        "name": "Personal goal",
+        "lines": [
+          {
+            "k": "Small:",
+            "v": "reachable next time"
+          },
+          {
+            "k": "Mine:",
+            "v": "about my game, not the score"
+          },
+          {
+            "k": "Countable:",
+            "v": "one more rebound, three customers"
+          },
+          {
+            "k": "Next:",
+            "v": "reached it? set a new one"
+          }
+        ],
+        "ask": "What's your goal for next time?"
+      }
+    ],
+    "after": {
+      "label": "My comeback page",
+      "lines": [
+        "What happened, in facts",
+        "What went well in my game",
+        "My personal goal for next time",
+        "How it went, and how many days the letdown lasted"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Resilience",
+      "text": "coming back after a letdown"
+    },
+    {
+      "name": "Clear thinking",
+      "text": "facts instead of the story in their head"
+    },
+    {
+      "name": "Focus",
+      "text": "working on their own part"
+    },
+    {
+      "name": "Goal setting",
+      "text": "small personal goals they can reach"
+    }
+  ],
+  "conclusion": {
+    "headline": "A letdown is now the start of a comeback.",
+    "text": "Listen for the moment, after a bad day, when they start talking about their own goal for next time before you've asked. That's the comeback habit taking hold.",
+    "celebrate": "When they hit a personal goal on a day the result still didn't go their way, say: 'You did what you set out to do. That's yours, whatever the score.'",
+    "extensions": [
+      "Ask a grandparent about a comeback in their own life",
+      "Find a story of an athlete, artist or inventor who failed many times first",
+      "Write a letter to your future self to read after the next letdown",
+      "Keep a family comeback page, grown-ups' letdowns included"
+    ]
+  },
+  "signs": [
+    "They talk about their own game, not only the score",
+    "They bounce back from a letdown faster than before",
+    "They set their own goal for next time without being asked"
+  ],
+  "makeItReal": "After the next letdown, wait a day, then sit down together with the journal. Write the facts, find one thing in their game, and set one small goal for next time.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "When my son started basketball, his team wasn't good and they lost pretty much every game. He was giving his best and the results weren't there. Some players weren't as committed as he was, so he was frustrated with his teammates too, and there may have been a few tears. He kept playing with the same team. I kept telling him: 'Don't forget to focus on you and what you can do, how you played.' He set personal goals instead of team goals. The team got better year after year, and this year they won their championship. He was named MVP.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/comeback-journal.jpg",
+    "alt": "A smiling boy in a Premier Hoops Champions shirt holding a small MVP award in a sports hall",
+    "caption": "Champions this year, and MVP.",
+    "tall": true
+  }
+}

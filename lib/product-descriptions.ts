@@ -2632,22 +2632,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'comeback-journal': {
     opening:
-      'Your child takes a real flop, breaks down what actually happened without spiraling, pulls out the lesson, and picks the next move. They build a comeback journal habit they can return to for years. Growth mindset on the page, not the poster.',
+      'Your kid learns what to do after a letdown, like a lost game or a plan that fell through. They let it land, separate the facts from the story in their head, focus on their own game, set a personal goal for next time and keep a journal that shows how far they have come back.',
     whatsIncluded: [
-      'Flop debrief framework (what happened, no blame)',
-      'Lesson-pulling prompt: the real takeaway',
-      'Next-move decision step',
-      'Reusable journal template for ongoing use',
-      'Version 2 review of past comebacks',
+      'Five steps, from letting it land to keeping the journal for a season',
+      'Let it land, Facts or story?, My game and Personal goal cards',
+      'A worked example: a basketball team that lost almost every game',
+      'My comeback page, including how many days each letdown lasted',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Resilience', 'Reflection', 'Growth Mindset'],
+    skillTags: ['Resilience', 'Growth Mindset', 'Self-Reflection', 'Goal Setting', 'Emotional Regulation'],
     insideTheLearning: {
       lead:
-        'Your child keeps a record of things that went wrong and what came next. The skill is looking at their own part in it honestly without spiralling. A flop turns into information, and the inner voice shifts from a verdict to a question.',
+        'After a letdown, the result is often out of their hands. Your kid learns to let the disappointment land, trade the story in their head for the facts, and put their energy into their own game with a small personal goal. Over a season, the journal shows them their letdowns getting shorter.',
       skills: [
-        { skill: 'Resilience', where: 'Learning that a flop is information rather than a verdict on them' },
-        { skill: 'Reflection', where: 'Looking honestly at what they did without falling into a spiral' },
-        { skill: 'Growth Mindset', where: 'Building an inner voice that asks what to learn instead of what is wrong with me' },
+        { skill: 'Resilience', where: 'Coming back after a lost game, a flop or a plan that fell through' },
+        { skill: 'Growth Mindset', where: 'Seeing a letdown as information about what to work on next' },
+        { skill: 'Self-Reflection', where: 'Separating the facts from the story in their head' },
+        { skill: 'Goal Setting', where: 'Small, countable personal goals about their own game' },
+        { skill: 'Emotional Regulation', where: 'Letting disappointment land, then watching it fade faster over time' },
       ],
     },
     format: 'Project Guide',

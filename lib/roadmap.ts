@@ -243,7 +243,7 @@ export const TERRITORIES: readonly Territory[] = [
     },
     activities: [
       'big-feelings-lab', 'worry-sorter', 'calm-down-toolkit', 'reading-the-room', 'conflict-fix',
-      'repair-conversation', 'kindness-missions', 'disappointment-lab', 'healthy-tech-boundaries',
+      'repair-conversation', 'kindness-missions', 'healthy-tech-boundaries',
       'comeback-journal',
     ],
   },
@@ -269,7 +269,7 @@ export const TERRITORIES: readonly Territory[] = [
     },
     activities: [
       'time-energy-planner', 'travel-day', 'hard-thing-challenge',
-      'boredom-toolkit', 'calm-down-toolkit', 'disappointment-lab', 'comeback-journal',
+      'boredom-toolkit', 'calm-down-toolkit', 'comeback-journal',
       'worry-sorter', 'healthy-tech-boundaries',
     ],
   },

@@ -117,6 +117,9 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Retired Nov 2026: Emotional & Social pass.
+      { source: "/shop/disappointment-lab", destination: "/shop/comeback-journal", permanent: true },
+
       // Retired Nov 2026: Worldschooling pass.
       { source: "/shop/currency-market-math", destination: "/shop/farmers-market-challenge", permanent: true },
       { source: "/shop/people-stories-interview", destination: "/shop/neighbourhood-interview", permanent: true },

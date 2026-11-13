@@ -121,7 +121,7 @@ const catalog = [
   { slug: 'boredom-toolkit', name: 'The Boredom Toolkit', priceCents: 599, description: 'Build the skill of handling boredom without a screen. Self-direction, creativity, independence.' },
   { slug: 'disappointment-lab', name: 'The Disappointment Lab', priceCents: 599, description: 'Sit through small planned letdowns and track bounce-back time.' },
   { slug: 'frustration-tolerance-cards', name: 'Frustration Tolerance Cards', priceCents: 799, description: 'Frustration tolerance cards for kids ages 6-14: 24 small challenges, each with a named move to practise while the frustration is real. Low prep.' },
-  { slug: 'comeback-journal', name: 'The Comeback Journal', priceCents: 599, description: 'Take a real flop, pull out the lesson, pick the next move.' },
+  { slug: 'comeback-journal', name: 'Comeback Journal', priceCents: 599, description: 'Resilience activity for kids ages 6-14: bounce back from a letdown with facts, a focus on their own game and a personal goal for next time.' },
   { slug: 'hard-thing-challenge', name: 'Hard Thing Challenge', priceCents: 599, description: 'Perseverance activity for kids ages 6-14: pick one hard thing, set a finish line, get through the messy middle and finish what they started.' },
   { slug: 'repair-conversation', name: 'The Repair Conversation', priceCents: 599, description: 'Own a mistake, skip excuses, ask what would help, follow through.' },
   { slug: 'kindness-missions', name: 'The Kindness Missions', priceCents: 599, description: 'A deck of real-world kindness challenges that take effort and noticing.' },
