@@ -243,7 +243,7 @@ export const TERRITORIES: readonly Territory[] = [
     },
     activities: [
       'big-feelings-lab', 'worry-sorter', 'calm-down-toolkit', 'reading-the-room', 'conflict-fix',
-      'repair-conversation', 'kindness-missions', 'healthy-tech-boundaries',
+      'kindness-missions', 'healthy-tech-boundaries',
       'comeback-journal',
     ],
   },

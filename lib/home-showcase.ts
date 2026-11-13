@@ -292,13 +292,13 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
   },
   {
     slug: 'conflict-fix',
-    title: 'The Conflict Fix',
+    title: 'Conflict Fix',
     category: 'Emotional & Social Skills',
     color: '#b6748a',
     colorText: '#b6748a',
-    time: '1 hr',
+    time: 'Multi-day',
     photo: '/products/conflict-fix.jpg',
-    blurb: 'A real script for sibling fights.',
+    blurb: 'Fix the fight, not just end it.',
   },
 ];
 

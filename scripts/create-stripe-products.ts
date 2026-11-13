@@ -126,7 +126,7 @@ const catalog = [
   { slug: 'repair-conversation', name: 'The Repair Conversation', priceCents: 599, description: 'Own a mistake, skip excuses, ask what would help, follow through.' },
   { slug: 'kindness-missions', name: 'The Kindness Missions', priceCents: 599, description: 'A deck of real-world kindness challenges that take effort and noticing.' },
   { slug: 'reading-the-room', name: 'Reading the Room', priceCents: 599, description: 'Scan a room, read body language, infer the backstory.' },
-  { slug: 'conflict-fix', name: 'The Conflict Fix', priceCents: 599, description: 'A real script for working through fights with siblings or friends.' },
+  { slug: 'conflict-fix', name: 'Conflict Fix', priceCents: 599, description: 'Conflict resolution for kids ages 6-14: cool down, tell it, own your part, hear their side and agree on a fix that stops the next fight.' },
   { slug: 'solo-mission', name: 'The Solo Mission', priceCents: 599, description: 'Age-right do-it-without-me challenges that build real independence.' },
   { slug: 'worry-sorter', name: 'Worry Sorter', priceCents: 599, description: 'Worry activity for kids ages 6-14: pin down the real worry, sort what they can change from what they cannot, plan their part and let the rest go.' },
 ];

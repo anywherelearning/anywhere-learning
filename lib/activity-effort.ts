@@ -141,7 +141,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'repair-conversation': 'Quick',
   'kindness-missions': 'Project',
   'reading-the-room': 'Half-Day',
-  'conflict-fix': 'Quick',
+  'conflict-fix': 'Project',
   'solo-mission': 'Project',
   'worry-sorter': 'Project',
 

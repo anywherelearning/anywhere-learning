@@ -1,0 +1,323 @@
+{
+  "slug": "conflict-fix",
+  "category": "Emotional & Social",
+  "title": "Conflict Fix",
+  "tagline": "Cool · Tell · Own · Hear · Fix",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kids learn to fix a fight, not just end it. They cool down first, tell what happened without blame, own their own part, hear the other side, and agree on a fix, so the same argument about whose turn it is doesn't come back tomorrow.",
+  "need": [
+    "A small, real fight, like whose turn it is",
+    "A separate spot for each kid to cool down",
+    "Paper for the fix, and the fridge to put it on"
+  ],
+  "academics": [
+    {
+      "subject": "Language",
+      "text": "telling what happened without blame"
+    },
+    {
+      "subject": "Listening",
+      "text": "repeating someone else's side in their words"
+    },
+    {
+      "subject": "Problem solving",
+      "text": "a fix both people agree to"
+    },
+    {
+      "subject": "Health",
+      "text": "how a body calms down after an argument"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is playing judge: deciding who started it and who's right. Your job is to call the cool-down, run the turns, and help them find a fix they both agree to.",
+    "plan": [
+      {
+        "when": "In the moment",
+        "what": "Cool down, each in their own space (Step 1)."
+      },
+      {
+        "when": "Once both are calm",
+        "what": "Tell, own and hear (Steps 2 to 4)."
+      },
+      {
+        "when": "Same day, then a few days later",
+        "what": "Fix it, then check the fix (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "One of them won't let it go",
+        "a": "Call the cool-down again and keep them apart a little longer. Talking only works once both are ready."
+      },
+      {
+        "q": "They fight every day",
+        "a": "Small daily fights between siblings are normal. Save the five steps for the ones that keep coming back."
+      },
+      {
+        "q": "It gets physical",
+        "a": "Stop it right away and separate them. The talk waits until everyone is calm and safe."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Space and a hug can end a fight. But if nobody owns their part and nobody fixes the real problem, the same fight comes back the next day. A fix covers both: the repair between them, and the thing they were fighting about.",
+    "before": "'He started it!' 'She pushed me!'",
+    "model": [
+      {
+        "part": "Cool down",
+        "line": "Each to their own space until voices are normal."
+      },
+      {
+        "part": "Own it",
+        "line": "'I kept pushing your buttons.' 'I got loud and pushy.'"
+      },
+      {
+        "part": "Their side",
+        "line": "'You thought it was my turn for the dishes.'"
+      },
+      {
+        "part": "Fix",
+        "line": "Sorry, a hug, and a plan for whose turn it is."
+      }
+    ],
+    "modelNote": "In our house, the space and the hug were already working. Owning each part, and fixing the dishes question itself, is what keeps the same fight from starting again tomorrow."
+  },
+  "steps": [
+    {
+      "title": "Cool down",
+      "why": "A talk started while voices are still loud turns into round two.",
+      "kid": "Each kid goes to their own space until their voice is back to normal, using the Cool down card in the Conflict Fix Toolkit at the end of the guide. When they're ready, they say so.",
+      "you": "Say it calmly, once: 'That's enough. Each to your own space.' Then wait. Don't start the talk until both of them are calm.",
+      "ask": [
+        "Are you ready to talk, or do you need more time?",
+        "What helped you calm down?"
+      ],
+      "tip": "Space first, talk second. Even five minutes apart changes the whole conversation.",
+      "levels": {
+        "explore": "Go to your calm spot, and come back when your voice is quiet.",
+        "develop": "Take space, then tell a parent when you're ready to talk.",
+        "extend": "Take space on your own, before anyone has to tell you to."
+      }
+    },
+    {
+      "title": "Tell what happened",
+      "why": "Each kid has a different story. Hearing both, from the start, is the only way to get the whole picture.",
+      "kid": "One at a time, each kid tells what happened, using the Tell it card: the facts, one feeling word and what they wanted. No interrupting.",
+      "you": "Be the referee of turns, not the judge. Hand a spoon or any object to the one talking: only the one holding it speaks.",
+      "ask": [
+        "What happened, from the very start?",
+        "How did you feel when that happened?"
+      ],
+      "tip": "Ask for what they wanted, too. Under most fights, both kids wanted something fair.",
+      "levels": {
+        "explore": "Say what happened in one or two sentences, and one feeling.",
+        "develop": "Tell it from the start, with the facts, a feeling and what you wanted.",
+        "extend": "Tell it without one 'you always' or 'you never'."
+      }
+    },
+    {
+      "title": "Own your part",
+      "why": "A fight takes two. When each kid names their own part, nobody has to win.",
+      "kid": "Each kid names one thing they did that made it bigger, using the Own it card, and says sorry for that part only.",
+      "you": "Go first sometimes, with a small part of your own from your day. Never make them apologize for the other kid's part.",
+      "ask": [
+        "What's one thing you did that made it bigger?",
+        "What will you do differently next time?"
+      ],
+      "tip": "'Sorry, but you...' cancels the sorry. Own only your part, and stop there.",
+      "levels": {
+        "explore": "Say one thing you did, and 'I'm sorry I...'.",
+        "develop": "Name your part, say sorry for it, and say what you'll do next time.",
+        "extend": "Name your part before the other person names theirs."
+      }
+    },
+    {
+      "title": "Hear their side",
+      "why": "Feeling heard is often what lets a kid let go, even before the problem is fixed.",
+      "kid": "Each kid repeats the other's side in their own words, using the Hear it card, until the other one says, 'Yes, that's it.'",
+      "you": "Check it out loud: 'Is that what you meant?' If not, they try again. Keep it light; it's awkward the first few times.",
+      "ask": [
+        "What did they want?",
+        "Why might it have felt unfair to them?"
+      ],
+      "tip": "Repeating it back feels strange at first. It's also the quickest way to stop a fight from restarting.",
+      "levels": {
+        "explore": "Say one thing the other person wanted.",
+        "develop": "Say their side back until they say 'yes, that's it'.",
+        "extend": "Say their side back, then say one part of it that was fair."
+      }
+    },
+    {
+      "title": "Fix it, and follow through",
+      "why": "The hug ends the fight. The fix ends the next one.",
+      "kid": "Together, the kids pick a repair, like a hug or helping with the job, and a fix for the real problem, like a plan for whose turn it is. They write it in Our fix at the end of the guide, and check it a few days later.",
+      "you": "Help them find a fix they both say yes to, then put it where everyone sees it. A few days later, ask how it's going.",
+      "ask": [
+        "What would stop this from happening again?",
+        "When should we check if the fix is working?"
+      ],
+      "tip": "If the fix isn't working, that's not a failure. Change it together and try again.",
+      "levels": {
+        "explore": "Pick a way to make up, like a hug, and one idea for next time.",
+        "develop": "Write a fix you both agree to, and check it in a few days.",
+        "extend": "Write the fix, check it, and change it if it isn't working."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Conflict Fix Toolkit",
+    "intro": "What to do, and what to say, at each step of a fight.",
+    "items": [
+      {
+        "name": "Cool down",
+        "lines": [
+          {
+            "k": "Go:",
+            "v": "to your own space"
+          },
+          {
+            "k": "Wait:",
+            "v": "until your voice is normal"
+          },
+          {
+            "k": "Signal:",
+            "v": "'I'm ready to talk.'"
+          },
+          {
+            "k": "Skip:",
+            "v": "the last word as you leave"
+          }
+        ],
+        "ask": "Where's your best cool-down spot?"
+      },
+      {
+        "name": "Tell it",
+        "lines": [
+          {
+            "k": "Facts:",
+            "v": "what happened, from the start"
+          },
+          {
+            "k": "I felt:",
+            "v": "one feeling word"
+          },
+          {
+            "k": "I wanted:",
+            "v": "what you were hoping for"
+          },
+          {
+            "k": "Skip:",
+            "v": "'you always' and 'you never'"
+          }
+        ],
+        "ask": "What did you really want?"
+      },
+      {
+        "name": "Own it",
+        "lines": [
+          {
+            "k": "Name it:",
+            "v": "the exact thing you did"
+          },
+          {
+            "k": "Sorry:",
+            "v": "'I'm sorry I...'"
+          },
+          {
+            "k": "Next time:",
+            "v": "'Next time, I'll...'"
+          },
+          {
+            "k": "Skip:",
+            "v": "'Sorry, but you...'"
+          }
+        ],
+        "ask": "Which part of a fight is usually yours?"
+      },
+      {
+        "name": "Hear it",
+        "lines": [
+          {
+            "k": "Repeat:",
+            "v": "'So you thought...'"
+          },
+          {
+            "k": "Check:",
+            "v": "'Is that right?'"
+          },
+          {
+            "k": "Again:",
+            "v": "until they say 'yes, that's it'"
+          },
+          {
+            "k": "Find:",
+            "v": "one part of their side that's fair"
+          }
+        ],
+        "ask": "What's the hardest part about listening in a fight?"
+      }
+    ],
+    "after": {
+      "label": "Our fix",
+      "lines": [
+        "What we disagreed about",
+        "My part, and their side in their words",
+        "How we made up, and our fix for next time",
+        "When we'll check it, and how it went"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Calming down",
+      "text": "space before talking"
+    },
+    {
+      "name": "Owning it",
+      "text": "naming their own part, without 'but'"
+    },
+    {
+      "name": "Listening",
+      "text": "repeating the other side until it's right"
+    },
+    {
+      "name": "Problem solving",
+      "text": "a fix that stops the next fight"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know how to fix a fight, not just end it.",
+    "text": "At the next small fight, wait a moment before you step in. If one of them says 'I need space' or 'my part was...', they're using it on their own.",
+    "celebrate": "When they sort one out without you, say: 'You two fixed that on your own. That's a skill a lot of grown-ups are still working on.'",
+    "extensions": [
+      "Make a family fix plan for the chore you argue about most",
+      "Work through a grown-up disagreement out loud, so they see the steps",
+      "Read a story and find each character's part in the conflict",
+      "Use the steps with a friend or teammate, not just a sibling"
+    ]
+  },
+  "signs": [
+    "They take space before you have to say it",
+    "They say 'my part was...' without being asked",
+    "The same fight, like whose turn it is, comes back less often"
+  ],
+  "makeItReal": "Pick the fight that comes back most in your house, like whose turn it is for the dishes. Once everyone is calm, sit down together, run it through the five steps, and put your fix on the fridge.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "My two argue every day, and they make up pretty quickly. It usually starts small, like whose turn it is to do the dishes. My daughter gets worked up, and my son keeps pushing her buttons until she gets louder, sometimes pushy, and he won't let it go. If it doesn't settle on its own, their dad or I say that's enough, and they each go their own way and take some space to calm down. Things come back to normal on their own, and they usually apologize to each other, with a hug.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/conflict-fix.jpg",
+    "alt": "A brother and sister asleep in the back seat of a car, her head resting on his shoulder",
+    "caption": "Back to normal."
+  }
+}

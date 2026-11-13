@@ -2746,22 +2746,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'conflict-fix': {
     opening:
-      'Your child learns a real script for working through a fight with a sibling or friend: cool down, say it without attacking, hear the other side, find the fix. They run it on a real recent conflict and watch what shifts. Not a worksheet about feelings.',
+      'Your kids learn to fix a fight, not just end it. They cool down first, tell what happened without blame, own their own part, hear the other side and agree on a fix, so the same argument about whose turn it is does not come back tomorrow.',
     whatsIncluded: [
-      '4-step conflict script (cool down, speak, hear, fix)',
-      'Cool-down tools that actually work in the moment',
-      'Say-it-without-attacking sentence frames',
-      'Real recent conflict practice run',
-      'Version 2 revision after using it for real',
+      'Five steps, from cooling down to a fix you check a few days later',
+      'Cool down, Tell it, Own it and Hear it cards',
+      'A worked example: a sibling fight over whose turn it is for the dishes',
+      'Our fix page, for the repair and the plan for next time',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Conflict Resolution', 'Communication', 'Social Skills'],
+    skillTags: ['Conflict Resolution', 'Communication', 'Accountability', 'Active Listening', 'Problem-Solving'],
     insideTheLearning: {
       lead:
-        'Your child learns to repair a real conflict rather than wait it out. Step one is noticing they are too hot to talk yet. Then saying what they need without attacking, and hearing the other side without spending the whole time loading a comeback.',
+        'Space and a hug can end a fight, but the same fight often comes back the next day. Your kids learn to cool down first, own their own part without a but, repeat the other side until it is right, and agree on a fix for the real problem, like whose turn it is.',
       skills: [
-        { skill: 'Conflict Resolution', where: 'Cooling down first, then working the disagreement through to an actual fix' },
-        { skill: 'Communication', where: 'Saying what they feel and need without turning it into an attack' },
-        { skill: 'Social Skills', where: 'Listening to the other side properly instead of preparing their rebuttal' },
+        { skill: 'Conflict Resolution', where: 'Working through a real fight in five steps, from cool-down to fix' },
+        { skill: 'Communication', where: 'Telling what happened with facts, a feeling and what they wanted' },
+        { skill: 'Accountability', where: 'Naming their own part and saying sorry for it, with no but' },
+        { skill: 'Active Listening', where: 'Repeating the other side until they hear yes, that is it' },
+        { skill: 'Problem-Solving', where: 'Agreeing on a fix and checking it a few days later' },
       ],
     },
     format: 'Project Guide',

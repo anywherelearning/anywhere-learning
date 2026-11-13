@@ -2419,7 +2419,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: null,
     ageRange: "Ages 6–14",
     sortOrder: 226,
-    active: true,
+    active: false,
     createdAt: new Date("2026-05-29"),
   },
   {
@@ -2470,18 +2470,18 @@ export const fallbackProducts: FallbackProduct[] = [
   },
   {
     id: "fb-conflict-fix",
-    name: "The Conflict Fix",
+    name: "Conflict Fix",
     slug: "conflict-fix",
     description:
-      "Your child learns a real script for working through a fight with a sibling or friend: cool down, say it without attacking, hear the other side, find the fix. They run it on a real recent conflict and watch what shifts. Not a worksheet about feelings.",
+      "Your kids learn to fix a fight, not just end it. They cool down first, tell what happened without blame, own their own part, hear the other side and agree on a fix, so the same argument about whose turn it is does not come back tomorrow.",
     shortDescription:
-      "Conflict resolution for kids ages 6-14: a real script for fights with siblings and friends. Cool down, speak it, fix it.",
+      "Conflict resolution for kids ages 6-14: cool down, tell it, own your part, hear their side and agree on a fix that stops the next fight.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TdZpjAkIBECpwGmhgx7Rtab",
     blobUrl: "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Conflict%20Fix.pdf",
-    imageUrl: "/products/conflict-fix.jpg?v=2",
-    previewFile: "Preview Emotional & Social Skills - The Conflict Fix.pdf",
+    imageUrl: "/products/conflict-fix.jpg?v=3",
+    previewFile: "Preview Emotional & Social Skills - The Conflict Fix v3.pdf",
     category: "emotional-social-skills",
     isBundle: false,
     bundleProductIds: null,
