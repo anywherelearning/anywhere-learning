@@ -52,7 +52,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "family-recipe-book": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Family%20Recipe%20Book%20v7.pdf",
   "farmers-market-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Farmers%20Market%20Challenge%20v5.pdf",
   "fix-it-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Fix-it%20detective%20v6.pdf",
-  "frustration-tolerance-cards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20Frustration%20Tolerance%20Challenge%20Cards%20v2.pdf",
+  "frustration-tolerance-cards": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20Frustration%20Tolerance%20Challenge%20Cards%20v3.pdf",
   "garage-sale-math": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Garage%20sale%20math%20v7.pdf",
   "garden-plot-planner": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Garden%20Plot%20Planner%20v6.pdf",
   "grow-it-eat-it": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20GROW%20IT%2C%20EAT%20IT%20v5.pdf",

@@ -33,7 +33,7 @@ export const familyFaqItems: FAQItem[] = [
   {
     question: 'Will this work for my neurodivergent kid?',
     answer:
-      "Often, yes. Whether your kid has a diagnosis, is waiting on one, or is just wired differently, the format tends to suit kids who fight anything that looks like schoolwork. Steps are short, bodies move, and there's a real reason for the task: a real budget, a real customer, a real game to play. Every activity has three levels, so you can start at Explore and stay there as long as you need. You do it with them, you can stop halfway and pick it up tomorrow, and there's no page to get wrong. If big feelings are the hard part, start with the Frustration Tolerance Challenge Cards.",
+      "Often, yes. Whether your kid has a diagnosis, is waiting on one, or is just wired differently, the format tends to suit kids who fight anything that looks like schoolwork. Steps are short, bodies move, and there's a real reason for the task: a real budget, a real customer, a real game to play. Every activity has three levels, so you can start at Explore and stay there as long as you need. You do it with them, you can stop halfway and pick it up tomorrow, and there's no page to get wrong. If big feelings are the hard part, start with the Frustration Tolerance Cards.",
   },
   {
     question: "We're already doing a lot. Do we really need more activities?",

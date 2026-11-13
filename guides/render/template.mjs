@@ -274,7 +274,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 
   const reference = R ? `
 <section class="pg refpg">
-  <div class="eyebrow">Keep this open</div>
+  <div class="eyebrow">${esc(R.eyebrow || 'Keep this open')}</div>
   <h2>${esc(R.title)}</h2>
   ${R.intro ? `<p class="lead">${esc(R.intro)}</p>` : ''}
   <div class="refgrid">${R.items.map((it) => `
@@ -324,7 +324,7 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>${css(layout, accent, soft, bw, paper)}</style></head>
-<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${cards}${journal}${reference}${road}${finish}</body></html>`;
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${R?.first ? reference : ''}${cards}${journal}${R?.first ? '' : reference}${road}${finish}</body></html>`;
 }
 
 function css(mode, accent, soft, bw, paper = '#f7f2e8') {

@@ -1,0 +1,411 @@
+{
+  "slug": "frustration-tolerance-cards",
+  "category": "Emotional & Social",
+  "title": "Frustration Tolerance Cards",
+  "tagline": "24 small frustrations · 11 moves · Practice together",
+  "ages": "Ages 6 to 14",
+  "goal": "24 short challenges that are a little frustrating on purpose: a tower that keeps falling, a knot that won't come right the first time, a game where someone breaks the rules. Each card comes with one move your kid practises while the frustration is really happening, in a small, safe dose, with you right there.",
+  "need": [
+    "These cards, on your phone or printed and cut out",
+    "Things you already have: stones, cards, string, dice, a spoon",
+    "Ten minutes and a good mood, not a hard day"
+  ],
+  "lesson": {
+    "text": "Frustration is easiest to practise in small doses, on a good day, when nothing big is at stake. Each card is a little frustrating on purpose, and each one ends with a move to try while the feeling is real. The move matters more than winning the challenge.",
+    "before": "'I don't get it! You're explaining it wrong!'",
+    "model": [
+      {
+        "part": "Notice",
+        "line": "Rude words are coming out."
+      },
+      {
+        "part": "Stop",
+        "line": "Stop talking for a moment."
+      },
+      {
+        "part": "Breathe",
+        "line": "One slow breath."
+      },
+      {
+        "part": "Start over",
+        "line": "'Can you show me again?'"
+      }
+    ],
+    "modelNote": "The frustration was about not getting it yet, but it landed on the person helping. Once she noticed that, she could stop, breathe and start over, and the explaining could work."
+  },
+  "academics": [
+    {
+      "subject": "Physical",
+      "text": "steady hands, balance and patience"
+    },
+    {
+      "subject": "Language",
+      "text": "saying a problem calmly, in words"
+    },
+    {
+      "subject": "Math",
+      "text": "luck, odds and keeping score fairly"
+    },
+    {
+      "subject": "Life skills",
+      "text": "staying in a hard moment instead of quitting"
+    }
+  ],
+  "howTo": {
+    "intro": "The trap is rescuing them the second it gets hard. Pick a good day, do the cards with them, and let them see you get frustrated too, and use the move.",
+    "plan": [
+      {
+        "when": "Before you start",
+        "what": "Pick one card together, and read its move out loud."
+      },
+      {
+        "when": "Each card",
+        "what": "Do the challenge, use the move when it gets hard, try again. 5 to 15 minutes."
+      },
+      {
+        "when": "After",
+        "what": "Ask which move worked, and use its name on a real hard day."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They blow up when someone breaks the rules",
+        "a": "Start with the That's not fair cards, and always warn them first that a rule will be broken. A break first, then the talk."
+      },
+      {
+        "q": "They get rude with whoever is helping",
+        "a": "Name it calmly, once: 'That came out rude.' Then wait. Most kids can stop, breathe and start over once they notice it."
+      },
+      {
+        "q": "They quit the card",
+        "a": "Make it smaller: three stones instead of five. Stop while it's still a little frustrating, before it turns into a fight."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Frustration tolerance",
+      "text": "staying with something that isn't working yet"
+    },
+    {
+      "name": "Self-control",
+      "text": "a move ready before the feeling takes over"
+    },
+    {
+      "name": "Fair play",
+      "text": "naming a broken rule calmly"
+    },
+    {
+      "name": "Perseverance",
+      "text": "starting over after it falls"
+    }
+  ],
+  "levelsLine": "Three levels on every card. Explore: do it with a parent, using the move. Develop: add the Deeper part. Extend: redo it another day and say which move helped.",
+  "themes": [
+    {
+      "title": "It keeps falling",
+      "cards": [
+        {
+          "name": "Stone Tower",
+          "t": "Stack five stones until the tower stands on its own. When it falls: Hands off, then rebuild.",
+          "d": "Go for seven stones, or build it with your other hand.",
+          "icon": "layers",
+          "art": "wc/frust-stones.jpg"
+        },
+        {
+          "name": "Card House",
+          "t": "Build a card house two floors high. When it keeps falling: Try another way. A wider base, or the cards at a new angle.",
+          "d": "Try for three floors, and count how many restarts it takes.",
+          "icon": "house",
+          "art": "wc/frust-cardhouse.jpg"
+        },
+        {
+          "name": "Spoon Walk",
+          "t": "Carry a small potato on a spoon across the room. Drop it, and you go back to the start. When it wobbles: Slow breath, and keep going.",
+          "d": "Add a turn, or a step up and down.",
+          "icon": "footprints",
+          "art": "wc/frust-spoon.jpg"
+        },
+        {
+          "name": "Domino Line",
+          "t": "Stand up 30 dominoes in a line, then tip the first one. When one falls too early: Slow breath, then set them up again.",
+          "d": "Add a curve, or a split into two lines.",
+          "icon": "grip-vertical",
+          "art": "wc/frust-dominoes.jpg"
+        },
+        {
+          "name": "Balloon Keep-Up",
+          "t": "Keep a balloon off the floor for 30 taps in a row. When it touches down: Start over, from zero.",
+          "d": "Only your weaker hand, or only your head and knees.",
+          "icon": "circle",
+          "art": "wc/frust-balloon.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Not yet",
+      "cards": [
+        {
+          "name": "Other Hand",
+          "t": "Write your name neatly with your other hand. When it looks wobbly: Add yet. 'I can't do it yet.'",
+          "d": "Write a whole sentence, then compare it with your first try.",
+          "icon": "pencil",
+          "art": "wc/frust-pencil.jpg"
+        },
+        {
+          "name": "New Knot",
+          "t": "Learn a new knot from a picture, with no help for five minutes. When it won't come right: Name it. 'I'm frustrated with this knot.' Then try again.",
+          "d": "Tie it again with your eyes closed.",
+          "icon": "link",
+          "art": "wc/frust-knot.jpg"
+        },
+        {
+          "name": "Tongue Twister",
+          "t": "Say 'red leather, yellow leather' five times fast. When your tongue trips: Add yet, and slow it down.",
+          "d": "Make up your own, and try it on the family.",
+          "icon": "message-square",
+          "art": "wc/frust-trucks.jpg"
+        },
+        {
+          "name": "Show Me Again",
+          "t": "A parent shows a card trick or a puzzle once. Try it. When you're lost: Ask kindly. 'Can you show me again?'",
+          "d": "Learn it well enough to teach it back.",
+          "icon": "puzzle",
+          "art": "wc/frust-cards.jpg"
+        },
+        {
+          "name": "Paper Toss",
+          "t": "Toss a crumpled paper ball into a bin from three big steps away, ten throws. When you keep missing: Try another way. Underhand, overhand, a higher arc.",
+          "d": "Throw with your other hand, or over your shoulder.",
+          "icon": "circle",
+          "art": "wc/frust-paper.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Wait for it",
+      "cards": [
+        {
+          "name": "The Long Wait",
+          "t": "Put a treat on the table and wait five minutes without touching it. When you want to grab it: Hands off.",
+          "d": "Wait ten minutes, then share it.",
+          "icon": "cookie",
+          "art": "wc/frust-cookie.jpg"
+        },
+        {
+          "name": "Slow Race",
+          "t": "Race across the room. The slowest one wins, but you must keep moving. When you want to rush: Smaller step. The tiniest steps you can.",
+          "d": "Do it carrying a full cup of water.",
+          "icon": "circle",
+          "art": "wc/frust-snail.jpg"
+        },
+        {
+          "name": "The Untangle",
+          "t": "Untangle a knotted string without yanking or cutting. When you want to yank: Take a break. Put it down for one minute.",
+          "d": "Untangle it with a partner, one hand each.",
+          "icon": "spline",
+          "art": "wc/frust-string.jpg"
+        },
+        {
+          "name": "Ten Pieces",
+          "t": "Find where ten puzzle pieces go, one at a time. When you're stuck: Try another way. Sort by colour, or by edges.",
+          "d": "Do it with the box picture turned over.",
+          "icon": "grid-3x3",
+          "art": "wc/frust-puzzle.jpg"
+        },
+        {
+          "name": "Talking Turn",
+          "t": "Tell a story as a family, one sentence each. Wait until the person before you finishes. When you want to jump in: Hands off.",
+          "d": "Make the turns longer, and listen for one detail to use in yours.",
+          "icon": "circle",
+          "art": "wc/frust-hourglass.jpg"
+        }
+      ]
+    },
+    {
+      "title": "That's not fair",
+      "cards": [
+        {
+          "name": "Rule Bender",
+          "t": "Play a simple game. A parent says first: 'This round, I'll break one rule.' When you catch it: Normal voice. 'Wait, that's not the rule.'",
+          "d": "Swap: you break one rule, and the parent catches it.",
+          "icon": "shuffle",
+          "art": "wc/frust-boardgame.jpg"
+        },
+        {
+          "name": "Rule Spinner",
+          "t": "Halfway through a game, spin a spinner or roll a die to change one rule, like 'play with your other hand'. When the rule changes: Start over. 'Okay, new game.'",
+          "d": "Write your own list of six rule changes.",
+          "icon": "refresh-ccw",
+          "art": "wc/frust-spinner.jpg"
+        },
+        {
+          "name": "The Wrecker",
+          "t": "Build a block tower together. A parent says first: 'At some point, I'll knock it over.' When it falls: Take a break, then come back.",
+          "d": "Rebuild it together, better than before.",
+          "icon": "construction",
+          "art": "wc/frust-blocks.jpg"
+        },
+        {
+          "name": "Bad Ref",
+          "t": "Play a game where one player is the ref and makes one wrong call, on purpose. When the call is wrong: Normal voice. Say it once, then let it go.",
+          "d": "Take turns being the bad ref.",
+          "icon": "megaphone",
+          "art": "wc/frust-whistle.jpg"
+        },
+        {
+          "name": "Unfair Shares",
+          "t": "A parent says first: 'I'm going to split these coins unfairly,' then does. When it's unfair: Normal voice. Say what's wrong, and suggest a fair split.",
+          "d": "Split them three ways, with a fair rule everyone agrees to.",
+          "icon": "circle",
+          "art": "wc/frust-coins.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Lose and luck",
+      "cards": [
+        {
+          "name": "Head Start Race",
+          "t": "Race a parent who gets a big head start. You'll probably lose. When you lose: Good game. 'Good race. Again?'",
+          "d": "Shrink the head start until the race is close.",
+          "icon": "timer",
+          "art": "wc/frust-stopwatch.jpg"
+        },
+        {
+          "name": "Dice Duel",
+          "t": "Ten rounds: both roll, the highest roll wins the round. It's all luck. After every round: Good game.",
+          "d": "Play 30 rounds, keep score, and see how close it ends.",
+          "icon": "dices",
+          "art": "wc/frust-dice.jpg"
+        },
+        {
+          "name": "Lose on Purpose",
+          "t": "Play a game and try to lose it on purpose, without the other player noticing. At the end: Good game, and mean it.",
+          "d": "Explain how you lost, and what that felt like.",
+          "icon": "medal",
+          "art": "wc/frust-checkers.jpg"
+        },
+        {
+          "name": "Cheer the Winner",
+          "t": "Play a quick game. Whoever loses gives the winner a pretend medal and one real compliment. When you lose: Good game.",
+          "d": "Name one thing you'll try differently next time.",
+          "icon": "circle",
+          "art": "wc/frust-medal.jpg"
+        }
+      ]
+    }
+  ],
+  "reference": {
+    "title": "The 11 Moves",
+    "intro": "Every card ends with one of these moves, like 'When it falls: Hands off.' The challenge makes the frustration. The move is what your kid practises while they feel it. Read them together before you start, and use their names out loud.",
+    "items": [
+      {
+        "name": "Moves for your body",
+        "lines": [
+          {
+            "k": "Hands off:",
+            "v": "hands in your lap, count to five, then try again"
+          },
+          {
+            "k": "Slow breath:",
+            "v": "one slow breath in, a longer one out"
+          },
+          {
+            "k": "Take a break:",
+            "v": "walk away for a minute, then come back"
+          }
+        ],
+        "ask": "Which one does your body need first?"
+      },
+      {
+        "name": "Moves for the task",
+        "lines": [
+          {
+            "k": "Smaller step:",
+            "v": "shrink it to the very next little bit"
+          },
+          {
+            "k": "Start over:",
+            "v": "go back to the beginning, with no comment"
+          },
+          {
+            "k": "Try another way:",
+            "v": "same goal, a different way to get there"
+          }
+        ],
+        "ask": "Which one do you forget to try?"
+      },
+      {
+        "name": "Words for yourself",
+        "lines": [
+          {
+            "k": "Name it:",
+            "v": "'I'm frustrated right now.'"
+          },
+          {
+            "k": "Add yet:",
+            "v": "'I can't do it yet.'"
+          }
+        ],
+        "ask": "Which one could you say quietly, just to yourself?"
+      },
+      {
+        "name": "Words for others",
+        "lines": [
+          {
+            "k": "Normal voice:",
+            "v": "say what's wrong at your usual volume"
+          },
+          {
+            "k": "Ask kindly:",
+            "v": "'Can you show me again?'"
+          },
+          {
+            "k": "Good game:",
+            "v": "'Good game. Again?' and mean it"
+          }
+        ],
+        "ask": "Which one does someone in your family need most?"
+      }
+    ],
+    "first": true,
+    "eyebrow": "Read this first"
+  },
+  "conclusion": {
+    "headline": "A little frustration doesn't knock them over anymore.",
+    "text": "Notice the first time they use a move without a card in front of them: a 'can you show me again?' instead of a rude answer, or a short walk away from a broken game. That's the practice paying off on a real day.",
+    "celebrate": "When they use a move in a real moment, name it: 'You took a break and came back. That's exactly the move, and you did it on your own.'",
+    "extensions": [
+      "Let your kid invent a new frustration card for you to try",
+      "Pick a family move of the week, and use its name all week",
+      "Redo the hardest card in a month and see what changed",
+      "Turn one card into a family challenge night, grown-ups included"
+    ]
+  },
+  "signs": [
+    "They use a move's name on their own: 'I need to take a break'",
+    "They ask for help without being rude",
+    "They say a broken rule out loud, in a normal voice"
+  ],
+  "makeItReal": "The next time real frustration shows up, name the move instead of the problem: 'This is a Take a break moment.' Then do the move with them.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "compactCards": true,
+  "photo": {
+    "src": "guides/assets/frustration-tolerance-cards.jpg",
+    "alt": "A girl at a tile puzzle table pulling a frustrated face, while her older brother stands behind her",
+    "caption": "A puzzle that wasn't working yet.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "My daughter gets frustrated when she doesn't get a math concept right away, or doesn't understand a passage in the book she's reading. She starts being rude to the person trying to explain, and she shuts down. When I help her realize she's being rude, she stops, breathes and starts over.",
+    "quotes": []
+  }
+}

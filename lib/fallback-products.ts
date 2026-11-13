@@ -2332,18 +2332,18 @@ export const fallbackProducts: FallbackProduct[] = [
   },
   {
     id: "fb-frustration-tolerance",
-    name: "Frustration Tolerance Challenge Cards",
+    name: "Frustration Tolerance Cards",
     slug: "frustration-tolerance-cards",
     description:
-      "20 short challenges that are a little frustrating on purpose, each paired with one coping move kids practice while the feeling is happening. Stack stones that keep falling. Untangle a string without yanking. Lose a rigged race with a script. Small safe doses, repeated often, done together: a gym for staying calm.",
+      "24 short challenges that are a little frustrating on purpose, each ending with one move your kid practises while the feeling is real. A stone tower that keeps falling, a knot that will not come right, a game where someone breaks the rules on purpose. Small safe doses, on a good day, done together.",
     shortDescription:
-      "Frustration tolerance cards for kids ages 6-14: 20 challenges, each with a coping move to practice mid-feeling. Low-prep.",
+      "Frustration tolerance cards for kids ages 6-14: 24 small challenges, each with a named move to practise while the frustration is real. Low prep.",
     priceCents: 799,
     compareAtPriceCents: null,
     stripePriceId: "price_1UAC8qAkIBECpwGmBF6glDkN",
     blobUrl: "",
-    imageUrl: "/products/frustration-tolerance-cards.jpg",
-    previewFile: "Preview Emotional & Social Skills - Frustration Tolerance Challenge Cards.pdf",
+    imageUrl: "/products/frustration-tolerance-cards.jpg?v=2",
+    previewFile: "Preview Emotional & Social Skills - Frustration Tolerance Challenge Cards v3.pdf",
     category: "emotional-social-skills",
     isBundle: false,
     bundleProductIds: null,

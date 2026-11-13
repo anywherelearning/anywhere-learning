@@ -2581,30 +2581,30 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'frustration-tolerance-cards': {
     opening:
-      '20 short challenges that are a little frustrating on purpose, each paired with one coping move kids practice while the feeling is actually happening. Stack stones that keep falling. Untangle a string without yanking. Lose a rigged race with a script ready. Small safe doses, repeated often, done together: a gym for staying calm.',
+      '24 short challenges that are a little frustrating on purpose, each ending with one move your kid practises while the feeling is real. A stone tower that keeps falling, a knot that will not come right, a game where someone breaks the rules on purpose. Small safe doses, on a good day, done together.',
     whatsIncluded: [
-      '20 frustration challenge cards',
-      'Five themes, from steady hands to losing',
-      'A named coping move on every card',
-      'Golden rules for safe practice',
-      'Stones, string, spoons. Nothing to buy.',
+      '24 challenge cards in five themes, from towers that fall to losing a game',
+      'The 11 Moves, from Hands off and Slow breath to Ask kindly and Good game',
+      'A worked example: rude words turned into "Can you show me again?"',
+      'Three levels on every card, for ages 6 to 14',
+      'Stones, string, cards, dice and a spoon. Nothing to buy.',
     ],
-    skillTags: ['Emotional Regulation', 'Resilience', 'Perseverance', 'Sportsmanship', 'SEL'],
+    skillTags: ['Frustration Tolerance', 'Emotional Regulation', 'Perseverance', 'Sportsmanship', 'Self-Control'],
     insideTheLearning: {
       lead:
-        'You cannot learn to handle frustration by hearing about it. These cards create small safe doses on purpose, with the coping move read BEFORE the wave hits so it is ready mid-feeling. The adult does every challenge too and struggles out loud, which is half the lesson.',
+        'You can\'t learn to handle frustration by hearing about it. Each card makes a small, safe dose of it on purpose, and ends with a move your kid practises while the feeling is real. You do the cards too, and use the moves out loud, so the whole family ends up with the same words for hard moments.',
       skills: [
-        { skill: 'Emotional Regulation', where: 'Naming the feeling, rating it 1 to 5, body resets, and "not yet" self-talk' },
-        { skill: 'Resilience', where: 'Rebuilding after collapse number four without exploding or quitting' },
-        { skill: 'Perseverance', where: 'Attempt counting and staying in the annoying middle of a task' },
-        { skill: 'Sportsmanship', where: 'Rigged races and loser’s-dance rounds that make losing practicable' },
-        { skill: 'SEL', where: 'A shared vocabulary the whole family uses long after the cards' },
+        { skill: 'Frustration Tolerance', where: 'Staying with a tower, a knot or a puzzle that is not working yet' },
+        { skill: 'Emotional Regulation', where: 'Using a named move, like Slow breath or Take a break, mid-feeling' },
+        { skill: 'Perseverance', where: 'Starting over, or trying another way, instead of quitting' },
+        { skill: 'Sportsmanship', where: 'Losing on luck, and saying good game and meaning it' },
+        { skill: 'Self-Control', where: 'Naming a broken rule in a normal voice, and asking for help kindly' },
       ],
     },
     seo: {
       title: 'Frustration Tolerance Challenge Cards for Kids Ages 6-14',
       description:
-        '20 hands-on frustration tolerance challenges with an emotional regulation move on every card. Practice staying calm mid-feeling, at home or school. Low-prep.',
+        '24 hands-on frustration tolerance challenges with an emotional regulation move on every card. Practise staying calm mid-feeling, together at home. Low prep.',
     },
     format: 'Card Guide',
   },
