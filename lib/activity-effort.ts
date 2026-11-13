@@ -168,7 +168,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'kitchen-science-lab': 'Half-Day',
   'secret-code-lab': 'Project',
   'body-owners-manual': 'Project',
-  'people-scientist': 'Half-Day',
+  'people-scientist': 'Project',
   'teach-it-to-learn-it': 'Half-Day',
   'play-the-world': 'Project',
 };

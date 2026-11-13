@@ -1,0 +1,324 @@
+{
+  "slug": "people-scientist",
+  "category": "Emotional & Social",
+  "title": "People Scientist",
+  "tagline": "Notice · Predict · Test · Count · Explain",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid runs the scientific method on everyday people, with small, kind experiments. They notice a pattern in how people behave, predict what will happen, test it with something friendly like saying hi first, count the results honestly, and figure out why people reacted the way they did.",
+  "need": [
+    "A walking path, a street, a market or a park",
+    "A notebook and a pencil for tally marks",
+    "Ten to twenty minutes, a few different days"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "a real hypothesis, test and conclusion"
+    },
+    {
+      "subject": "Math",
+      "text": "tally marks, fractions and comparing results"
+    },
+    {
+      "subject": "Social studies",
+      "text": "how habits change from place to place"
+    },
+    {
+      "subject": "Writing",
+      "text": "a short report on what they found"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is turning people into test subjects. Your job is to keep every experiment kind, stay right beside them, and help them treat a 'no answer' as data, not as a rejection.",
+    "plan": [
+      {
+        "when": "One walk",
+        "what": "Notice a pattern and make a prediction (Steps 1 and 2)."
+      },
+      {
+        "when": "Two or three outings",
+        "what": "Run the test and count (Steps 3 and 4)."
+      },
+      {
+        "when": "Back home",
+        "what": "Explain the results, then plan the next test (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Nobody answers, and they feel embarrassed",
+        "a": "Zero is a result too. Write it down, and ask what might explain it. Real scientists get surprising results all the time."
+      },
+      {
+        "q": "They're too shy to go first",
+        "a": "Do the test together the first time, side by side, then let them take over the counting, or the saying hi."
+      },
+      {
+        "q": "Is this safe with strangers?",
+        "a": "Keep experiments to a friendly hi, a smile or a held door, in public places, with you right there. No personal questions, no following anyone."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A good people scientist turns 'people here are weird' into a question they can test. They predict, test with something kind, count what really happens, and only then decide what it means. The surprises are usually the best part.",
+    "before": "'People here are just unfriendly.'",
+    "model": [
+      {
+        "part": "Notice",
+        "line": "At home, people say hi on the path. Here, they look down."
+      },
+      {
+        "part": "Test",
+        "line": "We say hi first to everyone we cross."
+      },
+      {
+        "part": "Count",
+        "line": "Some answer. Some look puzzled first, then answer."
+      },
+      {
+        "part": "Explain",
+        "line": "Maybe they're friendly, just not used to saying hi."
+      }
+    ],
+    "modelNote": "The puzzled faces were the real discovery. People weren't unfriendly. Saying hi to strangers just wasn't the habit there, and many answered once someone went first."
+  },
+  "steps": [
+    {
+      "title": "Notice a pattern",
+      "why": "Every experiment starts with something you noticed. People do the same things over and over, if you watch.",
+      "kid": "Your kid watches people in one place, like a path, a market or a park, and writes one thing they seem to do a lot, using the Questions to test card in the People Scientist Toolkit at the end of the guide.",
+      "you": "Wonder out loud together: 'Have you noticed that nobody here says hi?' or 'Why does everyone wave on this path?'",
+      "ask": [
+        "What do people here do a lot?",
+        "Is it the same at home, or different?"
+      ],
+      "tip": "New places are the best labs. Something that feels strange when you travel is usually a pattern worth testing.",
+      "levels": {
+        "explore": "Say one thing you notice people doing on a walk.",
+        "develop": "Watch a place for ten minutes, and write three patterns.",
+        "extend": "Compare a pattern in two places, like home and somewhere new."
+      }
+    },
+    {
+      "title": "Predict what will happen",
+      "why": "A prediction written down before the test is what makes it science, not a guess after the fact.",
+      "kid": "Your kid turns the pattern into a prediction, using the Make a prediction card: 'If I say hi first, about half of the people will answer.'",
+      "you": "Make your own prediction too, and write both down. Comparing them afterwards is half the fun.",
+      "ask": [
+        "What do you think will happen?",
+        "Out of ten people, how many?"
+      ],
+      "tip": "A number makes it testable. 'Most people' is hard to check. 'Six out of ten' isn't.",
+      "levels": {
+        "explore": "Guess yes or no: will people say hi back?",
+        "develop": "Predict how many out of ten will answer.",
+        "extend": "Predict, and write why you think so."
+      }
+    },
+    {
+      "title": "Run a kind test",
+      "why": "The test only works if it's the same every time, and kind every time.",
+      "kid": "Your kid does one small, friendly thing to each person they cross, the same way every time, using the Kind tests card: say hi, smile, hold a door or wave.",
+      "you": "Stay right beside them. Keep it to public places and quick, friendly moments, nothing more.",
+      "ask": [
+        "Are you doing it the same way each time?",
+        "What's the kindest way to run this test?"
+      ],
+      "tip": "Same words, same smile, same distance. If you change the test halfway, the results won't mean much.",
+      "levels": {
+        "explore": "Say hi to five people on a walk, with a parent.",
+        "develop": "Test ten people the same way, on two different days.",
+        "extend": "Test one change, like smiling first versus not, and compare."
+      }
+    },
+    {
+      "title": "Count what happens",
+      "why": "Feelings remember the one grumpy person. Tally marks remember everyone.",
+      "kid": "Your kid tallies each reaction in My people experiment page at the end of the guide, using the Reactions to count card: answered right away, looked surprised then answered, or no answer.",
+      "you": "Keep the counting honest, even when it's disappointing. Then count up the totals together.",
+      "ask": [
+        "How many answered out of how many?",
+        "Did anything surprise you?"
+      ],
+      "tip": "Count the in-between reactions too. A puzzled look before a hi is often the most interesting result.",
+      "levels": {
+        "explore": "Put a tally mark for each yes and each no.",
+        "develop": "Tally three kinds of reactions, and add them up.",
+        "extend": "Turn your tallies into fractions, and compare two days or two places."
+      }
+    },
+    {
+      "title": "Explain the results",
+      "why": "The numbers say what happened. The explanation is where they learn something about people.",
+      "kid": "Your kid compares the results with their prediction and writes one possible reason, using the Explain it card. Then they plan what to test next.",
+      "you": "Offer kind explanations to consider: 'Maybe they're not unfriendly. Maybe they're just not used to it.'",
+      "ask": [
+        "Was your prediction right?",
+        "What else could explain it?"
+      ],
+      "tip": "Look for the kindest explanation that fits the numbers. It's usually closer to the truth than the first one.",
+      "levels": {
+        "explore": "Say if your guess was right or wrong, and why you think so.",
+        "develop": "Write your result, one reason for it, and your next test.",
+        "extend": "Write two possible reasons, and design a test that could tell them apart."
+      }
+    }
+  ],
+  "reference": {
+    "title": "People Scientist Toolkit",
+    "intro": "Questions to test, kind ways to test them, and how to count and explain what you find.",
+    "items": [
+      {
+        "name": "Questions to test",
+        "lines": [
+          {
+            "k": "Hi:",
+            "v": "do people say hi back?"
+          },
+          {
+            "k": "Smile:",
+            "v": "do people smile back?"
+          },
+          {
+            "k": "Doors:",
+            "v": "do people hold the door for the next person?"
+          },
+          {
+            "k": "Places:",
+            "v": "is it different here than at home?"
+          }
+        ],
+        "ask": "Which question do you most want to test?"
+      },
+      {
+        "name": "Make a prediction",
+        "lines": [
+          {
+            "k": "If:",
+            "v": "I say hi first"
+          },
+          {
+            "k": "Then:",
+            "v": "about 6 out of 10 will answer"
+          },
+          {
+            "k": "Because:",
+            "v": "people are friendly once someone starts"
+          },
+          {
+            "k": "Mine vs yours:",
+            "v": "write both before the test"
+          }
+        ],
+        "ask": "Who made the closest prediction?"
+      },
+      {
+        "name": "Kind tests",
+        "lines": [
+          {
+            "k": "Say hi:",
+            "v": "same words, every time"
+          },
+          {
+            "k": "Smile:",
+            "v": "a real one, eyes too"
+          },
+          {
+            "k": "Hold the door:",
+            "v": "for the person behind you"
+          },
+          {
+            "k": "Never:",
+            "v": "follow, ask personal questions or trick anyone"
+          }
+        ],
+        "ask": "What's the kindest test you can think of?"
+      },
+      {
+        "name": "Reactions to count",
+        "lines": [
+          {
+            "k": "Yes:",
+            "v": "answered right away"
+          },
+          {
+            "k": "Surprised:",
+            "v": "a puzzled look, then answered"
+          },
+          {
+            "k": "No:",
+            "v": "no answer, or looked away"
+          },
+          {
+            "k": "Total:",
+            "v": "how many people in all"
+          }
+        ],
+        "ask": "Which reaction surprised you most?"
+      }
+    ],
+    "after": {
+      "label": "My people experiment",
+      "lines": [
+        "My question, and where I tested it",
+        "My prediction",
+        "My tallies: yes, surprised, no, and the total",
+        "What I think explains it, and what I'll test next"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Scientific thinking",
+      "text": "predict, test, count, explain"
+    },
+    {
+      "name": "Observation",
+      "text": "noticing patterns in how people act"
+    },
+    {
+      "name": "Social confidence",
+      "text": "going first with a hi or a smile"
+    },
+    {
+      "name": "Open-mindedness",
+      "text": "the kindest explanation that fits the facts"
+    }
+  ],
+  "conclusion": {
+    "headline": "They see people as a question, not a verdict.",
+    "text": "Listen for the next time they notice something strange about how people act, and start with 'I wonder if...' instead of 'People are so...'. That's a scientist talking.",
+    "celebrate": "When they explain a result kindly, say: 'You didn't decide they were rude. You found out why. That's what scientists do.'",
+    "extensions": [
+      "Run the same test at home and somewhere new, and compare",
+      "Test a second kind act, like holding a door, and count the results",
+      "Make a bar graph of all your experiments on one page",
+      "Ask a grandparent if people said hi more or less when they were young"
+    ]
+  },
+  "signs": [
+    "They say 'I wonder if...' about how people behave",
+    "They say hi first, even in a new place",
+    "They look for a kind explanation before deciding someone is rude"
+  ],
+  "makeItReal": "On your next walk somewhere new, decide together before you start: say hi first to everyone you cross, and count who answers. Compare it with your walks at home.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "Where we live, people always look at you and say hi when you cross them on the street or on a walking path, whether you're biking, walking or hiking. Once, in another province, we noticed people looked down instead. So we started saying hi to everyone, and noticed who would answer and who would ignore us. Some answered right away. Some looked at us first with a questioning face before answering, like they weren't used to saying hi.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/people-scientist.jpg",
+    "alt": "A girl walking hand in hand with her young cousin on a paved path, with a walker coming toward them",
+    "caption": "Saying hi first, in another province.",
+    "tall": true
+  }
+}

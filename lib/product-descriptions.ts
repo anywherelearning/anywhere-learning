@@ -3303,27 +3303,27 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'people-scientist': {
     opening:
-      'Your child turns the scientific method loose on other people: they form a real hypothesis (smile first and more people smile back), run a kind little experiment, tally what actually happens, and draw a conclusion. Real data about real behaviour, and because every experiment is a small kind act, they build empathy and social confidence as they go.',
+      'Your kid runs the scientific method on everyday people, with small, kind experiments. They notice a pattern, predict what will happen, test it with something friendly like saying hi first, count the results honestly and figure out why people reacted the way they did.',
     whatsIncluded: [
-      'Watch people and find a testable question',
-      'Form a hypothesis about how people behave',
-      'Design and run a kind experiment',
-      'Tally the results honestly',
-      'Draw a conclusion and test it again',
+      'Five steps, from noticing a pattern to explaining the results',
+      'Questions to test, Make a prediction, Kind tests and Reactions to count cards',
+      'A worked example: saying hi first on a path where people looked down',
+      'My people experiment page, for the prediction, tallies and explanation',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Scientific Method', 'Empathy', 'Observation', 'Social Confidence', 'Hypothesis-Testing'],
+    skillTags: ['Scientific Method', 'Observation', 'Social Confidence', 'Data Collection', 'Open-Mindedness'],
     insideTheLearning: {
       lead:
-        'Your child studies people the way a scientist studies anything: watch closely, form a prediction, test it fairly. It sounds clinical and it is the opposite. Paying that much attention to what drives someone is where empathy actually comes from.',
+        'A good people scientist turns people here are weird into a question they can test. Your kid predicts, runs a small kind experiment like saying hi first, counts what really happens and only then decides what it means. The surprises, like a puzzled look before a hi, are usually the best part.',
       skills: [
-        { skill: 'Scientific Method', where: 'Predicting, testing fairly and revising when the result disagrees' },
-        { skill: 'Observation', where: 'Watching people closely enough to notice real patterns in behaviour' },
-        { skill: 'Hypothesis-Testing', where: 'Making a prediction about people, then running a fair test on it' },
-        { skill: 'Empathy', where: 'Paying close, kind attention and wondering what drives someone' },
-        { skill: 'Social Confidence', where: 'Getting comfortable enough with people to study them up close' },
+        { skill: 'Scientific Method', where: 'Predict, test, count and explain, in that order' },
+        { skill: 'Observation', where: 'Noticing patterns in how people behave in different places' },
+        { skill: 'Social Confidence', where: 'Going first with a hi, a smile or a held door' },
+        { skill: 'Data Collection', where: 'Honest tally marks, fractions and comparing two places' },
+        { skill: 'Open-Mindedness', where: 'Looking for the kindest explanation that fits the numbers' },
       ],
     },
-    format: 'Activity Guide',
+    format: 'Project Guide',
   },
 };
 

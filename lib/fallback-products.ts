@@ -3009,18 +3009,18 @@ export const fallbackProducts: FallbackProduct[] = [
   },
   {
     id: "fb-people-scientist",
-    name: "Be a People Scientist",
+    name: "People Scientist",
     slug: "people-scientist",
     description:
-      "Your child turns the scientific method loose on other people: they form a real hypothesis (smile first and more people smile back), run a kind little experiment, tally what actually happens, and draw a conclusion. Real data about real behaviour, and because every experiment is a small kind act, they build empathy and social confidence as they go.",
+      "Your kid runs the scientific method on everyday people, with small, kind experiments. They notice a pattern, predict what will happen, test it with something friendly like saying hi first, count the results honestly and figure out why people reacted the way they did.",
     shortDescription:
-      "Emotional and social skills activity for kids ages 6-14: hypothesis-test human behaviour with kind experiments, building empathy.",
+      "Science and social skills for kids ages 6-14: notice a pattern in how people act, predict it, test it kindly, count the results and explain them.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "",
     blobUrl: "",
-    imageUrl: "/products/people-scientist.jpg",
-    previewFile: "Preview Emotional & Social Skills - Be a People Scientist.pdf",
+    imageUrl: "/products/people-scientist.jpg?v=2",
+    previewFile: "Preview Emotional & Social Skills - Be a People Scientist v3.pdf",
     category: "emotional-social-skills",
     isBundle: false,
     bundleProductIds: null,
