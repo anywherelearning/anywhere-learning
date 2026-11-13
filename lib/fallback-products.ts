@@ -2289,7 +2289,7 @@ export const fallbackProducts: FallbackProduct[] = [
     name: "Boredom Toolkit",
     slug: "boredom-toolkit",
     description:
-      "Your kid learns that I am bored is the start of something, not a problem to fix. They wait out the empty feeling, notice what their own brain reaches for, build a kit of materials and ideas from home and use it on a real rainy day with no screens and no one to play with.",
+      "Your kid learns that boredom is the start of something, not a problem to fix. They wait out the empty feeling, notice what their own brain reaches for, build a kit of materials and ideas from home and use it on a real rainy day with no screens and no one to play with.",
     shortDescription:
       "Screen-free boredom activity for kids ages 6-14: wait it out, notice what they reach for and build their own kit for rainy days at home.",
     priceCents: 599,
