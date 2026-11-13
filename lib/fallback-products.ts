@@ -2378,18 +2378,18 @@ export const fallbackProducts: FallbackProduct[] = [
   },
   {
     id: "fb-hard-thing-challenge",
-    name: "The Hard Thing Challenge",
+    name: "Hard Thing Challenge",
     slug: "hard-thing-challenge",
     description:
-      "Your child picks one genuinely hard thing, commits to it for a set stretch, keeps a record of the messy middle where most people quit, and crosses the finish. Real perseverance practice with a real outcome they can point to.",
+      "Your kid picks one hard thing they cannot do yet and works at it for a whole stretch, like a month or a summer. They set a finish line and checkpoints, practise in small pieces, get through the messy middle where most people quit, and learn the difference between skipping one part and quitting the goal.",
     shortDescription:
-      "Perseverance activity for kids ages 6-14: pick a hard thing, push through the messy middle, and finish. Real grit, not pep talks.",
+      "Perseverance activity for kids ages 6-14: pick one hard thing, set a finish line, get through the messy middle and finish what they started.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TdZphAkIBECpwGmehQbYZr2",
     blobUrl: "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Hard%20Thing%20Challenge.pdf",
-    imageUrl: "/products/hard-thing-challenge.jpg?v=2",
-    previewFile: "Preview Emotional & Social Skills - The Hard Thing Challenge.pdf",
+    imageUrl: "/products/hard-thing-challenge.jpg?v=3",
+    previewFile: "Preview Emotional & Social Skills - The Hard Thing Challenge v3.pdf",
     category: "emotional-social-skills",
     isBundle: false,
     bundleProductIds: null,

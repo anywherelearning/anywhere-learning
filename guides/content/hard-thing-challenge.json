@@ -1,0 +1,325 @@
+{
+  "slug": "hard-thing-challenge",
+  "category": "Emotional & Social",
+  "title": "Hard Thing Challenge",
+  "tagline": "Pick · Aim · Practise · Push · Finish",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid picks one hard thing they can't do yet, and works at it for a whole stretch, like a month or a summer. They set a finish line and checkpoints, practise in small pieces, get through the messy middle where most people quit, and cross the finish knowing exactly how they got there.",
+  "need": [
+    "One hard thing your kid really wants to do",
+    "A notebook for the log",
+    "A few short practice times a week, for weeks",
+    "Your patience in the messy middle"
+  ],
+  "academics": [
+    {
+      "subject": "Planning",
+      "text": "a finish line, checkpoints and a timeline"
+    },
+    {
+      "subject": "Data",
+      "text": "logging practice and progress over weeks"
+    },
+    {
+      "subject": "Writing",
+      "text": "a log of hard days and what helped"
+    },
+    {
+      "subject": "Health",
+      "text": "how fear and confidence work after a setback"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is pushing hardest when they're scared, or letting one bad day end the whole goal. Your job is to help them pick it, warn them about the messy middle before it comes, and let them step back without letting go.",
+    "plan": [
+      {
+        "when": "One evening",
+        "what": "Pick the hard thing and set the finish line (Steps 1 and 2)."
+      },
+      {
+        "when": "A few times a week, for weeks",
+        "what": "Practise and get through the messy middle (Steps 3 and 4)."
+      },
+      {
+        "when": "At the finish line",
+        "what": "Look back at the whole stretch (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to quit after a bad day",
+        "a": "Don't decide on a bad day. Agree to look at the Skip, pause or quit card together on a calm one."
+      },
+      {
+        "q": "They picked something too big",
+        "a": "Keep the goal and move the finish line: a shorter trail, a shorter song, a smaller first version. Hard, but possible in the time."
+      },
+      {
+        "q": "The hard thing has a physical risk, like bike features or climbing",
+        "a": "The right gear, a progression that starts small, and a grown-up who knows the sport nearby. Skipping a feature they don't feel is a skill, not a failure."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Every hard thing has a messy middle: a fall, a bad week, a day they're more scared than before. That's not a sign to stop. Knowing it's coming, and knowing the difference between skipping one part and quitting the whole goal, is what gets them to the finish.",
+    "before": "She fell, so black trails probably aren't for her.",
+    "model": [
+      {
+        "part": "Goal",
+        "line": "Ride black trails by the end of summer."
+      },
+      {
+        "part": "Setback",
+        "line": "After a fall, more scared. Hesitating on things she'd already done."
+      },
+      {
+        "part": "Skip",
+        "line": "Not today on that chute. She'll try it next time."
+      },
+      {
+        "part": "Finish",
+        "line": "Riding black trails, proud, and wanting more."
+      }
+    ],
+    "modelNote": "The fall didn't mean she couldn't do it. It meant her confidence needed time to catch up with her skill. And skipping one feature on one day was never the same as quitting the summer goal."
+  },
+  "steps": [
+    {
+      "title": "Pick the hard thing",
+      "why": "A hard thing they chose gets finished. One picked for them gets dropped at the first fall.",
+      "kid": "Your kid picks one thing they can't do yet but really want to, using the Pick it card in the Hard Thing Toolkit at the end of the guide. It could be a trail, a song, a skill, a long hike or a book in another language.",
+      "you": "Offer ideas, but let them choose. Check together that it's hard, possible in the time, and something they want for themselves, not for you.",
+      "ask": [
+        "What would you love to be able to do by the end of this season?",
+        "What makes it hard right now?"
+      ],
+      "tip": "It should take weeks. If they could do it by next Saturday, it's a good warm-up, not the hard thing.",
+      "levels": {
+        "explore": "Pick one hard thing to do by the end of the month, with a parent.",
+        "develop": "Pick a hard thing for a whole season, and say why it matters to you.",
+        "extend": "Pick it, then find out how other people learned it, and what was hardest for them."
+      }
+    },
+    {
+      "title": "Set the finish line",
+      "why": "'Get better at biking' never ends. 'Ride the whole black trail without walking' has a day you'll remember.",
+      "kid": "Your kid writes what done looks like, a date, and three checkpoints on the way, using the Finish line card. For a black trail, that could be a full blue trail, a first rock drop, then the black trail itself.",
+      "you": "Make the first checkpoint reachable in the first week or two. An early win keeps them going when the middle gets hard.",
+      "ask": [
+        "How will you know you've done it?",
+        "What's the first checkpoint?"
+      ],
+      "tip": "Write the finish line somewhere everyone sees it, like the fridge. It turns a private wish into a family goal.",
+      "levels": {
+        "explore": "Draw what done looks like, and one checkpoint on the way.",
+        "develop": "Write a finish line, a date and three checkpoints.",
+        "extend": "Write them, then plan what you'll practise for each checkpoint, week by week."
+      }
+    },
+    {
+      "title": "Practise in small pieces",
+      "why": "A hard thing is a pile of small things. Practising one piece at a time is how it gets done.",
+      "kid": "Your kid practises a few times a week, one piece at a time, and writes each practice in the log: the date, what they worked on, and one thing that went better.",
+      "you": "Be there, especially at the start. Notice the effort out loud, what they tried, not how it looked: 'You went back up and tried that rock again.'",
+      "ask": [
+        "Which piece is hardest right now?",
+        "What did you try today that you didn't last time?"
+      ],
+      "tip": "Short and often beats long and rare. Three short practices a week add up to a lot over a summer.",
+      "levels": {
+        "explore": "Practise one piece with a parent, and draw a star in the log each time.",
+        "develop": "Practise a few times a week, and write one thing that went better each time.",
+        "extend": "Practise, log it, and change the plan when a piece turns out harder than you thought."
+      }
+    },
+    {
+      "title": "Get through the messy middle",
+      "why": "Every hard thing gets harder before it gets easier: a fall, a bad week, a day they're more scared than before.",
+      "kid": "When something goes wrong, your kid uses the Messy middle card: say what happened, step back to something that feels solid, then build up again, one small piece at a time. When they don't feel it on a given day, they check the Skip, pause or quit card.",
+      "you": "Say it before it comes: 'There will be a day this feels worse. That's part of it.' After a fall, let them go back to what feels solid without pushing, and keep the goal on the fridge.",
+      "ask": [
+        "What feels solid right now?",
+        "What would make the next try a little less scary?"
+      ],
+      "tip": "Hesitating after a fall is normal. Confidence comes back more slowly than skill, so give it time.",
+      "levels": {
+        "explore": "After a hard day, tell a parent what happened, and pick one easy thing to do next time.",
+        "develop": "Write the hard days in the log too, with what helped.",
+        "extend": "Write the hard days, then look for a pattern in what makes them harder and what gets you through."
+      }
+    },
+    {
+      "title": "Cross the finish and look back",
+      "why": "The finish is the moment to see the whole stretch, hard days included, and know they did it.",
+      "kid": "When your kid reaches the finish line, they read the log from day one, then fill in My hard thing log at the end of the guide: the checkpoints, the hardest day and what they're proud of.",
+      "you": "Celebrate the finish, then read one hard day from the log out loud together. The finish means more next to the day they almost stopped.",
+      "ask": [
+        "What was the hardest day?",
+        "What do you want to try next?"
+      ],
+      "tip": "Look at the first checkpoint together. The gap between then and now is the real prize.",
+      "levels": {
+        "explore": "Show a parent your hard thing, and draw a picture of the finish.",
+        "develop": "Read your log from the start, and fill in My hard thing log.",
+        "extend": "Fill it in, then plan your next hard thing, a little bigger."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Hard Thing Toolkit",
+    "intro": "How to pick it, aim it, get through the middle, and decide on a bad day.",
+    "items": [
+      {
+        "name": "Pick it",
+        "lines": [
+          {
+            "k": "Hard:",
+            "v": "you can't do it yet"
+          },
+          {
+            "k": "Possible:",
+            "v": "you could do it in a month or a season"
+          },
+          {
+            "k": "Yours:",
+            "v": "you want it, not only your grown-up"
+          },
+          {
+            "k": "Clear:",
+            "v": "you'll know the day it's done"
+          }
+        ],
+        "ask": "Does your hard thing pass all four?"
+      },
+      {
+        "name": "Finish line",
+        "lines": [
+          {
+            "k": "Done looks like:",
+            "v": "the whole trail, the whole song"
+          },
+          {
+            "k": "By:",
+            "v": "a date, like the end of summer"
+          },
+          {
+            "k": "Checkpoint 1:",
+            "v": "something for week one or two"
+          },
+          {
+            "k": "Checkpoints 2 and 3:",
+            "v": "the steps in between"
+          }
+        ],
+        "ask": "Which checkpoint will be hardest?"
+      },
+      {
+        "name": "Messy middle",
+        "lines": [
+          {
+            "k": "Say it:",
+            "v": "'I fell, and now I'm scared.'"
+          },
+          {
+            "k": "Step back:",
+            "v": "to something that feels solid"
+          },
+          {
+            "k": "Build up:",
+            "v": "one small piece at a time"
+          },
+          {
+            "k": "Write it:",
+            "v": "hard days go in the log too"
+          }
+        ],
+        "ask": "What helps you most on a bad day?"
+      },
+      {
+        "name": "Skip, pause or quit?",
+        "lines": [
+          {
+            "k": "Skip:",
+            "v": "not today, not this part. Try next time."
+          },
+          {
+            "k": "Pause:",
+            "v": "a week off, then back to it"
+          },
+          {
+            "k": "Change:",
+            "v": "a new finish line that's still hard"
+          },
+          {
+            "k": "Quit:",
+            "v": "only on a calm day, if it doesn't matter anymore"
+          }
+        ],
+        "ask": "What's the difference between skipping and quitting?"
+      }
+    ],
+    "after": {
+      "label": "My hard thing log",
+      "lines": [
+        "My hard thing and my finish line",
+        "The checkpoints I reached, and when",
+        "My hardest day, and what helped",
+        "What I'm proud of, and what's next"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Perseverance",
+      "text": "staying with one goal for weeks"
+    },
+    {
+      "name": "Goal setting",
+      "text": "a clear finish line and checkpoints"
+    },
+    {
+      "name": "Coming back",
+      "text": "rebuilding confidence after a setback"
+    },
+    {
+      "name": "Self-knowledge",
+      "text": "knowing when to skip, pause or push"
+    }
+  ],
+  "conclusion": {
+    "headline": "They did a hard thing, and they know how they did it.",
+    "text": "The next time they say 'I can't do that', ask what their first checkpoint would be. If they start breaking it down, they've learned something bigger than the skill itself.",
+    "celebrate": "At the finish, read one hard day from the log out loud, then say: 'You did this, even after that day. That's what I'm proudest of.'",
+    "extensions": [
+      "Pick a hard thing to do together as a family",
+      "Teach someone else your first checkpoint",
+      "Ask a grandparent about a hard thing that took them a long time",
+      "Choose the next hard thing, a little bigger"
+    ]
+  },
+  "signs": [
+    "They break a new hard thing into checkpoints on their own",
+    "They come back after a fall or a bad week",
+    "They skip one part without giving up the whole goal"
+  ],
+  "makeItReal": "Before this season ends, sit down together and each pick a hard thing, yours included. Put both finish lines on the fridge, and start on checkpoint one this week.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "This summer, my daughter's hard thing was riding black mountain bike trails. Every time she fell, she got more scared and hesitated more before doing the same things she had done before. Some days she doesn't do a chute or a feature because she doesn't feel it. She gets upset, but she knows she can try next time. By the end of the summer, she was riding black trails. She's so proud of herself, and motivated to do more.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/hard-thing-challenge.jpg",
+    "alt": "A girl in a pink jersey and full-face helmet riding her mountain bike down a rock ledge, with another rider watching behind her",
+    "caption": "A black trail, by the end of summer.",
+    "tall": true
+  }
+}

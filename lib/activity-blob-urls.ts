@@ -57,7 +57,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "garden-plot-planner": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Garden%20Plot%20Planner%20v6.pdf",
   "grow-it-eat-it": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20GROW%20IT%2C%20EAT%20IT%20v5.pdf",
   "hallucination-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20HALLUCINATION%20DETECTIVE%20v2.pdf",
-  "hard-thing-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Hard%20Thing%20Challenge%20v2.pdf",
+  "hard-thing-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Hard%20Thing%20Challenge%20v3.pdf",
   "healthy-tech-boundaries": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20HEALTHY%20TECH%20%26%20AI%20BOUNDARIES%20PLAN%20v2.pdf",
   "household-orchestra": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Household%20Orchestra%20v5.pdf",
   "imaginary-world": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Build%20an%20Imaginary%20World%20v8.pdf",

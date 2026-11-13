@@ -228,7 +228,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
       "This Saturday, pick one small thing and finish it together in a single afternoon, start to done. Bake it, build it, film it, whatever it is. Don't stop until it's actually finished. The whole lesson lives in crossing the line.",
     activities: [
       { slug: 'board-game-studio', name: 'Board Game Studio', category: 'creativity-maker', note: 'Design, build, and actually play the finished game' },
-      { slug: 'hard-thing-challenge', name: 'The Hard Thing Challenge', category: 'emotional-social-skills', note: 'Pick one hard thing and cross the finish line' },
+      { slug: 'hard-thing-challenge', name: 'Hard Thing Challenge', category: 'emotional-social-skills', note: 'Pick one hard thing and cross the finish line' },
       { slug: 'savings-goal-tracker', name: 'Savings Goal Tracker', category: 'real-world-math', note: 'One real goal, stuck with to the end' },
     ],
   },

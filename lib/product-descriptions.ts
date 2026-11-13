@@ -2654,22 +2654,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'hard-thing-challenge': {
     opening:
-      'Your child picks one genuinely hard thing, commits to it for a set stretch, keeps a record of the messy middle where most people quit, and crosses the finish. Real perseverance practice with a real outcome they can point to.',
+      'Your kid picks one hard thing they cannot do yet and works at it for a whole stretch, like a month or a summer. They set a finish line and checkpoints, practise in small pieces, get through the messy middle where most people quit, and learn the difference between skipping one part and quitting the goal.',
     whatsIncluded: [
-      'Hard-thing selection with 8 starter ideas',
-      'Commitment contract with a real timeline',
-      'Messy-middle log for when it gets hard',
-      'Quit-vs-push-through decision framework',
-      'Finish-line reflection and Version 2 plan',
+      'Five steps, from picking the hard thing to looking back at the finish',
+      'Pick it, Finish line, Messy middle and Skip, pause or quit? cards',
+      'A worked example: black mountain bike trails by the end of summer',
+      'My hard thing log, for checkpoints, hard days and what helped',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Perseverance', 'Goal-Setting', 'Resilience'],
+    skillTags: ['Perseverance', 'Goal Setting', 'Resilience', 'Self-Knowledge', 'Planning'],
     insideTheLearning: {
       lead:
-        'Your child picks something genuinely hard and sticks with it past the point where it stops being fun. That middle stretch, the dip, is where perseverance is actually built. What they get at the end is evidence that they can do hard things.',
+        'Every hard thing has a messy middle: a fall, a bad week, a day they are more scared than before. Your kid learns to expect it, step back to what feels solid, and keep going. They also learn that skipping one part on one day is not the same as quitting the whole goal.',
       skills: [
-        { skill: 'Perseverance', where: 'Pushing through the dip, where sticking with things is actually built' },
-        { skill: 'Goal-Setting', where: 'Setting a real goal and tracking progress against it' },
-        { skill: 'Resilience', where: 'Earning the belief that they can do hard things by doing one' },
+        { skill: 'Perseverance', where: 'Staying with one goal for weeks, through the messy middle' },
+        { skill: 'Goal Setting', where: 'A clear finish line, a date and three checkpoints' },
+        { skill: 'Resilience', where: 'Rebuilding confidence after a fall or a bad week' },
+        { skill: 'Self-Knowledge', where: 'Knowing when to skip, pause, change or push' },
+        { skill: 'Planning', where: 'Breaking a big goal into small pieces to practise' },
       ],
     },
     format: 'Project Guide',
