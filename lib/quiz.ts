@@ -245,7 +245,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     saturday:
       "This Saturday, block one hour with nothing planned and no screens. Set out a few odd materials (tape, cardboard, string) and walk away. The “I'm bored” that follows is exactly where their own ideas start.",
     activities: [
-      { slug: 'boredom-toolkit', name: 'The Boredom Toolkit', category: 'emotional-social-skills', note: 'Relearning how to make their own fun' },
+      { slug: 'boredom-toolkit', name: 'Boredom Toolkit', category: 'emotional-social-skills', note: 'Relearning how to make their own fun' },
       { slug: 'invent-a-sport', name: 'Invent a New Sport', category: 'creativity-maker', note: '“You’re the boss” invention, no template' },
       { slug: 'scavenger-hunt-designer', name: 'Scavenger Hunt Designer', category: 'planning-problem-solving', note: 'They invent the whole hunt, their rules' },
     ],

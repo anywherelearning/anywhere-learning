@@ -133,7 +133,7 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   // Emotional & Social Skills
   'calm-down-toolkit': 'Project',
   'big-feelings-lab': 'Project',
-  'boredom-toolkit': 'Half-Day',
+  'boredom-toolkit': 'Project',
   'disappointment-lab': 'Project',
   'frustration-tolerance-cards': 'Quick',
   'comeback-journal': 'Project',

@@ -17,7 +17,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "big-feelings-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Big%20Feelings%20Lab%20v3.pdf",
   "board-game-studio": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Board%20Game%20Studio%20v7.pdf",
   "body-owners-manual": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20THE%20BODY%20OWNER%27S%20MANUAL%20v7.pdf",
-  "boredom-toolkit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Boredom%20Toolkit%20v2.pdf",
+  "boredom-toolkit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Boredom%20Toolkit%20v3.pdf",
   "brand-builder": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Brand%20builder%20v2.pdf",
   "budget-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Real-Life%20Budget%20Challenge%20v11.pdf",
   "build-a-museum": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20build%20a%20museum%20or%20interactive%20exhibit%20v6.pdf",

@@ -1,0 +1,324 @@
+{
+  "slug": "boredom-toolkit",
+  "category": "Emotional & Social",
+  "title": "Boredom Toolkit",
+  "tagline": "Wait · Notice · Gather · Try · Keep",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns that 'I'm bored' isn't a problem to fix. It's the start of something. They learn to wait out the empty feeling, notice what their own brain reaches for, gather a kit of materials and ideas, and use it on a real rainy day with no screens and no one to play with.",
+  "need": [
+    "A box, basket or shelf for the kit",
+    "Things you already have: paper, pencils, books, building blocks, music",
+    "A real boring stretch, like a rainy afternoon at home"
+  ],
+  "academics": [
+    {
+      "subject": "Art and writing",
+      "text": "drawing, crafting and stories from nothing"
+    },
+    {
+      "subject": "Reading",
+      "text": "choosing books on their own"
+    },
+    {
+      "subject": "Health",
+      "text": "how the brain gets creative when it's not entertained"
+    },
+    {
+      "subject": "Life skills",
+      "text": "filling their own time, without a screen"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is fixing boredom for them, with a screen, a plan or an idea. Your job is to say 'Ok, that's good, go find something to do', then step back and let the empty feeling do its work.",
+    "plan": [
+      {
+        "when": "One quiet afternoon",
+        "what": "Wait it out, and notice what they reach for (Steps 1 and 2)."
+      },
+      {
+        "when": "The next day",
+        "what": "Gather the kit (Step 3)."
+      },
+      {
+        "when": "The next rainy day, then for weeks",
+        "what": "Try the kit and keep it going (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They keep asking for a screen",
+        "a": "Keep your screen rule simple and the same every day. Screens to create can count differently from screens to watch."
+      },
+      {
+        "q": "They follow you around the house",
+        "a": "Hand them the kit, not an idea. Then go do your own thing. Kids copy grown-ups who can fill their own time."
+      },
+      {
+        "q": "The kit gets boring too",
+        "a": "Swap a few things out every couple of weeks, and let them add something new each time."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Boredom is the feeling right before a kid comes up with their own idea. If someone fixes it too fast, the idea never comes. Each kid reaches for something different, so the kit has to be theirs.",
+    "before": "'I'm bored.' 'Here, watch something.'",
+    "model": [
+      {
+        "part": "Bored",
+        "line": "At home, it's raining, nobody to play with."
+      },
+      {
+        "part": "Parent",
+        "line": "'Ok, that's good. Go find something to do.'"
+      },
+      {
+        "part": "Her",
+        "line": "Paper, pencils, building blocks, a book or music."
+      },
+      {
+        "part": "Him",
+        "line": "A book, almost every time."
+      }
+    ],
+    "modelNote": "Same rainy day, same house, two completely different kits. Neither of them needed a screen. They needed a few quiet minutes to find their own thing."
+  },
+  "steps": [
+    {
+      "title": "Wait it out",
+      "why": "The empty feeling passes. Kids who learn to wait a few minutes find their own ideas on the other side.",
+      "kid": "When your kid says 'I'm bored', they sit with it for ten minutes without a screen, using the Wait it out card in the Boredom Toolkit at the end of the guide.",
+      "you": "Say it calmly: 'Ok, that's good. Go find something to do.' Then don't offer ideas, and don't hand over a screen.",
+      "ask": [
+        "What does bored feel like in your body?",
+        "What's the first idea that pops up?"
+      ],
+      "tip": "The first five minutes are the hardest. Most kids find something right after the moment they think they can't.",
+      "levels": {
+        "explore": "Sit with the bored feeling for five minutes, and notice what happens.",
+        "develop": "Wait ten minutes without a screen, then write the first idea that came.",
+        "extend": "Wait it out, then notice how long it takes your brain to come up with something."
+      }
+    },
+    {
+      "title": "Notice what you reach for",
+      "why": "Everyone's brain reaches for something different when nothing is planned. Knowing yours is the start of the kit.",
+      "kid": "Over a few bored moments, your kid writes down what they actually picked up, using the What I reach for card: drawing, building, reading, music, writing, crafting, moving.",
+      "you": "Watch without commenting, and write down what you notice too. Compare lists later.",
+      "ask": [
+        "What did you pick up first?",
+        "What made you lose track of time?"
+      ],
+      "tip": "Siblings often reach for completely different things. That's the point: each kit should be different.",
+      "levels": {
+        "explore": "Show a parent the thing you picked up.",
+        "develop": "List what you reached for in three bored moments.",
+        "extend": "List it, then find the pattern: making, reading, moving or something else?"
+      }
+    },
+    {
+      "title": "Gather your kit",
+      "why": "A kit ready to go turns 'I'm bored' into 'I'll get my kit'.",
+      "kid": "Your kid fills a box, a basket or a shelf with their own materials and ideas, using the Kit ideas card, then writes three starter ideas on slips to keep inside.",
+      "you": "Help find the materials from around the house, but let them choose. Keep it to things they'll really use.",
+      "ask": [
+        "What would you want on a rainy day?",
+        "What's one thing you'd love to try?"
+      ],
+      "tip": "Use things from home, nothing to buy. Paper, pencils, an old box and a few books are a great start.",
+      "levels": {
+        "explore": "Fill a box with five things you love to use.",
+        "develop": "Fill your kit, and add three starter ideas on slips of paper.",
+        "extend": "Fill it, and add one 'challenge' slip, something new you've never tried."
+      }
+    },
+    {
+      "title": "Try it on a real boring day",
+      "why": "The kit only proves itself on a real rainy day, with nobody to play with.",
+      "kid": "On the next real boring stretch, your kid opens the kit, picks one thing and sticks with it, then notes what they made or did in My boredom kit page at the end of the guide.",
+      "you": "Stay out of it. Do something of your own nearby, like reading or a project, so they see a grown-up filling their own time.",
+      "ask": [
+        "What did you make or do?",
+        "How long did you lose track of time?"
+      ],
+      "tip": "Rainy days at home with no friends around are the best test. That's when the kit earns its spot.",
+      "levels": {
+        "explore": "Use one thing from your kit for twenty minutes.",
+        "develop": "Use the kit on a rainy afternoon, and log what you made.",
+        "extend": "Start something bigger from the kit, like a story, a build or a song, that takes several days."
+      }
+    },
+    {
+      "title": "Keep it going",
+      "why": "A kit that never changes gets boring too. Fresh ideas keep it working all year.",
+      "kid": "Every couple of weeks, your kid looks back at the log, takes out what they stopped using and adds something new, using the Keep it fresh card.",
+      "you": "Notice and name the things they made: 'You started that comic on a boring day.'",
+      "ask": [
+        "What's still fun in your kit?",
+        "What will you add next?"
+      ],
+      "tip": "The log is proof. Looking back at what boredom turned into is the best motivation for next time.",
+      "levels": {
+        "explore": "Swap one thing in your kit for something new.",
+        "develop": "Refresh the kit every two weeks, and keep the log going.",
+        "extend": "Make a kit for someone else, like a sibling, a cousin or a friend."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Boredom Toolkit",
+    "intro": "How to wait it out, what to reach for, and how to keep your kit fresh.",
+    "items": [
+      {
+        "name": "Wait it out",
+        "lines": [
+          {
+            "k": "Say it:",
+            "v": "'I'm bored, and that's okay.'"
+          },
+          {
+            "k": "Wait:",
+            "v": "ten minutes, no screen"
+          },
+          {
+            "k": "Look around:",
+            "v": "what's in this room?"
+          },
+          {
+            "k": "Start small:",
+            "v": "pick up one thing"
+          }
+        ],
+        "ask": "How long can you wait before an idea comes?"
+      },
+      {
+        "name": "What I reach for",
+        "lines": [
+          {
+            "k": "Make:",
+            "v": "drawing, crafting, building"
+          },
+          {
+            "k": "Read:",
+            "v": "books, comics, magazines"
+          },
+          {
+            "k": "Play:",
+            "v": "music, a game, an instrument"
+          },
+          {
+            "k": "Write:",
+            "v": "stories, lists, a journal"
+          }
+        ],
+        "ask": "What do you reach for first?"
+      },
+      {
+        "name": "Kit ideas",
+        "lines": [
+          {
+            "k": "Paper:",
+            "v": "plain, coloured, a notebook"
+          },
+          {
+            "k": "Tools:",
+            "v": "pencils, markers, tape, scissors"
+          },
+          {
+            "k": "Build:",
+            "v": "building blocks, cardboard, string"
+          },
+          {
+            "k": "Start:",
+            "v": "three idea slips, one challenge"
+          }
+        ],
+        "ask": "What would you put in first?"
+      },
+      {
+        "name": "Keep it fresh",
+        "lines": [
+          {
+            "k": "Look back:",
+            "v": "what did you use?"
+          },
+          {
+            "k": "Take out:",
+            "v": "what you stopped using"
+          },
+          {
+            "k": "Add:",
+            "v": "one new thing every two weeks"
+          },
+          {
+            "k": "Share:",
+            "v": "show someone what you made"
+          }
+        ],
+        "ask": "What's the next thing you'll add?"
+      }
+    ],
+    "after": {
+      "label": "My boredom kit",
+      "lines": [
+        "What's in my kit",
+        "When I used it, and what I made or did",
+        "How long I lost track of time",
+        "What I'll add next"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Self-direction",
+      "text": "filling their own time"
+    },
+    {
+      "name": "Creativity",
+      "text": "making something from nothing"
+    },
+    {
+      "name": "Patience",
+      "text": "waiting out the empty feeling"
+    },
+    {
+      "name": "Self-knowledge",
+      "text": "knowing what their brain reaches for"
+    }
+  ],
+  "conclusion": {
+    "headline": "'I'm bored' is now the start of something.",
+    "text": "Notice the next rainy day when they head for their kit, or a book, before saying a word to you. That's boredom doing its job.",
+    "celebrate": "When something good comes out of a boring day, name it: 'That drawing started with you being bored. Look what you made.'",
+    "extensions": [
+      "Make a travel-size kit for car rides and waiting rooms",
+      "Have a family 'nothing planned' afternoon, grown-ups included",
+      "Start a long project from the kit, like a comic, a song or a model",
+      "Ask a grandparent what they did when they were bored as a kid"
+    ]
+  },
+  "signs": [
+    "They say 'I'm bored' less, or say it and then go find something",
+    "They start projects on their own",
+    "They ask for screens less on rainy days"
+  ],
+  "makeItReal": "The next time you hear 'I'm bored', say 'Ok, that's good, go find something to do', then go do something of your own nearby, and see what they come up with.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "When my kids say they're bored, I say: 'Ok, that's good, go find something to do.' Boredom shows up most when we're at home, it's raining and there's no one to play with. My daughter lets her creative side come out: drawing, crafting, writing, building blocks, music. One bored afternoon, she made herself a magic wand. My son mostly reads. Our screen rule is 30 minutes a day to watch, and a bit more to create.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/boredom-toolkit.jpg",
+    "alt": "A girl in a kitchen pointing a homemade magic wand straight at the camera",
+    "caption": "One bored afternoon, a magic wand.",
+    "tall": true
+  }
+}

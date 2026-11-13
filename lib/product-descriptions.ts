@@ -2559,22 +2559,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'boredom-toolkit': {
     opening:
-      'Your child builds their own way out of boredom that does not involve a screen. They learn to sit with the empty feeling for a beat, build a toolkit of materials and prompts, and take a real no-screens stretch to figure out what their own brain reaches for. Boredom is not a problem. It is the first step toward creativity.',
+      'Your kid learns that "I\'m bored" is the start of something, not a problem to fix. They wait out the empty feeling, notice what their own brain reaches for, build a kit of materials and ideas from home and use it on a real rainy day with no screens and no one to play with.',
     whatsIncluded: [
-      'Notice-what-boredom-feels-like opening exercise',
-      'Personal interest map of what calls to them when nothing is required',
-      'Build your own toolkit of materials and prompts from household stuff',
-      'A real no-screens, no-plans stretch to run the toolkit',
-      'Small log of what they made or did, the long-term proof',
+      'Five steps, from waiting it out to keeping the kit fresh',
+      'Wait it out, What I reach for, Kit ideas and Keep it fresh cards',
+      'A worked example: one rainy day, two kids, two completely different kits',
+      'My boredom kit page, to log what boredom turned into',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Self-Direction', 'Creativity', 'Independence'],
+    skillTags: ['Self-Direction', 'Creativity', 'Independence', 'Patience', 'Self-Knowledge'],
     insideTheLearning: {
       lead:
-        'Your child gets handed nothing and has to decide what to do with it. That is the entire point. Starting from a blank slate is the executive function muscle most adults are still working on, and it only builds when nobody fills the gap for them.',
+        'Boredom is the feeling right before a kid comes up with their own idea. If someone fixes it too fast, the idea never comes. Your kid learns to wait it out, find out what they reach for when nothing is planned, and keep a kit of their own for rainy days.',
       skills: [
-        { skill: 'Self-Direction', where: 'Deciding what to do without anyone suggesting it' },
-        { skill: 'Creativity', where: 'Making something out of nothing, which is the literal definition of creative work' },
-        { skill: 'Independence', where: 'Initiating from a blank slate instead of waiting to be given a plan' },
+        { skill: 'Self-Direction', where: 'Filling their own time without a screen or a plan from you' },
+        { skill: 'Creativity', where: 'Making something from what is already at home' },
+        { skill: 'Independence', where: 'Heading for their kit instead of asking for ideas' },
+        { skill: 'Patience', where: 'Sitting with the empty feeling until an idea comes' },
+        { skill: 'Self-Knowledge', where: 'Knowing what their own brain reaches for' },
       ],
     },
     format: 'Project Guide',

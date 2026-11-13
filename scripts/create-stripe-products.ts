@@ -118,7 +118,7 @@ const catalog = [
   // ─── Emotional & Social Skills singles ($5.99) ───
   { slug: 'calm-down-toolkit', name: 'Calm-Down Toolkit', priceCents: 599, description: 'Spot the early signs, test calm-down tools on a good day and make a short plan your kid can reach for on their own.' },
   { slug: 'big-feelings-lab', name: 'Big Feelings Lab', priceCents: 599, description: 'Emotional awareness activity for kids ages 6-14: learn feeling words, spot the body clues and find the real feeling underneath, then watch it pass.' },
-  { slug: 'boredom-toolkit', name: 'The Boredom Toolkit', priceCents: 599, description: 'Build the skill of handling boredom without a screen. Self-direction, creativity, independence.' },
+  { slug: 'boredom-toolkit', name: 'Boredom Toolkit', priceCents: 599, description: 'Screen-free boredom activity for kids ages 6-14: wait it out, notice what they reach for and build their own kit for rainy days at home.' },
   { slug: 'disappointment-lab', name: 'The Disappointment Lab', priceCents: 599, description: 'Sit through small planned letdowns and track bounce-back time.' },
   { slug: 'frustration-tolerance-cards', name: 'Frustration Tolerance Cards', priceCents: 799, description: 'Frustration tolerance cards for kids ages 6-14: 24 small challenges, each with a named move to practise while the frustration is real. Low prep.' },
   { slug: 'comeback-journal', name: 'Comeback Journal', priceCents: 599, description: 'Resilience activity for kids ages 6-14: bounce back from a letdown with facts, a focus on their own game and a personal goal for next time.' },
