@@ -2424,18 +2424,18 @@ export const fallbackProducts: FallbackProduct[] = [
   },
   {
     id: "fb-kindness-missions",
-    name: "The Kindness Missions",
+    name: "Kindness Missions",
     slug: "kindness-missions",
     description:
-      "Your child builds and works through a deck of real-world kindness challenges that take actual effort and noticing, not the easy \"be nice\" kind. They track which missions changed something and pick the ones to keep. Empathy with receipts.",
+      "Your kid learns to spot small chances to be kind, like a seat someone needs or a neighbour carrying too much, and to act on them without being asked. They take on real missions, notice how each one lands and keep the ones that become habits.",
     shortDescription:
-      "Kindness activity for kids ages 6-14: build a deck of real-world kindness missions that take effort and noticing. Not the easy kind.",
+      "Kindness activity for kids ages 6-14: spot who could use a hand, take on real missions, notice how they land and keep the ones that become habits.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TdZpiAkIBECpwGmna3K79c3",
     blobUrl: "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Kindness%20Missions.pdf",
-    imageUrl: "/products/kindness-missions.jpg?v=2",
-    previewFile: "Preview Emotional & Social Skills - The Kindness Missions.pdf",
+    imageUrl: "/products/kindness-missions.jpg?v=3",
+    previewFile: "Preview Emotional & Social Skills - The Kindness Missions v3.pdf",
     category: "emotional-social-skills",
     isBundle: false,
     bundleProductIds: null,

@@ -63,7 +63,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "imaginary-world": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Build%20an%20Imaginary%20World%20v8.pdf",
   "invent-a-sport": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Invent%20a%20New%20Sport%20v7.pdf",
   "investor-pitch": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Investor%20Pitch%20Portfolio%20v2.pdf",
-  "kindness-missions": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Kindness%20Missions%20v2.pdf",
+  "kindness-missions": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Kindness%20Missions%20v3.pdf",
   "kinetic-sculpture": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Kinetic%20Sculpture%20or%20Art%20Installation%20v4.pdf",
   "kitchen-math-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Kitchen%20math%20%26%20meal%20planning%20challenge%20v11.pdf",
   "kitchen-science-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Kitchen%20Science%20Lab%20v7.pdf",

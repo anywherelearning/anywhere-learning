@@ -124,7 +124,7 @@ const catalog = [
   { slug: 'comeback-journal', name: 'Comeback Journal', priceCents: 599, description: 'Resilience activity for kids ages 6-14: bounce back from a letdown with facts, a focus on their own game and a personal goal for next time.' },
   { slug: 'hard-thing-challenge', name: 'Hard Thing Challenge', priceCents: 599, description: 'Perseverance activity for kids ages 6-14: pick one hard thing, set a finish line, get through the messy middle and finish what they started.' },
   { slug: 'repair-conversation', name: 'The Repair Conversation', priceCents: 599, description: 'Own a mistake, skip excuses, ask what would help, follow through.' },
-  { slug: 'kindness-missions', name: 'The Kindness Missions', priceCents: 599, description: 'A deck of real-world kindness challenges that take effort and noticing.' },
+  { slug: 'kindness-missions', name: 'Kindness Missions', priceCents: 599, description: 'Kindness activity for kids ages 6-14: spot who could use a hand, take on real missions, notice how they land and keep the ones that become habits.' },
   { slug: 'reading-the-room', name: 'Reading the Room', priceCents: 599, description: 'Social awareness activity for kids ages 6-14: spot the clues, check with one kind question, match the room and act on what they notice.' },
   { slug: 'conflict-fix', name: 'Conflict Fix', priceCents: 599, description: 'Conflict resolution for kids ages 6-14: cool down, tell it, own your part, hear their side and agree on a fix that stops the next fight.' },
   { slug: 'solo-mission', name: 'The Solo Mission', priceCents: 599, description: 'Age-right do-it-without-me challenges that build real independence.' },

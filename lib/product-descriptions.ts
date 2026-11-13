@@ -2702,22 +2702,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'kindness-missions': {
     opening:
-      'Your child builds and works through a deck of real-world kindness challenges that take actual effort and noticing, not the easy "be nice" kind. They track which missions changed something and pick the ones to keep. Empathy with receipts.',
+      'Your kid learns to spot small chances to be kind, like a seat someone needs or a neighbour carrying too much, and to act on them without being asked. They take on real missions, notice how each one lands and keep the ones that become habits.',
     whatsIncluded: [
-      '12 real-world kindness mission cards (effort-required, not easy)',
-      'Build-your-own mission slot for ideas of their own',
-      'Mission log: what happened, what shifted',
-      'Pick-your-keepers reflection step',
-      'Version 2 deck refresh after a month',
+      'Five steps, from spotting the chances to keeping the habits',
+      'Where to look, Mission ideas, How to do it and Keep it cards',
+      'A worked example: giving a seat to an older man on the city bus',
+      'My kindness log, for each mission, the reaction and how it felt',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Empathy', 'Social Awareness', 'Kindness'],
+    skillTags: ['Kindness', 'Empathy', 'Social Awareness', 'Courage', 'Community'],
     insideTheLearning: {
       lead:
-        'Your child runs kindness missions that take actual effort and noticing. Not the easy be-nice kind. Spotting the chance to help without being told is the hard part, and doing it means stepping toward someone rather than away.',
+        'Most kindness is not planned. It is noticing someone who needs something right now and acting before the moment passes. Your kid practises spotting those chances, offering without expecting anything back, and turning the missions that felt best into habits.',
       skills: [
-        { skill: 'Empathy', where: 'Tuning in to what someone else is feeling or needs' },
-        { skill: 'Social Awareness', where: 'Spotting the chance to help without being asked' },
-        { skill: 'Kindness', where: 'Turning the noticing into something they actually do' },
+        { skill: 'Kindness', where: 'Real missions for people at home, people they know and strangers' },
+        { skill: 'Empathy', where: 'Noticing how each act landed for the other person' },
+        { skill: 'Social Awareness', where: 'Spotting who could use a hand on the bus, at a door or at home' },
+        { skill: 'Courage', where: 'Offering help to a stranger and accepting a no thanks' },
+        { skill: 'Community', where: 'Keeping kind habits that make everyday places better' },
       ],
     },
     format: 'Project Guide',

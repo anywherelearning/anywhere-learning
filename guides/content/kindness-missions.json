@@ -1,0 +1,323 @@
+{
+  "slug": "kindness-missions",
+  "category": "Emotional & Social",
+  "title": "Kindness Missions",
+  "tagline": "Spot · Choose · Do · Notice · Keep",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns to spot small chances to be kind, like a seat someone needs or a neighbour carrying too much, and to act on them without being asked. They take on real missions, notice how each one lands, and keep the ones that become habits, the kind you see when nobody's watching.",
+  "need": [
+    "Everyday places: the bus, the store, the street, home",
+    "A notebook for the mission log",
+    "A week or two, a few missions at a time"
+  ],
+  "academics": [
+    {
+      "subject": "Social studies",
+      "text": "who in a community might need a hand"
+    },
+    {
+      "subject": "Writing",
+      "text": "a mission log of what they did and noticed"
+    },
+    {
+      "subject": "Health",
+      "text": "how kindness feels for the giver and the receiver"
+    },
+    {
+      "subject": "Life skills",
+      "text": "acting on what they notice, on their own"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is turning kindness into a chore you assign. Your job is to point out the chances, let them choose, and say exactly what you saw when they act on their own.",
+    "plan": [
+      {
+        "when": "One walk or outing",
+        "what": "Spot the chances and choose missions (Steps 1 and 2)."
+      },
+      {
+        "when": "Over a week or two",
+        "what": "Do the missions and notice how they land (Steps 3 and 4)."
+      },
+      {
+        "when": "At the end",
+        "what": "Keep the ones that became habits (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They only want to do it for praise or a reward",
+        "a": "Try a secret mission, where nobody knows who did it. The feeling afterwards is the real reward."
+      },
+      {
+        "q": "Someone says no thanks",
+        "a": "That's fine, and it still counts. Offering kindly and accepting a no are both part of the mission."
+      },
+      {
+        "q": "They're shy around strangers",
+        "a": "Start at home and with people they know, then try one stranger mission together, side by side."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Most kindness isn't planned. It's noticing someone who needs something, right now, and acting before the moment passes. The missions are practice for that moment.",
+    "before": "'Someone else will give him their seat.'",
+    "model": [
+      {
+        "part": "Spot",
+        "line": "An older man standing on the city bus."
+      },
+      {
+        "part": "Do",
+        "line": "He stood up and gave him his seat."
+      },
+      {
+        "part": "Notice",
+        "line": "The man thanked him, and said he doesn't see that much anymore."
+      },
+      {
+        "part": "Surprise",
+        "line": "As he got off, the man gave him $5 for his kindness."
+      }
+    ],
+    "modelNote": "He didn't give up his seat for a reward. He didn't know one was coming. The $5 was a surprise. What he kept was knowing his small choice made someone's day."
+  },
+  "steps": [
+    {
+      "title": "Spot the chances",
+      "why": "Kindness starts with noticing. Most chances last a few seconds, and kids who look for them see many more.",
+      "kid": "On a walk, a bus ride or a trip to the store, your kid looks for people who could use a hand, using the Where to look card in the Kindness Toolkit at the end of the guide.",
+      "you": "Whisper what you see: 'That lady has a lot of bags.' 'Nobody's sitting with him.' Then let them decide what to do.",
+      "ask": [
+        "Who could use a hand right now?",
+        "What would make their day a little easier?"
+      ],
+      "tip": "Buses, doors and checkout lines are full of small chances. They pass quickly, so noticing is the skill.",
+      "levels": {
+        "explore": "Spot one person on a walk who could use help, and tell a parent.",
+        "develop": "Spot three chances in one outing, and write them down.",
+        "extend": "Spot a chance that most people walk past, and say why it's easy to miss."
+      }
+    },
+    {
+      "title": "Choose your missions",
+      "why": "A mission they choose feels like theirs. One you assign feels like a chore.",
+      "kid": "Your kid picks three missions to try this week from the Mission ideas card, including one for someone at home, one for someone they know and one for a stranger.",
+      "you": "Help them pick missions that fit their age and comfort. A stranger mission happens with you nearby.",
+      "ask": [
+        "Which mission sounds fun to try?",
+        "Who would you most like to surprise?"
+      ],
+      "tip": "Mix easy and hard. One small win makes the harder mission feel possible.",
+      "levels": {
+        "explore": "Pick one mission for someone at home.",
+        "develop": "Pick three missions: home, someone you know, and a stranger.",
+        "extend": "Invent a mission of your own for someone who's often overlooked."
+      }
+    },
+    {
+      "title": "Do the mission",
+      "why": "Kindness only counts when it happens. Doing it, even awkwardly, is the whole point.",
+      "kid": "Your kid does each mission, using the How to do it card: notice, offer, and accept the answer, even if it's no thanks.",
+      "you": "Stay close for stranger missions, and let them speak for themselves. Don't jump in to help them say it.",
+      "ask": [
+        "What will you say?",
+        "What will you do if they say no thanks?"
+      ],
+      "tip": "Offer, don't push. 'Would you like my seat?' leaves room for the other person to say no.",
+      "levels": {
+        "explore": "Do one mission with a parent right beside you.",
+        "develop": "Do all three of your missions this week.",
+        "extend": "Do a secret mission, where nobody knows it was you."
+      }
+    },
+    {
+      "title": "Notice how it landed",
+      "why": "Seeing what a small act did for someone is what turns a mission into a habit.",
+      "kid": "After each mission, your kid writes in My kindness log at the end of the guide what they did, how the person reacted, and how they felt.",
+      "you": "Ask about the other person first, then about them: 'How did he look?' before 'How did you feel?'",
+      "ask": [
+        "How did they react?",
+        "How did you feel afterwards?"
+      ],
+      "tip": "Sometimes the reaction is big, sometimes it's nothing. Both count. The kindness was in the doing.",
+      "levels": {
+        "explore": "Tell a parent what happened, and draw the person's face.",
+        "develop": "Log each mission: what you did, their reaction and your feeling.",
+        "extend": "Log it, and notice whether kindness spread, like someone else helping too."
+      }
+    },
+    {
+      "title": "Keep the keepers",
+      "why": "The goal isn't a list of good deeds. It's a kid who does them without a list.",
+      "kid": "At the end, your kid looks back through the log and picks two missions to keep doing on their own, using the Keep it card.",
+      "you": "Name it when you see a keeper happen without a reminder. That's the moment the habit is real.",
+      "ask": [
+        "Which mission felt the best?",
+        "Which one will you keep doing?"
+      ],
+      "tip": "A kind habit sticks best when it's attached to something they already do, like every bus ride, or every time you leave a store.",
+      "levels": {
+        "explore": "Pick one kind thing to keep doing every day.",
+        "develop": "Pick two keepers, and when you'll do them.",
+        "extend": "Pick your keepers, and invent a new mission for next month."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Kindness Toolkit",
+    "intro": "Where to look, what to try, and how to make it stick.",
+    "items": [
+      {
+        "name": "Where to look",
+        "lines": [
+          {
+            "k": "On the bus:",
+            "v": "someone older, tired or with a lot to carry"
+          },
+          {
+            "k": "At doors:",
+            "v": "strollers, wheelchairs, full hands"
+          },
+          {
+            "k": "At home:",
+            "v": "the person doing the most"
+          },
+          {
+            "k": "With friends:",
+            "v": "the one sitting alone"
+          }
+        ],
+        "ask": "Where do you see the most chances?"
+      },
+      {
+        "name": "Mission ideas",
+        "lines": [
+          {
+            "k": "Stranger:",
+            "v": "give your seat, hold a door, pick up something dropped"
+          },
+          {
+            "k": "Someone you know:",
+            "v": "a note, a compliment, inviting them in"
+          },
+          {
+            "k": "Home:",
+            "v": "a job before anyone asks"
+          },
+          {
+            "k": "Secret:",
+            "v": "a kind act nobody knows was you"
+          }
+        ],
+        "ask": "Which mission feels hardest?"
+      },
+      {
+        "name": "How to do it",
+        "lines": [
+          {
+            "k": "Notice:",
+            "v": "what do they need right now?"
+          },
+          {
+            "k": "Offer:",
+            "v": "'Would you like...?'"
+          },
+          {
+            "k": "Accept:",
+            "v": "a yes, or a no thanks"
+          },
+          {
+            "k": "Move on:",
+            "v": "no reward needed"
+          }
+        ],
+        "ask": "What will you say to offer?"
+      },
+      {
+        "name": "Keep it",
+        "lines": [
+          {
+            "k": "Pick:",
+            "v": "the missions that felt best"
+          },
+          {
+            "k": "Attach:",
+            "v": "to something you already do"
+          },
+          {
+            "k": "Notice:",
+            "v": "when you do it without thinking"
+          },
+          {
+            "k": "Spread:",
+            "v": "show someone else how"
+          }
+        ],
+        "ask": "Which one will you keep?"
+      }
+    ],
+    "after": {
+      "label": "My kindness log",
+      "lines": [
+        "My mission, and who it was for",
+        "What I did and said",
+        "How they reacted",
+        "How I felt, and if I'll keep it"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Noticing",
+      "text": "spotting who needs a hand"
+    },
+    {
+      "name": "Courage",
+      "text": "offering, even to a stranger"
+    },
+    {
+      "name": "Empathy",
+      "text": "seeing a day from someone else's side"
+    },
+    {
+      "name": "Habits",
+      "text": "kindness without being asked"
+    }
+  ],
+  "conclusion": {
+    "headline": "They act on kindness without being asked.",
+    "text": "Watch for the next time they stand up, hold a door or help someone before you've said a word. That's the mission becoming who they are.",
+    "celebrate": "When you see them do it on their own, tell them exactly what you saw: 'You noticed he needed a seat, and you gave him yours. That was kind.'",
+    "extensions": [
+      "Plan a family kindness day for a neighbour",
+      "Find out what a local shelter or food bank needs, and help",
+      "Write thank-you notes to people who help your family often",
+      "Ask a grandparent about a kindness a stranger once showed them"
+    ]
+  },
+  "signs": [
+    "They offer help to strangers on their own",
+    "They notice who's been left out",
+    "They do a job at home before anyone asks"
+  ],
+  "makeItReal": "On your next bus ride, walk or trip to the store, look for one chance to be kind together. Let them choose what to do, and let them be the one who does it.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "Coming home on the city bus, my son gave his seat to an older man. The man was impressed. He thanked him, and told him he doesn't see many young people being so kind these days. When my son was about to get off, the man gave him $5 for his kindness.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/kindness-missions.jpg",
+    "alt": "A girl hugging her smiling grandfather from behind",
+    "caption": "Kindness, at every age."
+  }
+}
