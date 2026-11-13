@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://anywherelearning.co/images/free-guide-og-v2.jpg',
+        url: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/og/free-guide-og-v2.jpg',
         width: 1200,
         height: 630,
         alt: '7 Days of Real-World Learning Free Guide | Anywhere Learning',
@@ -38,7 +38,7 @@ const freeGuideLd = {
   name: '7 Days of Real-World Learning',
   description:
     'A free, low-prep activity guide with 7 hands-on activities for families across outdoor & nature, real-world math, creativity, AI & digital, entrepreneurship, communication, and planning. Ages 6 to 14.',
-  image: 'https://anywherelearning.co/images/free-guide-og-v2.jpg',
+  image: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/og/free-guide-og-v2.jpg',
   url: 'https://anywherelearning.co/free-guide',
   publisher: { '@type': 'Organization', name: 'Anywhere Learning', url: 'https://anywherelearning.co' },
   author: {
