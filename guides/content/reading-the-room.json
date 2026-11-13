@@ -1,0 +1,324 @@
+{
+  "slug": "reading-the-room",
+  "category": "Emotional & Social",
+  "title": "Reading the Room",
+  "tagline": "Spot · Guess · Check · Match · Act",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns to notice how the people and places around them are doing. They spot the clues in faces, voices and rooms, guess the mood, check it with one kind question, match their voice and energy to it, and then do something about it, like the day they noticed you weren't okay and made dinner.",
+  "need": [
+    "Everyday places: home, a café, a park, a museum",
+    "A notebook for the room reading log",
+    "Your honest answers when they check on you"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "observing faces, voices and bodies"
+    },
+    {
+      "subject": "Language",
+      "text": "words for moods and tones of voice"
+    },
+    {
+      "subject": "Social studies",
+      "text": "how places and cultures expect different behaviour"
+    },
+    {
+      "subject": "Life skills",
+      "text": "noticing when someone needs help"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is telling them how to behave everywhere you go. Your job is to ask what they notice, let them guess, and point it out when they read a room well on their own.",
+    "plan": [
+      {
+        "when": "Out and about",
+        "what": "Spot the clues and guess the mood, anywhere (Steps 1 and 2)."
+      },
+      {
+        "when": "At home, over a week",
+        "what": "Check, match and act with the people they live with (Steps 3 to 5)."
+      },
+      {
+        "when": "Each time it works",
+        "what": "Add it to the room reading log."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They read it wrong",
+        "a": "That's how they learn. Talk about which clue fooled them, and what they could check next time."
+      },
+      {
+        "q": "They notice, but don't do anything",
+        "a": "Start with tiny actions: a glass of water, a quieter voice, a seat saved. Thank them every time."
+      },
+      {
+        "q": "They worry about every face",
+        "a": "Remind them that one kind question beats guessing all day. They don't have to read everyone."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Reading the room has three parts: noticing the clues, checking what they mean, and doing something about it. Most kids stop at the first part. The ones who check and act are the ones people feel cared for by.",
+    "before": "'Dinner's coming. It always does.'",
+    "model": [
+      {
+        "part": "Spot",
+        "line": "Something was off, even before dinner."
+      },
+      {
+        "part": "Check",
+        "line": "'Are you okay?' 'No.'"
+      },
+      {
+        "part": "Act",
+        "line": "He and his sister made dinner."
+      },
+      {
+        "part": "Finish",
+        "line": "And cleaned the kitchen after."
+      }
+    ],
+    "modelNote": "He didn't wait to be asked. He noticed, he checked with one question, and then he and his sister did something about it. That's reading the room all the way to the end."
+  },
+  "steps": [
+    {
+      "title": "Spot the clues",
+      "why": "Moods leave clues everywhere: in faces, voices, bodies and in the room itself. Kids who look for clues first make better guesses.",
+      "kid": "Your kid watches one person or one place for a couple of minutes and names the clues they see, using the People clues and Room clues cards in the Room Reading Toolkit at the end of the guide. No guessing yet, just clues.",
+      "you": "Play clue detectives anywhere: a café, a park, a waiting room. Whisper your clues to each other, and keep it kind.",
+      "ask": [
+        "What do you notice about how people are talking in here?",
+        "What is that person's face telling you?"
+      ],
+      "tip": "Clues first, guesses second. Kids who jump straight to a guess often guess wrong.",
+      "levels": {
+        "explore": "Spot one face clue and one voice clue on someone in a book or a show.",
+        "develop": "List four clues about a person or a place you're in.",
+        "extend": "Watch a room for five minutes, and notice how the clues change."
+      }
+    },
+    {
+      "title": "Guess the mood",
+      "why": "Clues add up to a mood: playful, serious, tired, busy, sad. Naming it is what helps them decide what to do.",
+      "kid": "Your kid uses the clues to guess the mood of a person or a room, and says which clues made them think so.",
+      "you": "Make your own guess too, then compare. When you disagree, talk about which clues each of you noticed.",
+      "ask": [
+        "What mood is this room in?",
+        "Which clue made you think so?"
+      ],
+      "tip": "Two people can read the same room differently. Comparing guesses is half the learning.",
+      "levels": {
+        "explore": "Pick a mood word for a person or a place, with a parent.",
+        "develop": "Guess the mood of three people or places, and give a clue for each.",
+        "extend": "Guess a mood, then notice something that would change your guess."
+      }
+    },
+    {
+      "title": "Check it",
+      "why": "A guess is just a guess. One kind question turns it into something they know.",
+      "kid": "When your kid thinks someone isn't okay, they check with one short question, using the Check it card: 'Are you okay?' or 'Do you want help or space?'",
+      "you": "Answer honestly, even when the answer is 'No, I'm not.' That honesty is what makes checking worth it.",
+      "ask": [
+        "How could you find out if your guess is right?",
+        "What would you ask?"
+      ],
+      "tip": "Checking isn't being nosy. A short, kind question is how good readers stop guessing.",
+      "levels": {
+        "explore": "Ask someone in your family, 'Are you okay?' when you notice something.",
+        "develop": "Check one guess a day for a week, and write what you found out.",
+        "extend": "Check, then ask a second question: 'Do you want help or space?'"
+      }
+    },
+    {
+      "title": "Match it",
+      "why": "Every place has its own volume, pace and mood. Matching it shows the people around you that you noticed.",
+      "kid": "Your kid adjusts their voice, speed and energy to the room, using the Match it card: quieter and slower in a palace or a library, louder at a game, gentle at home when someone's sick.",
+      "you": "Name it afterwards when they did it on their own: 'You got quieter as soon as we walked in.' Kids keep what gets noticed.",
+      "ask": [
+        "What should your voice be like in here?",
+        "Is this a joking moment, or not?"
+      ],
+      "tip": "Matching isn't faking. It's a way of showing respect for the people and the place.",
+      "levels": {
+        "explore": "Show a parent your palace voice, your park voice and your sick-day voice.",
+        "develop": "Walk into a new place, and match the volume and speed of the room.",
+        "extend": "Notice when a joke stops being funny for someone, and stop it yourself."
+      }
+    },
+    {
+      "title": "Act on it",
+      "why": "The best readers don't just notice. They do one small thing about it.",
+      "kid": "When your kid reads that someone needs something, they act: help, give space, or include someone. They write each one in My room reading log at the end of the guide.",
+      "you": "Let them take over sometimes, even when you could do it yourself. Then thank them for exactly what they did.",
+      "ask": [
+        "What would help them right now?",
+        "Should you help, or give them space?"
+      ],
+      "tip": "Small acts count: a glass of water, a quieter voice, a seat saved for someone new.",
+      "levels": {
+        "explore": "Do one small thing for someone who looks tired or sad.",
+        "develop": "Act on one reading each day for a week, and log it.",
+        "extend": "Take over a whole job, like dinner, when someone at home needs it."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Room Reading Toolkit",
+    "intro": "What to look for in people and places, and what to do next.",
+    "items": [
+      {
+        "name": "People clues",
+        "lines": [
+          {
+            "k": "Face:",
+            "v": "smile, frown, tired eyes"
+          },
+          {
+            "k": "Voice:",
+            "v": "loud, quiet, flat, fast"
+          },
+          {
+            "k": "Body:",
+            "v": "slumped, tense, turned away"
+          },
+          {
+            "k": "Actions:",
+            "v": "rushing, sighing, going quiet"
+          }
+        ],
+        "ask": "Which clue is easiest for you to spot?"
+      },
+      {
+        "name": "Room clues",
+        "lines": [
+          {
+            "k": "Volume:",
+            "v": "how loud is everyone?"
+          },
+          {
+            "k": "Pace:",
+            "v": "rushing, or slow?"
+          },
+          {
+            "k": "Rules:",
+            "v": "signs, a guide, what others do"
+          },
+          {
+            "k": "Mood:",
+            "v": "playful, serious, sad, busy"
+          }
+        ],
+        "ask": "What's the quietest room you've ever been in?"
+      },
+      {
+        "name": "Check it",
+        "lines": [
+          {
+            "k": "Ask:",
+            "v": "'Are you okay?'"
+          },
+          {
+            "k": "Offer:",
+            "v": "'Do you want help, or space?'"
+          },
+          {
+            "k": "Timing:",
+            "v": "'Is now a good time?'"
+          },
+          {
+            "k": "Confirm:",
+            "v": "'Did I read that right?'"
+          }
+        ],
+        "ask": "Who in your family is hardest to read?"
+      },
+      {
+        "name": "Match it",
+        "lines": [
+          {
+            "k": "Voice:",
+            "v": "the same volume as the room"
+          },
+          {
+            "k": "Speed:",
+            "v": "slow down where others do"
+          },
+          {
+            "k": "Jokes:",
+            "v": "only when everyone's laughing"
+          },
+          {
+            "k": "Help:",
+            "v": "do what they'd need most"
+          }
+        ],
+        "ask": "Where is your voice the loudest?"
+      }
+    ],
+    "after": {
+      "label": "My room reading log",
+      "lines": [
+        "Where I was, or who I noticed",
+        "The clues I saw, and my guess",
+        "What I asked to check it",
+        "What I did, and how it went"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "clues in faces, voices and rooms"
+    },
+    {
+      "name": "Empathy",
+      "text": "guessing how someone else is doing"
+    },
+    {
+      "name": "Checking in",
+      "text": "one kind question instead of a guess"
+    },
+    {
+      "name": "Taking action",
+      "text": "doing something about what they notice"
+    }
+  ],
+  "conclusion": {
+    "headline": "They notice how people are doing, and do something about it.",
+    "text": "Watch for the next time they lower their voice in a new place, or ask someone if they're okay, before you've said a word. That's the skill working on its own.",
+    "celebrate": "When they read someone and act on it, say exactly what you saw: 'You noticed I wasn't well, and you made dinner. That meant so much to me.'",
+    "extensions": [
+      "Watch a show with the sound off, and guess each character's mood",
+      "Visit a place with different rules, like a temple, a market or a library, and read it together",
+      "Notice one person each day who might need something",
+      "Ask a grandparent which places had special rules when they were young"
+    ]
+  },
+  "signs": [
+    "They ask 'Are you okay?' without being prompted",
+    "They change their voice in a new place on their own",
+    "They notice when a joke has stopped being funny"
+  ],
+  "makeItReal": "Next time you walk into somewhere new, a museum, a restaurant or a friend's house, stop at the door together for ten seconds. Ask what they notice, then let them lead the way in.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "The last time I was sick, I was about to make dinner when my son asked me if I was okay. He had noticed. I said no, and he and his sister took over: they made dinner, and cleaned the kitchen after. And when we visited the National Palace in San Salvador, both kids got quieter and slowed down as soon as we walked in.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/reading-the-room.jpg",
+    "alt": "A boy wiping the kitchen floor with a cloth while his sister dries a bowl at the counter",
+    "caption": "The night I was sick, they took over.",
+    "tall": true
+  }
+}

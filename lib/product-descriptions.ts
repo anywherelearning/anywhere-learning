@@ -2724,22 +2724,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'reading-the-room': {
     opening:
-      'Your child practises noticing what other people feel before words show up. In cafes, family dinners, and playgrounds, they learn to scan a room, read body language, and infer the backstory. The social awareness most adults still don\'t have.',
+      'Your kid learns to notice how the people and places around them are doing. They spot clues in faces, voices and rooms, guess the mood, check it with one kind question, match their voice and energy to it, and then do something about it, like taking over dinner when a parent is sick.',
     whatsIncluded: [
-      'Room-scan framework for real settings',
-      'Body-language signals: what to actually watch for',
-      'Backstory-inference step (guess and check)',
-      'Real-world observation log across 5 settings',
-      'Version 2 reflection on what got easier',
+      'Five steps, from spotting the clues to acting on what they notice',
+      'People clues, Room clues, Check it and Match it cards',
+      'A worked example: noticing a parent was sick and taking over dinner',
+      'My room reading log, for clues, checks and what they did',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Social Awareness', 'Empathy', 'Observation'],
+    skillTags: ['Social Awareness', 'Empathy', 'Observation', 'Communication', 'Kindness'],
     insideTheLearning: {
       lead:
-        'Your child practises reading a room before anyone says anything. Body language, tone, what is not being said. Then the harder judgement: knowing whether to step in, back off, or stay quiet.',
+        'Reading the room has three parts: noticing the clues, checking what they mean and doing something about it. Most kids stop at noticing. Your kid practises all three, from lowering their voice in a quiet place to asking if someone is okay and stepping in to help.',
       skills: [
-        { skill: 'Social Awareness', where: 'Reading someone\'s emotional state before words confirm it' },
-        { skill: 'Observation', where: 'Slowing down enough to actually look, and knowing when to stay quiet' },
-        { skill: 'Empathy', where: 'Stitching the clues together into what someone else is experiencing' },
+        { skill: 'Social Awareness', where: 'Spotting clues in faces, voices and the room itself' },
+        { skill: 'Empathy', where: 'Guessing how someone else is doing, then checking' },
+        { skill: 'Observation', where: 'Clues first, guesses second' },
+        { skill: 'Communication', where: 'One short, kind question instead of a guess' },
+        { skill: 'Kindness', where: 'Doing something about what they notice, like taking over a job' },
       ],
     },
     format: 'Project Guide',

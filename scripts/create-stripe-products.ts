@@ -125,7 +125,7 @@ const catalog = [
   { slug: 'hard-thing-challenge', name: 'Hard Thing Challenge', priceCents: 599, description: 'Perseverance activity for kids ages 6-14: pick one hard thing, set a finish line, get through the messy middle and finish what they started.' },
   { slug: 'repair-conversation', name: 'The Repair Conversation', priceCents: 599, description: 'Own a mistake, skip excuses, ask what would help, follow through.' },
   { slug: 'kindness-missions', name: 'The Kindness Missions', priceCents: 599, description: 'A deck of real-world kindness challenges that take effort and noticing.' },
-  { slug: 'reading-the-room', name: 'Reading the Room', priceCents: 599, description: 'Scan a room, read body language, infer the backstory.' },
+  { slug: 'reading-the-room', name: 'Reading the Room', priceCents: 599, description: 'Social awareness activity for kids ages 6-14: spot the clues, check with one kind question, match the room and act on what they notice.' },
   { slug: 'conflict-fix', name: 'Conflict Fix', priceCents: 599, description: 'Conflict resolution for kids ages 6-14: cool down, tell it, own your part, hear their side and agree on a fix that stops the next fight.' },
   { slug: 'solo-mission', name: 'The Solo Mission', priceCents: 599, description: 'Age-right do-it-without-me challenges that build real independence.' },
   { slug: 'worry-sorter', name: 'Worry Sorter', priceCents: 599, description: 'Worry activity for kids ages 6-14: pin down the real worry, sort what they can change from what they cannot, plan their part and let the rest go.' },
