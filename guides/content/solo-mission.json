@@ -1,0 +1,324 @@
+{
+  "slug": "solo-mission",
+  "category": "Emotional & Social",
+  "title": "Solo Mission",
+  "tagline": "Pick · Prepare · Practise · Go · Level up",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid takes on real-world things they've never done without you, like ordering at a counter, paying at a store, taking the city bus or walking home. They start with you close by, prepare what to say and do, practise once together, then go, and level up one small step at a time, at their own pace.",
+  "need": [
+    "One real mission, close to home",
+    "A phone number they know, or a plan for what to do if something goes wrong",
+    "A notebook for the mission log",
+    "Your patience to stay one step back"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "money, change, times and schedules"
+    },
+    {
+      "subject": "Language",
+      "text": "asking, ordering and explaining clearly"
+    },
+    {
+      "subject": "Geography",
+      "text": "routes, stops and landmarks"
+    },
+    {
+      "subject": "Life skills",
+      "text": "doing it on their own, safely"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is jumping from 'I always do it' to 'go do it alone'. Your job is to shrink the distance one step at a time: first beside them, then nearby, then at the end, and let them stay at a level until it feels right.",
+    "plan": [
+      {
+        "when": "One evening",
+        "what": "Pick the mission and prepare it (Steps 1 and 2)."
+      },
+      {
+        "when": "The first time",
+        "what": "Practise it together (Step 3)."
+      },
+      {
+        "when": "Over weeks or months",
+        "what": "Go, then level up, one step at a time (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They get scared and want to stop",
+        "a": "Go back one level, not back to the start. Staying at a level for a while is still progress."
+      },
+      {
+        "q": "Something goes wrong on a mission",
+        "a": "Talk through what happened together afterwards. Then add it to the 'what if' plan, so they know what to do next time."
+      },
+      {
+        "q": "How do I know they're ready?",
+        "a": "Every family decides differently. Start with missions in places they know well, and keep a way for them to reach you."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Independence doesn't happen all at once. It grows in levels: with a grown-up, then with a sibling or friend, then alone. Each level feels uncomfortable at first and normal later. And it's okay to stay at a level until the next one feels right.",
+    "before": "'She's ten. She can just take the bus alone.'",
+    "model": [
+      {
+        "part": "Level 1",
+        "line": "The bus with her brother, Mom waiting at the stop."
+      },
+      {
+        "part": "Felt",
+        "line": "Nervous, a weird smell, a bit uncomfortable. Then proud."
+      },
+      {
+        "part": "Level 2",
+        "line": "The bus with a friend. She also walks home alone."
+      },
+      {
+        "part": "Not yet",
+        "line": "The bus completely alone. She'll get there."
+      }
+    ],
+    "modelNote": "Each level made the next one feel possible. And 'not yet' is part of the plan, not a failure."
+  },
+  "steps": [
+    {
+      "title": "Pick the mission",
+      "why": "The right mission is a little scary but doable. Too easy teaches nothing, too big feels impossible.",
+      "kid": "Your kid picks one thing they've never done without you from the Mission ideas card in the Solo Mission Toolkit at the end of the guide, like ordering at a counter, paying at a store or taking the bus.",
+      "you": "Help them pick something in a place they already know. Name which level they'll start at: with you beside them, or with you nearby.",
+      "ask": [
+        "What's something you've never done without me?",
+        "Which one feels a little scary, but doable?"
+      ],
+      "tip": "Familiar places first. The same bakery or the same bus route makes the first mission much easier.",
+      "levels": {
+        "explore": "Pick a mission with a parent right beside you, like paying at the store.",
+        "develop": "Pick a mission with a parent nearby, but not with you.",
+        "extend": "Pick a mission with a sibling or friend, and no grown-up."
+      }
+    },
+    {
+      "title": "Prepare it",
+      "why": "Knowing what to say and what to do if something goes wrong takes most of the fear away.",
+      "kid": "Your kid plans the mission using the Prepare it card: what they'll say, what they'll need, the route, and what they'll do if something goes wrong.",
+      "you": "Ask 'what if' questions together: 'What if the bus is late?' 'What if they don't understand you?' Let them come up with the answers.",
+      "ask": [
+        "What will you say?",
+        "What will you do if something goes wrong?"
+      ],
+      "tip": "The 'what if' plan matters more than the script. Kids feel braver when they know what to do if things go differently.",
+      "levels": {
+        "explore": "Practise what you'll say with a parent.",
+        "develop": "Plan what you'll say, what you need and one 'what if'.",
+        "extend": "Plan the whole mission, with three 'what ifs' and their answers."
+      }
+    },
+    {
+      "title": "Practise it together",
+      "why": "Doing it once with you there turns an unknown into something they've already done.",
+      "kid": "Your kid does the whole mission once with you right beside them, but they do all the talking and paying, using the Practise card.",
+      "you": "Stay quiet and let them lead, even if it's slow. Step in only if they ask.",
+      "ask": [
+        "What was easier than you thought?",
+        "What felt strange?"
+      ],
+      "tip": "Notice the little things they noticed, like a smell, a noise or a crowd. Those details are what make it feel strange the first time.",
+      "levels": {
+        "explore": "Do the talking part while a parent stands beside you.",
+        "develop": "Do the whole mission while a parent watches.",
+        "extend": "Do it, then explain the route or the steps back to a parent."
+      }
+    },
+    {
+      "title": "Go",
+      "why": "This is the real mission: without you, or with you further away than before.",
+      "kid": "Your kid does the mission at their chosen level, then fills in My solo mission log at the end of the guide: what they did, how they felt before and after.",
+      "you": "Wait where you agreed, like the bus stop or outside the shop. When they come back, ask how they feel before asking how it went.",
+      "ask": [
+        "How did you feel before?",
+        "How do you feel now?"
+      ],
+      "tip": "Nervous before and proud after is the usual pattern. Point it out, so they remember it next time.",
+      "levels": {
+        "explore": "Do the mission with a parent waiting nearby.",
+        "develop": "Do the mission with a sibling or friend.",
+        "extend": "Do the mission alone, with a way to reach a parent."
+      }
+    },
+    {
+      "title": "Level up",
+      "why": "Each mission makes the next one feel possible, but only when they're ready.",
+      "kid": "Your kid looks at the Levels card, picks their next level, or decides to stay at this one for now, and says why.",
+      "you": "Respect a 'not yet'. Staying at a level until it feels easy is how confidence grows.",
+      "ask": [
+        "What's your next level?",
+        "What would make it feel ready?"
+      ],
+      "tip": "'Not yet' is a real answer. Write it in the log, and check back in a month.",
+      "levels": {
+        "explore": "Repeat the same mission until it feels easy.",
+        "develop": "Move up one level, like from a parent nearby to a friend.",
+        "extend": "Plan a bigger mission, like a new route, or a longer trip."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Solo Mission Toolkit",
+    "intro": "Mission ideas, how to prepare, and how to level up.",
+    "items": [
+      {
+        "name": "Mission ideas",
+        "lines": [
+          {
+            "k": "Order:",
+            "v": "at a counter, a café or a food stand"
+          },
+          {
+            "k": "Pay:",
+            "v": "at a store, and check the change"
+          },
+          {
+            "k": "Ask:",
+            "v": "for help, directions or a price"
+          },
+          {
+            "k": "Travel:",
+            "v": "the bus, a walk home, a bike to a friend's"
+          }
+        ],
+        "ask": "Which mission feels scariest?"
+      },
+      {
+        "name": "Prepare it",
+        "lines": [
+          {
+            "k": "Say:",
+            "v": "the words you'll use"
+          },
+          {
+            "k": "Bring:",
+            "v": "money, a pass, a phone number"
+          },
+          {
+            "k": "Route:",
+            "v": "where you'll go, and landmarks"
+          },
+          {
+            "k": "What if:",
+            "v": "what you'll do if something goes wrong"
+          }
+        ],
+        "ask": "What's your biggest 'what if'?"
+      },
+      {
+        "name": "Practise",
+        "lines": [
+          {
+            "k": "Together:",
+            "v": "do it once with a grown-up"
+          },
+          {
+            "k": "You lead:",
+            "v": "you talk, you pay, you choose"
+          },
+          {
+            "k": "Notice:",
+            "v": "what felt strange, and what was easy"
+          },
+          {
+            "k": "Adjust:",
+            "v": "change the plan if you need to"
+          }
+        ],
+        "ask": "What surprised you the first time?"
+      },
+      {
+        "name": "Levels",
+        "lines": [
+          {
+            "k": "Level 1:",
+            "v": "a grown-up beside you"
+          },
+          {
+            "k": "Level 2:",
+            "v": "a grown-up waiting nearby"
+          },
+          {
+            "k": "Level 3:",
+            "v": "with a sibling or a friend"
+          },
+          {
+            "k": "Level 4:",
+            "v": "on your own, when you're ready"
+          }
+        ],
+        "ask": "Which level are you at now?"
+      }
+    ],
+    "after": {
+      "label": "My solo mission log",
+      "lines": [
+        "My mission, and my level",
+        "How I felt before",
+        "What happened, and what felt strange",
+        "How I felt after, and my next level (or 'not yet')"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Independence",
+      "text": "doing real things without a grown-up"
+    },
+    {
+      "name": "Preparation",
+      "text": "a plan, and a 'what if'"
+    },
+    {
+      "name": "Courage",
+      "text": "doing it nervous, and feeling proud after"
+    },
+    {
+      "name": "Self-knowledge",
+      "text": "knowing when they're ready for the next level"
+    }
+  ],
+  "conclusion": {
+    "headline": "They can do real things on their own, one level at a time.",
+    "text": "Watch for the day they ask to do something on their own before you've suggested it. That's when the missions have done their job.",
+    "celebrate": "After a mission, name the change: 'Last month you were nervous about this. Today you did it with your friend. You did that.'",
+    "extensions": [
+      "Plan a mission somewhere new, like a trip or a new town",
+      "Teach a younger sibling or cousin how to do one of your missions",
+      "Make a family map of all the places they can go on their own",
+      "Ask a grandparent what they did on their own at your age"
+    ]
+  },
+  "signs": [
+    "They ask to do something on their own",
+    "They plan what to say before they go",
+    "They tell you when they're not ready yet, and why"
+  ],
+  "makeItReal": "Pick one mission for this week, somewhere close and familiar. Decide together where you'll wait, then let them go.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "My daughter took the city bus with her brother for the first time when she was 10, and I waited at the bus stop. She was nervous, thought the bus smelled weird and felt a bit uncomfortable, but she was proud of herself. Now she feels more confident, and can take the bus with a friend, but she's not ready to go completely alone yet. She also walks home alone now.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/solo-mission.jpg",
+    "alt": "A brother and sister sitting on a bench at a city bus shelter, waiting for the bus",
+    "caption": "Waiting for the bus, without me."
+  }
+}

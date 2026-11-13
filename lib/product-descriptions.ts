@@ -2774,22 +2774,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'solo-mission': {
     opening:
-      'Your child takes on age-right "do it without me" challenges: order at a counter, call a place, run an errand. They start small and build up, tracking what felt hard and what stopped feeling hard. Real independence built one mission at a time.',
+      'Your kid takes on real-world things they have never done without you, like paying at a store, taking the city bus or walking home. They prepare what to say and do, practise once together, then go and level up one small step at a time, at their own pace.',
     whatsIncluded: [
-      'Mission menu: 12 age-right "do it without me" options',
-      'Start-small-build-up sequencing framework',
-      'Mission prep step: what to say, what to expect',
-      'After-action log: what felt hard, what got easier',
-      'Version 2 mission with one bigger step',
+      'Five steps, from picking the mission to levelling up',
+      'Mission ideas, Prepare it, Practise and Levels cards',
+      'A worked example: a first city bus ride at 10, with her brother',
+      'My solo mission log, including a place to write not yet',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Independence', 'Confidence', 'Communication'],
+    skillTags: ['Independence', 'Confidence', 'Preparation', 'Communication', 'Self-Knowledge'],
     insideTheLearning: {
       lead:
-        'Your child does one real thing alone: orders it, asks for it, pays for it, handles it. Speaking up to a stranger is the foundation of most adult interactions and almost nothing in childhood practises it. The confidence afterwards is earned, not talked into them.',
+        'Independence grows in levels: with a grown-up beside them, then nearby, then with a sibling or friend, then alone. Your kid prepares each mission, practises it once with you, then goes, and learns that nervous before and proud after is normal. Staying at a level until it feels right is part of the plan.',
       skills: [
-        { skill: 'Independence', where: 'The lived experience of handling a real thing without a parent stepping in' },
-        { skill: 'Communication', where: 'Speaking clearly and listening properly to someone outside the family' },
-        { skill: 'Confidence', where: 'The kind that comes from a real win rather than a pep talk' },
+        { skill: 'Independence', where: 'Real missions like paying at a store or taking the bus without a grown-up' },
+        { skill: 'Confidence', where: 'Going nervous, coming back proud, then doing it again' },
+        { skill: 'Preparation', where: 'A script, a route and a plan for what if something goes wrong' },
+        { skill: 'Communication', where: 'Ordering, asking and explaining clearly to adults they do not know' },
+        { skill: 'Self-Knowledge', where: 'Deciding when they are ready for the next level, or not yet' },
       ],
     },
     format: 'Project Guide',

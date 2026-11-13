@@ -127,7 +127,7 @@ const catalog = [
   { slug: 'kindness-missions', name: 'Kindness Missions', priceCents: 599, description: 'Kindness activity for kids ages 6-14: spot who could use a hand, take on real missions, notice how they land and keep the ones that become habits.' },
   { slug: 'reading-the-room', name: 'Reading the Room', priceCents: 599, description: 'Social awareness activity for kids ages 6-14: spot the clues, check with one kind question, match the room and act on what they notice.' },
   { slug: 'conflict-fix', name: 'Conflict Fix', priceCents: 599, description: 'Conflict resolution for kids ages 6-14: cool down, tell it, own your part, hear their side and agree on a fix that stops the next fight.' },
-  { slug: 'solo-mission', name: 'The Solo Mission', priceCents: 599, description: 'Age-right do-it-without-me challenges that build real independence.' },
+  { slug: 'solo-mission', name: 'Solo Mission', priceCents: 599, description: 'Independence activity for kids ages 6-14: real solo missions, from paying at a store to taking the bus, built up one level at a time.' },
   { slug: 'worry-sorter', name: 'Worry Sorter', priceCents: 599, description: 'Worry activity for kids ages 6-14: pin down the real worry, sort what they can change from what they cannot, plan their part and let the rest go.' },
 ];
 

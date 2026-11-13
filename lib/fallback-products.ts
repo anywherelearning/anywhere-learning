@@ -2493,18 +2493,18 @@ export const fallbackProducts: FallbackProduct[] = [
   },
   {
     id: "fb-solo-mission",
-    name: "The Solo Mission",
+    name: "Solo Mission",
     slug: "solo-mission",
     description:
-      "Your child takes on age-right \"do it without me\" challenges: order at a counter, call a place, run an errand. They start small and build up, tracking what felt hard and what stopped feeling hard. Real independence built one mission at a time.",
+      "Your kid takes on real-world things they have never done without you, like paying at a store, taking the city bus or walking home. They prepare what to say and do, practise once together, then go and level up one small step at a time, at their own pace.",
     shortDescription:
-      "Independence activity for kids ages 6-14: solo missions in the real world. Order, call, run an errand. Confidence built by doing.",
+      "Independence activity for kids ages 6-14: real solo missions, from paying at a store to taking the bus, built up one level at a time.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TdZpkAkIBECpwGmxbgBC5hB",
     blobUrl: "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Solo%20Mission.pdf",
-    imageUrl: "/products/solo-mission.jpg?v=2",
-    previewFile: "Preview Emotional & Social Skills - The Solo Mission.pdf",
+    imageUrl: "/products/solo-mission.jpg?v=3",
+    previewFile: "Preview Emotional & Social Skills - The Solo Mission v3.pdf",
     category: "emotional-social-skills",
     isBundle: false,
     bundleProductIds: null,
