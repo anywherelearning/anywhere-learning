@@ -120,16 +120,15 @@
     },
     "create-with-ai": {
       "canonical": [
-        "Communication",
+        "AI Literacy",
         "Creative Thinking",
-        "Decision-Making",
-        "Digital Citizenship"
+        "Ethics",
+        "Communication"
       ],
       "families": [
-        "Communication & Writing",
+        "Tech & Digital",
         "Creativity & Making",
-        "Critical Thinking & Reasoning",
-        "Tech & Digital"
+        "Communication & Writing"
       ]
     },
     "deepfake-spotter": {

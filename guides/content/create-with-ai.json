@@ -1,0 +1,337 @@
+{
+  "slug": "create-with-ai",
+  "category": "AI & Digital",
+  "title": "Create With AI, Ethically",
+  "tagline": "Own · Plan · Make · Steer · Credit",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid makes something real with AI, like a website, a story or a poster, and stays the one in charge. They decide what it's for and who it's for, do the parts that need them, let AI help with the rest, steer it until it matches what they had in mind, and are honest about what AI made.",
+  "need": [
+    "A grown-up's account on an AI tool",
+    "A real project with a real audience, like a client, a family member or a friend",
+    "A notebook for the plan and the who-did-what list"
+  ],
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "briefs, emails and clear requests"
+    },
+    {
+      "subject": "Design",
+      "text": "making it fit what the audience needs"
+    },
+    {
+      "subject": "Ethics",
+      "text": "credit, honesty and other people's work"
+    },
+    {
+      "subject": "Digital literacy",
+      "text": "what AI is good at, and what it isn't"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is either banning AI from creative work or letting it do everything. Your job is to help them decide which parts are theirs, keep them as the boss of the result, and make honesty about AI normal.",
+    "plan": [
+      {
+        "when": "Before the screen",
+        "what": "Decide what's theirs and plan the project (Steps 1 and 2)."
+      },
+      {
+        "when": "One or more sittings",
+        "what": "Make it and steer it (Steps 3 and 4)."
+      },
+      {
+        "when": "When it's finished",
+        "what": "Share it honestly (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want AI to do all of it",
+        "a": "Ask what they'd be proud of. Then make sure that part, the idea, the choices or the final words, stays theirs."
+      },
+      {
+        "q": "They feel it's cheating",
+        "a": "It isn't, if they're honest about it and the decisions are theirs. Using a tool well is a skill too."
+      },
+      {
+        "q": "They want to copy someone else's work or style",
+        "a": "Use AI to make something new, not to copy an artist or a real person. Keep real people's faces and private details out of it."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "AI can make a lot, fast. What makes a project yours is the parts only you can do: knowing who it's for, deciding what it should be, steering it until it's right, and being honest about what AI made.",
+    "before": "'The AI made it, so it's not really mine.'",
+    "model": [
+      {
+        "part": "His",
+        "line": "Gathers what the client needs and wants."
+      },
+      {
+        "part": "AI",
+        "line": "Claude makes a mockup from his ideas, and does the coding."
+      },
+      {
+        "part": "Steers",
+        "line": "He prompts changes until it's the way he wants it."
+      },
+      {
+        "part": "His again",
+        "line": "He writes the email to the client himself. No secret about the AI."
+      }
+    ],
+    "modelNote": "The coding is all done by AI. The client, the ideas, the decisions and the final word are his. That's what makes it his work."
+  },
+  "steps": [
+    {
+      "title": "Decide what's yours",
+      "why": "Before AI touches anything, decide which parts you'll do yourself. Those are what make it yours.",
+      "kid": "Your kid picks a real project and splits it up, using the Who does what card: what they'll do, what AI could help with, and what AI should never do for them.",
+      "you": "Ask: 'What part would you be proud of?' Help them keep that part for themselves.",
+      "ask": [
+        "Who is this for?",
+        "Which part should only you do?"
+      ],
+      "tip": "Real audiences make the best projects: a client, a grandparent, a friend's birthday.",
+      "levels": {
+        "explore": "Pick a project, and say one part you'll do yourself.",
+        "develop": "Fill in the Who does what card for your project.",
+        "extend": "Split a bigger project, and explain why each part is yours or AI's."
+      }
+    },
+    {
+      "title": "Plan it like a pro",
+      "why": "The best results start with a clear brief: who it's for, what they need, and what it should feel like.",
+      "kid": "Your kid writes a short brief, using the Brief card: who it's for, what they need, what it should look and feel like, and what to avoid.",
+      "you": "Play the client or the audience. Answer their questions like a real customer would.",
+      "ask": [
+        "What does the person you're making this for need?",
+        "What would make them say wow?"
+      ],
+      "tip": "Gather the real information first. AI is only as good as what you give it.",
+      "levels": {
+        "explore": "Say who it's for and what they'd like.",
+        "develop": "Write a full brief with every part of the card.",
+        "extend": "Interview the real person it's for, and build the brief from their answers."
+      }
+    },
+    {
+      "title": "Make it with AI",
+      "why": "AI is great at first drafts, code and options. Your kid gives it the brief and their own ideas.",
+      "kid": "Your kid gives AI the brief and asks for a first version, using the Ask AI for card: a mockup, a draft, options, or the parts they decided AI could do.",
+      "you": "Stay close, and keep personal details, like full names and addresses, out of the prompt.",
+      "ask": [
+        "What did AI do well?",
+        "What's missing that only you know?"
+      ],
+      "tip": "Ask for two or three options. Choosing between them is where their taste shows.",
+      "levels": {
+        "explore": "Ask AI for one idea, and say what you like and don't like.",
+        "develop": "Get a first version from your brief, and list three things to change.",
+        "extend": "Ask for three different options, and explain which fits the brief best."
+      }
+    },
+    {
+      "title": "Steer it until it's yours",
+      "why": "The first version is AI's. The final version should be theirs.",
+      "kid": "Your kid asks for changes until it matches what they had in mind, using the Steer it card, and does any part they decided was theirs, like the words or the final touches.",
+      "you": "Ask 'Is this what you wanted?' before 'Is it finished?' They decide when it's done.",
+      "ask": [
+        "Is it the way you want it yet?",
+        "What did you change that AI didn't think of?"
+      ],
+      "tip": "If AI keeps doing too much, stop and do that part yourself. That's steering too.",
+      "levels": {
+        "explore": "Ask for one change, and say if it's better.",
+        "develop": "Steer it until it matches your brief, and do your own part.",
+        "extend": "Show the first and final versions side by side, and explain every big change."
+      }
+    },
+    {
+      "title": "Share it, honestly",
+      "why": "Being honest about AI is part of doing it right. It builds trust with the people you make things for.",
+      "kid": "Your kid shares the project with the person it's for and says how it was made, using the Credit it card: what they did, what AI did, and what they decided.",
+      "you": "Show them it's normal to say AI helped. Hiding it is what makes it feel like cheating.",
+      "ask": [
+        "What will you say about how you made it?",
+        "What are you proudest of?"
+      ],
+      "tip": "A simple line works: 'I designed it and made the decisions, and AI helped with the code.'",
+      "levels": {
+        "explore": "Show it to someone, and say one part you did and one part AI did.",
+        "develop": "Share it with the person it's for, with an honest how-I-made-it line.",
+        "extend": "Write the email or message to the person it's for yourself, with no AI help."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Creator Toolkit",
+    "intro": "How to split the work, brief it, steer it and be honest about it.",
+    "items": [
+      {
+        "name": "Who does what",
+        "lines": [
+          {
+            "k": "Mine:",
+            "v": "the idea, the choices, the final say"
+          },
+          {
+            "k": "AI can help:",
+            "v": "drafts, code, options, mockups"
+          },
+          {
+            "k": "Never AI:",
+            "v": "pretending it's all mine, copying someone's work"
+          },
+          {
+            "k": "Together:",
+            "v": "I steer, it changes"
+          }
+        ],
+        "ask": "Which part would you never hand to AI?"
+      },
+      {
+        "name": "Brief",
+        "lines": [
+          {
+            "k": "For:",
+            "v": "who it's for"
+          },
+          {
+            "k": "Need:",
+            "v": "what they want it to do"
+          },
+          {
+            "k": "Feel:",
+            "v": "colours, style, mood"
+          },
+          {
+            "k": "Avoid:",
+            "v": "what they don't want"
+          }
+        ],
+        "ask": "Which part of the brief is hardest to find out?"
+      },
+      {
+        "name": "Ask AI for",
+        "lines": [
+          {
+            "k": "A mockup:",
+            "v": "a first look to react to"
+          },
+          {
+            "k": "Options:",
+            "v": "two or three to choose from"
+          },
+          {
+            "k": "The boring part:",
+            "v": "code, formatting, lists"
+          },
+          {
+            "k": "Ideas:",
+            "v": "a starting point, not the answer"
+          }
+        ],
+        "ask": "What's AI best at in your project?"
+      },
+      {
+        "name": "Steer it",
+        "lines": [
+          {
+            "k": "Compare:",
+            "v": "does it match the brief?"
+          },
+          {
+            "k": "Ask:",
+            "v": "one change at a time"
+          },
+          {
+            "k": "Take over:",
+            "v": "do the part that needs you"
+          },
+          {
+            "k": "Decide:",
+            "v": "you say when it's done"
+          }
+        ],
+        "ask": "When do you take over from AI?"
+      },
+      {
+        "name": "Credit it",
+        "lines": [
+          {
+            "k": "Say:",
+            "v": "'AI helped with...'"
+          },
+          {
+            "k": "Mine:",
+            "v": "'I came up with... and decided...'"
+          },
+          {
+            "k": "Respect:",
+            "v": "no copying real artists or people"
+          },
+          {
+            "k": "Private:",
+            "v": "no real names or photos in prompts"
+          }
+        ],
+        "ask": "Why does saying AI helped build trust?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Ownership",
+      "text": "knowing which parts are theirs"
+    },
+    {
+      "name": "Briefing",
+      "text": "turning what someone needs into clear requests"
+    },
+    {
+      "name": "Steering",
+      "text": "staying the boss of the result"
+    },
+    {
+      "name": "Honesty",
+      "text": "saying how it was made"
+    }
+  ],
+  "conclusion": {
+    "headline": "They make things with AI, and they stay in charge.",
+    "text": "Watch how they talk about their next project. If they say 'AI helped with this part, I did that part', they've learned to use it honestly and keep the work theirs.",
+    "celebrate": "When they finish a project with AI help, say: 'You made the decisions, and you were honest about it. That's how professionals use AI.'",
+    "extensions": [
+      "Make the same small project with and without AI, and compare",
+      "Make something for a real person in your family, from their own brief",
+      "Write a family rule list for using AI in creative work",
+      "Look up how a real artist or designer you like uses AI, or chooses not to"
+    ]
+  },
+  "signs": [
+    "They decide what's theirs before opening the AI tool",
+    "They keep steering until it matches what they wanted",
+    "They say openly when AI helped"
+  ],
+  "makeItReal": "Pick one real thing someone in your life needs, like a birthday poster, a flyer or a simple website, and let your kid run it: the brief, the AI help, the steering and an honest 'here's how I made it'.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "My son has a small web design business. He gathers all the information and requests from his clients, gives his ideas to Claude, and Claude makes a mockup. Then he prompts it to change things until it's the way he wants it, and he writes the email to the client himself. It's not a secret: the coding is all done by AI.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/create-with-ai.jpg",
+    "alt": "A boy at a desk with two large monitors, working on a website",
+    "caption": "At his desk, steering the mockup.",
+    "tall": true
+  }
+}

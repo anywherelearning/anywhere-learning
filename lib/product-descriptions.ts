@@ -1368,23 +1368,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'create-with-ai': {
     opening:
-      'Explore creative AI tools responsibly. Kids learn to use AI for writing, art, and brainstorming while understanding copyright, attribution, and the difference between using AI as a tool vs letting it do the work. Creativity meets responsibility.',
+      'Your kid makes something real with AI, like a website, a story or a poster, and stays the one in charge. They decide what it is for and who it is for, do the parts that need them, let AI help with the rest, steer it until it matches what they had in mind and are honest about what AI made.',
     whatsIncluded: [
-      'Creative AI tool exploration and practice',
-      'AI for writing, art, and brainstorming',
-      'Copyright, attribution, and ownership understanding',
-      'Tool vs replacement: knowing the difference',
-      'Ethical creation guidelines and reflection',
+      'Five steps, from deciding what is theirs to sharing it honestly',
+      'Who does what, Brief, Ask AI for, Steer it and Credit it cards',
+      'A worked example: a teen web designer who briefs, steers and writes to clients himself',
+      'Clear lines: no copying real artists, no real names or photos in prompts',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['AI Literacy', 'Creativity', 'Ethics', 'Digital Citizenship', 'Art'],
+    skillTags: ['AI Literacy', 'Creativity', 'Ethics', 'Communication', 'Design Thinking'],
     insideTheLearning: {
       lead:
-        'Your child uses AI to make something, then has to be straight about how they made it. Where the tool stops and their own work starts is the real question, and it is one plenty of adults get wrong. They practise attributing honestly and deciding when using it is fine and when it is not.',
+        'AI can make a lot, fast. What makes a project theirs is the parts only they can do: knowing who it is for, deciding what it should be, steering it until it is right and being honest about what AI made. Your kid practises all of it on a real project for a real person.',
       skills: [
-        { skill: 'Creative Thinking', where: 'Making something genuinely original with the tool rather than letting it decide' },
-        { skill: 'Digital Citizenship', where: 'Understanding consent, attribution and who owns what was made' },
-        { skill: 'Decision-Making', where: 'Judging when using AI is appropriate and when it is not' },
-        { skill: 'Communication', where: 'Being clear and honest about their process and their sources' },
+        { skill: 'AI Literacy', where: 'Knowing what AI is good at and what it is not' },
+        { skill: 'Creativity', where: 'Keeping the idea and the final choices their own' },
+        { skill: 'Ethics', where: 'Crediting AI and never copying real artists or people' },
+        { skill: 'Communication', where: 'Writing a brief and talking with the person it is for' },
+        { skill: 'Design Thinking', where: 'Shaping the result around what the audience needs' },
       ],
     },
     format: 'Project Guide',
