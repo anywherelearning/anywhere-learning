@@ -199,17 +199,14 @@
     },
     "media-info-check": {
       "canonical": [
-        "Communication",
+        "Media Literacy",
         "Critical Thinking",
         "Digital Literacy",
-        "Emotional Regulation"
+        "Observation"
       ],
       "families": [
-        "Communication & Writing",
-        "Critical Thinking & Reasoning",
-        "Empathy & People",
-        "Planning & Self-Management",
-        "Tech & Digital"
+        "Tech & Digital",
+        "Critical Thinking & Reasoning"
       ]
     },
     "adventure-story-map": {

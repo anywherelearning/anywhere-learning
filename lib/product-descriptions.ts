@@ -1082,23 +1082,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'media-info-check': {
     opening:
-      'Your child picks a piece of online content and figures out whether it is trustworthy. They check five reliability signals, look for real evidence, cross-check with a second source, and make a call: reliable, misleading, or unsure. The habit of pausing before believing or sharing.',
+      'Your kid learns to check before they believe or share. Faced with a post, a photo or a video, they pause when it makes them feel a lot, find out who made it, look closely for signs it was edited or made by AI, search for it somewhere else and decide: real, fake or not sure yet.',
     whatsIncluded: [
-      'Five-signal quick check for any content',
-      'Evidence evaluation (strong vs. weak proof)',
-      'Cross-checking with second sources',
-      'Share-or-wait decision framework',
-      'Six ready-to-use scenario cards for offline practice',
+      'Five steps, from pausing on a strong feeling to deciding whether to share',
+      'Pause signals, Who made it, Look closely, Check elsewhere and Decide cards',
+      'How to spot edited and AI-made photos and videos: hands, edges, writing, sound',
+      'A worked example: the shark on a flooded highway that shows up after every hurricane',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Critical Thinking', 'Media Literacy', 'Digital Literacy'],
+    skillTags: ['Media Literacy', 'Critical Thinking', 'Digital Literacy', 'Observation', 'Research'],
     insideTheLearning: {
       lead:
-        'Your child runs a five-signal check on real content and decides whether it holds up. The technical part is checking sources and spotting what has been left out. The harder part is noticing that something was built to make them angry, and pausing anyway.',
+        'Fakes are made to make you feel something fast: wow, scared, angry. Your kid learns that the feeling is the signal to slow down, then checks who made it, looks closely for edits and AI clues, searches for it somewhere else, and only shares what they would stand behind.',
       skills: [
-        { skill: 'Critical Thinking', where: 'Questioning a claim even when the source looks entirely legitimate' },
-        { skill: 'Digital Literacy', where: 'Checking sources, reading for context, and noticing what is missing' },
-        { skill: 'Emotional Regulation', where: 'Pausing before reacting to content engineered to provoke' },
-        { skill: 'Communication', where: 'Explaining their reasoning calmly, with the evidence attached' },
+        { skill: 'Media Literacy', where: 'Telling real posts, photos and videos from edited or AI-made ones' },
+        { skill: 'Critical Thinking', where: 'Asking who made it, when and why before believing it' },
+        { skill: 'Digital Literacy', where: 'Using searches, fact checks and image searches' },
+        { skill: 'Observation', where: 'Spotting odd hands, shadows, writing and voices' },
+        { skill: 'Research', where: 'Finding the same story in a second, independent place' },
       ],
     },
     format: 'Project Guide',

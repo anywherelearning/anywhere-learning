@@ -84,7 +84,7 @@ export const TERRITORIES: readonly Territory[] = [
     },
     activities: [
       'media-info-check', 'bias-fairness-lab',
-      'hallucination-detective', 'deepfake-spotter', 'algorithm-awareness', 'supply-chain-detective',
+      'hallucination-detective', 'algorithm-awareness', 'supply-chain-detective',
     ],
   },
   {
@@ -189,7 +189,7 @@ export const TERRITORIES: readonly Territory[] = [
     },
     activities: [
       'ai-basics', 'prompt-like-a-coach', 'create-with-ai', 'build-ai-helper', 'privacy-footprint',
-      'deepfake-spotter', 'healthy-tech-boundaries', 'algorithm-awareness', 'media-info-check',
+      'healthy-tech-boundaries', 'algorithm-awareness', 'media-info-check',
       'hallucination-detective',
     ],
   },
@@ -482,7 +482,6 @@ const PRIMARY_AREA_OVERRIDE: Record<string, string> = {
   // AI & Digital activities should lead with AI & Digital, not Reading & Media.
   'media-info-check': 'ai-digital',
   'algorithm-awareness': 'ai-digital',
-  'deepfake-spotter': 'ai-digital',
   'hallucination-detective': 'ai-digital',
   'bias-fairness-lab': 'ai-digital',
   'prompt-like-a-coach': 'ai-digital',

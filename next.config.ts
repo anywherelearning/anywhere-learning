@@ -123,6 +123,7 @@ const nextConfig: NextConfig = {
 
       // Retired Nov 2026: AI & Digital pass.
       { source: "/shop/three-ais-one-question", destination: "/shop/hallucination-detective", permanent: true },
+      { source: "/shop/deepfake-spotter", destination: "/shop/media-info-check", permanent: true },
 
       // Retired Nov 2026: Worldschooling pass.
       { source: "/shop/currency-market-math", destination: "/shop/farmers-market-challenge", permanent: true },

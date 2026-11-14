@@ -6,7 +6,7 @@ import Link from 'next/link';
 // /shop hero. Self-contained (constants + markup); the parent supplies the slot.
 const HERO_CARDS = [
   { slug: 'kitchen-math-challenge' },
-  { slug: 'deepfake-spotter' },
+  { slug: 'media-info-check' },
   { slug: 'family-debate-night' },
   { slug: 'shark-tank-pitch' },
   { slug: 'rube-goldberg-machine' },

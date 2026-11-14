@@ -98,7 +98,7 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
     colorText: '#7b88a8',
     time: '45 min',
     photo: '/products/media-info-check.jpg',
-    blurb: 'Five checks, then: trust it or not?',
+    blurb: 'Real, fake or not sure yet?',
   },
   {
     slug: 'ai-basics',

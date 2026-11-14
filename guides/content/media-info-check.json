@@ -1,0 +1,332 @@
+{
+  "slug": "media-info-check",
+  "category": "AI & Digital",
+  "title": "Media & Info Check",
+  "tagline": "Pause · Source · Look · Search · Decide",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns to check before they believe or share. Faced with a post, a photo or a video, they pause when it makes them feel a lot, find out who made it, look closely for signs it was edited or made by AI, search for it somewhere else, and decide: real, fake or not sure yet.",
+  "need": [
+    "A screen you can look at together",
+    "A few videos, photos or posts to check, real and fake",
+    "A search engine, with you beside them"
+  ],
+  "academics": [
+    {
+      "subject": "Reading",
+      "text": "who wrote it, and why"
+    },
+    {
+      "subject": "Observation",
+      "text": "spotting edits in photos and videos"
+    },
+    {
+      "subject": "Research",
+      "text": "finding the same story in a second place"
+    },
+    {
+      "subject": "Digital literacy",
+      "text": "how AI-made and edited media work"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is a list of warnings about the internet. Your job is to check things together, out loud, so they hear how you think, and to make 'let's check' sound fun, not scary.",
+    "plan": [
+      {
+        "when": "One sitting, together",
+        "what": "Practise on a few examples you pick (Steps 1 to 3)."
+      },
+      {
+        "when": "The same day",
+        "what": "Search and decide (Steps 4 and 5)."
+      },
+      {
+        "when": "Every time after",
+        "what": "Use the same checks on anything that surprises them."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They think everything is fake now",
+        "a": "Check a real one too. The goal is checking, not doubting everything: most things they see are real."
+      },
+      {
+        "q": "You can't tell either",
+        "a": "Say so. 'I'm not sure, let's look it up' is the most useful thing they can hear from you."
+      },
+      {
+        "q": "They come across something upsetting",
+        "a": "Stop and talk about it. Checking whether something is real can wait until they feel okay."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Fakes are made to make you feel something fast: wow, scared, angry. That feeling is the signal to slow down. A few quick checks, like who made it, what looks off and where else it shows up, usually tell you if it's real.",
+    "before": "'It's a video, so it must be real.'",
+    "model": [
+      {
+        "part": "Feel",
+        "line": "A shark swimming down a flooded highway. Wow."
+      },
+      {
+        "part": "Source",
+        "line": "A stranger's post, no news site."
+      },
+      {
+        "part": "Search",
+        "line": "The same shark, after hurricanes years apart."
+      },
+      {
+        "part": "Decide",
+        "line": "Fake. Don't share it."
+      }
+    ],
+    "modelNote": "This picture goes around after almost every big hurricane. One search shows the same shark in floods years apart, which is the clue that it was made up."
+  },
+  "steps": [
+    {
+      "title": "Pause when you feel it",
+      "why": "Fakes work by making you feel something before you think. The feeling is the signal.",
+      "kid": "Your kid looks at an example you picked and notices how it makes them feel, using the Pause signals card in the Check It Toolkit at the end of the guide: wow, scared, angry or 'I have to show someone'.",
+      "you": "Say what you feel too: 'Whoa, that's amazing. That makes me want to check it.' Make the pause sound normal, not suspicious.",
+      "ask": [
+        "How does this make you feel?",
+        "Do you want to show someone right now?"
+      ],
+      "tip": "The stronger the feeling, the more important the check. 'Too amazing' is a clue.",
+      "levels": {
+        "explore": "Show with a face how the video makes you feel, then say 'Let's check.'",
+        "develop": "Name the feeling, and say what the post wants you to do.",
+        "extend": "Find the exact words or moment designed to make you feel that way."
+      }
+    },
+    {
+      "title": "Find out who made it",
+      "why": "Who posted it, and why, says a lot about whether to trust it.",
+      "kid": "Your kid finds who posted or made it, using the Who made it card: a news site, a company, a stranger, an AI tool, or nobody they can find.",
+      "you": "Show them where to look: the name, the account, the website, the date. Read it out loud together.",
+      "ask": [
+        "Who made this?",
+        "What do they want you to do or believe?"
+      ],
+      "tip": "No name, no date and no source is a clue in itself.",
+      "levels": {
+        "explore": "Find the name of who posted it, with a parent.",
+        "develop": "Find who made it, when, and why they might have made it.",
+        "extend": "Compare two accounts that posted the same thing, and which one to trust more."
+      }
+    },
+    {
+      "title": "Look closely",
+      "why": "Edited and AI-made photos and videos often slip on small details.",
+      "kid": "Your kid looks for clues using the Look closely card: hands and faces, edges and shadows, writing in the background, voices that don't match lips.",
+      "you": "Pause the video and zoom in together. Point out one clue, then let them find the next.",
+      "ask": [
+        "What looks strange if you zoom in?",
+        "Does anything move or sound wrong?"
+      ],
+      "tip": "Good fakes can pass this test. If nothing looks off, it still needs Step 4.",
+      "levels": {
+        "explore": "Spot one thing that looks strange, like a hand or a shadow.",
+        "develop": "Check every clue on the Look closely card, and mark what you find.",
+        "extend": "Compare a real photo and an AI-made one side by side, and list the differences."
+      }
+    },
+    {
+      "title": "Search for it somewhere else",
+      "why": "Real news shows up in more than one place. Fakes usually don't, or they show up as 'fake'.",
+      "kid": "Your kid searches for it, using the Check elsewhere card: a few key words with 'fake' or 'fact check', a trusted news site, or an image search.",
+      "you": "Do the first search together, and show them how to spot a fact-checking site.",
+      "ask": [
+        "Where else does this show up?",
+        "Does anyone say it's fake?"
+      ],
+      "tip": "If the same photo shows up years earlier, or in a different story, it's been reused.",
+      "levels": {
+        "explore": "Watch a parent search, and say what you see.",
+        "develop": "Search for it in two different ways, and note what you find.",
+        "extend": "Find where it first came from, and how it changed as people shared it."
+      }
+    },
+    {
+      "title": "Decide, then share or wait",
+      "why": "Checking only matters if it changes what you do next.",
+      "kid": "Your kid decides, using the Decide card: real, fake or not sure yet. Then they choose what to do: share it, don't share it, or wait and check later.",
+      "you": "Respect 'not sure yet'. It's the right answer more often than people think.",
+      "ask": [
+        "Real, fake or not sure yet?",
+        "What would happen if you shared it and it was fake?"
+      ],
+      "tip": "'Not sure yet' means don't share yet. That one habit stops most fakes.",
+      "levels": {
+        "explore": "Say real, fake or not sure, and why.",
+        "develop": "Decide, then explain your three best clues to someone at home.",
+        "extend": "Check three things you see this week, and tell the family which ones fooled you at first."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Check It Toolkit",
+    "intro": "When to pause, what to look for, where to check, and how to decide.",
+    "items": [
+      {
+        "name": "Pause signals",
+        "lines": [
+          {
+            "k": "Wow:",
+            "v": "too amazing to be true"
+          },
+          {
+            "k": "Scary:",
+            "v": "it makes you worried or afraid"
+          },
+          {
+            "k": "Angry:",
+            "v": "it makes you mad at someone"
+          },
+          {
+            "k": "Hurry:",
+            "v": "'Share before it's deleted!'"
+          }
+        ],
+        "ask": "Which feeling fools you most easily?"
+      },
+      {
+        "name": "Who made it",
+        "lines": [
+          {
+            "k": "Name:",
+            "v": "a person, a news site, a company?"
+          },
+          {
+            "k": "Date:",
+            "v": "is it new, or old and reshared?"
+          },
+          {
+            "k": "Why:",
+            "v": "to inform, to sell, to get clicks?"
+          },
+          {
+            "k": "AI:",
+            "v": "does it say it was made with AI?"
+          }
+        ],
+        "ask": "Which source would you trust most?"
+      },
+      {
+        "name": "Look closely",
+        "lines": [
+          {
+            "k": "Hands and faces:",
+            "v": "extra fingers, blurry teeth, odd eyes"
+          },
+          {
+            "k": "Edges:",
+            "v": "smudged outlines, shadows going the wrong way"
+          },
+          {
+            "k": "Writing:",
+            "v": "signs and letters that don't make sense"
+          },
+          {
+            "k": "Sound:",
+            "v": "voices that don't match the lips"
+          }
+        ],
+        "ask": "Which clue is hardest to spot?"
+      },
+      {
+        "name": "Check elsewhere",
+        "lines": [
+          {
+            "k": "Search:",
+            "v": "key words plus 'fake' or 'fact check'"
+          },
+          {
+            "k": "News:",
+            "v": "a trusted news site you know"
+          },
+          {
+            "k": "Image search:",
+            "v": "has this picture been used before?"
+          },
+          {
+            "k": "Two sources:",
+            "v": "two places that don't copy each other"
+          }
+        ],
+        "ask": "Which check would you try first?"
+      },
+      {
+        "name": "Decide",
+        "lines": [
+          {
+            "k": "Real:",
+            "v": "a trusted source, and it shows up elsewhere"
+          },
+          {
+            "k": "Fake:",
+            "v": "clues, reused, or called fake by fact-checkers"
+          },
+          {
+            "k": "Not sure yet:",
+            "v": "don't share yet"
+          },
+          {
+            "k": "Share:",
+            "v": "only what you'd stand behind"
+          }
+        ],
+        "ask": "What do you do with 'not sure yet'?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Pausing",
+      "text": "noticing the feeling before reacting"
+    },
+    {
+      "name": "Source checking",
+      "text": "who made it, when and why"
+    },
+    {
+      "name": "Spotting edits",
+      "text": "clues in photos, videos and sound"
+    },
+    {
+      "name": "Sharing well",
+      "text": "only what they'd stand behind"
+    }
+  ],
+  "conclusion": {
+    "headline": "They check before they believe, or share.",
+    "text": "Notice the next time they see something amazing on a screen. If their first words are 'is that real?' or 'let's check', the pause is becoming a habit.",
+    "celebrate": "When they catch a fake, or choose not to share something they're unsure about, say: 'That pause just stopped a fake from spreading.'",
+    "extensions": [
+      "Make a family 'fooled me' list of fakes you've each believed",
+      "Make an obviously fake photo together with a simple editing tool, and see who can spot the clues",
+      "Look at the same news story on two different sites, and compare how they tell it",
+      "Ask a grandparent how they checked news before the internet"
+    ]
+  },
+  "signs": [
+    "They ask 'is that real?' on their own",
+    "They look for who made something before believing it",
+    "They wait instead of sharing when they're unsure"
+  ],
+  "makeItReal": "The next time a video or post surprises your family, stop and check it together, out loud, before anyone shares it.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/media-info-check.jpg",
+    "alt": "A boy in a purple shirt at a desk, looking closely at a laptop screen",
+    "caption": "Is it real? Let's check."
+  }
+}

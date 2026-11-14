@@ -1796,7 +1796,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'product-callout',
-        slug: 'deepfake-spotter',
+        slug: 'media-info-check',
       },
       {
         type: 'heading',

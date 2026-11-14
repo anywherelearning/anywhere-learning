@@ -40,7 +40,7 @@ const catalog = [
   { slug: 'budget-challenge', name: 'Real-Life Budget Challenge', priceCents: 599, description: 'Real-world maths (STEM) for kids ages 9-14: plan a real day out on a real budget, then run the money on the day.' },
   { slug: 'community-impact', name: 'Community Impact Project', priceCents: 599, description: 'Project for kids ages 6-14: ask people what would really help, do it yourself, then go back and keep it going.' },
   { slug: 'kitchen-math-challenge', name: 'Kitchen Math & Meal Planning Challenge', priceCents: 599, description: 'Real-world maths (STEM) for kids ages 6-14: plan real family meals, price them by the package, shop the list and cook it.' },
-  { slug: 'media-info-check', name: 'Media & Info Check', priceCents: 599, description: 'Spot misinformation, check sources, and think critically about media.' },
+  { slug: 'media-info-check', name: 'Media & Info Check', priceCents: 599, description: 'Media literacy for kids ages 6-14: spot fake photos, edited videos and AI-made posts by pausing, checking the source and searching before sharing.' },
   { slug: 'micro-business', name: 'Micro-Business Challenge', priceCents: 599, description: 'Entrepreneurship for kids ages 6-14: run a small business for real, keep the books and work out profit per hour.' },
   { slug: 'problem-solver', name: 'Problem-Solver Studio', priceCents: 599, description: 'Project for kids ages 6-14: find out why a problem keeps coming back, build a simple fix, test it and make Version 2.' },
   { slug: 'smart-shopper', name: 'Smart Shopper Lab', priceCents: 599, description: 'Real-world maths (STEM) for kids ages 8-14: compare two real options, work out cost per use, spot the marketing, then wait before buying.' },

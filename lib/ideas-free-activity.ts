@@ -32,7 +32,7 @@ const CATEGORY_TO_ACTIVITY: Record<string, string> = {
   stem: 'rube-goldberg-machine',
   creative: 'board-game-studio',
   travel: 'pack-like-a-pro',
-  'ai-digital': 'deepfake-spotter',
+  'ai-digital': 'media-info-check',
   mindset: 'boredom-toolkit',
 };
 
@@ -50,8 +50,8 @@ const BLURBS: Record<string, string> = {
     'Your kid designs an original board game from scratch, writes the rules, and playtests it on the family until it actually works.',
   'pack-like-a-pro':
     'Your kid packs their own bag for a real trip, weighs the tradeoffs, and lives with what they chose. Independence you can hand over.',
-  'deepfake-spotter':
-    'Your kid learns to spot manipulated images and video, then tries to fool you with their own. The best way to build a sharp eye.',
+  'media-info-check':
+    'Your kid learns to pause on a video that seems too amazing, check who made it, zoom in for clues and search before sharing. Checking, done together, out loud.',
   'boredom-toolkit':
     'Build a toolkit your kid reaches for instead of you when boredom hits. Made together, so they own it.',
 };

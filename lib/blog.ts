@@ -2634,7 +2634,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'A sceptic says: \u201cLet me check that before I believe it.\u201d A cynic says: \u201cNothing is true and everyone is lying.\u201d The first is empowering. The second is paralysing. Emphasise that reliable sources do exist, that good journalism is real, and that most people aren\u2019t trying to deceive them. But some are, and knowing the difference is a superpower.' },
       { type: 'paragraph', text: 'In our family, we\u2019ve framed it positively: being a good thinker means you get to decide what\u2019s worth your attention. That feels powerful to a kid, not restricting.' },
       { type: 'tip', title: 'The Three-Source Rule', text: 'Before your child believes or shares any interesting claim, have them check it against three independent sources. If three unrelated, reliable sources agree, it\u2019s probably solid. If they can only find it on one website or social media post, it\u2019s worth questioning. This simple habit prevents most misinformation from taking root.' },
-      { type: 'product-callout', slug: 'deepfake-spotter' },
+      { type: 'product-callout', slug: 'media-info-check' },
       { type: 'faq', items: [
         { question: 'What is media literacy and why does it matter for kids?', answer: 'Media literacy is the ability to critically evaluate information from any media source, digital or traditional. It matters because children are exposed to more content than any previous generation, including AI-generated material, targeted advertising, and algorithmically curated feeds. Without these skills, kids are passive consumers of whatever they encounter.' },
         { question: 'At what age should I start teaching media literacy?', answer: 'From age 5, children can learn to spot the difference between ads and entertainment. By 8\u201310, they can evaluate sources and distinguish fact from opinion. By 11+, they\u2019re ready to understand algorithms, AI-generated content, and more sophisticated manipulation techniques. Start with whatever is age-appropriate and build from there.' },
@@ -2644,7 +2644,7 @@ const posts: BlogPost[] = [
       ]},
     ],
     relatedSlugs: ['ai-for-kids-2026', 'ai-myths-facts-kids', 'teach-kids-prompt-ai'],
-    recommendedProduct: 'deepfake-spotter',
+    recommendedProduct: 'media-info-check',
   },
 
   // ─── Creativity & Maker Cluster Posts ───
