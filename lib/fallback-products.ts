@@ -2526,7 +2526,7 @@ export const fallbackProducts: FallbackProduct[] = [
     compareAtPriceCents: null,
     stripePriceId: "price_1TdZpkAkIBECpwGmGO1cFkPF",
     blobUrl: "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Worry%20Sorter.pdf",
-    imageUrl: "/products/worry-sorter.jpg?v=3",
+    imageUrl: "/products/worry-sorter.jpg?v=4",
     previewFile: "Preview Emotional & Social Skills - The Worry Sorter v5.pdf",
     category: "emotional-social-skills",
     isBundle: false,
