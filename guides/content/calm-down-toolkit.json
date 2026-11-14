@@ -68,7 +68,7 @@
     "model": [
       {
         "part": "Notice",
-        "line": "Upset in the back seat of the car."
+        "line": "Upset in the car."
       },
       {
         "part": "Tool",
@@ -137,7 +137,7 @@
     {
       "title": "Make the plan",
       "why": "A short plan, made when they're calm, is what they can follow when they're not.",
-      "kid": "Your kid makes My calm-down plan at the end of the guide: when I notice my signs, I'll use this tool first, then this one, and this is what helps from my grown-up. They keep it short enough to remember, and decide where it lives.",
+      "kid": "Your kid makes My calm-down plan at the end of the guide, using the What helps from you card for the last line: when I notice my signs, I'll use this tool first, then this one, and this is what helps from my grown-up. They keep it short enough to remember, and decide where it lives.",
       "you": "Ask 'What do you need from me when you're upset?' and write down exactly what they say, like 'leave me alone for a bit' or 'put music on'. That line is your job in the plan.",
       "ask": [
         "What should I do, and what should I not do?",
@@ -147,7 +147,7 @@
       "levels": {
         "explore": "Draw your plan: your sign, your tool and what you need from your parent.",
         "develop": "Write the full plan, with your three tools in order.",
-        "extend": "Write the plan, plus a version for a place without your tools, like a classroom or a friend's house."
+        "extend": "Write the plan, plus a version for a place without your tools, like a friend's house or a long car ride."
       }
     },
     {
@@ -175,27 +175,27 @@
         "name": "Early signs",
         "lines": [
           {
-            "k": "Face:",
-            "v": "hot, red, frowning, close to tears"
+            "k": "First:",
+            "v": "a hot face, tight hands, a racing heart"
           },
           {
-            "k": "Hands:",
-            "v": "tight fists, grabbing, throwing"
+            "k": "Then:",
+            "v": "a louder voice, faster words"
           },
           {
-            "k": "Voice:",
-            "v": "louder, faster, shouting"
-          },
-          {
-            "k": "Body:",
-            "v": "racing heart, tight chest, shaky legs"
-          },
-          {
-            "k": "Words:",
+            "k": "Then:",
             "v": "'It's not fair!', 'I hate this!'"
+          },
+          {
+            "k": "Last:",
+            "v": "throwing, slamming, exploding"
+          },
+          {
+            "k": "Before it all:",
+            "v": "hungry, tired or rushed?"
           }
         ],
-        "ask": "Which sign shows up first for you?"
+        "ask": "How far up the ladder do you usually get before you notice?"
       },
       {
         "name": "Reset tools",
@@ -221,7 +221,7 @@
             "v": "a few minutes alone, in your spot"
           }
         ],
-        "ask": "Which group does your body like best?"
+        "ask": "Which group have you never tried?"
       },
       {
         "name": "Rate it",
@@ -247,7 +247,7 @@
             "v": "would I actually choose it?"
           }
         ],
-        "ask": "Which tool scored best on 'anywhere'?"
+        "ask": "Which tool was fast, but not your favourite?"
       },
       {
         "name": "What helps from you",
@@ -306,12 +306,12 @@
   ],
   "conclusion": {
     "headline": "They know what calms them, and they can reach for it.",
-    "text": "Watch the next hard moment from a little distance. If they head for their music, their book or their spot before you say anything, even once, the plan is theirs now.",
-    "celebrate": "The first time they use a tool on their own, say: 'You noticed it coming and you knew what to do.'",
+    "text": "Watch the next hard moment from a little distance. If they reach for their music, their book or their spot while the feeling is still rising, even once, the plan is theirs now.",
+    "celebrate": "The first time they use a tool on their own, say: 'You caught it early, and you knew what to do.'",
     "extensions": [
-      "Make a travel version of the plan that fits in the car door or a pocket",
-      "Find a tool for a place where your favourite won't work, like a shop or a friend's house",
-      "Help a younger sibling or cousin find their own tools",
+      "Pick a secret signal, like a hand on your heart, that tells your grown-up 'I need my plan' when you can't talk",
+      "Re-test the Rate it card in six months, and see which tools you've outgrown",
+      "Add one new tool you've never tried, from a friend or a book, and test it",
       "Ask your parent to make their own calm-down plan, and swap"
     ]
   },

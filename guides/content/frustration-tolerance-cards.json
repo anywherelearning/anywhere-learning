@@ -31,7 +31,7 @@
         "line": "'Can you show me again?'"
       }
     ],
-    "modelNote": "The frustration was about not getting it yet, but it landed on the person helping. Once she noticed that, she could stop, breathe and start over, and the explaining could work."
+    "modelNote": "The frustration was about not getting it yet, but it landed on the person helping. Once I pointed it out, she could stop, breathe and start over, and the explaining could work."
   },
   "academics": [
     {
@@ -97,7 +97,7 @@
       "text": "naming a broken rule calmly"
     },
     {
-      "name": "Perseverance",
+      "name": "Trying again",
       "text": "starting over after it falls"
     }
   ],
@@ -144,7 +144,7 @@
       ]
     },
     {
-      "title": "Not yet",
+      "title": "Still wobbly",
       "cards": [
         {
           "name": "Other Hand",
@@ -189,7 +189,7 @@
         {
           "name": "The Long Wait",
           "t": "Put a treat on the table and wait five minutes without touching it. When you want to grab it: Hands off.",
-          "d": "Wait ten minutes, then share it.",
+          "d": "Wait while someone else eats theirs first.",
           "icon": "cookie",
           "art": "wc/frust-cookie.jpg"
         },
@@ -209,7 +209,7 @@
         },
         {
           "name": "Ten Pieces",
-          "t": "Find where ten puzzle pieces go, one at a time. When you're stuck: Try another way. Sort by colour, or by edges.",
+          "t": "Take turns with a partner placing ten puzzle pieces, one each. When it's not your turn: Hands off.",
           "d": "Do it with the box picture turned over.",
           "icon": "grid-3x3",
           "art": "wc/frust-puzzle.jpg"
@@ -276,7 +276,7 @@
         {
           "name": "Dice Duel",
           "t": "Ten rounds: both roll, the highest roll wins the round. It's all luck. After every round: Good game.",
-          "d": "Play 30 rounds, keep score, and see how close it ends.",
+          "d": "Predict before each roll, and count how often you're right.",
           "icon": "dices",
           "art": "wc/frust-dice.jpg"
         },
@@ -306,7 +306,7 @@
         "lines": [
           {
             "k": "Hands off:",
-            "v": "hands in your lap, count to five, then try again"
+            "v": "hands in your lap, count to five, then carry on"
           },
           {
             "k": "Slow breath:",
@@ -381,7 +381,7 @@
       "Let your kid invent a new frustration card for you to try",
       "Pick a family move of the week, and use its name all week",
       "Redo the hardest card in a month and see what changed",
-      "Turn one card into a family challenge night, grown-ups included"
+      "Turn one card into a family challenge night, and let your kid pick the card you have to do"
     ]
   },
   "signs": [

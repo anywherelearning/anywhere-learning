@@ -464,6 +464,12 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'what-if-scenario-lab': ['communication'],
   'decision-lab': ['critical-thinking', 'emotional'],
   'community-impact': ['communication', 'self-management'],
+  // Nov 2026 Emotional & Social quality pass
+  'big-feelings-lab': ['self-management'],
+  'conflict-fix': ['communication', 'self-management'],
+  'reading-the-room': ['communication', 'citizenship'],
+  'hard-thing-challenge': ['emotional'],
+  'boredom-toolkit': ['creativity'],
 };
 
 /**

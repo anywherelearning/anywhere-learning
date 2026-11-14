@@ -93,7 +93,7 @@ const WHY_IT_MATTERS: Record<string, string> = {
   worldschooling:
     "Travel can be a holiday or it can be the best learning of their childhood. The difference is whether you ask the right questions. These activities turn any trip into something they will carry into adulthood.",
   "emotional-social-skills":
-    "Self-regulation, repair, resilience, and reading the room are the skills that quietly run every part of adult life. Schools never had time for them. Most of us parents were never taught them either. These activities teach them on purpose, while the weather is still good.",
+    "Self-regulation, repair, resilience, and reading the room are the skills that quietly run every part of adult life. Schools never had time for them. Most of us parents were never taught them either. These activities teach them on purpose, on a calm day, before the hard moment comes.",
 };
 
 /** Products whose "Why it matters" isn't their category's (the Map is a parent guide). */

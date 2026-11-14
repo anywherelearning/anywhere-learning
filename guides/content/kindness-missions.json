@@ -89,7 +89,7 @@
       "title": "Spot the chances",
       "why": "Kindness starts with noticing. Most chances last a few seconds, and kids who look for them see many more.",
       "kid": "On a walk, a bus ride or a trip to the store, your kid looks for people who could use a hand, using the Where to look card in the Kindness Toolkit at the end of the guide.",
-      "you": "Whisper what you see: 'That lady has a lot of bags.' 'Nobody's sitting with him.' Then let them decide what to do.",
+      "you": "Point out quietly what you see: 'That lady has a lot of bags.' 'Nobody's sitting with him.' Then let them decide what to do.",
       "ask": [
         "Who could use a hand right now?",
         "What would make their day a little easier?"
@@ -105,7 +105,7 @@
       "title": "Choose your missions",
       "why": "A mission they choose feels like theirs. One you assign feels like a chore.",
       "kid": "Your kid picks three missions to try this week from the Mission ideas card, including one for someone at home, one for someone they know and one for a stranger.",
-      "you": "Help them pick missions that fit their age and comfort. A stranger mission happens with you nearby.",
+      "you": "Help them pick missions that fit their age and comfort. A stranger mission happens with you nearby, in public: never into someone's car or home.",
       "ask": [
         "Which mission sounds fun to try?",
         "Who would you most like to surprise?"
@@ -162,7 +162,7 @@
       "levels": {
         "explore": "Pick one kind thing to keep doing every day.",
         "develop": "Pick two keepers, and when you'll do them.",
-        "extend": "Pick your keepers, and invent a new mission for next month."
+        "extend": "Pick your keepers, then show someone at home how to do one with you."
       }
     }
   ],
@@ -234,7 +234,7 @@
             "v": "no reward needed"
           }
         ],
-        "ask": "What will you say to offer?"
+        "ask": "What's hardest: noticing, offering or hearing a no?"
       },
       {
         "name": "Keep it",
@@ -256,7 +256,7 @@
             "v": "show someone else how"
           }
         ],
-        "ask": "Which one will you keep?"
+        "ask": "What do you already do every day that a kind habit could stick to?"
       }
     ],
     "after": {
@@ -289,13 +289,13 @@
   ],
   "conclusion": {
     "headline": "They act on kindness without being asked.",
-    "text": "Watch for the next time they stand up, hold a door or help someone before you've said a word. That's the mission becoming who they are.",
-    "celebrate": "When you see them do it on their own, tell them exactly what you saw: 'You noticed he needed a seat, and you gave him yours. That was kind.'",
+    "text": "Keep an eye on the next bus ride or store trip. If they're the one who spots the full hands or the empty seat, and does something about it, the missions have become a habit.",
+    "celebrate": "When you see them do it on their own, say: 'You gave him your seat before anyone asked. That was kind, and it was your idea.'",
     "extensions": [
       "Plan a family kindness day for a neighbour",
       "Find out what a local shelter or food bank needs, and help",
       "Write thank-you notes to people who help your family often",
-      "Ask a grandparent about a kindness a stranger once showed them"
+      "Notice a kindness someone does for you this week, and pass the same one on to someone else"
     ]
   },
   "signs": [

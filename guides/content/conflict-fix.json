@@ -6,7 +6,7 @@
   "ages": "Ages 6 to 14",
   "goal": "Your kids learn to fix a fight, not just end it. They cool down first, tell what happened without blame, own their own part, hear the other side, and agree on a fix, so the same argument about whose turn it is doesn't come back tomorrow.",
   "need": [
-    "A small, real fight, like whose turn it is",
+    "A small, real fight, like whose turn it is, between siblings, friends or you and your kid",
     "A separate spot for each kid to cool down",
     "Paper for the fix, and the fridge to put it on"
   ],
@@ -82,7 +82,7 @@
         "line": "Sorry, a hug, and a plan for whose turn it is."
       }
     ],
-    "modelNote": "In our house, the space and the hug were already working. Owning each part, and fixing the dishes question itself, is what keeps the same fight from starting again tomorrow."
+    "modelNote": "In our house, the space and the hug already end the fight. Owning each part, and settling the dishes question itself, is the piece we're adding, so the same fight doesn't start again tomorrow."
   },
   "steps": [
     {
@@ -105,7 +105,7 @@
       "title": "Tell what happened",
       "why": "Each kid has a different story. Hearing both, from the start, is the only way to get the whole picture.",
       "kid": "One at a time, each kid tells what happened, using the Tell it card: the facts, one feeling word and what they wanted. No interrupting.",
-      "you": "Be the referee of turns, not the judge. Hand a spoon or any object to the one talking: only the one holding it speaks.",
+      "you": "Run the turns. Hand a spoon or any object to the one talking: only the one holding it speaks.",
       "ask": [
         "What happened, from the very start?",
         "How did you feel when that happened?"
@@ -162,7 +162,7 @@
       "levels": {
         "explore": "Pick a way to make up, like a hug, and one idea for next time.",
         "develop": "Write a fix you both agree to, and check it in a few days.",
-        "extend": "Write the fix, check it, and change it if it isn't working."
+        "extend": "Write a fix that would also work for a different fight, and test it on the next one."
       }
     }
   ],
@@ -294,13 +294,13 @@
     "extensions": [
       "Make a family fix plan for the chore you argue about most",
       "Work through a grown-up disagreement out loud, so they see the steps",
-      "Read a story and find each character's part in the conflict",
+      "Practise Hear it at dinner: one person shares an opinion, the next says it back before answering",
       "Use the steps with a friend or teammate, not just a sibling"
     ]
   },
   "signs": [
     "They take space before you have to say it",
-    "They say 'my part was...' without being asked",
+    "They name their own part first, before blaming",
     "The same fight, like whose turn it is, comes back less often"
   ],
   "makeItReal": "Pick the fight that comes back most in your house, like whose turn it is for the dishes. Once everyone is calm, sit down together, run it through the five steps, and put your fix on the fridge.",

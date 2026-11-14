@@ -330,7 +330,7 @@ const TRACKS: Track[] = [
         </em>
       </>
     ),
-    lead: "The skills modern childhood doesn't make space for. Naming a feeling, repairing after a fight, sitting with disappointment, doing hard things alone. Real self-regulation and social skills built one practice at a time.",
+    lead: "The skills modern childhood doesn't make space for. Naming a feeling, fixing a fight, bouncing back from a letdown, doing something on their own for the first time. Real self-regulation and social skills built one practice at a time.",
     ornamentAlt: 'Heart symbol',
     skills: [
       'Self-regulation',

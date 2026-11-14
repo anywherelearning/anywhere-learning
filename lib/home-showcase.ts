@@ -271,14 +271,14 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
     blurb: 'Read a real festival, then write it up.',
   },
   {
-    slug: 'decision-lab',
-    title: 'What Would You Do? Decision Lab',
+    slug: 'calm-down-toolkit',
+    title: 'Calm-Down Toolkit',
     category: 'Emotional & Social Skills',
     color: '#b6748a',
     colorText: '#b6748a',
     time: 'Multi-day',
-    photo: '/products/decision-lab.jpg',
-    blurb: 'Real dilemmas, choices they defend.',
+    photo: '/products/calm-down-toolkit.jpg',
+    blurb: 'Test calm-down tools on a good day.',
   },
   {
     slug: 'big-feelings-lab',

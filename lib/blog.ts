@@ -8572,7 +8572,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '15. Be patient, and keep going' },
       { type: 'paragraph', text: 'Empathy develops slowly and unevenly. A kid can be deeply caring one moment and oblivious the next, and that is normal, not a failure. Keep modeling, keep naming, keep giving them chances to practice. The seeds you plant now often do not visibly bloom until later.' },
 
-      { type: 'product-callout', slug: 'kindness-missions', context: 'A deck of small, real kindness missions that turn empathy into practice, not a lecture. One noticed-and-acted-on moment at a time.', pinned: true },
+      { type: 'product-callout', slug: 'kindness-missions', context: 'Your kid learns to spot small chances to be kind, like a seat someone needs on the bus, and act on them without being asked. Empathy turned into practice, not a lecture, one real mission at a time.', pinned: true },
 
       { type: 'image', src: '/images/teaching-empathy-caring.jpeg', alt: 'An older child gently holding a baby on the couch and showing them a soft book, an unposed moment of care', caption: 'Empathy is caught more than taught. It grows from real moments of noticing and caring, not from being told to be kind.' },
 

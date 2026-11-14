@@ -394,8 +394,8 @@
           "talk": "This is the skill that gets skipped because it doesn't look like \"learning.\" But a kid who can read a room, repair a friendship, and bounce back from a bad day is better prepared for life than a kid who can ace a test but falls apart when things go sideways.",
           "talkNew": false,
           "library": [
-            "The Big Feelings Lab",
-            "The Calm-Down Toolkit",
+            "Big Feelings Lab",
+            "Calm-Down Toolkit",
             "Reading the Room"
           ]
         },
@@ -423,9 +423,9 @@
           "talk": "A kid who \"won't focus\" often just has a task that's too long or too vague. Shrink it: one clear mission, a timer, a finish line. Focus grows from small wins, not from lectures.",
           "talkNew": true,
           "library": [
-            "The Boredom Toolkit",
+            "Boredom Toolkit",
             "Nature Choice Boards",
-            "The Hard Thing Challenge"
+            "Hard Thing Challenge"
           ]
         },
         {
@@ -481,7 +481,7 @@
           "talk": "Kids learn character from what they see you do far more than from what you tell them. Let them see you apologize, help a neighbour, and admit when you got something wrong.",
           "talkNew": true,
           "library": [
-            "The Kindness Missions",
+            "Kindness Missions",
             "World Food Detective",
             "Cultural Celebration Journal"
           ]
@@ -804,9 +804,9 @@
           "talk": "This is the age when emotional intelligence either develops or gets buried under peer pressure and phone habits. A teen who can say \"I'm actually hurt by what happened\" instead of ghosting someone is rare. That skill doesn't happen by accident.",
           "talkNew": false,
           "library": [
-            "The Repair Conversation",
-            "The Worry Sorter",
-            "Be a People Scientist"
+            "Conflict Fix",
+            "Worry Sorter",
+            "People Scientist"
           ]
         },
         {

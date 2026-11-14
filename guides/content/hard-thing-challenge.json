@@ -54,11 +54,11 @@
       },
       {
         "q": "They picked something too big",
-        "a": "Keep the goal and move the finish line: a shorter trail, a shorter song, a smaller first version. Hard, but possible in the time."
+        "a": "Keep the goal and move the finish line: a shorter trail, a shorter song. Hard, but possible in the time."
       },
       {
-        "q": "The hard thing has a physical risk, like bike features or climbing",
-        "a": "The right gear, a progression that starts small, and a grown-up who knows the sport nearby. Skipping a feature they don't feel is a skill, not a failure."
+        "q": "It has a physical risk, like bike jumps",
+        "a": "The right gear, a start that's small, and a grown-up who knows the sport nearby. Skipping a jump they don't feel ready for is a skill, not a failure."
       }
     ]
   },
@@ -76,14 +76,14 @@
       },
       {
         "part": "Skip",
-        "line": "Not today on that chute. She'll try it next time."
+        "line": "Not today on that steep section. She'll try it next time."
       },
       {
         "part": "Finish",
         "line": "Riding black trails, proud, and wanting more."
       }
     ],
-    "modelNote": "The fall didn't mean she couldn't do it. It meant her confidence needed time to catch up with her skill. And skipping one feature on one day was never the same as quitting the summer goal."
+    "modelNote": "The fall didn't mean she couldn't do it. It meant her confidence needed time to catch up with her skill. And skipping one jump on one day was never the same as quitting the summer goal."
   },
   "steps": [
     {
@@ -105,7 +105,7 @@
     {
       "title": "Set the finish line",
       "why": "'Get better at biking' never ends. 'Ride the whole black trail without walking' has a day you'll remember.",
-      "kid": "Your kid writes what done looks like, a date, and three checkpoints on the way, using the Finish line card. For a black trail, that could be a full blue trail, a first rock drop, then the black trail itself.",
+      "kid": "Your kid writes what done looks like, a date, and three checkpoints on the way, using the Finish line card. For a black trail, that could be a full blue trail, a first small jump, then the black trail itself.",
       "you": "Make the first checkpoint reachable in the first week or two. An early win keeps them going when the middle gets hard.",
       "ask": [
         "How will you know you've done it?",
@@ -235,7 +235,7 @@
             "v": "hard days go in the log too"
           }
         ],
-        "ask": "What helps you most on a bad day?"
+        "ask": "Which bad day are you glad you didn't quit on?"
       },
       {
         "name": "Skip, pause or quit?",
@@ -290,12 +290,12 @@
   ],
   "conclusion": {
     "headline": "They did a hard thing, and they know how they did it.",
-    "text": "The next time they say 'I can't do that', ask what their first checkpoint would be. If they start breaking it down, they've learned something bigger than the skill itself.",
-    "celebrate": "At the finish, read one hard day from the log out loud, then say: 'You did this, even after that day. That's what I'm proudest of.'",
+    "text": "A month from now, hand them something new and hard. If they ask what the first checkpoint is, they've learned something bigger than the skill itself.",
+    "celebrate": "The day they cross the finish line, say: 'Remember the day you almost stopped? You did this anyway. That's what I'm proudest of.'",
     "extensions": [
       "Pick a hard thing to do together as a family",
       "Teach someone else your first checkpoint",
-      "Ask a grandparent about a hard thing that took them a long time",
+      "Photograph or film checkpoint one and the finish, and watch them side by side",
       "Choose the next hard thing, a little bigger"
     ]
   },
@@ -313,7 +313,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "This summer, my daughter's hard thing was riding black mountain bike trails. Every time she fell, she got more scared and hesitated more before doing the same things she had done before. Some days she doesn't do a chute or a feature because she doesn't feel it. She gets upset, but she knows she can try next time. By the end of the summer, she was riding black trails. She's so proud of herself, and motivated to do more.",
+    "text": "This summer, my daughter's hard thing was riding black mountain bike trails. Every time she fell, she got more scared and hesitated more before doing the same things she had done before. Some days she doesn't ride a steep section or a jump because she doesn't feel it. She gets upset, but she knows she can try next time. By the end of the summer, she was riding black trails. She's so proud of herself, and motivated to do more.",
     "quotes": []
   },
   "photo": {

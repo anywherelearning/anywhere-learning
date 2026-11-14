@@ -4,7 +4,7 @@
   "title": "Comeback Journal",
   "tagline": "Land · Facts · Focus · Goal · Look back",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid learns what to do after a letdown: a lost game, a flop, a plan that fell through. They let the disappointment land, separate what happened from the story in their head, focus on their own part, set a personal goal for next time, and keep a journal that shows them, over weeks and seasons, how far they've come back.",
+  "goal": "Your kid learns what to do after a letdown: a lost game, a flop, a plan that fell through, things they didn't get to choose. They let the disappointment land, separate what happened from the story in their head, focus on their own part, set a personal goal for next time, and keep a journal that shows them, over weeks and seasons, how far they've come back.",
   "need": [
     "A real letdown, big or small",
     "A notebook that becomes the comeback journal",
@@ -52,11 +52,11 @@
         "a": "Let them vent first. Later, ask: 'And what about your game?' Blame fades when there's something of their own to work on."
       },
       {
-        "q": "They want to quit after one bad day",
-        "a": "Agree not to decide for a few days. A decision made on the day of a letdown often looks different a week later."
+        "q": "They say it's all their fault",
+        "a": "Hand them the Facts or story? card. 'I lost us the game' usually turns into one missed shot in a long game."
       },
       {
-        "q": "It's a big letdown, like a move",
+        "q": "It's a big letdown, like moving house or not making a team",
         "a": "Stay longer in Step 1, and keep the goal tiny. Some letdowns need weeks."
       }
     ]
@@ -136,7 +136,7 @@
     {
       "title": "Set a personal goal",
       "why": "A team result can take years. A personal goal can go better next time, and that's what keeps them going.",
-      "kid": "Your kid picks one small, countable goal for next time, using the Personal goal card: something in their own game, like one more rebound, a full song with no stops, or asking one more customer.",
+      "kid": "Your kid picks one small, countable goal for next time, using the Personal goal card: something in their own game, like one more rebound, a full song with no stops, or asking one more customer at their stand.",
       "you": "Help them make it small enough to reach soon. Next time, ask about the goal before you ask about the result.",
       "ask": [
         "What's one thing you'll try next time?",
@@ -182,8 +182,8 @@
             "v": "cry, go quiet, take a walk"
           },
           {
-            "k": "Wait:",
-            "v": "don't decide anything today"
+            "k": "Comfort:",
+            "v": "a snack, a hug, something easy"
           },
           {
             "k": "Come back:",
@@ -234,7 +234,7 @@
             "v": "how hard other people try"
           }
         ],
-        "ask": "What in your game are you proud of?"
+        "ask": "What on the 'not my game' side do you keep thinking about?"
       },
       {
         "name": "Personal goal",
@@ -256,7 +256,7 @@
             "v": "reached it? set a new one"
           }
         ],
-        "ask": "What's your goal for next time?"
+        "ask": "Is your goal small enough to reach next time?"
       }
     ],
     "after": {
@@ -283,25 +283,25 @@
       "text": "working on their own part"
     },
     {
-      "name": "Goal setting",
+      "name": "Personal goals",
       "text": "small personal goals they can reach"
     }
   ],
   "conclusion": {
     "headline": "A letdown is now the start of a comeback.",
-    "text": "Listen for the moment, after a bad day, when they start talking about their own goal for next time before you've asked. That's the comeback habit taking hold.",
+    "text": "Pay attention to the first thing they say after the next bad day. If it's about their own goal for next time, not the score, the comeback habit is taking hold.",
     "celebrate": "When they hit a personal goal on a day the result still didn't go their way, say: 'You did what you set out to do. That's yours, whatever the score.'",
     "extensions": [
-      "Ask a grandparent about a comeback in their own life",
+      "Write a short note to a friend or teammate after their next letdown, using what you learned",
       "Find a story of an athlete, artist or inventor who failed many times first",
       "Write a letter to your future self to read after the next letdown",
-      "Keep a family comeback page, grown-ups' letdowns included"
+      "Add a page for your own next letdown, and let them help you find the facts"
     ]
   },
   "signs": [
     "They talk about their own game, not only the score",
     "They bounce back from a letdown faster than before",
-    "They set their own goal for next time without being asked"
+    "They set their next goal themselves, the same day"
   ],
   "makeItReal": "After the next letdown, wait a day, then sit down together with the journal. Write the facts, find one thing in their game, and set one small goal for next time.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",

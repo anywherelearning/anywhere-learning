@@ -75,7 +75,7 @@
       },
       {
         "part": "Her",
-        "line": "Paper, pencils, building blocks, a book or music."
+        "line": "Paper, pencils, crafts, building blocks or music."
       },
       {
         "part": "Him",
@@ -88,7 +88,7 @@
     {
       "title": "Wait it out",
       "why": "The empty feeling passes. Kids who learn to wait a few minutes find their own ideas on the other side.",
-      "kid": "When your kid says 'I'm bored', they sit with it for ten minutes without a screen, using the Wait it out card in the Boredom Toolkit at the end of the guide.",
+      "kid": "When your kid says 'I'm bored', they sit with it for ten minutes without a screen, using the Wait it out card in the Bored-Day Cards at the end of the guide.",
       "you": "Say it calmly: 'Ok, that's good. Go find something to do.' Then don't offer ideas, and don't hand over a screen.",
       "ask": [
         "What does bored feel like in your body?",
@@ -108,7 +108,7 @@
       "you": "Watch without commenting, and write down what you notice too. Compare lists later.",
       "ask": [
         "What did you pick up first?",
-        "What made you lose track of time?"
+        "What would you do again tomorrow?"
       ],
       "tip": "Siblings often reach for completely different things. That's the point: each kit should be different.",
       "levels": {
@@ -167,7 +167,7 @@
     }
   ],
   "reference": {
-    "title": "Boredom Toolkit",
+    "title": "Bored-Day Cards",
     "intro": "How to wait it out, what to reach for, and how to keep your kit fresh.",
     "items": [
       {
@@ -212,7 +212,7 @@
             "v": "stories, lists, a journal"
           }
         ],
-        "ask": "What do you reach for first?"
+        "ask": "Which of these have you never reached for?"
       },
       {
         "name": "Kit ideas",
@@ -256,7 +256,7 @@
             "v": "show someone what you made"
           }
         ],
-        "ask": "What's the next thing you'll add?"
+        "ask": "What did you stop using, and why?"
       }
     ],
     "after": {
@@ -283,19 +283,19 @@
       "text": "waiting out the empty feeling"
     },
     {
-      "name": "Self-knowledge",
+      "name": "Knowing their interests",
       "text": "knowing what their brain reaches for"
     }
   ],
   "conclusion": {
     "headline": "'I'm bored' is now the start of something.",
-    "text": "Notice the next rainy day when they head for their kit, or a book, before saying a word to you. That's boredom doing its job.",
+    "text": "On the next rainy afternoon, time how long 'I'm bored' lasts before they're busy with something. When it's down to a few minutes, boredom is doing its job.",
     "celebrate": "When something good comes out of a boring day, name it: 'That drawing started with you being bored. Look what you made.'",
     "extensions": [
       "Make a travel-size kit for car rides and waiting rooms",
       "Have a family 'nothing planned' afternoon, grown-ups included",
       "Start a long project from the kit, like a comic, a song or a model",
-      "Ask a grandparent what they did when they were bored as a kid"
+      "Spend one bored hour somewhere new, like a park or a waiting room, with only what's in your pockets"
     ]
   },
   "signs": [
@@ -303,7 +303,7 @@
     "They start projects on their own",
     "They ask for screens less on rainy days"
   ],
-  "makeItReal": "The next time you hear 'I'm bored', say 'Ok, that's good, go find something to do', then go do something of your own nearby, and see what they come up with.",
+  "makeItReal": "The next time you hear 'I'm bored', point to the kit, go start something of your own nearby, and ask at dinner what they made.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

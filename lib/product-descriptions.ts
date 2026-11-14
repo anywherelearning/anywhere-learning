@@ -2559,7 +2559,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'boredom-toolkit': {
     opening:
-      'Your kid learns that "I\'m bored" is the start of something, not a problem to fix. They wait out the empty feeling, notice what their own brain reaches for, build a kit of materials and ideas from home and use it on a real rainy day with no screens and no one to play with.',
+      'Your kid learns that boredom is the start of something, not a problem to fix. They wait out the empty feeling, notice what their own brain reaches for, build a kit of materials and ideas from home and use it on a real rainy day with no screens and no one to play with.',
     whatsIncluded: [
       'Five steps, from waiting it out to keeping the kit fresh',
       'Wait it out, What I reach for, Kit ideas and Keep it fresh cards',
@@ -2779,7 +2779,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Your kid takes on real-world things they have never done without you, like paying at a store, taking the city bus or walking home. They prepare what to say and do, practise once together, then go and level up one small step at a time, at their own pace.',
     whatsIncluded: [
       'Five steps, from picking the mission to levelling up',
-      'Mission ideas, Prepare it, Practise and Levels cards',
+      'Solo ideas, Prepare it, Practise and Stages cards',
       'A worked example: a first city bus ride at 10, with her brother',
       'My solo mission log, including a place to write not yet',
       'Three levels per step, from ages 6 to 14',
@@ -3312,7 +3312,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Your kid runs the scientific method on everyday people, with small, kind experiments. They notice a pattern, predict what will happen, test it with something friendly like saying hi first, count the results honestly and figure out why people reacted the way they did.',
     whatsIncluded: [
       'Five steps, from noticing a pattern to explaining the results',
-      'Questions to test, Make a prediction, Kind tests and Reactions to count cards',
+      'Questions to test, Make a prediction, Kind tests, Reactions to count and Explain it cards',
       'A worked example: saying hi first on a path where people looked down',
       'My people experiment page, for the prediction, tallies and explanation',
       'Three levels per step, from ages 6 to 14',

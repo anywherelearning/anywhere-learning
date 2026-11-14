@@ -111,7 +111,7 @@
         "Where do you feel nervous?",
         "Which feeling lives in your stomach?"
       ],
-      "tip": "Keep the word list somewhere they can see it. A word they can read is easier to reach for than one they have to remember.",
+      "tip": "If they can't place a feeling, ask them to act it out. Where the body tightens is usually the answer.",
       "levels": {
         "explore": "Colour where you feel happy and where you feel scared on the outline.",
         "develop": "Map your top five feelings on the body, with a colour for each.",
@@ -136,7 +136,7 @@
     },
     {
       "title": "Size it, and let it pass",
-      "why": "Knowing a feeling is normal, and that it gets smaller on its own, takes away half its power.",
+      "why": "Knowing a feeling is normal, and that it gets smaller on its own, takes away a lot of its power.",
       "kid": "Next time a big feeling comes and goes, your kid rates its size on the Size it card, from tiny to huge, then rates it again a little later. They notice that it shrank, even without fixing anything.",
       "you": "Name it, then say it's normal: 'That sounds like nervous. Everybody feels that before something new.' Then wait, and let the feeling move through without rushing to solve it.",
       "ask": [
@@ -307,12 +307,12 @@
   "conclusion": {
     "headline": "They can name what they feel, and they know it's normal.",
     "text": "The next time they say 'I'm tired' before something new, ask where they feel it. If they answer 'my stomach, I think I'm nervous', they're reading their own body now.",
-    "celebrate": "When they name a feeling on their own, say: 'You figured out what was really going on. That's not easy, even for grown-ups.'",
+    "celebrate": "When they name a feeling on their own, say: 'You found the real feeling under the word. That takes practice.'",
     "extensions": [
       "Read a story together and name what each character is feeling, and how you can tell",
       "Find the feeling words in another language you're learning",
       "Make a family feelings check-in at dinner: one word each, no fixing",
-      "Notice a feeling in someone else, and ask them about it instead of guessing"
+      "Draw a feelings weather report for the family once a week, one picture each"
     ]
   },
   "signs": [
@@ -320,7 +320,7 @@
     "They mention a body clue: 'my stomach feels funny'",
     "They tell you a feeling before it turns into a meltdown"
   ],
-  "makeItReal": "Before the next new thing, like a class, a trip or a first day, ask them to check their body and name what they feel. Then tell them it's normal, and go together.",
+  "makeItReal": "Before the next new thing, like a new activity, a trip or meeting new people, ask them to check their body and name what they feel. Then tell them it's normal, and go together.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

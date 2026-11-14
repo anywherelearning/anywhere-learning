@@ -4,7 +4,7 @@
   "title": "Reading the Room",
   "tagline": "Spot · Guess · Check · Match · Act",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid learns to notice how the people and places around them are doing. They spot the clues in faces, voices and rooms, guess the mood, check it with one kind question, match their voice and energy to it, and then do something about it, like the day they noticed you weren't okay and made dinner.",
+  "goal": "Your kid learns to notice how the people and places around them are doing. They spot the clues in faces, voices and rooms, guess the mood, check it with one kind question, match their voice and energy to it, and then do something about it, like taking over dinner when someone at home is sick.",
   "need": [
     "Everyday places: home, a café, a park, a museum",
     "A notebook for the room reading log",
@@ -53,7 +53,7 @@
       },
       {
         "q": "They notice, but don't do anything",
-        "a": "Start with tiny actions: a glass of water, a quieter voice, a seat saved. Thank them every time."
+        "a": "Start with tiny actions: a quieter voice, giving space, a glass of water. Thank them every time."
       },
       {
         "q": "They worry about every face",
@@ -63,7 +63,7 @@
   },
   "lesson": {
     "text": "Reading the room has three parts: noticing the clues, checking what they mean, and doing something about it. Most kids stop at the first part. The ones who check and act are the ones people feel cared for by.",
-    "before": "'Dinner's coming. It always does.'",
+    "before": "'Mom's in the kitchen, so dinner's on its way.'",
     "model": [
       {
         "part": "Spot",
@@ -130,13 +130,13 @@
       "levels": {
         "explore": "Ask someone in your family, 'Are you okay?' when you notice something.",
         "develop": "Check one guess a day for a week, and write what you found out.",
-        "extend": "Check, then ask a second question: 'Do you want help or space?'"
+        "extend": "Check with someone outside the family, like a friend who's gone quiet, and ask 'Is now a good time?' first."
       }
     },
     {
       "title": "Match it",
       "why": "Every place has its own volume, pace and mood. Matching it shows the people around you that you noticed.",
-      "kid": "Your kid adjusts their voice, speed and energy to the room, using the Match it card: quieter and slower in a palace or a library, louder at a game, gentle at home when someone's sick.",
+      "kid": "Your kid adjusts their voice, speed and energy to the room, using the Match it card: quieter and slower in a museum or a library, louder at a game, gentle at home when someone's sick.",
       "you": "Name it afterwards when they did it on their own: 'You got quieter as soon as we walked in.' Kids keep what gets noticed.",
       "ask": [
         "What should your voice be like in here?",
@@ -144,7 +144,7 @@
       ],
       "tip": "Matching isn't faking. It's a way of showing respect for the people and the place.",
       "levels": {
-        "explore": "Show a parent your palace voice, your park voice and your sick-day voice.",
+        "explore": "Show a parent your museum voice, your park voice and your sick-day voice.",
         "develop": "Walk into a new place, and match the volume and speed of the room.",
         "extend": "Notice when a joke stops being funny for someone, and stop it yourself."
       }
@@ -153,12 +153,12 @@
       "title": "Act on it",
       "why": "The best readers don't just notice. They do one small thing about it.",
       "kid": "When your kid reads that someone needs something, they act: help, give space, or include someone. They write each one in My room reading log at the end of the guide.",
-      "you": "Let them take over sometimes, even when you could do it yourself. Then thank them for exactly what they did.",
+      "you": "Let them take over sometimes, even when you could do it yourself. Then thank them for the specific thing they did.",
       "ask": [
         "What would help them right now?",
         "Should you help, or give them space?"
       ],
-      "tip": "Small acts count: a glass of water, a quieter voice, a seat saved for someone new.",
+      "tip": "Acting can be as small as stepping out of the way, or as big as taking over dinner.",
       "levels": {
         "explore": "Do one small thing for someone who looks tired or sad.",
         "develop": "Act on one reading each day for a week, and log it.",
@@ -290,16 +290,16 @@
   "conclusion": {
     "headline": "They notice how people are doing, and do something about it.",
     "text": "Watch for the next time they lower their voice in a new place, or ask someone if they're okay, before you've said a word. That's the skill working on its own.",
-    "celebrate": "When they read someone and act on it, say exactly what you saw: 'You noticed I wasn't well, and you made dinner. That meant so much to me.'",
+    "celebrate": "When they read someone and act on it, tell them what it meant to you: 'You noticed I wasn't well, and you made dinner. That meant so much to me.'",
     "extensions": [
       "Watch a show with the sound off, and guess each character's mood",
       "Visit a place with different rules, like a temple, a market or a library, and read it together",
-      "Notice one person each day who might need something",
-      "Ask a grandparent which places had special rules when they were young"
+      "Read a room in a new country or culture, and find one thing that's done differently there",
+      "Before a place you'll visit soon, look up how people behave there, and predict the room before you walk in"
     ]
   },
   "signs": [
-    "They ask 'Are you okay?' without being prompted",
+    "They ask 'Are you okay?' when someone at home goes quiet",
     "They change their voice in a new place on their own",
     "They notice when a joke has stopped being funny"
   ],

@@ -57,7 +57,7 @@
       },
       {
         "q": "Is this safe with strangers?",
-        "a": "Keep experiments to a friendly hi, a smile or a held door, in public places, with you right there. No personal questions, no following anyone."
+        "a": "Keep experiments to a friendly hi, a smile or a wave, in public places, with you right there. No personal questions, no following anyone."
       }
     ]
   },
@@ -105,7 +105,7 @@
       "title": "Predict what will happen",
       "why": "A prediction written down before the test is what makes it science, not a guess after the fact.",
       "kid": "Your kid turns the pattern into a prediction, using the Make a prediction card: 'If I say hi first, about half of the people will answer.'",
-      "you": "Make your own prediction too, and write both down. Comparing them afterwards is half the fun.",
+      "you": "Make your own prediction too, and write both down. Comparing them afterwards is the fun part.",
       "ask": [
         "What do you think will happen?",
         "Out of ten people, how many?"
@@ -120,7 +120,7 @@
     {
       "title": "Run a kind test",
       "why": "The test only works if it's the same every time, and kind every time.",
-      "kid": "Your kid does one small, friendly thing to each person they cross, the same way every time, using the Kind tests card: say hi, smile, hold a door or wave.",
+      "kid": "Your kid does one small, friendly thing to each person they cross, the same way every time, using the Kind tests card: say hi, smile, nod or wave.",
       "you": "Stay right beside them. Keep it to public places and quick, friendly moments, nothing more.",
       "ask": [
         "Are you doing it the same way each time?",
@@ -182,8 +182,8 @@
             "v": "do people smile back?"
           },
           {
-            "k": "Doors:",
-            "v": "do people hold the door for the next person?"
+            "k": "Wave:",
+            "v": "do people wave back from a bike or a porch?"
           },
           {
             "k": "Places:",
@@ -226,15 +226,15 @@
             "v": "a real one, eyes too"
           },
           {
-            "k": "Hold the door:",
-            "v": "for the person behind you"
+            "k": "Nod:",
+            "v": "a small nod as you pass"
           },
           {
             "k": "Never:",
             "v": "follow, ask personal questions or trick anyone"
           }
         ],
-        "ask": "What's the kindest test you can think of?"
+        "ask": "Which test are you too shy to try yet?"
       },
       {
         "name": "Reactions to count",
@@ -256,7 +256,29 @@
             "v": "how many people in all"
           }
         ],
-        "ask": "Which reaction surprised you most?"
+        "ask": "Which reaction is hardest to count fairly?"
+      },
+      {
+        "name": "Explain it",
+        "lines": [
+          {
+            "k": "Kind:",
+            "v": "the kindest reason that fits the numbers"
+          },
+          {
+            "k": "Habit:",
+            "v": "maybe it's just not done here"
+          },
+          {
+            "k": "Place:",
+            "v": "busy street, quiet path, time of day"
+          },
+          {
+            "k": "Test it:",
+            "v": "a new test that could prove it"
+          }
+        ],
+        "ask": "Which reason could you test next?"
       }
     ],
     "after": {
@@ -289,13 +311,13 @@
   ],
   "conclusion": {
     "headline": "They see people as a question, not a verdict.",
-    "text": "Listen for the next time they notice something strange about how people act, and start with 'I wonder if...' instead of 'People are so...'. That's a scientist talking.",
+    "text": "On your next trip somewhere new, see whether they start with 'I wonder if...' instead of 'People here are so...'. That's a scientist talking.",
     "celebrate": "When they explain a result kindly, say: 'You didn't decide they were rude. You found out why. That's what scientists do.'",
     "extensions": [
-      "Run the same test at home and somewhere new, and compare",
-      "Test a second kind act, like holding a door, and count the results",
+      "Repeat your first test in six months, and see if your prediction gets closer",
+      "Run your test at two times of day, like morning and evening, and compare",
       "Make a bar graph of all your experiments on one page",
-      "Ask a grandparent if people said hi more or less when they were young"
+      "Share your results at dinner, and have everyone predict the numbers before you reveal them"
     ]
   },
   "signs": [

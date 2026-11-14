@@ -50,11 +50,11 @@
     "troubleshoot": [
       {
         "q": "Everything goes in the 'not mine' pile",
-        "a": "Look for the half that's theirs. They can't control who wins the game, but they can control how they practise and what they do if they lose."
+        "a": "Find the half that's theirs. They can't control the dentist, but they can brush tonight and ask questions."
       },
       {
-        "q": "The worry is about something serious, like a sick grandparent",
-        "a": "Don't rush to sort it. Listen first, tell them what's true at their level, and look for one small thing they can do, like a call or a card. If worries start taking over their days, talk to your doctor."
+        "q": "It's something serious, like a sick grandparent",
+        "a": "Listen first, and find one small thing they can do, like a call or a card. If worries take over their days, talk to your doctor."
       },
       {
         "q": "The worry comes back at bedtime",
@@ -137,7 +137,7 @@
     {
       "title": "Plan their part",
       "why": "A worry with a plan feels smaller, because the kid knows what they'll do instead of waiting to see what happens.",
-      "kid": "For each worry in the 'mine' bowl, your kid picks one small thing to do before or during it, from the My part card: hold on to something steady, slow down, breathe slowly, ask a question, get ready ahead of time.",
+      "kid": "For each worry in the 'mine' bowl, your kid picks one small thing to do before or during it, from the My part card: hold on to something steady, slow down, count the steps, ask a question, get ready ahead of time.",
       "you": "Practise the plan once, for real, on a calm day. Walk slowly down the stairs holding the rail, or ask the question together. A plan they've tried is one they'll use.",
       "ask": [
         "What's one thing you could do before it starts?",
@@ -163,7 +163,7 @@
       "levels": {
         "explore": "After it's over, tell a parent what happened and draw a face for how it went.",
         "develop": "Fill in My worry check after the event.",
-        "extend": "Fill in three worry checks over a few weeks, and look for a pattern in what you worried about and what happened."
+        "extend": "Fill in a worry check, then write what you'd tell yourself before the next one."
       }
     }
   ],
@@ -210,7 +210,7 @@
           },
           {
             "k": "Both:",
-            "v": "a game: the score isn't mine, my effort is"
+            "v": "a sleepover: their house isn't mine, what I bring and ask is"
           }
         ],
         "ask": "Which worry tore in half?"
@@ -227,8 +227,8 @@
             "v": "one step at a time"
           },
           {
-            "k": "Breathe:",
-            "v": "slowly, longer out than in"
+            "k": "Count:",
+            "v": "steps, stairs or minutes left"
           },
           {
             "k": "Ask:",
@@ -298,9 +298,9 @@
     "celebrate": "When they do their part of a worry, say: 'You couldn't change all of it, and you still did your part. That took courage.'",
     "extensions": [
       "Sort a family worry together, like a long travel day, and split the jobs",
-      "Read a story and sort a character's worries into mine and not mine",
+      "Make a 'later' envelope for bedtime worries, and open it together each morning for a week",
       "Reread the old worry checks before the next big new thing",
-      "Ask a grandparent about a worry they had at your age, and how it turned out"
+      "Write a worry on a slip, seal it, and open it in a month to see how it turned out"
     ]
   },
   "signs": [
