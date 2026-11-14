@@ -54,7 +54,7 @@ const catalog = [
   { slug: 'build-ai-helper', name: 'Build Your Own AI Helper', priceCents: 599, description: 'Design and prototype an AI tool that solves a real problem.' },
   { slug: 'create-with-ai', name: 'Create with AI, Ethically', priceCents: 599, description: 'Use AI as a creative partner while understanding the ethics.' },
   { slug: 'deepfake-spotter', name: 'Deepfake & Manipulation Spotter', priceCents: 599, description: 'Spot manipulated media and understand deepfake technology.' },
-  { slug: 'hallucination-detective', name: 'Hallucination Detective', priceCents: 599, description: 'Catch when AI gets things wrong. Fact-check AI outputs.' },
+  { slug: 'hallucination-detective', name: 'Hallucination Detective', priceCents: 599, description: 'AI literacy for kids ages 6-14: ask two or three AI tools the same question, compare the answers, check real sources and catch the AI when it bluffs.' },
   { slug: 'healthy-tech-boundaries', name: 'Healthy Tech & AI Boundaries', priceCents: 599, description: 'Build healthy boundaries with technology and AI tools.' },
   { slug: 'privacy-footprint', name: 'Privacy & Digital Footprint Map', priceCents: 599, description: 'Understand and manage your digital footprint and privacy.' },
   { slug: 'prompt-like-a-coach', name: 'Prompt Like a Coach', priceCents: 599, description: 'Master the art of talking to AI effectively.' },

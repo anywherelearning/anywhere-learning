@@ -83,7 +83,7 @@ export const TERRITORIES: readonly Territory[] = [
       ],
     },
     activities: [
-      'media-info-check', 'three-ais-one-question', 'bias-fairness-lab',
+      'media-info-check', 'bias-fairness-lab',
       'hallucination-detective', 'deepfake-spotter', 'algorithm-awareness', 'supply-chain-detective',
     ],
   },
@@ -164,7 +164,7 @@ export const TERRITORIES: readonly Territory[] = [
       'media-info-check', 'complaint-to-product', 'what-if-scenario-lab', 'rube-goldberg-machine',
       'decomposition-detective', 'supply-chain-detective', 'seed-travelers', 'hallucination-detective',
       'family-debate-night', 'bias-fairness-lab', 'comeback-journal',
-      'pricing-experiment', 'camouflage-challenge', 'problem-solver', 'three-ais-one-question',
+      'pricing-experiment', 'camouflage-challenge', 'problem-solver',
     ],
   },
   {
@@ -190,7 +190,7 @@ export const TERRITORIES: readonly Territory[] = [
     activities: [
       'ai-basics', 'prompt-like-a-coach', 'create-with-ai', 'build-ai-helper', 'privacy-footprint',
       'deepfake-spotter', 'healthy-tech-boundaries', 'algorithm-awareness', 'media-info-check',
-      'hallucination-detective', 'three-ais-one-question',
+      'hallucination-detective',
     ],
   },
   {
@@ -484,7 +484,6 @@ const PRIMARY_AREA_OVERRIDE: Record<string, string> = {
   'algorithm-awareness': 'ai-digital',
   'deepfake-spotter': 'ai-digital',
   'hallucination-detective': 'ai-digital',
-  'three-ais-one-question': 'ai-digital',
   'bias-fairness-lab': 'ai-digital',
   'prompt-like-a-coach': 'ai-digital',
   // Entrepreneurship activities → a more business-forward lead than the

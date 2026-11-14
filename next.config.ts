@@ -121,6 +121,9 @@ const nextConfig: NextConfig = {
       { source: "/shop/disappointment-lab", destination: "/shop/comeback-journal", permanent: true },
       { source: "/shop/repair-conversation", destination: "/shop/conflict-fix", permanent: true },
 
+      // Retired Nov 2026: AI & Digital pass.
+      { source: "/shop/three-ais-one-question", destination: "/shop/hallucination-detective", permanent: true },
+
       // Retired Nov 2026: Worldschooling pass.
       { source: "/shop/currency-market-math", destination: "/shop/farmers-market-challenge", permanent: true },
       { source: "/shop/people-stories-interview", destination: "/shop/neighbourhood-interview", permanent: true },

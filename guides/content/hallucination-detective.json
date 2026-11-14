@@ -1,0 +1,315 @@
+{
+  "slug": "hallucination-detective",
+  "category": "AI & Digital",
+  "title": "Hallucination Detective",
+  "tagline": "Ask · Compare · Spot · Check · Decide",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns that AI can sound sure and still be wrong. They ask two or three AI tools the exact same question, compare the answers, spot where they disagree or make things up, check against real sources, and decide on an answer of their own that they can actually trust.",
+  "need": [
+    "A grown-up's account on two or three AI tools (most are 13+)",
+    "A question you really want answered",
+    "A notebook or a shared screen to compare answers"
+  ],
+  "academics": [
+    {
+      "subject": "Reading",
+      "text": "comparing answers line by line"
+    },
+    {
+      "subject": "Research",
+      "text": "checking claims against real sources"
+    },
+    {
+      "subject": "Thinking",
+      "text": "telling a fact from a confident guess"
+    },
+    {
+      "subject": "Digital literacy",
+      "text": "why AI makes mistakes, and how to catch them"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is treating the first AI answer as the answer. Your job is to sit at the keyboard with them, ask the same question more than once, and make 'how do we know?' the habit.",
+    "plan": [
+      {
+        "when": "One sitting, together",
+        "what": "Pick the question, ask the AIs and compare (Steps 1 to 3)."
+      },
+      {
+        "when": "The same day",
+        "what": "Check the facts and decide (Steps 4 and 5)."
+      },
+      {
+        "when": "Later, if you can",
+        "what": "Test the answer in real life."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "The AIs all agree",
+        "a": "Still check one claim. Agreeing isn't the same as right: they may have learned the same mistake."
+      },
+      {
+        "q": "Your kid is too young for an AI account",
+        "a": "You type, they ask. Read the answers out loud, and let them be the detective who spots the differences."
+      },
+      {
+        "q": "They want to trust it anyway",
+        "a": "Find one wrong or made-up detail together. One clear miss is more convincing than any warning."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "AI tools write answers that sound sure, even when they're guessing, and two tools can give two different answers to the same question. Asking more than one, comparing them and checking with real sources is how you find out what's true.",
+    "before": "'The AI said it, so it must be right.'",
+    "model": [
+      {
+        "part": "Asked",
+        "line": "Claude and ChatGPT: list the Universal rides by motion sickness."
+      },
+      {
+        "part": "Different",
+        "line": "Different orders, and different categories."
+      },
+      {
+        "part": "Checked",
+        "line": "Combined the two, then asked Google's AI for a third opinion."
+      },
+      {
+        "part": "Decided",
+        "line": "Rode them ourselves. Mom got motion sick."
+      }
+    ],
+    "modelNote": "Neither list was the whole truth. Comparing them gave a rough idea, and riding the rides gave the real answer, at least for our own stomachs."
+  },
+  "steps": [
+    {
+      "title": "Pick a question",
+      "why": "The best questions have an answer you can check. Opinions are hard to fact-check.",
+      "kid": "Your kid picks a question they really want answered, with an answer you can check later, using the Good questions card in the Detective Toolkit at the end of the guide.",
+      "you": "Help them choose something real: a trip you're planning, an animal fact, a place you'll visit. Real questions make the checking matter.",
+      "ask": [
+        "What do you really want to know?",
+        "How could we check the answer?"
+      ],
+      "tip": "Ranking, listing and 'how many' questions are great. AIs often disagree on them.",
+      "levels": {
+        "explore": "Pick a question about something you can see or visit, with a parent.",
+        "develop": "Write a question with a checkable answer.",
+        "extend": "Write a tricky question, like a ranking or a list, that AIs might disagree on."
+      }
+    },
+    {
+      "title": "Ask more than one AI",
+      "why": "One answer can't be checked against anything. Two or three answers can be checked against each other.",
+      "kid": "Your kid asks two or three AI tools the exact same question, word for word, and saves or copies each answer.",
+      "you": "Type it for younger kids. Make sure the question is the same in each tool, and never include personal details like your address or full name.",
+      "ask": [
+        "Did we ask them all the exact same thing?",
+        "Which answer sounds most sure of itself?"
+      ],
+      "tip": "Copy the question once and paste it into each tool, so the words are exactly the same.",
+      "levels": {
+        "explore": "Listen while a parent reads two answers out loud.",
+        "develop": "Ask two AI tools the same question, and save both answers.",
+        "extend": "Ask three tools, then ask one of them again and see if its answer changes."
+      }
+    },
+    {
+      "title": "Compare the answers",
+      "why": "Where AIs agree is a starting point. Where they disagree is where to look harder.",
+      "kid": "Your kid puts the answers side by side and marks what's the same, what's different, and anything only one AI says, using the Compare card.",
+      "you": "Read them together, one line at a time. Point out when the order, the numbers or the groups change from one tool to another.",
+      "ask": [
+        "What do they all agree on?",
+        "What does only one of them say?"
+      ],
+      "tip": "Look at how the answers are organized too. If each AI invents different categories, none of them is reading from a real list.",
+      "levels": {
+        "explore": "Find one thing that's the same and one that's different.",
+        "develop": "Mark every agree, disagree and only-one-says on both answers.",
+        "extend": "Make a table: each claim, which AIs said it, and how sure they sounded."
+      }
+    },
+    {
+      "title": "Spot the bluff, and check it",
+      "why": "AI can make up details that sound real. Checking with real sources is how you catch them.",
+      "kid": "Your kid looks for signs of bluffing using the Spot the bluff card, then checks the claims they doubt against real sources from the Check it card, like an official website or a video.",
+      "you": "Show them how to find the official source first. Then ask: 'Does this match what the AI said?'",
+      "ask": [
+        "Which claim are you least sure about?",
+        "What does the official source say?"
+      ],
+      "tip": "Check the claim that matters most, not every word. For rides, that might be which one spins and which one drops.",
+      "levels": {
+        "explore": "Look at a picture or video together to check one claim.",
+        "develop": "Check three claims against a real source, and mark them true, false or unsure.",
+        "extend": "Find a claim that one AI got wrong, and explain why it might have made the mistake."
+      }
+    },
+    {
+      "title": "Decide your own answer",
+      "why": "The goal isn't to find the best AI. It's to end up with an answer you can trust, and to know why.",
+      "kid": "Your kid writes their own answer in a notebook: what the AIs said, what they checked, what they decided, and how sure they are.",
+      "you": "If you can test it in real life, do. Riding the ride, visiting the place or trying the recipe is the best fact-check there is.",
+      "ask": [
+        "What's your answer now?",
+        "How sure are you, and why?"
+      ],
+      "tip": "'I'm not sure yet' is a great answer when the sources disagree. It means they're thinking, not copying.",
+      "levels": {
+        "explore": "Say your answer, and one way you checked it.",
+        "develop": "Write your answer, what you checked, and how sure you are.",
+        "extend": "Fill it in, then test the answer in real life if you can, and add what you found."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Detective Toolkit",
+    "intro": "Good questions to ask, signs of a bluff, and how to check what's true.",
+    "items": [
+      {
+        "name": "Good questions",
+        "lines": [
+          {
+            "k": "Rankings:",
+            "v": "'List these from calmest to wildest.'"
+          },
+          {
+            "k": "Numbers:",
+            "v": "'How tall? How far? How many?'"
+          },
+          {
+            "k": "Places:",
+            "v": "'What's at this park or museum?'"
+          },
+          {
+            "k": "Facts:",
+            "v": "'What do these animals eat?'"
+          }
+        ],
+        "ask": "Which kind of question would trip up an AI?"
+      },
+      {
+        "name": "Compare",
+        "lines": [
+          {
+            "k": "Same:",
+            "v": "they all say it"
+          },
+          {
+            "k": "Different:",
+            "v": "the order, the numbers, the groups"
+          },
+          {
+            "k": "Only one:",
+            "v": "a claim only one AI makes"
+          },
+          {
+            "k": "Missing:",
+            "v": "something one AI left out"
+          }
+        ],
+        "ask": "Which difference surprised you most?"
+      },
+      {
+        "name": "Spot the bluff",
+        "lines": [
+          {
+            "k": "Too sure:",
+            "v": "no 'maybe', even on hard questions"
+          },
+          {
+            "k": "Too exact:",
+            "v": "precise numbers with no source"
+          },
+          {
+            "k": "Changes:",
+            "v": "a different answer when you ask again"
+          },
+          {
+            "k": "Made up:",
+            "v": "names, places or quotes you can't find anywhere"
+          }
+        ],
+        "ask": "Which sign is easiest to miss?"
+      },
+      {
+        "name": "Check it",
+        "lines": [
+          {
+            "k": "Official:",
+            "v": "the park, museum or company's own site"
+          },
+          {
+            "k": "See it:",
+            "v": "a photo or video of the real thing"
+          },
+          {
+            "k": "Two sources:",
+            "v": "two sites that don't copy each other"
+          },
+          {
+            "k": "Real life:",
+            "v": "try it, visit it, ask someone who knows"
+          }
+        ],
+        "ask": "Which check would you trust the most?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Fact-checking",
+      "text": "real sources over confident answers"
+    },
+    {
+      "name": "Comparing",
+      "text": "seeing where answers agree and differ"
+    },
+    {
+      "name": "Healthy doubt",
+      "text": "'How do we know?' as a habit"
+    },
+    {
+      "name": "AI know-how",
+      "text": "why AI sounds sure even when it's wrong"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know AI can be wrong, and how to check it.",
+    "text": "Pay attention to the next time AI answers a question at your house. If they say 'let's ask another one' or 'where's the official site?', the detective habit has stuck.",
+    "celebrate": "When they catch an AI mistake, say: 'Good catch. You didn't just believe it, you checked.'",
+    "extensions": [
+      "Ask the same AI the same question a week later, and compare its two answers",
+      "Ask an AI about your own town, and check what it gets right and wrong",
+      "Ask an AI for its sources, then check whether those sources really exist",
+      "Plan a family outing with AI help, then check every detail before you go"
+    ]
+  },
+  "signs": [
+    "They ask a second AI before trusting the first",
+    "They look for the official source on their own",
+    "They say 'I'm not sure yet' when answers disagree"
+  ],
+  "makeItReal": "Next time your family uses AI to plan something, like a trip, a day out or a recipe, ask two tools the same question together, compare, and check one detail before you go.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "Before a trip to Universal, we asked Claude and ChatGPT to list all the rides by motion sickness. We didn't get the same answers: the order was different, and so were the categories they made up. So we combined the two to get a kind of average, and asked Google's AI for a third opinion. Then we had an idea, and we tried the rides ourselves to make up our own minds. I did get motion sick.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/hallucination-detective.jpg",
+    "alt": "A brother and sister sitting in a brightly painted tuk-tuk at a theme park",
+    "caption": "Checking the AI's ride list in real life.",
+    "tall": true
+  }
+}

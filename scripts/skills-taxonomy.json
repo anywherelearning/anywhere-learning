@@ -149,11 +149,13 @@
     },
     "hallucination-detective": {
       "canonical": [
+        "AI Literacy",
         "Critical Thinking",
-        "Writing"
+        "Research",
+        "Media Literacy"
       ],
       "families": [
-        "Communication & Writing",
+        "Tech & Digital",
         "Critical Thinking & Reasoning"
       ]
     },

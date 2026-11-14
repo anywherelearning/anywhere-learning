@@ -1413,21 +1413,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'hallucination-detective': {
     opening:
-      'Investigation activities that teach kids to spot when AI gets things wrong. Kids learn about AI hallucinations, practise verifying AI outputs, understand why AI makes confident mistakes, and develop the habit of always checking before trusting. Healthy scepticism for the AI age.',
+      'Your kid learns that AI can sound sure and still be wrong. They ask two or three AI tools the exact same question, compare the answers, spot where they disagree or make things up, check against real sources and decide on an answer of their own they can trust.',
     whatsIncluded: [
-      'What AI hallucinations are and why they happen',
-      'Fact-checking AI outputs: practical techniques',
-      'Why AI sounds confident even when wrong',
-      'Verification habit building',
-      'Real examples of AI mistakes to investigate',
+      'Five steps, from picking a real question to deciding your own answer',
+      'Good questions, Compare, Spot the bluff and Check it cards',
+      'A worked example: two AIs ranking theme park rides by motion sickness',
+      'A safe setup: a grown-up\'s account, no personal details in prompts',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['STEM', 'Critical Thinking', 'AI Literacy', 'Research', 'Verification'],
+    skillTags: ['AI Literacy', 'Critical Thinking', 'Research', 'Media Literacy', 'Healthy Skepticism'],
     insideTheLearning: {
       lead:
-        'Your child gets an AI to state something confidently and wrong, then proves it. That is the whole hook. They cross-check sources, learn why a system sounds certain when it has no idea, and build the habit of verifying before believing.',
+        'AI tools write answers that sound sure, even when they are guessing, and two tools can give two different answers to the same question. Your kid learns to ask more than one, compare, check the claims that matter against real sources, and end with an answer they can trust.',
       skills: [
-        { skill: 'Critical Thinking', where: 'Healthy scepticism plus real verification, cross-checking a claim against other sources' },
-        { skill: 'Writing', where: 'Asking better follow-up questions and revising their own work into a second version' },
+        { skill: 'AI Literacy', where: 'Seeing why AI sounds confident even when it is wrong' },
+        { skill: 'Critical Thinking', where: 'Comparing answers and spotting what only one AI claims' },
+        { skill: 'Research', where: 'Checking claims against official sites, photos and videos' },
+        { skill: 'Media Literacy', where: 'Spotting the signs of a bluff: too sure, too exact, made up' },
+        { skill: 'Healthy Skepticism', where: 'Making how do we know a habit, not a worry' },
       ],
     },
     format: 'Project Guide',
