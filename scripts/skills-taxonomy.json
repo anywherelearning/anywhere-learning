@@ -188,13 +188,15 @@
     },
     "prompt-like-a-coach": {
       "canonical": [
+        "AI Literacy",
+        "Writing",
         "Communication",
-        "Critical Thinking",
-        "Writing"
+        "Creative Thinking"
       ],
       "families": [
+        "Tech & Digital",
         "Communication & Writing",
-        "Critical Thinking & Reasoning"
+        "Creativity & Making"
       ]
     },
     "media-info-check": {

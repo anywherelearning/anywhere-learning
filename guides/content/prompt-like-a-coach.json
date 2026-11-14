@@ -1,0 +1,341 @@
+{
+  "slug": "prompt-like-a-coach",
+  "category": "AI & Digital",
+  "title": "Prompt Like a Coach",
+  "tagline": "Picture · Describe · Coach · Reset · Finish",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns to get what they actually want from AI, by talking to it like a coach talks to a player: a clear picture first, clear words, then one change at a time. They make something real, like the pictures for a story they wrote, and learn when to start fresh, when to rest, and when good enough is good enough.",
+  "need": [
+    "A grown-up's account on an AI image or chat tool",
+    "A real project that needs pictures or words, like a story",
+    "Paper to sketch or list what they want first",
+    "Patience, for you and for them"
+  ],
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "clear, precise descriptions"
+    },
+    {
+      "subject": "Art",
+      "text": "style, composition and point of view"
+    },
+    {
+      "subject": "Thinking",
+      "text": "breaking a big change into small ones"
+    },
+    {
+      "subject": "Digital literacy",
+      "text": "how AI reads, and misreads, a prompt"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is typing a few words and hoping. Your job is to slow them down before the first prompt, help them name exactly what's wrong when it misses, and let them do the prompting themselves.",
+    "plan": [
+      {
+        "when": "Before the screen",
+        "what": "Picture it and describe it on paper (Steps 1 and 2)."
+      },
+      {
+        "when": "One sitting, at the screen",
+        "what": "Coach it one change at a time (Step 3)."
+      },
+      {
+        "when": "When it gets stuck, and at the end",
+        "what": "Reset, then finish it (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "It keeps getting the same thing wrong",
+        "a": "Start a new conversation with a better first prompt. Old mistakes often carry over in the same chat."
+      },
+      {
+        "q": "They get really frustrated",
+        "a": "Stop for the day. Coming back tomorrow with fresh eyes, and a fresh chat, often fixes it."
+      },
+      {
+        "q": "They want to use photos of real people",
+        "a": "Keep real faces, names and photos of people out of AI tools. Describe characters instead."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "AI follows what you say, not what you mean. A coach doesn't shout 'play better'. They say exactly what to change, one thing at a time. Prompts work the same way, and sometimes the best move is a fresh start, or a break.",
+    "before": "'Make it better.'",
+    "model": [
+      {
+        "part": "Wanted",
+        "line": "The characters looking up, for a page of their book."
+      },
+      {
+        "part": "Got",
+        "line": "Looking left, the wrong details, an extra body part."
+      },
+      {
+        "part": "Coached",
+        "line": "One change at a time, or a brand new conversation."
+      },
+      {
+        "part": "Finished",
+        "line": "Some pages, a break until the next day. Some, what it gave them."
+      }
+    ],
+    "modelNote": "The pictures didn't get better from trying harder. They got better from smaller, clearer requests, fresh starts, and knowing when a picture was good enough for the book."
+  },
+  "steps": [
+    {
+      "title": "Picture it first",
+      "why": "You can't describe what you haven't pictured. A clear idea first saves a lot of tries.",
+      "kid": "Before touching the screen, your kid sketches or lists what they want, using the Picture it card in the Prompt Coach Toolkit at the end of the guide: who's in it, what they're doing, where, and the style.",
+      "you": "Ask questions like a coach before the game: 'Where is she looking? Is it day or night? Cartoon or realistic?'",
+      "ask": [
+        "What do you see in your head?",
+        "What's the one thing it has to get right?"
+      ],
+      "tip": "Real projects work best, like pictures for a story they're writing. They'll care about every detail.",
+      "levels": {
+        "explore": "Draw a quick sketch of the picture you want, and say what's in it.",
+        "develop": "Fill in every part of the Picture it card before you start.",
+        "extend": "Plan a set of pictures for a whole story, with what must stay the same in each."
+      }
+    },
+    {
+      "title": "Write the first prompt",
+      "why": "A clear first prompt does most of the work. Vague words get vague pictures.",
+      "kid": "Your kid turns the sketch into a prompt, using the Prompt parts card: who, doing what, where, the style, and what to leave out.",
+      "you": "Read it back to them out loud. If you can picture it from their words alone, it's ready.",
+      "ask": [
+        "Could someone draw this from your words alone?",
+        "What could it get wrong?"
+      ],
+      "tip": "Directions are tricky. 'Looking up at the sky' works better than 'looking up'.",
+      "levels": {
+        "explore": "Say the prompt out loud while a parent types it.",
+        "develop": "Write a prompt with all five parts.",
+        "extend": "Write two different prompts for the same picture, and compare what each gets."
+      }
+    },
+    {
+      "title": "Coach one change at a time",
+      "why": "Asking for five changes at once usually breaks the parts that were already right.",
+      "kid": "Your kid looks at the result, picks the most important thing to fix, and asks for only that, using the Coach talk card: 'Keep everything the same. Only change...'",
+      "you": "Help them name exactly what's wrong. 'It's bad' becomes 'she's looking left, she should look up'.",
+      "ask": [
+        "What's the one thing to fix first?",
+        "What should stay exactly the same?"
+      ],
+      "tip": "Name what to keep, not just what to change. AI needs to know what was already right.",
+      "levels": {
+        "explore": "Point at one thing to change, and say it in one sentence.",
+        "develop": "Fix three things, one at a time, and notice which ones worked.",
+        "extend": "Keep a list of the phrases that worked best, to reuse next time."
+      }
+    },
+    {
+      "title": "Reset when it's stuck",
+      "why": "Sometimes the AI gets stuck on a mistake. Trying harder in the same chat rarely fixes it.",
+      "kid": "When it keeps getting it wrong, your kid picks a reset from the When it's stuck card: a new conversation, a rewritten prompt, a break until tomorrow, or keeping what it gave.",
+      "you": "Name the frustration, then choose the reset together. Stopping isn't failing.",
+      "ask": [
+        "Is it getting closer, or stuck?",
+        "Which reset makes sense here?"
+      ],
+      "tip": "A new conversation with a better first prompt beats twenty fixes in an old one.",
+      "levels": {
+        "explore": "Start over with a parent, and say the prompt in a new way.",
+        "develop": "Use a new conversation, with a first prompt that includes what you learned.",
+        "extend": "Compare the stuck chat and the fresh one, and explain why the fresh one worked."
+      }
+    },
+    {
+      "title": "Finish it yourself",
+      "why": "The AI makes a picture. Your kid decides what goes in the project, and what's good enough.",
+      "kid": "Your kid picks the final pictures for their project, using the Good enough? card, and adds their own touches, like the words, the layout or a hand-drawn detail.",
+      "you": "Ask what they decided, not what the AI made. The choices are theirs.",
+      "ask": [
+        "Is this good enough for your project?",
+        "What did you add that the AI couldn't?"
+      ],
+      "tip": "'Good enough for the book' is a real skill. Perfect pictures aren't the goal; a finished project is.",
+      "levels": {
+        "explore": "Pick your favourite picture, and say why you chose it.",
+        "develop": "Choose the pictures for your project, and add your own words to each.",
+        "extend": "Finish a whole project, and show someone how you coached the hardest picture."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Prompt Coach Toolkit",
+    "intro": "How to picture it, describe it, coach it and know when to stop.",
+    "items": [
+      {
+        "name": "Picture it",
+        "lines": [
+          {
+            "k": "Who:",
+            "v": "the characters, and what they look like"
+          },
+          {
+            "k": "Doing:",
+            "v": "the action, and where they're looking"
+          },
+          {
+            "k": "Where:",
+            "v": "the place, the time of day, the weather"
+          },
+          {
+            "k": "Style:",
+            "v": "cartoon, watercolour, realistic?"
+          }
+        ],
+        "ask": "Which part is hardest to picture?"
+      },
+      {
+        "name": "Prompt parts",
+        "lines": [
+          {
+            "k": "1. Who:",
+            "v": "'a girl with long brown hair'"
+          },
+          {
+            "k": "2. Doing:",
+            "v": "'looking up at the sky, smiling'"
+          },
+          {
+            "k": "3. Where:",
+            "v": "'on a sunny beach with palm trees'"
+          },
+          {
+            "k": "4. Style:",
+            "v": "'colourful cartoon, like a picture book'"
+          },
+          {
+            "k": "5. Leave out:",
+            "v": "'no words, no extra people'"
+          }
+        ],
+        "ask": "Which part do you usually forget?"
+      },
+      {
+        "name": "Coach talk",
+        "lines": [
+          {
+            "k": "Keep:",
+            "v": "'Keep everything the same.'"
+          },
+          {
+            "k": "Change:",
+            "v": "'Only change where she's looking.'"
+          },
+          {
+            "k": "Exact:",
+            "v": "'Up at the sky', not 'different'"
+          },
+          {
+            "k": "Check:",
+            "v": "did it change only that?"
+          }
+        ],
+        "ask": "What's your best coaching phrase?"
+      },
+      {
+        "name": "When it's stuck",
+        "lines": [
+          {
+            "k": "New chat:",
+            "v": "start fresh, with a better first prompt"
+          },
+          {
+            "k": "Rewrite:",
+            "v": "say it a completely different way"
+          },
+          {
+            "k": "Break:",
+            "v": "come back tomorrow"
+          },
+          {
+            "k": "Keep it:",
+            "v": "use what it gave, if it works"
+          }
+        ],
+        "ask": "Which reset works best for you?"
+      },
+      {
+        "name": "Good enough?",
+        "lines": [
+          {
+            "k": "Story:",
+            "v": "does it show what happens on the page?"
+          },
+          {
+            "k": "Match:",
+            "v": "do the characters look like themselves?"
+          },
+          {
+            "k": "Odd bits:",
+            "v": "any extra fingers or strange details?"
+          },
+          {
+            "k": "Yours:",
+            "v": "what will you add yourself?"
+          }
+        ],
+        "ask": "When is a picture good enough?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Clear describing",
+      "text": "words precise enough to picture"
+    },
+    {
+      "name": "Coaching",
+      "text": "one clear change at a time"
+    },
+    {
+      "name": "Frustration skills",
+      "text": "reset, rest or accept"
+    },
+    {
+      "name": "Creative control",
+      "text": "the choices stay theirs"
+    }
+  ],
+  "conclusion": {
+    "headline": "They tell AI exactly what they want.",
+    "text": "Listen to how they talk to AI next time. If you hear 'keep everything the same, only change...', they've learned to coach it instead of hoping.",
+    "celebrate": "When a hard picture finally comes out right, say: 'That took good coaching. You knew exactly what to ask for.'",
+    "extensions": [
+      "Use the same coaching on a text answer, like a story idea or a recipe",
+      "Swap prompts with a sibling and see if the other can picture it",
+      "Draw one picture yourself for the project, next to the AI ones",
+      "Write a 'how I made it' page at the end of the project"
+    ]
+  },
+  "signs": [
+    "They plan what they want before typing",
+    "They ask for one change at a time",
+    "They start fresh, or take a break, instead of fighting the tool"
+  ],
+  "makeItReal": "Pick a real project this month, like a story, a card or a poster, and let your kid coach the AI for its pictures, one change at a time.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "My two made a book together in Book Creator, with pictures they prompted themselves with AI. The style, the details, extra or missing things, extra body parts, a character looking left when it was supposed to look up: it was really frustrating sometimes. What helped was asking for one change at a time and starting a new conversation. Sometimes we gave up completely and came back the next day, or took what it gave us.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/prompt-like-a-coach.jpg",
+    "alt": "Four AI-made picture book illustrations of a brother and sister on a pirate adventure: a beach treasure, a pirate, a jaguar and a canoe",
+    "caption": "Pages from the book they made, and prompted."
+  }
+}

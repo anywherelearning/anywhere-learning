@@ -374,7 +374,7 @@ const posts: BlogPost[] = [
       { type: 'tip', title: 'The one rule', text: 'Use AI to learn it, never to skip it. If you couldn’t explain it, you didn’t do it.' },
       { type: 'paragraph', text: 'From there, a couple of house rules help. AI is allowed for understanding, brainstorming, and checking, but the final work has to be in your own words and your own thinking. And when a teacher says no AI on an assignment, that is the rule, full stop. Learning to respect that boundary is its own life skill.' },
 
-      { type: 'product-callout', slug: 'prompt-like-a-coach', context: 'A guided activity that teaches kids to use AI as a thinking partner and coach, the questions to ask and the ones to avoid, so it builds their skills instead of doing the work for them.' },
+      { type: 'product-callout', slug: 'prompt-like-a-coach', context: 'A guided activity where your kid learns to talk to AI like a coach: picture it first, describe it clearly, change one thing at a time, so the project stays theirs.' },
 
       { type: 'heading', level: 2, text: 'What to do if you catch them using it to cheat' },
       { type: 'paragraph', text: 'First, breathe. This is a teaching moment, not a character verdict. Almost every kid will test this line at some point. What matters is what happens next.' },

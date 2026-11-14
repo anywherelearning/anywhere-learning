@@ -99,7 +99,7 @@ export const productSkills: Record<string, ProductSkills> = {
   "privacy-footprint": { canonical: ["Critical Thinking","Decision-Making","Digital Citizenship","Online Safety & Privacy"], families: ["critical-thinking-and-reasoning","tech-and-digital"] },
   "problem-solver": { canonical: ["Problem-Solving","Critical Thinking","Creativity","Testing","Independence"], families: ["communication-and-writing","critical-thinking-and-reasoning","planning-and-self-management"] },
   "product-design-lab": { canonical: ["Communication","Creative Thinking","Critical Thinking","Design Thinking","Executive Functioning"], families: ["communication-and-writing","creativity-and-making","critical-thinking-and-reasoning","planning-and-self-management"] },
-  "prompt-like-a-coach": { canonical: ["Communication","Critical Thinking","Writing"], families: ["communication-and-writing","critical-thinking-and-reasoning"] },
+  "prompt-like-a-coach": { canonical: ["AI Literacy","Writing","Communication","Creative Thinking"], families: ["tech-and-digital","communication-and-writing","creativity-and-making"] },
   "road-trip-calculator": { canonical: ["Geography","Estimation","Budgeting","Distance","Planning"], families: ["entrepreneurship-and-money","math-and-money","planning-and-self-management"] },
   "rube-goldberg-machine": { canonical: ["STEM","Engineering","Physics","Problem-Solving","Design","Cause & Effect"], families: ["communication-and-writing","creativity-and-making","critical-thinking-and-reasoning","nature-and-science"] },
   "savings-goal-tracker": { canonical: ["Financial Literacy","Goal Setting","Data Tracking","Percentages"], families: ["critical-thinking-and-reasoning","entrepreneurship-and-money","math-and-money"] },

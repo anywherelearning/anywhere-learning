@@ -1485,22 +1485,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'prompt-like-a-coach': {
     opening:
-      'Teach kids to get better results from AI by writing better prompts. Activities cover prompt structure, asking better questions, healthy AI use (not copying), and learning to guide AI rather than just accepting its first answer. A skill that will matter for their entire lives.',
+      'Your kid learns to get what they actually want from AI by talking to it like a coach: a clear picture first, clear words, then one change at a time. They make something real, like the pictures for a story they wrote, and learn when to start fresh, when to rest and when good enough is good enough.',
     whatsIncluded: [
-      'Prompt structure and quality frameworks',
-      'Better question writing techniques',
-      'Iterating and refining AI conversations',
-      'Healthy AI use: guide, don\'t copy',
-      'Real practice scenarios with reflection',
+      'Five steps, from picturing it on paper to finishing a real project',
+      'Picture it, Prompt parts, Coach talk, When it\'s stuck and Good enough? cards',
+      'A worked example: AI pictures for a book two kids wrote together',
+      'What to do when the AI gets stuck: a new chat, a rewrite or a break',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['AI Literacy', 'Communication', 'Critical Thinking', 'Writing'],
+    skillTags: ['AI Literacy', 'Writing', 'Communication', 'Creativity', 'Patience'],
     insideTheLearning: {
       lead:
-        'Your child learns to use AI as a tutor instead of an answer machine. That means writing specific instructions, asking it to explain rather than produce, and checking what comes back. The distinction between being coached and copying is the actual lesson.',
+        'AI follows what you say, not what you mean. Your kid learns to picture what they want first, describe it precisely, and coach the AI one change at a time, keeping what was already right. They also learn when a fresh start, a break or good enough is the smartest move.',
       skills: [
-        { skill: 'Communication', where: 'Writing instructions specific enough to get something useful back' },
-        { skill: 'Critical Thinking', where: 'Checking and revising the output instead of accepting it' },
-        { skill: 'Writing', where: 'Organising their own thinking, using AI to practise and explain rather than to copy' },
+        { skill: 'AI Literacy', where: 'Seeing how AI reads, and misreads, a prompt' },
+        { skill: 'Writing', where: 'Descriptions clear enough for someone else to picture' },
+        { skill: 'Communication', where: 'Naming exactly what to change and what to keep' },
+        { skill: 'Creativity', where: 'Planning pictures for their own story or project' },
+        { skill: 'Patience', where: 'Resetting or taking a break instead of fighting the tool' },
       ],
     },
     format: 'Project Guide',

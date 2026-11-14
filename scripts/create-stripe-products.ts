@@ -57,7 +57,7 @@ const catalog = [
   { slug: 'hallucination-detective', name: 'Hallucination Detective', priceCents: 599, description: 'AI literacy for kids ages 6-14: ask two or three AI tools the same question, compare the answers, check real sources and catch the AI when it bluffs.' },
   { slug: 'healthy-tech-boundaries', name: 'Healthy Tech & AI Boundaries', priceCents: 599, description: 'Build healthy boundaries with technology and AI tools.' },
   { slug: 'privacy-footprint', name: 'Privacy & Digital Footprint Map', priceCents: 599, description: 'Understand and manage your digital footprint and privacy.' },
-  { slug: 'prompt-like-a-coach', name: 'Prompt Like a Coach', priceCents: 599, description: 'Master the art of talking to AI effectively.' },
+  { slug: 'prompt-like-a-coach', name: 'Prompt Like a Coach', priceCents: 599, description: 'AI prompting for kids ages 6-14: picture it, describe it clearly, coach one change at a time and finish a real project, like the pictures for their own book.' },
   // ─── Real-World Math singles ($4.99) ───
   { slug: 'backyard-campout-planner', name: 'Backyard Campout Planner', priceCents: 599, description: 'Real-world math for kids ages 6-14: measure the site, budget the gear, plan the food and the schedule, then camp out.' },
   { slug: 'clothing-swap-thrift-math', name: 'Clothing Swap & Thrift Math', priceCents: 599, description: 'Real-world math for kids ages 6-14: cost per wear, pricing, a swap or thrift trip, and the percentage saved.' },
