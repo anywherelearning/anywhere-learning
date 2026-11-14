@@ -6,7 +6,7 @@
   "ages": "Ages 6 to 14",
   "goal": "Your kid learns that most worries are two things stuck together: a part they can't change, and a part they can. They get their worries out, pin down the real one, sort what's theirs from what isn't, plan their part, and check back afterwards to see what really happened.",
   "need": [
-    "Slips of paper and two bowls or envelopes",
+    "Slips of paper, plus bowls or envelopes",
     "A notebook and a pencil",
     "A calm moment, not the worried one",
     "One real worry of your own to share"
@@ -151,7 +151,7 @@
       }
     },
     {
-      "title": "Set the rest down, and check back",
+      "title": "Set it down, then check back",
       "why": "The part they can't change still needs somewhere to go. And looking back at what really happened is what makes the next worry smaller.",
       "kid": "For the 'not mine' bowl, your kid picks a way to set it down from the Set it down card. After the worried-about thing is over, they fill in My worry check at the end of the guide: what they were worried about, what they did, and what really happened.",
       "you": "In the moment, help them set it down: start talking about something else, or point out what's around you. Afterwards, sit down with My worry check together and let them tell you how it went.",

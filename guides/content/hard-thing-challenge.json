@@ -50,7 +50,7 @@
     "troubleshoot": [
       {
         "q": "They want to quit after a bad day",
-        "a": "Don't decide on a bad day. Agree to look at the Skip, pause or quit card together on a calm one."
+        "a": "Don't decide on a bad day. Agree to look at the Skip, pause, change or quit? card together on a calm one."
       },
       {
         "q": "They picked something too big",
@@ -105,7 +105,7 @@
     {
       "title": "Set the finish line",
       "why": "'Get better at biking' never ends. 'Ride the whole black trail without walking' has a day you'll remember.",
-      "kid": "Your kid writes what done looks like, a date, and three checkpoints on the way, using the Finish line card. For a black trail, that could be a full blue trail, a first small jump, then the black trail itself.",
+      "kid": "Your kid writes what done looks like, a date, and three checkpoints on the way, using the Finish line card. For a black trail, that could be a full blue trail, a first small jump, then a short black section, with the whole black trail as the finish line.",
       "you": "Make the first checkpoint reachable in the first week or two. An early win keeps them going when the middle gets hard.",
       "ask": [
         "How will you know you've done it?",
@@ -137,7 +137,7 @@
     {
       "title": "Get through the messy middle",
       "why": "Every hard thing gets harder before it gets easier: a fall, a bad week, a day they're more scared than before.",
-      "kid": "When something goes wrong, your kid uses the Messy middle card: say what happened, step back to something that feels solid, then build up again, one small piece at a time. When they don't feel it on a given day, they check the Skip, pause or quit card.",
+      "kid": "When something goes wrong, your kid uses the Messy middle card: say what happened, step back to something that feels solid, then build up again, one small piece at a time. When they don't feel it on a given day, they check the Skip, pause, change or quit? card.",
       "you": "Say it before it comes: 'There will be a day this feels worse. That's part of it.' After a fall, let them go back to what feels solid without pushing, and keep the goal on the fridge.",
       "ask": [
         "What feels solid right now?",
@@ -238,7 +238,7 @@
         "ask": "Which bad day are you glad you didn't quit on?"
       },
       {
-        "name": "Skip, pause or quit?",
+        "name": "Skip, pause, change or quit?",
         "lines": [
           {
             "k": "Skip:",
@@ -313,7 +313,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "This summer, my daughter's hard thing was riding black mountain bike trails. Every time she fell, she got more scared and hesitated more before doing the same things she had done before. Some days she doesn't ride a steep section or a jump because she doesn't feel it. She gets upset, but she knows she can try next time. By the end of the summer, she was riding black trails. She's so proud of herself, and motivated to do more.",
+    "text": "This summer, my daughter's hard thing was riding black mountain bike trails. Every time she fell, she got more scared and hesitated more before doing the same things she had done before. Some days, she still doesn't ride a steep section or a jump because she doesn't feel it. She gets upset, but she knows she can try next time. By the end of the summer, she was riding black trails. She's so proud of herself, and motivated to do more.",
     "quotes": []
   },
   "photo": {

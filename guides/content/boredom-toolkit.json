@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is fixing boredom for them, with a screen, a plan or an idea. Your job is to say 'Ok, that's good, go find something to do', then step back and let the empty feeling do its work.",
+    "intro": "The trap is fixing boredom for them, with a screen, a plan or an idea. Your job is to say 'Okay, that's good, go find something to do', then step back and let the empty feeling do its work.",
     "plan": [
       {
         "when": "One quiet afternoon",
@@ -71,7 +71,7 @@
       },
       {
         "part": "Parent",
-        "line": "'Ok, that's good. Go find something to do.'"
+        "line": "'Okay, that's good. Go find something to do.'"
       },
       {
         "part": "Her",
@@ -89,7 +89,7 @@
       "title": "Wait it out",
       "why": "The empty feeling passes. Kids who learn to wait a few minutes find their own ideas on the other side.",
       "kid": "When your kid says 'I'm bored', they sit with it for ten minutes without a screen, using the Wait it out card in the Bored-Day Cards at the end of the guide.",
-      "you": "Say it calmly: 'Ok, that's good. Go find something to do.' Then don't offer ideas, and don't hand over a screen.",
+      "you": "Say it calmly: 'Okay, that's good. Go find something to do.' Then don't offer ideas, and don't hand over a screen.",
       "ask": [
         "What does bored feel like in your body?",
         "What's the first idea that pops up?"
@@ -110,7 +110,7 @@
         "What did you pick up first?",
         "What would you do again tomorrow?"
       ],
-      "tip": "Siblings often reach for completely different things. That's the point: each kit should be different.",
+      "tip": "There's no right answer. What they reach for is a clue to what they love.",
       "levels": {
         "explore": "Show a parent the thing you picked up.",
         "develop": "List what you reached for in three bored moments.",
@@ -140,7 +140,7 @@
       "you": "Stay out of it. Do something of your own nearby, like reading or a project, so they see a grown-up filling their own time.",
       "ask": [
         "What did you make or do?",
-        "How long did you lose track of time?"
+        "How long were you lost in it?"
       ],
       "tip": "Rainy days at home with no friends around are the best test. That's when the kit earns its spot.",
       "levels": {
@@ -264,7 +264,7 @@
       "lines": [
         "What's in my kit",
         "When I used it, and what I made or did",
-        "How long I lost track of time",
+        "How long I was lost in it",
         "What I'll add next"
       ]
     }
@@ -312,7 +312,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "When my kids say they're bored, I say: 'Ok, that's good, go find something to do.' Boredom shows up most when we're at home, it's raining and there's no one to play with. My daughter lets her creative side come out: drawing, crafting, writing, building blocks, music. One bored afternoon, she made herself a magic wand. My son mostly reads. Our screen rule is 30 minutes a day to watch, and a bit more to create.",
+    "text": "When my kids say they're bored, I say: 'Okay, that's good, go find something to do.' Boredom shows up most when we're at home, it's raining and there's no one to play with. My daughter lets her creative side come out: drawing, crafting, writing, building blocks, music. One bored afternoon, she made herself a magic wand. My son mostly reads. Our screen rule is 30 minutes a day to watch, and a bit more to create.",
     "quotes": []
   },
   "photo": {

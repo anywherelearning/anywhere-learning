@@ -120,7 +120,7 @@
     {
       "title": "Run a kind test",
       "why": "The test only works if it's the same every time, and kind every time.",
-      "kid": "Your kid does one small, friendly thing to each person they cross, the same way every time, using the Kind tests card: say hi, smile, nod or wave.",
+      "kid": "Your kid does one small, friendly thing to each person they cross, the same way every time, using the Kind tests card: say hi, smile or nod.",
       "you": "Stay right beside them. Keep it to public places and quick, friendly moments, nothing more.",
       "ask": [
         "Are you doing it the same way each time?",

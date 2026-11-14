@@ -2661,7 +2661,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Your kid picks one hard thing they cannot do yet and works at it for a whole stretch, like a month or a summer. They set a finish line and checkpoints, practise in small pieces, get through the messy middle where most people quit, and learn the difference between skipping one part and quitting the goal.',
     whatsIncluded: [
       'Five steps, from picking the hard thing to looking back at the finish',
-      'Pick it, Finish line, Messy middle and Skip, pause or quit? cards',
+      'Pick it, Finish line, Messy middle and Skip, pause, change or quit? cards',
       'A worked example: black mountain bike trails by the end of summer',
       'My hard thing log, for checkpoints, hard days and what helped',
       'Three levels per step, from ages 6 to 14',

@@ -136,7 +136,7 @@
     {
       "title": "Notice how it landed",
       "why": "Seeing what a small act did for someone is what turns a mission into a habit.",
-      "kid": "After each mission, your kid writes in My kindness log at the end of the guide what they did, how the person reacted, and how they felt.",
+      "kid": "After each mission, your kid writes what they did, how the person reacted and how they felt in My kindness log at the end of the guide.",
       "you": "Ask about the other person first, then about them: 'How did he look?' before 'How did you feel?'",
       "ask": [
         "How did they react?",
@@ -289,7 +289,7 @@
   ],
   "conclusion": {
     "headline": "They act on kindness without being asked.",
-    "text": "Keep an eye on the next bus ride or store trip. If they're the one who spots the full hands or the empty seat, and does something about it, the missions have become a habit.",
+    "text": "Keep an eye on the next bus ride or store trip. If they're the one who spots the full hands or the person who needs a seat, and does something about it, the missions have become a habit.",
     "celebrate": "When you see them do it on their own, say: 'You gave him your seat before anyone asked. That was kind, and it was your idea.'",
     "extensions": [
       "Plan a family kindness day for a neighbour",

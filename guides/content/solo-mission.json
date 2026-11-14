@@ -63,11 +63,11 @@
     ]
   },
   "lesson": {
-    "text": "Independence doesn't happen all at once. It grows in stages: with a grown-up, then with a sibling or friend, then alone. Each stage feels uncomfortable at first and normal later. And it's okay to stay at a stage until the next one feels right.",
+    "text": "Independence doesn't happen all at once. It grows in stages: a grown-up beside them, then nearby, then a sibling or friend, then alone. Each stage feels uncomfortable at first and normal later. And it's okay to stay at a stage until the next one feels right.",
     "before": "'She's ten. She can just take the bus alone.'",
     "model": [
       {
-        "part": "Stage 1",
+        "part": "Stage 2",
         "line": "The bus with her brother, Mom waiting at the stop."
       },
       {
@@ -75,7 +75,7 @@
         "line": "Nervous, a weird smell, a bit uncomfortable. Then proud."
       },
       {
-        "part": "Stage 2",
+        "part": "Stage 3",
         "line": "The bus with a friend. She also walks home alone."
       },
       {
