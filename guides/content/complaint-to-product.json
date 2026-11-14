@@ -153,7 +153,7 @@
     {
       "title": "Fix it and ask for a real yes",
       "why": "The only test that counts: would they choose it?",
-      "kid": "Your kid changes the model based on what they saw, then gives it a name and a price. They go back and ask the real question: would you pay for this, or swap it for what you use now? Then they fill in My product at the end of the guide.",
+      "kid": "Your kid changes the model based on what they saw, then gives it a name and a price. They go back and ask the real question: would you pay for this, or swap it for what you use now? Then they write down who said a real yes.",
       "you": "Help them hear a no as information, not a verdict. Ask what would turn it into a yes.",
       "ask": [
         "Who said yes, and why?",
@@ -275,16 +275,7 @@
         ],
         "ask": "What did their hands do?"
       }
-    ],
-    "after": {
-      "label": "My product",
-      "lines": [
-        "The complaint",
-        "Who it's for",
-        "What I made",
-        "Who said a real yes"
-      ]
-    }
+    ]
   },
   "skills": [
     {

@@ -157,7 +157,7 @@
     {
       "title": "Make it again and compare",
       "why": "When the dish doesn't taste the same somewhere else, working out why is the best detective work of all.",
-      "kid": "Your kid makes the dish again in a new kitchen, here or back home, from the recipe they wrote. Then they compare it with the real thing and fill in My food file at the end of the guide: what was different, and why they think so.",
+      "kid": "Your kid makes the dish again in a new kitchen, here or back home, from the recipe they wrote. Then they compare it with the real thing: what was different, and why they think so.",
       "you": "Shop for the ingredients with them, and let them find substitutes when the real ones aren't there. Taste it together and be honest.",
       "ask": [
         "What tastes different, and what do you think caused it?",
@@ -279,16 +279,7 @@
         ],
         "ask": "Which answer surprised you most?"
       }
-    ],
-    "after": {
-      "label": "My food file",
-      "lines": [
-        "The dish, and where it comes from",
-        "What I learned from the cook",
-        "My version: what was different",
-        "Why I think it tasted different"
-      ]
-    }
+    ]
   },
   "skills": [
     {

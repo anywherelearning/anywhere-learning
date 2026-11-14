@@ -153,7 +153,7 @@
     {
       "title": "Log it and level up",
       "why": "Seeing the words pile up is what makes them want the next mission.",
-      "kid": "Your kid fills in My language log at the end of the guide: the mission, the words they used, what the person said back and one new word they heard. Then they choose the next mission, one rung higher on the Mission ladder.",
+      "kid": "Your kid writes in a notebook the mission, the words they used, what the person said back and one new word they heard. Then they choose the next mission, one rung higher on the Mission ladder.",
       "you": "Ask what surprised them, and add any new words to the log together. Notice out loud what got braver since the first mission. Plan the next one while it still feels good.",
       "ask": [
         "What new word did you hear?",
@@ -275,16 +275,7 @@
         ],
         "ask": "What's your plan if you freeze?"
       }
-    ],
-    "after": {
-      "label": "My language log",
-      "lines": [
-        "My mission",
-        "The words I used",
-        "What they said back",
-        "A new word, and my next mission"
-      ]
-    }
+    ]
   },
   "skills": [
     {

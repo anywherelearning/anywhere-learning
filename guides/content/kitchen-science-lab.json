@@ -154,7 +154,7 @@
     {
       "title": "Ask your own question",
       "why": "Real scientists test questions nobody handed them.",
-      "kid": "Your kid picks a 'what would happen if' question from the Question ideas card or their own, like does warm vinegar fizz more than cold? They change just one thing, keep everything else the same using the Fair test card, predict, run it and share what they found with the family like a real scientist. Then they fill in Mystery solved at the end of the guide.",
+      "kid": "Your kid picks a 'what would happen if' question from the Question ideas card or their own, like does warm vinegar fizz more than cold? They change just one thing, keep everything else the same using the Fair test card, predict, run it and share what they found with the family like a real scientist.",
       "you": "Treat their question like real research. Ask what they're changing and what stays the same.",
       "ask": [
         "What's the one thing you're changing?",
@@ -268,16 +268,7 @@
         ],
         "ask": "Can you test it fairly?"
       }
-    ],
-    "after": {
-      "label": "Mystery solved",
-      "lines": [
-        "The mystery powder was",
-        "Tests I ran, in order",
-        "What each test ruled out",
-        "My own question and what happened"
-      ]
-    }
+    ]
   },
   "skills": [
     {

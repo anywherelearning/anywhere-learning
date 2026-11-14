@@ -153,7 +153,7 @@
     {
       "title": "Write the celebration page",
       "why": "Writing it up is where the noticing turns into understanding.",
-      "kid": "Your kid writes a page in their celebration journal, using My celebration page at the end of the guide: what it celebrates, what they saw, what someone told them and what it shows about the place.",
+      "kid": "Your kid writes a page in their celebration journal: what it celebrates, what they saw, what someone told them and what it shows about the place.",
       "you": "Sit with them, look through the photos together, and ask 'So what is this place proud of?' Help them choose the best photo or sketch for the page.",
       "ask": [
         "If a friend had never heard of it, how would you explain it?",
@@ -275,16 +275,7 @@
         ],
         "ask": "Which of these did you see a visitor forget?"
       }
-    ],
-    "after": {
-      "label": "My celebration page",
-      "lines": [
-        "The celebration, where and when",
-        "What it celebrates, and why here",
-        "What I saw, and what someone told me",
-        "What it shows about this place"
-      ]
-    }
+    ]
   },
   "skills": [
     {

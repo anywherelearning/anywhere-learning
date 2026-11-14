@@ -152,7 +152,7 @@
     {
       "title": "Act on it",
       "why": "The best readers don't just notice. They do one small thing about it.",
-      "kid": "When your kid reads that someone needs something, they act: help, give space, or include someone. They write each one in My room reading log at the end of the guide.",
+      "kid": "When your kid reads that someone needs something, they act: help, give space, or include someone. They note each one in a notebook: the clues, the check, and what they did.",
       "you": "Let them take over sometimes, even when you could do it yourself. Then thank them for the specific thing they did.",
       "ask": [
         "What would help them right now?",
@@ -258,16 +258,7 @@
         ],
         "ask": "Where is your voice the loudest?"
       }
-    ],
-    "after": {
-      "label": "My room reading log",
-      "lines": [
-        "Where I was, or who I noticed",
-        "The clues I saw, and my guess",
-        "What I asked to check it",
-        "What I did, and how it went"
-      ]
-    }
+    ]
   },
   "skills": [
     {

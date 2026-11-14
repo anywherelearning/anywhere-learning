@@ -141,7 +141,7 @@
     {
       "title": "Pick one and build it",
       "why": "The best idea is the one you'll still do when you're tired.",
-      "kid": "Your kid runs their circled ideas through the Tired-day tests card and picks one. Then they fill in My fix at the end of the guide and build it for real: a hook, a label, a box, a checklist, an alarm.",
+      "kid": "Your kid runs their circled ideas through the Tired-day tests card and picks one. Then they build it for real: a hook, a label, a box, a checklist, an alarm.",
       "you": "Steer them toward simple, and help with anything that needs a drill. Otherwise let it be a bit wonky. Help them pick something to count.",
       "ask": [
         "What could you build in ten minutes?",
@@ -279,16 +279,7 @@
         ],
         "ask": "Will you still do it next week?"
       }
-    ],
-    "after": {
-      "label": "My fix",
-      "lines": [
-        "The problem",
-        "Because",
-        "What I built",
-        "What I'll count"
-      ]
-    }
+    ]
   },
   "skills": [
     {

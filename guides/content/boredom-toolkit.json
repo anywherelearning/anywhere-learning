@@ -136,7 +136,7 @@
     {
       "title": "Try it on a real boring day",
       "why": "The kit only proves itself on a real rainy day, with nobody to play with.",
-      "kid": "On the next real boring stretch, your kid opens the kit, picks one thing and sticks with it, then notes what they made or did in My boredom kit page at the end of the guide.",
+      "kid": "On the next real boring stretch, your kid opens the kit, picks one thing and sticks with it, then notes in a notebook what they made or did.",
       "you": "Stay out of it. Do something of your own nearby, like reading or a project, so they see a grown-up filling their own time.",
       "ask": [
         "What did you make or do?",
@@ -258,16 +258,7 @@
         ],
         "ask": "What did you stop using, and why?"
       }
-    ],
-    "after": {
-      "label": "My boredom kit",
-      "lines": [
-        "What's in my kit",
-        "When I used it, and what I made or did",
-        "How long I was lost in it",
-        "What I'll add next"
-      ]
-    }
+    ]
   },
   "skills": [
     {

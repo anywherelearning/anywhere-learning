@@ -136,7 +136,7 @@
     {
       "title": "Count what happens",
       "why": "Feelings remember the one grumpy person. Tally marks remember everyone.",
-      "kid": "Your kid tallies each reaction in My people experiment page at the end of the guide, using the Reactions to count card: answered right away, looked surprised then answered, or no answer.",
+      "kid": "Your kid tallies each reaction in a notebook, using the Reactions to count card: answered right away, looked surprised then answered, or no answer.",
       "you": "Keep the counting honest, even when it's disappointing. Then count up the totals together.",
       "ask": [
         "How many answered out of how many?",
@@ -280,16 +280,7 @@
         ],
         "ask": "Which reason could you test next?"
       }
-    ],
-    "after": {
-      "label": "My people experiment",
-      "lines": [
-        "My question, and where I tested it",
-        "My prediction",
-        "My tallies: yes, surprised, no, and the total",
-        "What I think explains it, and what I'll test next"
-      ]
-    }
+    ]
   },
   "skills": [
     {

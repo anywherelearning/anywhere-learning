@@ -136,7 +136,7 @@
     {
       "title": "Notice how it landed",
       "why": "Seeing what a small act did for someone is what turns a mission into a habit.",
-      "kid": "After each mission, your kid writes what they did, how the person reacted and how they felt in My kindness log at the end of the guide.",
+      "kid": "After each mission, your kid writes in a notebook what they did, how the person reacted and how they felt.",
       "you": "Ask about the other person first, then about them: 'How did he look?' before 'How did you feel?'",
       "ask": [
         "How did they react?",
@@ -258,16 +258,7 @@
         ],
         "ask": "What do you already do every day that a kind habit could stick to?"
       }
-    ],
-    "after": {
-      "label": "My kindness log",
-      "lines": [
-        "My mission, and who it was for",
-        "What I did and said",
-        "How they reacted",
-        "How I felt, and if I'll keep it"
-      ]
-    }
+    ]
   },
   "skills": [
     {

@@ -153,7 +153,7 @@
     {
       "title": "Compare it with home",
       "why": "Comparing two games shows what kids everywhere share, and what's special about here.",
-      "kid": "Your kid compares the game with one from home and fills in My game collection at the end of the guide: what's the same, what's different, and what the game shows about the place.",
+      "kid": "Your kid compares the game with one from home and adds to the game card: what's the same, what's different, and what the game shows about the place.",
       "you": "Ask 'What game from home is most like this one?' Help them spot the things all games share, like taking turns, chasing and keeping score.",
       "ask": [
         "What's the same about kids everywhere?",
@@ -275,16 +275,7 @@
         ],
         "ask": "Who will you teach it to first?"
       }
-    ],
-    "after": {
-      "label": "My game collection",
-      "lines": [
-        "The game, and where I learned it",
-        "A game from home that's like it",
-        "What's the same, and what's different",
-        "What the game shows about this place"
-      ]
-    }
+    ]
   },
   "skills": [
     {

@@ -121,7 +121,7 @@
     {
       "title": "Plan the smallest useful thing",
       "why": "A small thing that gets finished beats a big thing that doesn't.",
-      "kid": "Your kid picks an idea from the Ways to help card that matches what they heard. Then they fill in Our project at the end of the guide: who it's for, what they'll do, who has to say yes and how they'll know it helped.",
+      "kid": "Your kid picks an idea from the Ways to help card that matches what they heard. Then they write the plan in a notebook: who it's for, what they'll do, who has to say yes and how they'll know it helped.",
       "you": "Check that it's safe, then ask 'Who has to say yes?' Help them make that call or write that note themselves.",
       "ask": [
         "What's the smallest version that would still help?",
@@ -275,16 +275,7 @@
         ],
         "ask": "Who keeps this going without you?"
       }
-    ],
-    "after": {
-      "label": "Our project",
-      "lines": [
-        "I want to help",
-        "By doing",
-        "Who has to say yes",
-        "How we'll know it helped"
-      ]
-    }
+    ]
   },
   "skills": [
     {

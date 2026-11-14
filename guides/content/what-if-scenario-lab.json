@@ -153,7 +153,7 @@
     {
       "title": "Take it back to someone who knows",
       "why": "The person who lived it will spot what you missed.",
-      "kid": "Your kid fills in Our plan at the end of the guide and takes it back to the person they asked in Step 3, or someone new who's lived it. They ask what's missing and add it. Then they put the final plan beside their Day 1 column and see how far it's come.",
+      "kid": "Your kid writes the final plan and takes it back to the person they asked in Step 3, or someone new who's lived it. They ask what's missing and add it. Then they put the final plan beside their Day 1 column and see how far it's come.",
       "you": "Go with them. If the answer stings a bit, help them hear it as a good sign: it means the person took the plan seriously.",
       "ask": [
         "What did they spot that you missed?",
@@ -162,7 +162,7 @@
       "tip": "Ask 'What would you have needed that isn't here?' It's an easy question to answer honestly.",
       "levels": {
         "explore": "Show your plan to one person and add one thing they suggest.",
-        "develop": "Fill in Our plan, take it to someone who knows and change two things.",
+        "develop": "Write the final plan, take it to someone who knows and change two things.",
         "extend": "Ask two people who've lived it to check the plan, and decide what to do where they disagree."
       }
     }
@@ -275,16 +275,7 @@
         ],
         "ask": "What did they spot that we missed?"
       }
-    ],
-    "after": {
-      "label": "Our plan",
-      "lines": [
-        "What if",
-        "The biggest problem",
-        "What we'd do",
-        "What we'd have to give up"
-      ]
-    }
+    ]
   },
   "skills": [
     {

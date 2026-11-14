@@ -125,7 +125,7 @@
     {
       "title": "Count the costs and set the price",
       "why": "If you don't know your costs, you don't know if you made money.",
-      "kid": "Your kid lists everything it takes, using the Count it card: supplies, anything borrowed and their own time. They work out the cost of one job, pick a price people said they'd pay and check there's something left over. Then they fill in the first two lines of My business at the end of the guide.",
+      "kid": "Your kid lists everything it takes, using the Count it card: supplies, anything borrowed and their own time. They work out the cost of one job, pick a price people said they'd pay and check there's something left over. Then they write the job and the price at the top of their business notebook.",
       "you": "Be the bank if they need supplies. Write the loan down and agree when it gets paid back. Let them do the math, even when it's slow.",
       "ask": [
         "What's left after the costs?",
@@ -157,7 +157,7 @@
     {
       "title": "Keep it, change it or hand it over",
       "why": "Deciding to stop is a business decision too.",
-      "kid": "Your kid adds up the books: money in, money out, profit, hours and customers who came back. Then they use the What next card to decide what happens now, explain the decision to someone using their numbers, and finish My business.",
+      "kid": "Your kid adds up the books: money in, money out, profit, hours and customers who came back. Then they use the What next card to decide what happens now, and explain the decision to someone using their numbers.",
       "you": "Ask, don't decide. If it's struggling, go through the four usual reasons together: the wrong customers, the wrong price, the wrong place or doing too much. If they want to grow, ask who could help and what they'd pay them.",
       "ask": [
         "Was it worth it?",
@@ -279,16 +279,7 @@
         ],
         "ask": "Was it worth it?"
       }
-    ],
-    "after": {
-      "label": "My business",
-      "lines": [
-        "What I do and for who",
-        "My price, and what one job costs me",
-        "What I kept, and per hour",
-        "What I decided, and why"
-      ]
-    }
+    ]
   },
   "skills": [
     {

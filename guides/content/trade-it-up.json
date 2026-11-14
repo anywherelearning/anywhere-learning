@@ -153,7 +153,7 @@
     {
       "title": "Lay out the chain",
       "why": "Value isn't stuck to a thing. It changes with who's holding it.",
-      "kid": "Your kid lays out the photos or objects in a line, from the paperclip to the end, and tells the story of the chain to someone new. Then they fill in My trade chain at the end of the guide: the best trade, the hardest no and what they ended with.",
+      "kid": "Your kid lays out the photos or objects in a line, from the paperclip to the end, and tells the story of the chain to someone new: the best trade, the hardest no and what they ended with.",
       "you": "Ask what made each trade work. Then ask if everyone came out happy, not just them.",
       "ask": [
         "Which trade was the biggest jump?",
@@ -275,16 +275,7 @@
         ],
         "ask": "Would you make this trade again?"
       }
-    ],
-    "after": {
-      "label": "My trade chain",
-      "lines": [
-        "I started with",
-        "My best trade",
-        "My hardest no",
-        "I ended with"
-      ]
-    }
+    ]
   },
   "skills": [
     {

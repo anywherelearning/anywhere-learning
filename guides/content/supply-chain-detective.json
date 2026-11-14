@@ -153,7 +153,7 @@
     {
       "title": "Find the weak link",
       "why": "Every chain has a link that breaks first.",
-      "kid": "Your kid finds out about a time their product, or one like it, was hard to get or got more expensive, by asking at the store or looking it up with you. Using the Weak links card, they work out which link broke. Then they finish the map and fill in My chain at the end of the guide.",
+      "kid": "Your kid finds out about a time their product, or one like it, was hard to get or got more expensive, by asking at the store or looking it up with you. Using the Weak links card, they work out which link broke, and mark it on the map.",
       "you": "Share a time you couldn't find something in a store. Help them find out what really happened, not just a guess.",
       "ask": [
         "Which link broke?",
@@ -275,16 +275,7 @@
         ],
         "ask": "What would break first?"
       }
-    ],
-    "after": {
-      "label": "My chain",
-      "lines": [
-        "The product",
-        "Where it started",
-        "Stops on the way, and how far it came",
-        "Its weakest link"
-      ]
-    }
+    ]
   },
   "skills": [
     {

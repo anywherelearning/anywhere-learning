@@ -153,7 +153,7 @@
     {
       "title": "Add value and set your price",
       "why": "People don't pay for the cost. They pay for what they feel they get.",
-      "kid": "Your kid tries one idea from the Value ideas card, like a bigger size or a bundle, and watches whether people pay more for it. Then they choose their price, fill in My price at the end of the guide and tell the family why.",
+      "kid": "Your kid tries one idea from the Value ideas card, like a bigger size or a bundle, and watches whether people pay more for it. Then they choose their price and tell the family why.",
       "you": "Be an honest customer. Tell them whether the bigger size or the bundle would make you pay more, and why.",
       "ask": [
         "What did people pay more for?",
@@ -162,7 +162,7 @@
       "tip": "Watch the math on bundles. 3 for $5 when one is $2 is about $1.67 each, so check it's still above your floor.",
       "levels": {
         "explore": "Try one value idea, and say which price you'll keep.",
-        "develop": "Test one value idea with real buyers, then fill in My price.",
+        "develop": "Test one value idea with real buyers, then choose your price and explain it.",
         "extend": "Work out what you'd do if your main supply doubled in price, and explain your new price."
       }
     }
@@ -275,16 +275,7 @@
         ],
         "ask": "Would they pay more for that?"
       }
-    ],
-    "after": {
-      "label": "My price",
-      "lines": [
-        "One costs me",
-        "Others charge",
-        "What I kept at each price",
-        "My price and why"
-      ]
-    }
+    ]
   },
   "skills": [
     {

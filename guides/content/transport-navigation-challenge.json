@@ -153,7 +153,7 @@
     {
       "title": "Handle the change, then map it",
       "why": "Something always changes on a trip, and what they do next is the real test.",
-      "kid": "When something changes, like rain, a late bus or a closed road, your kid uses the When plans change card to decide what to do. Back where you're staying, they draw a map of the whole trip from memory, with each leg and landmark, then fill in My route log at the end of the guide.",
+      "kid": "When something changes, like rain, a late bus or a closed road, your kid uses the When plans change card to decide what to do. Back where you're staying, they draw a map of the whole trip from memory, with each leg and landmark, and what they'd change next time.",
       "you": "Let them make the call on small changes. Afterwards, ask them to draw the map before they look at a real one. What they remember shows you what they noticed.",
       "ask": [
         "What changed, and what did you do about it?",
@@ -275,16 +275,7 @@
         ],
         "ask": "What's the second-best way in, if the first one fails?"
       }
-    ],
-    "after": {
-      "label": "My route log",
-      "lines": [
-        "The place and why we went",
-        "Each leg: how, where we caught it, how long",
-        "What changed, and what I did",
-        "What I'd change next time"
-      ]
-    }
+    ]
   },
   "skills": [
     {

@@ -153,7 +153,7 @@
     {
       "title": "Cross the finish and look back",
       "why": "The finish is the moment to see the whole stretch, hard days included, and know they did it.",
-      "kid": "When your kid reaches the finish line, they read the log from day one, then fill in My hard thing log at the end of the guide: the checkpoints, the hardest day and what they're proud of.",
+      "kid": "When your kid reaches the finish line, they read the log from day one, then write the last page: the checkpoints, the hardest day and what they're proud of.",
       "you": "Celebrate the finish, then read one hard day from the log out loud together. The finish means more next to the day they almost stopped.",
       "ask": [
         "What was the hardest day?",
@@ -162,7 +162,7 @@
       "tip": "Look at the first checkpoint together. The gap between then and now is the real prize.",
       "levels": {
         "explore": "Show a parent your hard thing, and draw a picture of the finish.",
-        "develop": "Read your log from the start, and fill in My hard thing log.",
+        "develop": "Read your log from the start, and write the last page.",
         "extend": "Fill it in, then plan your next hard thing, a little bigger."
       }
     }
@@ -259,16 +259,7 @@
         ],
         "ask": "What's the difference between skipping and quitting?"
       }
-    ],
-    "after": {
-      "label": "My hard thing log",
-      "lines": [
-        "My hard thing and my finish line",
-        "The checkpoints I reached, and when",
-        "My hardest day, and what helped",
-        "What I'm proud of, and what's next"
-      ]
-    }
+    ]
   },
   "skills": [
     {

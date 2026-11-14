@@ -153,7 +153,7 @@
     {
       "title": "Explain it",
       "why": "If they can explain it to someone else, they've really understood it.",
-      "kid": "Your kid makes My field study page at the end of the guide: the question, the guess, the answer, the evidence and how the feature shapes life here, like what grows, what lives there and where people build.",
+      "kid": "Your kid makes a field study page in a notebook: the question, the guess, the answer, the evidence and how the feature shapes life here, like what grows, what lives there and where people build.",
       "you": "Ask them to explain it to you first, out loud, before anything is written. Then ask 'So how does this change life for people here?'",
       "ask": [
         "How would you explain it to a friend in one minute?",
@@ -275,16 +275,7 @@
         ],
         "ask": "Which of the guide's answers changed your explanation?"
       }
-    ],
-    "after": {
-      "label": "My field study page",
-      "lines": [
-        "The feature, where and when",
-        "My why question and my guess",
-        "The answer, and my best evidence",
-        "How it shapes life here"
-      ]
-    }
+    ]
   },
   "skills": [
     {
