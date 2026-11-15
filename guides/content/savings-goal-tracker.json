@@ -112,7 +112,7 @@
       "levels": {
         "explore": "Pick a goal and find out how much it costs.",
         "develop": "Check 2 places and new vs used, and pick the best deal.",
-        "extend": "Price 3 options per year of use or per hour of fun. Is the cheapest the best value?"
+        "extend": "Find out if the price changes during the year. Is waiting for a sale worth the extra weeks?"
       }
     },
     {
@@ -169,7 +169,7 @@
       "kid": "After 2 to 4 weeks, your kid compares what they planned to have with what they really have, and fixes the plan if they're behind. They draw a chart of the total with a goal line. When they reach it, they buy it with their own money. If not yet, they work out the new date.",
       "you": "Celebrate the saving, not just the buying. If they're behind, ask what made it harder and what they'll change, then let them decide.",
       "ask": [
-        "Goal $60, saving $6 a week: you planned $24 by now and have $18. How many more weeks?",
+        "Goal $60, saving $6 a week: you planned $24 by now and have $18. How many weeks until you reach the goal now?",
         "What was harder than you expected?"
       ],
       "tip": "Thermometer chart: draw a tall thermometer, mark 25%, 50%, 75% and the goal, and colour it up after every deposit.",
@@ -295,7 +295,7 @@
     "text": "When they want something small, wait a beat and see if they count the weeks it would cost before asking. Whatever they decide, ask how far off the goal is now. They'll know without checking the jar.",
     "celebrate": "When they hand over their own money at the till, say: 'You skipped things for this, week after week. It's all yours.'",
     "extensions": [
-      "Set a bigger goal and see how the plan scales",
+      "Split every deposit between two goals, a short one and a long one, and work out both finish dates.",
       "Track spending for a month next to saving and see where the money goes",
       "Look up how a savings account pays interest and work out what it adds",
       "Set a family goal together and see how pooling money changes the timeline"
@@ -322,7 +322,7 @@
     "tall": true
   },
   "fromHome": {
-    "text": "My daughter saves her can money, the refund from sorting and returning cans at the recycling depot. She saved $200 for our Universal trip and in the end spent $105, on a t-shirt and chocolate frogs. She skipped the wand she'd been saving for when she found out the exact same one sells used for a quarter of the price. Now she's saving for a spring concert with a friend.",
+    "text": "My daughter saves her can money, the refund from returning cans at the recycling depot. She saved $200 for our Universal trip. She skipped the wand she'd been saving for when she found out the exact same one sells used for a quarter of the price.",
     "quotes": []
   }
 }

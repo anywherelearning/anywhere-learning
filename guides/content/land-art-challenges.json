@@ -197,8 +197,8 @@
       "cards": [
         {
           "name": "Mini Tower",
-          "t": "Build the tallest tower you can from loose stones, sticks or pinecones, away from trails and water.",
-          "d": "It must survive a gentle wind test. Take it down before you leave, so nobody mistakes it for a trail marker.",
+          "t": "Build the tallest tower you can from loose stones, sticks or pinecones, away from trails.",
+          "d": "Put big stones on top of small ones. Take it down before you leave, so nobody mistakes it for a trail marker.",
           "icon": "tower-control",
           "art": "wc/landart-13.jpg"
         },
@@ -231,11 +231,10 @@
           "art": "wc/landart-17.jpg"
         },
         {
-          "name": "Tiny Shelter",
-          "t": "Build a shelter for an imaginary forest creature.",
-          "d": "Add bedding and an entrance.",
-          "icon": "tent",
-          "art": "wc/landart-18.jpg"
+          "name": "Fairy Door",
+          "t": "Build a tiny doorway at the base of a tree, with a path leading to it.",
+          "d": "Make the path lead straight to the door.",
+          "icon": "house"
         },
         {
           "name": "Sculpture on a Stump",
@@ -260,7 +259,7 @@
         },
         {
           "name": "Weaving",
-          "t": "Weave grass or pine needles through a forked stick, or between twigs.",
+          "t": "Weave dry grass or fallen pine needles through a forked stick, or between twigs.",
           "d": "Use 2 colours of material to make a pattern.",
           "icon": "git-branch",
           "art": "wc/landart-22.jpg"
@@ -463,12 +462,12 @@
   "conclusion": {
     "headline": "Every piece had a title, and a reason behind it.",
     "text": "Put two of their photos side by side and ask which one they'd build again. Listen for a choice they made on purpose, like the colour order or the size of the rings, rather than 'I just like it.'",
-    "celebrate": "When they explain their Gradient Mandala, say it back: 'Light in the middle, dark outside. My eye goes right to the centre.'",
+    "celebrate": "When they tell you why the pieces go in that order, say it back: 'Small in the middle, big outside. My eye goes right to the centre.'",
     "extensions": [
-      "Make a photo album of every piece, with titles",
+      "Make one piece, then come back in a week and photograph what wind, rain or animals did to it",
+      "Look up Andy Goldsworthy's work together and copy one idea with what's on your ground",
       "Do the same card in every season and compare",
-      "Turn three pieces into a 'mini museum' tour for the family",
-      "Make land art at the beach with sand, shells and seaweed"
+      "Make a piece for someone else to find on the trail, with a 'take a photo, leave it be' stick sign, then take it apart on your way back"
     ]
   },
   "signs": [
@@ -487,11 +486,11 @@
   "photo": {
     "src": "guides/assets/land-art-challenges.jpg",
     "alt": "A smiling girl crouched on a granite slab beside two small stacked-rock inukshuks, with evergreens behind",
-    "caption": "Card 13, then a story: two rock towers became an inukshuk family.",
+    "caption": "Card 13, then a story: two rock towers became a family of inuksuit.",
     "tall": true
   },
   "fromHome": {
-    "text": "On a fall hike, while we stopped for lunch, my daughter and her friend built a whole family of inuksuit out of the rocks around them, and then made up a story about each one. Building it was the art. The story turned it into something they talked about for the rest of the hike.",
+    "text": "On a fall hike, while we stopped for lunch, my daughter and her friend built a whole family of inuksuit out of the rocks around them, made up a story about each one, and took them down before we left. Building it was the art. The story turned it into something they talked about for the rest of the hike.",
     "quotes": []
   }
 }

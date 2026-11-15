@@ -131,7 +131,7 @@
         "What will you actually spend money on?",
         "Where did that price come from?"
       ],
-      "tip": "Restaurant prices don't include tax or a tip. Adding about a quarter on top keeps the bill from surprising anyone.",
+      "tip": "Restaurant prices don't include tax or a tip. Adding about 25% on top keeps the bill from surprising anyone.",
       "levels": {
         "explore": "Find real prices for 3 or 4 things with a grown-up, and write each one down.",
         "develop": "Price every item, and note where each price came from.",
@@ -304,7 +304,7 @@
             "v": "add up the differences"
           }
         ],
-        "ask": "Which line was furthest off, and why?"
+        "ask": "Over or under, what did the buffer actually end up covering?"
       }
     ],
     "after": {
@@ -323,7 +323,7 @@
     "extensions": [
       "Plan the same day with half the money",
       "Run a second day using the two rules they wrote",
-      "Give them a small monthly fun budget to manage",
+      "Price the same day two ways, driving and parking or a bus or train, and see which line moves the total most.",
       "Plan a family trip where everyone gets one must-have category"
     ]
   },
@@ -342,7 +342,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "When we planned three days at Universal Studios, my son did the budget with me. He hunted for the best ticket prices, compared hotels, and looked up what the restaurants actually charge. He estimated about $3,200 Canadian. When we added up what we really spent, it came to $3,400.",
+    "text": "When we planned three days at Universal Studios, my son did the budget with me: ticket prices, hotels and what the restaurants actually charge. He estimated about $3,200 Canadian, and what we really spent came to $3,400.",
     "quotes": []
   },
   "photo": {

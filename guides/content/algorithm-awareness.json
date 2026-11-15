@@ -79,7 +79,7 @@
         "line": "Just one more video, all the time."
       },
       {
-        "part": "Their tool",
+        "part": "His move",
         "line": "Picking his own videos instead of autoplay."
       }
     ],
@@ -131,7 +131,7 @@
       "levels": {
         "explore": "Search one new thing, and see if it shows up on the home page.",
         "develop": "Watch a new topic, predict the change, and count what changed the next day.",
-        "extend": "Then try to undo it: remove those videos from your watch history, and see how long the topic takes to fade."
+        "extend": "Then try to undo it: delete those videos and searches from your history, and see how long the topic takes to fade."
       }
     },
     {
@@ -143,7 +143,7 @@
         "Which trick works best on you?",
         "When does 'one more video' happen most?"
       ],
-      "tip": "Most tricks have an off switch, like turning autoplay off. Find them together.",
+      "tip": "Some tricks have an off switch, like autoplay. Others, like endless scroll, don't, so a stop point does the job.",
       "levels": {
         "explore": "Find one trick, like the next video starting by itself.",
         "develop": "Find three tricks in your app, and how to turn them off.",
@@ -163,7 +163,7 @@
       "levels": {
         "explore": "Choose your video before you open the app, with a parent.",
         "develop": "Try two control moves for a week, and say which one helped.",
-        "extend": "Design a 'watch on purpose' plan for the family, and test it for a week."
+        "extend": "Pick one show or channel to stop following, and notice a week later whether you missed it."
       }
     }
   ],
@@ -257,7 +257,7 @@
             "v": "a series that ends on a question"
           }
         ],
-        "ask": "Which trick is hardest to resist?"
+        "ask": "Which of these can you switch off in your app?"
       },
       {
         "name": "Take back control",
@@ -306,8 +306,8 @@
     "text": "Watch the end of a video. If they reach past the countdown and pick the next one themselves, they've seen the algorithm at work and decided anyway.",
     "celebrate": "When they pick the next video themselves instead of letting it autoplay, say: 'You chose that one, not the app.'",
     "extensions": [
-      "Run the experiment on a parent's account, with permission, and compare",
-      "Watch the same video on a guest profile, and compare the Up next list with yours",
+      "With a parent, turn off YouTube watch history for a week, and see what the home page shows when the app can't follow you",
+      "On a parent's account, open 'Why this ad?' on an ad, and read what the app has guessed about you",
       "Look up how a streaming app decides what to suggest, in its own help pages",
       "Notice suggestions in other places, like online shops and music apps"
     ]

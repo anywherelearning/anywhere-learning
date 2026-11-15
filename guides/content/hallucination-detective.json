@@ -6,7 +6,7 @@
   "ages": "Ages 6 to 14",
   "goal": "Your kid learns that AI can sound sure and still be wrong. They ask two or three AI tools the exact same question, compare the answers, spot where they disagree or make things up, check against real sources, and decide on an answer of their own that they can actually trust.",
   "need": [
-    "A grown-up's account on two or three AI tools (most are 13+)",
+    "A grown-up's account on two or three AI tools, like ChatGPT, Claude or Gemini (most are 13+)",
     "A question you really want answered",
     "A notebook or a shared screen to compare answers"
   ],
@@ -62,7 +62,7 @@
     ]
   },
   "lesson": {
-    "text": "AI tools write answers that sound sure, even when they're guessing, and two tools can give two different answers to the same question. Asking more than one, comparing them and checking with real sources is how you find out what's true.",
+    "text": "AI tools write answers that sound sure, even when they're guessing. When AI makes something up and says it like a fact, that's called a hallucination. Two tools can give two different answers to the same question, so asking more than one, comparing them and checking with real sources is how you find out what's true.",
     "before": "'The AI said it, so it must be right.'",
     "model": [
       {
@@ -249,7 +249,7 @@
           },
           {
             "k": "Its sources:",
-            "v": "ask where it got that, then open the link yourself"
+            "v": "ask where it got that, then open the link (AI can make up links too)"
           },
           {
             "k": "Real life:",
@@ -283,10 +283,10 @@
     "text": "Pay attention to the next time AI answers a question at your house. If they say 'let's ask another one' or 'where's the official site?', the detective habit has stuck.",
     "celebrate": "When they catch an AI mistake, say: 'Good catch. You didn't just believe it, you checked.'",
     "extensions": [
-      "Ask the same AI the same question a week later, and compare its two answers",
+      "Ask an AI for three books about your favourite animal, with authors, and check the library catalogue to see if each one really exists",
       "Ask an AI about your own town, and check what it gets right and wrong",
       "Ask an AI about something that happened this week, and see if it knows, guesses or searches",
-      "Plan a family outing with AI help, then check every detail before you go"
+      "Ask an AI about a game or hobby your kid knows inside out, and let them mark its mistakes as the expert"
     ]
   },
   "signs": [

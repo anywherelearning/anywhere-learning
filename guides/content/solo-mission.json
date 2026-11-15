@@ -297,7 +297,7 @@
     "text": "The real sign is a request: 'Can I pay by myself this time?' When the next stage is their idea, not yours, they're growing their own independence.",
     "celebrate": "After a mission, name the change: 'Last month you were nervous about this. Today you did it with your friend. You did that.'",
     "extensions": [
-      "Plan a mission somewhere new, like a trip or a new town",
+      "Pick a mission that helps the family, like buying the bread for breakfast, and make it your regular job",
       "Teach a younger sibling or cousin how to do one of your missions",
       "Make a family map of all the places they can go on their own",
       "Ask a grandparent what they did on their own at your age"
@@ -317,12 +317,12 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "My daughter took the city bus with her brother for the first time when she was 10, and I waited at the bus stop. She was nervous, thought the bus smelled weird and felt a bit uncomfortable, but she was proud of herself. Now she feels more confident, and can take the bus with a friend, but she's not ready to go completely alone yet. She also walks home alone now.",
+    "text": "My daughter took the city bus with her brother for the first time when she was 10, and I waited at the bus stop. She was nervous, thought the bus smelled weird and felt a bit uncomfortable, but she was proud of herself. Now she can take the bus with a friend, but she's not ready to go completely alone yet.",
     "quotes": []
   },
   "photo": {
     "src": "guides/assets/solo-mission.jpg",
     "alt": "A brother and sister sitting on a bench at a city bus shelter, waiting for the bus",
-    "caption": "Waiting for the bus, without me."
+    "caption": "Dropped off at the stop. From here, on their own."
   }
 }

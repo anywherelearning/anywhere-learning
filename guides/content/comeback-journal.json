@@ -57,7 +57,7 @@
       },
       {
         "q": "It's a big letdown, like moving house or not making a team",
-        "a": "Stay longer in Step 1, and keep the goal tiny. Some letdowns need weeks."
+        "a": "Stay longer in Step 1, and keep the goal tiny. Some letdowns need weeks. If they stay low for weeks, or stop enjoying things they used to love, talk to your doctor."
       }
     ]
   },
@@ -120,7 +120,7 @@
     {
       "title": "Focus on your game",
       "why": "The score, the referee and other people's effort are out of their hands. Their own game never is.",
-      "kid": "Your kid sorts what happened using the My game card: their effort, how they played, what they practised and how they treated others, apart from the score and everyone else's choices.",
+      "kid": "Your kid fills in the My game card for this letdown: their effort, one thing that went well, one thing to work on and how they treated others. The score stays off the card.",
       "you": "Keep pointing them back to themselves: 'Don't forget to focus on you and what you can do, how you played.' Then ask what they're proud of in their own game.",
       "ask": [
         "What did you do well, even though it didn't work out?",
@@ -218,23 +218,23 @@
         "name": "My game",
         "lines": [
           {
-            "k": "My game:",
-            "v": "my effort, how I played"
+            "k": "Effort:",
+            "v": "how hard I tried, start to finish"
           },
           {
-            "k": "My game:",
-            "v": "what I practised, how I treated others"
+            "k": "Worked:",
+            "v": "one thing that went well"
           },
           {
-            "k": "Not my game:",
-            "v": "the score, the referee"
+            "k": "Fix:",
+            "v": "one thing to work on"
           },
           {
-            "k": "Not my game:",
-            "v": "how hard other people try"
+            "k": "Others:",
+            "v": "how I treated my team"
           }
         ],
-        "ask": "What on the 'not my game' side do you keep thinking about?"
+        "ask": "Which line are you proudest of today?"
       },
       {
         "name": "Personal goal",
@@ -294,7 +294,7 @@
     "extensions": [
       "Write a short note to a friend or teammate after their next letdown, using what you learned",
       "Find a story of an athlete, artist or inventor who failed many times first",
-      "Write a letter to your future self to read after the next letdown",
+      "Pick a moment from your journal and replay it as practice, like the shot you missed, and try your goal again",
       "Add a page for your own next letdown, and let them help you find the facts"
     ]
   },
@@ -312,7 +312,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "When my son started basketball, his team wasn't good and they lost pretty much every game. He was giving his best and the results weren't there. Some players weren't as committed as he was, so he was frustrated with his teammates too, and there may have been a few tears. He kept playing with the same team. I kept telling him: 'Don't forget to focus on you and what you can do, how you played.' He set personal goals instead of team goals. The team got better year after year, and this year they won their championship. He was named MVP.",
+    "text": "When my son started basketball, his team lost pretty much every game, and I kept telling him: 'Don't forget to focus on you and what you can do, how you played.' He set personal goals instead of team goals, and the team got better year after year. This year they won their championship, and he was named MVP.",
     "quotes": []
   },
   "photo": {

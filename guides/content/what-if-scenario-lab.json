@@ -121,7 +121,7 @@
     {
       "title": "Ask someone who knows",
       "why": "Somebody has already lived some version of this.",
-      "kid": "Your kid finds out how real people have handled something like it. Best of all, they ask someone, using the Ask them card: a grandparent who remembers a long power cut, a neighbour who grew up on a farm, a friend who moved countries. Then they write down what surprised them.",
+      "kid": "Your kid finds out how real people have handled something like it. Best of all, they ask someone, using the Ask them card: a grandparent who remembers when shops were far away, a neighbour who grew up on a farm, a friend who moved countries. Then they write down what surprised them.",
       "you": "Help them think of who to ask, and make the call or visit together. Look things up with them if there's no one to ask.",
       "ask": [
         "What did they do that you wouldn't have thought of?",
@@ -138,7 +138,7 @@
       "title": "Make the plan, then try a slice",
       "why": "A plan on paper has never had to make supper.",
       "kid": "Your kid writes what you'd do on Day 1, how you'd handle the biggest problems and what you'd have to give up. Then you all live a small slice from the Try a slice card for a few hours, and they fix the plan with what they learned.",
-      "you": "Ask 'What about...?' to find the gaps, and then really do the slice. No cheating, for the agreed time. Use flashlights rather than candles, and keep the safety rules you always have.",
+      "you": "Ask 'What about...?' to find the gaps, and then really do the slice. No cheating, for the agreed time. Keep the safety rules you always have.",
       "ask": [
         "Which part could fall apart?",
         "If you can only keep one, which one?"
@@ -175,8 +175,8 @@
         "name": "What-ifs",
         "lines": [
           {
-            "k": "No power:",
-            "v": "a week with no electricity"
+            "k": "No shops:",
+            "v": "the stores close for a month"
           },
           {
             "k": "Grow it:",
@@ -227,8 +227,8 @@
         "name": "Try a slice",
         "lines": [
           {
-            "k": "No power:",
-            "v": "one evening, lights and screens off"
+            "k": "No shops:",
+            "v": "one day, nothing bought, cook and fix with what's here"
           },
           {
             "k": "Grow it:",
@@ -240,7 +240,7 @@
           },
           {
             "k": "Move:",
-            "v": "learn to say 10 things in a new language"
+            "v": "one afternoon getting by with ten words of another language"
           },
           {
             "k": "Kids in charge:",
@@ -301,7 +301,7 @@
     "celebrate": "Put their Day 1 column beside the final plan and say: 'Look how far you took that.'",
     "extensions": [
       "Pick a what-if about history, and find out what really happened",
-      "Try a bigger slice, like a whole weekend",
+      "Ask a newcomer to your town what surprised them on Day 3, and compare it with your map",
       "Write the story of Day 7 from your plan",
       "Run your what-if on a story you love: what would the main character do on Day 3?"
     ]

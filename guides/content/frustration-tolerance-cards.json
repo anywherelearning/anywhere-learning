@@ -162,7 +162,7 @@
         },
         {
           "name": "Tongue Twister",
-          "t": "Say 'red leather, yellow leather' five times fast. When your tongue trips: Add yet, and slow it down.",
+          "t": "Say 'red lorry, yellow lorry' five times fast. When your tongue trips: Add yet, and slow it down.",
           "d": "Make up your own, and try it on the family.",
           "icon": "message-square",
           "art": "wc/frust-trucks.jpg"
@@ -235,7 +235,7 @@
         },
         {
           "name": "Rule Spinner",
-          "t": "Halfway through a game, spin a spinner or roll a die to change one rule, like 'play with your other hand'. When the rule changes: Start over. 'Okay, new game.'",
+          "t": "Halfway through a game, spin a spinner or roll a die to change one rule, like 'play with your other hand'. When the rule changes: Try another way. 'Okay, new rule.'",
           "d": "Write your own list of six rule changes.",
           "icon": "refresh-ccw",
           "art": "wc/frust-spinner.jpg"
@@ -281,9 +281,9 @@
           "art": "wc/frust-dice.jpg"
         },
         {
-          "name": "Lose on Purpose",
-          "t": "Play a game and try to lose it on purpose, without the other player noticing. At the end: Good game, and mean it.",
-          "d": "Explain how you lost, and what that felt like.",
+          "name": "Rematch",
+          "t": "Play a game you just lost again, right away, against the same player. Before you start: Slow breath. At the end, win or lose: Good game.",
+          "d": "Ask the winner for one tip, and use it in the rematch.",
           "icon": "medal",
           "art": "wc/frust-checkers.jpg"
         },
@@ -381,7 +381,7 @@
       "Let your kid invent a new frustration card for you to try",
       "Pick a family move of the week, and use its name all week",
       "Redo the hardest card in a month and see what changed",
-      "Turn one card into a family challenge night, and let your kid pick the card you have to do"
+      "Watch a sport or a game show and spot the frustration moves: when a player misses, what do they do next?"
     ]
   },
   "signs": [

@@ -10,7 +10,7 @@
     "These cards, on your phone or printed and cut out",
     "Fallen natural materials: sticks, rocks, leaves, pinecones, sand",
     "Optional: a phone for 'design photos' of each version",
-    "For 4 cards: a raw egg, a cup, a watering can (or a second cup), and a plastic bottle (you cut it)"
+    "For some cards: a raw egg, a cup, a watering can (or a second cup), and a plastic bottle (you cut it)"
   ],
   "lesson": {
     "text": "Every challenge runs on the same engineering loop: plan it, build it, test it, improve it. The improving is where the real learning happens, so the first try failing is part of the plan.",
@@ -145,11 +145,10 @@
       "title": "Float and flow",
       "cards": [
         {
-          "name": "Leaf Boat Engineer",
-          "t": "Design a 'boat' from leaves and sticks that floats in a puddle or a dish of water.",
-          "d": "Change one thing to make it float longer, and explain why it helped.",
-          "icon": "sailboat",
-          "art": "wc/stem-06.jpg"
+          "name": "Water Wheel",
+          "t": "Build a little wheel from sticks and leaves that spins when you pour water over it.",
+          "d": "Change the paddles: bigger, smaller or more of them. Which spins fastest?",
+          "icon": "refresh-ccw"
         },
         {
           "name": "Raft Challenge",
@@ -168,7 +167,7 @@
         {
           "name": "Mini Dam",
           "t": "Build a mini dam across a dry channel or between rocks. Never block a real stream.",
-          "d": "Explain how it would change the water's path if it rained.",
+          "d": "Pour a cup of water at the top of the channel. Where does it go around your dam, and how do you stop it?",
           "icon": "waves",
           "art": "wc/stem-09.jpg"
         },
@@ -200,7 +199,7 @@
         },
         {
           "name": "The Best Insulator",
-          "t": "Bury your hand for a minute in 3 piles: leaf litter, pine needles, dry grass. Which feels warmest on a cool day?",
+          "t": "Bury your hand for a minute in 3 piles: leaf litter, pine needles, dry grass. Check each pile first for anything sharp or crawling. Which feels warmest on a cool day?",
           "d": "Fluff one pile, pack one hard. Which is warmer? (Trapped air.)",
           "icon": "thermometer-sun",
           "art": "wc/stem-13.jpg"
@@ -232,11 +231,10 @@
           "art": "wc/stem-16.jpg"
         },
         {
-          "name": "Nature Catapult",
-          "t": "Make a simple launcher with a flexible fallen stick.",
-          "d": "Make it launch farther without pushing harder: change the angle or the design.",
-          "icon": "rocket",
-          "art": "wc/stem-17.jpg"
+          "name": "Bark Sled",
+          "t": "Make a sled from bark or a flat stick that slides down a slope the farthest.",
+          "d": "Change only the bottom: smooth bark, rough bark, a leaf underneath. Which wins?",
+          "icon": "trending-down"
         },
         {
           "name": "Friction Test",
@@ -253,11 +251,10 @@
           "art": "wc/rev-sinkfloat.jpg"
         },
         {
-          "name": "Seed Dispersal Designer",
-          "t": "Find 3 seeds and predict how each one travels: wind, water or animals.",
-          "d": "Build a model seed from found materials that would travel best by wind.",
-          "icon": "sprout",
-          "art": "wc/stem-20.jpg"
+          "name": "Balance Mobile",
+          "t": "Hang 3 found objects from one stick so it hangs level.",
+          "d": "Add a fourth without taking anything off. Where does it have to go?",
+          "icon": "scale"
         }
       ]
     },
@@ -300,10 +297,10 @@
     "text": "The next block tower or blanket fort that collapses will tell you. If they look for the exact spot it gave way before rebuilding, the loop from these cards has stuck. If they start over from scratch, ask where it broke first.",
     "celebrate": "The moment the second bridge beats the first, put a finger on the support they added and say: 'This rock is why it held five. You found that.'",
     "extensions": [
-      "Do the same card in a new place with different materials",
-      "Photograph version 1 and version 2 side by side",
-      "Let your kid invent a new challenge card for you",
-      "Try the plan, build, test, improve loop on something at home"
+      "Build a full-size lean-to with a grown-up, using the Windproof Shelter rules",
+      "Look up how beavers build dams, and compare with your Mini Dam",
+      "Give a younger kid one card and be their tester: blow, pour, add stones",
+      "Pick one card and write the 'failure log': every version, what broke, what you changed"
     ]
   },
   "signs": [

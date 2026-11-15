@@ -7,7 +7,7 @@
   "goal": "Five outdoor menus, from a first-time explorer to a 10-and-up field researcher. You pick the board and the boundary, your kid picks the options the board asks for and heads out, then comes back to show you their best discovery.",
   "need": [
     "These boards, on your phone or printed",
-    "A safe outdoor space with a clear boundary you can see from with a clear boundary: a yard, a park, a campsite",
+    "A safe outdoor space with a clear boundary you can see: a yard, a park, a campsite",
     "A notebook and pencil, a timer, a phone for photos, and a small bottle of water"
   ],
   "lesson": {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "Before they head out, say two things out loud: the boundary and the return time. Pick the board yourself, then hand over every other choice. Do the first option together if they're new to it, and save your questions for the show-and-tell.",
+    "intro": "Before they head out, say two things out loud: the boundary and the return time. Pick the board yourself, then hand over every other choice. Do the first option together if they're new to it, and save your questions for the show-and-tell. Then pick one option yourself and do it within sight of them, so the show-and-tell goes both ways.",
     "plan": [
       {
         "when": "Before",
@@ -60,7 +60,7 @@
       },
       {
         "when": "Outside",
-        "what": "They do 3 options in any order. About 30 to 45 minutes."
+        "what": "They do the number of options their board asks for, in any order. About 30 to 45 minutes."
       },
       {
         "when": "After",
@@ -71,7 +71,7 @@
     "troubleshoot": [
       {
         "q": "They pick the easiest options every time",
-        "a": "Let them. Next time, you pick one of the three and they pick the other two."
+        "a": "Let them. Next time, you pick one of their options and they pick the rest."
       },
       {
         "q": "An option feels too hard",
@@ -166,8 +166,8 @@
       "rule": "Pick any 3. Do them in any order. Then show your grown-up your best discovery.",
       "cards": [
         {
-          "t": "Make a sound map: you in the middle, sounds all around.",
-          "art": "wc/explorer-sound-map.jpg"
+          "t": "Find the quietest spot inside the boundary. What makes it quiet?",
+          "icon": "ear"
         },
         {
           "t": "Find 2 things that look alike but aren't. What's different?",
@@ -225,8 +225,8 @@
           "art": "wc/scientist-soils.jpg"
         },
         {
-          "t": "Find 3 seeds. Guess how each one travels: wind, water or animal.",
-          "art": "wc/scientist-seeds.jpg"
+          "t": "Find a plant growing where nothing else is. What does it have that the others don't?",
+          "icon": "sprout"
         },
         {
           "t": "Trace a water path: where would rain flow from here?",
@@ -265,8 +265,9 @@
           "art": "wc/scientist-count.jpg"
         },
         {
-          "t": "Write 5 questions you could investigate next time.",
-          "art": "wc/scientist-questions.jpg"
+          "t": "Pick one question from today and test it before you come in.",
+          "art": "wc/scientist-questions.jpg",
+          "icon": "lightbulb"
         }
       ]
     },
@@ -320,8 +321,8 @@
           "art": "wc/builder-ramp.jpg"
         },
         {
-          "t": "Make land art with one rule: only circles.",
-          "art": "wc/builder-circles.jpg"
+          "t": "Build a mini shade for a beetle. In 10 minutes, is the ground under it cooler?",
+          "icon": "umbrella"
         }
       ]
     },
@@ -355,8 +356,8 @@
           "art": "wc/researcher-healthy.jpg"
         },
         {
-          "t": "Mix soil, clay or charcoal with water into paint. Paint a map of the area.",
-          "art": "wc/researcher-pigments.jpg"
+          "t": "Pace out this spot and draw it to scale: 1 square on your page = 1 step.",
+          "icon": "footprints"
         },
         {
           "t": "Draw 5 symbol tiles. Tell a 5-sentence story using them.",
@@ -386,8 +387,8 @@
     "text": "On an ordinary walk with no board, wait and see what they bring back to you. If it comes with a where, a what-it-did and an 'I wonder', the show-and-tell habit has stuck, board or no board.",
     "celebrate": "Crouch down at the spot they lead you to and say: 'You remembered exactly where it was. Show me what it did.'",
     "extensions": [
-      "Repeat the same board in a new season and compare discoveries",
-      "Move up one board when the current one feels easy",
+      "Take a board to a place you've never been and let your kid set the boundary",
+      "Swap roles: you do 3 options, your kid listens to your show-and-tell and asks the 'I wonder'",
       "Let your kid design a 12-option board for you",
       "Keep the best discoveries in one notebook all year"
     ]
@@ -397,7 +398,7 @@
     "They come back with a detail and a question, not just 'it was fun'",
     "They stay inside the boundary without reminders"
   ],
-  "makeItReal": "Pack a board for a campsite, a beach or a grandparent's yard. Let your kid pick the three options, then follow as they walk you around the new place.",
+  "makeItReal": "Pack a board for a campsite, a beach or a grandparent's yard. Let your kid pick the options, then follow as they walk you around the new place.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {
@@ -413,7 +414,7 @@
     "tall": true
   },
   "fromHome": {
-    "text": "When we go to the coast, the kids spend hours exploring the beach and finding treasures. They used to put everything in a pail and carry it back to the cottage. They learned the hard way that a pail of beach treasures smells terrible after a few days, so now the treasures stay on the beach. They still find them. They just leave them where they belong.",
+    "text": "When we go to the coast, the kids spend hours finding treasures. They used to put everything in a pail and carry it back to the cottage. They learned the hard way that a pail of beach treasures smells terrible after a few days, so now the treasures stay on the beach.",
     "quotes": []
   }
 }

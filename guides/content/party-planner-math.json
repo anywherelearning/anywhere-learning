@@ -298,9 +298,9 @@
   "conclusion": {
     "headline": "The party happened because their numbers worked.",
     "text": "Ask them how many pizzas a party for 10 would need. Watch them multiply, divide by 8 and round up to 3 without being told. That's the maths from this guide, and they learned it feeding people they care about.",
-    "celebrate": "When the last guest leaves, tell them one thing that happened because of their plan: 'Did you see your cousin go back for seconds? You planned exactly enough.'",
+    "celebrate": "When the last guest leaves, look at what's left on the table together: 'Everyone had enough, and almost nothing is left over. Your numbers did that.'",
     "extensions": [
-      "Plan for a bigger group and see how the budget and amounts scale",
+      "Plan a potluck where each guest brings one dish, and work out what the host still has to buy.",
       "Plan a themed dinner with 3 courses and work out the cost per course",
       "Compare a homemade party with a party at a venue for the same guests",
       "Plan a surprise party, and keep it secret while working with others"
@@ -326,7 +326,7 @@
     "caption": "Italian night: every guest builds their own pizza."
   },
   "fromHome": {
-    "text": "My daughter organized an Italian party where every guest made their own pizza. She worked out how much dough, sauce and cheese she needed per guest, wrote the shopping list and did the shopping. She made all the decorations herself, the flags, the garland and the ITALY sign, and even made Italian money so her friends could play restaurant.",
+    "text": "My daughter organized an Italian party where every guest made their own pizza. She worked out how much dough, sauce and cheese she needed per guest, wrote the shopping list and did the shopping.",
     "quotes": []
   }
 }

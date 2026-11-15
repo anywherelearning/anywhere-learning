@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "Read the card, sit down beside your kid, and journal too if you like: kids take it more seriously when you have your own page. Drawing comes first, words second, and nobody grades the art. Plant and bird names can wait.",
+    "intro": "Read the card, sit down beside your kid, and journal too, on your own page: kids take it more seriously when you're journalling beside them. Drawing comes first, words second, and nobody grades the art. Plant and bird names can wait.",
     "plan": [
       {
         "when": "Before",
@@ -249,11 +249,11 @@
           "jp": "Describe how this place might look in another season. Draw it today, then draw it the way you imagine it will change."
         },
         {
-          "name": "Leaf Mandala",
-          "t": "Make a circle design with fallen leaves on the ground. Draw it.",
-          "d": "Why did you put the colours in that order?",
-          "art": "wc/journal-20.jpg",
-          "jp": "Collect small things from nature, like leaves, stones or twigs, and arrange them into a mandala. Draw it."
+          "name": "Colour Change",
+          "t": "Pick 3 leaves from one tree: still green, turning, fully turned. Draw them side by side.",
+          "d": "Which colour was hiding under the green all summer?",
+          "icon": "leaf",
+          "jp": "Find three leaves from the same tree at different stages of changing colour. Draw them side by side and write what you notice."
         }
       ]
     },
@@ -262,11 +262,10 @@
       "cards": [
         {
           "name": "Winter Sounds",
-          "t": "Stand still in the snow. Draw a sound map of winter: crunch, drip, wind.",
-          "d": "How are winter sounds different from summer sounds?",
+          "t": "Stand still in fresh snow for 2 minutes. List every sound, then clap once.",
+          "d": "Clap again on a day with no snow. Why does fresh snow make the world quieter?",
           "art": "wc/journal-21.jpg",
-          "mapbox": true,
-          "jp": "Sit quietly and listen to the sounds of winter, like snow crunching underfoot or wind in the trees. Draw a sound map and write how these sounds make you feel."
+          "jp": "Stand still in fresh snow and list every sound you hear. Clap once. Draw the scene and write why the snow might make it so quiet."
         },
         {
           "name": "Winter Sky",
@@ -399,10 +398,10 @@
     "text": "Lay the first page next to the latest one. The 'I notice' lines have likely grown longer and more exact. Pick one 'I wonder' and look up the answer together this week.",
     "celebrate": "Keep this line for the day they reach for the journal before you suggest it: 'You didn't need a card for that one. You just saw it.'",
     "extensions": [
-      "Pick one spot and journal it every season for a year",
+      "Press one leaf, flower or fern per month between the journal pages",
       "Start a family journal: everyone adds a page on the same walk",
-      "Look up the answer to one 'I wonder' each week",
-      "Take the journal on your next trip and compare places"
+      "Pick one 'I wonder' and design a small test for it, then journal the result",
+      "Trade one page with a friend or grandparent who journals a different place"
     ]
   },
   "signs": [

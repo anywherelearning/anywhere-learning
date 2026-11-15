@@ -4,7 +4,7 @@
   "title": "Write It Like a Pro",
   "tagline": "Voice and style · Writing for a reader · Revision",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid picks a writing style (a review, a letter, a how-to, an opinion piece, a short story, a news report or a song), picks a topic they actually care about, and writes something real for a real reader. Not a five-paragraph essay: a persuasive letter about bedtime, a how-to for their best skill. They learn that different situations call for different voices, and that writing for a real person changes how you put words together.",
+  "goal": "Your kid picks a writing style (a review, a letter, a how-to, an opinion piece, a short story, a news report or a song), picks a topic they actually care about, and writes something real for a real reader: a persuasive letter about bedtime, a how-to for their best skill. They learn that different situations call for different voices, and that writing for a real person changes how you put words together.",
   "need": [
     "Paper and pencil, or a notes app",
     "The Writing Style Cards at the end of the guide",
@@ -31,7 +31,7 @@
         "line": "How to get a later bedtime: Step 1, show you can wake up on time."
       }
     ],
-    "modelNote": "'Because I want it to be' only convinces the writer. Each fix gives its reader what they need: Mom gets a plan, the review gives a reason, the news gives facts."
+    "modelNote": "'Because I want it to be' only convinces the writer. Each fix gives its reader what they need: Mom gets a plan, the review gets a reason, the news gets who and what, the how-to gets a first step."
   },
   "academics": [
     {
@@ -55,11 +55,11 @@
     "intro": "Respond to what the words do to you: 'I got confused here' or 'this bit made me laugh' helps more than 'fix your comma.' Leave spelling for the final version.",
     "plan": [
       {
-        "when": "First hour",
-        "what": "The style switch game, pick style and topic, think about the reader (Steps 1 and 2)."
+        "when": "Tonight",
+        "what": "The style switch game, then pick the style, topic and reader (Steps 1 and 2). 20 minutes."
       },
       {
-        "when": "Second hour",
+        "when": "Next day",
         "what": "Write the first draft, then read it out loud for feedback (Steps 3 and 4)."
       },
       {
@@ -178,7 +178,7 @@
       "title": "Revise and send it",
       "why": "Version 2, then the piece goes to the person it was written for.",
       "kid": "Your kid makes their changes: an opening that grabs, the main point clear early, no sentences that don't add anything, an ending that feels finished. They put Version 1 and Version 2 side by side and notice what changed. Then they send it to its real reader: mail the letter, test the how-to on someone, read the opinion piece at dinner.",
-      "you": "Help them see the gap between the two versions: that gap is the learning. Then help find a safe way to get it in front of someone.",
+      "you": "Help them see the gap between the two versions: that gap is the learning. Then handle the logistics of sending (an envelope and stamp, a slot at dinner, a friend to test the how-to), and let your kid do the handing over.",
       "ask": [
         "What's the biggest change between Version 1 and Version 2?",
         "Who would enjoy reading this most?"
@@ -321,12 +321,10 @@
     "text": "When there's a birthday card to sign or a note for a neighbour, watch what they do before the first word. You may see them stop and think about who's reading. And after feedback, see if they pick the change that matters most.",
     "celebrate": "Point at the new opening in Version 2 and say: 'This one pulled me in. Read it to me again.'",
     "extensions": [
-      "Turn an informative piece into a song: keep a tune everyone knows, rewrite the lyrics",
       "Write the same story twice, from two characters' points of view",
-      "Try every style card once over the next few weeks",
-      "Write the same topic in two styles and compare",
+      "Try every style card once over the next few weeks, and keep the finished pieces in one folder",
       "Write a real letter to someone who'll write back",
-      "Keep a folder of finished pieces, one per style"
+      "Rewrite a piece for a reader who disagrees with you"
     ]
   },
   "signs": [
@@ -334,7 +332,7 @@
     "They write differently for Grandma than for a friend",
     "They accept feedback and make the piece better"
   ],
-  "makeItReal": "Send it off: mail the letter to a grandparent, send the complaint to the company, test the how-to on a friend. When a reply comes, read it together and decide what to write back.",
+  "makeItReal": "Send it off: mail the letter to a grandparent, give the opinion piece to the person who can change the rule, test the how-to on a friend. When a reply comes, read it together and decide what to write back.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
@@ -349,7 +347,7 @@
     "caption": "Panama City: the same story, written from two points of view."
   },
   "fromHome": {
-    "text": "My kids wrote the same made-up adventure twice: a treasure hunt in Santa Catalina, once from my son's point of view and once from my daughter's. They turned it into a book with pictures and recorded themselves reading it. In El Salvador, they each turned an informative text about the country into a song, set to a kids' tune we all knew.",
+    "text": "My kids wrote the same made-up adventure twice: a treasure hunt in Santa Catalina, once from my son's point of view and once from my daughter's. In El Salvador, they each turned an informative text about the country into a song, set to a kids' tune we all knew.",
     "quotes": []
   }
 }

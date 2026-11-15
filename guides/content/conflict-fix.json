@@ -6,7 +6,7 @@
   "ages": "Ages 6 to 14",
   "goal": "Your kids learn to fix a fight, not just end it. They cool down first, tell what happened without blame, own their own part, hear the other side, and agree on a fix, so the same argument about whose turn it is doesn't come back tomorrow.",
   "need": [
-    "A small, real fight, like whose turn it is, between siblings, friends or you and your kid",
+    "A small, real fight, like whose turn it is, between siblings or friends",
     "A separate spot for each kid to cool down",
     "Paper for the fix, and the fridge to put it on"
   ],
@@ -294,8 +294,8 @@
     "extensions": [
       "Make a family fix plan for the chore you argue about most",
       "Work through a grown-up disagreement out loud, so they see the steps",
-      "Practise Hear it at dinner: one person shares an opinion, the next says it back before answering",
-      "Use the steps with a friend or teammate, not just a sibling"
+      "Find out how a referee or a mediator settles a disagreement, and compare it with your five steps",
+      "Fix an old fight that still stings, using only Own it and Hear it"
     ]
   },
   "signs": [
@@ -312,7 +312,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "My two argue every day, and they make up pretty quickly. It usually starts small, like whose turn it is to do the dishes. My daughter gets worked up, and my son keeps pushing her buttons until she gets louder, sometimes pushy, and he won't let it go. If it doesn't settle on its own, their dad or I say that's enough, and they each go their own way and take some space to calm down. Things come back to normal on their own, and they usually apologize to each other, with a hug.",
+    "text": "My two argue every day, and it usually starts small, like whose turn it is to do the dishes. My daughter gets worked up, and my son keeps pushing her buttons until she gets louder, sometimes pushy. If it doesn't settle on its own, their dad or I say that's enough, they each take some space to calm down, and they usually apologize to each other, with a hug.",
     "quotes": []
   },
   "photo": {

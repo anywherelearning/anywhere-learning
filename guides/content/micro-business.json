@@ -126,7 +126,7 @@
       "title": "Count the costs and set the price",
       "why": "If you don't know your costs, you don't know if you made money.",
       "kid": "Your kid lists everything it takes, using the Count it card: supplies, anything borrowed and their own time. They work out the cost of one job, pick a price people said they'd pay and check there's something left over. Then they write the job and the price at the top of their business notebook.",
-      "you": "Be the bank if they need supplies. Write the loan down and agree when it gets paid back. Let them do the math, even when it's slow.",
+      "you": "If they need supplies, be the bank: write the loan down and agree when it gets paid back. For anything more than a few dollars, have them pitch it with Shark Tank Style Pitch. Let them do the math, even when it's slow.",
       "ask": [
         "What's left after the costs?",
         "Is that worth an hour of your time?"
@@ -135,14 +135,14 @@
       "levels": {
         "explore": "Write down what you need and what it costs, then pick a price that's higher.",
         "develop": "Work out the cost of one job and the profit at your price.",
-        "extend": "Work out profit per hour at two prices, then choose one and say why."
+        "extend": "Add travel time to each job, work out profit per hour again, and find the customer who is too far away to be worth it."
       }
     },
     {
       "title": "Run it and keep the books",
       "why": "This is where it gets real: promises, people and money.",
       "kid": "Your kid runs the business for two or three weeks. They write a line for every job in the notebook: the date, money in, money out and how long it took. They pay back any loan first and keep a list of customers who want it again.",
-      "you": "Stay close for anything with strangers or roads, and go along the first time for jobs inside someone's home. For food, ask about allergies and check your local rules. Otherwise step back, and if they forget a job, let them talk to the customer.",
+      "you": "Stay close for anything with strangers or roads, and go along the first time for jobs inside someone's home. For food, ask about allergies and check your local rules. For bottles, gloves and a rinse, and leave broken glass for you. Otherwise step back, and if they forget a job, let them talk to the customer.",
       "ask": [
         "Who came back?",
         "What took longer than you expected?"
@@ -217,8 +217,8 @@
             "v": "what would you pay for it?"
           },
           {
-            "k": "Now:",
-            "v": "what do you do about it now?"
+            "k": "When:",
+            "v": "what day or time suits you?"
           },
           {
             "k": "Better:",
@@ -302,11 +302,11 @@
   "conclusion": {
     "headline": "They ran something real, and they know what it was worth.",
     "text": "Watch for it in the weeks after. If they ask how long a job takes before they say yes to it, or work out what an hour of their time is worth, they're thinking like an owner, not a seller.",
-    "celebrate": "When a customer comes back, say: 'They came back because you did it well.'",
+    "celebrate": "The first time a customer books a second job, say: 'They asked for you again. That's what makes it a business.'",
     "extensions": [
       "Run it again next season and compare profit per hour",
       "Give the profit a job with a savings goal",
-      "Teach someone younger to run it, and see what they change",
+      "Write a one-page 'how we run it' sheet so the business could keep going while you're away for a week",
       "Keep a notebook of problems nobody around you is solving yet"
     ]
   },

@@ -190,7 +190,7 @@
             "v": "I steer, it changes"
           }
         ],
-        "ask": "Which part would you never hand to AI?"
+        "ask": "What would you feel funny saying AI did?"
       },
       {
         "name": "Brief",
@@ -244,8 +244,8 @@
             "v": "does it match the brief?"
           },
           {
-            "k": "Brief:",
-            "v": "point to the line in the brief it missed"
+            "k": "Show it:",
+            "v": "ask the person it's for, before it's done"
           },
           {
             "k": "Take over:",
@@ -306,7 +306,7 @@
     "celebrate": "When they finish a project with AI help, say: 'You made every decision, and you told the truth about how. It's yours.'",
     "extensions": [
       "Make the same small project with and without AI, and compare",
-      "Make something for a real person in your family, from their own brief",
+      "Find something online labelled 'made with AI', and talk about whether the label told you enough",
       "Make the same small card for two different people, and see how the brief changes everything",
       "Look up how a real artist or designer you like uses AI, or chooses not to"
     ]
@@ -316,7 +316,7 @@
     "They keep steering until it matches what they wanted",
     "They say openly when AI helped"
   ],
-  "makeItReal": "Pick one real thing someone in your life needs, like a birthday poster, a flyer or a simple website, and let your kid run it: the brief, the AI help, the steering and an honest 'here's how I made it'.",
+  "makeItReal": "This week, whenever anyone in the family shares something AI helped make, you included, add one honest line: 'AI helped with...'",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

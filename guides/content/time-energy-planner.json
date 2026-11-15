@@ -162,7 +162,7 @@
       "tip": "Odd resets count. If humming in the bathroom works, it goes on the list.",
       "levels": {
         "explore": "Try your plan and one reset, then say what helped and what you'd change.",
-        "develop": "Live the plan for two days, test two resets and change the plan twice.",
+        "develop": "Live the plan, test two resets and change the plan once.",
         "extend": "Live it for three days, then write your own rules for different kinds of day and what to do at each low point."
       }
     }
@@ -311,8 +311,8 @@
     "extensions": [
       "Plan a family day out around everyone's low points",
       "Track the day after a late night and compare",
-      "Try one new reset each week and keep score",
-      "Plan a day around the youngest person's low point"
+      "Ask a grandparent or coach what they do when they hit their low point, and test it",
+      "Find the best time of day for a family hard thing, like a long drive or a tricky conversation, using everyone's lines"
     ]
   },
   "signs": [
@@ -335,7 +335,7 @@
     "tall": true
   },
   "fromHome": {
-    "text": "We finished this hike in the pouring rain, trying to find shelter here and there. My daughter was cold and whining. My son was having fun. Ask them for a number on that trail and you'd have got a 1 and a 5.",
+    "text": "We finished this hike in the pouring rain. My daughter was cold and whining, and my son was having fun. Ask them for a number on that trail and you'd have got a 1 and a 5.",
     "quotes": []
   },
   "onTheRoad": [

@@ -200,7 +200,7 @@
           },
           {
             "k": "Pasta with sauce:",
-            "v": "$2"
+            "v": "$1.50"
           },
           {
             "k": "Salad:",
@@ -208,7 +208,7 @@
           },
           {
             "k": "Eggs and toast:",
-            "v": "$2"
+            "v": "$1.25"
           },
           {
             "k": "Cereal and milk:",
@@ -225,7 +225,7 @@
         "lines": [
           {
             "k": "Yogurt:",
-            "v": "$2"
+            "v": "$1"
           },
           {
             "k": "Fruit:",
@@ -241,7 +241,7 @@
           },
           {
             "k": "Cheese and crackers:",
-            "v": "$3"
+            "v": "$1.50"
           },
           {
             "k": "Smoothie:",
@@ -249,7 +249,7 @@
           },
           {
             "k": "Juice:",
-            "v": "$3"
+            "v": "50¢"
           },
           {
             "k": "Treat:",
@@ -323,19 +323,19 @@
   },
   "conclusion": {
     "headline": "The plan survived the store.",
-    "text": "On the next grocery run, hand them one item, like yogurt, and ask which is cheaper per serving: single cups or the tub of 6. They'll divide before they answer. Expect them to check the fridge before anything goes in the cart.",
+    "text": "On the next grocery run, point at one package, like a box of granola bars, and ask how many lunches it covers and what one lunch's share costs. Expect them to check the fridge before anything goes in the cart.",
     "celebrate": "Name the leftover they planned for: 'Tomorrow's toast comes out of today's loaf. Nothing wasted. Good catch.'",
     "extensions": [
-      "Plan the same meals on half the budget",
+      "Price the same dinner as takeout and as home-cooked, and work out what one plate saves.",
       "Add a constraint: travel-friendly, no cooking or minimal waste",
       "Plan a week of packed lunches using shared ingredients",
-      "Let them plan and shop one meal every week"
+      "Plan a meal for a guest who can't eat one ingredient, and swap it out without raising the cost per plate."
     ]
   },
   "signs": [
     "They ask how many servings are in a package",
     "They check what's at home before writing a list",
-    "They notice when a bigger size is the better deal"
+    "They plan a use for the rest of the package before it goes in the cart."
   ],
   "makeItReal": "Put one meal a week on the calendar as theirs to plan, shop and make. Keep the receipts in a folder, and compare the cost per person after a month.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

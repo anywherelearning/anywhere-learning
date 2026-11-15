@@ -12,7 +12,7 @@
   ],
   "need": [
     "A willing follower: you, a sibling, or a friend",
-    "A route to walk (around the house, the garden, the park) or a task to complete (build a block tower, make a sandwich, or the hidden drawing: your kid draws something, hides it, and guides you to draw the same thing)",
+    "A route to walk (around the house, the garden, the park) or a task to complete (a block tower, a sandwich, or a hidden drawing your kid guides you to copy)",
     "Paper and pencil for writing the directions",
     "Optional: a blindfold for an extra challenge"
   ],
@@ -109,7 +109,7 @@
       "you": "Help brainstorm a few ideas from the list below, then let your kid choose. Agree on the rule together: words only, no pointing or showing. While they write, don't look. You'll find out how clear the directions are in Step 2.",
       "starters": [
         "Couch to fridge",
-        "A house with one window",
+        "Hidden drawing: a house with one window",
         "A 4-block tower",
         "A paper plane",
         "Front door to bedroom"
@@ -195,8 +195,8 @@
     "text": "Ask them for directions to something in the house, no pointing. Listen for numbers, left and right, and landmarks like 'past the big chair'. If they pause to picture what you'd see from where you stand, they're thinking like the listener now.",
     "celebrate": "On the second run, the moment you land exactly where they meant, say it: 'Same route, new words, and I didn't go wrong once. You fixed that.'",
     "extensions": [
-      "Try it blindfolded at the table: the follower can't see and has to rely completely on the words",
-      "Swap roles: you give the directions and your kid follows them word for word",
+      "Give directions over the phone to someone at the park, who can't see you at all",
+      "Write directions with no numbers allowed, only landmarks, then a set with no landmarks, only numbers. Which one got the follower there?",
       "Write directions to a hidden treat and leave them for someone to find",
       "Race the clock: can your partner finish in under 3 minutes using only your directions?"
     ]

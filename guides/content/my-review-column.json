@@ -21,7 +21,7 @@
     "model": [
       {
         "part": "Opinion",
-        "line": "Riverside Park is the best park in town for climbing."
+        "line": "Hillcrest Park is the best park in town for climbing."
       },
       {
         "part": "Reason",
@@ -29,7 +29,7 @@
       },
       {
         "part": "Proof",
-        "line": "The rope pyramid is twice as tall as the one at school, and there's a net at the top you can lie in."
+        "line": "The rope pyramid is taller than our house, and there's a net at the top you can lie in."
       },
       {
         "part": "Fair",
@@ -158,7 +158,7 @@
         "What does it take to get your top score?",
         "When you take a point off, can you say exactly why?"
       ],
-      "tip": "Scoring out of 100 by category is what our kids use for every country we visit. Taking points off forces a reason every time.",
+      "tip": "Test the scale on something they hate. If the worst thing they can think of still gets 2 stars, the bottom of the scale needs work.",
       "levels": {
         "explore": "Draw 1 to 5 stars (or acorns) and say what 1 star and 5 stars mean.",
         "develop": "Write a clear meaning for each level, test it on 2 things and adjust it.",
@@ -221,7 +221,7 @@
     "extensions": [
       "Keep the column going: one new review after every outing",
       "Review five things of the same kind, like five parks, and make a ranking",
-      "Score a family movie night out of 100, by category",
+      "Find a review your kid disagrees with, online or in a newspaper, and write a reply review",
       "Review the same thing as a sibling and compare your scores",
       "Read a real newspaper review together and find its opinion, reason and proof"
     ]
@@ -231,7 +231,7 @@
     "They notice details in the moment ('I'm putting this in my review')",
     "They start asking what things cost, and whether they're worth it"
   ],
-  "makeItReal": "Hand a finished review to the person it's about: the café owner, the librarian who recommended the book, the park's community board. Let your kid watch them read it, then write the next review with that reader in mind.",
+  "makeItReal": "Hand a finished, mostly positive review to the person it's about: the café owner, the librarian who recommended the book, the park's community board. Let your kid watch them read it, then write the next review with that reader in mind.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",

@@ -295,10 +295,10 @@
     "text": "At the next claw machine or prize wall, wait before anyone pays and see what they say. Expect them to count the ways to win and the ways to lose, and to wonder out loud what the house keeps.",
     "celebrate": "Count the till together, then say: 'People won all afternoon, and your till still came out ahead. You set that up.'",
     "extensions": [
-      "Rebuild the booth with a harder game and see how the profit changes",
+      "Run the booth at a real event, like a family reunion or a block party, with small real prizes, and give the till to a cause they choose.",
       "Run family game night and set fair odds so everyone has a real chance",
       "Work out the odds behind a claw machine or scratch ticket you see out in the world",
-      "Design a perfectly fair game where the house breaks even, and see how different it has to be"
+      "Secretly make one spinner wedge bigger, and count how many plays it takes the family to notice the game isn't fair."
     ]
   },
   "signs": [
@@ -306,7 +306,7 @@
     "They know one win doesn't make a game fair",
     "They spot the trick at arcades and prize walls"
   ],
-  "makeItReal": "Before a fair or a school carnival, let them pick one game to study and guess its odds and the house's cut before anyone spends a coin.",
+  "makeItReal": "Before a fair or a carnival, let them pick one game to study and guess its odds and the house's cut before anyone spends a coin.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

@@ -261,7 +261,7 @@
             "v": "use what it gave, if it works"
           }
         ],
-        "ask": "Which reset works best for you?"
+        "ask": "What tells you it's time for a break?"
       },
       {
         "name": "Good enough?",
@@ -311,9 +311,9 @@
     "celebrate": "When a hard picture finally comes out right, say: 'That took good coaching. You knew exactly what to ask for.'",
     "extensions": [
       "Use the same coaching on a text answer, like a story idea or a recipe",
-      "Swap prompts with a sibling and see if the other can picture it",
+      "Take a photo of a drawing you made, ask the AI to describe it, and see if its words would rebuild your picture",
       "Draw one picture yourself for the project, next to the AI ones",
-      "Use your best prompt in two different image tools, and see which one follows it better"
+      "Coach a person instead: describe a simple drawing to someone who can't see it, one instruction at a time, and compare"
     ]
   },
   "signs": [

@@ -69,8 +69,8 @@
     {
       "title": "Give a house tour",
       "why": "Your kid practises guiding at home, where nothing can go wrong, before choosing the stops.",
-      "kid": "Your kid gives you a 3-minute tour of your own home, as if you were a visitor who's never been inside. At each room they point at something, tell you one thing about it, and ask you a question. Then they pick the real place for the tour, walk it with fresh eyes, and choose the stops a first-time visitor would find interesting.",
-      "you": "Play the clueless visitor for the house tour and ask silly questions. Then help them think of places and walk the area together. Ask what they'd show a friend from another town, and let them choose.",
+      "kid": "Your kid gives you a 3-minute tour of your own home, as if you were a visitor who's never been inside. At each room they point at something, tell you one thing about it, and ask you a question. Then they pick the real place for the tour and list the spots a first-time visitor would find interesting. You'll walk it together in Step 2.",
+      "you": "Play the clueless visitor for the house tour and ask silly questions. Then help them think of places. Ask what they'd show a friend from another town, and let them choose.",
       "starters": [
         "Our street",
         "A favourite park",
@@ -126,7 +126,7 @@
       "title": "Practise on location",
       "why": "Your kid rehearses the whole tour, out loud, on the real route.",
       "kid": "Your kid walks the route and gives the tour out loud at each stop, as if the audience were there. They practise speaking loud enough for a group, looking up from their notes, and pointing at what they're talking about. They time it, then fix anything that feels too long, too short or awkward.",
-      "you": "Be the practice audience. Afterward, give feedback on volume, pace and eye contact: 'Could I hear you? Did you look at me or at your notes?' Open with the stop where they sounded most sure.",
+      "you": "Be the practice audience. Afterward, start your feedback with the stop where they sounded most sure, then give one note on volume, pace or eye contact: 'Could I hear you from the back of the group? Did you look at me or at your notes?'",
       "ask": [
         "Did you look at your audience, or mostly at your notes?",
         "Which part do you feel most confident about?"
@@ -162,7 +162,7 @@
     "extensions": [
       "Give a tour of a completely different place: a market, a museum or a new neighbourhood",
       "Record the tour as a video for family who couldn't come",
-      "Make a printed tour brochure someone could follow on their own",
+      "Give the tour in a place where your kid is the visitor too, after one scouting walk the day before",
       "Give the same tour to a new audience and compare how it went",
       "Plan a themed tour: history, nature, food or buildings"
     ]

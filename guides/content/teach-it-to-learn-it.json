@@ -44,7 +44,7 @@
     },
     {
       "subject": "Writing",
-      "text": "a simple lesson plan and a step-by-step card for the student"
+      "text": "a simple plan and a step-by-step card for the student"
     },
     {
       "subject": "Life skills",
@@ -52,19 +52,19 @@
     }
   ],
   "howTo": {
-    "intro": "Play the student and do exactly what they say, not what you know they mean. If they skip a step, skip it too. That's how they find the gaps.",
+    "intro": "Be a real beginner: try with your hands, get stuck where a beginner would, and say so out loud. At the check, stay silent and let them stay silent too. That's when you both see what the lesson actually taught.",
     "plan": [
       {
-        "when": "First hour",
-        "what": "The terrible lesson, pick the skill, break it down (Steps 1 and 2)."
+        "when": "Tonight",
+        "what": "The terrible lesson, then pick the skill and break it down (Steps 1 and 2). 20 minutes."
       },
       {
-        "when": "Second hour",
-        "what": "Plan the lesson and make one helper card (Step 3)."
+        "when": "Next day",
+        "what": "Plan the lesson and make one helper card (Step 3). 20 minutes."
       },
       {
-        "when": "After a break",
-        "what": "Teach it, check it, fix it and teach again (Steps 4 and 5)."
+        "when": "Same day or the day after",
+        "what": "Teach it, check it, fix it and teach again (Steps 4 and 5). 30 minutes."
       }
     ],
     "tips": [],
@@ -150,7 +150,7 @@
       "title": "Plan the lesson",
       "why": "Your kid builds a lesson using the four moves, and makes one helper.",
       "kid": "Your kid plans the lesson like the pupusa example: a hook to make the student want to learn (a quick demo, or why it's cool), then show, explain the steps, try together and check. They make one thing to help: a step-by-step card, a drawing, or a slow demo version.",
-      "you": "Read their plan the way a teacher would, and ask about it. Ask the two questions every teacher asks: how will you start so I want to learn? When do I get to try it myself?",
+      "you": "Read their plan as the student would, and ask the two questions every student wants answered: how will you start so I want to learn? When do I get to try it myself?",
       "ask": [
         "How will you start so I actually want to learn this?",
         "Would a picture or a card make a step clearer?"
@@ -166,7 +166,7 @@
       "title": "Teach it for real",
       "why": "The lesson itself, and the test at the end: can the student do it alone?",
       "kid": "Your kid teaches the lesson following their plan: hook, show, explain, try together. When the student gets stuck, they think on their feet: rephrase, show it again, find another way to say it. At the end, they check: can the student now do the skill on their own, without help?",
-      "you": "Be a genuine, willing learner. Follow fuzzy instructions exactly and get it wrong where a beginner would. At the check, give an honest attempt. Success or fail, it's a clue about the teaching, not a grade on anyone.",
+      "you": "Be a genuine, willing learner. Get it wrong where a beginner would, and say what confused you. At the check, give an honest attempt. Success or fail, it's a clue about the teaching, not a score on anyone.",
       "ask": [
         "How else could you explain that step?",
         "Can your student do it on their own now?"

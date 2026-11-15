@@ -195,8 +195,8 @@
             "v": "45 minutes and nothing yet"
           },
           {
-            "k": "Screens:",
-            "v": "30 minutes turned into two hours"
+            "k": "Mornings:",
+            "v": "the same rush every day"
           }
         ],
         "ask": "What bugs you every week?"
@@ -305,8 +305,8 @@
     "celebrate": "The first time it works on a tired day, say: 'You built that, and it's still working.'",
     "extensions": [
       "Solve a shared family problem the same way, like what's for supper",
-      "Turn your fix into a seven-day challenge and track it",
-      "Make a list of three small systems that make life easier",
+      "Find a fix that failed somewhere public, like a sign everyone ignores, and design Version 2",
+      "Solve a problem for a grandparent or neighbour, starting by watching it happen",
       "Spot a fix someone else made, like a hook or a label, and work out the problem it solved"
     ]
   },

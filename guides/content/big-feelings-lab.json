@@ -58,7 +58,7 @@
       },
       {
         "q": "They get upset talking about it",
-        "a": "Stop and come back on a calmer day. This is a guide for after the feeling, never in the middle of it."
+        "a": "Stop and come back on a calmer day. This is a guide for after the feeling, never in the middle of it. If big feelings are taking over their days, talk to your doctor."
       }
     ]
   },
@@ -309,10 +309,10 @@
     "text": "The next time they say 'I'm tired' before something new, ask where they feel it. If they answer 'my stomach, I think I'm nervous', they're reading their own body now.",
     "celebrate": "When they name a feeling on their own, say: 'You found the real feeling under the word. That takes practice.'",
     "extensions": [
-      "Read a story together and name what each character is feeling, and how you can tell",
+      "Make a feelings playlist: one song for each of your top five feelings, and say why each one fits",
       "Find the feeling words in another language you're learning",
       "Make a family feelings check-in at dinner: one word each, no fixing",
-      "Draw a feelings weather report for the family once a week, one picture each"
+      "Find two feelings that can come at the same time, like excited and nervous before a trip, and show where each one sits in your body"
     ]
   },
   "signs": [
@@ -329,7 +329,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "When my daughter started a new acting class, she said she didn't want to do it anymore, that she was tired. She had a stomach ache, shaky legs and she was cranky. She was nervous. Linking the feeling to what her body was doing, and knowing it was normal, helped her understand it.",
+    "text": "When my daughter started a new acting class, she said she didn't want to do it anymore, that she was tired. She had a stomach ache, shaky legs and she was cranky: she was nervous. Linking the feeling to what her body was doing, and knowing it was normal, helped her understand it.",
     "quotes": []
   },
   "photo": {

@@ -17,7 +17,7 @@
     "model": [
       {
         "part": "Measure",
-        "line": "The spot is 12 ft × 10 ft = 120 square feet."
+        "line": "The spot is 15 ft × 10 ft = 150 square feet."
       },
       {
         "part": "Add it up",
@@ -25,14 +25,14 @@
       },
       {
         "part": "So",
-        "line": "107 is less than 120, so it fits. But the path to the house is squeezed to 1 foot wide."
+        "line": "107 is less than 150, so it fits on paper. But with the tent in the middle, the path to the house is squeezed to 1 foot wide."
       },
       {
         "part": "Fix",
-        "line": "Move the blanket and the chairs to the far edge, against the fence. Now the path is 2 feet wide."
+        "line": "Push the tent into one corner, and put the blanket and the chairs in the 7-foot strip beside it. Now a 2-foot path runs the whole length of the spot."
       }
     ],
-    "modelNote": "Fitting is only half of it. Once the path to the house is counted as space too, the same 107 square feet works."
+    "modelNote": "Fitting on paper is only half of it. The same 107 square feet only works once the shape leaves room for a path."
   },
   "academics": [
     {
@@ -174,7 +174,7 @@
       "title": "Camp out and compare the plan with reality",
       "why": "The payoff, and the maths that only happens afterward.",
       "kid": "Your kid sets up the camp following their layout and checks items off the list. During the campout they follow their schedule and handle surprises. The next morning they pack up and compare plan with reality: setup time, food used or left over, and what it actually cost.",
-      "you": "Let them lead the setup and the evening, and join in if you're invited. When something goes wrong, ask 'what's your plan?' instead of fixing it.",
+      "you": "Set up together: they direct, you lift and hold. During the evening, when something goes wrong, ask 'what's your plan?' instead of fixing it.",
       "ask": [
         "How long did setup take compared to your estimate?",
         "Too much food, not enough, or just right?"
@@ -316,7 +316,7 @@
     "extensions": [
       "Plan a campout for friends and scale the space, food and budget up",
       "Try it somewhere new: a park, a campground, a friend's backyard",
-      "Track the weather for a week and pick the best night",
+      "Plan the rainy-night version: what changes in the layout, the gear list and the schedule?",
       "Write a campout planning guide another kid could follow"
     ]
   },

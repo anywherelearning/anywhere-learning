@@ -225,7 +225,7 @@
             "v": "if the deal doesn't work for you"
           }
         ],
-        "ask": "What does the shark get?"
+        "ask": "Would you take this deal if you were the shark?"
       },
       {
         "name": "Pitch parts",
@@ -251,7 +251,7 @@
             "v": "how much, for what, and what they get"
           }
         ],
-        "ask": "Could they repeat your ask?"
+        "ask": "Which part could you cut and still get a yes?"
       },
       {
         "name": "Shark panel",
@@ -316,7 +316,7 @@
       "Pitch to a shark outside your home, like a grandparent, an aunt or a family friend",
       "Once it's paid off, come back with a second, bigger ask",
       "Be the shark for a sibling or a friend, and use the Shark panel card",
-      "Write down the best question any shark asked, and why it was hard"
+      "Invite the sharks back after payback for a short 'shareholder report': what you sold, what you learned and what's next"
     ]
   },
   "signs": [

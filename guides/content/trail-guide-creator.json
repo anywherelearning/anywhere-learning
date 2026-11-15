@@ -113,7 +113,7 @@
         "Our street",
         "The garden",
         "A beach",
-        "Indoors on a rainy day"
+        "A city block"
       ],
       "ask": [
         "What helped you find it again: steps, turns or touch?",
@@ -135,7 +135,7 @@
         "What's the most interesting thing about this exact spot?",
         "If someone couldn't see this place, how would you describe it in words?"
       ],
-      "tip": "Bring the clipboard. Details written on the spot always beat the ones remembered at home.",
+      "tip": "At each stop, close your eyes for ten seconds and listen. The sound your kid hears is often the best line on that page.",
       "levels": {
         "explore": "Stop at 3 or 4 spots and say or draw 2 things you notice at each.",
         "develop": "Stop at 5 or 6 spots, use all your senses, and find one fact for each.",
@@ -155,7 +155,7 @@
       "levels": {
         "explore": "Put your stops in order and draw a simple map.",
         "develop": "Draw a map with numbered stops, step counts and a clear start and end.",
-        "extend": "Measure your step length, turn step counts into metres, and add a scale bar to the map."
+        "extend": "Make a short version too: pick the 3 stops that make a 15-minute loop, and mark them on the map in a second colour."
       }
     },
     {
@@ -193,7 +193,7 @@
   ],
   "conclusion": {
     "headline": "A stranger can walk their trail without them.",
-    "text": "On your next walk somewhere new, let them give the directions back to the start. Listen for landmarks and counts, like 'left at the split tree, then about 50 steps', instead of 'over there'.",
+    "text": "On your next walk, ask them what a visitor should stop and look at here. Listen for one exact detail, like 'the bark peels like paper', instead of 'that tree is nice', and a way to find it.",
     "celebrate": "Watch the tester find a stop without looking up. Then tell your kid: 'They got there on your words alone. You weren't even pointing.'",
     "extensions": [
       "Make a seasonal edition of the same trail",

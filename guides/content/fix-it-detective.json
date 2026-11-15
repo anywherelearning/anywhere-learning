@@ -96,7 +96,7 @@
       ],
       "tip": "Listen as well as look. Squeaks, rattles and drips give themselves away.",
       "levels": {
-        "explore": "Find three things that squeak, stick or wobble, and show me.",
+        "explore": "Find three things that squeak, stick or wobble, and show a grown-up.",
         "develop": "List at least five problems, check them against the Safety rules and pick one.",
         "extend": "Rank the list by how often each problem happens and how hard it looks to fix, and choose the best value."
       }
@@ -112,7 +112,7 @@
       ],
       "tip": "Take a short video of the problem. You'll want it to compare after the fix.",
       "levels": {
-        "explore": "Show me the problem and tell me what it does.",
+        "explore": "Show a grown-up the problem and say what it does.",
         "develop": "Write one sentence: what happens, when, and what still works.",
         "extend": "Find what makes it worse or better, like full or empty, warm or cold, and write it down."
       }
@@ -309,8 +309,8 @@
     "celebrate": "Use the fixed thing together right away and say: 'This was broken this morning. You found out why.'",
     "extensions": [
       "Sew a button back on or patch a hole, and log it",
-      "Fix something on the bikes or the garden tools",
-      "Keep a family fix-it log for a month",
+      "Take apart something that's already dead, like an old remote or a toy, with the batteries out, and draw how it worked",
+      "Fix something for a neighbour or grandparent, and ask them to describe the symptom first",
       "Learn one bike repair, like putting a chain back on"
     ]
   },
@@ -328,7 +328,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "Our kitchen faucet handle kept coming loose. My daughter and her dad tightened it a couple of times, then decided it was time for a new one. She unscrewed the connections under the sink, took the old faucet out and put the new one in. She wasn't strong enough to tighten it all the way, so her dad finished it up.",
+    "text": "Our kitchen faucet handle kept coming loose. My daughter unscrewed the connections under the sink, took the old faucet out and put the new one in. She wasn't strong enough to tighten it all the way, so her dad finished it up.",
     "quotes": []
   },
   "photo": {

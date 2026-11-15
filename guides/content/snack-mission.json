@@ -75,7 +75,7 @@
       },
       {
         "q": "They freeze on the mental maths",
-        "a": "Round to the nearest dollar first. Exact numbers can wait until the till."
+        "a": "Round each price up to the next whole dollar first. Exact numbers can wait until the till."
       },
       {
         "q": "The till total was higher than ours",
@@ -192,12 +192,12 @@
   "conclusion": {
     "headline": "They knew the total before the cashier did.",
     "text": "Halfway through your next shop, ask for their running total. If they can give you a number within a dollar or two of the real one, rounding up as they go has become a habit.",
-    "celebrate": "At the till, when the total lands under budget, say: 'You put the chips back for the fruit and still had a dollar left. I saw that.'",
+    "celebrate": "At the till, when the total lands under budget, say: 'You put something back so the rest would fit, and you still came in under. I saw that.'",
     "extensions": [
-      "Hand them the budget for a real family meal",
+      "Shop for a food bank drive with the same $20, choosing what lasts and feeds the most people.",
       "Give them a budget for a small gift for someone",
       "Let them plan the snacks for your next road trip",
-      "Repeat the mission with the same budget and compare"
+      "Shop the same list at full price and again using a flyer's deals, and work out what the deals really saved."
     ]
   },
   "signs": [
@@ -221,7 +221,7 @@
     "tall": true
   },
   "fromHome": {
-    "text": "During our 5-day challenge week, my kids put their $20 each together and had $40 to make dinner for the family: a drink, a meal and a dessert. They planned it at the table with a cookbook, shopped for everything themselves, and made it. We just ate.",
+    "text": "My kids put their $20 each together and had $40 to make dinner for the family: a drink, a meal and a dessert. They planned it at the table with a cookbook, shopped for everything themselves, and made it. We just ate.",
     "quotes": []
   },
   "reference": {

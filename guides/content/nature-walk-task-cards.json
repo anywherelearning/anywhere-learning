@@ -127,10 +127,9 @@
           "art": "wc/walk-04.jpg"
         },
         {
-          "t": "Find something old and something new.",
-          "d": "What clues helped you decide?",
-          "icon": "hourglass",
-          "art": "wc/walk-05.jpg"
+          "t": "Find something that's moving, even a little.",
+          "d": "What's moving it?",
+          "icon": "move"
         },
         {
           "t": "Find something that looks soft and something that looks tough.",
@@ -198,10 +197,9 @@
           "art": "wc/walk-15.jpg"
         },
         {
-          "t": "Find something with a circle shape.",
-          "d": "Where else do circles show up in nature?",
-          "icon": "circle",
-          "art": "wc/walk-16.jpg"
+          "t": "Find something that grows in a fan or a star shape.",
+          "d": "How many arms? Does every one match?",
+          "icon": "star"
         },
         {
           "t": "Pick a stick and estimate: is it longer or shorter than your forearm?",
@@ -263,10 +261,9 @@
           "art": "wc/walk-25.jpg"
         },
         {
-          "t": "Pick a plant and look closely. Do you see any damage?",
-          "d": "What could have caused it?",
-          "icon": "leaf",
-          "art": "wc/walk-26.jpg"
+          "t": "Find a plant nobody seems to eat.",
+          "d": "What might protect it: taste, spines, hairs?",
+          "icon": "shield"
         },
         {
           "t": "Listen. Do you hear any animals? Point to where the sound comes from.",
@@ -322,10 +319,9 @@
           "art": "wc/walk-34.jpg"
         },
         {
-          "t": "Find a spot where water would collect if it rained hard.",
-          "d": "What makes you think so?",
-          "icon": "cloud-rain",
-          "art": "wc/walk-35.jpg"
+          "t": "Find the driest spot nearby. Why does rain miss it?",
+          "d": "What lives there that doesn't live in the wet spots?",
+          "icon": "sun"
         },
         {
           "t": "Find a tiny path where water would run: a groove, a slope, a channel.",
@@ -363,10 +359,9 @@
       "title": "How nature works",
       "cards": [
         {
-          "t": "Find something strong and something flexible.",
-          "d": "Why would nature need both?",
-          "icon": "dumbbell",
-          "art": "wc/walk-41.jpg"
+          "t": "Find something that's been bent by wind or snow and grew back up. How can you tell?",
+          "d": "What would it look like if it couldn't bend?",
+          "icon": "trending-up"
         },
         {
           "t": "Find a natural 'bridge': a root, branch or rock that spans a gap.",
@@ -375,28 +370,26 @@
           "art": "wc/walk-42.jpg"
         },
         {
-          "t": "Find something that looks waterproof, like a waxy leaf or bark.",
-          "d": "How can you tell?",
-          "icon": "umbrella",
+          "t": "Find a leaf that's shiny on top and dull underneath. Why the difference?",
+          "d": "Which side faces the sun?",
+          "icon": "leaf",
           "art": "wc/walk-43.jpg"
         },
         {
-          "t": "Find something that looks like it soaks up water, like soil or moss.",
-          "d": "What clues show that?",
-          "icon": "droplet",
-          "art": "wc/walk-44.jpg"
+          "t": "Find something that shades something else. Who benefits?",
+          "d": "What would grow here without that shade?",
+          "icon": "umbrella"
         },
         {
-          "t": "Find a stable shape: wide, low, or spreading.",
-          "d": "Why is it hard to tip over?",
-          "icon": "mountain-snow",
+          "t": "Find a tree that grew around something: a fence, a rock, another branch.",
+          "d": "How long do you think that took?",
+          "icon": "tree-deciduous",
           "art": "wc/walk-45.jpg"
         },
         {
-          "t": "Find something that looks designed to travel, like a seed or a burr.",
-          "d": "How might it travel: wind, water, or animals?",
-          "icon": "plane",
-          "art": "wc/walk-46.jpg"
+          "t": "Find something that's on its way to becoming soil.",
+          "d": "What's helping it get there?",
+          "icon": "recycle"
         },
         {
           "t": "Find something that seems balanced.",
@@ -536,10 +529,10 @@
     "text": "Hand them one leaf and a minute, and count the details they give you before they run out: the edge, the veins, a hole, the colour underneath. Try the same thing in a month and compare the count.",
     "celebrate": "'I'd have walked right past that.' Say it the moment they show you something small you missed, then ask how they spotted it.",
     "extensions": [
-      "Keep a nature notebook: one card, one sketch, one sentence per walk",
-      "Do the same card in a new place and compare",
-      "Let your kid invent new cards for you to do",
-      "Try the cards in a city: they work on any block"
+      "Walk the same 10-minute route once a week with one card, and keep a list of what changed",
+      "Do a walk where only the kid asks questions and you only answer 'what do you notice?'",
+      "Record one card as a voice note on the walk, then listen back at home and add the answer you didn't know",
+      "Take three cards on a night walk with a flashlight. Which answers change after dark?"
     ]
   },
   "signs": [

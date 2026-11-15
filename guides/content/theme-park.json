@@ -136,7 +136,7 @@
       "title": "Build the park",
       "why": "The map becomes something you can walk through.",
       "kid": "Your kid builds the park their way: a tabletop model (boxes for buildings, tubes for towers, string for zip lines, toys as riders), a drawn park with a blueprint of each ride, or a life-size course in the yard with chalk paths, pool noodle tunnels and cone obstacles.",
-      "you": "Help with tricky construction, and remind them that working matters more than pretty.",
+      "you": "Be the first rider. Ask them to run your toy, or you, through each attraction and show you what happens. Help with tricky construction, and remind them that working matters more than pretty.",
       "ask": [
         "What's the hardest part to build, and how could you simplify it?",
         "Does the build match your map, or did you change things?"
@@ -294,9 +294,9 @@
     "celebrate": "On opening day, tell them the moment the map worked on you: 'I walked past three rides to get to the big one, just like you planned.'",
     "extensions": [
       "Design a Season 2 expansion with a new zone",
-      "Build a water park, zoo or museum next door",
+      "Design the staff plan: how many people it takes to run the park for a day, and who does what",
       "Make a park brochure or a poster",
-      "Turn the yard course into a timed challenge and beat your record"
+      "Plan a rainy day at the park: what closes, what stays open and how you keep visitors happy"
     ]
   },
   "signs": [

@@ -297,9 +297,9 @@
     "celebrate": "At the stop they planned, say: 'This came exactly when we needed it. Good call, navigator.'",
     "extensions": [
       "Look up flights or a train to the same place and compare the cost and the time",
-      "Plan a longer trip with an overnight and a hotel budget",
-      "Track the spending on a real trip and compare it with the plan",
-      "Let them plan the next family drive from start to finish"
+      "Plan the same trip in an electric car: charging stops, kWh per 100 miles and what the charging costs.",
+      "Work out the cost per person of driving vs. the bus, and find how many passengers make driving the cheaper choice.",
+      "Find the halfway point in time, not distance, and plan the lunch stop there."
     ]
   },
   "signs": [
@@ -327,7 +327,7 @@
     }
   },
   "fromHome": {
-    "text": "Before our drive to Orlando, my daughter worked out the trip: she estimated the gas at $39.70. When we filled up, the pump said $42.38. We talked about why. Gas cost a little more that day, maybe daddy drove a bit faster, and we probably did a few more miles than planned. Still, a good estimate.",
+    "text": "Before our drive to Orlando, my daughter estimated the gas at $39.70, and the pump said $42.38. Gas cost a little more that day, and we probably did a few more miles than planned. Still, a good estimate.",
     "quotes": []
   },
   "onTheRoad": [

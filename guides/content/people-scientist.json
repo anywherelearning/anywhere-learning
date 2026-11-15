@@ -75,14 +75,14 @@
       },
       {
         "part": "Count",
-        "line": "Some answer. Some look puzzled first, then answer."
+        "line": "About 1 in 3 answer. Some look puzzled first."
       },
       {
         "part": "Explain",
         "line": "Maybe they're friendly, just not used to saying hi."
       }
     ],
-    "modelNote": "The puzzled faces were the real discovery. People weren't unfriendly. Saying hi to strangers just wasn't the habit there, and many answered once someone went first."
+    "modelNote": "The puzzled faces were the real discovery. People weren't unfriendly. Saying hi to strangers just wasn't the habit there, and some did answer once someone went first."
   },
   "steps": [
     {
@@ -305,10 +305,10 @@
     "text": "On your next trip somewhere new, see whether they start with 'I wonder if...' instead of 'People here are so...'. That's a scientist talking.",
     "celebrate": "When they explain a result kindly, say: 'You didn't decide they were rude. You found out why. That's what scientists do.'",
     "extensions": [
-      "Repeat your first test in six months, and see if your prediction gets closer",
-      "Run your test at two times of day, like morning and evening, and compare",
+      "Test a different kind act, like holding a door, and compare the reactions with your hi test",
+      "Ask a local whether saying hi is normal here, and see if their answer matches your numbers",
       "Make a bar graph of all your experiments on one page",
-      "Share your results at dinner, and have everyone predict the numbers before you reveal them"
+      "Share your results with the family, and have everyone predict the numbers before you reveal them"
     ]
   },
   "signs": [
@@ -325,7 +325,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "Where we live, people always look at you and say hi when you cross them on the street or on a walking path. Once, in another province, we noticed people looked down instead. So we started saying hi to everyone, and noticed who would answer and who would ignore us. Some answered right away. Some looked at us first with a questioning face before answering, like they weren't used to saying hi.",
+    "text": "Where we live, people say hi when you cross them on the street or on a walking path. Once, in another province, we noticed people looked down instead, so we started saying hi to everyone, and noticed who would answer. Some answered right away, and some looked at us first with a questioning face, like they weren't used to saying hi.",
     "quotes": []
   },
   "photo": {

@@ -119,7 +119,7 @@
       "title": "Find every sound",
       "why": "Each object hides more than one sound.",
       "kid": "Your kid explores each object: tap it, shake it, scrape it, hit it soft, hit it hard, on the rim, in the middle. They sort the sounds into high and low, short and long. Then they test the High or low card: does a bigger or tighter thing sound higher or lower?",
-      "you": "Stay curious and out of the way. The best sound is usually one they find by accident.",
+      "you": "Be the listener with your eyes closed. After each new sound, guess what they used and whether it was high or low. The best sound is usually one they find by accident, so say so when you hear it.",
       "ask": [
         "How many different sounds can you get from one object?",
         "Which sound surprised you most?"
@@ -135,7 +135,7 @@
       "title": "Build a rhythm",
       "why": "A steady beat holds everything together.",
       "kid": "Your kid picks one object for a steady beat and counts 1, 2, 3, 4 over and over. Then they add a second sound on some of the counts in a pattern that repeats. Once that's solid, they can layer a third.",
-      "you": "Clap along if they invite you. Don't take over the beat.",
+      "you": "Count out loud with them for the first few rounds, then drop out and see if the beat holds. If it falls apart, keep the steady beat yourself while they add the second sound back in.",
       "ask": [
         "What's your steady beat, and what sits on top of it?",
         "Can you keep the pattern going for a whole minute?"
@@ -293,12 +293,12 @@
   },
   "conclusion": {
     "headline": "This morning, those were just pots and spoons.",
-    "text": "Ask them which glass sang lowest and why. They'll tell you it was the fullest one, and they found that out by ear. Then ask them to play the piece again. They probably can, from memory, because they built it beat by beat.",
+    "text": "Hand them two of their instruments and ask which one will sound lower before they play it. They'll reason from size or tightness, then check by ear. Then ask them to play the piece again. They probably can, from memory, because they built it beat by beat.",
     "celebrate": "Say the name of their piece back to them and tell them the exact moment you liked: 'When the beans came in on three, it sounded like rain starting.'",
     "extensions": [
       "Swap in five new objects and compose a second piece",
-      "Start a family band where everyone brings one instrument",
-      "Record the piece and add a second layer on top",
+      "Swap orchestras: each person picks five objects for someone else, who has to make a piece from them",
+      "Score a short scene from a favourite book: read it aloud while they play under it",
       "Play along with a favourite song using only the five instruments"
     ]
   },

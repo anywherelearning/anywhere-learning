@@ -301,9 +301,9 @@
     "celebrate": "When you arrive, say: 'We're here because you worked out how to get us here.'",
     "extensions": [
       "Find out how people reached the place before roads or motors, and compare it with your trip",
-      "Plan the same trip the cheapest way and the fastest way, and work out what the extra speed costs",
+      "Plan the way back by a different route than the way there, and compare the two",
       "Cross a city on public transport using only the map and the signs",
-      "Draw one map of every kind of transport you've used on this trip"
+      "Find out how food and supplies reach the place, and draw that route too"
     ]
   },
   "signs": [
@@ -320,7 +320,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "In Panama, the kids wanted to visit an Emberá village. They read about the Emberá first and found out the only way in was by boat. They compared a few tours, checked the prices and helped book one. A shuttle picked us up where we were staying, then it was about 30 minutes up the river. On the way back it rained hard, and the boat crew handed out ponchos.",
+    "text": "In Panama, the kids wanted to visit an Emberá village, and found out the only way in was by boat. They compared a few tours, checked the prices and helped book one. On the way back it rained hard, and the boat crew handed out ponchos.",
     "quotes": []
   },
   "photo": {

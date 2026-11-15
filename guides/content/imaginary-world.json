@@ -126,7 +126,7 @@
       ],
       "tip": "Put water on the map first. Rivers start in high ground and run downhill to a lake or the sea, and most early towns grew up beside one.",
       "levels": {
-        "explore": "Draw 3 regions and one creature for each.",
+        "explore": "Draw 3 regions and say who lives in each one.",
         "develop": "Draw 3 or more regions, put each group where the land gives it water, food and shelter, and explain why.",
         "extend": "Decide where the first town was founded and why (water, a river crossing, a safe harbour), and draw the trade route between two groups."
       }
@@ -151,7 +151,7 @@
       "title": "Map it and build one corner",
       "why": "A map makes it a place. A model makes it real.",
       "kid": "Your kid makes the real map: every region, where each group lives, important places, place names and a compass rose. Then they build the most interesting corner in 3D: a shoebox diorama, a clay landscape, a block city, or outside with sticks, mud and sand.",
-      "you": "Help with materials and anything that won't stay together. Let them direct.",
+      "you": "Ask them to show you on the map where their 3D corner sits, and what's just outside it. Help with materials and anything that won't stay together, and let them direct.",
       "ask": [
         "Which part of your world would you most want to visit?",
         "What detail makes the model feel like it belongs in your world?"
@@ -293,7 +293,7 @@
       "label": "Worldbuilding rules",
       "lines": [
         "One big idea, and everything follows from it.",
-        "Every creature fits where it lives.",
+        "Every group lives where the land gives it what it needs.",
         "Every rule has a reason.",
         "Every legend explains something you built."
       ]
@@ -306,7 +306,7 @@
     "extensions": [
       "Write a longer story set in the world: a quest, a mystery, a day in the life",
       "Build a second region in 3D",
-      "Make a travel guide or field journal with drawings",
+      "Invent the world's calendar: its seasons, its holidays and the reason for each",
       "Invent a board game set in the world, with the Board Game Studio guide"
     ]
   },
@@ -330,7 +330,7 @@
     "caption": "Mushroom houses first, then the rest of the map."
   },
   "fromHome": {
-    "text": "My daughter invented a fantastic, magical world inspired by her favourite books, filled with mystical creatures with superpowers, mushroom houses, a tree of life, and magic spells. Then she recorded her story.",
+    "text": "My daughter invented a world with mushroom houses, a tree of life and creatures with superpowers. Then she recorded her story.",
     "quotes": []
   },
   "onTheRoad": [

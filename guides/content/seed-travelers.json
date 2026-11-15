@@ -7,7 +7,7 @@
   "goal": "Your kid collects seeds and pods from outside and solves a small mystery hiding in each one: how does this thing travel? Plants can't walk, so every seed has a trick for getting away from its parent and finding a new place to grow. Some fly, some float, some hitch a ride, some just drop. Once a kid can read those tricks, a handful of seeds turns into a set of tiny inventions, each one a solution to the same problem.",
   "need": [
     "A handful of different seeds or pods: maple keys, burrs, acorns, dandelion puffs, dry grass heads",
-    "An old sock or fuzzy sweater, and a bowl of water",
+    "A strip of paper and scissors, an old sock or fuzzy sweater, and a bowl of water",
     "A notebook, and a yard, park or trail where things grow"
   ],
   "lesson": {
@@ -192,10 +192,10 @@
     "text": "After a walk through tall grass, check your socks together. They'll pick off what's stuck, tell you it travels by animal, and point to the hooks that prove it. Then hand them a seed they've never seen and wait for a guess before you look it up.",
     "celebrate": "When a seed they called a flier plopped straight down, say: 'You changed your answer the second the seed proved you wrong. I loved watching that.'",
     "extensions": [
-      "Go on a seed hunt in a different season and compare",
-      "Plant a few of the seeds and see which ones grow",
-      "Count the hitchhikers on your clothes after a walk through tall grass",
-      "Build a paper seed and see how far you can make it fly"
+      "Dissect a store-bought fruit you've never tried and guess how its seeds get around",
+      "Pull on a sticky burr under a phone's zoom and look for the hooks, then look up how Velcro was invented",
+      "Find a plant growing far from any other of its kind, and work out how its seed got there",
+      "Watch one dandelion clock on a breezy day and follow a seed as far as you can"
     ]
   },
   "signs": [
@@ -203,7 +203,7 @@
     "They group things by what they do, not just how they look",
     "A strange shape gets a 'what's it for?'"
   ],
-  "makeItReal": "Plant the seeds you collected in labelled pots, with each one's travel group on the label, and check every few days to see which ones come up.",
+  "makeItReal": "Plant the seeds you collected in labelled pots, with each one's travel group on the label, and check every few days to see which ones come up. Some wild seeds need a winter first, so put a few in the fridge for a month and plant those too.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
@@ -215,7 +215,7 @@
   "photo": {
     "src": "guides/assets/seed-travelers.jpg",
     "alt": "Left: a smiling girl holding orange flowers. Right: a boy holding a branch of red and green coffee cherries",
-    "caption": "Every flower makes seeds, and every seed needs a way to travel."
+    "caption": "Coffee cherries: the seed hides inside fruit an animal wants to eat."
   },
   "onTheRoad": [
     "Look for seeds that only grow here, like a coconut, a mangrove pod or a desert burr, and guess how each one travels.",

@@ -46,7 +46,7 @@
     },
     {
       "subject": "Design",
-      "text": "layout and visitor flow"
+      "text": "the order of a story, and building the exhibits"
     },
     {
       "subject": "Communication",
@@ -91,8 +91,8 @@
       "text": "two sentences that explain"
     },
     {
-      "name": "Spatial thinking",
-      "text": "a path a visitor can follow"
+      "name": "Sequencing",
+      "text": "an order that tells the story"
     },
     {
       "name": "Presenting",
@@ -134,9 +134,9 @@
     },
     {
       "title": "Lay out the museum and build the exhibits",
-      "why": "The order is part of the story.",
-      "kid": "Your kid sketches the layout: where visitors come in, what they see first, what's the big finish. They choose one table, a walking path, stations, or a trail in the yard. Then they build each exhibit: mounted on cardboard, set in a shoebox diorama, on a tray or propped on a chair.",
-      "you": "Help with which room and which table. Don't redesign their layout.",
+      "why": "The order tells the story.",
+      "kid": "Your kid decides the order of the story: which piece opens it, which ones build it, and which one is the big finish that lands the angle. They choose one table, a walking path, stations, or a trail in the yard. Then they build each exhibit: mounted on cardboard, set in a shoebox diorama, on a tray or propped on a chair.",
+      "you": "Ask them to tell you the story in order, one piece at a time, before anything gets glued down. If a piece doesn't move the story along, ask where it belongs. Don't redesign their layout.",
       "ask": [
         "What should a visitor see first, and why?",
         "Which piece should a visitor see last, so they remember the angle?"

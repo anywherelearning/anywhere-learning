@@ -8,7 +8,7 @@
   "need": [
     "A week of noticing their usual screen time",
     "Paper for each kid's plan",
-    "A timer, or the screen-time settings on your devices"
+    "A timer, or your devices' screen-time settings (Screen Time on Apple, Family Link on Android)"
   ],
   "academics": [
     {
@@ -126,7 +126,7 @@
         "How much screen time feels fair to you?",
         "What do you need screens for, and what's just for fun?"
       ],
-      "tip": "Include AI here too: when they use it, for what, and whether it counts as screen time in your house.",
+      "tip": "Include AI here too: what it's for in your house, like looking something up together, and what it's not for, like chatting as a friend or doing their writing.",
       "levels": {
         "explore": "Say how much screen time you think is fair, with a parent.",
         "develop": "Write your fair limit, what it's for, and why.",
@@ -278,7 +278,7 @@
             "v": "one thing, with a reason"
           }
         ],
-        "ask": "What would make the plan fairer?"
+        "ask": "What helped you stop on the hard days?"
       }
     ],
     "after": {
@@ -317,9 +317,9 @@
     "celebrate": "When they stop without a fuss, say: 'You stuck to the plan you helped make. That's real self-control.'",
     "extensions": [
       "Swap roles for a day: the kids write a fair limit for a parent, and the parent tries it",
-      "List things to do when the screen turns off, and keep it by the device",
-      "Notice which apps make stopping hardest, and ask why.",
-      "Track how you sleep on screen days and screen-free days"
+      "Pick a charging spot outside the bedrooms where every device, grown-ups' too, sleeps at night",
+      "Compare your Step 1 guesses with the device's own screen-time report, and see who guessed closest",
+      "Agree on a family 'phones away' signal for conversations, and use it on grown-ups too"
     ]
   },
   "signs": [

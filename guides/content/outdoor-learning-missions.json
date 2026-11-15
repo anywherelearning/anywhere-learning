@@ -159,7 +159,7 @@
         }
       ],
       "extras": [
-        "Explore a 1-foot square for 3 minutes and list everything in it.",
+        "Lie on your belly for 2 minutes and count every tiny thing that moves.",
         "Draw a micro-map showing where 5 of your finds are.",
         "Describe 3 finds with size words: speck-sized, grainy, pinhead."
       ],
@@ -340,7 +340,7 @@
       ],
       "extras": [
         "Line up your finds from lightest to darkest and take a photo.",
-        "Make a habitat palette and give it a name, like 'Rainy Trail Neutrals'.",
+        "Find the same colour in three different things: a leaf, a rock, a feather.",
         "Find 2 camouflage colours. What could each one help hide?"
       ],
       "short": "Colour"
@@ -459,7 +459,7 @@
         }
       ],
       "extras": [
-        "Draw a sound map: you in the middle, each sound placed where it came from.",
+        "Close your eyes and point to each sound. Open them: were you right about where it was?",
         "Compare two spots, like open field and forest. Which has more kinds of sound?",
         "Try 60 seconds of total silence, then list what you heard."
       ],
@@ -711,9 +711,9 @@
     "text": "Ask them how they'd know if a deer had walked through your yard overnight. Listen for clues before a yes or no: nibbled tips, droppings, prints in soft ground. If they want to go out and check, go with them.",
     "celebrate": "When they hand you a find with its clue before you've even asked, tell them: 'You showed me the clue first. That's what convinced me.'",
     "extensions": [
-      "Do the same mission in a new season and compare",
-      "Do the same mission in a new place: a beach, a city park, a forest",
-      "Let your kid write a 12-find mission for you",
+      "Run two missions on the same walk and find one thing that counts for both",
+      "Turn your best find into a 'case file' photo with its clue labelled, and add one a week",
+      "Hand one mission to a grandparent and be the one who asks 'why does that count?'",
       "Keep every finished mission in a folder as a year of fieldwork"
     ]
   },
@@ -738,7 +738,7 @@
     "tall": true
   },
   "fromHome": {
-    "text": "On a trip to Vancouver Island, we found smooth carved rock full of water-filled holes. My daughter and her friend went from hole to hole, catching tiny crabs and tadpoles. Each hole was its own little world, and that is what these missions are about: slowing down and looking closely at what is right in front of you.",
+    "text": "On a trip to Vancouver Island, we found smooth carved rock full of water-filled holes. My daughter and her friend went from hole to hole, catching tiny crabs and tadpoles. Each hole was its own little world.",
     "quotes": []
   }
 }

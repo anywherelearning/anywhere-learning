@@ -212,7 +212,7 @@
             "v": "playful, serious, sad, busy"
           }
         ],
-        "ask": "What's the quietest room you've ever been in?"
+        "ask": "Which clue tells you fastest that a room is serious?"
       },
       {
         "name": "Check it",
@@ -285,8 +285,8 @@
     "extensions": [
       "Watch a show with the sound off, and guess each character's mood",
       "Visit a place with different rules, like a temple, a market or a library, and read it together",
-      "Read a room in a new country or culture, and find one thing that's done differently there",
-      "Before a place you'll visit soon, look up how people behave there, and predict the room before you walk in"
+      "Read one family member for a whole day, and at bedtime check how close your guesses were",
+      "Notice how you change a room when you walk in, and try changing it on purpose, like bringing calm to a noisy room"
     ]
   },
   "signs": [
@@ -303,7 +303,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "The last time I was sick, I was about to make dinner when my son asked me if I was okay. He had noticed. I said no, and he and his sister took over: they made dinner, and cleaned the kitchen after. And when we visited the National Palace in San Salvador, both kids got quieter and slowed down as soon as we walked in.",
+    "text": "The last time I was sick, I was about to make dinner when my son asked me if I was okay. He had noticed. I said no, and he and his sister took over: they made dinner, and cleaned the kitchen after.",
     "quotes": []
   },
   "photo": {

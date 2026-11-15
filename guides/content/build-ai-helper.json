@@ -126,7 +126,7 @@
         "What should we call it?",
         "Is everything it needs in the instructions?"
       ],
-      "tip": "Older kids can build a helper with code and an AI model, like an agent. The rules matter just as much.",
+      "tip": "Older kids can build a helper with code, or an agent: a helper that takes steps on its own, like searching the web. The rules matter just as much.",
       "levels": {
         "explore": "Watch a parent set it up, and choose the helper's name.",
         "develop": "Set up the helper with its job and rules, with a parent.",
@@ -175,7 +175,7 @@
         "lines": [
           {
             "k": "Fact finder:",
-            "v": "answers questions with facts and numbers"
+            "v": "answers with facts and numbers, and says where it found them"
           },
           {
             "k": "Quiz master:",
@@ -219,7 +219,7 @@
         "lines": [
           {
             "k": "Where:",
-            "v": "a saved project or custom instructions"
+            "v": "a Project in ChatGPT or Claude, or a Gem in Gemini"
           },
           {
             "k": "Name:",
@@ -308,7 +308,7 @@
       "Build a helper for someone else in the family, from their own job",
       "Write the rules for a helper you'd never want to exist, and why",
       "Look up how a real company decides what its AI is allowed to do",
-      "Turn your test list into a quiz for another helper"
+      "Let someone who's never seen the helper try it without help, and watch where they get stuck"
     ]
   },
   "signs": [
@@ -316,7 +316,7 @@
     "They insist a person checks what a helper sends",
     "They judge tools by whether they're really useful"
   ],
-  "makeItReal": "Pick one job your family repeats every week, like planning meals or packing for a trip, and build a small helper for it together this weekend.",
+  "makeItReal": "This week, use the helper whenever its job comes up, and tick each use in the notebook, so your keep, change or drop decision has real numbers.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

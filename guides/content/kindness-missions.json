@@ -285,7 +285,7 @@
     "extensions": [
       "Plan a family kindness day for a neighbour",
       "Find out what a local shelter or food bank needs, and help",
-      "Write thank-you notes to people who help your family often",
+      "Find out who keeps your street or building running, like a bus driver or a cleaner, and do one mission for them",
       "Notice a kindness someone does for you this week, and pass the same one on to someone else"
     ]
   },
@@ -303,7 +303,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "Coming home on the city bus, my son gave his seat to an older man. The man was impressed. He thanked him, and told him he doesn't see many young people being so kind these days. When my son was about to get off, the man gave him $5 for his kindness.",
+    "text": "Coming home on the city bus, my son gave his seat to an older man. The man thanked him, and told him he doesn't see many young people being so kind these days. When my son was about to get off, the man gave him $5 for his kindness.",
     "quotes": []
   },
   "photo": {

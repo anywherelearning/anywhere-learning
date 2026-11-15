@@ -297,12 +297,12 @@
   "conclusion": {
     "headline": "They check cost per use now, not just the tag.",
     "text": "At the store, hold up two versions of something you buy, like two packs of batteries, and ask which is the better deal. Listen for 'how long does it last?' before 'which is cheaper?' If that question comes first, the cost-per-use maths stuck.",
-    "celebrate": "Repeat back the number that decided it: 'So the $45 pair is cheaper per month. That's going to change how I shop too.'",
+    "celebrate": "Repeat back the number that decided it: 'So the pricier one is cheaper every time you use it. That's going to change how I shop too.'",
     "extensions": [
-      "Run the rubric on the next big family purchase",
-      "Compare three options instead of two",
+      "Check what each option resells for used after a year, and subtract that from its true cost.",
+      "Compare two stores' return policies and warranties, and decide what a warranty is really worth.",
       "Keep a list of every marketing trick you spot for a week",
-      "When someone says 'I need this,' do the need or want check out loud together"
+      "Test a real 'buy 2, get 1 free' deal against the single price, counting only what you'd actually use."
     ]
   },
   "signs": [
@@ -320,7 +320,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "My son went back and forth between a Switch 2 and a PS5. The Switch 2 was cheaper, but that's not what decided it. It had more of the games he loves, and it travels with us, which matters a lot right now since we're on the road all the time. He picked the one that fit how he actually lives.",
+    "text": "My son went back and forth between a Switch 2 and a PS5. The Switch 2 was cheaper, but that's not what decided it: it had more of the games he loves, and it travels with us. He picked the one that fit how he actually lives.",
     "quotes": []
   },
   "photo": {

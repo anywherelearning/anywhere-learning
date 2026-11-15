@@ -137,7 +137,7 @@
       "title": "Check settings and usernames",
       "why": "Good settings and a smart username protect them even when they forget.",
       "kid": "With you, your kid checks one account at a time, using the Settings check card: the username, who can see their profile, who can message them and what's public.",
-      "you": "Do it on your login, together. Change anything that's more open than your family rules.",
+      "you": "Do it on your login, together. Change anything that's more open than your family rules. If they use AI with you, check its settings too: whether chats are saved, and whether they're used to train the AI.",
       "ask": [
         "Does your username give away your real name?",
         "Who can send you a message here?"
@@ -315,8 +315,8 @@
     "celebrate": "When they stop and ask before sharing, say: 'You asked first. That's how your information stays yours.'",
     "extensions": [
       "Search your family's names together, and see what comes up",
-      "Read the privacy settings of a new app together before using it",
-      "Make up three safe usernames for a future account",
+      "Open a voice assistant's app together, if you have one, listen to what it has saved, and delete old recordings",
+      "Check whether your phone camera saves your location in photos, and turn it off together",
       "Talk about the photos you share of them, and agree on rules together"
     ]
   },

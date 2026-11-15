@@ -127,7 +127,7 @@
       "kid": "Your kid picks 3 to 5 items sold at more than one stall or in different sizes. For each one they write the price and the amount, then divide: price ÷ amount = unit price, per apple, per pound or per bunch. Which stall wins?",
       "you": "Help with the division if needed, but let them set up the problem. Ask 'is bigger always cheaper?' and 'does cheapest always mean best?'",
       "ask": [
-        "6 apples for $3 or 4 for $2.50: which is cheaper per apple?",
+        "3 peppers for $4 or 5 for $6: which is cheaper per pepper?",
         "Is the cheaper one just as fresh?"
       ],
       "tip": "Some stalls price by the pound and some by the basket. Ask if you can weigh a basket. It turns a guess into real maths.",
@@ -306,9 +306,9 @@
     "celebrate": "Once the plates are down, say their cost per serving out loud: 'Two dollars a plate, and our shopper did all the maths.'",
     "extensions": [
       "Go back in a different season and compare what's for sale and the prices",
-      "Try the same meal on half the budget",
+      "Ask a grower how they decide the price of one thing they sell, and what it costs them to grow.",
       "Track the price of one item for a month and graph it",
-      "Write a market guide for a friend who's never been"
+      "Make the same dish with market produce and supermarket produce, and run a blind taste test."
     ]
   },
   "signs": [

@@ -309,7 +309,7 @@
     "celebrate": "When the Plan B kicks in and works, say it right then: 'It started raining and you already knew what we'd do. That was your plan.'",
     "extensions": [
       "Plan a day with no car: walking, transit or bikes, using real timetables",
-      "Plan a rainy-day version of the same day",
+      "Plan a day in a place nobody in the family has been, using only its website and map",
       "Plan a day out on a set budget, like $20 a person",
       "Plan the same place for a different season and compare"
     ]
@@ -328,7 +328,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "At Universal, my son planned our ride order. With early entry, he started with the most popular rides, the ones with the longest waits. When I got motion sick the first morning, he replanned around me. We never waited more than 60 minutes.",
+    "text": "At Universal, my son planned our ride order: with early entry, he started with the most popular rides. When I got motion sick the first morning, he replanned around me. We never waited more than 60 minutes.",
     "quotes": []
   },
   "photo": {

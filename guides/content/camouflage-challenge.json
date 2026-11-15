@@ -161,7 +161,7 @@
     {
       "title": "Test the backgrounds",
       "why": "A fair test: same object, different background.",
-      "kid": "Your kid takes one object, say a green leaf, and places it on two very different backgrounds: green grass, then brown dirt. Same object, same distance, only the background changes. They move it to a fresh spot at the same distance, and you search again while they time it. Where does it disappear, and where does it stand out?",
+      "kid": "Your kid takes one object, say a green leaf, and places it on two very different backgrounds: green grass, then brown dirt. Same object, same distance, only the background changes. You turn around while they move it to a fresh spot at the same distance, then you search again while they time it. Where does it disappear, and where does it stand out?",
       "you": "Help keep everything the same except the background: same object, same distance from you, same search rules. That's what makes it a fair test.",
       "ask": [
         "Where did it disappear more? What changed?",
@@ -178,7 +178,7 @@
       "title": "Make the rule and find it in the wild",
       "why": "Your kid turns the evidence into a rule, then spots camouflage in the wild.",
       "kid": "From everything they tested, your kid writes one simple rule, like 'an animal is hardest to see when its colour and texture match its background.' They set up one new test to prove it. Then you go on a hunt for real camouflage: a moth on bark, a spider on a leaf, a bird against the ground.",
-      "you": "Write their rule at the top of a page and date it. Moving gives camouflage away, which is why hiding animals freeze. Then head out on the hunt together. Their new eyes will catch things you've both walked past a hundred times.",
+      "you": "Write their rule at the top of a page and date it. Then head out on the hunt together. Their new eyes will catch things you've both walked past a hundred times.",
       "ask": [
         "What's your camouflage rule, in one sentence?",
         "Now that you know the trick, what can you spot outside?"
@@ -197,7 +197,7 @@
     "celebrate": "Right after the leaf vanished on the grass and stood out on the dirt, tell them: 'Same leaf, and you hid it just by moving it.'",
     "extensions": [
       "Design the ultimate camouflaged object for a new background",
-      "Hunt for camouflaged creatures on your next walk and keep a list",
+      "Flip it: hide one object that should stand out, like a red berry on green moss, and ask why some animals want to be seen",
       "Look up an animal that changes colour, like an octopus or a chameleon",
       "Try the test in a new season, when the backgrounds change"
     ]

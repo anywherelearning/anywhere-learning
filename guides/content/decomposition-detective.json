@@ -24,7 +24,7 @@
       },
       {
         "part": "Touch",
-        "line": "They feel soft and floppy, not crunchy."
+        "line": "Poked with a stick, they're soft and floppy, not crunchy."
       },
       {
         "part": "Compared",
@@ -186,12 +186,12 @@
   "conclusion": {
     "headline": "Case closed: they know where the leaves went.",
     "text": "Turn over the leaf pile under a tree together and find a soft, dark leaf with holes in it. They can tell you what's breaking it down, and why the bottom layer is further along than the top.",
-    "celebrate": "The day the leaves first feel soft instead of crunchy, say: 'You've checked this jar for weeks, and you caught the moment it changed.'",
+    "celebrate": "The day a poke with a stick finds the leaves soft instead of crunchy, say: 'You've checked this jar for weeks, and you caught the moment it changed.'",
     "extensions": [
-      "Start a real compost bin and track kitchen scraps turning into soil",
+      "Look for a 'nurse log' on a forest walk: a fallen tree with new plants growing out of it",
       "Bury a few objects in the yard and dig them up months later",
       "Race a sealed bag against an open pile",
-      "Plant a seed in the jar's soil and leaves"
+      "Peel a banana and leave the skin in a jar beside a leaf jar. Which is gone first, and why?"
     ]
   },
   "signs": [

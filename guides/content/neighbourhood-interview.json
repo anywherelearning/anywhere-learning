@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "Find the person and make first contact together, and stay close by. Then let your kid run it, and resist filling the silences: a pause is often where the best answer comes.",
+    "intro": "Find the person and make first contact together, and stay close by. Your big job is the ask: model it once, then let your kid say the next one. After that, the interview and the writing are theirs.",
     "plan": [
       {
         "when": "Tonight",
@@ -74,8 +74,8 @@
         "a": "Start with someone you both know a little, like a neighbour or the librarian. Make the first ask together."
       },
       {
-        "q": "The answers are short",
-        "a": "Ask 'Can you tell me about a time when...?' or 'What's the hardest part of your job?' Stories hide behind those."
+        "q": "The profile reads like a list of facts",
+        "a": "Ask what the person was doing when your kid arrived. Start the profile there, then add one thing the person said, word for word."
       },
       {
         "q": "The person says no, or is too busy",
@@ -89,8 +89,8 @@
       "text": "asking questions that get stories, not yes or no"
     },
     {
-      "name": "Active listening",
-      "text": "hearing the answer and asking the next question because of it"
+      "name": "Showing, not telling",
+      "text": "letting a scene and a quote show who someone is"
     },
     {
       "name": "Profile writing",
@@ -130,7 +130,7 @@
       "title": "Write the questions and ask",
       "why": "Your kid prepares open questions, then makes the request.",
       "kid": "Your kid writes at least 5 open questions, the kind that start with what, how, why or 'tell me about'. They order them from easy warm-ups to deeper ones, and add 1 or 2 follow-ups. Then, with you, they ask the person if they'd do a short interview, explaining the project in a sentence.",
-      "you": "Help turn closed questions into open ones: 'Do you like your job?' becomes 'What's your favourite part of your job, and why?' Don't rewrite them, guide. Then go with your kid to make the ask, and set a time and place you're comfortable with.",
+      "you": "Help them practise the ask out loud once: who they are, what the project is, how long it takes. Then go with your kid to make the ask, and set a time and place you're comfortable with.",
       "ask": [
         "Which question do you think will get the longest answer?",
         "What will you say when you ask them?"
@@ -193,17 +193,17 @@
   ],
   "conclusion": {
     "headline": "Someone nearby has a story now, and your kid wrote it.",
-    "text": "Listen the next time they meet a new adult, at a shop counter or a friend's house. You may hear a second question built on the first answer, like 'how did you learn that?' That follow-up is what turned their notes into a profile.",
+    "text": "Ask them to tell you about someone they met this week. Listen for a moment or something the person said, like 'she was stacking the oranges and said...', instead of 'she was nice'. That's the profile skill, used out loud.",
     "celebrate": "On the walk home, say: 'You asked a question that wasn't on your list, and look how much they told you.'",
     "extensions": [
-      "Interview someone from a different background or generation",
+      "Interview two people who do the same job in different places, and write one profile comparing them",
       "Record the interview and turn it into a mini podcast",
       "Start a 'People of our neighbourhood' collection",
       "Interview someone in another language, with a parent's help"
     ]
   },
   "signs": [
-    "Follow-up questions show up in their everyday conversations",
+    "They describe people by what they do and say, not just 'nice' or 'funny'",
     "They're more comfortable talking to adults they don't know",
     "They notice the people behind everyday jobs around them"
   ],

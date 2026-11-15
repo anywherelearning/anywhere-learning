@@ -115,7 +115,7 @@
         "What's the same in every one you've tried?",
         "Which was your favourite, and why?"
       ],
-      "tip": "Watch what locals add to it at the table. That's often part of the dish too.",
+      "tip": "Watch what locals add to it at the table. That's often part of the dish too. Pick busy stalls where it's cooked hot in front of you.",
       "levels": {
         "explore": "Taste it once, and say one word for how it feels and one for how it tastes.",
         "develop": "Taste it in two places, fill in the Taste notes, and pick a favourite.",
@@ -307,7 +307,7 @@
       "Find a dish from this place that's eaten on one special day of the year, and find out why",
       "Track down the same ingredient in three dishes here, and see how it changes",
       "Cook the dish for family back home who has never tried it, and tell them its story",
-      "Compare the dish with one from home that's built the same way, and list what's different"
+      "Learn the table manners that go with the dish, like what you eat it with and what locals never do, and use them at your next meal"
     ]
   },
   "signs": [
@@ -324,7 +324,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "Pupusas are the traditional meal in El Salvador, so we read about them before we went. We ate them at the pupusería a few times, then our Spanish school offered a cooking class. The restaurant had the only corn grinder in the area, so people came from all around to pay to grind their corn there. The kids saw it ground into masa, filled pupusas with cheese, beans and chicharrón, and made curtido and salsa to go with them. In the spring we tried making them at home. They didn't taste the same at all.",
+    "text": "Pupusas are the traditional meal in El Salvador, so we read about them before we went. At a cooking class, the kids saw the corn ground into masa, filled pupusas with cheese, beans and chicharrón, and made curtido and salsa to go with them. In the spring we tried making them at home, and they didn't taste the same at all.",
     "quotes": []
   },
   "photo": {

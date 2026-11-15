@@ -226,7 +226,7 @@
             "v": "popping a balloon, turning on a light, anything with perfect timing"
           }
         ],
-        "ask": "Does your ending work on its own?"
+        "ask": "Will the audience see and hear the ending from where they sit?"
       },
       {
         "name": "When it fails, check",
@@ -299,7 +299,7 @@
       "Build a second machine and compare which is more reliable",
       "Set a limit: it must fit in a shoebox, or use only outdoor materials",
       "Challenge a sibling or friend to build one, then compare designs",
-      "Build one where every step is a different kind"
+      "Build a machine that does a real household job, like turning a page or dropping a teabag in a mug"
     ]
   },
   "signs": [
@@ -307,7 +307,7 @@
     "They talk about angles, weight and distance",
     "They test small before building big"
   ],
-  "makeItReal": "Hand them the next thing at home that stops working, a wobbly shelf or a stuck drawer, and ask for one change at a time, testing after each.",
+  "makeItReal": "Leave a corner of the house where the machine can stay set up for a week, and let them run it for every visitor who comes.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

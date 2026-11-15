@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "Set the gathering rules before you head out: fallen materials only, never pick living plants, leave nests and webs alone, and put things back when you're done. After that, your part is the home basics and one question about each choice.",
+    "intro": "Set the gathering rules before you head out: fallen materials only, never pick living plants, leave nests and webs alone, and put things back when you're done, except the few stones and sticks you keep for a craft. After that, your part is the home basics and one question about each choice.",
     "plan": [
       {
         "when": "First hour",
@@ -210,16 +210,16 @@
         "When is the shadow sharpest?",
         "Why does the shadow move?"
       ],
-      "tip": "Come back in 20 minutes and a twig's shadow has moved. That's the Earth turning, and kids can see it on their own page.",
+      "tip": "Thin leaves like ferns make the most detailed shadows. A thick leaf gives only an outline.",
       "levels": {
         "explore": "Trace 3 overlapping shadows and colour them.",
         "develop": "Make a shadow creature from 3 traced shapes: a body, a head and a tail.",
-        "extend": "Trace the leaf close to the paper, then held high: why does the high one blur? Tape the paper down, push a twig upright beside it, and trace its shadow now and in 20 minutes."
+        "extend": "Trace the leaf close to the paper, then held high: why does the high one blur?"
       },
       "art": "wc/crafts-shadow.jpg"
     },
     {
-      "title": "Paint story stones",
+      "title": "Make story stones",
       "why": "A craft that becomes a storytelling game you can play again and again.",
       "kid": "Your kid chooses 6 to 10 flat stones or bark pieces and draws one simple symbol on each: a sun, a storm, a river, an animal, a shelter. They mix the stones face down, pick 3, and tell a story that uses all three. What's the problem in the story, and how does it get solved? Then swap stones and play again.",
       "you": "Play too. Take turns picking stones and telling stories. Ask about the problem and the solution, because that's what makes it a real story.",
@@ -247,10 +247,10 @@
     "text": "Move one piece on the wind chime while they watch. They'll probably move it back, and they can tell you why it sounded better there.",
     "celebrate": "If their three-stone story solves its problem, tell them: 'I didn't see that ending coming, and it used all three stones.'",
     "extensions": [
-      "Set up a family gallery and give a tour",
-      "Make the same craft in a new season with new materials",
-      "Give a story stone set as a gift",
-      "Invent a seventh craft of your own"
+      "Make a nature brush set: three brushes from pine needles, grass and a feather, and compare their strokes in earth paint",
+      "Dye a scrap of cotton with onion skins or blackberries and compare it with your earth paint",
+      "Invent a seventh craft of your own",
+      "Hang the wind chime where you'll hear it from the house, and notice which weather makes it ring"
     ]
   },
   "signs": [
@@ -269,7 +269,7 @@
   "photo": {
     "src": "guides/assets/nature-crafts.jpg",
     "alt": "Watercolour illustration of six finished nature crafts on a wooden picnic table",
-    "caption": "All six crafts, made from what was lying on the ground."
+    "caption": "Six crafts, all from what's lying on the ground."
   },
   "onTheRoad": [
     "Mix earth paint from the soil or sand where you're staying, like red clay or black volcanic sand, and compare the colours with home.",

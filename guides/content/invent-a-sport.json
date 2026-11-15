@@ -46,7 +46,7 @@
     },
     {
       "subject": "Writing",
-      "text": "rules a stranger can follow"
+      "text": "a rulebook a new team can learn in one minute"
     },
     {
       "subject": "Movement",
@@ -113,7 +113,7 @@
       "levels": {
         "explore": "Pick a type and say how you win.",
         "develop": "Write the win in one sentence and name the sport.",
-        "extend": "Plan how a game stays close until the end, so the losing side can still come back."
+        "extend": "Run the 2-minute trial with a timer and count how many times each player touches the ball. Change one thing so nobody goes a whole minute without a turn."
       }
     },
     {
@@ -177,7 +177,7 @@
       "levels": {
         "explore": "Play, change one thing, play again and crown a winner.",
         "develop": "Playtest with someone new, fix 2 things, and hold a best-of-3 championship.",
-        "extend": "Play 6 games, swapping who starts. If whoever starts wins most of them, the start is unfair: change it and test again."
+        "extend": "Play 6 games, swapping ends each time. If one end wins most of them (sun, slope, wind), the field is unfair: change it and test again."
       }
     }
   ],
@@ -332,7 +332,7 @@
     "caption": "Get Blocked: their own trampoline sport."
   },
   "fromHome": {
-    "text": "The kids invented Get Blocked on our trampoline. One player stands outside and throws the ball in, trying to make it touch the trampoline floor. The players inside block it and send it back out. If the ball touches the floor, the thrower has to touch the net before the ball comes back out.",
+    "text": "The kids invented Get Blocked on our trampoline. One player stands outside and throws the ball in, trying to make it touch the trampoline floor. The players inside block it and send it back out.",
     "quotes": []
   }
 }

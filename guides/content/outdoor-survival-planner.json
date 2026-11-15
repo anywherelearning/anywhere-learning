@@ -95,7 +95,7 @@
         "What's the biggest danger here?",
         "How much daylight is left?"
       ],
-      "tip": "Doing the storm? If you hear thunder, the safe places are a building or a hard-topped metal car. Tall trees, hilltops and picnic shelters are the wrong places.",
+      "tip": "Doing the storm? If you hear thunder, the safe places are a building or a hard-topped metal car. Tall trees, hilltops and picnic shelters are the wrong places. If you can't reach shelter, head down off high ground, away from lone tall trees and water, and keep moving toward the car.",
       "levels": {
         "explore": "Pick one scenario and draw or describe what's happening around you.",
         "develop": "Pick two scenarios and compare the biggest challenge in each.",
@@ -127,7 +127,7 @@
         "What could this become if you needed it to?",
         "Which priority does it help with?"
       ],
-      "tip": "A garbage bag weighs almost nothing and can be a rain poncho, a ground sheet or a shelter roof. Cut a face hole, and never put a bag over anyone's head.",
+      "tip": "A garbage bag weighs almost nothing and can be a rain poncho, a ground sheet or a shelter roof. For a poncho, a grown-up cuts a hole for the face first. Never pull a bag over anyone's head, and keep bags away from little kids.",
       "levels": {
         "explore": "Pick five things around you and say how each one could help.",
         "develop": "List everything in your scenario and match each one to a priority.",
@@ -192,7 +192,7 @@
           },
           {
             "k": "Turn back if:",
-            "v": "it's past 3 pm, there's thunder, someone can't keep going"
+            "v": "it's turnaround time (half your time before sunset is gone), there's thunder, someone can't keep going"
           }
         ],
         "ask": "What's the biggest danger here?"
@@ -312,7 +312,7 @@
       "Plan for a different season in the same place",
       "Sleep one night in the yard in a shelter you built",
       "Ask a park ranger or search and rescue volunteer what they wish kids knew",
-      "Build a small safety kit for each person in the family"
+      "Walk a familiar trail backwards and see how different the landmarks look"
     ]
   },
   "signs": [

@@ -178,7 +178,7 @@
         "Books at $1 sold 4. Books at 50¢ sold 12. Which made more?",
         "How will you split the profit, and why?"
       ],
-      "tip": "Cheaper often earns more: 4 × $1 = $4, but 12 × 50¢ = $6. And fewer books to carry back inside.",
+      "tip": "Put both sales in one table: price, number sold, money in. The higher price doesn't always bring in more money.",
       "levels": {
         "explore": "Run a pretend second sale, then split the coins into three jars: spend, save, give.",
         "develop": "Run a second sale with one change, compare the profit, and explain the split.",
@@ -302,7 +302,7 @@
     "celebrate": "Right after they hold a price on a haggle, tell them: 'You said no to a grown-up and stayed friendly. That's harder than the maths.'",
     "extensions": [
       "Give the 'give' part of the profit to a cause they choose",
-      "Plan a bigger sale with friends or family",
+      "Add a 'free with any purchase' box and see whether it changes how much each customer spends.",
       "Buy a few things at someone else's sale, clean them up and resell them. Now what you paid is a real cost.",
       "Compare selling online, at a sale and through a consignment store"
     ]

@@ -730,7 +730,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'build-a-museum': {
     opening:
-      'Your child builds a real museum at home on a topic they love. They narrow it to an angle, research and pick the 5 to 8 pieces that tell the story, lay out a visitor path, write short labels that say what each piece is and why it matters, add a hands-on station, then open the doors with a guest book. Research, writing and design, driven by their own interests.',
+      'Your child builds a real museum at home on a topic they love. They narrow it to an angle, research and pick the 5 to 8 pieces that tell the story, put the pieces in the order that tells the story, write short labels that say what each piece is and why it matters, add a hands-on station, then open the doors with a guest book. Research, writing and design, driven by their own interests.',
     whatsIncluded: [
       '5 steps from a topic to opening day',
       'Topic to angle: turning a big subject into a museum',
@@ -1240,7 +1240,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'write-like-a-pro': {
     opening:
-      'Your child picks a real writing style (review, opinion piece, how-to guide, letter, short story, news report, or song), chooses a topic they care about, and writes a finished piece for a real audience. Drafting, editing, and revising the way actual writers work, not a five-paragraph essay for nobody.',
+      'Your child picks a real writing style (review, opinion piece, how-to guide, letter, short story, news report, or song), chooses a topic they care about, and writes a finished piece for a real audience. Drafting, editing, and revising the way actual writers work, for someone who will actually read it.',
     whatsIncluded: [
       'Seven Writing Style Cards: the job, the build and the sound of each',
       'Topic selection and audience targeting',
@@ -1295,7 +1295,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Five steps, from noticing suggestions to watching on purpose',
       'What am I seeing?, Track it, Experiment, Keep-you-watching tricks and Take back control cards',
       'A real experiment: change what you watch, predict, then check the home page',
-      'How to switch off autoplay and other tricks, inside the screen time you already allow',
+      'How to switch off autoplay, and set stop points for tricks you can\'t switch off',
       'Three levels per step, from ages 6 to 14',
     ],
     skillTags: ['Digital Literacy', 'Critical Thinking', 'Science', 'Data Collection', 'Self-Control'],
@@ -1739,13 +1739,13 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Writing a profile: scene, quote, detail, why',
       'Giving the profile back to the person',
     ],
-    skillTags: ['Interviewing', 'Listening', 'Empathy', 'Writing', 'Communication'],
+    skillTags: ['Interviewing', 'Showing Not Telling', 'Empathy', 'Writing', 'Communication'],
     insideTheLearning: {
       lead:
         'Your child interviews someone in your community, from a grandparent to the baker. Open questions rather than yes-or-no ones. Notes while the person is still talking. Then a long conversation turned into a short profile that opens with a scene and uses the person\'s own words.',
       skills: [
         { skill: 'Communication', where: 'Asking open questions that invite a real answer, and taking notes while someone speaks' },
-        { skill: 'Listening', where: 'Paying genuine attention rather than waiting for their turn' },
+        { skill: 'Showing Not Telling', where: 'Letting a scene and a quote show who someone is' },
         { skill: 'Empathy', where: 'Understanding a perspective and a life that is not theirs' },
       ],
     },
@@ -3131,6 +3131,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Make a colour-changing juice from red cabbage',
       'A fair-test results table for five powders',
       'A clue key for ruling suspects out',
+      'A real payoff: test whether the baking powder and baking soda in your cupboard still work',
       'Question ideas for their own experiment',
     ],
     skillTags: ['STEM', 'Science', 'Scientific Method', 'Prediction', 'Chemistry'],

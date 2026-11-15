@@ -127,7 +127,7 @@
         "What takes longer than you think?",
         "What's the backup if the meal goes wrong?"
       ],
-      "tip": "Leave some empty space in the plan. Everything at home takes longer than it should.",
+      "tip": "Write the remembering jobs into the plan too, like 'check the milk' at 4:00. They're the ones that get forgotten.",
       "levels": {
         "explore": "Write the times for your three jobs, and plan one simple meal.",
         "develop": "Plan the whole day hour by hour, with two meals and what they need.",
@@ -311,8 +311,8 @@
     "extensions": [
       "Swap with a sibling and compare how each of you ran the day",
       "Give someone a Swap Day as a birthday present",
-      "Plan and cook the family's meals for a whole week",
-      "Hold a family meeting to share out the invisible work"
+      "Run Swap Day on a travel day or at a rental, where nothing is where you expect",
+      "Interview a grandparent about the invisible work in their house growing up, and compare it with yours"
     ]
   },
   "signs": [

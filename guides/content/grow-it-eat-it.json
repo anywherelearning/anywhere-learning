@@ -6,7 +6,7 @@
   "ages": "Ages 6 to 14",
   "goal": "Your kid plants something they can actually eat, looks after it from seed to plate, and then eats what they grew. That last part does more than it sounds like it should: a radish you pulled out of the dirt yourself tastes different from one in a bag, and a kid who grew it will usually eat it. Along the way they learn that food is grown, not bought, and that living things depend on someone showing up every day.",
   "need": [
-    "Fast seeds: radishes, lettuce, cress, pea shoots, or basil",
+    "Fast seeds: radishes, lettuce, cress, pea shoots, or basil, plus a few dried beans or peas from the pantry",
     "A pot, window box or small patch of dirt, and potting soil",
     "Water, a sunny spot, and a notebook for tracking"
   ],
@@ -55,8 +55,8 @@
     "intro": "Help with the setup, then hand the plant over and mean it. The temptation is quietly watering it when they forget: a day of droop teaches more than a rescue. Until seedlings have their first true leaves, one quiet reminder is fine.",
     "plan": [
       {
-        "when": "Day 1",
-        "what": "The seed detective game, choose and plant (Steps 1 and 2). 30 minutes."
+        "when": "Night before, Day 1",
+        "what": "The night before: soak a few beans. Day 1: the seed detective game, choose and plant (Steps 1 and 2). 30 minutes."
       },
       {
         "when": "Weeks 1 to 4",
@@ -106,7 +106,7 @@
       "title": "Be a seed detective",
       "why": "A look inside a seed, then choosing what to grow.",
       "kid": "Soak a few dried beans or peas in water overnight, then your kid gently splits one open: inside is a tiny baby plant, curled up with its food supply. They lay one soaked bean on a damp paper towel in a clear jar to watch later. Then they pick something edible and fast to grow. Radishes, lettuce, cress and pea shoots are ready in days or a few weeks. They read the seed packet together: how deep, how far apart, how many days to harvest.",
-      "you": "Let them pick, but nudge toward speed. A six-year-old won't wait two months for a tomato. Radishes are up in about a week and ready in three or four, and that speed is what keeps a kid coming back.",
+      "you": "Let them pick, but nudge toward speed. A six-year-old won't wait two months for a tomato. Radishes are up in about a week and ready in three or four, and that speed is what keeps a kid coming back. Want tomatoes? Start with a small plant from a garden centre instead of a seed.",
       "starters": [
         "Cress (days)",
         "Microgreens (1 to 2 weeks)",
@@ -121,7 +121,7 @@
       ],
       "tip": "Read 'days to harvest' on the packet together and pick one that fits your kid's patience, and yours.",
       "levels": {
-        "explore": "Open a soaked bean, then pick cress or pea shoots, the fastest of all.",
+        "explore": "Open a soaked bean, then pick cress, the fastest of all.",
         "develop": "Draw the inside of the seed, then pick radishes or lettuce.",
         "extend": "Work backward from 'days to harvest' so two crops are ready the same week."
       }
@@ -196,7 +196,7 @@
     "text": "Point to a droopy houseplant and watch: they'll push a finger into the soil before saying a word. They know a plant needs checking, not guessing, and that it won't wait for a day they feel like it.",
     "celebrate": "At the first bite, say: 'Every day you checked on it, and this is what all those mornings made.'",
     "extensions": [
-      "Plant the next crop straight away, something slower and harder",
+      "Grow the same seed in two spots, a sunny window and a dim one, and compare the plants side by side",
       "Give them a real patch of the garden to run",
       "Regrow lettuce or green onions from kitchen scraps",
       "Save seeds from what they grew"

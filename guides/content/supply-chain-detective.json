@@ -162,7 +162,7 @@
       "tip": "Older relatives often remember what was hard to get when they were young. It makes a great question at the next family dinner.",
       "levels": {
         "explore": "Pick the weakest link on your map, and say why.",
-        "develop": "Find out why one real thing was hard to get, and mark that link on your map.",
+        "develop": "Find out why one real thing was hard to get, mark that link on your map, then explain the whole chain to someone at dinner.",
         "extend": "Find a version made closer to home, compare the two chains and decide which to buy next time."
       }
     }
@@ -298,12 +298,12 @@
   "conclusion": {
     "headline": "They know where their stuff comes from, and how far it came.",
     "text": "Grocery trips get slower after this, in a good way. If they turn over a toy to see where it was made, or wonder how the store never runs out of milk, the detective habit has come home with you.",
-    "celebrate": "When they tell someone where something really came from, say: 'You followed that all the way back.'",
+    "celebrate": "When they tell someone where something really came from, say the number back: 'Four stops and two countries, and you found every one.'",
     "extensions": [
       "Trace a piece of clothing from the field to the store",
       "Map a whole meal and count the countries on the plate",
       "Trace something you throw away, like a can or a jar, to where it goes after the bin",
-      "Pick one thing and find a version made in your own province or state"
+      "Trace one thing from a takeout meal back to its farm"
     ]
   },
   "signs": [
@@ -326,7 +326,7 @@
     "tall": true
   },
   "fromHome": {
-    "text": "In Panama, we visited a coffee plantation. The kids picked the coffee, washed the seeds, ground them, roasted them and tried three different coffees.",
+    "text": "In Panama, we visited a coffee plantation. The kids picked the coffee, washed the seeds, roasted them, ground them and tried three different coffees.",
     "quotes": []
   },
   "onTheRoad": [

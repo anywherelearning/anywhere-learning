@@ -50,7 +50,7 @@
     "troubleshoot": [
       {
         "q": "They say nothing works",
-        "a": "Test when they're calm, not upset, and try tools from every group on the Reset tools card. Most kids find one surprise."
+        "a": "Test when they're calm, not upset, and try tools from every group on the Reset tools card. Most kids find one surprise. If meltdowns are getting more frequent, or someone gets hurt, talk to your doctor."
       },
       {
         "q": "Siblings need opposite things",
@@ -273,7 +273,7 @@
             "v": "talk once they're calm"
           }
         ],
-        "ask": "What's the one thing your grown-up should never do?"
+        "ask": "Which of these would you want from a grandparent or a babysitter too?"
       }
     ],
     "after": {
@@ -310,7 +310,7 @@
     "celebrate": "The first time they use a tool on their own, say: 'You caught it early, and you knew what to do.'",
     "extensions": [
       "Pick a secret signal, like a hand on your heart, that tells your grown-up 'I need my plan' when you can't talk",
-      "Re-test the Rate it card in six months, and see which tools you've outgrown",
+      "Make a calm-down spot at home together: pick the corner, and let them choose what goes in it",
       "Add one new tool you've never tried, from a friend or a book, and test it",
       "Ask your parent to make their own calm-down plan, and swap"
     ]

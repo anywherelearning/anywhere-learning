@@ -151,7 +151,7 @@
       "levels": {
         "explore": "Say which day stood out, and whether it went up or down.",
         "develop": "Work out the change from one day to the next for the whole week.",
-        "extend": "Find the typical change as an average and as a median. Which does one wild day throw off?"
+        "extend": "Check twice a day for 3 days, after breakfast and after lunch. Is the swing within one day bigger than the change from day to day?"
       }
     },
     {
@@ -310,10 +310,10 @@
     "text": "The next time someone says 'it's getting colder' after one chilly morning, listen for your kid to ask about the last few days. Then ask what they'd forecast for tomorrow, and how sure they are.",
     "celebrate": "If a forecast lands close, read it next to the real number: 'You called that from a chart on the fridge.'",
     "extensions": [
-      "Keep one tracker going for a whole month and watch a bigger trend appear",
-      "Track two things at once and see if their lines rise and fall together",
+      "Use your data to choose the day for something real, like planting seeds or a picnic, and see if the call was right.",
+      "Put a second rain gauge somewhere different, like under a tree, and compare the two readings.",
       "Compare your data with a friend's in another city",
-      "Track the same thing again in a different season and compare"
+      "Ask a grandparent what this month's weather was like when they were a kid, and compare their memory with your numbers."
     ]
   },
   "signs": [
@@ -321,7 +321,7 @@
     "They notice the days getting longer or shorter",
     "They ask 'is that a trend or just one day?'"
   ],
-  "makeItReal": "Tape the log to the fridge where everyone walks past it. Each evening, your kid posts tomorrow's forecast, and at breakfast you check it together.",
+  "makeItReal": "Tape the log to the fridge where everyone walks past it. Each evening, your kid posts tomorrow's forecast, and the family uses it to pick jackets or plan the next outing. At breakfast, check it together.",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",

@@ -111,7 +111,7 @@
         "What's here that you didn't expect?",
         "What's everywhere you look?"
       ],
-      "tip": "Ask before photographing people, especially performers and children. Displays, food and decorations are always fair game.",
+      "tip": "Ask before photographing people, especially performers and children. Displays, food and decorations are usually fine, but look for signs at altars, churches and private homes.",
       "levels": {
         "explore": "Find the thing you drew before you came, and take a photo of it.",
         "develop": "Fill in the Watch for card, and tick off the two things you expected to see.",
@@ -302,8 +302,8 @@
     "extensions": [
       "Find a celebration here that happens in homes rather than the street, and ask someone what their family does",
       "Go back to the same celebration next year, or a similar one somewhere else, and compare the pages",
-      "Find out how a celebration from home started, and write its page the same way",
-      "Teach someone back home one thing from the celebration: a food, a song or a game"
+      "Find out what the celebration takes to put on: who pays, who volunteers and how long they prepare",
+      "Find the story behind one part of the celebration, like a figure, a food or a colour, and tell it in your own words"
     ]
   },
   "signs": [
@@ -320,7 +320,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "In January we were in Boquete, Panama, for the Feria de las Flores y del Café, the flower and coffee fair. We read about it before we went, so the kids knew it celebrates the flowers and the coffee grown in the valley. There were flowers everywhere, some shaped into huge displays, plus music, food and a fair. Afterwards the kids wrote about it.",
+    "text": "In January we were in Boquete, Panama, for the Feria de las Flores y del Café, the flower and coffee fair. We read about it before we went, so the kids knew it celebrates the flowers and the coffee grown in the valley. There were flowers everywhere, some shaped into huge displays, and afterwards the kids wrote about it.",
     "quotes": []
   },
   "photo": {

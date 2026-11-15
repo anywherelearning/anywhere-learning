@@ -210,6 +210,10 @@
           {
             "k": "Write:",
             "v": "stories, lists, a journal"
+          },
+          {
+            "k": "Move:",
+            "v": "dance, a ball, an obstacle course"
           }
         ],
         "ask": "Which of these have you never reached for?"
@@ -285,8 +289,8 @@
     "extensions": [
       "Make a travel-size kit for car rides and waiting rooms",
       "Have a family 'nothing planned' afternoon, grown-ups included",
-      "Start a long project from the kit, like a comic, a song or a model",
-      "Spend one bored hour somewhere new, like a park or a waiting room, with only what's in your pockets"
+      "Try a one-material afternoon, like only paper or only string, and see how many things you can make from it",
+      "Spend one bored hour outside, like a park or the backyard, with only what's in your pockets"
     ]
   },
   "signs": [
@@ -303,7 +307,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "When my kids say they're bored, I say: 'Okay, that's good, go find something to do.' Boredom shows up most when we're at home, it's raining and there's no one to play with. My daughter lets her creative side come out: drawing, crafting, writing, building blocks, music. One bored afternoon, she made herself a magic wand. My son mostly reads. Our screen rule is 30 minutes a day to watch, and a bit more to create.",
+    "text": "When my kids say they're bored, I say: 'Okay, that's good, go find something to do.' My daughter lets her creative side come out: drawing, crafting, writing, building blocks, music, and my son mostly reads. Our screen rule is 30 minutes a day to watch, and a bit more to create.",
     "quotes": []
   },
   "photo": {

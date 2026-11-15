@@ -109,7 +109,7 @@
       "cards": [
         {
           "name": "Rope Maker",
-          "t": "Twist two grass bundles one way, then wind them together the other way so the cord locks.",
+          "t": "Twist two bundles of long dry grass one way, then wind them together the other way so the cord locks.",
           "d": "Make a thicker cord. Which holds more?",
           "icon": "spline",
           "art": "wc/stem2-01.jpg"
@@ -124,7 +124,7 @@
         {
           "name": "The Hanging Test",
           "t": "Tie a stick between two supports with a different knot on each end. Which knot slips first?",
-          "d": "Learn a clove hitch and test again. Why is it stronger?",
+          "d": "Learn a clove hitch and test again. Does it grip the stick better, and why?",
           "icon": "link",
           "art": "wc/stem2-03.jpg"
         },
@@ -304,9 +304,9 @@
     "celebrate": "If they catch themselves about to change two things at once and stop, say: 'You just saved the experiment. Which one goes first?'",
     "extensions": [
       "Pick the best design from each theme and run a family championship",
-      "Keep a results notebook: card, what changed, what you measured",
-      "Combine three machines into one long chain reaction",
-      "Try Volume 1 for 24 more challenges"
+      "Find three levers in the kitchen or the toolbox, and point to each one's pivot",
+      "Make a working Archimedes screw from a tube and a stick, and race it against a sponge",
+      "Visit a playground and name the simple machine in every piece of equipment"
     ]
   },
   "signs": [

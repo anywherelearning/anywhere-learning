@@ -154,10 +154,10 @@
           "art": "wc/move-06.jpg"
         },
         {
-          "name": "Morning Minute",
-          "t": "Sixty seconds of moving outside before breakfast, every day this week. Rain counts.",
-          "d": "Choose the exact move and the exact spot tonight, so tomorrow there's nothing to decide.",
-          "icon": "sunrise",
+          "name": "Habit Glue",
+          "t": "Glue 60 seconds of outside movement to something you already do every day, like right after breakfast. All week.",
+          "d": "Which glue worked best: a time, a place, or a thing you already do?",
+          "icon": "link",
           "art": "wc/move-07.jpg"
         },
         {
@@ -302,10 +302,10 @@
     "text": "Pick a card they haven't tried yet and listen to what they say after the first go. If it's 'that's my baseline' instead of 'I can't do this', the idea has landed. Write the number down and let them choose the day they try to beat it.",
     "celebrate": "Write their first time and their best time on one sticky note and hand it over: 'Look at the gap. Every second of that is yours.'",
     "extensions": [
-      "Keep a family record board on the fridge, kids and grown-ups",
-      "Redo your baseline cards in a month and compare",
-      "Let your kid invent a new challenge card for you",
-      "Run a family Versus afternoon with a relay to finish"
+      "Plan a family walk or hike longer than any you've done, and train for it with The Long Haul",
+      "Interview a grandparent about the outdoor games they played, and turn one into a card",
+      "Pick one card and find the real sport or job that uses it, like climbing for The Hang or orienteering for The Instinct Walk",
+      "Track one family streak through a whole month of weather, with the Streak Saver card ready"
     ]
   },
   "signs": [

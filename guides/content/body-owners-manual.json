@@ -9,7 +9,7 @@
     "A phone with a stopwatch",
     "A 30 cm ruler",
     "Paper and a pencil, or a notebook",
-    "A few foods with a strong smell, and a scarf for a blindfold"
+    "A few foods with a strong smell, a scarf for a blindfold and two paperclips"
   ],
   "academics": [
     {
@@ -163,7 +163,7 @@
       "levels": {
         "explore": "Write or draw one page with your five favourite readings.",
         "develop": "Write a section for each part of the body you tested, with your real numbers.",
-        "extend": "Write the whole manual with a warning lights page, then retest one number a month later."
+        "extend": "Write the whole manual with a warning lights page: the signs that this machine needs rest, water or food. Then retest one number a month later."
       }
     }
   ],
@@ -214,7 +214,7 @@
           },
           {
             "k": "Two points:",
-            "v": "fingertip versus back"
+            "v": "two paperclip tips on a fingertip, then on the back"
           },
           {
             "k": "Afterimage:",
@@ -309,7 +309,7 @@
     "text": "Give it a month. If they check their pulse after running up the stairs, or say 'Let's test it' when someone makes a claim, they've started thinking like a scientist.",
     "celebrate": "When they read you a number they measured themselves, say: 'Nobody else in the world has that manual.'",
     "extensions": [
-      "Retest everything in a month and see what changed",
+      "Test a grandparent's reaction time and pulse, and add a page on how bodies change with age",
       "Make manuals for the whole family and compare specs",
       "Pick one number, like recovery time, and work on it for a few weeks",
       "Look up a mouse's heart rate and an elephant's, and compare them with yours"

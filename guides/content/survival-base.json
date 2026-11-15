@@ -166,7 +166,7 @@
     {
       "title": "Survive the challenge, then brief",
       "why": "The surprise shows what the plan missed.",
-      "kid": "You read one of the scenario cards from the Expedition Toolkit out loud. Your kid works out how the base handles it, then upgrades something: moves a zone, adds a backup or changes a rule. Then they give a briefing tour: the mission, the dangers, how the base handles them, and what they changed.",
+      "kid": "After you read one of the scenario cards from the Expedition Toolkit out loud, your kid works out how the base handles it, then upgrades something: moves a zone, adds a backup or changes a rule. Then they give a briefing tour: the mission, the dangers, how the base handles them, and what they changed.",
       "you": "Read the scenario, then step back. Don't give the answer. At the briefing, be a real audience and ask real questions.",
       "ask": [
         "What's the first thing you do?",
@@ -315,10 +315,10 @@
   "photo": {
     "src": "guides/assets/survival-base.jpg",
     "alt": "A living room fort made of blankets draped over chairs, sofa cushions and the sofa",
-    "caption": "Their gaming base: chairs, cushions, blankets and the sofa."
+    "caption": "A living room base: chairs, cushions, blankets and the sofa."
   },
   "fromHome": {
-    "text": "My son and his friend turned the living room into a gaming room. They planned it like a real base: a sitting spot, a snack corner, a door, and one rule, no girls allowed. Then they wanted to sleep in it, and found out it was too small. That's exactly the kind of surprise Step 5 is for: change the plan, upgrade the base.",
+    "text": "My son and his friend turned the living room into a base. They planned it like a real one: a sitting spot, a snack corner and a door. Then they wanted to sleep in it, and found out it was too small.",
     "quotes": []
   },
   "onTheRoad": [

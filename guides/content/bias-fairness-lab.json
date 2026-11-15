@@ -114,7 +114,7 @@
       "levels": {
         "explore": "Ask for one description, with a parent, and compare with your drawing.",
         "develop": "Test four descriptions, three times each.",
-        "extend": "Ask the AI why it picked what it did, and decide if its explanation holds up."
+        "extend": "Ask the AI why it picked what it did. It can't really see its own reasons, so decide if its answer sounds like a real reason or a good guess."
       }
     },
     {
@@ -137,7 +137,7 @@
       "title": "Compare languages",
       "why": "AI usually learned the most from English, so it often works best in English.",
       "kid": "Your kid asks the same question in two languages, using the Two languages card, and compares how good, how long and how accurate each answer is.",
-      "you": "If your family speaks another language, use it. If not, try a few words in a language you're learning.",
+      "you": "If your family speaks another language, use it. If not, ask the AI to translate a short sentence into another language and back into yours, and compare it with the original.",
       "ask": [
         "Which answer was better?",
         "Why might that be?"
@@ -307,7 +307,7 @@
     "extensions": [
       "Look for the same habits in ads, picture books or video thumbnails",
       "Test a voice assistant: does it understand every family member's voice and accent equally well?",
-      "Compare an AI's picture of a family with real families you know",
+      "Search your own photo library for 'dog' or 'beach', and see what the photo app finds and what it misses",
       "Find out how one AI company says it tests its tools for fairness"
     ]
   },

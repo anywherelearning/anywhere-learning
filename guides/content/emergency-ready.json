@@ -137,7 +137,7 @@
     {
       "title": "Pack the three-day kit",
       "why": "If the power is out for three days, the plan is mostly math.",
-      "kid": "Your kid works out what the family needs to stay home for three days without power or running water, using the Three-day kit card. Water first: people × litres per day × 3 days. Then they gather what's already in the house in one bag or bin, and list what's missing.",
+      "kid": "Your kid works out what the family needs to stay home for three days without power or running water, using the Three-day kit card. Water first: people × litres per day × 3 days. Add the pets too. Then they gather what's already in the house in one bag or bin, and list what's missing.",
       "you": "Help them find what's at home before anything gets bought, and add what only you can: medications and copies of important documents. Pick a spot for the kit everyone can reach.",
       "ask": [
         "How much water does our family need for three days?",
@@ -184,7 +184,7 @@
           },
           {
             "k": "Alarms:",
-            "v": "smoke and carbon monoxide, on every level"
+            "v": "smoke in every bedroom and on every level, carbon monoxide on every level"
           },
           {
             "k": "Path:",
@@ -313,7 +313,7 @@
     "text": "Any day this month, ask how they'd get out of their room if the door were blocked. They should answer without stopping to think. That quick answer is what the drill was for.",
     "celebrate": "After the timed drill, tell them the number and what it means: 'Everyone out in 52 seconds. You made that plan.'",
     "extensions": [
-      "Run the drill at night, as fire departments recommend",
+      "Plan for the pets: who carries them, where their food and water go, and how much water they need",
       "Make a smaller kit for the car",
       "Plan for another home: a cabin, a rental, wherever you stay most",
       "Check the kit every six months and swap anything that expires"

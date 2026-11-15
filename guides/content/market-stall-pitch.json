@@ -84,7 +84,7 @@
     ]
   },
   "fromHome": {
-    "text": "My daughter made two flavours of popcorn herself, bagged it, came up with her logo and her price, and set up her stand: 'Mais moi ça!', $2 a bag. She made $86. At her lemonade stand, she didn't wait behind the table. She walked out to strangers on the street and told them to come have a tasty, fresh lemonade.",
+    "text": "My daughter made two flavours of popcorn herself and set up her stand: 'Mais moi ça!', $2 a bag, and she made $86. At her lemonade stand, she didn't wait behind the table: she walked out to strangers on the street and told them to come have a tasty, fresh lemonade.",
     "quotes": []
   },
   "skills": [
@@ -143,7 +143,7 @@
       "levels": {
         "explore": "Say 3 great things about it, then pick a price by laying out coins.",
         "develop": "List features and benefits separately, set a price that covers your costs, and prepare 3 tough answers.",
-        "extend": "Split costs into one-time (a sign, a jug) and per item (cups, lemons). How many sales pay back the one-time costs?"
+        "extend": "Write the three hardest questions a customer could ask, and a one-line answer for each that starts with what they get."
       }
     },
     {
@@ -191,7 +191,7 @@
       "levels": {
         "explore": "Count the money into piles of $1, then say one thing that went well and one you'd change.",
         "develop": "Work out the profit and write a short reflection on what worked in your pitch.",
-        "extend": "Work out profit per item and profit per hour at the stall. Was it worth the time, and what would raise it?"
+        "extend": "Look at your tally: which opening line made people stop, and which made them buy? Rewrite your pitch for next time around the line that sold."
       }
     }
   ],
@@ -200,7 +200,7 @@
     "text": "At the next market or shop counter, watch what they notice. They'll point out a seller's opening line or a sign that caught them, and they can tell you whether it sold a benefit or just named the product.",
     "celebrate": "The first time someone said no and they pitched the next person anyway, tell them: 'That no didn't slow you down. The next customer got your best pitch.'",
     "extensions": [
-      "Run a stall at a real community event or market",
+      "Run a 'pitch swap': each family member sells something the others own, and the best pitch wins",
       "Add a second product at a different price",
       "Interview a real market vendor about how they sell",
       "Film a 30-second ad for the product"

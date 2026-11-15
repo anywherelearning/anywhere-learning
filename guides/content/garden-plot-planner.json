@@ -108,7 +108,7 @@
         "How many hours of sun does this spot get?",
         "What could help or hurt a garden here: shade, wind, animals?"
       ],
-      "tip": "Have them note the sun on the spot at three times of day. It's their first piece of real garden data.",
+      "tip": "Have them pace the spot before measuring it. Finding out how close their steps came to the tape is half the fun.",
       "levels": {
         "explore": "Pick a spot, say why, and pace out how long and wide it is.",
         "develop": "Compare 2 or 3 spots on sun, water and space, then work out the usable area.",
@@ -301,9 +301,9 @@
     "celebrate": "On the first harvest, hand them the scissors: 'You planned this bed on paper. Go and pick it.'",
     "extensions": [
       "Weigh every harvest and work out what it would cost at the store",
-      "Plan next season's garden with what you learned",
+      "Sow a second row of lettuce or radishes two weeks after the first, and see how staggered planting spreads out the harvest.",
       "Try the same plant in a pot and in the ground, and compare",
-      "Build your own raised bed: measure, cut the wood and estimate the soil"
+      "Ask a neighbour what grows best on your street, and compare their harvest dates with the seed packets."
     ]
   },
   "signs": [

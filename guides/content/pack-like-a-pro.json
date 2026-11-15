@@ -309,9 +309,9 @@
     "text": "The night before the next trip, stay out of their room. If they check the forecast, get out their list or ask how many days it is before you've said a word, the packing is starting to belong to them.",
     "celebrate": "On the trip, when they pull out exactly the thing that was needed, say: 'You thought of that. I didn't.'",
     "extensions": [
-      "Pack for a totally different climate and compare",
+      "Pack a bag for a younger sibling's sleepover, from what you know about them, then check it with them",
       "Plan the car or suitcase space for the whole family",
-      "Pack for someone else's trip from their list only, then check it with them",
+      "Weigh your bag before and after a trip, and work out what the souvenirs cost you in weight",
       "Pack one shared day bag for the whole family and split who carries what"
     ]
   },
@@ -335,7 +335,7 @@
     "tall": true
   },
   "fromHome": {
-    "text": "Before our six-month trip, each kid had to fit everything in one small suitcase and explain every choice. My son took only three shirts and made room for his Switch. My daughter packed clothes for four days and a photo of her friends. She forgot her Crocs.",
+    "text": "Before our six-month trip, each kid had to fit everything in one small suitcase and explain every choice. My son took only three shirts and made room for his Switch. My daughter packed a photo of her friends and forgot her Crocs.",
     "quotes": []
   }
 }

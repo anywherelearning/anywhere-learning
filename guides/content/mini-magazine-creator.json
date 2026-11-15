@@ -11,7 +11,7 @@
     "A real magazine to flip through, if you have one"
   ],
   "lesson": {
-    "text": "A magazine isn't one long essay. It's short pieces that each do a different job, and each needs a headline that makes someone want to read it.",
+    "text": "A magazine isn't one long piece of writing. It's short pieces that each do a different job, and each needs a headline that makes someone want to read it.",
     "before": "Article: Dogs. Dogs are animals. They are nice.",
     "model": [
       {
@@ -104,7 +104,7 @@
   "steps": [
     {
       "title": "Remix a magazine cover",
-      "why": "Rewrite three magazine headlines about the cat, then plan an issue of your own.",
+      "why": "Remixing three real headlines shows what a headline does, then your kid plans an issue of their own.",
       "kid": "Flip through a real magazine (or look one up together) and notice the cover: the big title, the headlines, the picture. Your kid rewrites 3 of the headlines about something silly, like the family cat or Tuesday's dinner. Then they pick their own magazine topic, decide who it's for, and plan the issue: a list of pieces, each labelled by type, in a rough table of contents.",
       "you": "Play the remix game too, and laugh. Then help them think of a topic they could talk about for hours, and check they could write at least 4 different pieces about it. Aim for a mix: something long, something short, something interactive.",
       "starters": [
@@ -222,7 +222,7 @@
     "caption": "My son's article on the Panama Canal, published for family and friends."
   },
   "fromHome": {
-    "text": "During our seven months of travel, my kids published their own pages on our family travel website for every country. My son wrote a researched article on the Panama Canal that opens with a hook: in a normal year, about 14,000 ships cross it. My daughter wrote about the jungle birds and animals of a national park, then a piece on how Panamanians celebrate Christmas. Family and friends back home read every one.",
+    "text": "During our seven months of travel, my kids published their own pages on our family travel website for every country. My son wrote a researched article on the Panama Canal that opens with a hook: in a normal year, about 14,000 ships cross it. Family and friends back home read every one.",
     "quotes": []
   }
 }

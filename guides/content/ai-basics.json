@@ -120,7 +120,7 @@
     {
       "title": "Test the myths",
       "why": "Myths fall apart fastest when kids test them themselves.",
-      "kid": "At the screen, your kid tests each myth from the Myth or fact? card by asking the AI, then decides if the myth was true.",
+      "kid": "At the screen, your kid tries the test next to each myth on the Myth or fact? card, then decides if the myth was true.",
       "you": "Type for younger kids. Ask a question you know the answer to, so you can spot a wrong one together. If your account has memory turned on, it may remember things you've told it. That's saved notes, not friendship. Look at the memory settings together.",
       "ask": [
         "Did it get anything wrong?",
@@ -145,7 +145,7 @@
       "tip": "It might say 'I love that!' It doesn't love anything. It predicted that those words fit.",
       "levels": {
         "explore": "Say hi and ask it one question, then say if it's a person or a tool.",
-        "develop": "Chat for a minute, then sort its answers into real and just good wording.",
+        "develop": "Chat for a minute, then point to one thing it said that sounded like a feeling, and say what it really is.",
         "extend": "Ask it about itself, then compare what it says with what you learned in Step 2."
       }
     },
@@ -218,20 +218,20 @@
         "name": "Myth or fact?",
         "lines": [
           {
-            "k": "Myth:",
-            "v": "'It knows everything.'"
+            "k": "'It knows everything.'",
+            "v": "ask what you ate for breakfast"
           },
           {
-            "k": "Myth:",
-            "v": "'A person is typing the answers.'"
+            "k": "'A person types the answers.'",
+            "v": "time how fast a long answer appears"
           },
           {
-            "k": "Myth:",
-            "v": "'It knows you, like a friend does.'"
+            "k": "'It knows you.'",
+            "v": "ask your pet's name, or your best friend's"
           },
           {
-            "k": "Myth:",
-            "v": "'It thinks and feels like a person.'"
+            "k": "'It has feelings.'",
+            "v": "ask how it felt yesterday, then talk about the answer"
           }
         ],
         "ask": "Which myth did you believe before?"
@@ -315,9 +315,9 @@
     "text": "You'll know it landed when they're the one explaining it: telling a cousin 'it just predicts words', or asking 'job for AI or for my brain?' before they open it.",
     "celebrate": "When they follow a family AI rule on their own, say: 'You remembered our rule, and you used AI the smart way.'",
     "extensions": [
-      "Play the prediction game with your phone keyboard's suggested words, and write a silly sentence using only its guesses",
+      "Find an AI feature hiding in an app you already use, like a suggested email reply or a photo eraser, and decide if it's predicting too",
       "Look for AI in everyday life: maps, video suggestions, voice assistants",
-      "Teach a younger cousin or friend the prediction game"
+      "Ask the AI for a poem about your family pet, write one yourself, and decide which one sounds like your family"
     ]
   },
   "signs": [
@@ -334,7 +334,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "We've always taught our kids what AI really is. My daughter likes to talk to it like a real person, saying hi and thank you and asking it questions about itself, but she does it just for fun. Our rules: no personal information, double-check what it says, no AI for writing your own work, and AI is a tool, not a replacement for your brain.",
+    "text": "We've always taught our kids what AI really is. My daughter likes to talk to it like a real person, saying hi and thank you, just for fun. Our rules: no personal information, double-check what it says, no AI for writing your own work, and AI is a tool, not a replacement for your brain.",
     "quotes": []
   },
   "photo": {

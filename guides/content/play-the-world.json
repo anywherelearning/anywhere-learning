@@ -106,7 +106,7 @@
       "title": "Learn it from the kids who play it",
       "why": "Learning a game from the kids who play it is one of the fastest ways into a place.",
       "kid": "Your kid asks to join or to be taught, using the Ask to play card: 'Can I play?' and 'How do you play?' They learn the rules by playing, and ask what the game is called.",
-      "you": "Stay close and keep watch, but let them do the asking. Help with the words if they're stuck. If kids aren't open to it, ask a parent, a teacher or your host.",
+      "you": "Stay close and keep watch, but let them do the asking. Help with the words if they're stuck. If kids aren't open to it, ask a parent, a teacher or your host. Ask a parent before taking photos of other kids.",
       "ask": [
         "What was the hardest rule to understand?",
         "What did they shout during the game?"
@@ -303,7 +303,7 @@
       "Collect one game from every place you stay, and keep the cards together",
       "Find out how old the game is, and whether kids in other countries play a version of it",
       "Make the gear for a game yourself, like a ball, a board or a set of stones",
-      "Teach your game collection to friends back home, and tell them where each one came from"
+      "Play the game with kids of different ages, and work out how they change the rules for the little ones"
     ]
   },
   "signs": [
@@ -320,7 +320,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "In Panama and in Costa Rica, the kids went to a local school for a while. They learned new games at recess, and played Christmas games at the school Christmas party. Months later, they couldn't remember what any of the games were called. That's why this guide has your kid write the rules down the same day.",
+    "text": "In Panama and in Costa Rica, the kids went to a local school for a while. They learned new games at recess, and played Christmas games at the school Christmas party. Months later, they couldn't remember what any of the games were called.",
     "quotes": []
   },
   "photo": {

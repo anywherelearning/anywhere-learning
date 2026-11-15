@@ -7,7 +7,7 @@
   "goal": "Your kid learns to check before they believe or share. Faced with a post, a photo or a video, they pause when it makes them feel a lot, find out who made it, look closely for signs it was edited or made by AI, search for it somewhere else, and decide: real, fake or not sure yet.",
   "need": [
     "A screen you can look at together",
-    "A few videos, photos or posts to check, real and fake",
+    "A few videos, photos or posts to check, real and fake. Fact-check sites like Snopes list fakes going around right now.",
     "A search engine, with you beside them"
   ],
   "academics": [
@@ -126,7 +126,7 @@
         "What looks strange if you zoom in?",
         "Does anything move or sound wrong?"
       ],
-      "tip": "Good fakes can pass this test. If nothing looks off, it still needs Step 4.",
+      "tip": "Newer AI pictures often get hands and faces right, so good fakes can pass this test. If nothing looks off, it still needs Step 4.",
       "levels": {
         "explore": "Spot one thing that looks strange, like a hand or a shadow.",
         "develop": "Check every clue on the Look closely card, and mark what you find.",
@@ -209,7 +209,7 @@
           },
           {
             "k": "Label:",
-            "v": "a 'Made with AI' tag, or the poster saying so"
+            "v": "an 'AI info' or 'Made with AI' tag, or the poster saying so"
           }
         ],
         "ask": "Which source would you trust most?"
@@ -278,7 +278,7 @@
             "v": "only what you'd stand behind"
           }
         ],
-        "ask": "What do you do with 'not sure yet'?"
+        "ask": "What's one thing you saw this week that belongs in 'not sure yet'?"
       }
     ]
   },
@@ -305,7 +305,7 @@
     "text": "Notice the next time they see something amazing on a screen. If their first words are 'is that real?' or 'let's check', the pause is becoming a habit.",
     "celebrate": "When they catch a fake, or choose not to share something they're unsure about, say: 'That pause just stopped a fake from spreading.'",
     "extensions": [
-      "Make a family 'fooled me' list of fakes you've each believed",
+      "Pick a family safe word, so if anyone gets a call or voice message that sounds like a family member asking for help or money, you can check it's really them",
       "Make an obviously fake photo together with a simple editing tool, and see who can spot the clues",
       "Look at the same news story on two different sites, and compare how they tell it",
       "Ask a grandparent how they checked news before the internet"

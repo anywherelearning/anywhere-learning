@@ -302,8 +302,8 @@
     "extensions": [
       "Test a sale price, like half off in the last hour",
       "Try a pay-what-you-want hour and compare it with your fixed price",
-      "Price a service, like dog walking, per job and per hour, and test both",
-      "Price a bundle and a single side by side for a whole session, and see which sells more"
+      "Test the same price with two different signs, one plain and one that tells the story, and see which sells more",
+      "Ask three buyers what they'd have paid, then compare their answers with what they actually did"
     ]
   },
   "signs": [

@@ -4,7 +4,7 @@
   "title": "Kitchen Science Lab",
   "tagline": "Test · Rule out · Solve",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid turns the kitchen into a real chemistry lab and solves a mystery: five white powders that look almost the same. They make a colour-changing juice from red cabbage, run fair tests with water and vinegar, build a results table, then identify a secret powder you hand them. No guessing allowed. Every test has to rule something out.",
+  "goal": "Your kid turns the kitchen into a real chemistry lab and solves a mystery: five white powders that look almost the same. They make a colour-changing juice from red cabbage, run fair tests with water and vinegar, build a results table, identify a secret powder you hand them, then check whether the baking powder and baking soda in your cupboard still work. No guessing allowed. Every test has to rule something out.",
   "need": [
     "Five white powders: baking soda, baking powder, cornstarch, sugar and salt",
     "Half a red cabbage, hot water and a strainer",
@@ -44,7 +44,7 @@
       },
       {
         "when": "To finish, or another day",
-        "what": "Solve the mystery powder and test their own question (Steps 4 and 5)."
+        "what": "Solve the mystery powder and test the real cupboard (Steps 4 and 5)."
       }
     ],
     "tips": [],
@@ -106,7 +106,7 @@
     {
       "title": "Make the colour-changing juice",
       "why": "Some liquids are acids, some are bases. Cabbage can tell.",
-      "kid": "Your kid chops the cabbage, you pour hot water over it, and after 15 to 30 minutes they strain out a purple juice. They add a splash to plain water first: that's the 'nothing happening' colour. Then they test lemon juice, vinegar and baking soda water, and line the cups up using the Cabbage colours card in the Lab Toolkit at the end of the guide.",
+      "kid": "Your kid tears or chops the cabbage, you pour hot water over it, and after 15 to 30 minutes they strain out a purple juice. They add a splash to plain water first: that's the 'nothing happening' colour. Then they test lemon juice, vinegar and baking soda water, and line the cups up using the Cabbage colours card in the Lab Toolkit at the end of the guide.",
       "you": "Handle the hot water. Then step back and let them name the colours.",
       "ask": [
         "What colour did the lemon juice turn it?",
@@ -115,7 +115,7 @@
       "tip": "Plain water is the 'control': what the juice looks like when nothing is changing it. Every other colour is compared to it.",
       "levels": {
         "explore": "Test 3 liquids and say which changed colour.",
-        "develop": "Test 5 liquids and sort them from acid to base.",
+        "develop": "Test 5 liquids, like dish soap water or milk, and sort them from acid to base.",
         "extend": "Add baking soda water to pink vinegar juice a few drops at a time. When does it turn purple, and why?"
       }
     },
@@ -152,18 +152,18 @@
       }
     },
     {
-      "title": "Ask your own question",
-      "why": "Real scientists test questions nobody handed them.",
-      "kid": "Your kid picks a 'what would happen if' question from the Question ideas card or their own, like does warm vinegar fizz more than cold? They change just one thing, keep everything else the same using the Fair test card, predict, run it and share what they found with the family like a real scientist.",
-      "you": "Treat their question like real research. Ask what they're changing and what stays the same.",
+      "title": "Test the real cupboard",
+      "why": "Now the tests do a real job in your kitchen.",
+      "kid": "Your kid uses what they learned on the real cupboard. They test whether your baking powder and baking soda still work (a teaspoon of baking powder in hot water should fizz hard, and baking soda should fizz hard in vinegar), label each box with the date and the result, then pick their own 'what would happen if' question from the Question ideas card and test it fairly, using the Fair test card.",
+      "you": "Hand over the real boxes from the cupboard and pour the hot water. Then treat their question like real research: ask what they're changing and what stays the same.",
       "ask": [
-        "What's the one thing you're changing?",
-        "Was your prediction right?"
+        "Is our baking powder still good enough to bake with?",
+        "What's the one thing you're changing?"
       ],
       "tip": "If two things change and the result changes, you can't know which one did it. One change at a time.",
       "levels": {
-        "explore": "Test one question and say what happened.",
-        "develop": "Predict first, test fairly and explain the result.",
+        "explore": "Test the baking soda in vinegar, say if it still fizzes and help label the box.",
+        "develop": "Test both boxes, label them with the date and the result, then test one question fairly.",
         "extend": "Test your change at 3 levels, like 1, 2 and 3 spoons. Does the result grow evenly?"
       }
     }
@@ -295,7 +295,7 @@
     "extensions": [
       "Test a pantry mix, like pancake mix, and work out which suspects are inside",
       "Use the cabbage juice to test every drink in the fridge",
-      "Write up a one-page lab report with a chart",
+      "Make invisible ink with baking soda water, and reveal it by painting on cabbage juice",
       "Add a sixth suspect, like flour, and find a test that tells it apart"
     ]
   },
@@ -304,7 +304,7 @@
     "They ask for a control before they trust a result",
     "They notice small differences other people miss"
   ],
-  "makeItReal": "If the bread doesn't rise or the cookies spread flat, ask what changed, and let them pick one thing to change on the next batch.",
+  "makeItReal": "Before the next batch of muffins, let them test the baking powder. If the bread doesn't rise or the cookies spread flat, ask what changed, and let them pick one thing to change on the next batch.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {
