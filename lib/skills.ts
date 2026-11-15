@@ -43,7 +43,7 @@ export interface ProductSkills {
 export const productSkills: Record<string, ProductSkills> = {
   "adventure-story-map": { canonical: ["Creative Writing","Storytelling","Planning","Narrative","Art"], families: ["communication-and-writing","creativity-and-making","critical-thinking-and-reasoning","nature-and-science"] },
   "ai-basics": { canonical: ["AI Literacy","Critical Thinking","Digital Citizenship","Online Safety & Privacy"], families: ["tech-and-digital","critical-thinking-and-reasoning"] },
-  "algorithm-awareness": { canonical: ["Critical Thinking","Decision-Making","Digital Literacy","Reflection","Self-Direction"], families: ["critical-thinking-and-reasoning","planning-and-self-management","tech-and-digital"] },
+  "algorithm-awareness": { canonical: ["Digital Literacy","Critical Thinking","Science","Data & Graphs"], families: ["tech-and-digital","critical-thinking-and-reasoning","nature-and-science"] },
   "backyard-campout-planner": { canonical: ["Measurement","Budgeting","Time Planning","Estimation","Organisation"], families: ["math-and-money"] },
   "bias-fairness-lab": { canonical: ["AI Literacy","Communication","Critical Thinking","Decision-Making","Empathy"], families: ["communication-and-writing","critical-thinking-and-reasoning","empathy-and-people","tech-and-digital"] },
   "board-game-studio": { canonical: ["Design Thinking","Maths","Writing","Strategy","Art"], families: ["creativity-and-making","math-and-money"] },

@@ -75,16 +75,15 @@
     },
     "algorithm-awareness": {
       "canonical": [
-        "Critical Thinking",
-        "Decision-Making",
         "Digital Literacy",
-        "Reflection",
-        "Self-Direction"
+        "Critical Thinking",
+        "Science",
+        "Data & Graphs"
       ],
       "families": [
+        "Tech & Digital",
         "Critical Thinking & Reasoning",
-        "Planning & Self-Management",
-        "Tech & Digital"
+        "Nature & Science"
       ]
     },
     "bias-fairness-lab": {

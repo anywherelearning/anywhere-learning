@@ -1,0 +1,336 @@
+{
+  "slug": "algorithm-awareness",
+  "category": "AI & Digital",
+  "title": "Algorithm Awareness: Why Am I Seeing This?",
+  "tagline": "Notice · Track · Experiment · Spot · Choose",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds out why YouTube and streaming apps show them what they show. They notice their recommendations, track what they watch for a few days, run a small experiment to see the suggestions change, spot the tricks that keep them watching, and choose what they'll watch on purpose.",
+  "need": [
+    "The apps your family already uses, like YouTube or Netflix",
+    "A notebook to track what they watch and what's suggested",
+    "Their usual screen time, nothing extra"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "a real experiment with a prediction"
+    },
+    {
+      "subject": "Data",
+      "text": "tracking and counting what's suggested"
+    },
+    {
+      "subject": "Thinking",
+      "text": "who decides what you see, and why"
+    },
+    {
+      "subject": "Digital literacy",
+      "text": "how recommendation systems work"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is lecturing about screens. Your job is to get curious with them about how the app decides, run the experiment together, and let them discover the tricks for themselves.",
+    "plan": [
+      {
+        "when": "During their usual screen time",
+        "what": "Notice and track their suggestions (Steps 1 and 2)."
+      },
+      {
+        "when": "Over a few days",
+        "what": "Run the experiment (Step 3)."
+      },
+      {
+        "when": "One sitting, together",
+        "what": "Spot the tricks and choose (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "The experiment uses up their screen time",
+        "a": "Use their usual time, not extra. A few searches and a look at the home page is enough."
+      },
+      {
+        "q": "They share an account with a sibling",
+        "a": "Great for the experiment: compare what each person's watching does to the shared suggestions."
+      },
+      {
+        "q": "They feel tricked and upset",
+        "a": "Keep it light. Knowing how the app works puts them back in charge; it's a superpower, not a scandal."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Apps like YouTube and Netflix use an algorithm: a set of rules that guesses what you'll watch next, based on what you've watched before. Its job is to keep you watching. Knowing that is how you stay the one who decides.",
+    "before": "'The app just shows me what's good.'",
+    "model": [
+      {
+        "part": "Watched",
+        "line": "Minecraft videos on YouTube."
+      },
+      {
+        "part": "Shown",
+        "line": "More and more Minecraft videos."
+      },
+      {
+        "part": "Happens",
+        "line": "Just one more video, all the time."
+      },
+      {
+        "part": "Their tool",
+        "line": "A set time limit, and picking instead of autoplay."
+      }
+    ],
+    "modelNote": "The app learns what you like and serves more of it, so stopping takes a plan. A time limit and picking your own videos keep the decision theirs."
+  },
+  "steps": [
+    {
+      "title": "Notice what's suggested",
+      "why": "Most kids think the home page is the same for everyone. It isn't.",
+      "kid": "Your kid opens the app they use most and looks at the home page and the suggestions, using the What am I seeing? card in the Algorithm Toolkit at the end of the guide, and says why they think each one is there.",
+      "you": "Open the same app on your account, side by side. Compare: why is yours different?",
+      "ask": [
+        "Why do you think this video is here?",
+        "Is your home page the same as mine?"
+      ],
+      "tip": "Two accounts side by side is the fastest way to see that the app chooses differently for each person.",
+      "levels": {
+        "explore": "Point to three suggestions, and say if you've watched something like them before.",
+        "develop": "List the top ten suggestions, and guess why each one is there.",
+        "extend": "Compare your home page with a parent's, and list what's different and why."
+      }
+    },
+    {
+      "title": "Track it for a few days",
+      "why": "Writing down what you watch and what's suggested shows the pattern the app is following.",
+      "kid": "For three days, your kid notes what they watched and the first three things suggested after, using the Track it card.",
+      "you": "Keep it quick: one line a day, during their usual screen time.",
+      "ask": [
+        "What did you watch today?",
+        "What did the app show you next?"
+      ],
+      "tip": "Look for the same topic coming back, again and again. That's the algorithm at work.",
+      "levels": {
+        "explore": "Each day, say what you watched and one thing it showed you after.",
+        "develop": "Track three days, and circle the suggestions that match what you watched.",
+        "extend": "Track a week, and count what share of suggestions matched your last video."
+      }
+    },
+    {
+      "title": "Run an experiment",
+      "why": "Changing what you watch, on purpose, proves the app is following you.",
+      "kid": "Your kid picks a new topic, like a craft, an animal or a sport, watches or searches a few videos about it, then checks the home page again, using the Experiment card.",
+      "you": "Help them predict first: 'How many will be about the new topic tomorrow?' Then check together.",
+      "ask": [
+        "What do you think will change?",
+        "How fast did the app change its suggestions?"
+      ],
+      "tip": "Predict, then check. That's what makes it a real experiment.",
+      "levels": {
+        "explore": "Search one new thing, and see if it shows up on the home page.",
+        "develop": "Watch a new topic, predict the change, and count what changed the next day.",
+        "extend": "Run the experiment twice with different topics, and compare how fast each changed."
+      }
+    },
+    {
+      "title": "Spot the tricks",
+      "why": "Apps are designed to keep you watching. Seeing the design makes it easier to stop.",
+      "kid": "Your kid looks for the tricks on the Keep-you-watching tricks card, like autoplay, a countdown to the next video or endless scrolling, and marks the ones their app uses.",
+      "you": "Share the one that gets you, too. 'Just one more' happens to grown-ups as well.",
+      "ask": [
+        "Which trick works best on you?",
+        "When does 'one more video' happen most?"
+      ],
+      "tip": "Most tricks have an off switch, like turning autoplay off. Find them together.",
+      "levels": {
+        "explore": "Find one trick, like the next video starting by itself.",
+        "develop": "Find three tricks in your app, and how to turn them off.",
+        "extend": "Compare two apps, and decide which one tries harder to keep you watching."
+      }
+    },
+    {
+      "title": "Choose on purpose",
+      "why": "Knowing how it works means they can decide what to watch, not the app.",
+      "kid": "Your kid picks two or three moves from the Take back control card, like choosing videos before opening the app or keeping autoplay off, and tries them for a week.",
+      "you": "Respect the family limits you already have, and let them choose how to use their time inside them.",
+      "ask": [
+        "What will you watch, before you open the app?",
+        "What helps you stop when your time is up?"
+      ],
+      "tip": "Deciding what to watch before opening the app is the strongest move there is.",
+      "levels": {
+        "explore": "Choose your video before you open the app, with a parent.",
+        "develop": "Try two control moves for a week, and say which one helped.",
+        "extend": "Design a 'watch on purpose' plan for the family, and test it for a week."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Algorithm Toolkit",
+    "intro": "What you're seeing, how to track it, how to test it and how to take back control.",
+    "items": [
+      {
+        "name": "What am I seeing?",
+        "lines": [
+          {
+            "k": "Home page:",
+            "v": "picked for you, not for everyone"
+          },
+          {
+            "k": "Up next:",
+            "v": "what the app hopes you'll watch"
+          },
+          {
+            "k": "Because you watched:",
+            "v": "the app showing its reason"
+          },
+          {
+            "k": "Trending:",
+            "v": "what's popular, not what's best"
+          }
+        ],
+        "ask": "Which part of the page do you look at first?"
+      },
+      {
+        "name": "Track it",
+        "lines": [
+          {
+            "k": "Day:",
+            "v": "which day"
+          },
+          {
+            "k": "Watched:",
+            "v": "what you chose"
+          },
+          {
+            "k": "Suggested:",
+            "v": "the first three shown after"
+          },
+          {
+            "k": "Match:",
+            "v": "how many were like your video?"
+          }
+        ],
+        "ask": "What pattern did you notice?"
+      },
+      {
+        "name": "Experiment",
+        "lines": [
+          {
+            "k": "New topic:",
+            "v": "something you never watch"
+          },
+          {
+            "k": "Predict:",
+            "v": "how many suggestions will change?"
+          },
+          {
+            "k": "Watch:",
+            "v": "two or three videos on it"
+          },
+          {
+            "k": "Check:",
+            "v": "look at the home page the next day"
+          }
+        ],
+        "ask": "Was your prediction close?"
+      },
+      {
+        "name": "Keep-you-watching tricks",
+        "lines": [
+          {
+            "k": "Autoplay:",
+            "v": "the next video starts by itself"
+          },
+          {
+            "k": "Countdown:",
+            "v": "'next video in 5, 4, 3...'"
+          },
+          {
+            "k": "Endless scroll:",
+            "v": "no bottom to the page"
+          },
+          {
+            "k": "Cliffhangers:",
+            "v": "a series that ends on a question"
+          }
+        ],
+        "ask": "Which trick is hardest to resist?"
+      },
+      {
+        "name": "Take back control",
+        "lines": [
+          {
+            "k": "Choose first:",
+            "v": "decide what to watch before you open it"
+          },
+          {
+            "k": "Autoplay off:",
+            "v": "the next video waits for you"
+          },
+          {
+            "k": "Time limit:",
+            "v": "a timer or a family rule"
+          },
+          {
+            "k": "Stop point:",
+            "v": "decide where you'll stop, before you start"
+          }
+        ],
+        "ask": "Which move will you try first?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Algorithm awareness",
+      "text": "how apps choose what you see"
+    },
+    {
+      "name": "Experimenting",
+      "text": "predict, change, check"
+    },
+    {
+      "name": "Spotting design tricks",
+      "text": "autoplay, countdowns, endless scroll"
+    },
+    {
+      "name": "Self-control",
+      "text": "watching on purpose"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know why the app shows them what it shows.",
+    "text": "Next time a video ends, see if they say 'that's the algorithm' or turn off the next one themselves. That's them deciding, not the app.",
+    "celebrate": "When they stop on their own at their time limit, say: 'You beat the countdown. You decided when to stop.'",
+    "extensions": [
+      "Run the experiment on a parent's account, with permission, and compare",
+      "Make a family 'watch on purpose' list of shows and videos worth your time",
+      "Look up how a streaming app decides what to suggest, in its own help pages",
+      "Notice suggestions in other places, like online shops and music apps"
+    ]
+  },
+  "signs": [
+    "They explain why a video was suggested to them",
+    "They pick what to watch before opening the app",
+    "They stop at their time limit more easily"
+  ],
+  "makeItReal": "This week, before anyone opens YouTube or a streaming app, ask them to say what they'll watch and where they'll stop. Then let the timer do the rest.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "My son mostly watches Minecraft videos on YouTube, and both kids have noticed their suggestions following what they watch. 'Just one more video' happens all the time. He picks his videos himself instead of letting autoplay choose, and both have a time limit for YouTube.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/algorithm-awareness.jpg",
+    "alt": "A boy with headphones at a desk, watching a laptop screen",
+    "caption": "His 30 minutes, his choice of videos."
+  }
+}

@@ -1290,24 +1290,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'algorithm-awareness': {
     opening:
-      'Teach kids how algorithms shape what they see online, and what they don\'t. Activities explore recommendation systems, filter bubbles, engagement tricks, and how to take back control of their feed. Critical thinking for the attention economy.',
+      'Your kid finds out why YouTube and streaming apps show them what they show. They notice their recommendations, track what they watch for a few days, run a small experiment to see the suggestions change, spot the tricks that keep them watching and choose what to watch on purpose.',
     whatsIncluded: [
-      'How recommendation algorithms work',
-      'Filter bubble exploration and awareness',
-      'Engagement trick identification',
-      'Feed audit and control strategies',
-      'Reflection on personal online habits',
+      'Five steps, from noticing suggestions to watching on purpose',
+      'What am I seeing?, Track it, Experiment, Keep-you-watching tricks and Take back control cards',
+      'A real experiment: change what you watch, predict, then check the home page',
+      'How to switch off autoplay and other tricks, inside the screen time you already allow',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['STEM', 'Algorithm Literacy', 'Critical Thinking', 'Digital Citizenship', 'Self-Awareness'],
+    skillTags: ['Digital Literacy', 'Critical Thinking', 'Science', 'Data Collection', 'Self-Control'],
     insideTheLearning: {
       lead:
-        'Your child audits their own feed and works out why it shows them exactly what it shows them. They map how the recommendations are built, find the specific tricks used to hold their attention, then track what all of it does to their mood and their time. Hard to unsee once they have seen it.',
+        'Apps like YouTube and Netflix use an algorithm that guesses what you will watch next, based on what you watched before. Its job is to keep you watching. Your kid sees it happen with a real experiment, spots the design tricks, and learns to decide what to watch before the app does.',
       skills: [
-        { skill: 'Digital Literacy', where: 'Working out how a recommendation feed decides what to put in front of them' },
-        { skill: 'Critical Thinking', where: 'Spotting the engagement tricks a feed uses to keep them scrolling' },
-        { skill: 'Reflection', where: 'Tracking what their own feed does to their mood, their time and their habits' },
-        { skill: 'Self-Direction', where: 'Auditing the feed and taking back control of what it serves them' },
-        { skill: 'Decision-Making', where: 'Choosing deliberately what to follow rather than letting the algorithm choose' },
+        { skill: 'Digital Literacy', where: 'Understanding how recommendation systems pick what you see' },
+        { skill: 'Critical Thinking', where: 'Asking who decides what is on the home page, and why' },
+        { skill: 'Science', where: 'Predicting, changing one thing and checking the result' },
+        { skill: 'Data Collection', where: 'Tracking what they watch and what gets suggested after' },
+        { skill: 'Self-Control', where: 'Choosing before opening the app and stopping at the limit' },
       ],
     },
     format: 'Project Guide',
