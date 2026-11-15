@@ -1,0 +1,345 @@
+{
+  "slug": "privacy-footprint",
+  "category": "AI & Digital",
+  "title": "Privacy & Digital Footprint Map",
+  "tagline": "List · Map · Sort · Check · Plan",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds out what information about them is online, and keeps it safe. They list their accounts, map the trail they leave, sort what's private from what's okay to share, check their settings and usernames with you, and make a family privacy plan for the next time a site or game asks for something.",
+  "need": [
+    "A list of the accounts your family uses",
+    "Paper for the footprint map",
+    "Your logins, so you can check settings together"
+  ],
+  "academics": [
+    {
+      "subject": "Digital literacy",
+      "text": "accounts, settings and data trails"
+    },
+    {
+      "subject": "Thinking",
+      "text": "sorting private from public"
+    },
+    {
+      "subject": "Mapping",
+      "text": "drawing connections between accounts"
+    },
+    {
+      "subject": "Life skills",
+      "text": "deciding what to share, and when to say no"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is scaring them about strangers online. Your job is to map their real accounts with them, sort what's private together, and practise exactly what to do when something asks for their information.",
+    "plan": [
+      {
+        "when": "One sitting, on paper",
+        "what": "List the accounts and map the footprint (Steps 1 and 2)."
+      },
+      {
+        "when": "One sitting, at the screen",
+        "what": "Sort, check settings and usernames (Steps 3 and 4)."
+      },
+      {
+        "when": "The same day",
+        "what": "Write the family privacy plan (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They don't think it matters",
+        "a": "Ask what a stranger could figure out from their username and one photo. Working it out together usually makes the point."
+      },
+      {
+        "q": "A game or site keeps asking for information",
+        "a": "That's exactly what the plan is for. Practise the answer: stop, don't type it, ask a parent."
+      },
+      {
+        "q": "They want an account you're not sure about",
+        "a": "Map it first: what it asks for, who can see what, and who they could talk to. Decide together."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Everything you do online leaves a trail: accounts, usernames, photos, what you search and buy. Some of it you choose to share, and some you don't notice. Knowing what's in your trail, and what stays private, is how you stay safe and in charge.",
+    "before": "'It's only my birthday. What's the harm?'",
+    "model": [
+      {
+        "part": "Asked",
+        "line": "A site or game asks for personal information."
+      },
+      {
+        "part": "Stop",
+        "line": "Don't type it. Talk to a parent first."
+      },
+      {
+        "part": "Why",
+        "line": "Together, work out why it shouldn't be shared."
+      },
+      {
+        "part": "Rules",
+        "line": "No full name, no personal info, a username that isn't your name."
+      }
+    ],
+    "modelNote": "The best moment to talk about privacy is right when something asks for it. One real 'should I type this?' teaches more than any list of rules."
+  },
+  "steps": [
+    {
+      "title": "List your accounts",
+      "why": "You can't protect a trail you can't see. The list is the start.",
+      "kid": "Your kid lists every account they use, with you, using the My accounts card in the Privacy Toolkit at the end of the guide: email, games, reading apps, school or learning sites.",
+      "you": "Help them remember the ones you set up for them. Note who made each account and with what information.",
+      "ask": [
+        "Which apps or sites do you log into?",
+        "What did each one ask for when it was made?"
+      ],
+      "tip": "Include the quiet ones, like an e-reader account or a game login. They count too.",
+      "levels": {
+        "explore": "Name the apps you use, and draw a picture for each.",
+        "develop": "List every account, and what information each one has.",
+        "extend": "List them, and find out which ones are linked to each other."
+      }
+    },
+    {
+      "title": "Map your footprint",
+      "why": "A map shows how much is out there, and how it connects.",
+      "kid": "Your kid draws themselves in the middle of a page and adds every account, photo, username and app around them, using the Footprint map card, with lines for what connects.",
+      "you": "Add the trail grown-ups leave about them too, like photos you've shared. Be honest about yours.",
+      "ask": [
+        "Which part of your map surprised you?",
+        "Which accounts know your real name?"
+      ],
+      "tip": "Use one colour for things they shared, another for things shared about them by others.",
+      "levels": {
+        "explore": "Draw yourself and the apps you use around you.",
+        "develop": "Map every account, with lines for what's linked.",
+        "extend": "Map it, then circle what a stranger could find by searching."
+      }
+    },
+    {
+      "title": "Sort private from okay",
+      "why": "Some information is fine to share. Some never is. Knowing the difference is the core skill.",
+      "kid": "Your kid sorts examples into private, okay with a parent, and fine to share, using the Private or okay? card.",
+      "you": "Share your own family rules here, and the reasons behind them.",
+      "ask": [
+        "Why is your full name private, but your favourite colour isn't?",
+        "What could someone do with your birthday and city?"
+      ],
+      "tip": "Combinations matter. A first name alone is fine; a first name, a city and a school together isn't.",
+      "levels": {
+        "explore": "Sort five examples into private and okay, with a parent.",
+        "develop": "Sort the whole card, and explain three choices.",
+        "extend": "Find a combination of okay things that together become private."
+      }
+    },
+    {
+      "title": "Check settings and usernames",
+      "why": "Good settings and a smart username protect them even when they forget.",
+      "kid": "With you, your kid checks one account at a time, using the Check it card: the username, who can see their profile, who can message them and what's public.",
+      "you": "Do it on your login, side by side. Change anything that's more open than your family rules.",
+      "ask": [
+        "Does your username give away your real name?",
+        "Who can send you a message here?"
+      ],
+      "tip": "A username shouldn't include your name, age, birthday or town.",
+      "levels": {
+        "explore": "Help a parent check one setting, and say what it does.",
+        "develop": "Check every account on your list, with a parent.",
+        "extend": "Invent a safe username, and explain why it doesn't give anything away."
+      }
+    },
+    {
+      "title": "Make a privacy plan",
+      "why": "A plan means they know exactly what to do the next time something asks.",
+      "kid": "Your family writes a short privacy plan, using the What to do card, and fills in Our privacy plan at the end of the guide to keep by the computer.",
+      "you": "Practise a pretend moment: a game asks for their birthday. Let them say what they'd do.",
+      "ask": [
+        "What will you do if a site asks for your address?",
+        "Who do you tell if a stranger messages you?"
+      ],
+      "tip": "Stop, don't type it, ask a parent. Three steps they can remember anywhere.",
+      "levels": {
+        "explore": "Say the three steps: stop, don't type it, ask a parent.",
+        "develop": "Write the family plan together, and put it by the computer.",
+        "extend": "Write the plan, and add what to do if something goes wrong."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Privacy Toolkit",
+    "intro": "Your accounts, your footprint, what's private and what to do when something asks.",
+    "items": [
+      {
+        "name": "My accounts",
+        "lines": [
+          {
+            "k": "Email:",
+            "v": "who can write to you"
+          },
+          {
+            "k": "Games:",
+            "v": "usernames, chats, friends lists"
+          },
+          {
+            "k": "Reading and learning:",
+            "v": "e-readers, apps, websites"
+          },
+          {
+            "k": "Made by:",
+            "v": "who set it up, with what information"
+          }
+        ],
+        "ask": "Which account did you forget at first?"
+      },
+      {
+        "name": "Footprint map",
+        "lines": [
+          {
+            "k": "You:",
+            "v": "in the middle of the page"
+          },
+          {
+            "k": "Accounts:",
+            "v": "around you, with what they know"
+          },
+          {
+            "k": "Photos:",
+            "v": "shared by you, or about you"
+          },
+          {
+            "k": "Lines:",
+            "v": "what's linked to what"
+          }
+        ],
+        "ask": "Which line on your map surprised you?"
+      },
+      {
+        "name": "Private or okay?",
+        "lines": [
+          {
+            "k": "Private:",
+            "v": "full name, address, school, birthday, passwords, phone"
+          },
+          {
+            "k": "With a parent:",
+            "v": "photos, your city, joining a new site"
+          },
+          {
+            "k": "Fine:",
+            "v": "favourite colour, a made-up username, your opinions"
+          },
+          {
+            "k": "Careful:",
+            "v": "okay things that add up to private"
+          }
+        ],
+        "ask": "Which one is hardest to decide?"
+      },
+      {
+        "name": "Check it",
+        "lines": [
+          {
+            "k": "Username:",
+            "v": "no name, age, birthday or town"
+          },
+          {
+            "k": "Profile:",
+            "v": "private, or friends only"
+          },
+          {
+            "k": "Messages:",
+            "v": "no strangers"
+          },
+          {
+            "k": "Public:",
+            "v": "what anyone can see"
+          }
+        ],
+        "ask": "Which setting will you check first?"
+      },
+      {
+        "name": "What to do",
+        "lines": [
+          {
+            "k": "Asked for info:",
+            "v": "stop, don't type it, ask a parent"
+          },
+          {
+            "k": "Stranger messages:",
+            "v": "don't answer, tell a parent"
+          },
+          {
+            "k": "Something feels off:",
+            "v": "close it and talk about it"
+          },
+          {
+            "k": "Mistake made:",
+            "v": "tell right away, it can be fixed"
+          }
+        ],
+        "ask": "Which situation would be hardest?"
+      }
+    ],
+    "after": {
+      "label": "Our privacy plan",
+      "lines": [
+        "Never share:",
+        "Ask a parent first about:",
+        "If a stranger messages us, we:",
+        "If we make a mistake, we:"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Privacy awareness",
+      "text": "what's in their digital trail"
+    },
+    {
+      "name": "Sorting information",
+      "text": "private, with a parent, or fine"
+    },
+    {
+      "name": "Safe settings",
+      "text": "usernames, profiles and messages"
+    },
+    {
+      "name": "Knowing what to do",
+      "text": "stop, don't type it, ask"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know what's in their trail, and how to protect it.",
+    "text": "The next time a game or site asks for something, see if they stop and come find you before typing. That pause is the whole skill.",
+    "celebrate": "When they stop and ask before sharing, say: 'That's exactly right. You protected your information.'",
+    "extensions": [
+      "Search your family's names together, and see what comes up",
+      "Read the privacy settings of a new app together before using it",
+      "Make up three safe usernames for a future account",
+      "Talk about the photos you share of them, and agree on rules together"
+    ]
+  },
+  "signs": [
+    "They ask before typing personal information",
+    "They pick usernames that don't give anything away",
+    "They tell you when something online asks for information"
+  ],
+  "makeItReal": "This week, sit down and check one of their accounts together, the username and who can see what, then put the family privacy plan by the computer.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "When something online asked my kids for personal information, we talked about why not to share it. Our rules: no full names, no personal information, and a username that isn't your name.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/privacy-footprint.jpg",
+    "alt": "A brother and sister at laptops at a table by a big window",
+    "caption": "Two laptops, two trails."
+  }
+}

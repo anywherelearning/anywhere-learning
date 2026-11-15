@@ -169,14 +169,14 @@
     },
     "privacy-footprint": {
       "canonical": [
-        "Critical Thinking",
-        "Decision-Making",
+        "Online Safety & Privacy",
         "Digital Citizenship",
-        "Online Safety & Privacy"
+        "Critical Thinking",
+        "Decision-Making"
       ],
       "families": [
-        "Critical Thinking & Reasoning",
-        "Tech & Digital"
+        "Tech & Digital",
+        "Critical Thinking & Reasoning"
       ]
     },
     "prompt-like-a-coach": {

@@ -96,7 +96,7 @@ export const productSkills: Record<string, ProductSkills> = {
   "party-planner-math": { canonical: ["Multiplication","Budgeting","Estimation","Planning","Division"], families: ["entrepreneurship-and-money","math-and-money"] },
   "people-stories-interview": { canonical: ["Communication","Confidence","Cultural Awareness","Empathy","Listening"], families: ["communication-and-writing","empathy-and-people","planning-and-self-management","world-and-geography"] },
   "pricing-experiment": { canonical: ["Financial Literacy","Math","Experimentation","Critical Thinking","Decision-Making"], families: ["communication-and-writing","critical-thinking-and-reasoning","entrepreneurship-and-money","math-and-money"] },
-  "privacy-footprint": { canonical: ["Critical Thinking","Decision-Making","Digital Citizenship","Online Safety & Privacy"], families: ["critical-thinking-and-reasoning","tech-and-digital"] },
+  "privacy-footprint": { canonical: ["Online Safety & Privacy","Digital Citizenship","Critical Thinking","Decision-Making"], families: ["tech-and-digital","critical-thinking-and-reasoning"] },
   "problem-solver": { canonical: ["Problem-Solving","Critical Thinking","Creativity","Testing","Independence"], families: ["communication-and-writing","critical-thinking-and-reasoning","planning-and-self-management"] },
   "product-design-lab": { canonical: ["Communication","Creative Thinking","Critical Thinking","Design Thinking","Executive Functioning"], families: ["communication-and-writing","creativity-and-making","critical-thinking-and-reasoning","planning-and-self-management"] },
   "prompt-like-a-coach": { canonical: ["AI Literacy","Writing","Communication","Creative Thinking"], families: ["tech-and-digital","communication-and-writing","creativity-and-making"] },

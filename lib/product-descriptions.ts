@@ -1463,23 +1463,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'privacy-footprint': {
     opening:
-      'Map your digital footprint and understand online privacy. Kids discover what personal data they share, how data trails work, smart sharing practices, and how to protect their personal information. Practical privacy skills every kid needs, not fear-based, just empowering.',
+      'Your kid finds out what information about them is online and keeps it safe. They list their accounts, map the trail they leave, sort what is private from what is okay to share, check their settings and usernames with you and make a family privacy plan for the next time something asks.',
     whatsIncluded: [
-      'Digital footprint mapping activities',
-      'Personal data sharing audit',
-      'How data trails work: tracking and cookies',
-      'Smart sharing practices and privacy settings',
-      'Personal privacy plan creation',
+      'Five steps, from listing accounts to a family privacy plan',
+      'My accounts, Footprint map, Private or okay?, Check it and What to do cards',
+      'A footprint map they draw themselves, with every account and photo around them',
+      'Our privacy plan to keep by the computer: stop, don\'t type it, ask a parent',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Privacy', 'Digital Citizenship', 'Critical Thinking', 'Self-Protection'],
+    skillTags: ['Online Safety & Privacy', 'Digital Citizenship', 'Critical Thinking', 'Decision-Making', 'Digital Literacy'],
     insideTheLearning: {
       lead:
-        'Your child maps their own digital footprint and sees the trail they have already left. What is personal, what is public, and how tracking actually works. Then they go into the settings and change them, and practise saying no when an app asks for more than it needs.',
+        'Everything you do online leaves a trail: accounts, usernames, photos, what you search. Your kid maps their own trail, sorts what stays private, checks their settings with you and practises exactly what to do the next time a game or site asks for their information.',
       skills: [
-        { skill: 'Online Safety & Privacy', where: 'Sorting personal information from public, and seeing how data trails get built' },
-        { skill: 'Critical Thinking', where: 'Thinking clearly about what sharing costs and who benefits from it' },
-        { skill: 'Decision-Making', where: 'Setting privacy settings and sharing habits deliberately' },
-        { skill: 'Digital Citizenship', where: 'Healthy boundaries online, and the confidence to advocate for their own' },
+        { skill: 'Online Safety & Privacy', where: 'Knowing what never gets shared, and what to do when asked' },
+        { skill: 'Digital Citizenship', where: 'Thinking about photos and information shared about others too' },
+        { skill: 'Critical Thinking', where: 'Spotting okay details that add up to something private' },
+        { skill: 'Decision-Making', where: 'Sorting private, ask-a-parent and fine to share' },
+        { skill: 'Digital Literacy', where: 'Checking usernames, profiles and message settings' },
       ],
     },
     format: 'Project Guide',
