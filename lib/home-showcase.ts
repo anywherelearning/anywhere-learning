@@ -116,7 +116,7 @@ export const SHOWCASE_ACTIVITIES: ShowcaseActivity[] = [
     category: 'AI & Digital',
     color: '#7b88a8',
     colorText: '#7b88a8',
-    time: '1 hr',
+    time: 'Multi-day',
     photo: '/products/algorithm-awareness.jpg',
     blurb: 'Why the feed shows what it shows.',
   },

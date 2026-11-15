@@ -75,11 +75,11 @@
       },
       {
         "part": "Built",
-        "line": "With Claude, in Visual Studio Code."
+        "line": "With Claude, on his computer."
       },
       {
         "part": "Next helper",
-        "line": "An outreach agent to send emails for you."
+        "line": "An outreach agent that drafts emails, and he checks before they go."
       }
     ],
     "modelNote": "The rule is what turned a general AI into his own helper: it stuck to facts, data and numbers, and left the how-tos out."
@@ -121,7 +121,7 @@
       "title": "Set it up together",
       "why": "Most AI tools let you save instructions, so the helper remembers its job every time.",
       "kid": "With you, your kid pastes the job and the rules into the AI tool's saved instructions or a project, using the Set it up card, and gives the helper a name.",
-      "you": "Use your account, and keep personal details, passwords and real contacts out of the instructions.",
+      "you": "Use your account. Read the instructions out loud before saving: saved instructions stay in the tool, so anything private comes out now.",
       "ask": [
         "What should we call it?",
         "Is everything it needs in the instructions?"
@@ -130,7 +130,7 @@
       "levels": {
         "explore": "Watch a parent set it up, and choose the helper's name.",
         "develop": "Set up the helper with its job and rules, with a parent.",
-        "extend": "Build it as a small project with code, with a grown-up checking safety."
+        "extend": "Build it as a small project with code, with a grown-up. The API key stays on the grown-up's account and never goes into shared code."
       }
     },
     {
@@ -142,7 +142,7 @@
         "Did it follow its rules?",
         "Which question tricked it?"
       ],
-      "tip": "Try to make it break a rule on purpose. That's how real builders test.",
+      "tip": "Try to make it break a rule on purpose. Finding the weak spot now saves a surprise later.",
       "levels": {
         "explore": "Ask the helper three questions, and say if each answer was good.",
         "develop": "Test five tasks, find where it broke a rule, and fix that rule.",
@@ -150,15 +150,15 @@
       }
     },
     {
-      "title": "Decide if it's worth it",
+      "title": "Keep it, change it or drop it",
       "why": "Building something is only half the lesson. Deciding whether it's useful is the other half.",
       "kid": "After a week, your kid looks at how often they used the helper and decides, using the Keep, change or drop card: keep it, change its job, or stop using it.",
-      "you": "Respect 'drop it'. Knowing what's not worth building is a real skill.",
+      "you": "'Drop it' is a good answer. Knowing what's not worth building is a real skill.",
       "ask": [
         "How many times did you use it this week?",
         "What would make it worth using?"
       ],
-      "tip": "Most helpers people build never get used. Picking a job you'll really use next time is the lesson.",
+      "tip": "Lots of helpers get built and forgotten. Picking a job you'll really use is the lesson.",
       "levels": {
         "explore": "Say if you used the helper, and why or why not.",
         "develop": "Count how often you used it, and decide keep, change or drop.",
@@ -278,7 +278,7 @@
             "v": "what job would you really use?"
           }
         ],
-        "ask": "What would make a helper worth keeping?"
+        "ask": "What's one job you'd never hand to a helper?"
       }
     ]
   },
@@ -303,7 +303,7 @@
   "conclusion": {
     "headline": "They know how AI helpers work, from the inside.",
     "text": "The next time they use an AI tool, see if they wonder what instructions it was given, or who checks what it sends. That's how a builder thinks.",
-    "celebrate": "When they decide honestly about their helper, keep or drop, say: 'You built it and you judged it. That's what real builders do.'",
+    "celebrate": "When they decide honestly about their helper, keep or drop, say: 'You built it, then judged it like it was someone else's.'",
     "extensions": [
       "Build a helper for someone else in the family, from their own job",
       "Write the rules for a helper you'd never want to exist, and why",
@@ -316,7 +316,7 @@
     "They insist a person checks what a helper sends",
     "They judge tools by whether they're really useful"
   ],
-  "makeItReal": "Pick one job your family repeats every week, like planning meals or quizzing for a test, and build a small helper for it together this weekend.",
+  "makeItReal": "Pick one job your family repeats every week, like planning meals or packing for a trip, and build a small helper for it together this weekend.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {
@@ -325,7 +325,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "My son has already built agents with Claude. One would look things up on the internet to answer his questions, and its rule was that it could only give facts, data and numbers, not how-tos. Another was an outreach agent that would send emails for you.",
+    "text": "My son has already built agents with Claude. One would look things up on the internet to answer his questions, and its rule was that it could only give facts, data and numbers, not how-tos. Another drafted outreach emails for him to check and send.",
     "quotes": []
   },
   "photo": {

@@ -65,13 +65,13 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
 
   // AI & Digital Literacy
   'ai-basics': 'Half-Day',
-  'algorithm-awareness': 'Half-Day',
+  'algorithm-awareness': 'Project',
   'bias-fairness-lab': 'Half-Day',
-  'build-ai-helper': 'Half-Day',
+  'build-ai-helper': 'Project',
   'create-with-ai': 'Half-Day',
   'deepfake-spotter': 'Half-Day',
   'hallucination-detective': 'Half-Day',
-  'healthy-tech-boundaries': 'Half-Day',
+  'healthy-tech-boundaries': 'Project',
   'privacy-footprint': 'Half-Day',
   'prompt-like-a-coach': 'Half-Day',
   'media-info-check': 'Quick',

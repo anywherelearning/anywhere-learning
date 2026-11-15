@@ -56,8 +56,8 @@
         "a": "Talk about it. It's the data the AI learned from, not a truth about people. Then try the fix step together."
       },
       {
-        "q": "They want to test with photos of themselves or friends",
-        "a": "Keep real faces and names out. Test with descriptions and job titles instead."
+        "q": "The tool adds variety on its own",
+        "a": "Some tools now mix up who they show on purpose. That's a result too: talk about why the company might do that, then try a description it hasn't fixed yet."
       }
     ]
   },
@@ -66,16 +66,16 @@
     "before": "'It's a computer, so it's fair.'",
     "model": [
       {
-        "part": "Asked for",
-        "line": "Characters for their book, described in detail."
+        "part": "Asked",
+        "line": "The same question in French and in English."
       },
       {
         "part": "Got",
-        "line": "Sometimes not the way they described them."
+        "line": "A weaker answer in French."
       },
       {
-        "part": "Noticed",
-        "line": "In French, the answers are worse than in English."
+        "part": "Also",
+        "line": "Book characters drawn their way, not as described."
       },
       {
         "part": "Learned",
@@ -86,7 +86,7 @@
   },
   "steps": [
     {
-      "title": "Guess what AI will do",
+      "title": "Predict the picture",
       "why": "A guess written down first makes it a real test, and shows what they already expect.",
       "kid": "Your kid picks a few descriptions from the Test ideas card in the Fairness Toolkit at the end of the guide, like 'a scientist' or 'a nurse', and guesses what the AI will show or say.",
       "you": "Make your own guesses too, and write both down. Don't explain bias yet; let the test do it.",
@@ -105,7 +105,7 @@
       "title": "Test it",
       "why": "One try can be luck. A few tries show what the AI does by habit.",
       "kid": "Your kid asks the AI for each description, the same way each time, using the Run a fair test card, and saves the results.",
-      "you": "Type for younger kids. Keep the words exactly the same between tries.",
+      "you": "Keep the words exactly the same between tries.",
       "ask": [
         "Did it match your guess?",
         "What did it do without being asked?"
@@ -114,7 +114,7 @@
       "levels": {
         "explore": "Ask for one description, with a parent, and compare with your drawing.",
         "develop": "Test four descriptions, three times each.",
-        "extend": "Test the same descriptions in two different AI tools, and compare."
+        "extend": "Ask the AI why it picked what it did, and decide if its explanation holds up."
       }
     },
     {
@@ -190,7 +190,7 @@
             "v": "'a normal house', 'a beautiful person'"
           }
         ],
-        "ask": "Which test do you think will show the strongest habit?"
+        "ask": "Which description do you think has the most surprises?"
       },
       {
         "name": "Run a fair test",
@@ -302,11 +302,11 @@
   ],
   "conclusion": {
     "headline": "They know AI has habits, and how to work around them.",
-    "text": "The next time AI makes a picture or an answer, see if they ask 'why did it pick that?' or add detail to get what they meant. That's fair thinking, in practice.",
+    "text": "Over the next few weeks, look at what they add to a prompt before they hit enter. A kid who types 'show different kinds of scientists' without being told has learned to check the default.",
     "celebrate": "When they spot a habit and fix their prompt, say: 'You noticed what the AI assumed, and you changed it.'",
     "extensions": [
       "Look for the same habits in ads, picture books or video thumbnails",
-      "Test an AI on a place you've lived or visited, and check what it gets wrong",
+      "Test a voice assistant: does it understand every family member's voice and accent equally well?",
       "Compare an AI's picture of a family with real families you know",
       "Find out how one AI company says it tests its tools for fairness"
     ]

@@ -53,11 +53,11 @@
       },
       {
         "q": "They feel it's cheating",
-        "a": "It isn't, if they're honest about it and the decisions are theirs. Using a tool well is a skill too."
+        "a": "It isn't, if they're honest about it and the decisions are theirs. Your family rules still decide where AI isn't allowed, like anything meant to be in their own words."
       },
       {
         "q": "They want to copy someone else's work or style",
-        "a": "Use AI to make something new, not to copy an artist or a real person. Keep real people's faces and private details out of it."
+        "a": "Use AI to make something new, not a copy of a real artist's work. Their style took them years; your idea is what makes it yours."
       }
     ]
   },
@@ -121,7 +121,7 @@
       "title": "Make it with AI",
       "why": "AI is great at first drafts, code and options. Your kid gives it the brief and their own ideas.",
       "kid": "Your kid gives AI the brief and asks for a first version, using the Ask AI for card: a mockup, a draft, options, or the parts they decided AI could do.",
-      "you": "Stay close, and keep personal details, like full names and addresses, out of the prompt.",
+      "you": "Stay close. Use a made-up name for the client in the prompt, and add the real one yourself at the end.",
       "ask": [
         "What did AI do well?",
         "What's missing that only you know?"
@@ -244,8 +244,8 @@
             "v": "does it match the brief?"
           },
           {
-            "k": "Ask:",
-            "v": "one change at a time"
+            "k": "Brief:",
+            "v": "point to the line in the brief it missed"
           },
           {
             "k": "Take over:",
@@ -274,8 +274,8 @@
             "v": "no copying real artists or people"
           },
           {
-            "k": "Private:",
-            "v": "no real names or photos in prompts"
+            "k": "Where:",
+            "v": "in the message, the caption or an 'about' line"
           }
         ],
         "ask": "Why does saying AI helped build trust?"
@@ -302,12 +302,12 @@
   ],
   "conclusion": {
     "headline": "They make things with AI, and they stay in charge.",
-    "text": "Watch how they talk about their next project. If they say 'AI helped with this part, I did that part', they've learned to use it honestly and keep the work theirs.",
-    "celebrate": "When they finish a project with AI help, say: 'You made the decisions, and you were honest about it. That's how professionals use AI.'",
+    "text": "Look at what they make next. The idea, the choices and the last word should still be theirs, and they'll say so without being asked.",
+    "celebrate": "When they finish a project with AI help, say: 'You made every decision, and you told the truth about how. It's yours.'",
     "extensions": [
       "Make the same small project with and without AI, and compare",
       "Make something for a real person in your family, from their own brief",
-      "Write a family rule list for using AI in creative work",
+      "Make the same small card for two different people, and see how the brief changes everything",
       "Look up how a real artist or designer you like uses AI, or chooses not to"
     ]
   },
@@ -325,7 +325,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "My son has a small web design business. He gathers all the information and requests from his clients, gives his ideas to Claude, and Claude makes a mockup. Then he prompts it to change things until it's the way he wants it, and he writes the email to the client himself. It's not a secret: the coding is all done by AI.",
+    "text": "My son has a small web design business. He gathers what his clients want, gives his ideas to Claude for a mockup and the coding, then prompts changes until it's the way he wants it. He writes the email to the client himself, and he doesn't hide that AI did the coding.",
     "quotes": []
   },
   "photo": {

@@ -23,7 +23,7 @@
 - Outdoor and nature: nature walks, journaling, land art, outdoor STEM challenges, scavenger hunts, and seasonal activities for every time of year.
 - Creativity and maker: board game design, Rube Goldberg machines, stop-motion films, invent-a-sport, build-a-museum, and theme-park design.
 - Real-world math: budgeting, grocery and road-trip math, sports statistics, garden geometry, savings goals, and party planning in real contexts.
-- AI and digital literacy: AI basics, algorithm awareness, deepfake detection, prompt writing, digital privacy, and ethical AI creation.
+- AI and digital literacy: how AI works, prompting, creating with AI ethically, catching AI mistakes, checking photos and videos (including AI-made ones), algorithms, bias, digital privacy, and family screen plans.
 - Entrepreneurship: customer discovery, product design, pricing, branding, marketing, and pitching a real idea.
 - Communication and writing: debate, reviews, interviews, mini-magazines, recipe books, and persuasive pitches.
 - Planning and problem-solving: road-trip planning, fixing what is broken, packing like a pro, emergency plans, and breaking fuzzy problems into clear steps.

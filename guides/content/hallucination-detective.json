@@ -52,8 +52,8 @@
         "a": "Still check one claim. Agreeing isn't the same as right: they may have learned the same mistake."
       },
       {
-        "q": "Your kid is too young for an AI account",
-        "a": "You type, they ask. Read the answers out loud, and let them be the detective who spots the differences."
+        "q": "One AI says it doesn't know",
+        "a": "That's the most honest answer you'll get. Mark it 'unsure'; it's worth more than a confident wrong one."
       },
       {
         "q": "They want to trust it anyway",
@@ -74,8 +74,8 @@
         "line": "Different orders, and different categories."
       },
       {
-        "part": "Checked",
-        "line": "Combined the two, then asked Google's AI for a third opinion."
+        "part": "Third opinion",
+        "line": "Combined the two, then asked Google's AI too."
       },
       {
         "part": "Decided",
@@ -105,12 +105,12 @@
       "title": "Ask more than one AI",
       "why": "One answer can't be checked against anything. Two or three answers can be checked against each other.",
       "kid": "Your kid asks two or three AI tools the exact same question, word for word, and saves or copies each answer.",
-      "you": "Type it for younger kids. Make sure the question is the same in each tool, and never include personal details like your address or full name.",
+      "you": "Type it for younger kids, and make sure the question is the same in each tool.",
       "ask": [
         "Did we ask them all the exact same thing?",
         "Which answer sounds most sure of itself?"
       ],
-      "tip": "Copy the question once and paste it into each tool, so the words are exactly the same.",
+      "tip": "Save each answer as you go, with a copy or a screenshot. Ask again later and it might say something different.",
       "levels": {
         "explore": "Listen while a parent reads two answers out loud.",
         "develop": "Ask two AI tools the same question, and save both answers.",
@@ -126,7 +126,7 @@
         "What do they all agree on?",
         "What does only one of them say?"
       ],
-      "tip": "Look at how the answers are organized too. If each AI invents different categories, none of them is reading from a real list.",
+      "tip": "Look at how the answers are organized too. If each AI invents different categories, they're building the list themselves, not copying an official one.",
       "levels": {
         "explore": "Find one thing that's the same and one that's different.",
         "develop": "Mark every agree, disagree and only-one-says on both answers.",
@@ -136,7 +136,7 @@
     {
       "title": "Spot the bluff, and check it",
       "why": "AI can make up details that sound real. Checking with real sources is how you catch them.",
-      "kid": "Your kid looks for signs of bluffing using the Spot the bluff card, then checks the claims they doubt against real sources from the Check it card, like an official website or a video.",
+      "kid": "Your kid looks for signs of bluffing using the Spot the bluff card, then checks the claims they doubt against real sources from the Real sources card, like an official website or a video.",
       "you": "Show them how to find the official source first. Then ask: 'Does this match what the AI said?'",
       "ask": [
         "Which claim are you least sure about?",
@@ -158,11 +158,11 @@
         "What's your answer now?",
         "How sure are you, and why?"
       ],
-      "tip": "'I'm not sure yet' is a great answer when the sources disagree. It means they're thinking, not copying.",
+      "tip": "Rate how sure you are: very, a bit, or not at all. 'A bit' is an honest answer when the sources disagree.",
       "levels": {
         "explore": "Say your answer, and one way you checked it.",
         "develop": "Write your answer, what you checked, and how sure you are.",
-        "extend": "Fill it in, then test the answer in real life if you can, and add what you found."
+        "extend": "Write what you'd tell a friend who only asked one AI."
       }
     }
   ],
@@ -237,7 +237,7 @@
         "ask": "Which sign is easiest to miss?"
       },
       {
-        "name": "Check it",
+        "name": "Real sources",
         "lines": [
           {
             "k": "Official:",
@@ -248,8 +248,8 @@
             "v": "a photo or video of the real thing"
           },
           {
-            "k": "Two sources:",
-            "v": "two sites that don't copy each other"
+            "k": "Its sources:",
+            "v": "ask where it got that, then open the link yourself"
           },
           {
             "k": "Real life:",
@@ -285,14 +285,14 @@
     "extensions": [
       "Ask the same AI the same question a week later, and compare its two answers",
       "Ask an AI about your own town, and check what it gets right and wrong",
-      "Ask an AI for its sources, then check whether those sources really exist",
+      "Ask an AI about something that happened this week, and see if it knows, guesses or searches",
       "Plan a family outing with AI help, then check every detail before you go"
     ]
   },
   "signs": [
     "They ask a second AI before trusting the first",
     "They look for the official source on their own",
-    "They say 'I'm not sure yet' when answers disagree"
+    "They say how sure they are, not just what the answer is"
   ],
   "makeItReal": "Next time your family uses AI to plan something, like a trip, a day out or a recipe, ask two tools the same question together, compare, and check one detail before you go.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
@@ -303,7 +303,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "Before a trip to Universal, we asked Claude and ChatGPT to list all the rides by motion sickness. We didn't get the same answers: the order was different, and so were the categories they made up. So we combined the two to get a kind of average, and asked Google's AI for a third opinion. Then we had an idea, and we tried the rides ourselves to make up our own minds. I did get motion sick.",
+    "text": "Before a trip to Universal, we asked Claude and ChatGPT to rank the rides by motion sickness, and got two different orders with made-up categories. We combined them and asked Google's AI for a third opinion. Then we rode them ourselves, and I did get motion sick.",
     "quotes": []
   },
   "photo": {

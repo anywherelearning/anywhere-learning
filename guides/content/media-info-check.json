@@ -135,7 +135,7 @@
     },
     {
       "title": "Search for it somewhere else",
-      "why": "Real news shows up in more than one place. Fakes usually don't, or they show up as 'fake'.",
+      "why": "Real news gets reported by more than one trusted source. Fakes get shared everywhere, but not reported, or they get called fake.",
       "kid": "Your kid searches for it, using the Check elsewhere card: a few key words with 'fake' or 'fact check', a trusted news site, or an image search.",
       "you": "Do the first search together, and show them how to spot a fact-checking site.",
       "ask": [
@@ -208,8 +208,8 @@
             "v": "to inform, to sell, to get clicks?"
           },
           {
-            "k": "AI:",
-            "v": "does it say it was made with AI?"
+            "k": "Label:",
+            "v": "a 'Made with AI' tag, or the poster saying so"
           }
         ],
         "ask": "Which source would you trust most?"
@@ -326,7 +326,8 @@
   },
   "photo": {
     "src": "guides/assets/media-info-check.jpg",
-    "alt": "A boy in a purple shirt at a desk, looking closely at a laptop screen",
-    "caption": "Is it real? Let's check."
+    "alt": "A brother and sister on a couch under a blanket, looking at a laptop screen together",
+    "caption": "Is it real? Let's check, together.",
+    "tall": true
   }
 }

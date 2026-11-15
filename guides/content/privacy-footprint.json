@@ -88,13 +88,13 @@
     {
       "title": "List your accounts",
       "why": "You can't protect a trail you can't see. The list is the start.",
-      "kid": "Your kid lists every account they use, with you, using the My accounts card in the Privacy Toolkit at the end of the guide: email, games, reading apps, school or learning sites.",
+      "kid": "Your kid lists every account they use, with you, using the My accounts card in the Privacy Toolkit at the end of the guide: email, games, reading apps, learning sites.",
       "you": "Help them remember the ones you set up for them. Note who made each account and with what information.",
       "ask": [
         "Which apps or sites do you log into?",
         "What did each one ask for when it was made?"
       ],
-      "tip": "Include the quiet ones, like an e-reader account or a game login. They count too.",
+      "tip": "Include the quiet ones, like an e-reader account, a game login or a voice assistant.",
       "levels": {
         "explore": "Name the apps you use, and draw a picture for each.",
         "develop": "List every account, and what information each one has.",
@@ -136,8 +136,8 @@
     {
       "title": "Check settings and usernames",
       "why": "Good settings and a smart username protect them even when they forget.",
-      "kid": "With you, your kid checks one account at a time, using the Check it card: the username, who can see their profile, who can message them and what's public.",
-      "you": "Do it on your login, side by side. Change anything that's more open than your family rules.",
+      "kid": "With you, your kid checks one account at a time, using the Settings check card: the username, who can see their profile, who can message them and what's public.",
+      "you": "Do it on your login, together. Change anything that's more open than your family rules.",
       "ask": [
         "Does your username give away your real name?",
         "Who can send you a message here?"
@@ -146,7 +146,7 @@
       "levels": {
         "explore": "Help a parent check one setting, and say what it does.",
         "develop": "Check every account on your list, with a parent.",
-        "extend": "Invent a safe username, and explain why it doesn't give anything away."
+        "extend": "Check one account's settings for a public profile, then search for it logged out and see what a stranger sees."
       }
     },
     {
@@ -212,7 +212,7 @@
             "v": "what's linked to what"
           }
         ],
-        "ask": "Which line on your map surprised you?"
+        "ask": "Which line would you most like to cut?"
       },
       {
         "name": "Private or okay?",
@@ -237,7 +237,7 @@
         "ask": "Which one is hardest to decide?"
       },
       {
-        "name": "Check it",
+        "name": "Settings check",
         "lines": [
           {
             "k": "Username:",
@@ -311,8 +311,8 @@
   ],
   "conclusion": {
     "headline": "They know what's in their trail, and how to protect it.",
-    "text": "The next time a game or site asks for something, see if they stop and come find you before typing. That pause is the whole skill.",
-    "celebrate": "When they stop and ask before sharing, say: 'That's exactly right. You protected your information.'",
+    "text": "The next time a game or site asks for something, see if they stop and come find you before typing. Stopping to ask is the whole skill.",
+    "celebrate": "When they stop and ask before sharing, say: 'You asked first. That's how your information stays yours.'",
     "extensions": [
       "Search your family's names together, and see what comes up",
       "Read the privacy settings of a new app together before using it",

@@ -1269,7 +1269,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Your kid finds out what AI really is: a tool that predicts words from patterns, not a person and not a know-it-all. They guess, play a prediction game, test common myths at the screen, notice what happens when they talk to it like a friend and write the family AI rules together.',
     whatsIncluded: [
       'Five steps, from guessing what AI is to writing your family AI rules',
-      'How it works, Myth or fact?, Person or tool? and Rule ideas cards',
+      'What do you think?, How it works, Myth or fact?, Person or tool? and Rule ideas cards',
       'The prediction game: guess the next word, the way AI does',
       'Our family AI rules, to sign and put on the fridge',
       'Three levels per step, from ages 6 to 14',

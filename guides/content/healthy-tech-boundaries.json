@@ -62,7 +62,7 @@
     ]
   },
   "lesson": {
-    "text": "Limits kids help set are limits they respect. When they notice how screens make them feel, say what's fair, and agree on a plan with you, the screen turning off isn't a fight; it's the plan they made.",
+    "text": "Limits kids help set are limits they're more likely to respect. When they notice how screens make them feel, say what's fair, and agree on a plan with you, the screen turning off isn't a fight; it's the plan they made.",
     "before": "'Screens off, because I said so.'",
     "model": [
       {
@@ -71,7 +71,7 @@
       },
       {
         "part": "Talked",
-        "line": "Different needs: chess, a business and work mean more time for one."
+        "line": "Different needs mean different limits, and they heard why."
       },
       {
         "part": "Planned",
@@ -86,7 +86,7 @@
   },
   "steps": [
     {
-      "title": "Notice your screen time",
+      "title": "Log a screen week",
       "why": "Most people guess their screen time wrong. Noticing comes before deciding.",
       "kid": "For a week, your kid notes what they use screens for and roughly how long, using the Screen week card in the Healthy Tech Toolkit at the end of the guide.",
       "you": "Track yours too, honestly. Kids notice when grown-ups have different rules for themselves.",
@@ -105,7 +105,7 @@
       "title": "Notice how you feel after",
       "why": "Screens change mood and energy. Seeing it themselves is more convincing than being told.",
       "kid": "After screen time, your kid checks in with themselves, using the How do I feel? card: mood, energy, wanting to move or do something.",
-      "you": "Say what you notice too, kindly: 'You seemed more grumpy after the long session yesterday.'",
+      "you": "Say what you notice too, kindly: 'You seemed grumpier after the long session yesterday.'",
       "ask": [
         "How do you feel right after?",
         "How do you feel after a screen-free day?"
@@ -114,11 +114,11 @@
       "levels": {
         "explore": "Point to a face that shows how you feel after screens.",
         "develop": "Rate mood and energy after screens for a week.",
-        "extend": "Compare a long screen day and a screen-free day, and describe the difference."
+        "extend": "Find the point in a session where your mood turns, like after 20 minutes or after the second episode."
       }
     },
     {
-      "title": "Decide what's fair for you",
+      "title": "Name what's fair for you",
       "why": "Kids are often fairer about their own limits than you'd expect, when they're asked.",
       "kid": "Your kid writes what they think would be fair and healthy for them, and why, using the What's fair? card: how long, for what, and when.",
       "you": "Listen first. Then share what you think, and why. Different kids can have different needs.",
@@ -126,7 +126,7 @@
         "How much screen time feels fair to you?",
         "What do you need screens for, and what's just for fun?"
       ],
-      "tip": "Include AI here too: what it's for, and what stays a job for their own brain.",
+      "tip": "Include AI here too: when they use it, for what, and whether it counts as screen time in your house.",
       "levels": {
         "explore": "Say how much screen time you think is fair, with a parent.",
         "develop": "Write your fair limit, what it's for, and why.",
@@ -146,7 +146,7 @@
       "levels": {
         "explore": "Help choose your limit, and set the timer with a parent.",
         "develop": "Agree on your plan, sign it and set the limits on the device.",
-        "extend": "Add what you'll do instead when the screen turns off."
+        "extend": "Write the plan for a trip or a holiday week, when the usual rules don't fit."
       }
     },
     {
@@ -231,7 +231,7 @@
           },
           {
             "k": "AI:",
-            "v": "a tool for some jobs, not all"
+            "v": "does it count as screen time?"
           }
         ],
         "ask": "Why might your limit be different from a sibling's?"
@@ -286,6 +286,7 @@
       "lines": [
         "Name and daily limit:",
         "What screens are for:",
+        "AI is for:",
         "Screen-free times:",
         "When time's up, I'll:",
         "Check-in date, and signed by everyone:"
@@ -312,13 +313,13 @@
   ],
   "conclusion": {
     "headline": "Their screen limits are theirs, not just yours.",
-    "text": "Notice the next time time's up. If they ask for more and take the 'no' without a fight, the plan is doing its job.",
+    "text": "In a few weeks, the end of screen time should feel boring: a timer, a quick 'can I have five more?', a no, and on to something else. Boring is the goal.",
     "celebrate": "When they stop without a fuss, say: 'You stuck to the plan you helped make. That's real self-control.'",
     "extensions": [
-      "Make a family screen-free day once a month, grown-ups included",
+      "Swap roles for a day: the kids write a fair limit for a parent, and the parent tries it",
       "List things to do when the screen turns off, and keep it by the device",
-      "Track how you sleep on screen days and screen-free days",
-      "Plan screen rules for a trip or a holiday together"
+      "Notice which apps make stopping hardest, and ask why.",
+      "Track how you sleep on screen days and screen-free days"
     ]
   },
   "signs": [

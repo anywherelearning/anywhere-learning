@@ -7,6 +7,7 @@
   "goal": "Your kid finds out why YouTube and streaming apps show them what they show. They notice their recommendations, track what they watch for a few days, run a small experiment to see the suggestions change, spot the tricks that keep them watching, and choose what they'll watch on purpose.",
   "need": [
     "The apps your family already uses, like YouTube or Netflix",
+    "Their own profile, a supervised account or YouTube Kids (YouTube accounts are 13+)",
     "A notebook to track what they watch and what's suggested",
     "Their usual screen time, nothing extra"
   ],
@@ -62,7 +63,7 @@
     ]
   },
   "lesson": {
-    "text": "Apps like YouTube and Netflix use an algorithm: a set of rules that guesses what you'll watch next, based on what you've watched before. Its job is to keep you watching. Knowing that is how you stay the one who decides.",
+    "text": "Apps like YouTube and Netflix use an algorithm: a program that learns from what you watch, how long you watch, and what people like you watch, then guesses what will keep you watching. Its job is to keep you watching. Knowing that is how you stay the one who decides.",
     "before": "'The app just shows me what's good.'",
     "model": [
       {
@@ -79,15 +80,15 @@
       },
       {
         "part": "Their tool",
-        "line": "A set time limit, and picking instead of autoplay."
+        "line": "Picking his own videos instead of autoplay."
       }
     ],
-    "modelNote": "The app learns what you like and serves more of it, so stopping takes a plan. A time limit and picking your own videos keep the decision theirs."
+    "modelNote": "The app learns what you like and serves more of it. Picking the next video yourself keeps the decision yours, not the app's."
   },
   "steps": [
     {
       "title": "Notice what's suggested",
-      "why": "Most kids think the home page is the same for everyone. It isn't.",
+      "why": "Lots of kids think the home page is the same for everyone. It isn't.",
       "kid": "Your kid opens the app they use most and looks at the home page and the suggestions, using the What am I seeing? card in the Algorithm Toolkit at the end of the guide, and says why they think each one is there.",
       "you": "Open the same app on your account, side by side. Compare: why is yours different?",
       "ask": [
@@ -98,7 +99,7 @@
       "levels": {
         "explore": "Point to three suggestions, and say if you've watched something like them before.",
         "develop": "List the top ten suggestions, and guess why each one is there.",
-        "extend": "Compare your home page with a parent's, and list what's different and why."
+        "extend": "Find the 'Because you watched' or 'Up next' reason for three suggestions, and check if it's right."
       }
     },
     {
@@ -130,7 +131,7 @@
       "levels": {
         "explore": "Search one new thing, and see if it shows up on the home page.",
         "develop": "Watch a new topic, predict the change, and count what changed the next day.",
-        "extend": "Run the experiment twice with different topics, and compare how fast each changed."
+        "extend": "Then try to undo it: remove those videos from your watch history, and see how long the topic takes to fade."
       }
     },
     {
@@ -153,10 +154,10 @@
       "title": "Choose on purpose",
       "why": "Knowing how it works means they can decide what to watch, not the app.",
       "kid": "Your kid picks two or three moves from the Take back control card, like choosing videos before opening the app or keeping autoplay off, and tries them for a week.",
-      "you": "Respect the family limits you already have, and let them choose how to use their time inside them.",
+      "you": "Work inside the family limits you already have. This step is about what they watch, not how long.",
       "ask": [
         "What will you watch, before you open the app?",
-        "What helps you stop when your time is up?"
+        "Which suggestion was hardest to ignore?"
       ],
       "tip": "Deciding what to watch before opening the app is the strongest move there is.",
       "levels": {
@@ -270,8 +271,8 @@
             "v": "the next video waits for you"
           },
           {
-            "k": "Time limit:",
-            "v": "a timer or a family rule"
+            "k": "Not interested:",
+            "v": "tell the app to show less of something"
           },
           {
             "k": "Stop point:",
@@ -302,11 +303,11 @@
   ],
   "conclusion": {
     "headline": "They know why the app shows them what it shows.",
-    "text": "Next time a video ends, see if they say 'that's the algorithm' or turn off the next one themselves. That's them deciding, not the app.",
-    "celebrate": "When they stop on their own at their time limit, say: 'You beat the countdown. You decided when to stop.'",
+    "text": "Watch the end of a video. If they reach past the countdown and pick the next one themselves, they've seen the algorithm at work and decided anyway.",
+    "celebrate": "When they pick the next video themselves instead of letting it autoplay, say: 'You chose that one, not the app.'",
     "extensions": [
       "Run the experiment on a parent's account, with permission, and compare",
-      "Make a family 'watch on purpose' list of shows and videos worth your time",
+      "Watch the same video on a guest profile, and compare the Up next list with yours",
       "Look up how a streaming app decides what to suggest, in its own help pages",
       "Notice suggestions in other places, like online shops and music apps"
     ]
@@ -314,9 +315,9 @@
   "signs": [
     "They explain why a video was suggested to them",
     "They pick what to watch before opening the app",
-    "They stop at their time limit more easily"
+    "They notice when a suggestion is pulling them in, and say so"
   ],
-  "makeItReal": "This week, before anyone opens YouTube or a streaming app, ask them to say what they'll watch and where they'll stop. Then let the timer do the rest.",
+  "makeItReal": "This week, before anyone opens YouTube or a streaming app, ask them to say what they'll watch. Then check together whether they watched it, or what the app picked instead.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {
@@ -325,12 +326,12 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "My son mostly watches Minecraft videos on YouTube, and both kids have noticed their suggestions following what they watch. 'Just one more video' happens all the time. He picks his videos himself instead of letting autoplay choose, and both have a time limit for YouTube.",
+    "text": "My son mostly watches Minecraft videos on YouTube, and both kids have noticed their suggestions following what they watch. 'Just one more video' happens all the time. He picks his videos himself instead of letting autoplay choose.",
     "quotes": []
   },
   "photo": {
     "src": "guides/assets/algorithm-awareness.jpg",
     "alt": "A boy with headphones at a desk, watching a laptop screen",
-    "caption": "His 30 minutes, his choice of videos."
+    "caption": "His choice of videos, not the app's."
   }
 }

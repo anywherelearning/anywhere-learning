@@ -151,19 +151,19 @@
       }
     },
     {
-      "title": "Finish it yourself",
-      "why": "The AI makes a picture. Your kid decides what goes in the project, and what's good enough.",
+      "title": "Call it good enough",
+      "why": "The AI can keep making pictures forever. Your kid decides when one is good enough for the page.",
       "kid": "Your kid picks the final pictures for their project, using the Good enough? card, and adds their own touches, like the words, the layout or a hand-drawn detail.",
       "you": "Ask what they decided, not what the AI made. The choices are theirs.",
       "ask": [
         "Is this good enough for your project?",
-        "What did you add that the AI couldn't?"
+        "What did you decide to keep, and why?"
       ],
       "tip": "'Good enough for the book' is a real skill. Perfect pictures aren't the goal; a finished project is.",
       "levels": {
         "explore": "Pick your favourite picture, and say why you chose it.",
         "develop": "Choose the pictures for your project, and add your own words to each.",
-        "extend": "Finish a whole project, and show someone how you coached the hardest picture."
+        "extend": "Before the next try, decide what 'good enough' means for this picture, then stop when you get there."
       }
     }
   ],
@@ -276,14 +276,14 @@
           },
           {
             "k": "Odd bits:",
-            "v": "any extra fingers or strange details?"
+            "v": "anything it added that you didn't ask for?"
           },
           {
             "k": "Yours:",
             "v": "what will you add yourself?"
           }
         ],
-        "ask": "When is a picture good enough?"
+        "ask": "What would one more try actually fix?"
       }
     ]
   },
@@ -313,7 +313,7 @@
       "Use the same coaching on a text answer, like a story idea or a recipe",
       "Swap prompts with a sibling and see if the other can picture it",
       "Draw one picture yourself for the project, next to the AI ones",
-      "Write a 'how I made it' page at the end of the project"
+      "Use your best prompt in two different image tools, and see which one follows it better"
     ]
   },
   "signs": [
@@ -330,7 +330,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "My two made a book together, with pictures they prompted themselves with AI. The style, the details, extra or missing things, extra body parts, a character looking left when it was supposed to look up: it was really frustrating sometimes. What helped was asking for one change at a time and starting a new conversation. Sometimes we gave up completely and came back the next day, or took what it gave us.",
+    "text": "My two made a book together, with pictures they prompted themselves. Wrong details, extra body parts, a character looking left instead of up: it was really frustrating sometimes. One change at a time and a fresh conversation helped, and some days we stopped and came back tomorrow, or kept what it gave us.",
     "quotes": []
   },
   "photo": {

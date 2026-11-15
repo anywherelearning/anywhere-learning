@@ -7594,7 +7594,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '8. "I changed my mind" moments' },
       { type: 'paragraph', text: 'Whenever you change your mind about something, say it out loud and explain why. "I used to think X but I read this and now I think Y." Whenever your kid changes their mind, celebrate it. "That is really good thinking. It is hard to change your mind and you did it because the evidence was better." Make mind-changing a sign of strength, not weakness. That reframe changes everything.' },
 
-      { type: 'product-callout', slug: 'hallucination-detective', context: 'If your kid uses AI already, this activity teaches them to spot when it gets things wrong.', pinned: true },
+      { type: 'product-callout', slug: 'hallucination-detective', context: 'If your kid uses AI already, they ask more than one AI the same question, compare the answers and check the facts, so they learn to spot when it gets things wrong.', pinned: true },
 
       { type: 'heading', level: 2, text: 'What gets in the way' },
       { type: 'paragraph', text: 'A few patterns that accidentally shut down critical thinking in kids, even when parents are trying to encourage it.' },

@@ -470,6 +470,10 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'reading-the-room': ['communication', 'citizenship'],
   'hard-thing-challenge': ['emotional'],
   'boredom-toolkit': ['creativity'],
+  // Nov 2026 AI & Digital quality pass
+  'ai-basics': ['critical-thinking'],
+  'create-with-ai': ['creativity'],
+  'build-ai-helper': ['critical-thinking', 'writing'],
 };
 
 /**
@@ -483,6 +487,8 @@ const PRIMARY_AREA_OVERRIDE: Record<string, string> = {
   'media-info-check': 'ai-digital',
   'algorithm-awareness': 'ai-digital',
   'hallucination-detective': 'ai-digital',
+  'ai-basics': 'ai-digital',
+  'build-ai-helper': 'ai-digital',
   'bias-fairness-lab': 'ai-digital',
   'prompt-like-a-coach': 'ai-digital',
   // Entrepreneurship activities → a more business-forward lead than the

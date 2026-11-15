@@ -630,7 +630,7 @@
           "talkNew": false,
           "library": [
             "Bias & Fairness Lab",
-            "Deepfake & Manipulation Spotter",
+            "Media & Info Check",
             "Algorithm Awareness: Why Am I Seeing This?"
           ]
         },
@@ -746,7 +746,7 @@
           "talkNew": false,
           "library": [
             "Prompt Like a Coach",
-            "Three AIs, One Question",
+            "Build Your Own AI Helper",
             "Create With AI, Ethically"
           ]
         },
