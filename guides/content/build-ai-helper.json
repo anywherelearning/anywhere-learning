@@ -1,0 +1,336 @@
+{
+  "slug": "build-ai-helper",
+  "category": "AI & Digital",
+  "title": "Build Your Own AI Helper",
+  "tagline": "Job · Rules · Build · Test · Decide",
+  "ages": "Ages 9 to 14",
+  "goal": "Your kid designs an AI helper for one real job, like answering questions with facts or drafting messages, and writes the rules it has to follow. Then they set it up with a grown-up, test it on real questions, fix what goes wrong and decide honestly whether it's worth using.",
+  "need": [
+    "A grown-up's account on an AI tool that lets you save instructions",
+    "One small, real job the helper could do",
+    "A notebook for the job, the rules and the test results"
+  ],
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "clear instructions a machine can follow"
+    },
+    {
+      "subject": "Design",
+      "text": "starting from what the user needs"
+    },
+    {
+      "subject": "Ethics",
+      "text": "limits, privacy and who checks the work"
+    },
+    {
+      "subject": "Digital literacy",
+      "text": "how AI helpers and agents work"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is building something impressive that nobody uses. Your job is to keep the job small and real, make sure a person checks anything the helper sends or does, and let 'we won't use it' be a good result too.",
+    "plan": [
+      {
+        "when": "One sitting, on paper",
+        "what": "Pick the job and write the rules (Steps 1 and 2)."
+      },
+      {
+        "when": "One sitting, at the screen",
+        "what": "Set it up together and test it (Steps 3 and 4)."
+      },
+      {
+        "when": "A week later",
+        "what": "Decide if it's worth using (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want it to send messages or post on its own",
+        "a": "Not without a person checking first. A helper can draft; a human sends."
+      },
+      {
+        "q": "It keeps breaking its own rules",
+        "a": "Make the rules shorter and clearer, and put the most important one first. Then test again."
+      },
+      {
+        "q": "They lose interest once it works",
+        "a": "That's useful information. A helper nobody uses is a good lesson about what's worth building."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "An AI helper is only as good as its job and its rules. A small, clear job with a few firm rules works better than a helper that's supposed to do everything. And a person always checks what it says or sends.",
+    "before": "'An AI that does everything for me.'",
+    "model": [
+      {
+        "part": "Job",
+        "line": "Look things up online and answer his questions."
+      },
+      {
+        "part": "Rule",
+        "line": "Only facts, data and numbers. No how-tos."
+      },
+      {
+        "part": "Built",
+        "line": "With Claude, in Visual Studio Code."
+      },
+      {
+        "part": "Next helper",
+        "line": "An outreach agent to send emails for you."
+      }
+    ],
+    "modelNote": "The rule is what turned a general AI into his own helper: it stuck to facts, data and numbers, and left the how-tos out."
+  },
+  "steps": [
+    {
+      "title": "Pick one real job",
+      "why": "Helpers fail when the job is too big. One small, real job is the right size.",
+      "kid": "Your kid picks one job a helper could do for them or the family, using the Good jobs card in the Helper Toolkit at the end of the guide, and says who would use it and how often.",
+      "you": "Ask: 'Would you really use this every week?' Help them shrink the job until it's clear.",
+      "ask": [
+        "What job do you do over and over?",
+        "Who would use this helper, and when?"
+      ],
+      "tip": "Answering questions, drafting messages and quizzing someone are good first jobs.",
+      "levels": {
+        "explore": "Pick one job, and describe what the helper would do.",
+        "develop": "Write the job in one sentence, with who uses it and how often.",
+        "extend": "Compare two possible jobs, and pick the one you'd actually use."
+      }
+    },
+    {
+      "title": "Write its rules",
+      "why": "Rules are what make a helper useful and safe. Without them, it does whatever it guesses.",
+      "kid": "Your kid writes four or five rules, using the Rules card: what it does, how it answers, what it must never do, and when it should say 'I don't know'.",
+      "you": "Add one rule together that's about safety or privacy, and talk about why it matters.",
+      "ask": [
+        "What should it never do?",
+        "What should it say when it doesn't know?"
+      ],
+      "tip": "Short rules work best. 'Only answer with facts and numbers' is clearer than a paragraph.",
+      "levels": {
+        "explore": "Say three rules out loud while a parent writes them.",
+        "develop": "Write four or five rules, including one 'never' rule.",
+        "extend": "Write the rules, then explain which one is most important, and put it first."
+      }
+    },
+    {
+      "title": "Set it up together",
+      "why": "Most AI tools let you save instructions, so the helper remembers its job every time.",
+      "kid": "With you, your kid pastes the job and the rules into the AI tool's saved instructions or a project, using the Set it up card, and gives the helper a name.",
+      "you": "Use your account, and keep personal details, passwords and real contacts out of the instructions.",
+      "ask": [
+        "What should we call it?",
+        "Is everything it needs in the instructions?"
+      ],
+      "tip": "Older kids can build a helper with code and an AI model, like an agent. The rules matter just as much.",
+      "levels": {
+        "explore": "Watch a parent set it up, and choose the helper's name.",
+        "develop": "Set up the helper with its job and rules, with a parent.",
+        "extend": "Build it as a small project with code, with a grown-up checking safety."
+      }
+    },
+    {
+      "title": "Test it and fix it",
+      "why": "Every helper gets something wrong at first. Testing finds it before anyone relies on it.",
+      "kid": "Your kid tries the helper with five real questions or tasks, including two tricky ones, using the Test it card, and notes where it broke a rule.",
+      "you": "Help them change one rule at a time when it slips, then test the same question again.",
+      "ask": [
+        "Did it follow its rules?",
+        "Which question tricked it?"
+      ],
+      "tip": "Try to make it break a rule on purpose. That's how real builders test.",
+      "levels": {
+        "explore": "Ask the helper three questions, and say if each answer was good.",
+        "develop": "Test five tasks, find where it broke a rule, and fix that rule.",
+        "extend": "Write a test list you can rerun every time you change the rules."
+      }
+    },
+    {
+      "title": "Decide if it's worth it",
+      "why": "Building something is only half the lesson. Deciding whether it's useful is the other half.",
+      "kid": "After a week, your kid looks at how often they used the helper and decides, using the Keep, change or drop card: keep it, change its job, or stop using it.",
+      "you": "Respect 'drop it'. Knowing what's not worth building is a real skill.",
+      "ask": [
+        "How many times did you use it this week?",
+        "What would make it worth using?"
+      ],
+      "tip": "Most helpers people build never get used. Picking a job you'll really use next time is the lesson.",
+      "levels": {
+        "explore": "Say if you used the helper, and why or why not.",
+        "develop": "Count how often you used it, and decide keep, change or drop.",
+        "extend": "Redesign the helper for a job you'd use every week, and try again."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Helper Toolkit",
+    "intro": "Good jobs, clear rules, safe setup and honest testing.",
+    "items": [
+      {
+        "name": "Good jobs",
+        "lines": [
+          {
+            "k": "Fact finder:",
+            "v": "answers questions with facts and numbers"
+          },
+          {
+            "k": "Quiz master:",
+            "v": "quizzes you on something you're learning"
+          },
+          {
+            "k": "Draft writer:",
+            "v": "drafts messages you check before sending"
+          },
+          {
+            "k": "Planner:",
+            "v": "turns a list into a plan"
+          }
+        ],
+        "ask": "Which job would you use every week?"
+      },
+      {
+        "name": "Rules",
+        "lines": [
+          {
+            "k": "Job:",
+            "v": "'You only help with...'"
+          },
+          {
+            "k": "Style:",
+            "v": "'Answer in three sentences or less.'"
+          },
+          {
+            "k": "Never:",
+            "v": "'Never give how-tos.'"
+          },
+          {
+            "k": "Unsure:",
+            "v": "'If you don't know, say so.'"
+          }
+        ],
+        "ask": "Which rule is hardest to write clearly?"
+      },
+      {
+        "name": "Set it up",
+        "lines": [
+          {
+            "k": "Where:",
+            "v": "a saved project or custom instructions"
+          },
+          {
+            "k": "Name:",
+            "v": "give your helper a name"
+          },
+          {
+            "k": "Private:",
+            "v": "no passwords, addresses or real contacts"
+          },
+          {
+            "k": "Human check:",
+            "v": "a person checks before anything is sent"
+          }
+        ],
+        "ask": "What should never go in the instructions?"
+      },
+      {
+        "name": "Test it",
+        "lines": [
+          {
+            "k": "Easy:",
+            "v": "a normal question it should handle"
+          },
+          {
+            "k": "Tricky:",
+            "v": "a question that tempts it to break a rule"
+          },
+          {
+            "k": "Unknown:",
+            "v": "something it can't know"
+          },
+          {
+            "k": "Fix:",
+            "v": "change one rule, test again"
+          }
+        ],
+        "ask": "What's the trickiest test you can think of?"
+      },
+      {
+        "name": "Keep, change or drop",
+        "lines": [
+          {
+            "k": "Keep:",
+            "v": "you used it, and it helped"
+          },
+          {
+            "k": "Change:",
+            "v": "good idea, wrong job or rules"
+          },
+          {
+            "k": "Drop:",
+            "v": "you didn't need it after all"
+          },
+          {
+            "k": "Next:",
+            "v": "what job would you really use?"
+          }
+        ],
+        "ask": "What would make a helper worth keeping?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Systems thinking",
+      "text": "a job, rules and a test"
+    },
+    {
+      "name": "Clear instructions",
+      "text": "rules a machine can follow"
+    },
+    {
+      "name": "Responsible AI",
+      "text": "limits, privacy and a human check"
+    },
+    {
+      "name": "Honest evaluation",
+      "text": "is it worth using?"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know how AI helpers work, from the inside.",
+    "text": "The next time they use an AI tool, see if they wonder what instructions it was given, or who checks what it sends. That's how a builder thinks.",
+    "celebrate": "When they decide honestly about their helper, keep or drop, say: 'You built it and you judged it. That's what real builders do.'",
+    "extensions": [
+      "Build a helper for someone else in the family, from their own job",
+      "Write the rules for a helper you'd never want to exist, and why",
+      "Look up how a real company decides what its AI is allowed to do",
+      "Turn your test list into a quiz for another helper"
+    ]
+  },
+  "signs": [
+    "They describe an AI tool by its job and rules",
+    "They insist a person checks what a helper sends",
+    "They judge tools by whether they're really useful"
+  ],
+  "makeItReal": "Pick one job your family repeats every week, like planning meals or quizzing for a test, and build a small helper for it together this weekend.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "My son has already built agents with Claude in Visual Studio Code. One would look things up on the internet to answer his questions, and its rule was that it could only give facts, data and numbers, not how-tos. Another was an outreach agent that would send emails for you.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/build-ai-helper.jpg",
+    "alt": "A boy typing at a laptop on a desk, a document open on the screen",
+    "caption": "Where his agents were built."
+  }
+}

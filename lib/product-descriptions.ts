@@ -1338,20 +1338,20 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'build-ai-helper': {
     opening:
-      'Design and plan your own AI helper: what it does, how it works, what data it needs, and what ethical rules it follows. Kids think through the entire process of creating a useful AI tool, from concept to ethics framework. No coding required, just creative, structured thinking.',
+      'Your kid designs an AI helper for one real job, like answering questions with facts or drafting messages, and writes the rules it has to follow. Then they set it up with a grown-up, test it on real questions, fix what goes wrong and decide honestly whether it is worth using.',
     whatsIncluded: [
-      'AI helper concept design and purpose planning',
-      'Data requirements and privacy considerations',
-      'Ethical rules and boundaries framework',
-      'User experience and interaction design',
-      'Presentation of final AI helper concept',
+      'Five steps, from picking one real job to deciding if the helper is worth keeping',
+      'Good jobs, Rules, Set it up, Test it and Keep, change or drop cards',
+      'A worked example: a teen\'s fact-finding agent with one firm rule, no how-tos',
+      'Safe setup: a grown-up\'s account, nothing private in the instructions, a person checks before anything is sent',
+      'Three levels per step, from saved instructions to a small coded agent',
     ],
-    skillTags: ['STEM', 'AI Literacy', 'Design Thinking', 'Ethics', 'Planning', 'Creativity'],
+    skillTags: ['STEM', 'AI Literacy', 'Systems Thinking', 'Ethics', 'Writing', 'Problem-Solving'],
     // Oct 26 2026: page one with 0 clicks on the default "Name | Category" title.
     seo: {
       title: 'Build Your Own AI Helper: A Kids Project Guide, Ages 9-14',
       description:
-        'The guide your family follows to design an AI helper: what it does, what data it needs and the rules it must follow. No coding. Ages 9 to 14.',
+        'The guide your family follows to design an AI helper: one real job, clear rules, a safe setup and real tests. No coding needed. Ages 9 to 14.',
     },
     insideTheLearning: {
       lead:

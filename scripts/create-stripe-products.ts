@@ -51,7 +51,7 @@ const catalog = [
   { slug: 'ai-basics', name: 'AI Basics: Myths, Facts & Smart Rules', priceCents: 599, description: 'Understand what AI is, what it can do, and how to use it wisely.' },
   { slug: 'algorithm-awareness', name: 'Algorithm Awareness', priceCents: 599, description: 'Why Am I Seeing This? Understand how algorithms shape what we see.' },
   { slug: 'bias-fairness-lab', name: 'Bias & Fairness Lab', priceCents: 599, description: 'Explore bias in AI systems and why fairness matters.' },
-  { slug: 'build-ai-helper', name: 'Build Your Own AI Helper', priceCents: 599, description: 'Design and prototype an AI tool that solves a real problem.' },
+  { slug: 'build-ai-helper', name: 'Build Your Own AI Helper', priceCents: 599, description: 'STEM AI project for kids ages 9-14: design an AI helper for one real job, write its rules, set it up with a grown-up, test it and fix it.' },
   { slug: 'create-with-ai', name: 'Create With AI, Ethically', priceCents: 599, description: 'Creative AI for kids ages 6-14: plan a real project, let AI help with drafts and code, steer it until it is theirs and say honestly how it was made.' },
   { slug: 'deepfake-spotter', name: 'Deepfake & Manipulation Spotter', priceCents: 599, description: 'Spot manipulated media and understand deepfake technology.' },
   { slug: 'hallucination-detective', name: 'Hallucination Detective', priceCents: 599, description: 'AI literacy for kids ages 6-14: ask two or three AI tools the same question, compare the answers, check real sources and catch the AI when it bluffs.' },

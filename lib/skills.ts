@@ -49,7 +49,7 @@ export const productSkills: Record<string, ProductSkills> = {
   "board-game-studio": { canonical: ["Design Thinking","Maths","Writing","Strategy","Art"], families: ["creativity-and-making","math-and-money"] },
   "brand-builder": { canonical: ["Art","Creative Thinking","Critical Thinking","Storytelling"], families: ["communication-and-writing","creativity-and-making","critical-thinking-and-reasoning"] },
   "budget-challenge": { canonical: ["STEM","Real-World Math","Budgeting","Problem-Solving"], families: ["communication-and-writing","critical-thinking-and-reasoning","entrepreneurship-and-money","math-and-money","planning-and-self-management"] },
-  "build-ai-helper": { canonical: ["AI Literacy","Communication","Online Safety & Privacy","Problem-Solving","Reflection"], families: ["communication-and-writing","critical-thinking-and-reasoning","tech-and-digital"] },
+  "build-ai-helper": { canonical: ["AI Literacy","Systems Thinking","Ethics","Writing"], families: ["tech-and-digital","critical-thinking-and-reasoning","communication-and-writing"] },
   "business-failure-lab": { canonical: ["Adaptability","Communication","Critical Thinking","Problem-Solving","Resilience","Systems Thinking"], families: ["communication-and-writing","critical-thinking-and-reasoning","empathy-and-people","planning-and-self-management"] },
   "clothing-swap-thrift-math": { canonical: ["Financial Literacy","Budgeting","Value Assessment","Sustainability"], families: ["critical-thinking-and-reasoning","entrepreneurship-and-money","math-and-money"] },
   "community-impact": { canonical: ["Citizenship","Listening","Planning","Leadership","Follow-Through"], families: ["communication-and-writing","critical-thinking-and-reasoning","planning-and-self-management"] },
