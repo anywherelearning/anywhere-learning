@@ -74,7 +74,7 @@ export const productSkills: Record<string, ProductSkills> = {
   "garage-sale-math": { canonical: ["Money Handling","Pricing","Percentages","Multiplication","Entrepreneurship"], families: ["entrepreneurship-and-money","math-and-money"] },
   "garden-plot-planner": { canonical: ["STEM","Geometry","Measurement","Budgeting","Science","Planning"], families: ["critical-thinking-and-reasoning","math-and-money","nature-and-science"] },
   "hallucination-detective": { canonical: ["AI Literacy","Critical Thinking","Research","Media Literacy"], families: ["tech-and-digital","critical-thinking-and-reasoning"] },
-  "healthy-tech-boundaries": { canonical: ["Decision-Making","Digital Citizenship","Engineering","Reflection","Self-Direction"], families: ["creativity-and-making","critical-thinking-and-reasoning","planning-and-self-management","tech-and-digital"] },
+  "healthy-tech-boundaries": { canonical: ["Emotional Regulation","Digital Citizenship","Communication","Planning"], families: ["tech-and-digital","planning-and-self-management","empathy-and-people"] },
   "imaginary-world": { canonical: ["Writing","Art","Geography","Worldbuilding","Imagination"], families: ["communication-and-writing","creativity-and-making","critical-thinking-and-reasoning"] },
   "invent-a-sport": { canonical: ["Design Thinking","Writing","Physical Literacy","Problem-Solving","Creativity"], families: ["communication-and-writing","creativity-and-making","empathy-and-people","math-and-money","tech-and-digital"] },
   "investor-pitch": { canonical: ["Communication","Critical Thinking","Decision-Making"], families: ["communication-and-writing","critical-thinking-and-reasoning"] },

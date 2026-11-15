@@ -1439,24 +1439,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'healthy-tech-boundaries': {
     opening:
-      'Help your child create a personal technology and AI boundaries plan. Activities cover screen time awareness, digital wellbeing, setting healthy limits, managing notifications, and building a balanced relationship with technology. Not anti-tech, just pro-balance.',
+      'Your kid helps set their own screen and AI limits instead of having them handed down. They notice how they use screens and how they feel after, decide what is fair and healthy for them, agree on a plan with you and check it after a few weeks, so the limits feel like theirs.',
     whatsIncluded: [
-      'Screen time awareness and tracking activities',
-      'Digital wellbeing self-assessment',
-      'Personal boundaries plan creation',
-      'Notification and distraction management',
-      'Balanced technology relationship building',
+      'Five steps, from noticing screen time to checking the plan',
+      'Screen week, How do I feel?, What\'s fair?, Plan ideas and Check-in cards',
+      'A worked example: siblings with different limits they helped decide',
+      'Our screen plan, one per kid, signed by everyone',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['Digital Wellbeing', 'Self-Management', 'Boundaries', 'Self-Awareness'],
+    skillTags: ['Self-Regulation', 'Digital Wellbeing', 'Communication', 'Self-Awareness', 'Planning'],
     insideTheLearning: {
       lead:
-        'Your child tracks their own screen time honestly, sees what it does to them, and then sets their own boundaries. Rules they wrote hold far better than rules handed down. They also go into the notification settings and turn off the things engineered to interrupt them.',
+        'Limits kids help set are limits they respect. Your kid notices how they use screens and how they feel after, says what feels fair, and agrees on a plan with you. When time is up, the screen turning off is not a fight; it is the plan they made.',
       skills: [
-        { skill: 'Reflection', where: 'Tracking their real usage and assessing honestly how it affects them' },
-        { skill: 'Self-Direction', where: 'Building habits and boundaries they set themselves' },
-        { skill: 'Decision-Making', where: 'Planning what balanced technology use actually looks like for them' },
-        { skill: 'Engineering', where: 'Getting into notification and distraction settings and configuring them deliberately' },
-        { skill: 'Digital Citizenship', where: 'Taking responsibility for their own digital life rather than being managed' },
+        { skill: 'Self-Regulation', where: 'Stopping when the plan says stop' },
+        { skill: 'Digital Wellbeing', where: 'Noticing how screens change mood, energy and sleep' },
+        { skill: 'Communication', where: 'Making a case for a fair limit and agreeing on it' },
+        { skill: 'Self-Awareness', where: 'Seeing what kind of screen time is worth it to them' },
+        { skill: 'Planning', where: 'Screen-free times, what to do instead and a check-in date' },
       ],
     },
     format: 'Project Guide',

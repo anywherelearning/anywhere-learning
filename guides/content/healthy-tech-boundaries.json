@@ -1,0 +1,347 @@
+{
+  "slug": "healthy-tech-boundaries",
+  "category": "AI & Digital",
+  "title": "Healthy Tech & AI Boundaries Plan",
+  "tagline": "Notice · Feel · Decide · Agree · Check",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid helps set their own screen and AI limits, instead of having them handed down. They notice how they use screens, how they feel after, decide what's fair and healthy for them, agree on a plan with you and check it after a few weeks, so the limits feel like theirs.",
+  "need": [
+    "A week of noticing their usual screen time",
+    "Paper for each kid's plan",
+    "A timer, or the screen-time settings on your devices"
+  ],
+  "academics": [
+    {
+      "subject": "Health",
+      "text": "how screens affect mood, energy and sleep"
+    },
+    {
+      "subject": "Data",
+      "text": "tracking time and patterns"
+    },
+    {
+      "subject": "Communication",
+      "text": "making a case and agreeing on a plan"
+    },
+    {
+      "subject": "Life skills",
+      "text": "self-control and balance"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is setting screen limits for them and enforcing them alone. Your job is to let them notice, ask what they think is fair, decide together, and then let the plan, not you, do the stopping.",
+    "plan": [
+      {
+        "when": "For a week",
+        "what": "Notice screen use and how they feel (Steps 1 and 2)."
+      },
+      {
+        "when": "One family conversation",
+        "what": "Decide what's fair and agree on the plan (Steps 3 and 4)."
+      },
+      {
+        "when": "A few weeks later",
+        "what": "Check the plan and adjust it (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They ask for more time every day",
+        "a": "Asking is fine. Point to the plan you agreed on together, and save changes for the check-in."
+      },
+      {
+        "q": "Siblings say it's unfair they get different limits",
+        "a": "Fair isn't the same. Talk about what each one uses screens for, and let them hear the reasons."
+      },
+      {
+        "q": "They want to lower the limit, then struggle",
+        "a": "Great sign that they're taking it seriously. Adjust at the check-in, not in the moment."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Limits kids help set are limits they respect. When they notice how screens make them feel, say what's fair, and agree on a plan with you, the screen turning off isn't a fight; it's the plan they made.",
+    "before": "'Screens off, because I said so.'",
+    "model": [
+      {
+        "part": "Asked",
+        "line": "Each kid said what would be fair and healthy for them."
+      },
+      {
+        "part": "Talked",
+        "line": "Different needs: chess, a business and work mean more time for one."
+      },
+      {
+        "part": "Planned",
+        "line": "A different limit for each, agreed together."
+      },
+      {
+        "part": "Now",
+        "line": "The screen shuts off when time's up. They ask for more, but don't fuss at a no."
+      }
+    ],
+    "modelNote": "The limits aren't the same, and they don't have to be. Because the kids helped decide, the 'no' at the end lands as their own plan, not a punishment."
+  },
+  "steps": [
+    {
+      "title": "Notice your screen time",
+      "why": "Most people guess their screen time wrong. Noticing comes before deciding.",
+      "kid": "For a week, your kid notes what they use screens for and roughly how long, using the Screen week card in the Healthy Tech Toolkit at the end of the guide.",
+      "you": "Track yours too, honestly. Kids notice when grown-ups have different rules for themselves.",
+      "ask": [
+        "What do you use screens for most?",
+        "Which screen time felt worth it?"
+      ],
+      "tip": "Sort it into watching, playing, making and learning. Not all screen time is the same.",
+      "levels": {
+        "explore": "Each day, draw what you did on a screen.",
+        "develop": "Track a week, sorted into watching, playing, making and learning.",
+        "extend": "Track a week, then work out what share of your time was making or learning."
+      }
+    },
+    {
+      "title": "Notice how you feel after",
+      "why": "Screens change mood and energy. Seeing it themselves is more convincing than being told.",
+      "kid": "After screen time, your kid checks in with themselves, using the How do I feel? card: mood, energy, wanting to move or do something.",
+      "you": "Say what you notice too, kindly: 'You seemed more grumpy after the long session yesterday.'",
+      "ask": [
+        "How do you feel right after?",
+        "How do you feel after a screen-free day?"
+      ],
+      "tip": "Compare a long screen day with a screen-free one. The difference usually speaks for itself.",
+      "levels": {
+        "explore": "Point to a face that shows how you feel after screens.",
+        "develop": "Rate mood and energy after screens for a week.",
+        "extend": "Compare a long screen day and a screen-free day, and describe the difference."
+      }
+    },
+    {
+      "title": "Decide what's fair for you",
+      "why": "Kids are often fairer about their own limits than you'd expect, when they're asked.",
+      "kid": "Your kid writes what they think would be fair and healthy for them, and why, using the What's fair? card: how long, for what, and when.",
+      "you": "Listen first. Then share what you think, and why. Different kids can have different needs.",
+      "ask": [
+        "How much screen time feels fair to you?",
+        "What do you need screens for, and what's just for fun?"
+      ],
+      "tip": "Include AI here too: what it's for, and what stays a job for their own brain.",
+      "levels": {
+        "explore": "Say how much screen time you think is fair, with a parent.",
+        "develop": "Write your fair limit, what it's for, and why.",
+        "extend": "Write your limit, and argue for it with your own data from Steps 1 and 2."
+      }
+    },
+    {
+      "title": "Agree on a plan",
+      "why": "A plan both sides agreed on doesn't need to be enforced every day.",
+      "kid": "Your family talks it through and fills in Our screen plan at the end of the guide, one for each kid, using the Plan ideas card.",
+      "you": "Decide together, then let the device or a timer do the stopping, so you don't have to.",
+      "ask": [
+        "What happens when time's up?",
+        "When can we talk about changing it?"
+      ],
+      "tip": "Automatic limits, like a screen that shuts off, take the fight out of the end.",
+      "levels": {
+        "explore": "Help choose your limit, and set the timer with a parent.",
+        "develop": "Agree on your plan, sign it and set the limits on the device.",
+        "extend": "Add what you'll do instead when the screen turns off."
+      }
+    },
+    {
+      "title": "Check it and adjust",
+      "why": "Needs change. A plan you check stays fair.",
+      "kid": "After a few weeks, your kid looks at how the plan worked, using the Check-in card, and suggests one change if they want.",
+      "you": "Take their suggestions seriously. Change the plan at the check-in, not in the middle of an argument.",
+      "ask": [
+        "Is the plan still fair?",
+        "What would you change, and why?"
+      ],
+      "tip": "Put the check-in date on the calendar. It gives requests for more time a place to go.",
+      "levels": {
+        "explore": "Say one thing you like about the plan, and one you'd change.",
+        "develop": "Look at a few weeks, and suggest one change with a reason.",
+        "extend": "Compare how you felt before and after the plan, and present it to the family."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Healthy Tech Toolkit",
+    "intro": "Notice your screen time, how you feel, what's fair, and how to make a plan that sticks.",
+    "items": [
+      {
+        "name": "Screen week",
+        "lines": [
+          {
+            "k": "Watching:",
+            "v": "shows, videos"
+          },
+          {
+            "k": "Playing:",
+            "v": "games"
+          },
+          {
+            "k": "Making:",
+            "v": "creating, coding, writing"
+          },
+          {
+            "k": "Learning:",
+            "v": "practice, research, lessons"
+          }
+        ],
+        "ask": "Which kind takes most of your time?"
+      },
+      {
+        "name": "How do I feel?",
+        "lines": [
+          {
+            "k": "Mood:",
+            "v": "happy, okay, grumpy"
+          },
+          {
+            "k": "Energy:",
+            "v": "lots, some, tired"
+          },
+          {
+            "k": "Wanting to:",
+            "v": "move, make something, do nothing"
+          },
+          {
+            "k": "Sleep:",
+            "v": "easy or hard that night?"
+          }
+        ],
+        "ask": "What changes most after a long session?"
+      },
+      {
+        "name": "What's fair?",
+        "lines": [
+          {
+            "k": "How long:",
+            "v": "a day, a week, weekends only?"
+          },
+          {
+            "k": "For what:",
+            "v": "fun, learning, making, work"
+          },
+          {
+            "k": "When:",
+            "v": "after what, before what?"
+          },
+          {
+            "k": "AI:",
+            "v": "a tool for some jobs, not all"
+          }
+        ],
+        "ask": "Why might your limit be different from a sibling's?"
+      },
+      {
+        "name": "Plan ideas",
+        "lines": [
+          {
+            "k": "Auto-stop:",
+            "v": "the device shuts off when time's up"
+          },
+          {
+            "k": "Screen-free:",
+            "v": "meals, bedtime, mornings"
+          },
+          {
+            "k": "Instead:",
+            "v": "what you'll do when it turns off"
+          },
+          {
+            "k": "Ask:",
+            "v": "it's okay to ask; no fussing at a no"
+          }
+        ],
+        "ask": "Which idea would help you most?"
+      },
+      {
+        "name": "Check-in",
+        "lines": [
+          {
+            "k": "Worked:",
+            "v": "what went well"
+          },
+          {
+            "k": "Hard:",
+            "v": "when it was tough to stop"
+          },
+          {
+            "k": "Feel:",
+            "v": "how you've felt since"
+          },
+          {
+            "k": "Change:",
+            "v": "one thing, with a reason"
+          }
+        ],
+        "ask": "What would make the plan fairer?"
+      }
+    ],
+    "after": {
+      "label": "Our screen plan",
+      "lines": [
+        "Name and daily limit:",
+        "What screens are for:",
+        "Screen-free times:",
+        "When time's up, I'll:",
+        "Check-in date, and signed by everyone:"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "Self-awareness",
+      "text": "noticing how screens make them feel"
+    },
+    {
+      "name": "Fairness",
+      "text": "different needs, different limits"
+    },
+    {
+      "name": "Negotiation",
+      "text": "making a case and agreeing"
+    },
+    {
+      "name": "Self-control",
+      "text": "stopping when the plan says stop"
+    }
+  ],
+  "conclusion": {
+    "headline": "Their screen limits are theirs, not just yours.",
+    "text": "Notice the next time time's up. If they ask for more and take the 'no' without a fight, the plan is doing its job.",
+    "celebrate": "When they stop without a fuss, say: 'You stuck to the plan you helped make. That's real self-control.'",
+    "extensions": [
+      "Make a family screen-free day once a month, grown-ups included",
+      "List things to do when the screen turns off, and keep it by the device",
+      "Track how you sleep on screen days and screen-free days",
+      "Plan screen rules for a trip or a holiday together"
+    ]
+  },
+  "signs": [
+    "They ask for more time without fussing at a no",
+    "They say how screens make them feel",
+    "They suggest changes at the check-in, not in the moment"
+  ],
+  "makeItReal": "This week, ask each kid what screen limit feels fair to them and why. Then sit down together and write their plan.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "We set each kid's screen limit together: they both said what would be fair and healthy for them, and we made a plan. When the time is up, the screen shuts down. They often ask for more, but they don't fuss when we say no.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/healthy-tech-boundaries.jpg",
+    "alt": "A mother and two kids playing a board game together at a dining table",
+    "caption": "What happens when the screen shuts off.",
+    "tall": true
+  }
+}

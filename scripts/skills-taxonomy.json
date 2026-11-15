@@ -154,17 +154,15 @@
     },
     "healthy-tech-boundaries": {
       "canonical": [
-        "Decision-Making",
+        "Emotional Regulation",
         "Digital Citizenship",
-        "Engineering",
-        "Reflection",
-        "Self-Direction"
+        "Communication",
+        "Planning"
       ],
       "families": [
-        "Creativity & Making",
-        "Critical Thinking & Reasoning",
+        "Tech & Digital",
         "Planning & Self-Management",
-        "Tech & Digital"
+        "Empathy & People"
       ]
     },
     "privacy-footprint": {

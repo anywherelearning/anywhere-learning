@@ -55,7 +55,7 @@ const catalog = [
   { slug: 'create-with-ai', name: 'Create With AI, Ethically', priceCents: 599, description: 'Creative AI for kids ages 6-14: plan a real project, let AI help with drafts and code, steer it until it is theirs and say honestly how it was made.' },
   { slug: 'deepfake-spotter', name: 'Deepfake & Manipulation Spotter', priceCents: 599, description: 'Spot manipulated media and understand deepfake technology.' },
   { slug: 'hallucination-detective', name: 'Hallucination Detective', priceCents: 599, description: 'AI literacy for kids ages 6-14: ask two or three AI tools the same question, compare the answers, check real sources and catch the AI when it bluffs.' },
-  { slug: 'healthy-tech-boundaries', name: 'Healthy Tech & AI Boundaries', priceCents: 599, description: 'Build healthy boundaries with technology and AI tools.' },
+  { slug: 'healthy-tech-boundaries', name: 'Healthy Tech & AI Boundaries Plan', priceCents: 599, description: 'Healthy screen habits for kids ages 6-14: notice screen time and mood, decide a fair limit together, agree on a signed family plan and check it.' },
   { slug: 'privacy-footprint', name: 'Privacy & Digital Footprint Map', priceCents: 599, description: 'Online privacy for kids ages 6-14: map their accounts and digital footprint, sort private from okay, check usernames and settings, and make a family plan.' },
   { slug: 'prompt-like-a-coach', name: 'Prompt Like a Coach', priceCents: 599, description: 'AI prompting for kids ages 6-14: picture it, describe it clearly, coach one change at a time and finish a real project, like the pictures for their own book.' },
   // ─── Real-World Math singles ($4.99) ───
