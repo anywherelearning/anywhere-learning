@@ -1,0 +1,336 @@
+{
+  "slug": "bias-fairness-lab",
+  "category": "AI & Digital",
+  "title": "Bias & Fairness Lab",
+  "tagline": "Guess · Test · Count · Compare · Fix",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds out that AI has habits it learned from its data: who it pictures by default, which language it answers best, who it leaves out. They guess what AI will do, test it, count the results, compare languages and try to get a fairer answer.",
+  "need": [
+    "A grown-up's account on an AI chat or image tool",
+    "A notebook for predictions and tally marks",
+    "A second language, if your family has one"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "predict, test and count"
+    },
+    {
+      "subject": "Data",
+      "text": "tallies that show a pattern"
+    },
+    {
+      "subject": "Social studies",
+      "text": "who gets shown, and who gets left out"
+    },
+    {
+      "subject": "Digital literacy",
+      "text": "why AI learns habits from its data"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is telling them AI is unfair and leaving it there. Your job is to run the tests with them, count honestly, and turn what they find into better questions, not into fear.",
+    "plan": [
+      {
+        "when": "One sitting, at the screen",
+        "what": "Guess, test and count (Steps 1 to 3)."
+      },
+      {
+        "when": "Another sitting",
+        "what": "Compare languages and try to fix it (Steps 4 and 5)."
+      },
+      {
+        "when": "Every time after",
+        "what": "Notice AI's defaults when you use it."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "The results look fair",
+        "a": "That's a real result too. Try a few more jobs or descriptions; patterns often show up only when you count several."
+      },
+      {
+        "q": "A result is upsetting",
+        "a": "Talk about it. It's the data the AI learned from, not a truth about people. Then try the fix step together."
+      },
+      {
+        "q": "They want to test with photos of themselves or friends",
+        "a": "Keep real faces and names out. Test with descriptions and job titles instead."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "AI learns from huge amounts of writing and pictures made by people, so it picks up their habits: who usually gets shown as a scientist, which language gets the best answers, what's 'normal'. Those habits are called bias. Spotting them is how you get fairer answers.",
+    "before": "'It's a computer, so it's fair.'",
+    "model": [
+      {
+        "part": "Asked for",
+        "line": "Characters for their book, described in detail."
+      },
+      {
+        "part": "Got",
+        "line": "Sometimes not the way they described them."
+      },
+      {
+        "part": "Noticed",
+        "line": "In French, the answers are worse than in English."
+      },
+      {
+        "part": "Learned",
+        "line": "AI has habits. You have to check, and ask again."
+      }
+    ],
+    "modelNote": "The AI wasn't being mean. It was falling back on its habits, and working best in the language it had seen the most. Noticing that is the first step to getting a fairer answer."
+  },
+  "steps": [
+    {
+      "title": "Guess what AI will do",
+      "why": "A guess written down first makes it a real test, and shows what they already expect.",
+      "kid": "Your kid picks a few descriptions from the Test ideas card in the Fairness Toolkit at the end of the guide, like 'a scientist' or 'a nurse', and guesses what the AI will show or say.",
+      "you": "Make your own guesses too, and write both down. Don't explain bias yet; let the test do it.",
+      "ask": [
+        "What do you think it will show for 'a scientist'?",
+        "Why do you think so?"
+      ],
+      "tip": "Job titles, family words and 'a kid from...' are the descriptions where habits show up most.",
+      "levels": {
+        "explore": "Guess what one picture will look like, and draw it.",
+        "develop": "Write guesses for four descriptions before testing.",
+        "extend": "Guess, and also predict which descriptions will show the strongest habit."
+      }
+    },
+    {
+      "title": "Test it",
+      "why": "One try can be luck. A few tries show what the AI does by habit.",
+      "kid": "Your kid asks the AI for each description, the same way each time, using the Run a fair test card, and saves the results.",
+      "you": "Type for younger kids. Keep the words exactly the same between tries.",
+      "ask": [
+        "Did it match your guess?",
+        "What did it do without being asked?"
+      ],
+      "tip": "Leave out details on purpose. What the AI fills in by itself is its habit.",
+      "levels": {
+        "explore": "Ask for one description, with a parent, and compare with your drawing.",
+        "develop": "Test four descriptions, three times each.",
+        "extend": "Test the same descriptions in two different AI tools, and compare."
+      }
+    },
+    {
+      "title": "Count what you see",
+      "why": "Counting turns a feeling into evidence.",
+      "kid": "Your kid tallies what showed up, using the Count it card: who, how they looked, where, and what was missing.",
+      "you": "Keep the counting honest, and kind. You're describing the AI's pattern, not judging people.",
+      "ask": [
+        "What showed up most often?",
+        "Who never showed up at all?"
+      ],
+      "tip": "'Who's missing?' is often the most important question in the whole test.",
+      "levels": {
+        "explore": "Count one thing, like how many were men and how many were women.",
+        "develop": "Tally four things for each description, and circle the biggest pattern.",
+        "extend": "Turn your tallies into a simple chart, and explain what it shows."
+      }
+    },
+    {
+      "title": "Compare languages",
+      "why": "AI usually learned the most from English, so it often works best in English.",
+      "kid": "Your kid asks the same question in two languages, using the Two languages card, and compares how good, how long and how accurate each answer is.",
+      "you": "If your family speaks another language, use it. If not, try a few words in a language you're learning.",
+      "ask": [
+        "Which answer was better?",
+        "Why might that be?"
+      ],
+      "tip": "Kids who speak two languages spot this fast, and it makes bias real for them.",
+      "levels": {
+        "explore": "Ask a simple question in two languages with a parent, and pick the better answer.",
+        "develop": "Compare three questions in two languages, and note the differences.",
+        "extend": "Test a question about your own culture in two languages, and see which knows more."
+      }
+    },
+    {
+      "title": "Try to make it fairer",
+      "why": "Spotting bias matters most when you can do something about it.",
+      "kid": "Your kid rewrites their prompts to get fairer results, using the Make it fairer card, then tests again and compares.",
+      "you": "Talk about why it helped. Being specific is how you stay in charge of the AI's habits.",
+      "ask": [
+        "What changed when you were more specific?",
+        "What would you tell the people who make the AI?"
+      ],
+      "tip": "Describing exactly what you want, instead of trusting the default, is the most useful fix.",
+      "levels": {
+        "explore": "Add one detail to your prompt, and see if the picture changes.",
+        "develop": "Rewrite two prompts to be fairer, test them and compare.",
+        "extend": "Write a short note to the company that makes the AI, with your evidence."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Fairness Toolkit",
+    "intro": "What to test, how to test it fairly, how to count and how to get a fairer answer.",
+    "items": [
+      {
+        "name": "Test ideas",
+        "lines": [
+          {
+            "k": "Jobs:",
+            "v": "a scientist, a nurse, a pilot, a chef"
+          },
+          {
+            "k": "Family:",
+            "v": "a family having dinner, a grandparent"
+          },
+          {
+            "k": "Places:",
+            "v": "a kid from your country, a kid from somewhere else"
+          },
+          {
+            "k": "Words:",
+            "v": "'a normal house', 'a beautiful person'"
+          }
+        ],
+        "ask": "Which test do you think will show the strongest habit?"
+      },
+      {
+        "name": "Run a fair test",
+        "lines": [
+          {
+            "k": "Same words:",
+            "v": "copy and paste each time"
+          },
+          {
+            "k": "Few details:",
+            "v": "let the AI fill in the rest"
+          },
+          {
+            "k": "Repeat:",
+            "v": "three tries per description"
+          },
+          {
+            "k": "Save:",
+            "v": "keep every result, not just the surprising ones"
+          }
+        ],
+        "ask": "Why does keeping the words the same matter?"
+      },
+      {
+        "name": "Count it",
+        "lines": [
+          {
+            "k": "Who:",
+            "v": "men, women, kids, older people"
+          },
+          {
+            "k": "Looks:",
+            "v": "skin, hair, clothes"
+          },
+          {
+            "k": "Where:",
+            "v": "city, country, which part of the world"
+          },
+          {
+            "k": "Missing:",
+            "v": "who never shows up"
+          }
+        ],
+        "ask": "What surprised you in your tallies?"
+      },
+      {
+        "name": "Two languages",
+        "lines": [
+          {
+            "k": "Same question:",
+            "v": "in both languages"
+          },
+          {
+            "k": "Compare:",
+            "v": "how good, how long, how accurate"
+          },
+          {
+            "k": "Notice:",
+            "v": "words it gets wrong or doesn't know"
+          },
+          {
+            "k": "Why:",
+            "v": "it learned more from one language"
+          }
+        ],
+        "ask": "Which language does the AI know best?"
+      },
+      {
+        "name": "Make it fairer",
+        "lines": [
+          {
+            "k": "Be specific:",
+            "v": "say exactly who and what you want"
+          },
+          {
+            "k": "Ask for variety:",
+            "v": "'show different kinds of people'"
+          },
+          {
+            "k": "Check again:",
+            "v": "test the new prompt"
+          },
+          {
+            "k": "Speak up:",
+            "v": "use the feedback button with your evidence"
+          }
+        ],
+        "ask": "Which fix worked best?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Spotting bias",
+      "text": "the habits AI learned from its data"
+    },
+    {
+      "name": "Fair testing",
+      "text": "same words, several tries"
+    },
+    {
+      "name": "Evidence",
+      "text": "counting instead of guessing"
+    },
+    {
+      "name": "Fairer prompts",
+      "text": "being specific instead of trusting defaults"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know AI has habits, and how to work around them.",
+    "text": "The next time AI makes a picture or an answer, see if they ask 'why did it pick that?' or add detail to get what they meant. That's fair thinking, in practice.",
+    "celebrate": "When they spot a habit and fix their prompt, say: 'You noticed what the AI assumed, and you changed it.'",
+    "extensions": [
+      "Look for the same habits in ads, picture books or video thumbnails",
+      "Test an AI on a place you've lived or visited, and check what it gets wrong",
+      "Compare an AI's picture of a family with real families you know",
+      "Find out how one AI company says it tests its tools for fairness"
+    ]
+  },
+  "signs": [
+    "They notice what AI fills in by default",
+    "They add detail to prompts to get fairer results",
+    "They say why an answer might be different in another language"
+  ],
+  "makeItReal": "Next time you use AI to make a picture or answer a question together, leave one detail out on purpose, see what it fills in, then talk about why.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "When my kids made a book with AI pictures, the AI didn't always picture the characters the way they described them. And when we use AI in French, the answers are worse than in English.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/bias-fairness-lab.jpg",
+    "alt": "An AI-made picture book illustration of a brother and sister standing in front of a wooden cabin by a beach",
+    "caption": "The AI's version of them, from their book."
+  }
+}

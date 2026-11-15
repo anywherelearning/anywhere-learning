@@ -1314,24 +1314,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'bias-fairness-lab': {
     opening:
-      'Explore how AI can be unfair, and what to do about it. Kids investigate real examples of AI bias, examine who gets left out, test for fairness in prompts and outputs, and design better AI choices. Ethics and empathy applied to technology.',
+      'Your kid finds out that AI has habits it learned from its data: who it pictures by default, which language it answers best, who it leaves out. They guess what AI will do, test it, count the results, compare languages and try to get a fairer answer.',
     whatsIncluded: [
-      'Real examples of AI bias investigation',
-      'Fairness testing in AI prompts and outputs',
-      'Who gets included and who gets left out',
-      'Designing more equitable AI decisions',
-      'Ethics discussion prompts and reflection',
+      'Five steps, from guessing what AI will do to writing fairer prompts',
+      'Test ideas, Run a fair test, Count it, Two languages and Make it fairer cards',
+      'A worked example: AI pictures for a family book, and weaker answers in French',
+      'Safe testing with descriptions and job titles, never real faces or names',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['STEM', 'Ethics', 'Critical Thinking', 'AI Literacy', 'Empathy', 'Fairness'],
+    skillTags: ['AI Literacy', 'Ethics', 'Critical Thinking', 'Data Collection', 'Empathy'],
     insideTheLearning: {
       lead:
-        'Your child tests an AI on real prompts and finds the places where it quietly treats people differently. Then they work out who gets left out by that, put into words why it is unfair, and redesign the prompt to do better. It is critical thinking with a machine that argues back.',
+        'AI learns from huge amounts of writing and pictures made by people, so it picks up their habits: who usually gets shown as a scientist, which language gets the best answers, who gets left out. Your kid tests those habits, counts what they find and learns to ask for something fairer.',
       skills: [
-        { skill: 'Critical Thinking', where: 'Spotting the assumptions buried inside an answer that looks neutral' },
-        { skill: 'AI Literacy', where: 'Understanding where the limits of an AI output actually are' },
-        { skill: 'Empathy', where: 'Thinking through whose needs get missed when a system decides' },
-        { skill: 'Communication', where: 'Putting into words why a particular result feels unfair' },
-        { skill: 'Decision-Making', where: 'Redesigning the prompt to get a more equitable outcome' },
+        { skill: 'AI Literacy', where: 'Seeing how AI learns habits from its data' },
+        { skill: 'Ethics', where: 'Asking who gets shown and who gets left out' },
+        { skill: 'Critical Thinking', where: 'Testing a claim like it is a computer, so it is fair' },
+        { skill: 'Data Collection', where: 'Tallying results to turn a feeling into evidence' },
+        { skill: 'Empathy', where: 'Noticing people the AI leaves out by default' },
       ],
     },
     format: 'Project Guide',

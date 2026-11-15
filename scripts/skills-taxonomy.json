@@ -89,16 +89,14 @@
     "bias-fairness-lab": {
       "canonical": [
         "AI Literacy",
-        "Communication",
+        "Ethics",
         "Critical Thinking",
-        "Decision-Making",
-        "Empathy"
+        "Data & Graphs"
       ],
       "families": [
-        "Communication & Writing",
+        "Tech & Digital",
         "Critical Thinking & Reasoning",
-        "Empathy & People",
-        "Tech & Digital"
+        "Empathy & People"
       ]
     },
     "build-ai-helper": {

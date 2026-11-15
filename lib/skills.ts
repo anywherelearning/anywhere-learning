@@ -45,7 +45,7 @@ export const productSkills: Record<string, ProductSkills> = {
   "ai-basics": { canonical: ["AI Literacy","Critical Thinking","Digital Citizenship","Online Safety & Privacy"], families: ["tech-and-digital","critical-thinking-and-reasoning"] },
   "algorithm-awareness": { canonical: ["Digital Literacy","Critical Thinking","Science","Data & Graphs"], families: ["tech-and-digital","critical-thinking-and-reasoning","nature-and-science"] },
   "backyard-campout-planner": { canonical: ["Measurement","Budgeting","Time Planning","Estimation","Organisation"], families: ["math-and-money"] },
-  "bias-fairness-lab": { canonical: ["AI Literacy","Communication","Critical Thinking","Decision-Making","Empathy"], families: ["communication-and-writing","critical-thinking-and-reasoning","empathy-and-people","tech-and-digital"] },
+  "bias-fairness-lab": { canonical: ["AI Literacy","Ethics","Critical Thinking","Data & Graphs"], families: ["tech-and-digital","critical-thinking-and-reasoning","empathy-and-people"] },
   "board-game-studio": { canonical: ["Design Thinking","Maths","Writing","Strategy","Art"], families: ["creativity-and-making","math-and-money"] },
   "brand-builder": { canonical: ["Art","Creative Thinking","Critical Thinking","Storytelling"], families: ["communication-and-writing","creativity-and-making","critical-thinking-and-reasoning"] },
   "budget-challenge": { canonical: ["STEM","Real-World Math","Budgeting","Problem-Solving"], families: ["communication-and-writing","critical-thinking-and-reasoning","entrepreneurship-and-money","math-and-money","planning-and-self-management"] },

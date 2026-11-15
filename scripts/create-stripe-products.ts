@@ -50,7 +50,7 @@ const catalog = [
   // ─── AI & Digital Literacy singles ($4.99) ───
   { slug: 'ai-basics', name: 'AI Basics: Myths, Facts & Smart Rules', priceCents: 599, description: 'AI basics for kids ages 6-14: how AI really works, myths tested at the screen, why it sounds human, and family AI rules you write together.' },
   { slug: 'algorithm-awareness', name: 'Algorithm Awareness', priceCents: 599, description: 'Algorithm literacy for kids ages 6-14: notice and track app suggestions, run a real experiment, spot keep-you-watching tricks and watch on purpose.' },
-  { slug: 'bias-fairness-lab', name: 'Bias & Fairness Lab', priceCents: 599, description: 'Explore bias in AI systems and why fairness matters.' },
+  { slug: 'bias-fairness-lab', name: 'Bias & Fairness Lab', priceCents: 599, description: 'AI fairness for kids ages 6-14: test what AI pictures by default, count the results, compare two languages and write fairer prompts.' },
   { slug: 'build-ai-helper', name: 'Build Your Own AI Helper', priceCents: 599, description: 'STEM AI project for kids ages 9-14: design an AI helper for one real job, write its rules, set it up with a grown-up, test it and fix it.' },
   { slug: 'create-with-ai', name: 'Create With AI, Ethically', priceCents: 599, description: 'Creative AI for kids ages 6-14: plan a real project, let AI help with drafts and code, steer it until it is theirs and say honestly how it was made.' },
   { slug: 'deepfake-spotter', name: 'Deepfake & Manipulation Spotter', priceCents: 599, description: 'Spot manipulated media and understand deepfake technology.' },
