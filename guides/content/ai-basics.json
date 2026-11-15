@@ -1,0 +1,346 @@
+{
+  "slug": "ai-basics",
+  "category": "AI & Digital",
+  "title": "AI Basics: Myths, Facts & Smart Rules",
+  "tagline": "Guess · Predict · Test · Talk · Rules",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds out what AI really is: a tool that predicts words from patterns, not a person and not a know-it-all. They guess, play a prediction game, test common myths at the screen, notice what happens when they talk to it like a friend, and write the family's AI rules together.",
+  "need": [
+    "A grown-up's account on an AI chat tool",
+    "Paper and a pen for the family rules",
+    "One sitting at the screen, together"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "how AI learns patterns from huge amounts of text"
+    },
+    {
+      "subject": "Language",
+      "text": "predicting words from what came before"
+    },
+    {
+      "subject": "Thinking",
+      "text": "testing a claim instead of believing it"
+    },
+    {
+      "subject": "Digital literacy",
+      "text": "safe, honest family rules for AI"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is either making AI sound magic or making it sound scary. Your job is to test it together, out loud, so they see for themselves what it can and can't do, then make the rules with them, not for them.",
+    "plan": [
+      {
+        "when": "Away from the screen",
+        "what": "Guess what AI is and play the prediction game (Steps 1 and 2)."
+      },
+      {
+        "when": "One sitting, at the screen",
+        "what": "Test the myths and try talking to it (Steps 3 and 4)."
+      },
+      {
+        "when": "The same day",
+        "what": "Write the family AI rules (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They think AI is alive or has feelings",
+        "a": "Go back to the prediction game. It's very good at sounding like a person because it learned from people's writing."
+      },
+      {
+        "q": "They're scared of AI",
+        "a": "Keep it practical: it's a tool, like a calculator for words. You decide how and when to use it."
+      },
+      {
+        "q": "They want to use it for everything",
+        "a": "That's what the rules are for. Ask: 'Is this a job for AI, or a job for your brain?'"
+      }
+    ]
+  },
+  "lesson": {
+    "text": "AI chat tools predict the next words based on patterns from enormous amounts of writing. That's why they sound so human, and why they can sound sure and still be wrong. Knowing what's really on the other side makes it easier to use well.",
+    "before": "'It said thank you, so it must like me.'",
+    "model": [
+      {
+        "part": "She says",
+        "line": "'Hi! How are you? What's your favourite colour?'"
+      },
+      {
+        "part": "It answers",
+        "line": "Friendly, polite, like a person would."
+      },
+      {
+        "part": "The truth",
+        "line": "It predicts friendly words. It doesn't feel or know her."
+      },
+      {
+        "part": "The rule",
+        "line": "Fun is fine. Personal information isn't."
+      }
+    ],
+    "modelNote": "She talks to it like a person just for fun, and she knows what it really is. That's the line worth teaching: playing is fine, as long as you know what's on the other side."
+  },
+  "steps": [
+    {
+      "title": "Guess what AI is",
+      "why": "Kids already have ideas about AI. Hearing them first shows you what to clear up.",
+      "kid": "Your kid draws or says what they think AI is and how it works, using the What do you think? card in the AI Basics Toolkit at the end of the guide.",
+      "you": "Don't correct anything yet. Write their guesses down. You'll check them together later.",
+      "ask": [
+        "What do you think AI is?",
+        "Where does it get its answers?"
+      ],
+      "tip": "Silly guesses are great. A robot in a box or a person typing back are both worth testing.",
+      "levels": {
+        "explore": "Draw what you think is inside an AI.",
+        "develop": "Write three things you think AI can do, and three it can't.",
+        "extend": "Write how you think AI makes an answer, step by step."
+      }
+    },
+    {
+      "title": "Play the prediction game",
+      "why": "The best way to understand AI is to do what it does: guess the next word.",
+      "kid": "Away from the screen, your kid plays the prediction game from the How it works card: one person starts a sentence, the others guess the next word, then the next.",
+      "you": "Start with easy ones: 'Once upon a...' Then harder ones. Point out how they used patterns they've heard before.",
+      "ask": [
+        "How did you know what word came next?",
+        "When was it hard to guess?"
+      ],
+      "tip": "That's what AI does, millions of times faster, with patterns from billions of pages of writing.",
+      "levels": {
+        "explore": "Finish easy sentences like 'Once upon a...' and 'Happy birthday to...'",
+        "develop": "Play ten rounds, and notice when your guess was right and why.",
+        "extend": "Try a sentence with no clear pattern, and explain why it was harder to predict."
+      }
+    },
+    {
+      "title": "Test the myths",
+      "why": "Myths fall apart fastest when kids test them themselves.",
+      "kid": "At the screen, your kid tests each myth from the Myth or fact? card by asking the AI, then decides if the myth was true.",
+      "you": "Type for younger kids. Ask a question you know the answer to, so you can spot a wrong one together.",
+      "ask": [
+        "Did it get anything wrong?",
+        "Did it remember you from last time?"
+      ],
+      "tip": "Ask it something about your own town or family. It usually doesn't know, or makes something up.",
+      "levels": {
+        "explore": "Test one myth with a parent, like 'it knows everything'.",
+        "develop": "Test three myths, and say which ones fell apart.",
+        "extend": "Find a new myth people believe about AI, and design a test for it."
+      }
+    },
+    {
+      "title": "Talk to it, and notice",
+      "why": "AI is built to sound friendly. Noticing that, without being fooled by it, is a key skill.",
+      "kid": "Your kid chats with the AI like it's a friend for a minute, saying hi and asking it questions, then uses the Person or tool? card to sort what was real and what was just good wording.",
+      "you": "It's fine to be polite to it. Just ask afterwards: 'Did it really know you, or just sound like it?'",
+      "ask": [
+        "Did it sound like a person?",
+        "What can't it really do, even if it says it can?"
+      ],
+      "tip": "It might say 'I love that!' It doesn't love anything. It predicted that those words fit.",
+      "levels": {
+        "explore": "Say hi and ask it one question, then say if it's a person or a tool.",
+        "develop": "Chat for a minute, then sort its answers into real and just good wording.",
+        "extend": "Ask it about itself, then compare what it says with what you learned in Step 2."
+      }
+    },
+    {
+      "title": "Write your family AI rules",
+      "why": "Rules they help write are rules they'll follow.",
+      "kid": "Together, your family writes four or five AI rules, using the Rule ideas card, and fills in Our family AI rules at the end of the guide to put on the fridge.",
+      "you": "Bring your non-negotiables, like no personal information, and let them add rules of their own.",
+      "ask": [
+        "What's a job for AI, and what's a job for your brain?",
+        "What should we never tell an AI?"
+      ],
+      "tip": "Rules work best short and in their words. 'AI is a tool, not a brain replacement' is easy to remember.",
+      "levels": {
+        "explore": "Help pick one rule, and draw a picture for it.",
+        "develop": "Write four or five rules together, and put them on the fridge.",
+        "extend": "Write the rules, then check back in a month and change one that isn't working."
+      }
+    }
+  ],
+  "reference": {
+    "title": "AI Basics Toolkit",
+    "intro": "What AI is, how it works, which myths to test, and rules to start from.",
+    "items": [
+      {
+        "name": "What do you think?",
+        "lines": [
+          {
+            "k": "Is it:",
+            "v": "a robot, a person, a computer program?"
+          },
+          {
+            "k": "Where:",
+            "v": "where do its answers come from?"
+          },
+          {
+            "k": "Knows:",
+            "v": "what does it know, and what doesn't it?"
+          },
+          {
+            "k": "Feels:",
+            "v": "can it feel happy or sad?"
+          }
+        ],
+        "ask": "Which guess are you most sure about?"
+      },
+      {
+        "name": "How it works",
+        "lines": [
+          {
+            "k": "Learned:",
+            "v": "from huge amounts of writing"
+          },
+          {
+            "k": "Predicts:",
+            "v": "the next word, again and again"
+          },
+          {
+            "k": "Sounds human:",
+            "v": "because it learned from humans"
+          },
+          {
+            "k": "Can be wrong:",
+            "v": "a good guess isn't always true"
+          }
+        ],
+        "ask": "Which part surprised you?"
+      },
+      {
+        "name": "Myth or fact?",
+        "lines": [
+          {
+            "k": "Myth:",
+            "v": "'It knows everything.'"
+          },
+          {
+            "k": "Myth:",
+            "v": "'It's always right.'"
+          },
+          {
+            "k": "Myth:",
+            "v": "'It remembers you and your life.'"
+          },
+          {
+            "k": "Myth:",
+            "v": "'It thinks and feels like a person.'"
+          }
+        ],
+        "ask": "Which myth did you believe before?"
+      },
+      {
+        "name": "Person or tool?",
+        "lines": [
+          {
+            "k": "Polite:",
+            "v": "fine, and a good habit"
+          },
+          {
+            "k": "Friendly words:",
+            "v": "predicted, not felt"
+          },
+          {
+            "k": "Personal info:",
+            "v": "never: no address, school, full name or photos"
+          },
+          {
+            "k": "Real friends:",
+            "v": "people who know you back"
+          }
+        ],
+        "ask": "What's the difference between a friend and a tool that sounds friendly?"
+      },
+      {
+        "name": "Rule ideas",
+        "lines": [
+          {
+            "k": "Private:",
+            "v": "no personal information, ever"
+          },
+          {
+            "k": "Check:",
+            "v": "double-check what it says"
+          },
+          {
+            "k": "My work:",
+            "v": "no AI writing my own work"
+          },
+          {
+            "k": "Tool:",
+            "v": "AI is a tool, not a replacement for my brain"
+          }
+        ],
+        "ask": "Which rule matters most to you?"
+      }
+    ],
+    "after": {
+      "label": "Our family AI rules",
+      "lines": [
+        "1.",
+        "2.",
+        "3.",
+        "4.",
+        "Signed by everyone:"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "name": "AI understanding",
+      "text": "what it is, and what it isn't"
+    },
+    {
+      "name": "Testing claims",
+      "text": "trying it instead of believing it"
+    },
+    {
+      "name": "Privacy",
+      "text": "what never goes into an AI"
+    },
+    {
+      "name": "Smart use",
+      "text": "a tool, not a brain replacement"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know what AI is, and how your family uses it.",
+    "text": "The next time AI comes up, at dinner or at the screen, listen for 'it just predicts words' or 'that's a job for my brain'. Those are the basics, sticking.",
+    "celebrate": "When they follow a family AI rule on their own, say: 'You remembered our rule, and you used AI the smart way.'",
+    "extensions": [
+      "Ask the same question to AI and to a grandparent, and compare the answers",
+      "Make a 'job for AI or job for my brain?' sorting game with family tasks",
+      "Look for AI in everyday life: maps, video suggestions, voice assistants",
+      "Teach a younger cousin or friend the prediction game"
+    ]
+  },
+  "signs": [
+    "They explain AI as a tool that predicts words",
+    "They keep personal information out of prompts on their own",
+    "They check what AI says before using it"
+  ],
+  "makeItReal": "Put your family AI rules on the fridge this week, and read them together the next time someone opens an AI tool.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "The first time my kids used AI was at home with their dad, when ChatGPT first came out, asking it simple questions. We've always taught them what it really is. My daughter likes to talk to it like a real person, saying hi and thank you and asking it personal questions, but she does it just for fun. Our rules: no personal information, double-check what it says, no AI for writing your own work, and AI is a tool, not a replacement for your brain.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/ai-basics.jpg",
+    "alt": "A mother and daughter sitting together at a laptop covered in stickers",
+    "caption": "Exploring it together, on my computer."
+  }
+}

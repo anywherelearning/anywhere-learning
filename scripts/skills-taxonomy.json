@@ -64,15 +64,13 @@
     "ai-basics": {
       "canonical": [
         "AI Literacy",
-        "Communication",
         "Critical Thinking",
-        "Decision-Making",
-        "Digital Citizenship"
+        "Digital Citizenship",
+        "Online Safety & Privacy"
       ],
       "families": [
-        "Communication & Writing",
-        "Critical Thinking & Reasoning",
-        "Tech & Digital"
+        "Tech & Digital",
+        "Critical Thinking & Reasoning"
       ]
     },
     "algorithm-awareness": {

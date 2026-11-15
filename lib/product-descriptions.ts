@@ -1266,24 +1266,24 @@ export const productDescriptions: Record<string, ProductDescription> = {
   // ═══════════════════════════════════════════════════════════════════
   'ai-basics': {
     opening:
-      'Help kids understand what AI actually is, what it isn\'t, and how to use it responsibly. Activities cover how AI works, common myths vs reality, healthy AI interactions, and setting smart rules for AI use. The foundation every kid needs before using any AI tool.',
+      'Your kid finds out what AI really is: a tool that predicts words from patterns, not a person and not a know-it-all. They guess, play a prediction game, test common myths at the screen, notice what happens when they talk to it like a friend and write the family AI rules together.',
     whatsIncluded: [
-      'What AI actually is, and what it isn\'t',
-      'Common AI myths vs reality exploration',
-      'Healthy and useful AI interaction practice',
-      'Smart rules and boundaries for AI use',
-      'Reflection prompts and family discussion guides',
+      'Five steps, from guessing what AI is to writing your family AI rules',
+      'How it works, Myth or fact?, Person or tool? and Rule ideas cards',
+      'The prediction game: guess the next word, the way AI does',
+      'Our family AI rules, to sign and put on the fridge',
+      'Three levels per step, from ages 6 to 14',
     ],
-    skillTags: ['STEM', 'AI Literacy', 'Critical Thinking', 'Digital Citizenship'],
+    skillTags: ['AI Literacy', 'Critical Thinking', 'Digital Citizenship', 'Online Safety', 'Science'],
     insideTheLearning: {
       lead:
-        'Your child sorts out what AI actually is from what people claim it is, myth by myth, then writes the rules your family will use it by. The point is accurate understanding rather than hype in either direction, and rules they helped set are rules they will actually keep.',
+        'AI chat tools predict the next words from patterns in enormous amounts of writing. That is why they sound so human, and why they can sound sure and still be wrong. Your kid tests it for themselves, sees what it can and cannot do, and helps write the rules your family uses it by.',
       skills: [
-        { skill: 'AI Literacy', where: 'Separating what the technology really does from the hype, one myth at a time' },
-        { skill: 'Critical Thinking', where: 'Questioning an answer and checking it instead of taking it at face value' },
-        { skill: 'Digital Citizenship', where: 'Working out what safe and respectful use looks like in your house' },
-        { skill: 'Decision-Making', where: 'Setting the boundaries and smart rules they will hold themselves to' },
-        { skill: 'Communication', where: 'Explaining back, in their own words, what AI is and what it is not' },
+        { skill: 'AI Literacy', where: 'Understanding AI as a tool that predicts words, not a person' },
+        { skill: 'Critical Thinking', where: 'Testing common myths instead of believing them' },
+        { skill: 'Digital Citizenship', where: 'Writing family rules for using AI honestly' },
+        { skill: 'Online Safety', where: 'Knowing what personal information never goes into an AI' },
+        { skill: 'Science', where: 'How patterns in data turn into answers' },
       ],
     },
     format: 'Project Guide',

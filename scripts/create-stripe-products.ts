@@ -48,7 +48,7 @@ const catalog = [
   { slug: 'travel-day', name: 'Travel Day Itinerary Challenge', priceCents: 599, description: 'Planning activity for kids ages 6-14: plan a real day out with must-dos, a timeline, a budget and a Plan B.' },
   { slug: 'write-like-a-pro', name: 'Write It Like a Pro', priceCents: 599, description: 'Writing for kids ages 6-14: pick a style, write for a real audience, edit, and revise. Seven writing styles, one finished piece.' },
   // ─── AI & Digital Literacy singles ($4.99) ───
-  { slug: 'ai-basics', name: 'AI Basics: Myths, Facts & Smart Rules', priceCents: 599, description: 'Understand what AI is, what it can do, and how to use it wisely.' },
+  { slug: 'ai-basics', name: 'AI Basics: Myths, Facts & Smart Rules', priceCents: 599, description: 'AI basics for kids ages 6-14: how AI really works, myths tested at the screen, why it sounds human, and family AI rules you write together.' },
   { slug: 'algorithm-awareness', name: 'Algorithm Awareness', priceCents: 599, description: 'Why Am I Seeing This? Understand how algorithms shape what we see.' },
   { slug: 'bias-fairness-lab', name: 'Bias & Fairness Lab', priceCents: 599, description: 'Explore bias in AI systems and why fairness matters.' },
   { slug: 'build-ai-helper', name: 'Build Your Own AI Helper', priceCents: 599, description: 'STEM AI project for kids ages 9-14: design an AI helper for one real job, write its rules, set it up with a grown-up, test it and fix it.' },
