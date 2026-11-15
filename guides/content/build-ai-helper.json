@@ -325,7 +325,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "My son has already built agents with Claude in Visual Studio Code. One would look things up on the internet to answer his questions, and its rule was that it could only give facts, data and numbers, not how-tos. Another was an outreach agent that would send emails for you.",
+    "text": "My son has already built agents with Claude. One would look things up on the internet to answer his questions, and its rule was that it could only give facts, data and numbers, not how-tos. Another was an outreach agent that would send emails for you.",
     "quotes": []
   },
   "photo": {
