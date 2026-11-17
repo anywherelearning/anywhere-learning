@@ -136,7 +136,7 @@ export const TERRITORIES: readonly Territory[] = [
     activities: [
       'garage-sale-math', 'snack-mission', 'party-planner-math', 'kitchen-math-challenge',
       'clothing-swap-thrift-math', 'farmers-market-challenge', 'nature-data-tracker', 'sports-stats-lab',
-      'savings-goal-tracker', 'family-electricity-audit', 'budget-challenge', 'micro-business', 'shark-tank-pitch', 'road-trip-calculator',
+      'savings-goal-tracker', 'family-electricity-audit', 'budget-challenge', 'gift-budget-challenge', 'micro-business', 'shark-tank-pitch', 'road-trip-calculator',
       'garden-plot-planner', 'smart-shopper', 'pricing-experiment', 'backyard-campout-planner',
     ],
   },
@@ -351,7 +351,7 @@ export const TERRITORIES: readonly Territory[] = [
       'kitchen-math-challenge', 'family-recipe-book', 'pack-like-a-pro', 'savings-goal-tracker',
       'micro-business', 'garage-sale-math', 'time-energy-planner', 'travel-day', 'emergency-ready',
       'outdoor-survival-planner', 'solo-mission', 'fix-it-detective', 'swap-day-challenge',
-      'budget-challenge', 'smart-shopper', 'transport-navigation-challenge',
+      'budget-challenge', 'gift-budget-challenge', 'smart-shopper', 'transport-navigation-challenge',
     ],
   },
   {
@@ -410,6 +410,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'teach-it-to-learn-it': ['communication', 'emotional'],
   'trade-it-up': ['communication', 'math', 'life-skills'],
   'play-the-world': ['citizenship', 'physical', 'communication'],
+  'gift-budget-challenge': ['math', 'life-skills', 'emotional'],
   'local-language-mission': ['communication'],
   'people-scientist': ['emotional', 'critical-thinking'],
   'frustration-tolerance-cards': ['emotional', 'self-management'],

@@ -9505,7 +9505,7 @@ const posts: BlogPost[] = [
     keywords: ['holiday budget challenge for kids', 'budget challenge for kids', 'teach kids to budget for christmas gifts', 'christmas budget for kids', 'holiday gift budget kids', 'kids holiday shopping budget', 'christmas money lesson for kids', 'gift budget activity', 'real-life budget challenge', 'budgeting activity for kids'],
     readTimeMinutes: 9,
     author: amelie,
-    recommendedProduct: 'budget-challenge',
+    recommendedProduct: 'gift-budget-challenge',
     heroImage: '/images/holiday-budget-hero.jpeg',
     heroImageAlt: 'A girl at the dining table folding newspaper around a LEGO box she is wrapping as a gift',
     heroImageAspect: '4/5',
@@ -9573,7 +9573,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: 'Step 6: Buy it, track it, compare' },
       { type: 'paragraph', text: 'Then they shop. They carry the list, they pay, they count the change. Every receipt goes in the envelope. When everything is bought and made, sit down together and lay the receipts next to the plan. Which gift cost more than they guessed? Did tax catch them anywhere? How much is left? That comparison is where estimating gets better, and next year the plan will be closer.' },
 
-      { type: 'product-callout', slug: 'budget-challenge', pinned: true, context: 'Want to run the same skills again over the winter break? The Real-Life Budget Challenge has your kid plan a family day out on a real budget: real prices, a 10% buffer, a ranked cut list, and a tracker for running the money on the day.' },
+      { type: 'product-callout', slug: 'gift-budget-challenge', pinned: true, context: 'Want the full version? The Gift Budget Challenge guide walks your kid through every step, and adds a gift detective step for finding what each person would really love, a gift idea bank by price, tax worked out in their head, and homemade cost-per-gift math, with three levels for every step. It works for birthdays too.' },
 
       { type: 'heading', level: 2, text: 'Homemade gifts are a math project of their own' },
       { type: 'paragraph', text: 'Baking, crafting, or making a batch of anything turns into cost-per-gift math, which is one of the most useful money ideas a kid can learn. Here is a cookie version with made-up prices.' },

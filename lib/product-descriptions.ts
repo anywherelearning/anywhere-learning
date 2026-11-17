@@ -3292,6 +3292,30 @@ export const productDescriptions: Record<string, ProductDescription> = {
     },
     format: 'Project Guide',
   },
+  'gift-budget-challenge': {
+    opening:
+      'Your kid plans the gifts for a birthday, a holiday or any special occasion with one real amount of money. They split it across their list, find a clue about what each person would love, catch every hidden cost including tax worked out in their head, cut and swap until it fits, then buy, keep the receipts and compare them with the plan.',
+    whatsIncluded: [
+      'Five steps, from setting the number to comparing the receipts with the plan',
+      'A gift detective card for finding what each person would really love, without asking',
+      'A gift idea bank by price: free, under $5, under $10, homemade and done together',
+      'Tax in your head, hidden costs, make-it-fit moves and homemade cost-per-gift math',
+      'Works for birthdays, holidays and any special occasion, with three levels per step',
+    ],
+    skillTags: ['STEM', 'Budgeting', 'Division', 'Percentages', 'Thoughtful Giving'],
+    insideTheLearning: {
+      lead:
+        'Your kid gets one real amount of money and a list of people they care about. Splitting it, pricing every cost and cutting until it fits is real math, and starting every gift from a clue about the person keeps it about giving.',
+      skills: [
+        { skill: 'Division', where: 'Splitting one budget across the whole list' },
+        { skill: 'Decimals and Money', where: 'Prices, totals and the change at the register' },
+        { skill: 'Percentages', where: 'Working out the tax in their head' },
+        { skill: 'Trade-offs', where: 'Deciding what to cut, swap or make when the total runs over' },
+        { skill: 'Thoughtful Giving', where: 'Finding a clue about what each person would really love' },
+      ],
+    },
+    format: 'Project Guide',
+  },
   'play-the-world': {
     opening:
       'Your kid finds a game that kids where you are staying really play, learns it from them, and writes down the rules the same day so it is not forgotten. Then they teach it to the family and compare it with a game from home.',

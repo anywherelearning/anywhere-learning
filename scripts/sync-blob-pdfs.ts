@@ -124,6 +124,7 @@ const SLUG_TO_FILE: Record<string, string> = {
   'garden-plot-planner': 'Real-world math - Garden Plot Planner.pdf',
   'kitchen-math-challenge': 'Real-world math - Kitchen math & meal planning challenge.pdf',
   'party-planner-math': 'Real-world math - Party Planner Math.pdf',
+  'gift-budget-challenge': 'Real-world math - Gift Budget Challenge.pdf',
   'road-trip-calculator': 'Real-world math - Road trip calculator.pdf',
   'savings-goal-tracker': 'Real-world math - Savings Goal Tracker.pdf',
   'smart-shopper': 'Real-world math - Smart shopper lab.pdf',

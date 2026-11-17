@@ -1,0 +1,406 @@
+{
+  "slug": "gift-budget-challenge",
+  "category": "Real-World Math",
+  "title": "Gift Budget Challenge",
+  "tagline": "Set · Split · Notice · Fit · Track",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid plans the gifts for a birthday, a holiday or any special occasion with one real amount of money. They set the number, split it across everyone on their list, find a clue about what each person would love, catch every hidden cost, cut and swap until it fits, then buy, keep the receipts and compare them with the plan.",
+  "need": [
+    "One real gift budget: their own savings, or a family gift budget you hand over",
+    "An envelope, for the cash if you can",
+    "The list of people they want to give to",
+    "Flyers, a store or a website for real prices"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "division, decimals and money"
+    },
+    {
+      "subject": "Percentages",
+      "text": "working out tax in your head"
+    },
+    {
+      "subject": "Estimation",
+      "text": "rounding prices to check the total"
+    },
+    {
+      "subject": "Life skills",
+      "text": "budgeting, trade-offs and giving"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "The trap is rescuing the plan when the first total comes in too high. Be the bank and the sounding board: hand over one real number, ask questions, check their math, and let them make the hard cuts.",
+    "plan": [
+      {
+        "when": "A few weeks before",
+        "what": "Set the number and split it (Steps 1 and 2)."
+      },
+      {
+        "when": "Over a few days",
+        "what": "Collect clues and choose the gifts (Step 3)."
+      },
+      {
+        "when": "One sitting",
+        "what": "Price everything and make it fit (Step 4)."
+      },
+      {
+        "when": "Shopping, and after",
+        "what": "Buy, wrap and compare after the big day (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to spend it all on one person",
+        "a": "Let them do the math out loud and see what's left for everyone else. They usually change their mind."
+      },
+      {
+        "q": "They don't have money of their own",
+        "a": "Give them a family gift budget for the people they want to give to. It works the same, as long as the number is real and fixed."
+      },
+      {
+        "q": "They feel bad about a cheap gift",
+        "a": "Keep the price out of it. A drawing in a $3 frame is often the gift people keep for years."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A gift budget is one real number and a list of people you care about. Making them fit is division, decimals and tax, and a chain of small decisions about what each person would really love.",
+    "before": "'I'll just get everyone something nice.'",
+    "model": [
+      {
+        "part": "Budget",
+        "line": "$40 for six people. That's $6.67 each, and it never splits that neatly."
+      },
+      {
+        "part": "First list",
+        "line": "A $22 board game, a $12 mug, a $14 candle and more. Total: $77."
+      },
+      {
+        "part": "Cuts",
+        "line": "Homemade cookies for both grandparents, a $9 card game, a drawing in a $3 frame, newspaper for wrapping."
+      },
+      {
+        "part": "New total",
+        "line": "$33, with $7 left to decide about."
+      }
+    ],
+    "modelNote": "'Something nice for everyone' had no number in it. Starting from $40 forced every gift to earn its place, and the cuts made the gifts more personal, not less."
+  },
+  "steps": [
+    {
+      "title": "Set the number",
+      "why": "A budget only teaches anything when it's one real number, not 'try not to spend too much'.",
+      "kid": "Your kid decides how much they'll spend. If the money is their own, they choose how much of their savings to give away. If it's a family budget, you tell them the amount. Then the cash goes in an envelope, with the number written on the front.",
+      "you": "Say the number out loud and write it on the envelope. If it's their money, let them decide, even if it's less than you'd expect.",
+      "ask": [
+        "How much of what you have do you want to give away?",
+        "Will you still feel good about that number once it's spent?"
+      ],
+      "tip": "Real bills in an envelope teach more than a number on a screen. Watching it get thinner is the lesson.",
+      "levels": {
+        "explore": "Count the money in the envelope with a parent, and say how much there is.",
+        "develop": "Set your gift budget, and write it on the envelope.",
+        "extend": "Look at what you earned this year, and decide what share of it you want to give away, as a percent."
+      }
+    },
+    {
+      "title": "Make the list and split it",
+      "why": "The first division shows how far the money really goes.",
+      "kid": "Your kid writes every person they want to give to, then divides the budget by the number of people, using the Split it card. Then they decide who gets more and who gets less, as long as the total still adds up. For one birthday, the split is the gift, the card and the wrapping.",
+      "you": "Let the awkward answer land, like $6.67 each. Ask 'Does everyone need the same amount?' and let them decide.",
+      "ask": [
+        "How much is that for each person?",
+        "Who could share one gift?"
+      ],
+      "tip": "Uneven is fine. A little sister might get more than a teacher, and two grandparents might share one gift.",
+      "levels": {
+        "explore": "Share the money into piles, one for each person, with a parent.",
+        "develop": "Divide the budget by the list, and give each person an amount that adds up to the total.",
+        "extend": "Split it unevenly on purpose, and explain each choice with a reason."
+      }
+    },
+    {
+      "title": "Be a gift detective",
+      "why": "The best gifts come from noticing, not from shopping.",
+      "kid": "For a few days before choosing, your kid collects one clue about each person, using the Gift detective card in the Gift Budget Toolkit at the end of the guide: what they run out of, what's worn out, what they said 'I wish' about. Then they pick a gift to buy, make or do together, using the Gift idea bank card.",
+      "you": "Help with quiet questions to others, like 'What does Grandma use every day?' Keep the price out of it for now. The person comes first.",
+      "ask": [
+        "What clue did you find about them?",
+        "Buy it, make it, or do it together?"
+      ],
+      "tip": "Write the clue next to the idea. If you can't name a clue, it's probably a guess.",
+      "levels": {
+        "explore": "Pick one person, notice one thing they love, and draw a gift idea.",
+        "develop": "Collect a clue for every person, and choose each gift from its clue.",
+        "extend": "For one person, find a gift they'd never expect but would use every week, and explain the clue that led you there."
+      }
+    },
+    {
+      "title": "Price it and make it fit",
+      "why": "The first total is almost always over. Finding every cost and deciding what to cut is the heart of the challenge.",
+      "kid": "Your kid finds a real price for each gift and adds every hidden cost, using the Hidden costs card, with the tax worked out in their head. Then they compare the total with the budget and cut, swap or make until it fits, using the Make it fit card. For a homemade gift, they use the Homemade math card.",
+      "you": "Don't rescue it. Ask one question: 'Which gifts matter most to you?' Then check their math.",
+      "ask": [
+        "Round each price to the dollar: how close are you to the budget?",
+        "Who would you never cut, and why?"
+      ],
+      "tip": "Each cut is a subtraction and a decision. Kids defend the choices they made themselves.",
+      "levels": {
+        "explore": "Find the price of each gift with a parent, and swap one for something you make.",
+        "develop": "Price every gift with tax and wrapping, then cut and swap until it fits.",
+        "extend": "Cost out a homemade batch per gift, and decide if it beats the store-bought one."
+      }
+    },
+    {
+      "title": "Buy it, wrap it, compare",
+      "why": "Comparing the receipts with the plan is how the next plan gets closer.",
+      "kid": "Your kid carries the list, pays and counts the change, then wraps each gift. Every receipt goes in the envelope. After the big day, they lay the receipts next to the plan, using the Receipt check card, and see where they were close and where they were off.",
+      "you": "Let them pay at the register, even if it's slow. Sit down together for the comparison, and keep the plan for next time.",
+      "ask": [
+        "Which gift cost more than you planned?",
+        "What would you do differently next time?"
+      ],
+      "tip": "Mailing a gift? Ask how many days the post takes, add a few, and count back on the calendar to find the send-by date.",
+      "levels": {
+        "explore": "Pay for one gift yourself, and count the change.",
+        "develop": "Keep every receipt, and compare the total with your plan.",
+        "extend": "Work out what share of the budget went to tax and wrapping, and use it to set the number next time."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Gift Budget Toolkit",
+    "intro": "How to split the money, find the right gift, catch every cost, make it fit and check it afterwards.",
+    "items": [
+      {
+        "name": "Split it",
+        "lines": [
+          {
+            "k": "Divide:",
+            "v": "budget ÷ number of people"
+          },
+          {
+            "k": "Example:",
+            "v": "$40 ÷ 6 = $6.67, but 6 × $6.67 = $40.02"
+          },
+          {
+            "k": "Uneven:",
+            "v": "more for some, less for others"
+          },
+          {
+            "k": "Share:",
+            "v": "two people, one gift"
+          }
+        ],
+        "ask": "Why doesn't $40 split evenly six ways?"
+      },
+      {
+        "name": "Gift detective",
+        "lines": [
+          {
+            "k": "Runs out of:",
+            "v": "coffee, pens, hot chocolate, socks"
+          },
+          {
+            "k": "Worn out:",
+            "v": "a cracked case, a leaky bottle"
+          },
+          {
+            "k": "'I wish':",
+            "v": "something they said this year"
+          },
+          {
+            "k": "Free time:",
+            "v": "what they do on a slow afternoon"
+          },
+          {
+            "k": "Ask quietly:",
+            "v": "a sibling, a parent or a friend"
+          }
+        ],
+        "ask": "Which clue gave you the best idea?"
+      },
+      {
+        "name": "Gift idea bank",
+        "lines": [
+          {
+            "k": "Free:",
+            "v": "a do-your-chore coupon, breakfast in bed"
+          },
+          {
+            "k": "Under $5:",
+            "v": "a small plant, their favourite treat"
+          },
+          {
+            "k": "Under $10:",
+            "v": "a used book, a framed photo"
+          },
+          {
+            "k": "Made:",
+            "v": "cookies, a bracelet, a story about them"
+          },
+          {
+            "k": "Done together:",
+            "v": "teach them a skill you have"
+          }
+        ],
+        "ask": "Which kind of gift fits this person best?"
+      },
+      {
+        "name": "Hidden costs",
+        "lines": [
+          {
+            "k": "Tax:",
+            "v": "added at the till in many places"
+          },
+          {
+            "k": "In your head:",
+            "v": "10% = decimal one place left, 5% = half"
+          },
+          {
+            "k": "Example:",
+            "v": "15% of $12 = $1.20 + $0.60 = $1.80"
+          },
+          {
+            "k": "Wrapping:",
+            "v": "paper, tape, cards, gift bags"
+          },
+          {
+            "k": "Shipping:",
+            "v": "for gifts mailed far away"
+          }
+        ],
+        "ask": "Which hidden cost surprised you most?"
+      },
+      {
+        "name": "Make it fit",
+        "lines": [
+          {
+            "k": "Cut:",
+            "v": "a smaller version of the same idea"
+          },
+          {
+            "k": "Swap:",
+            "v": "a cheaper gift they'll use more"
+          },
+          {
+            "k": "Share:",
+            "v": "one gift for two people"
+          },
+          {
+            "k": "Make:",
+            "v": "bake, draw, build"
+          },
+          {
+            "k": "Wrap:",
+            "v": "newspaper or a drawing instead of paper"
+          }
+        ],
+        "ask": "Which move saved the most?"
+      },
+      {
+        "name": "Homemade math",
+        "lines": [
+          {
+            "k": "Batch:",
+            "v": "$9 of ingredients makes 36 cookies"
+          },
+          {
+            "k": "Per gift:",
+            "v": "12 per tin is 3 tins, $9 ÷ 3 = $3"
+          },
+          {
+            "k": "Add:",
+            "v": "a $1.25 tin makes it $4.25 a gift"
+          },
+          {
+            "k": "Scale:",
+            "v": "5 gifts need 60 cookies, so two batches"
+          }
+        ],
+        "ask": "Is homemade cheaper, once you count everything?"
+      },
+      {
+        "name": "Receipt check",
+        "lines": [
+          {
+            "k": "Planned:",
+            "v": "what you wrote for each gift"
+          },
+          {
+            "k": "Actual:",
+            "v": "what the receipt says"
+          },
+          {
+            "k": "Gap:",
+            "v": "actual minus planned"
+          },
+          {
+            "k": "Left:",
+            "v": "what's still in the envelope"
+          },
+          {
+            "k": "Next time:",
+            "v": "one thing to plan differently"
+          }
+        ],
+        "ask": "Where was your plan furthest off?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Budgeting",
+      "text": "making one real number fit a whole list"
+    },
+    {
+      "name": "Money math",
+      "text": "division, decimals, tax and change"
+    },
+    {
+      "name": "Trade-offs",
+      "text": "deciding what matters most"
+    },
+    {
+      "name": "Thoughtful giving",
+      "text": "starting with the person, not the price"
+    }
+  ],
+  "conclusion": {
+    "headline": "They made every gift fit one real number.",
+    "text": "Watch them at the register next time. A kid who planned every gift checks the total before the cashier says it, and knows exactly what's left in the envelope.",
+    "celebrate": "When they hand someone a gift they planned and paid for, say: 'You thought of what they'd love and made it fit your money. That's a real gift.'",
+    "extensions": [
+      "Plan the food for a holiday or birthday meal on a budget too, from the shopping list to the receipt",
+      "Plan one gift from the whole family, pool everyone's money, and work out what share each person pays",
+      "Sell a small batch of something homemade to fund the next gift budget",
+      "Pick one gift for someone outside the family, like a food bank or a neighbour, and fit it in the budget"
+    ]
+  },
+  "signs": [
+    "They notice what people need long before the big day",
+    "They add tax and wrapping without being reminded",
+    "They talk about what someone would love, not what's expensive"
+  ],
+  "makeItReal": "Before the next birthday or holiday, hand your kid one real number for gifts and the job of making it work. Put the cash in an envelope and let them write the list.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "When my kids give a present, for a birthday or for Christmas, they use their own money and decide how much to spend. At Christmas, everyone buys or makes a small present for every other person in the family, and they all go in the stockings. It's about thinking of each person, not what it cost.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/gift-budget-challenge.jpg",
+    "alt": "A boy holding up his Christmas stocking beside a small tree, with little gifts in paper bags and tissue and handmade cards underneath",
+    "caption": "A small present from everyone, for everyone.",
+    "tall": true
+  }
+}

@@ -1178,6 +1178,21 @@
         "Critical Thinking & Reasoning",
         "Nature & Science"
       ]
+    },
+    "gift-budget-challenge": {
+      "canonical": [
+        "STEM",
+        "Real-World Math",
+        "Budgeting",
+        "Division",
+        "Percentages"
+      ],
+      "families": [
+        "Math & Money",
+        "Entrepreneurship & Money",
+        "Planning & Self-Management",
+        "Empathy & People"
+      ]
     }
   }
 }

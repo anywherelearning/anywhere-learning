@@ -73,6 +73,7 @@ export const productSkills: Record<string, ProductSkills> = {
   "fix-it-detective": { canonical: ["Problem-Solving","Life Skills","Critical Thinking","Planning","Practical Skills"], families: ["critical-thinking-and-reasoning","planning-and-self-management"] },
   "garage-sale-math": { canonical: ["Money Handling","Pricing","Percentages","Multiplication","Entrepreneurship"], families: ["entrepreneurship-and-money","math-and-money"] },
   "garden-plot-planner": { canonical: ["STEM","Geometry","Measurement","Budgeting","Science","Planning"], families: ["critical-thinking-and-reasoning","math-and-money","nature-and-science"] },
+  "gift-budget-challenge": { canonical: ["STEM","Real-World Math","Budgeting","Division","Percentages"], families: ["math-and-money","entrepreneurship-and-money","planning-and-self-management","empathy-and-people"] },
   "hallucination-detective": { canonical: ["AI Literacy","Critical Thinking","Research","Media Literacy"], families: ["tech-and-digital","critical-thinking-and-reasoning"] },
   "healthy-tech-boundaries": { canonical: ["Emotional Regulation","Digital Citizenship","Communication","Planning"], families: ["tech-and-digital","planning-and-self-management","empathy-and-people"] },
   "imaginary-world": { canonical: ["Writing","Art","Geography","Worldbuilding","Imagination"], families: ["communication-and-writing","creativity-and-making","critical-thinking-and-reasoning"] },
