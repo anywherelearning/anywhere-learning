@@ -110,6 +110,13 @@ const CARD_LIKE_BLOCK_TYPES = new Set<BlogContentBlock['type']>([
   'product-callout',
 ]);
 
+/** True for aspect strings like '4/5' or '3 / 4' (taller than wide). */
+function isPortraitAspect(aspect: string | undefined): boolean {
+  if (!aspect) return false;
+  const [w, h] = aspect.split('/').map((n) => parseFloat(n));
+  return Boolean(w && h && h > w);
+}
+
 function isCardLike(b: BlogContentBlock | undefined): boolean {
   return !!b && CARD_LIKE_BLOCK_TYPES.has(b.type);
 }
@@ -425,7 +432,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <ScrollReveal delay={80}>
             <div
               className="relative max-w-[980px] mx-auto overflow-hidden rounded-[4px]"
-              style={{ background: imgBgByCategory[post.category] || '#E6EBDF', aspectRatio: post.heroImageAspect || '16 / 10' }}
+              style={{
+                background: imgBgByCategory[post.category] || '#E6EBDF',
+                aspectRatio: post.heroImageAspect || '16 / 10',
+                // Portrait heroes (e.g. '4/5') fill the frame at a narrower width so they don't run a full screen tall.
+                ...(isPortraitAspect(post.heroImageAspect) ? { maxWidth: 620 } : {}),
+              }}
             >
               <PinterestSaveButton
                 url={`https://anywherelearning.co/blog/${post.slug}`}
