@@ -151,7 +151,7 @@ const OCTOBER_2026 = {
     slugs: [
       'body-owners-manual', // what a scare does to your heart rate, measured
       'creature-habitat',   // invent a creature of the night and keep it alive
-      'mini-movie',         // a spooky radio drama, scripted and recorded
+      'radio-drama-studio', // a spooky radio drama, scripted and recorded
       'party-planner-math', // a Halloween or harvest party on a real budget
     ],
     // Dusk plum, distinct from the detective blue above.
@@ -160,7 +160,7 @@ const OCTOBER_2026 = {
     eyebrow: 'Seasonal pick',
     title: 'Spooky season, for real',
     blurb:
-      "Everyone's thinking about things that go bump in the night, so use it. Measure what a jump-scare does to your heart, invent a creature built for the dark, record a spooky radio drama, and plan the party on a real budget. However your family does October, there's something here.",
+      "Everyone's thinking about things that go bump in the night, so use it. Measure what a minute of jumping does to your heart, invent a creature built for the dark, record a spooky radio drama, and plan the party on a real budget. However your family does October, there's something here.",
     extras: {
       read: { slug: 'backyard-science-experiments', title: 'Backyard Science Experiments: 15 No-Prep Ideas Kids Can Do Today' },
       books: [

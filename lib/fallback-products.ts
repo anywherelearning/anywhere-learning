@@ -479,12 +479,12 @@ export const fallbackProducts: FallbackProduct[] = [
   },
   {
     id: "fb-mini-movie",
-    name: "Create a Mini Movie or Radio Drama",
+    name: "Create a Mini Movie or Stop-Motion",
     slug: "mini-movie",
     description:
-      "Your child writes, directs and produces their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent characters who want something, storyboard it shot by shot with wide, medium and close-up shots, build a simple set and rehearse. Then they record and edit it, or perform it live, and hold a premiere. No tech needed, though a phone works too.",
+      "Your child writes, directs and produces their own show: a live play, a mini movie or a stop-motion film. They invent characters who want something, storyboard it shot by shot with wide, medium and close-up shots, build a simple set and rehearse. Then they record and edit it, or perform it live, and hold a premiere. No tech needed, though a phone works too.",
     shortDescription:
-      "Creativity project for kids ages 6-14: storyboard, film, edit and premiere a mini movie, stop-motion, radio drama or live show.",
+      "Creativity project for kids ages 6-14: storyboard, film, edit and premiere a mini movie, stop-motion or live show.",
     priceCents: 599,
     compareAtPriceCents: null,
     stripePriceId: "price_1TLrplAkIBECpwGm8e5ZKzXB",

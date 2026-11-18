@@ -69,7 +69,7 @@ export const SHARED_WHY_FAMILIES_LOVE_IT = [
 export const SHARED_WHY_PARENTS_LOVE_IT = [
   'A clear roadmap so you stop second-guessing your learning plan',
   'Use it as a menu, not a checklist. No rush, no pressure',
-  'Designed to grow with your child, from babies through teens',
+  'Designed to grow with your child, from age 6 into the teens',
   'Honest, plain-language guidance, no academic jargon',
   'Built around real life: kitchens, parks, conversations, not desks',
   'The lens behind every guide and activity in the library',
@@ -366,7 +366,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
         { skill: 'Engineering', where: 'Bridges, shelters, boats, towers and structures that have to actually stand up' },
         { skill: 'Science', where: 'Measurement, forces, materials and buoyancy learned by testing them' },
         { skill: 'Problem-Solving', where: 'Working out why the first design failed and fixing that specific thing' },
-        { skill: 'Nature', where: 'Built entirely from fallen natural materials, then taken apart afterwards' },
+        { skill: 'Nature', where: 'Built mostly from fallen natural materials, then taken apart afterwards, then taken apart afterwards' },
       ],
     },
     format: 'Card Guide',
@@ -498,7 +498,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       skills: [
         { skill: 'Creative Thinking', where: 'Inventing a theme and the mechanics that turn it into an actual game' },
         { skill: 'Design Thinking', where: 'Playtesting with real players, taking the feedback, and rebuilding the rules' },
-        { skill: 'Math', where: 'Balancing the scoring and probabilities so the game is winnable but not a walkover' },
+        { skill: 'Math', where: 'Balancing points and turns so the game is winnable but not a walkover' },
       ],
     },
     format: 'Project Guide',
@@ -630,7 +630,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
   },
   'mini-movie': {
     opening:
-      'Your child writes, directs and produces their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent characters who want something, storyboard it shot by shot with wide, medium and close-up shots, build a simple set and rehearse. Then they record and edit it, or perform it live, and hold a premiere. No tech needed, though a phone works too.',
+      'Your child writes, directs and produces their own show: a live play, a mini movie or a stop-motion film. They invent characters who want something, storyboard it shot by shot with wide, medium and close-up shots, build a simple set and rehearse. Then they record and edit it, or perform it live, and hold a premiere. No tech needed, though a phone works too.',
     whatsIncluded: [
       '5 steps from a one-sentence story to the premiere',
       'Characters with a want, a strength and a weakness',
@@ -641,7 +641,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['Storytelling', 'Writing', 'Performing', 'Art', 'Collaboration'],
     insideTheLearning: {
       lead:
-        'Your child makes a play, film, stop-motion or radio drama, and directs it like a real crew: a storyboard, shot choices, a rehearsal, an edit and a premiere. Most of it is sequencing and problem-solving under constraint, because something always fails and the shot still has to work.',
+        'Your child makes a play, film or stop-motion, and directs it like a real crew: a storyboard, shot choices, a rehearsal, an edit and a premiere. Most of it is sequencing and problem-solving under constraint, because something always fails and the shot still has to work.',
       skills: [
         { skill: 'Storytelling', where: 'Writing the script and designing the characters that carry it' },
         { skill: 'Directing', where: 'Choosing wide, medium or close-up shots, then trimming and ordering the clips' },
@@ -900,7 +900,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       skills: [
         { skill: 'Number Sense', where: 'Multiplying watts by hours and kilowatt-hours by the rate, then scaling up to daily, weekly and monthly costs' },
         { skill: 'Organisation', where: 'Recording appliance data in tables, then sorting and ranking by what it costs' },
-        { skill: 'Percentages', where: 'Working out what share of the total each appliance is responsible for' },
+        { skill: 'Ranking', where: 'Sorting appliances by what they cost each month, biggest first' },
         { skill: 'Problem-Solving', where: 'Turning the findings into practical changes with estimated savings attached' },
       ],
     },
@@ -1068,9 +1068,9 @@ export const productDescriptions: Record<string, ProductDescription> = {
     skillTags: ['STEM', 'Statistics', 'Data Visualisation', 'Averages', 'Percentages', 'Analysis'],
     insideTheLearning: {
       lead:
-        'Your child collects real stats from a sport they care about and does statistics with them. Averages, shooting percentages, win rates. They chart it, rank players fairly using the numbers, and then predict what happens next and see whether they were right.',
+        'Your child collects real stats from a sport they care about and does statistics with them. Averages, shooting percentages, per-game rates. They chart it, rank players fairly using the numbers, and then predict what happens next and see whether they were right.',
       skills: [
-        { skill: 'Percentages', where: 'Calculating averages, shooting percentages, win rates and success rates' },
+        { skill: 'Percentages', where: 'Calculating averages, shooting percentages and per-game rates' },
         { skill: 'Organisation', where: 'Recording stats in tables, sorting them, then graphing to reveal the pattern and predict from it' },
       ],
     },
@@ -1418,7 +1418,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Your kid learns that AI can sound sure and still be wrong. They ask two or three AI tools the exact same question, compare the answers, spot where they disagree or make things up, check against real sources and decide on an answer of their own they can trust.',
     whatsIncluded: [
       'Five steps, from picking a real question to deciding your own answer',
-      'Good questions, Compare, Spot the bluff and Check it cards',
+      'Good questions, Compare, Spot the bluff and Real sources cards',
       'A worked example: two AIs ranking theme park rides by motion sickness',
       'A safe setup: a grown-up\'s account, no personal details in prompts',
       'Three levels per step, from ages 6 to 14',
@@ -1466,7 +1466,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Your kid finds out what information about them is online and keeps it safe. They list their accounts, map the trail they leave, sort what is private from what is okay to share, check their settings and usernames with you and make a family privacy plan for the next time something asks.',
     whatsIncluded: [
       'Five steps, from listing accounts to a family privacy plan',
-      'My accounts, Footprint map, Private or okay?, Check it and What to do cards',
+      'My accounts, Footprint map, Private or okay?, Settings check and What to do cards',
       'A footprint map they draw themselves, with every account and photo around them',
       'Our privacy plan to keep by the computer: stop, don\'t type it, ask a parent',
       'Three levels per step, from ages 6 to 14',
@@ -1757,7 +1757,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
     whatsIncluded: [
       'Find-my-tree blindfold game',
       'Walk-and-notice with all the senses',
-      'Numbered map with step counts (scale bar for older kids)',
+      'Numbered map with step counts, plus a 15-minute short loop',
       'Stop pattern: where, look, fact, next',
       'A test walk by someone who has never been, then fixes',
     ],
@@ -2280,7 +2280,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Five steps, from finding out what it celebrates to writing the page',
       'Find out first, Watch for, Ask someone and Be a good guest cards',
       'A worked example: the flower and coffee fair in Boquete, Panama',
-      'A celebration journal page, with a comparison to a celebration from home',
+      'A celebration journal page: what it celebrates, what they saw and what it shows',
       'Three levels per step, for any festival, anywhere',
     ],
     skillTags: ['Cultural Awareness', 'Observation', 'Writing', 'Geography', 'Communication'],
@@ -2357,7 +2357,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Five steps, from picking the mission to doing it with a real person',
       'The Mission ladder: greet, buy, ask, order, then chat',
       'Survival phrases, Listen for and When you\'re stuck cards',
-      'A mission ladder, from one word to a whole errand',
+      'A worked example: an ice cream at the tienda, and the surprise question',
       'Three levels per step, for any language, anywhere',
     ],
     skillTags: ['Languages', 'Communication', 'Confidence', 'Cultural Awareness', 'Listening'],

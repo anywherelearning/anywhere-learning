@@ -265,7 +265,7 @@ export const RESULTS: Record<QuizResultId, QuizResult> = {
     activities: [
       { slug: 'micro-business', name: 'Micro-Business Challenge', category: 'entrepreneurship', note: 'Run something real' },
       { slug: 'community-impact', name: 'Community Impact Project', category: 'planning-problem-solving', note: 'Ask real people, do the smallest useful thing' },
-      { slug: 'mini-movie', name: 'Create a Mini Movie or Radio Drama', category: 'creativity-maker', note: 'Write, film, and edit a real movie' },
+      { slug: 'mini-movie', name: 'Create a Mini Movie or Stop-Motion', category: 'creativity-maker', note: 'Write, film, and edit a real movie' },
     ],
   },
 };
