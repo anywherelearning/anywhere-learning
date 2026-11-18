@@ -1,293 +1,314 @@
 {
   "slug": "healthy-tech-boundaries",
   "category": "AI & Digital",
-  "title": "Healthy Tech & AI Boundaries Plan",
-  "tagline": "Notice · Feel · Decide · Agree · Check",
+  "title": "The Screen Experiment",
+  "tagline": "Guess · Check · Predict · Test · Decide",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid helps set their own screen and AI limits, instead of having them handed down. They notice how they use screens, how they feel after, decide what's fair and healthy for them, agree on a plan with you and check it after a few weeks, so the limits feel like theirs.",
+  "goal": "Your kid turns screen rules into an experiment. They guess their daily screen time and check it against the device's own report, find the point where a session turns, pick one rule and predict what it will change, test it for a week, then help write the family plan from what their own evidence showed.",
   "need": [
-    "A week of noticing their usual screen time",
-    "Paper for each kid's plan",
-    "A timer, or your devices' screen-time settings (Screen Time on Apple, Family Link on Android)"
+    "Each device's screen-time report (Screen Time on Apple, Digital Wellbeing or Family Link on Android). Most phones keep one already; if yours is off, turn it on a few days before you start",
+    "A timer",
+    "A notebook for each person's guesses and notes",
+    "One ordinary week for the test"
   ],
   "academics": [
     {
-      "subject": "Health",
-      "text": "how screens affect mood, energy and sleep"
+      "subject": "Science",
+      "text": "predictions, fair tests and results"
     },
     {
       "subject": "Data",
-      "text": "tracking time and patterns"
+      "text": "comparing guesses with real numbers"
+    },
+    {
+      "subject": "Health",
+      "text": "how screens affect mood and sleep"
     },
     {
       "subject": "Communication",
-      "text": "making a case and agreeing on a plan"
-    },
-    {
-      "subject": "Life skills",
-      "text": "self-control and balance"
+      "text": "making a case from evidence"
     }
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "Limits you set alone are limits you enforce alone. Let them notice, ask what they think is fair, decide together, and then let the plan, not you, do the stopping.",
+    "intro": "Your job is to run the experiment with them, not to win it. Guess your own number first, test a rule on your own phone, and when a result surprises you, say so out loud. The plan only works if the evidence is allowed to change your mind too.",
     "plan": [
       {
-        "when": "For a week",
-        "what": "Notice screen use and how they feel (Steps 1 and 2)."
+        "when": "Over a few days",
+        "what": "Guess, check the reports and find the turn (Steps 1 and 2)."
       },
       {
-        "when": "One family conversation",
-        "what": "Decide what's fair and agree on the plan (Steps 3 and 4)."
+        "when": "The next week",
+        "what": "Pick one rule, predict, then run the test (Steps 3 and 4)."
       },
       {
-        "when": "A few weeks later",
-        "what": "Check the plan and adjust it (Step 5)."
+        "when": "One family sit-down",
+        "what": "Write the plan from the evidence and sign it (Step 5)."
       }
     ],
     "tips": [],
     "troubleshoot": [
       {
-        "q": "They ask for more time every day",
-        "a": "Asking is fine. Point to the plan you agreed on together, and save changes for the check-in."
+        "q": "The report shows far more than anyone guessed",
+        "a": "That's the starting data, not a verdict. Read the numbers without a lecture, yours included, and move on to finding the turn."
       },
       {
-        "q": "Siblings say it's unfair they get different limits",
-        "a": "Fair isn't the same. Talk about what each one uses screens for, and let them hear the reasons."
+        "q": "They rate every check a 5 so the screen stays on",
+        "a": "Do the checks out loud together, and add a note they can't fudge, like how long it takes to get going on something else after."
       },
       {
-        "q": "They want to lower the limit, then struggle",
-        "a": "Great sign that they're taking it seriously. Adjust at the check-in, not in the moment."
+        "q": "Siblings want the same rules",
+        "a": "Different results, different rules. Lay their notes side by side and let them see why one rule fits one kid and not the other."
+      },
+      {
+        "q": "Most screen time is the TV or a shared tablet",
+        "a": "No report covers that. For a few days, keep a tally on the fridge each time it goes on and off, and use that as your real number."
       }
     ]
   },
   "lesson": {
-    "text": "Limits kids help set are limits they're more likely to respect. When they notice how screens make them feel, say what's fair, and agree on a plan with you, the screen turning off isn't a fight; it's the plan they made.",
-    "before": "'Screens off, because I said so.'",
+    "text": "Most people, grown-ups too, guess their screen time wrong, and the moment a session turns is hard to feel from inside it. Turning one rule into a test with a prediction gives the family a result everyone saw, so the plan rests on evidence instead of 'because I said so'.",
+    "before": "'I'm barely on it. Can I have five more minutes?'",
     "model": [
       {
-        "part": "Asked",
-        "line": "Each kid said what would be fair and healthy for them."
+        "part": "Guess",
+        "line": "About 1 hour a day."
       },
       {
-        "part": "Talked",
-        "line": "Different needs mean different limits, and they heard why."
+        "part": "Report",
+        "line": "2 hours 10 minutes a day, 70 minutes more than the guess."
       },
       {
-        "part": "Planned",
-        "line": "A different limit for each, agreed together."
+        "part": "Turn",
+        "line": "Mood checks every 15 minutes read 5, 5, 4, 2. It turned between 45 and 60 minutes."
       },
       {
-        "part": "Now",
-        "line": "The screen shuts off when time's up. They ask for more, but don't fuss at a no."
+        "part": "Test week",
+        "line": "A 45-minute timer. The number at the end went from mostly 2s to mostly 4s."
       }
     ],
-    "modelNote": "The limits aren't the same, and they don't have to be. Because the kids helped decide, the 'no' at the end lands as their own plan, not a punishment."
+    "modelNote": "'Barely on it' was a feeling. The report gave a real number, the mood checks showed where the session turned, and the 45-minute limit came from the kid's own checks instead of a rule handed down."
   },
   "steps": [
     {
-      "title": "Log a screen week",
-      "why": "Most people guess their screen time wrong. Noticing comes before deciding.",
-      "kid": "For a week, your kid notes what they use screens for and roughly how long, using the Screen week card in the Healthy Tech Toolkit at the end of the guide.",
-      "you": "Track yours too, honestly. Kids notice when grown-ups have different rules for themselves.",
+      "title": "Guess, then check",
+      "why": "Almost everyone guesses their screen time wrong. Writing the guess down first is what makes the real number land.",
+      "kid": "Your kid writes a guess for their daily screen time, then opens the device's own report with you, using the Guess and check card in the Screen Experiment Toolkit at the end of the guide. They work out the gap in minutes.",
+      "you": "Guess yours too, write it down before you look, and read your real number out loud, even if it's not flattering.",
       "ask": [
-        "What do you use screens for most?",
-        "Which screen time felt worth it?"
+        "What did you guess, and what did the report say?",
+        "Which app took more time than you thought?"
       ],
-      "tip": "Sort it into watching, playing, making and learning. Not all screen time is the same.",
+      "tip": "Count everything the report shows, AI chats and video calls included. It's all screen time.",
       "levels": {
-        "explore": "Each day, draw what you did on a screen.",
-        "develop": "Track a week, sorted into watching, playing, making and learning.",
-        "extend": "Track a week, then work out what share of your time was making or learning."
+        "explore": "Show with your arms how long you think you were on screens today, then see the real number with a parent.",
+        "develop": "Guess your daily average, check it on the report, and work out how far off you were in minutes.",
+        "extend": "Guess for every person in the family, then draw a bar chart of guesses next to real numbers and see who guessed low and who guessed high."
       }
     },
     {
-      "title": "Notice how you feel after",
-      "why": "Screens change mood and energy. Seeing it themselves is more convincing than being told.",
-      "kid": "After screen time, your kid checks in with themselves, using the How do I feel? card: mood, energy, wanting to move or do something.",
-      "you": "Say what you notice too, kindly: 'You seemed grumpier after the long session yesterday.'",
+      "title": "Find the turn",
+      "why": "Screen time rarely goes bad all at once. There's usually a point where it turns, and you can't feel it from inside without checking.",
+      "kid": "During a normal screen session, a timer rings every 15 minutes and your kid gives a quick number from 1 to 5, using the Mood check card. They do this for three or four sessions, then look for the point where the number drops.",
+      "you": "Set the timer and ask for the number out loud, with no comment on the number. Run the same checks on one of your own phone sessions.",
       "ask": [
-        "How do you feel right after?",
-        "How do you feel after a screen-free day?"
+        "When did your number start to drop?",
+        "Is it the same spot every time?"
       ],
-      "tip": "If the week has a lighter screen day, compare it with a long one. Let them say what's different before you do.",
+      "tip": "Keep each check under ten seconds. A long pause changes the session you're trying to measure.",
       "levels": {
-        "explore": "Point to a face that shows how you feel after screens.",
-        "develop": "Rate mood and energy after screens for a week.",
-        "extend": "Find the point in a session where your mood turns, like after 20 minutes or after the second episode."
+        "explore": "When the timer rings, hold up 1 to 5 fingers for how you feel, using the Mood check card.",
+        "develop": "Rate every 15 minutes for three sessions, and mark where the number dropped each time.",
+        "extend": "Compare the turn for two kinds of screen time, like a show and a game, and find out which one turns sooner."
       }
     },
     {
-      "title": "Name what's fair for you",
-      "why": "Kids are often fairer about their own limits than you'd expect, when they're asked.",
-      "kid": "Your kid writes what they think would be fair and healthy for them, and why, using the What's fair? card: how long, for what, and when.",
-      "you": "Listen first. Then share what you think, and why. Different kids can have different needs.",
+      "title": "Pick one rule and predict",
+      "why": "A rule with a prediction is a test, not an order. Writing the prediction first is what makes the result count.",
+      "kid": "Your kid picks one rule from the Rule menu card, like devices charging outside bedrooms, screens only after time outside, or stopping at their turn. They write what they think will change, and by how much. Siblings can test different rules.",
+      "you": "Pick a rule for your own phone too, and write your prediction next to theirs. Kids notice whether grown-ups test themselves.",
       "ask": [
-        "How much screen time feels fair to you?",
-        "What do you need screens for, and what's just for fun?"
+        "What do you think will change?",
+        "How will we know if it worked?"
       ],
-      "tip": "Include AI here too: what it's for in your house, like looking something up together, and what it's not for, like chatting as a friend or doing their writing.",
+      "tip": "One rule at a time. With two new rules in one week, nobody knows which one did the work.",
       "levels": {
-        "explore": "Say how much screen time you think is fair, with a parent.",
-        "develop": "Write your fair limit, what it's for, and why.",
-        "extend": "Write your limit, and argue for it with your own data from Steps 1 and 2."
+        "explore": "Choose between two rules a parent reads out, and say if you think it will make you happier or grumpier.",
+        "develop": "Pick a rule, and write a prediction with a number in it, like falling asleep 10 minutes faster.",
+        "extend": "Before the week starts, write down what result would prove your prediction wrong."
       }
     },
     {
-      "title": "Agree on a plan",
-      "why": "A plan both sides agreed on doesn't need to be enforced every day.",
-      "kid": "Your family talks it through and fills in Our screen plan at the end of the guide, one for each kid, using the Plan ideas card.",
-      "you": "Decide together, then let the device or a timer do the stopping, so you don't have to.",
+      "title": "Run the test week",
+      "why": "A week is long enough to get past a grumpy first day, and short enough to stick to.",
+      "kid": "For a week, your kid lives with their rule and keeps the same notes every day, using the Test notes card: a mood number from 1 to 5 at the end of screen time, how easily they fell asleep, and one thing they made or did instead.",
+      "you": "Keep your own notes on your rule. Hold the rule steady all week, even on a hard day, so the test stays fair.",
       "ask": [
-        "What happens when time's up?",
-        "When can we talk about changing it?"
+        "What surprised you this week?",
+        "Did your prediction come true?"
       ],
-      "tip": "Before anyone signs, test-drive the limit for three days with the timer on. A plan they've tried is easier to keep than one on paper.",
+      "tip": "Don't judge the rule on day one. Look at the whole week before deciding anything.",
       "levels": {
-        "explore": "Help choose your limit, and set the timer with a parent.",
-        "develop": "Agree on your plan, sign it and set the limits on the device.",
-        "extend": "Write the plan for a trip or a holiday week, when the usual rules don't fit."
+        "explore": "Each evening, give the day a 1 to 5, and draw one thing you did instead of screens.",
+        "develop": "Keep all three notes every day, then hold the week up against your prediction.",
+        "extend": "At the end of the week, check the device report, work out how many minutes the rule saved, and find where those minutes went."
       }
     },
     {
-      "title": "Check it and adjust",
-      "why": "Needs change. A plan you check stays fair.",
-      "kid": "After a few weeks, your kid looks at how the plan worked, using the Check-in card, and suggests one change if they want.",
-      "you": "Take their suggestions seriously. Change the plan at the check-in, not in the middle of an argument.",
+      "title": "Write the plan from the evidence",
+      "why": "Rules that came from their own results don't need to be enforced every day.",
+      "kid": "Your family lays out everyone's notes, keeps the rules that changed something and drops the ones that didn't, using the Plan from evidence card. Then you fill in Our screen plan at the end of the guide together, and everyone signs.",
+      "you": "Let the timer or the device settings do the stopping, so you don't have to. Put the check-in date on the calendar before anyone signs.",
       "ask": [
-        "Is the plan still fair?",
-        "What would you change, and why?"
+        "Which result convinced you most?",
+        "What happens when time's up?"
       ],
-      "tip": "Put the check-in date on the calendar. It gives requests for more time a place to go.",
+      "tip": "Before anyone signs, test-drive the full plan for three days with the timers on. A plan they've tried is easier to keep than one on paper.",
       "levels": {
-        "explore": "Say one thing you like about the plan, and one you'd change.",
-        "develop": "Look at a few weeks, and suggest one change with a reason.",
-        "extend": "Write the next version of your plan for a year from now: what changes, and what you'd want to show to earn it."
+        "explore": "Help choose one rule to keep, and set the timer with a parent.",
+        "develop": "Write your part of the plan with the result behind each rule, sign it and set the limits on the device.",
+        "extend": "Design the next experiment for the check-in: a rule nobody has tested yet, with your prediction already written."
       }
     }
   ],
   "reference": {
-    "title": "Healthy Tech Toolkit",
-    "intro": "Notice your screen time, how you feel, what's fair, and how to make a plan that sticks.",
+    "title": "Screen Experiment Toolkit",
+    "intro": "Where to find the real numbers, how to find the turn, rules worth testing, fair notes and how to build the plan.",
     "items": [
       {
-        "name": "Screen week",
+        "name": "Guess and check",
         "lines": [
           {
-            "k": "Watching:",
-            "v": "shows, videos"
+            "k": "Guess first:",
+            "v": "write it down before you look"
           },
           {
-            "k": "Playing:",
-            "v": "games"
+            "k": "Apple:",
+            "v": "Settings, then Screen Time"
           },
           {
-            "k": "Making:",
-            "v": "creating, coding, writing"
+            "k": "Android:",
+            "v": "Settings, then Digital Wellbeing"
           },
           {
-            "k": "Learning:",
-            "v": "practice, research, lessons"
+            "k": "Kid's device:",
+            "v": "Family Link app, on your phone"
+          },
+          {
+            "k": "Gap:",
+            "v": "real minutes minus guessed minutes"
           }
         ],
-        "ask": "Which kind takes most of your time?"
+        "ask": "Who guessed closest, and who was furthest off?"
       },
       {
-        "name": "How do I feel?",
+        "name": "Mood check",
+        "lines": [
+          {
+            "k": "When:",
+            "v": "every 15 minutes, on a timer"
+          },
+          {
+            "k": "5:",
+            "v": "glad I'm doing this"
+          },
+          {
+            "k": "3:",
+            "v": "just going along"
+          },
+          {
+            "k": "1:",
+            "v": "grumpy, stuck, can't stop"
+          },
+          {
+            "k": "The turn:",
+            "v": "the first big drop, like 4 to 2"
+          }
+        ],
+        "ask": "When did your number drop?"
+      },
+      {
+        "name": "Rule menu",
+        "lines": [
+          {
+            "k": "Charge out:",
+            "v": "devices sleep outside bedrooms"
+          },
+          {
+            "k": "Outside first:",
+            "v": "screens after time outside"
+          },
+          {
+            "k": "Stop at the turn:",
+            "v": "a timer set just before it"
+          },
+          {
+            "k": "One and done:",
+            "v": "one episode or game, then off"
+          },
+          {
+            "k": "Prediction:",
+            "v": "I think ___ will change by ___"
+          }
+        ],
+        "ask": "Which rule do you think will change the most?"
+      },
+      {
+        "name": "Test notes",
         "lines": [
           {
             "k": "Mood:",
-            "v": "happy, okay, grumpy"
-          },
-          {
-            "k": "Energy:",
-            "v": "lots, some, tired"
-          },
-          {
-            "k": "Wanting to:",
-            "v": "move, make something, do nothing"
+            "v": "a 1 to 5 at the end of screen time"
           },
           {
             "k": "Sleep:",
-            "v": "easy or hard that night?"
-          }
-        ],
-        "ask": "What changes most after a long session?"
-      },
-      {
-        "name": "What's fair?",
-        "lines": [
-          {
-            "k": "How long:",
-            "v": "a day, a week, weekends only?"
-          },
-          {
-            "k": "For what:",
-            "v": "fun, learning, making, work"
-          },
-          {
-            "k": "When:",
-            "v": "after what, before what?"
-          },
-          {
-            "k": "AI:",
-            "v": "what it's for, who sits with you, never a secret friend"
-          }
-        ],
-        "ask": "Why might your limit be different from a sibling's?"
-      },
-      {
-        "name": "Plan ideas",
-        "lines": [
-          {
-            "k": "Auto-stop:",
-            "v": "the device shuts off when time's up"
-          },
-          {
-            "k": "Screen-free:",
-            "v": "meals, bedtime, mornings"
+            "v": "fell asleep fast, slow or very slow"
           },
           {
             "k": "Instead:",
-            "v": "what you'll do when it turns off"
+            "v": "one thing you made or did"
           },
           {
-            "k": "Ask:",
-            "v": "it's okay to ask; no fussing at a no"
+            "k": "Fair test:",
+            "v": "same rule, same notes, every day"
           }
         ],
-        "ask": "Which idea would help you most?"
+        "ask": "Did it change what you predicted?"
       },
       {
-        "name": "Check-in",
+        "name": "Plan from evidence",
         "lines": [
           {
-            "k": "Worked:",
-            "v": "what went well"
+            "k": "Keep:",
+            "v": "rules that changed something"
           },
           {
-            "k": "Hard:",
-            "v": "when it was tough to stop"
+            "k": "Drop:",
+            "v": "rules that made no difference"
           },
           {
-            "k": "Feel:",
-            "v": "how you've felt since"
+            "k": "Auto-stop:",
+            "v": "the timer or device says when"
           },
           {
-            "k": "Change:",
-            "v": "one thing, with a reason"
+            "k": "Asking:",
+            "v": "fine to ask, no fussing at a no"
+          },
+          {
+            "k": "Check-in:",
+            "v": "a date on the calendar"
           }
         ],
-        "ask": "What helped you stop on the hard days?"
+        "ask": "Which result would change your mind at the check-in?"
       }
     ],
     "after": {
       "label": "Our screen plan",
       "lines": [
-        "Name and daily limit:",
-        "What screens are for:",
-        "AI is for:",
-        "Screen-free times:",
+        "Name and the rule I tested:",
+        "What my notes showed:",
+        "Rules we're keeping:",
+        "What does the stopping:",
         "When time's up, I'll:",
         "Check-in date, and signed by everyone:"
       ]
@@ -296,15 +317,15 @@
   "skills": [
     {
       "name": "Self-awareness",
-      "text": "noticing how screens make them feel"
+      "text": "noticing where a session turns"
     },
     {
-      "name": "Fairness",
-      "text": "different needs, different limits"
+      "name": "Testing",
+      "text": "one rule, one prediction, one week"
     },
     {
-      "name": "Negotiation",
-      "text": "making a case and agreeing"
+      "name": "Using evidence",
+      "text": "keeping only the rules that worked"
     },
     {
       "name": "Self-control",
@@ -312,22 +333,22 @@
     }
   ],
   "conclusion": {
-    "headline": "Their screen limits are theirs, not just yours.",
-    "text": "In a few weeks, notice the moment the timer goes off. A quick 'can I have five more?', a no, and on to something else means the plan is doing the stopping, not you.",
-    "celebrate": "When they stop without a fuss, say: 'You stuck to the plan you helped make. That's real self-control.'",
+    "headline": "Their screen rules came from their own results.",
+    "text": "Listen at the check-in for how they ask for a change. 'My notes showed I slept fine' instead of 'please, five more minutes' means they're arguing from evidence, and that kind of ask deserves a yes now and then.",
+    "celebrate": "When the timer goes off and they stop on their own, say: 'You tested that rule yourself, and now you're keeping it. That's your plan working.'",
     "extensions": [
       "Swap roles for a day: the kids write a fair limit for a parent, and the parent tries it",
-      "Pick a charging spot outside the bedrooms where every device, grown-ups' too, sleeps at night",
-      "Compare your Step 1 guesses with the device's own screen-time report, and see who guessed closest",
-      "Agree on a family 'phones away' signal for conversations, and use it on grown-ups too"
+      "Run the experiment again in six months, and see if the turn has moved",
+      "Test one rule on the whole family at once, like phones in a basket during meals, and compare everyone's notes",
+      "Keep the same three notes on a screen-free day, and compare it with an ordinary one"
     ]
   },
   "signs": [
-    "They ask for more time without fussing at a no",
-    "They say how screens make them feel",
-    "They suggest changes at the check-in, not in the moment"
+    "They check the report before arguing about time",
+    "They notice when a session has turned",
+    "They ask for changes with a result, not a fuss"
   ],
-  "makeItReal": "This week, ask each kid what screen limit feels fair to them and why. Then sit down together and write their plan.",
+  "makeItReal": "Tonight, have everyone write a guess for their daily screen time, grown-ups too, then open the reports together and read the real numbers out loud.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

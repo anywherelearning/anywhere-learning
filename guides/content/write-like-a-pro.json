@@ -2,337 +2,367 @@
   "slug": "write-like-a-pro",
   "category": "Writing & Communication",
   "title": "Write It Like a Pro",
-  "tagline": "Voice and style · Writing for a reader · Revision",
+  "tagline": "Pick · Plan · Draft · Test · Send",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid picks a writing style (a review, a letter, a how-to, an opinion piece, a short story, a news report or a song), picks a topic they actually care about, and writes something real for a real reader: a persuasive letter about bedtime, a how-to for their best skill. They learn that different situations call for different voices, and that writing for a real person changes how you put words together.",
+  "goal": "Your kid picks one real piece of family news, like a new pet, a trip or something they just learned to do, and writes it three times for three real readers who need different things: a letter for a grandparent, a quick bulletin for the family group chat, a how-to or a story for a younger cousin. They send all three for real, then check whether each reader did or said what that version was meant to get.",
   "need": [
+    "One piece of real family news",
     "Paper and pencil, or a notes app",
-    "The Writing Style Cards at the end of the guide",
-    "A real reader: you, a grandparent, a friend"
+    "Three readers you can really reach: a grandparent, the family group chat, a younger cousin",
+    "An envelope and a stamp, if the letter goes by mail"
   ],
   "lesson": {
-    "text": "The same topic sounds completely different depending on who's reading and what you want from them. Before writing a word, your kid answers two questions: who is this for, and what do they need from me?",
-    "before": "Bedtime should be later because I want it to be.",
+    "text": "The same news sounds completely different depending on who's reading and what you want them to do next. Pro writers, from reporters to the people who write ads, start there. Before writing a word, your kid answers two questions for each reader: what do they need from me, and what do I want back?",
+    "before": "'We got a puppy. She's really cute.'",
     "model": [
       {
-        "part": "To a parent",
-        "line": "Dear Mom, I'd like to propose a 9 p.m. bedtime on weekends. Here's my plan."
+        "part": "Letter to Grandpa",
+        "line": "Dear Grandpa, our new puppy fell asleep in the slipper you left here. Will you come meet her?"
       },
       {
-        "part": "As a review",
-        "line": "Bedtime at 8: two stars. Too early for summer, when it's still light out."
+        "part": "Family group chat",
+        "line": "PUPPY NEWS: 10 weeks old, brown, sleeps in the laundry room. Name ideas by Friday?"
       },
       {
-        "part": "As news",
-        "line": "Local kid campaigns for later bedtime. Parents 'considering it.'"
-      },
-      {
-        "part": "As a how-to",
-        "line": "How to get a later bedtime: Step 1, show you can wake up on time."
+        "part": "How-to for a cousin, 5",
+        "line": "How to meet a puppy. Step 1: sit on the floor and let her come to you."
       }
     ],
-    "modelNote": "'Because I want it to be' only convinces the writer. Each fix gives its reader what they need: Mom gets a plan, the review gets a reason, the news gets who and what, the how-to gets a first step."
+    "modelNote": "Every version keeps the same facts and changes what comes first. Grandpa gets a picture and a question to answer, the chat gets the facts in one glance and a reason to reply, and the cousin gets something to do. 'She's really cute' gave none of them anything to answer."
   },
   "academics": [
     {
       "subject": "Writing",
-      "text": "seven styles, each with its own structure and voice"
+      "text": "a letter, a bulletin and a how-to or story from one set of facts"
     },
     {
       "subject": "Reading",
-      "text": "noticing how real reviews, letters and news reports are built"
+      "text": "hearing your own draft the way each reader will"
     },
     {
       "subject": "Thinking",
-      "text": "audience awareness: what this reader already knows and needs"
+      "text": "what this reader already knows, needs and will do next"
     },
     {
       "subject": "Life skills",
-      "text": "asking for what you want in writing, and taking feedback well"
+      "text": "keeping in touch with family, and checking if a message worked"
     }
   ],
   "howTo": {
-    "intro": "Respond to what the words do to you: 'I got confused here' or 'this bit made me laugh' helps more than 'fix your comma.' Leave spelling for the final version.",
+    "intro": "Play each reader before the real one does: be Grandpa for the letter, and scroll past the bulletin like a busy aunt. Save spelling for Version 2, and let your kid be the one who presses send or licks the stamp.",
     "plan": [
       {
-        "when": "Tonight",
-        "what": "The style switch game, then pick the style, topic and reader (Steps 1 and 2). 20 minutes."
+        "when": "One evening",
+        "what": "Pick the news and the readers, and decide what each one needs (Steps 1 and 2)."
       },
       {
-        "when": "Next day",
-        "what": "Write the first draft, then read it out loud for feedback (Steps 3 and 4)."
+        "when": "The next day",
+        "what": "Write all three, then read them aloud and revise (Steps 3 and 4)."
       },
       {
-        "when": "After a break",
-        "what": "Revise and send it to its real reader (Step 5)."
+        "when": "Over the next week",
+        "what": "Send them and check each reply as it comes in (Step 5)."
       }
     ],
     "tips": [],
     "troubleshoot": [
       {
-        "q": "They freeze at a blank page",
-        "a": "Say it out loud: 'Version 1 is supposed to be messy.' Then ask: what's the first thing you want your reader to know?"
+        "q": "All three versions sound the same, just shorter",
+        "a": "Read the how-to out loud as if you were Grandpa and look puzzled. Then ask: what does he need that the cousin doesn't?"
       },
       {
-        "q": "They get defensive about feedback",
-        "a": "Normal. Ask them to give you feedback on something you wrote first. It shows them how it works."
+        "q": "A reader never answers",
+        "a": "Give it a few days, then ask kindly what they'd have needed to reply. It usually points to a missing question."
       },
       {
-        "q": "They stop every line to ask how to spell a word",
-        "a": "Write it how it sounds and underline it. You'll fix the underlined words together in Version 2."
+        "q": "There's no family group chat or younger cousin",
+        "a": "Swap in readers who need different things: a text to an aunt, a note read at dinner, a younger kid you know well."
       }
     ]
   },
   "skills": [
     {
-      "name": "Voice and style",
-      "text": "writing differently depending on the situation"
+      "name": "Audience awareness",
+      "text": "choosing what each reader needs first"
     },
     {
-      "name": "Audience awareness",
-      "text": "thinking about who's reading and what they need"
+      "name": "Voice and style",
+      "text": "telling the same facts in three different voices"
     },
     {
       "name": "Revision",
-      "text": "seeing the gap between what you meant and what you wrote"
+      "text": "seeing the gap between Version 1 and what the reader needed"
     },
     {
-      "name": "Confidence",
-      "text": "finishing a piece of writing and knowing it's good"
+      "name": "Checking results",
+      "text": "judging writing by what the reader actually did"
     }
   ],
   "steps": [
     {
-      "title": "Play style switch",
-      "why": "One sentence about the dog in three voices, then the style and topic.",
-      "kid": "Pick something silly, like the family dog. Your kid describes it in one sentence as a news reporter, then a restaurant critic, then a sports commentator. Then they flip through the Writing Style Cards at the end of the guide, pick a style and a topic they care about, and write: 'I'm writing a [style] about [topic].'",
-      "you": "Play the game too, the more dramatic the better. Then help them find a style and topic combination with enough to say, and let them choose.",
+      "title": "Pick the news and three readers",
+      "why": "One piece of news, and three people who'd each want something different from it.",
+      "kid": "Your kid picks one piece of real family news: a new pet, a trip, something they just learned to do. They list everyone who'd care, then choose three readers who'd need different things, using the Reader check card in the Writing Style Cards at the end of the guide.",
+      "you": "Warm up with one round of style switch: tell the news the way Grandma would want it, then the way a busy uncle would. Then help them find three readers they can really reach, and let them choose.",
       "starters": [
-        "Review + a game or book",
-        "How-to + something they're good at",
-        "Opinion + a rule they'd change",
-        "Letter + someone real",
-        "News + something in the family",
-        "Song + facts about a place"
+        "A new pet",
+        "A trip, or one coming up",
+        "A skill they just learned",
+        "A family event",
+        "Something they built or made",
+        "A first: a lost tooth, a first swim"
       ],
       "ask": [
-        "Which voice was the funniest, and why?",
-        "Who would actually want to read this?"
+        "Who would want to hear this news most?",
+        "Which two readers would want something completely different?"
       ],
-      "tip": "A kid who's bored by the topic will write bored. Let them pick something they really care about.",
+      "tip": "Small news works. A lost tooth told well to three readers teaches more than a big trip told the same way three times.",
       "levels": {
-        "explore": "Play one round, then pick a style and topic from the ideas.",
-        "develop": "Pick your own topic, and explain why your style fits it.",
-        "extend": "Pick two styles for the same topic, and predict how the pieces will differ."
+        "explore": "Pick the news, and point to three people in a family photo who should hear it.",
+        "develop": "List everyone who'd care, and choose three readers who need different things.",
+        "extend": "Add a reader who already knows the news, and work out what's still worth telling them."
       }
     },
     {
-      "title": "Know your reader",
-      "why": "Your kid figures out who they're writing for and what that person needs.",
-      "kid": "Before writing a word, your kid asks their real reader one quick question, like 'What would you need to hear to say yes?', and writes the answer down. Then they decide what the reader already knows, what they want (a laugh, facts or a reason to say yes), and which tone fits.",
-      "you": "Ask the questions that make them think past themselves. A how-to for a five-year-old looks nothing like one for a teenager, and a letter to Grandma has a different tone than a letter to a company.",
+      "title": "Decide what each reader needs",
+      "why": "Before any writing, your kid decides what each version has to do.",
+      "kid": "For each reader, your kid fills in the Reader check card: what they already know, what they need (a feeling, the facts or something to do) and what your kid wants back, like a call from Grandpa. Then they match each reader to a style card: Letter, Bulletin, How-to or Story.",
+      "you": "Ask questions that move them past themselves: 'Grandpa can't see the puppy. What does he need to picture her?' Help them write each want-back line as something you could actually see happen.",
       "ask": [
-        "If this person picked up your writing, what would make them keep reading?",
-        "Would you write this differently if your reader were five?"
+        "What does this reader already know?",
+        "What do you want them to do after reading?"
       ],
-      "tip": "When kids know a real person will read it, they suddenly care whether it makes sense.",
+      "tip": "A want-back line you can check, like 'the chat sends name ideas', is what makes Step 5 work. 'They like it' can't be checked.",
       "levels": {
-        "explore": "Name your reader and pick a tone.",
-        "develop": "Write down your reader's answer, what they already know, what they want and the tone, then one sentence on how this reader changes your writing.",
-        "extend": "Write down the first question or 'but...' your reader will have, and plan where you'll answer it."
+        "explore": "Say out loud what each reader should do after reading, while a parent writes it down.",
+        "develop": "Fill in the Reader check for all three readers, with a want-back line you can check.",
+        "extend": "Ask one reader first, 'What would you want to know about it?', and compare the answer with your guess."
       }
     },
     {
-      "title": "Write the first draft",
-      "why": "The messy part: get the whole thing down, start to finish.",
-      "kid": "Your kid writes the whole piece in one go, using their style card as a loose guide. They keep going without stopping to fix spelling or rewrite sentences, and they say what they actually think. Bland and safe is worse than rough and honest.",
-      "you": "Protect the momentum: no corrections yet. If they get stuck, ask 'what's the next thing you want your reader to know?'",
+      "title": "Write three Version 1s",
+      "why": "Same facts, three drafts, written fast.",
+      "kid": "Your kid writes all three versions in one sitting, each with its style card open. The facts stay the same; what comes first, how long it is and how it sounds change for each reader. They keep going without stopping to fix spelling. Messy is fine in Version 1.",
+      "you": "Protect the momentum: no corrections yet. If two versions start to sound alike, ask 'What does this reader need first?' and let them start that one again.",
       "ask": [
-        "What's the most important thing you want to say?",
-        "Are you writing what you think, or what you think sounds right?"
+        "What comes first in each version, and why?",
+        "Which version was hardest to write?"
       ],
-      "tip": "Professional writers don't get it right the first time either. Saying that out loud helps more kids than you'd think.",
+      "tip": "Write the bulletin first. Squeezing the news into three lines shows what the real news is, and the other two get easier.",
       "levels": {
-        "explore": "Say it aloud, then write or dictate a few lines.",
-        "develop": "Write a full page with a clear opening, middle and ending.",
-        "extend": "Label each paragraph with the part of your card's Build line it does. Fix any that does two jobs, or none."
+        "explore": "Tell the news to each reader out loud while a parent writes it down, or draw the cousin's version.",
+        "develop": "Write all three versions, each built the way its style card says.",
+        "extend": "Read the how-to as if it were for Grandpa, and list everything that's wrong with it for him."
       }
     },
     {
-      "title": "Read it out loud for feedback",
-      "why": "Your kid hears their piece through a reader's ears.",
-      "kid": "Your kid reads the draft out loud to you or another family member and listens to the reaction. Then they write down 2 or 3 things to change: not everything, just what will make the biggest difference.",
-      "you": "Respond as a reader, not a proofreader. Start with what works, then name one or two things that confused you: 'I got really interested when you talked about...', 'I got a little lost in the middle.'",
+      "title": "Read them as each reader",
+      "why": "Your kid hears each draft through the ears it was written for.",
+      "kid": "Your kid reads each version out loud while you play its reader: Grandpa, a busy aunt scrolling the chat, a five-year-old. They watch where you lose interest or look confused, then write Version 2 of each and set it beside Version 1 to spot what changed.",
+      "you": "Really play the part. As the five-year-old, wiggle at long sentences; as the aunt, look away after two lines. React as a reader, not a proofreader, and fix spelling together in Version 2.",
       "ask": [
-        "What part are you most proud of?",
-        "If you could change just one thing, what would it be?"
+        "Where did your reader stop paying attention?",
+        "What's the biggest change between Version 1 and Version 2?"
       ],
       "tip": "If it sounds weird out loud, it reads weird on paper. Kids catch their own mistakes faster when they hear them.",
       "levels": {
-        "explore": "Read it out loud and pick 1 thing to keep and 1 to change.",
-        "develop": "Write down 2 or 3 specific changes based on the feedback.",
-        "extend": "Ask your listener to say back, in one sentence, what the piece wanted from them. If it isn't what you meant, fix the opening."
+        "explore": "Read one version to a parent playing the reader, and fix the one part that lost them.",
+        "develop": "Read all three, then write Version 2 of each with the changes.",
+        "extend": "Ask your listener to say back, in one sentence, what each version wanted from them. Fix any that miss."
       }
     },
     {
-      "title": "Revise and send it",
-      "why": "Version 2, then the piece goes to the person it was written for.",
-      "kid": "Your kid makes their changes: an opening that grabs, the main point early, no sentences that add nothing, an ending that feels finished. They set Version 1 beside Version 2 and spot what changed. Then they send it: mail the letter, test the how-to, read the opinion piece at dinner.",
-      "you": "Help them see the gap between the two versions: that gap is the learning. Then handle the logistics of sending (an envelope and stamp, a slot at dinner, a friend to test the how-to), and let your kid do the handing over.",
+      "title": "Send all three and check",
+      "why": "The real readers decide whether each version worked.",
+      "kid": "Your kid sends every version for real: the letter in the mail, the bulletin in the family chat, the how-to or story to the cousin. As replies come in, they check each one against its want-back line with the Did it land? card, then write in a notebook which version worked, and why.",
+      "you": "Handle the logistics (a stamp, the chat, a video call with the cousin) and let your kid do the sending. When replies come, read them together before anyone judges.",
       "ask": [
-        "What's the biggest change between Version 1 and Version 2?",
-        "Who would enjoy reading this most?"
+        "Which reader did exactly what you hoped?",
+        "What would you change in the version that missed?"
       ],
-      "tip": "If they don't want to share, ask why gently. Sometimes 'I don't want to' means 'I'm not sure it's good enough.'",
+      "tip": "A version that missed is the most useful one. Ask that reader what they'd have needed; the answer usually points at the opening or the ending.",
       "levels": {
-        "explore": "Fix the one thing you picked, read the new version to your reader, and point to the part that's better.",
-        "develop": "Rewrite the full piece with all edits, and send it to a real reader.",
-        "extend": "Before sending, write the reply you hope to get back. Then check: does your piece give the reader everything they'd need to write it?"
+        "explore": "Send one version with a parent, and tell what the reader said back.",
+        "develop": "Send all three, and check each reply with the Did it land? card.",
+        "extend": "Compare how fast and how fully each reader answered, and decide which way of sending suits which kind of news."
       }
     }
   ],
   "reference": {
     "title": "Writing Style Cards",
-    "intro": "Flip through these to choose a style. Each one says what the style does, how it's built, and what it sounds like.",
+    "intro": "A card for knowing your reader, four styles to write in, and a card for checking whether it worked.",
     "items": [
       {
-        "name": "Review",
+        "name": "Reader check",
         "lines": [
           {
-            "k": "Job:",
-            "v": "help someone decide if something is worth it."
+            "k": "Who:",
+            "v": "one real person you can reach"
           },
           {
-            "k": "Build:",
-            "v": "what it is, what's good, what's not, who'd like it, your rating."
+            "k": "Already knows:",
+            "v": "what you can skip for them"
           },
           {
-            "k": "Sounds:",
-            "v": "honest, specific, opinionated."
+            "k": "Needs:",
+            "v": "a feeling, facts, or a thing to do"
+          },
+          {
+            "k": "Want back:",
+            "v": "a reply, a call, a visit, a try"
+          },
+          {
+            "k": "Send by:",
+            "v": "mail, the family chat, in person"
           }
-        ]
+        ],
+        "ask": "What do you want this reader to do after reading?"
       },
       {
         "name": "Letter",
         "lines": [
           {
             "k": "Job:",
-            "v": "say something to one specific person."
+            "v": "share news with one person who cares"
           },
           {
             "k": "Build:",
-            "v": "greeting, why you're writing, the details, what you're asking, closing."
+            "v": "hello, the news, a detail, a question"
+          },
+          {
+            "k": "Detail:",
+            "v": "a moment only you saw"
           },
           {
             "k": "Sounds:",
-            "v": "like you're talking to that person."
+            "v": "like you talking to them"
           }
-        ]
+        ],
+        "ask": "What question will make them write back?"
       },
       {
-        "name": "Opinion piece",
+        "name": "Bulletin",
         "lines": [
           {
             "k": "Job:",
-            "v": "make your case so it's hard to ignore."
+            "v": "the facts, read in five seconds"
           },
           {
             "k": "Build:",
-            "v": "your opinion, best reason, second reason, the other side, what should change."
+            "v": "headline, what, when, one photo"
+          },
+          {
+            "k": "Length:",
+            "v": "three short lines, no greeting"
+          },
+          {
+            "k": "Ends with:",
+            "v": "one ask: a name, a date, a vote"
           },
           {
             "k": "Sounds:",
-            "v": "confident, direct, backed by facts."
+            "v": "quick, bright, all facts"
           }
-        ]
+        ],
+        "ask": "What would someone scrolling past still catch?"
       },
       {
-        "name": "Short story",
+        "name": "How-to",
         "lines": [
           {
             "k": "Job:",
-            "v": "bring an idea to life."
+            "v": "help a younger kid do it themselves"
           },
           {
             "k": "Build:",
-            "v": "setting and character, a problem, what happens next, how it ends."
+            "v": "what you'll do, what you need, steps"
+          },
+          {
+            "k": "Steps:",
+            "v": "numbered, one action each"
+          },
+          {
+            "k": "Test:",
+            "v": "can they do it without asking?"
           },
           {
             "k": "Sounds:",
-            "v": "whatever fits the story: funny, spooky, quiet."
+            "v": "friendly, short words, patient"
           }
-        ]
+        ],
+        "ask": "Which step would a five-year-old get stuck on?"
       },
       {
-        "name": "How-to guide",
+        "name": "Story",
         "lines": [
           {
             "k": "Job:",
-            "v": "teach something so it actually works."
+            "v": "turn the news into something to enjoy"
           },
           {
             "k": "Build:",
-            "v": "what you're teaching, what you need, numbered steps, tips."
+            "v": "who, a problem, what happened, the end"
+          },
+          {
+            "k": "Keep:",
+            "v": "the true facts, told as a story"
+          },
+          {
+            "k": "Read-aloud:",
+            "v": "short lines, a sound to join in"
           },
           {
             "k": "Sounds:",
-            "v": "friendly, clear, patient."
+            "v": "funny, cosy, a little surprising"
           }
-        ]
+        ],
+        "ask": "Which part will they ask to hear again?"
       },
       {
-        "name": "News report",
+        "name": "Did it land?",
         "lines": [
           {
-            "k": "Job:",
-            "v": "give the facts, fast."
+            "k": "Hoped for:",
+            "v": "your want-back line"
           },
           {
-            "k": "Build:",
-            "v": "headline, who/what/when/where first, details, a quote, what's next."
+            "k": "Got:",
+            "v": "what they actually said or did"
           },
           {
-            "k": "Sounds:",
-            "v": "clear, factual, neutral. Short sentences."
+            "k": "Match:",
+            "v": "yes, partly, or not yet"
+          },
+          {
+            "k": "Why:",
+            "v": "what in the writing caused it"
+          },
+          {
+            "k": "Change:",
+            "v": "one thing for next time"
           }
-        ]
-      },
-      {
-        "name": "Song",
-        "lines": [
-          {
-            "k": "Job:",
-            "v": "teach or tell something people remember."
-          },
-          {
-            "k": "Build:",
-            "v": "pick a tune everyone knows, keep the rhythm, write new lines that rhyme."
-          },
-          {
-            "k": "Sounds:",
-            "v": "catchy, fun, packed with facts."
-          }
-        ]
+        ],
+        "ask": "Which version got the reply you hoped for?"
       }
     ]
   },
   "conclusion": {
-    "headline": "Version 2 went to the person it was written for.",
-    "text": "When there's a birthday card to sign or a note for a neighbour, watch what they do before the first word. You may see them stop and think about who's reading. And after feedback, see if they pick the change that matters most.",
-    "celebrate": "Point at the new opening in Version 2 and say: 'This one pulled me in. Read it to me again.'",
+    "headline": "Three readers heard the same news, and each got what they needed.",
+    "text": "Before the next thank-you note or birthday message, ask just one question: 'What do you want them to do when they read it?' If your kid answers before you finish asking, the habit has stuck.",
+    "celebrate": "When the first reply comes in that matches a want-back line, read it out loud and say: 'You knew what they needed, and they did exactly what you hoped.'",
     "extensions": [
-      "Write the same story twice, from two characters' points of view",
-      "Try every style card once over the next few weeks, and keep the finished pieces in one folder",
-      "Write a real letter to someone who'll write back",
-      "Rewrite a piece for a reader who disagrees with you"
+      "Write the same news for a reader in the future: a letter to open in five years",
+      "Tell the news to a relative in the language they speak best, with help from someone who speaks it",
+      "Find two real pieces of writing about the same event, like a news article and a post, and spot what each one put first",
+      "Write a reply to the answer that surprised you most, in a style that suits that reader"
     ]
   },
   "signs": [
     "'Who's this for?' comes up before they start writing",
-    "They write differently for Grandma than for a friend",
-    "They accept feedback and make the piece better"
+    "Their message to Grandpa sounds nothing like their text to a friend",
+    "They judge a message by what the reader did, not by how long it is"
   ],
-  "makeItReal": "Send it off: mail the letter to a grandparent, give the opinion piece to the person who can change the rule, test the how-to on a friend. When a reply comes, read it together and decide what to write back.",
+  "makeItReal": "Tonight at dinner, ask your kid what's happened lately that someone in the family hasn't heard yet. Then set an envelope and a stamp beside their plate and let them start the letter.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
@@ -347,7 +377,7 @@
     "caption": "Panama City: the same story, written from two points of view."
   },
   "fromHome": {
-    "text": "My kids wrote the same made-up adventure twice: a treasure hunt in Santa Catalina, once from my son's point of view and once from my daughter's. In El Salvador, they each turned an informative text about the country into a song, set to a kids' tune we all knew.",
+    "text": "Same facts, told a new way, is a game my kids already know. In Panama City, they each wrote the same treasure hunt in Santa Catalina, my son from his point of view and my daughter from hers. In El Salvador, they turned an informative text about the country into a song, set to a kids' tune we all knew. Both were for real readers: their grandparents, family and friends.",
     "quotes": []
   }
 }

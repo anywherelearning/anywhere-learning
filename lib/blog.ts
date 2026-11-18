@@ -7696,7 +7696,7 @@ const posts: BlogPost[] = [
 
       { type: 'pull-quote', text: 'A kid who can be bored without panicking has a superpower that most adults have lost.' },
 
-      { type: 'product-callout', slug: 'boredom-toolkit', pinned: true, context: 'When boredom needs a nudge, not a rescue. Your kid learns to wait out the empty feeling, notice what they reach for and build their own kit for the next rainy day.' },
+      { type: 'product-callout', slug: 'boredom-toolkit', pinned: true, context: 'When boredom needs a nudge, not a rescue. A game the whole family plays: timed races to the first idea, dares and challenges, then a family vote that turns the best ideas into a Bored-day menu.' },
 
       { type: 'heading', level: 2, text: 'What healthy boredom looks like by age' },
       { type: 'paragraph', text: 'Tolerating boredom is a skill, which means it develops in stages. What you can expect, and how much you step back, changes as kids grow.' },
@@ -8576,7 +8576,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: '15. Be patient, and keep going' },
       { type: 'paragraph', text: 'Empathy develops slowly and unevenly. A kid can be deeply caring one moment and oblivious the next, and that is normal, not a failure. Keep modeling, keep naming, keep giving them chances to practice. The seeds you plant now often do not visibly bloom until later.' },
 
-      { type: 'product-callout', slug: 'kindness-missions', context: 'Your kid learns to spot small chances to be kind, like a seat someone needs on the bus, and act on them without being asked. Empathy turned into practice, not a lecture, one real mission at a time.', pinned: true },
+      { type: 'product-callout', slug: 'kindness-missions', context: 'Your kid learns that kindness in public often comes down to going first: spotting a seat someone needs on the bus, counting who walks past, and moving within five seconds. Practice on real outings, with you right there.', pinned: true },
 
       { type: 'image', src: '/images/teaching-empathy-caring.jpeg', alt: 'An older child gently holding a baby on the couch and showing them a soft book, an unposed moment of care', caption: 'Empathy is caught more than taught. It grows from real moments of noticing and caring, not from being told to be kind.' },
 
@@ -8817,7 +8817,7 @@ const posts: BlogPost[] = [
       ]},
       { type: 'paragraph', text: 'The specifics are yours to set. The point is that the conversation and the rules exist before the phone does, not after the first problem. In our house the rule that has mattered most is simple: phones live and charge outside the bedrooms, for the kids and the adults. It is amazing how many problems that one boundary quietly prevents. For the bigger picture on healthy tech habits, our post on [how much screen time is actually okay](/blog/how-much-screen-time-kids) and our [AI and digital literacy guide](/guides/ai-digital-literacy) go deeper.' },
 
-      { type: 'product-callout', slug: 'healthy-tech-boundaries', context: 'A guided way to set real, agreed tech boundaries as a family, so the first phone comes with habits already in place instead of a fight.', pinned: true },
+      { type: 'product-callout', slug: 'healthy-tech-boundaries', context: 'Turn screen rules into an experiment: guess and check real screen time, test one rule for a week, and write the family plan from the results, so the first phone comes with habits already in place instead of a fight.', pinned: true },
 
       { type: 'heading', level: 2, text: 'The skill underneath it all' },
       { type: 'paragraph', text: 'Here is the deeper truth. The goal is not to keep a phone away from your kid forever. It is to raise a kid who can eventually manage one well, which is a skill, and skills are built gradually. That is why readiness beats age, why a basic phone before a smartphone makes sense, and why the rules and conversations matter more than the device. You are not just deciding when to hand over a phone. You are teaching digital self-regulation, one deliberate step at a time.' },

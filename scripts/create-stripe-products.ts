@@ -46,7 +46,7 @@ const catalog = [
   { slug: 'smart-shopper', name: 'Smart Shopper Lab', priceCents: 599, description: 'Real-world maths (STEM) for kids ages 8-14: compare two real options, work out cost per use, spot the marketing, then wait before buying.' },
   { slug: 'time-energy-planner', name: 'Time & Energy Planner', priceCents: 599, description: 'Project for kids ages 6-14: track your own energy for a day, match jobs to the right time and find what brings you back.' },
   { slug: 'travel-day', name: 'Travel Day Itinerary Challenge', priceCents: 599, description: 'Planning activity for kids ages 6-14: plan a real day out with must-dos, a timeline, a budget and a Plan B.' },
-  { slug: 'write-like-a-pro', name: 'Write It Like a Pro', priceCents: 599, description: 'Writing for kids ages 6-14: pick a style, write for a real audience, edit, and revise. Seven writing styles, one finished piece.' },
+  { slug: 'write-like-a-pro', name: 'Write It Like a Pro', priceCents: 599, description: 'Writing activity for kids ages 6-14: one piece of family news written three ways for three real readers, revised, sent for real and checked by the replies.' },
   // ─── AI & Digital Literacy singles ($4.99) ───
   { slug: 'ai-basics', name: 'AI Basics: Myths, Facts & Smart Rules', priceCents: 599, description: 'AI basics for kids ages 6-14: how AI really works, myths tested at the screen, why it sounds human, and family AI rules you write together.' },
   { slug: 'algorithm-awareness', name: 'Algorithm Awareness: Why Am I Seeing This?', priceCents: 599, description: 'Algorithm literacy for kids ages 6-14: notice and track app suggestions, run a real experiment, spot keep-you-watching tricks and watch on purpose.' },
@@ -55,7 +55,7 @@ const catalog = [
   { slug: 'create-with-ai', name: 'Create With AI, Ethically', priceCents: 599, description: 'Creative AI for kids ages 6-14: plan a real project, let AI help with drafts and code, steer it until it is theirs and say honestly how it was made.' },
   { slug: 'deepfake-spotter', name: 'Deepfake & Manipulation Spotter', priceCents: 599, description: 'Spot manipulated media and understand deepfake technology.' },
   { slug: 'hallucination-detective', name: 'Hallucination Detective', priceCents: 599, description: 'AI literacy for kids ages 6-14: ask two or three AI tools the same question, compare the answers, check real sources and catch the AI when it bluffs.' },
-  { slug: 'healthy-tech-boundaries', name: 'Healthy Tech & AI Boundaries Plan', priceCents: 599, description: 'Healthy screen habits for kids ages 6-14: notice screen time and mood, decide a fair limit together, agree on a signed family plan and check it.' },
+  { slug: 'healthy-tech-boundaries', name: 'The Screen Experiment', priceCents: 599, description: 'Screen time activity for kids ages 6-14: guess and check real screen time, find when a session turns, test one rule for a week and build a family plan from the results.' },
   { slug: 'privacy-footprint', name: 'Privacy & Digital Footprint Map', priceCents: 599, description: 'Online privacy for kids ages 6-14: map their accounts and digital footprint, sort private from okay, check usernames and settings, and make a family plan.' },
   { slug: 'prompt-like-a-coach', name: 'Prompt Like a Coach', priceCents: 599, description: 'AI prompting for kids ages 6-14: picture it, describe it clearly, coach one change at a time and finish a real project, like the pictures for their own book.' },
   // ─── Real-World Math singles ($4.99) ───
@@ -118,13 +118,13 @@ const catalog = [
   // ─── Emotional & Social Skills singles ($5.99) ───
   { slug: 'calm-down-toolkit', name: 'Calm-Down Toolkit', priceCents: 599, description: 'Spot the early signs, test calm-down tools on a good day and make a short plan your kid can reach for on their own.' },
   { slug: 'big-feelings-lab', name: 'Big Feelings Lab', priceCents: 599, description: 'Emotional awareness activity for kids ages 6-14: learn feeling words, spot the body clues and find the real feeling underneath, then watch it pass.' },
-  { slug: 'boredom-toolkit', name: 'Boredom Toolkit', priceCents: 599, description: 'Screen-free boredom activity for kids ages 6-14: wait it out, notice what they reach for and build their own kit for rainy days at home.' },
+  { slug: 'boredom-toolkit', name: 'Boredom Challenge', priceCents: 599, description: 'Screen-free boredom game for kids ages 6-14: timed idea races, dares and challenges you play together, then a family-voted Bored-day menu.' },
   { slug: 'disappointment-lab', name: 'The Disappointment Lab', priceCents: 599, description: 'Sit through small planned letdowns and track bounce-back time.' },
   { slug: 'frustration-tolerance-cards', name: 'Frustration Tolerance Cards', priceCents: 799, description: 'Frustration tolerance cards for kids ages 6-14: 24 small challenges, each with a named move to practise while the frustration is real. Low prep.' },
   { slug: 'comeback-journal', name: 'Comeback Journal', priceCents: 599, description: 'Resilience activity for kids ages 6-14: bounce back from a letdown with facts, a focus on their own game and a personal goal for next time.' },
   { slug: 'hard-thing-challenge', name: 'Hard Thing Challenge', priceCents: 599, description: 'Perseverance activity for kids ages 6-14: pick one hard thing, set a finish line, get through the messy middle and finish what they started.' },
   { slug: 'repair-conversation', name: 'The Repair Conversation', priceCents: 599, description: 'Own a mistake, skip excuses, ask what would help, follow through.' },
-  { slug: 'kindness-missions', name: 'Kindness Missions', priceCents: 599, description: 'Kindness activity for kids ages 6-14: spot who could use a hand, take on real missions, notice how they land and keep the ones that become habits.' },
+  { slug: 'kindness-missions', name: 'Kindness Missions', priceCents: 599, description: 'Kindness activity for kids ages 6-14: spot chances to help on real outings, count who walks past, go first within five seconds and keep the habit.' },
   { slug: 'reading-the-room', name: 'Reading the Room', priceCents: 599, description: 'Social awareness activity for kids ages 6-14: spot the clues, check with one kind question, match the room and act on what they notice.' },
   { slug: 'conflict-fix', name: 'Conflict Fix', priceCents: 599, description: 'Conflict resolution for kids ages 6-14: cool down, tell it, own your part, hear their side and agree on a fix that stops the next fight.' },
   { slug: 'solo-mission', name: 'Solo Mission', priceCents: 599, description: 'Independence activity for kids ages 6-14: real solo missions, from paying at a store to taking the bus, built up one level at a time.' },

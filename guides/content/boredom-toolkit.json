@@ -1,304 +1,346 @@
 {
   "slug": "boredom-toolkit",
   "category": "Emotional & Social",
-  "title": "Boredom Toolkit",
-  "tagline": "Wait · Notice · Gather · Try · Keep",
+  "title": "Boredom Challenge",
+  "tagline": "Race · Dare · One thing · Pockets · Menu",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid learns that 'I'm bored' isn't a problem to fix. It's the start of something. They learn to wait out the empty feeling, notice what their own brain reaches for, gather a kit of materials and ideas, and use it on a real rainy day with no screens and no one to play with.",
+  "goal": "Your kid turns 'I'm bored' into a game. You play too: a race to the first idea, the Empty Room Dare, the One Thing Challenge and the Pocket Challenge outside. Each round ends with a show-and-tell and a family vote, and the winning ideas become a one-page Bored-day menu they can use anywhere, no screen needed.",
   "need": [
-    "A box, basket or shelf for the kit",
-    "Things you already have: paper, pencils, books, building blocks, music",
-    "A real boring stretch, like a rainy afternoon at home"
+    "A clock or a kitchen timer, a pencil and a scrap of paper for scores",
+    "A stack of paper or a ball of string for one round",
+    "A room you can almost empty, and a spot outside",
+    "Four bored moments over a week or so, about 20 minutes each"
   ],
   "academics": [
     {
-      "subject": "Art and writing",
-      "text": "drawing, crafting and stories from nothing"
+      "subject": "Math",
+      "text": "timing, tallies and comparing scores"
     },
     {
-      "subject": "Reading",
-      "text": "choosing books on their own"
+      "subject": "Science",
+      "text": "changing one thing per round and seeing what happens"
     },
     {
-      "subject": "Health",
-      "text": "how the brain gets creative when it's not entertained"
+      "subject": "Speaking",
+      "text": "a 1-minute show-and-tell of their best idea"
     },
     {
       "subject": "Life skills",
-      "text": "filling their own time, without a screen"
+      "text": "filling their own time, anywhere, without a screen"
     }
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "When they say 'I'm bored', your whole job is one calm sentence: 'Okay, that's good, go find something to do.' No screen, no plan, no idea from you. Then step back and let the empty feeling do its work.",
+    "intro": "Your part is to play, for real. Phone in another room, same timer, same rules, and try to beat them to the first idea. When they say 'I'm bored', give one calm sentence, 'Okay, that's good, go find something to do,' then start the round and keep your ideas to yourself.",
     "plan": [
       {
-        "when": "One quiet afternoon",
-        "what": "Wait it out, and notice what they reach for (Steps 1 and 2)."
+        "when": "The next 'I'm bored'",
+        "what": "Play the first race at home (Step 1)."
       },
       {
-        "when": "The next day",
-        "what": "Gather the kit (Step 3)."
+        "when": "Over the next week",
+        "what": "One round each time boredom shows up (Steps 2, 3 and 4)."
       },
       {
-        "when": "The next rainy day, then for weeks",
-        "what": "Try the kit and keep it going (Steps 4 and 5)."
+        "when": "The weekend after",
+        "what": "Vote on the best ideas and write the menu (Step 5)."
       }
     ],
     "tips": [],
     "troubleshoot": [
       {
-        "q": "They keep asking for a screen",
-        "a": "Say the same line every time, like 'Not now. Your kit is right there,' then walk away. Keep the screen rule the same every day; screens to create can count differently from screens to watch."
+        "q": "They ask for a screen the whole round",
+        "a": "Same line every time: 'Not during the round.' Write down the minute they asked; asking is part of the score sheet. Your usual screen rule doesn't change outside the game."
       },
       {
-        "q": "They follow you around the house",
-        "a": "Hand them the kit, not an idea. Then go do your own thing. Kids copy grown-ups who can fill their own time."
+        "q": "They had no ideas at all",
+        "a": "Score it zero and keep playing the next round. A zero next to a 6-idea round is exactly what tells you which setting works."
       },
       {
-        "q": "The kit gets boring too",
-        "a": "Swap a few things out every couple of weeks, and let them add something new each time."
+        "q": "Your own first idea is always a chore",
+        "a": "It scores 1 point, but a chore can't win the race. Keep going for an idea that isn't a job. Kids love it when a grown-up finds a real one."
       }
     ]
   },
   "lesson": {
-    "text": "Boredom is the feeling right before a kid comes up with their own idea. If someone fixes it too fast, the idea never comes. Each kid reaches for something different, so the kit has to be theirs.",
-    "before": "'I'm bored.' 'Here, watch something.'",
+    "text": "Boredom feels like nothing to do, but it's the moment right before an idea. The game shows how long that moment lasts for your kid, and which settings make the ideas come faster.",
+    "before": "'I'm bored. There's nothing to do.'",
     "model": [
       {
-        "part": "Bored",
-        "line": "At home, it's raining, nobody to play with."
+        "part": "Race",
+        "line": "Kid: first idea at 11 minutes. Parent: 2 minutes, but it was the dishes."
       },
       {
-        "part": "Parent",
-        "line": "'Okay, that's good. Go find something to do.'"
+        "part": "Empty Room Dare",
+        "line": "Kid: 7 minutes, 5 ideas, a shadow game on the wall."
       },
       {
-        "part": "Her",
-        "line": "Paper, pencils, crafts, building blocks or music."
+        "part": "One Thing",
+        "line": "Only string. Kid: 2 minutes, 4 ideas. Vote winner: a door trap."
       },
       {
-        "part": "Him",
-        "line": "A book, almost every time."
+        "part": "Pockets",
+        "line": "Kid: 4 minutes, 6 ideas. Vote winner: a pebble race along the path."
       }
     ],
-    "modelNote": "Same rainy day, same house, two completely different kits. Neither of them needed a screen. They needed a few quiet minutes to find their own thing."
+    "modelNote": "'Nothing to do' turned out to mean 'nothing yet'. Fewer things to choose from got the ideas coming faster, and the vote turned the best ones into a menu."
   },
   "steps": [
     {
-      "title": "Wait it out",
-      "why": "The empty feeling passes. Kids who learn to wait a few minutes find their own ideas on the other side.",
-      "kid": "When your kid says 'I'm bored', they sit with it for ten minutes without a screen, using the Wait it out card in the Bored-Day Cards at the end of the guide.",
-      "you": "Say it calmly: 'Okay, that's good. Go find something to do.' Then don't offer ideas, and don't hand over a screen.",
+      "title": "Race to the first idea",
+      "why": "The first round shows how long their bored usually lasts, and gives the other rounds something to beat.",
+      "kid": "Next time your kid says 'I'm bored' at home, you both start the timer with no screens, using the Game rules card in the Boredom Challenge Toolkit at the end of the guide. First to start a real idea wins the race and 2 points. Every idea after that scores 1.",
+      "you": "Play for real, phone in another room. Write your own first-idea minute honestly, even when it's a chore.",
       "ask": [
-        "What does bored feel like in your body?",
-        "What's the first idea that pops up?"
+        "How many minutes did it take you?",
+        "What was your first idea, and was it any good?"
       ],
-      "tip": "The first five minutes are the hardest. Most kids find something right after the moment they think they can't.",
+      "tip": "Shout 'Idea!' the moment you start one. It makes the race feel like a game and gives you the minute.",
       "levels": {
-        "explore": "Sit with the bored feeling for five minutes, and notice what happens.",
-        "develop": "Wait without a screen, and time how many minutes pass before your first idea. Write the number down.",
-        "extend": "Wait it out in a room with almost nothing in it, and list every idea that comes, even the silly ones."
+        "explore": "Race a parent to your first idea, and shout 'Idea!' when you start it.",
+        "develop": "Race, tally every idea, and write your first-idea minute on the score sheet.",
+        "extend": "Before the race, guess both first-idea minutes, then see whose guess was closer."
       }
     },
     {
-      "title": "Notice what you reach for",
-      "why": "Everyone's brain reaches for something different when nothing is planned. Knowing yours is the start of the kit.",
-      "kid": "Over a few bored moments, your kid writes down what they actually picked up, using the What I reach for card: drawing, building, reading, music, writing, crafting, moving.",
-      "you": "Watch without commenting, and write down what you notice too. Compare lists later.",
+      "title": "The Empty Room Dare",
+      "why": "With almost nothing around, most kids find ideas faster than they expect, and they love proving it.",
+      "kid": "Your kid takes the dare: 20 minutes in the emptiest spot you can find, like a bare hallway or a cleared bedroom floor, using the Challenge rounds card. You do it too, in the same room. Score the first-idea minute and the tally, then each show your best idea.",
+      "you": "Clear the space together and take the dare with them. Don't help with ideas; just play your own.",
       "ask": [
-        "What did you pick up first?",
-        "What would you do again tomorrow?"
+        "Was it faster or slower than at home?",
+        "What did you use when there was nothing to use?"
       ],
-      "tip": "There's no right answer. What they reach for is a clue to what they love.",
+      "tip": "Call it a dare, not a test. Kids will happily sit in an empty room to beat a grown-up.",
       "levels": {
-        "explore": "Show a parent the thing you picked up.",
-        "develop": "List what you reached for in three bored moments.",
-        "extend": "List it, then find the pattern: making, reading, moving or something else?"
+        "explore": "Take the dare with a parent, and show them the first thing you played.",
+        "develop": "Take the dare, score your minute and tally, and compare with the first race.",
+        "extend": "Keep your eyes closed for the first five minutes, then see if your score beats your first dare."
       }
     },
     {
-      "title": "Gather your kit",
-      "why": "A kit ready to go turns 'I'm bored' into 'I'll get my kit'.",
-      "kid": "Your kid fills a box, a basket or a shelf with their own materials and ideas, using the Kit ideas card, then writes three starter ideas on slips to keep inside.",
-      "you": "Help find the materials from around the house, but let them choose. Keep it to things they'll really use.",
+      "title": "The One Thing Challenge",
+      "why": "Limits spark ideas. One material makes kids invent what it could become.",
+      "kid": "Your kid gets only paper, or only string, for 20 minutes, using the Challenge rounds card. Every different thing they make or play with it scores a point. You get the same material and play too. At dinner, each of you shows your best one, and the family votes.",
+      "you": "Hand over the material and start the timer. Make your own things, and keep them a secret until the show-and-tell.",
       "ask": [
-        "What would you want on a rainy day?",
-        "What's one thing you'd love to try?"
+        "How many different things did one material become?",
+        "Which one did the family vote for?"
       ],
-      "tip": "Use things from home, nothing to buy. Paper, pencils, an old box and a few books are a great start.",
+      "tip": "A tally mark for every new use, even silly ones. The silly ones often win the vote.",
       "levels": {
-        "explore": "Fill a box with five things you love to use.",
-        "develop": "Fill your kit, and add three starter ideas on slips of paper.",
-        "extend": "Fill it, and add one 'challenge' slip, something new you've never tried."
+        "explore": "Make as many things as you can from one sheet of paper, and count them with a parent.",
+        "develop": "Score every use, then pick your best one for the dinner vote.",
+        "extend": "Swap finished things with your parent, and each turn the other's into something new for a bonus point."
       }
     },
     {
-      "title": "Try it on a real boring day",
-      "why": "The kit only proves itself on a real rainy day, with nobody to play with.",
-      "kid": "On the next real boring stretch, your kid opens the kit, picks one thing and sticks with it, then notes in a notebook what they made or did.",
-      "you": "Stay out of it. Do something of your own nearby, like reading or a project, so they see a grown-up filling their own time.",
+      "title": "The Pocket Challenge",
+      "why": "Outside, with almost nothing, kids find games in sticks, stones and what's already in their pockets.",
+      "kid": "Your kid goes outside, to a yard, a park or a campground, with only what's in their pockets, for 20 minutes, using the Challenge rounds card. Same scoring: first-idea minute and a point for every idea. They bring their best one back to show the family.",
+      "you": "Go out with them, pockets turned out like theirs. Stay close enough to see, and play your own round.",
       "ask": [
-        "What did you make or do?",
-        "How long were you lost in it?"
+        "What did you find out there that you didn't have inside?",
+        "Which round has your fastest first idea so far?"
       ],
-      "tip": "Rainy days at home with no friends around are the best test. That's when the kit earns its spot.",
+      "tip": "Turn your pockets out before you start, together. Whatever is in them is all you get.",
       "levels": {
-        "explore": "Use one thing from your kit for twenty minutes.",
-        "develop": "Use the kit on a rainy afternoon, and log what you made.",
-        "extend": "Start something bigger from the kit, like a story, a build or a song, that takes several days."
+        "explore": "Show a parent what's in your pockets, then invent one game with it.",
+        "develop": "Play the round, score it, and compare all three challenges so far.",
+        "extend": "Plan the three things you'd put in your pockets for a perfect round, then test if they beat empty pockets."
       }
     },
     {
-      "title": "Keep it going",
-      "why": "A kit that never changes gets boring too. Fresh ideas keep it working all year.",
-      "kid": "Every couple of weeks, your kid looks back at the log, takes out what they stopped using and adds something new, using the Keep it fresh card.",
-      "you": "Notice and name the things they made: 'You started that comic on a boring day.'",
+      "title": "Vote and write the menu",
+      "why": "The ideas the family voted for are the ones worth keeping for the next bored moment.",
+      "kid": "Your kid lays out all four score sheets, finds the fastest round and the kind of idea that keeps winning votes, using the Read the scores card. Then they fill in My Bored-day menu at the end of the guide with the winners, and put it where they'll see it.",
+      "you": "Read the scores together and let them choose what goes on the menu. Snap a photo of it for the car.",
       "ask": [
-        "What's still fun in your kit?",
-        "What will you add next?"
+        "Which round got your ideas going fastest?",
+        "Which idea will you try first next time?"
       ],
-      "tip": "The log is proof. Looking back at what boredom turned into is the best motivation for next time.",
+      "tip": "Every couple of weeks, cross out what nobody picked and add one new idea to try, using the Keep it fresh card.",
       "levels": {
-        "explore": "Swap one thing in your kit for something new.",
-        "develop": "Refresh the kit every two weeks, and compare your bored-to-busy minutes with the first time.",
-        "extend": "Make a kit for someone else, like a sibling, a cousin or a friend."
+        "explore": "Draw three things you liked doing when you were bored, and put the page where you'll see it.",
+        "develop": "Fill in the menu from your scores and the family's votes.",
+        "extend": "Read your parent's scores, write a Bored-day menu for them, and see which ideas they really use."
       }
     }
   ],
   "reference": {
-    "title": "Bored-Day Cards",
-    "intro": "How to wait it out, what to reach for, and how to keep your kit fresh.",
+    "title": "Boredom Challenge Toolkit",
+    "intro": "The rules, the challenge rounds, the kinds of ideas, how to read the scores and how to keep the menu fresh.",
     "items": [
       {
-        "name": "Wait it out",
+        "name": "Game rules",
         "lines": [
           {
-            "k": "Say it:",
-            "v": "'I'm bored, and that's okay.'"
+            "k": "Phones:",
+            "v": "face down, in another room"
           },
           {
-            "k": "Wait:",
-            "v": "ten minutes, no screen"
+            "k": "Timer:",
+            "v": "start it together"
           },
           {
-            "k": "Look around:",
-            "v": "what's in this room?"
+            "k": "First idea:",
+            "v": "shout 'Idea!'; a chore can't win it"
           },
           {
-            "k": "Start small:",
-            "v": "pick up one thing"
+            "k": "Points:",
+            "v": "one per idea, plus 2 for the race"
+          },
+          {
+            "k": "Round:",
+            "v": "20 minutes, then show-and-tell"
           }
         ],
-        "ask": "How long can you wait before an idea comes?"
+        "ask": "Who started the first real idea?"
       },
       {
-        "name": "What I reach for",
+        "name": "Challenge rounds",
+        "lines": [
+          {
+            "k": "Empty Room Dare:",
+            "v": "no toys, no books, no screens"
+          },
+          {
+            "k": "One Thing:",
+            "v": "only paper, or only string"
+          },
+          {
+            "k": "Pockets:",
+            "v": "outside, only what you carry"
+          },
+          {
+            "k": "Same rules:",
+            "v": "20 minutes, same score sheet"
+          }
+        ],
+        "ask": "Which round do you think you'll win?"
+      },
+      {
+        "name": "Idea kinds",
         "lines": [
           {
             "k": "Make:",
-            "v": "drawing, crafting, building"
-          },
-          {
-            "k": "Read:",
-            "v": "books, comics, magazines"
-          },
-          {
-            "k": "Play:",
-            "v": "music, a game, an instrument"
-          },
-          {
-            "k": "Write:",
-            "v": "stories, lists, a journal"
+            "v": "draw, fold, build, tie"
           },
           {
             "k": "Move:",
-            "v": "dance, a ball, an obstacle course"
+            "v": "jump, balance, invent a game"
+          },
+          {
+            "k": "Pretend:",
+            "v": "a story, a character, a world"
+          },
+          {
+            "k": "Notice:",
+            "v": "count, sort, look closely"
+          },
+          {
+            "k": "Fix:",
+            "v": "tidy, repair, a job to do"
           }
         ],
-        "ask": "Which of these have you never reached for?"
+        "ask": "Which kind showed up in every test?"
       },
       {
-        "name": "Kit ideas",
+        "name": "Read the scores",
         "lines": [
           {
-            "k": "Paper:",
-            "v": "plain, coloured, a notebook"
+            "k": "Fastest:",
+            "v": "fewest minutes to a first idea"
           },
           {
-            "k": "Tools:",
-            "v": "pencils, markers, tape, scissors"
+            "k": "Most ideas:",
+            "v": "the highest tally"
           },
           {
-            "k": "Build:",
-            "v": "building blocks, cardboard, string"
+            "k": "Vote winners:",
+            "v": "the ideas the family picked"
           },
           {
-            "k": "Start:",
-            "v": "three idea slips, one challenge"
+            "k": "Pattern:",
+            "v": "the kind that keeps winning"
+          },
+          {
+            "k": "Compare:",
+            "v": "your scores beside your grown-up's"
           }
         ],
-        "ask": "What would you put in first?"
+        "ask": "What do your winning ideas have in common?"
       },
       {
         "name": "Keep it fresh",
         "lines": [
           {
-            "k": "Look back:",
-            "v": "what did you use?"
+            "k": "Every 2 weeks:",
+            "v": "read the menu together"
           },
           {
-            "k": "Take out:",
-            "v": "what you stopped using"
+            "k": "Cross out:",
+            "v": "ideas nobody picked"
           },
           {
             "k": "Add:",
-            "v": "one new thing every two weeks"
+            "v": "one new idea to test"
           },
           {
-            "k": "Share:",
-            "v": "show someone what you made"
+            "k": "Retime:",
+            "v": "one bored wait, same rules"
           }
         ],
-        "ask": "What did you stop using, and why?"
+        "ask": "Is your number going down?"
       }
-    ]
+    ],
+    "after": {
+      "label": "My Bored-day menu",
+      "lines": [
+        "Quick starts:",
+        "Ideas that last:",
+        "Needs nothing (car, waiting):",
+        "Outside:",
+        "Trying next:"
+      ]
+    }
   },
   "skills": [
     {
       "name": "Self-direction",
-      "text": "filling their own time"
+      "text": "filling their own time, anywhere"
     },
     {
       "name": "Creativity",
-      "text": "making something from nothing"
+      "text": "turning one thing into many"
     },
     {
-      "name": "Patience",
-      "text": "waiting out the empty feeling"
+      "name": "Presenting",
+      "text": "showing their best idea at dinner"
     },
     {
-      "name": "Knowing their interests",
-      "text": "knowing what their brain reaches for"
+      "name": "Knowing themselves",
+      "text": "what their brain reaches for"
     }
   ],
   "conclusion": {
-    "headline": "'I'm bored' is now the start of something.",
-    "text": "On the next rainy afternoon, time how long 'I'm bored' lasts before they're busy with something. When it's down to a few minutes, boredom is doing its job.",
-    "celebrate": "When something good comes out of a boring day, name it: 'That drawing started with you being bored. Look what you made.'",
+    "headline": "Bored is now the start of a game.",
+    "text": "In a month, play one surprise race at home, same rules. If their first idea comes faster than in the first race, ask what they did in those first minutes, and add it to the menu.",
+    "celebrate": "The first time they beat you to an idea, say: 'You found something before I did. Your brain got faster at this.'",
     "extensions": [
-      "Make a travel-size kit for car rides and waiting rooms",
-      "Have a family 'nothing planned' afternoon, grown-ups included",
-      "Try a one-material afternoon, like only paper or only string, and see how many things you can make from it",
-      "Spend one bored hour outside, like a park or the backyard, with only what's in your pockets"
+      "Play the Empty Room Dare on a long drive or a flight, and see if moving changes the score",
+      "Invent a fifth round, like a waiting room, a porch after dark or a tent",
+      "Have a family bored hour where everyone plays, and vote on the best idea at dinner",
+      "Swap menus with a cousin or a friend, and play one of their ideas"
     ]
   },
   "signs": [
-    "They say 'I'm bored' less, or say it and then go find something",
-    "They start projects on their own",
-    "They ask for screens less on rainy days"
+    "They say 'I'm bored' and then go check the menu",
+    "Their first idea comes faster than in the first race",
+    "They make games from whatever is around, away from home too",
+    "They ask for screens less when nothing is planned"
   ],
-  "makeItReal": "The next time you hear 'I'm bored', point to the kit, go start something of your own nearby, and ask at dinner what they made.",
+  "makeItReal": "When you hear 'I'm bored' this week, say 'Okay, that's good, go find something to do,' put your phone in another room, start the timer and race them to the first idea.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {
@@ -307,7 +349,7 @@
     "label": "Open my trail"
   },
   "fromHome": {
-    "text": "When my kids say they're bored, I say: 'Okay, that's good, go find something to do.' My daughter lets her creative side come out: drawing, crafting, writing, building blocks, music, and my son mostly reads. Our screen rule is 30 minutes a day to watch, and a bit more to create.",
+    "text": "When my kids say they're bored, I say: 'Okay, that's good, go find something to do.' My daughter lets her creative side come out: drawing, crafting, writing, building blocks, music, and my son mostly reads.",
     "quotes": []
   },
   "photo": {

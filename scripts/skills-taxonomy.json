@@ -156,13 +156,14 @@
       "canonical": [
         "Emotional Regulation",
         "Digital Citizenship",
-        "Communication",
+        "Science",
+        "Data & Graphs",
         "Planning"
       ],
       "families": [
         "Tech & Digital",
         "Planning & Self-Management",
-        "Empathy & People"
+        "Critical Thinking & Reasoning"
       ]
     },
     "privacy-footprint": {
@@ -349,13 +350,13 @@
     "write-like-a-pro": {
       "canonical": [
         "Writing",
+        "Audience Awareness",
         "Communication",
-        "Creative Thinking"
+        "Reflection"
       ],
       "families": [
         "Communication & Writing",
-        "Empathy & People",
-        "Planning & Self-Management"
+        "Empathy & People"
       ]
     },
     "board-game-studio": {
@@ -1553,15 +1554,14 @@
     "boredom-toolkit": {
       "canonical": [
         "Self-Direction",
-        "Creativity",
-        "Independence",
-        "Patience",
-        "Self-Knowledge"
+        "Creative Thinking",
+        "Public Speaking",
+        "Reflection"
       ],
       "families": [
-        "Empathy & People",
         "Planning & Self-Management",
-        "Creativity & Making"
+        "Creativity & Making",
+        "Communication & Writing"
       ]
     },
     "frustration-tolerance-cards": {
@@ -1605,11 +1605,10 @@
     },
     "kindness-missions": {
       "canonical": [
-        "Kindness",
         "Empathy",
-        "Social Awareness",
-        "Courage",
-        "Community"
+        "Observation",
+        "Confidence",
+        "Life Skills"
       ],
       "families": [
         "Empathy & People",

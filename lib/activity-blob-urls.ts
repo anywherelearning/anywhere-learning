@@ -17,7 +17,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "big-feelings-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Big%20Feelings%20Lab%20v7.pdf",
   "board-game-studio": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Board%20Game%20Studio%20v9.pdf",
   "body-owners-manual": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20THE%20BODY%20OWNER%27S%20MANUAL%20v10.pdf",
-  "boredom-toolkit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Boredom%20Toolkit%20v8.pdf",
+  "boredom-toolkit": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Boredom%20Toolkit%20v9.pdf",
   "brand-builder": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Brand%20builder%20v2.pdf",
   "budget-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Real-Life%20Budget%20Challenge%20v14.pdf",
   "build-a-museum": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20build%20a%20museum%20or%20interactive%20exhibit%20v8.pdf",
@@ -58,12 +58,12 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "grow-it-eat-it": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20%26%20Nature%20-%20GROW%20IT%2C%20EAT%20IT%20v8.pdf",
   "hallucination-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20HALLUCINATION%20DETECTIVE%20v7.pdf",
   "hard-thing-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Hard%20Thing%20Challenge%20v8.pdf",
-  "healthy-tech-boundaries": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20HEALTHY%20TECH%20%26%20AI%20BOUNDARIES%20PLAN%20v6.pdf",
+  "healthy-tech-boundaries": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/AI%20%26%20Digital%20Literacy%20-%20HEALTHY%20TECH%20%26%20AI%20BOUNDARIES%20PLAN%20v7.pdf",
   "household-orchestra": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Household%20Orchestra%20v8.pdf",
   "imaginary-world": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Build%20an%20Imaginary%20World%20v10.pdf",
   "invent-a-sport": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Invent%20a%20New%20Sport%20v9.pdf",
   "investor-pitch": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Entrepreneurship%20-%20Investor%20Pitch%20Portfolio%20v2.pdf",
-  "kindness-missions": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Kindness%20Missions%20v8.pdf",
+  "kindness-missions": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Kindness%20Missions%20v9.pdf",
   "kinetic-sculpture": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Creativity%20%26%20Maker%20Kinetic%20Sculpture%20or%20Art%20Installation%20v5.pdf",
   "kitchen-math-challenge": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Real-world%20math%20-%20Kitchen%20math%20%26%20meal%20planning%20challenge%20v13.pdf",
   "kitchen-science-lab": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Planning%20%26%20Problem-Solving%20Kitchen%20Science%20Lab%20v11.pdf",
@@ -153,7 +153,7 @@ export const ACTIVITY_BLOB_URLS: Record<string, string> = {
   "winter-outdoor-pack": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Outdoor%20Learning%20-%20Anywhere%20Learning%20Winter%20v2.pdf",
   "world-food-detective": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Worldschooling%20-%20World%20Food%20Detective%20v7.pdf",
   "worry-sorter": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Emotional%20%26%20Social%20Skills%20-%20The%20Worry%20Sorter%20v6.pdf",
-  "write-like-a-pro": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Write%20it%20like%20a%20pro%20v9.pdf",
+  "write-like-a-pro": "https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Communication%20%26%20Writing%20-%20Write%20it%20like%20a%20pro%20v10.pdf",
 };
 
 export function getActivityBlobUrl(slug: string): string | null {

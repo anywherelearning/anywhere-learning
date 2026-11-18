@@ -2,299 +2,359 @@
   "slug": "kindness-missions",
   "category": "Emotional & Social",
   "title": "Kindness Missions",
-  "tagline": "Spot · Choose · Do · Notice · Keep",
+  "tagline": "Spot · Count · Go first · Offer · Keep",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid learns to spot small chances to be kind, like a seat someone needs or a neighbour carrying too much, and to act on them without being asked. They take on real missions, notice how each one lands, and keep the ones that become habits, the kind you see when nobody's watching.",
+  "goal": "Your kid finds out that kindness in public often comes down to going first. On real outings they spot small chances to help, count how many people saw the same chance and walked on, practise moving within about five seconds, and keep the moves that become habits.",
   "need": [
-    "Everyday places: the bus, the store, the street, home",
-    "A notebook for the mission log",
-    "A week or two, a few missions at a time"
+    "Everyday public places: the bus, the store, a busy street or market",
+    "A notebook for the walk-past tally",
+    "Two weeks, a few outings at a time"
   ],
   "academics": [
     {
       "subject": "Social studies",
-      "text": "who in a community might need a hand"
+      "text": "why people in a crowd wait for someone else"
     },
     {
-      "subject": "Writing",
-      "text": "a mission log of what they did and noticed"
+      "subject": "Math",
+      "text": "tallying chances and walk-pasts, then comparing"
     },
     {
       "subject": "Health",
-      "text": "how kindness feels for the giver and the receiver"
+      "text": "courage, and how a small kindness lands"
     },
     {
       "subject": "Life skills",
-      "text": "acting on what they notice, on their own"
+      "text": "offering help politely and taking a no"
     }
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "Kindness you assign turns into a chore. Point out the chances quietly, let them choose what to do, and when they act on their own, say exactly what you saw.",
+    "intro": "In public, stay close and stay quiet. Younger kids always act with you right there, the offers stay small, and nobody approaches a stranger alone. Let them do the moving and the talking, then say exactly what you saw.",
     "plan": [
       {
-        "when": "One walk or outing",
-        "what": "Spot the chances and choose missions (Steps 1 and 2)."
+        "when": "One outing",
+        "what": "Spot the chances and count who walked past (Steps 1 and 2)."
       },
       {
-        "when": "Over a week or two",
-        "what": "Do the missions and notice how they land (Steps 3 and 4)."
+        "when": "Over the next week",
+        "what": "Practise going first, then make real offers (Steps 3 and 4)."
       },
       {
-        "when": "At the end",
-        "what": "Keep the ones that became habits (Step 5)."
+        "when": "At home, then two weeks later",
+        "what": "Talk it through and check the habit (Step 5)."
       }
     ],
     "tips": [],
     "troubleshoot": [
       {
-        "q": "They only want to do it for praise or a reward",
-        "a": "Try a secret mission, where nobody knows who did it. The feeling afterwards is the real reward."
+        "q": "They freeze and the moment passes",
+        "a": "That's the 'someone else will' feeling from the inside. Say nothing in the moment. Later, ask what stopped them, and pick the next chance together, like the next door you reach."
       },
       {
-        "q": "Someone says no thanks",
-        "a": "That's fine, and it still counts. Offering kindly and accepting a no are both part of the mission."
+        "q": "They're too shy to talk to strangers",
+        "a": "Start with go-firsts that need no words: holding a door, or handing back something dropped. Offer lines can wait until moving first feels easy."
       },
       {
-        "q": "They're shy around strangers",
-        "a": "Start at home and with people they know, then try one stranger mission together, side by side."
+        "q": "A no thanks put them off",
+        "a": "A no thanks is someone choosing for themselves, not a failed mission. They still went first, and that's the part that counts."
       }
     ]
   },
   "lesson": {
-    "text": "Most kindness isn't planned. It's noticing someone who needs something, right now, and acting before the moment passes. The missions are practice for that moment.",
+    "text": "When lots of people see someone who needs a hand, each one tends to wait for somebody else. Psychologists call it the bystander effect. Kindness often just means going first. The missions are practice for those five seconds.",
     "before": "'Someone else will give him their seat.'",
     "model": [
       {
         "part": "Spot",
-        "line": "An older man standing on the city bus."
+        "line": "An older man standing on a full city bus."
       },
       {
-        "part": "Do",
-        "line": "He stood up and gave him his seat."
+        "part": "Saw it",
+        "line": "Everyone sitting nearby could see him there."
       },
       {
-        "part": "Notice",
-        "line": "The man thanked him, and said he doesn't see that much anymore."
+        "part": "Waited",
+        "line": "'Someone else will' kept them all in their seats."
       },
       {
-        "part": "Surprise",
-        "line": "As he got off, the man gave him $5 for his kindness."
+        "part": "Went first",
+        "line": "He stood up and offered his seat."
       }
     ],
-    "modelNote": "He didn't give up his seat for a reward. He didn't know one was coming. The $5 was a surprise. What he kept was knowing his small choice made someone's day."
+    "modelNote": "Every seat on that bus had the same thought, so nobody moved. He didn't wait to see who would, and the whole thing took a few seconds."
   },
   "steps": [
     {
       "title": "Spot the chances",
-      "why": "Kindness starts with noticing. Most chances last a few seconds, and kids who look for them see many more.",
-      "kid": "On a walk, a bus ride or a trip to the store, your kid looks for people who could use a hand, using the Where to look card in the Kindness Toolkit at the end of the guide.",
-      "you": "Point out quietly what you see: 'That lady has a lot of bags.' 'Nobody's sitting with him.' Then let them decide what to do.",
+      "why": "Most chances to help in public last a few seconds. Kids who look for them start seeing them everywhere.",
+      "kid": "On one outing, like a bus ride, a market or a busy street, your kid looks for small chances to help, using the Where to look card in the Kindness Toolkit at the end of the guide. They note each one: who it was, and what would have helped.",
+      "you": "Walk slowly, and point out one chance quietly to get them started: 'Full hands at that door.' Then let them do the spotting.",
       "ask": [
-        "Who could use a hand right now?",
-        "What would make their day a little easier?"
+        "What did that person need right then?",
+        "Which chance was over the fastest?"
       ],
-      "tip": "Buses, doors and checkout lines are full of small chances. They pass quickly, so noticing is the skill.",
+      "tip": "Doors, stairs, bus seats and checkout lines are where most small chances happen.",
       "levels": {
-        "explore": "Spot one person on a walk who could use help, and tell a parent.",
-        "develop": "Count every chance you spot in 20 minutes on one outing, then count again on the next outing and compare.",
-        "extend": "Spot a chance that most people walk past, and say why it's easy to miss."
+        "explore": "Spot one person who could use a hand, and whisper it to a parent.",
+        "develop": "Write down every chance you spot in 20 minutes, and what would have helped.",
+        "extend": "Note where each chance happened, and find the spot on your usual route with the most."
       }
     },
     {
-      "title": "Choose your missions",
-      "why": "A mission they choose feels like theirs. One you assign feels like a chore.",
-      "kid": "Your kid picks three missions to try this week from the Mission ideas card, including one for someone at home, one for someone they know and one for a stranger.",
-      "you": "Help them pick missions that fit their age and comfort. A stranger mission happens with you nearby, in public: never into someone's car or home.",
+      "title": "Count who walked past",
+      "why": "This is the surprise. When lots of people see the same chance, each one tends to wait for someone else.",
+      "kid": "For each chance, your kid counts how many people saw it and walked on before anyone helped, using the Walk-past tally card. They tally it in the notebook, and note whether somebody went first in the end, or nobody did.",
+      "you": "Keep it curious, not judging. Nobody walking past is a bad person. Ask what each one might have been telling themselves.",
       "ask": [
-        "Which mission sounds fun to try?",
-        "Who would you most like to surprise?"
+        "How many people saw it before someone helped?",
+        "What do you think they were telling themselves?"
       ],
-      "tip": "Mix easy and hard. One small win makes the harder mission feel possible.",
+      "tip": "Count only people who clearly looked. Someone on their phone may never have seen it.",
       "levels": {
-        "explore": "Pick one mission for someone at home.",
-        "develop": "Pick three missions: home, someone you know, and a stranger.",
-        "extend": "Invent a mission of your own for someone who's often overlooked."
+        "explore": "Hold up a finger for each person who walks past, and count them together.",
+        "develop": "Tally walk-pasts for every chance on one outing, and work out the average.",
+        "extend": "Compare a busy place with a quiet one, and see if a bigger crowd means a longer wait before someone helps."
       }
     },
     {
-      "title": "Do the mission",
-      "why": "Kindness only counts when it happens. Doing it, even awkwardly, is the whole point.",
-      "kid": "Your kid does each mission, using the How to do it card: notice, offer, and accept the answer, even if it's no thanks.",
-      "you": "Stay close for stranger missions, and let them speak for themselves. Don't jump in to help them say it.",
+      "title": "Go first in five seconds",
+      "why": "Waiting is how the moment passes. A move they've practised can happen before 'someone else will' kicks in.",
+      "kid": "At home, your kid practises the Five-second move: you drop a glove or carry too much, and they spot it, count in their head and move before five. Then they try it for real on an outing, with you nearby, using the Go first safely card.",
+      "you": "Play the person who needs a hand a few times, in different ways. In public, stay close enough to step in, and let them be the one who moves.",
       "ask": [
-        "What will you say?",
-        "What will you do if they say no thanks?"
+        "What did you do in the first second?",
+        "What made you wait, if you did?"
       ],
-      "tip": "Offer, don't push. 'Would you like my seat?' leaves room for the other person to say no.",
+      "tip": "Holding a door or handing back something dropped needs no words. Those make the easiest first go.",
       "levels": {
-        "explore": "Do one mission with a parent right beside you.",
-        "develop": "Do all three of your missions this week.",
-        "extend": "Do a secret mission, where nobody knows it was you."
+        "explore": "Practise with a parent at home, then hold one door in public with a parent beside you.",
+        "develop": "Go first on three real chances this week, within about five seconds.",
+        "extend": "Write the exact thought that makes you wait, then the line you'll answer it with next time."
       }
     },
     {
-      "title": "Notice how it landed",
-      "why": "Seeing what a small act did for someone is what turns a mission into a habit.",
-      "kid": "After each mission, your kid writes in a notebook what they did, how the person reacted and how they felt.",
-      "you": "Ask about the other person first, then about them: 'How did he look?' before 'How did you feel?'",
+      "title": "Make the offer",
+      "why": "An offer leaves the choice with the other person. Going first is about offering, not about getting a yes.",
+      "kid": "When a chance needs words, your kid uses a line from the Offer and answer card, like 'Would you like a hand with that?' Then they accept whatever comes back: a yes, a no thanks or a shrug. They log each go-first and each answer.",
+      "you": "Stand back and let them speak for themselves. If they get a no thanks, catch their eye and smile. They did it right.",
       "ask": [
-        "How did they react?",
-        "How did you feel afterwards?"
+        "What did you say, word for word?",
+        "How did the no thanks feel?"
       ],
-      "tip": "Sometimes the reaction is big, sometimes it's nothing. Both count. The kindness was in the doing.",
+      "tip": "Offer, don't grab. Picking up someone's bag without asking can frighten them.",
       "levels": {
-        "explore": "Tell a parent what happened, and draw the person's face.",
-        "develop": "Log each mission: what you did, their reaction and your feeling.",
-        "extend": "Log it, and notice whether kindness spread, like someone else helping too."
+        "explore": "Say one offer line with a parent beside you, like 'Would you like to go ahead?' in a line.",
+        "develop": "Make three offers this week, and log each answer.",
+        "extend": "After a no thanks, guess why that person might prefer to manage on their own, and what it tells you about offering."
       }
     },
     {
-      "title": "Keep the keepers",
-      "why": "The goal isn't a list of good deeds. It's a kid who does them without a list.",
-      "kid": "At the end, your kid looks back through the log and picks two missions to keep doing on their own, using the Keep it card.",
-      "you": "Name it when you see a keeper happen without a reminder. That's the moment the habit is real.",
+      "title": "Talk it through and keep it",
+      "why": "A few go-firsts are practice. The ones still happening two weeks later, without thinking, are the habit.",
+      "kid": "At home, your kid looks back through the notebook and picks what was hardest: going first, offering or hearing a no. Two weeks later, they use the Habit check card to sort which moves now happen without thinking and which still need practice.",
+      "you": "Share your own hardest part first. At the habit check, name one move you've seen them do with no reminder.",
       "ask": [
-        "Which mission felt the best?",
-        "Which one will you keep doing?"
+        "Which was hardest: going first, offering or hearing a no?",
+        "Which move do you do now without thinking?"
       ],
-      "tip": "A kind habit sticks best when it's attached to something they already do, like every bus ride, or every time you leave a store.",
+      "tip": "Hook one move to something you already do, like every time you reach a door or step onto a bus.",
       "levels": {
-        "explore": "Pick one kind thing to keep doing every day.",
-        "develop": "Pick two keepers, and when you'll do them.",
-        "extend": "Pick your keepers, then show someone at home how to do one with you."
+        "explore": "Tell a parent the hardest part, and pick one move to keep doing.",
+        "develop": "Name your hardest part, and plan an easier go-first to practise it.",
+        "extend": "Teach the Five-second move to someone at home, and see if they go first on your next outing."
       }
     }
   ],
   "reference": {
     "title": "Kindness Toolkit",
-    "intro": "Where to look, what to try, and how to make it stick.",
+    "intro": "Where to look, what to count, how to go first safely, and what to say.",
     "items": [
       {
         "name": "Where to look",
         "lines": [
           {
-            "k": "On the bus:",
-            "v": "someone older, tired or with a lot to carry"
+            "k": "Doors:",
+            "v": "full hands, strollers, wheelchairs"
           },
           {
-            "k": "At doors:",
-            "v": "strollers, wheelchairs, full hands"
+            "k": "Bus:",
+            "v": "someone standing who needs a seat"
           },
           {
-            "k": "At home:",
-            "v": "the person doing the most"
+            "k": "Floor:",
+            "v": "a glove, card or toy just dropped"
           },
           {
-            "k": "With friends:",
-            "v": "the one sitting alone"
+            "k": "Lines:",
+            "v": "one item behind your full cart"
+          },
+          {
+            "k": "Stairs:",
+            "v": "heavy bags, a stroller, a big box"
           }
         ],
-        "ask": "Where do you see the most chances?"
+        "ask": "Where did you spot the most chances?"
       },
       {
-        "name": "Mission ideas",
+        "name": "Walk-past tally",
         "lines": [
           {
-            "k": "Stranger:",
-            "v": "give your seat, hold a door, pick up something dropped"
+            "k": "Chance:",
+            "v": "what you saw, in a few words"
           },
           {
-            "k": "Someone you know:",
-            "v": "a note, a compliment, inviting them in"
+            "k": "Saw it:",
+            "v": "a tally for each person who looked"
           },
           {
-            "k": "Home:",
-            "v": "a job before anyone asks"
+            "k": "Walked on:",
+            "v": "a tally for each who did nothing"
           },
           {
-            "k": "Secret:",
-            "v": "a kind act nobody knows was you"
+            "k": "Went first:",
+            "v": "who helped in the end, or nobody"
           }
         ],
-        "ask": "Which mission feels hardest?"
+        "ask": "Did a bigger crowd mean a longer wait?"
       },
       {
-        "name": "How to do it",
+        "name": "Go first safely",
         "lines": [
           {
-            "k": "Notice:",
-            "v": "what do they need right now?"
+            "k": "Younger kids:",
+            "v": "a parent nearby, every time"
           },
           {
-            "k": "Offer:",
-            "v": "'Would you like...?'"
+            "k": "Strangers:",
+            "v": "never approach one alone"
           },
           {
-            "k": "Accept:",
-            "v": "a yes, or a no thanks"
+            "k": "Stay public:",
+            "v": "never into a car or a home"
           },
           {
-            "k": "Move on:",
-            "v": "no reward needed"
+            "k": "Keep it small:",
+            "v": "a door, a seat, a dropped thing"
+          },
+          {
+            "k": "A no thanks:",
+            "v": "is the end of it"
           }
         ],
-        "ask": "What's hardest: noticing, offering or hearing a no?"
+        "ask": "Which offer can you make right next to a parent?"
       },
       {
-        "name": "Keep it",
+        "name": "Five-second move",
         "lines": [
           {
-            "k": "Pick:",
-            "v": "the missions that felt best"
+            "k": "Spot:",
+            "v": "who needs what, right now?"
           },
           {
-            "k": "Attach:",
-            "v": "to something you already do"
+            "k": "Count:",
+            "v": "one, two, three, in your head"
           },
           {
-            "k": "Notice:",
-            "v": "when you do it without thinking"
+            "k": "Move:",
+            "v": "before five"
           },
           {
-            "k": "Spread:",
-            "v": "show someone else how"
+            "k": "Missed it?",
+            "v": "watch for the next one"
           }
         ],
-        "ask": "What do you already do every day that a kind habit could stick to?"
+        "ask": "What number do you usually reach before you move?"
+      },
+      {
+        "name": "Offer and answer",
+        "lines": [
+          {
+            "k": "Seat:",
+            "v": "'Would you like to sit here?'"
+          },
+          {
+            "k": "Line:",
+            "v": "'Would you like to go ahead?'"
+          },
+          {
+            "k": "Bags:",
+            "v": "'Would you like a hand with that?'"
+          },
+          {
+            "k": "Yes:",
+            "v": "help, then step back"
+          },
+          {
+            "k": "No thanks:",
+            "v": "'Okay!', a smile, and move on"
+          }
+        ],
+        "ask": "Which offer line feels easiest to say?"
+      },
+      {
+        "name": "Habit check",
+        "lines": [
+          {
+            "k": "When:",
+            "v": "two weeks after your first go-first"
+          },
+          {
+            "k": "Easy now:",
+            "v": "moves you did without thinking"
+          },
+          {
+            "k": "Still hard:",
+            "v": "the one you still wait on"
+          },
+          {
+            "k": "Hook it:",
+            "v": "to a door, a bus step or a line"
+          },
+          {
+            "k": "Reward:",
+            "v": "none needed, none expected"
+          }
+        ],
+        "ask": "Which move is yours now?"
       }
     ]
   },
   "skills": [
     {
       "name": "Noticing",
-      "text": "spotting who needs a hand"
+      "text": "spotting small chances in a crowd"
     },
     {
       "name": "Courage",
-      "text": "offering, even to a stranger"
+      "text": "moving first when nobody else does"
     },
     {
-      "name": "Empathy",
-      "text": "seeing a day from someone else's side"
+      "name": "Respect",
+      "text": "offering, then accepting the answer"
     },
     {
       "name": "Habits",
-      "text": "kindness without being asked"
+      "text": "going first without thinking"
     }
   ],
   "conclusion": {
-    "headline": "They act on kindness without being asked.",
-    "text": "Keep an eye on the next bus ride or store trip. If they're the one who spots the full hands or the person who needs a seat, and does something about it, the missions have become a habit.",
-    "celebrate": "When you see them do it on their own, say: 'You gave him your seat before anyone asked. That was kind, and it was your idea.'",
+    "headline": "They move first while others wait.",
+    "text": "Say nothing on your next bus ride or at the next busy door, and see who moves. If your kid is up and offering before you've even spotted the chance, those five seconds belong to them now.",
+    "celebrate": "When they go first with no reminder, say: 'Three people walked past that, and you didn't wait. You went first.'",
     "extensions": [
-      "Plan a family kindness day for a neighbour",
-      "Find out what a local shelter or food bank needs, and help",
-      "Find out who keeps your street or building running, like a bus driver or a cleaner, and do one mission for them",
-      "Notice a kindness someone does for you this week, and pass the same one on to someone else"
+      "Find out why first aid courses teach you to point at one person and say 'You, call for help'",
+      "Notice when someone goes first for you this week, and thank them",
+      "Ask a grandparent about a time a stranger went first for them, and what they still remember",
+      "Go first at home too: be the first to say sorry, or the first to start the dishes"
     ]
   },
   "signs": [
-    "They offer help to strangers on their own",
-    "They notice who's been left out",
-    "They do a job at home before anyone asks"
+    "They get up for someone before anyone asks",
+    "They notice when a crowd is waiting for someone else",
+    "They take a no thanks with a smile"
   ],
-  "makeItReal": "On your next bus ride, walk or trip to the store, look for one chance to be kind together. Let them choose what to do, and let them be the one who does it.",
+  "makeItReal": "On your next bus ride or trip to the store, look for one small chance together and count the people who walk past it. Then let your kid be the one who goes first.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {
@@ -309,6 +369,6 @@
   "photo": {
     "src": "guides/assets/kindness-missions.jpg",
     "alt": "A girl hugging her smiling grandfather from behind",
-    "caption": "Kindness, at every age."
+    "caption": "It starts with going first."
   }
 }
