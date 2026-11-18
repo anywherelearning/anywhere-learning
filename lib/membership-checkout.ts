@@ -15,16 +15,13 @@ import { STRIPE_PRICES, requirePriceId } from '@/lib/stripe-prices';
 import {
   isFounderPhaseOpen,
   TRIAL_DAYS,
-  FOUNDER_PRICE_USD,
-  POST_FOUNDER_PRICE_USD,
-  MONTHLY_PRICE_USD,
   type MembershipPlan,
 } from '@/lib/membership';
 import {
   getAccessContextForClerkId,
   isTrialEligible,
 } from '@/lib/access';
-import { BLACK_FRIDAY_OFFER, BLACK_FRIDAY_PRICE_USD, isBlackFridayActive } from '@/lib/black-friday';
+import { BLACK_FRIDAY_OFFER, isBlackFridayActive } from '@/lib/black-friday';
 import { metaMatchToMetadata, type MetaUserData } from '@/lib/meta-capi';
 import { OWNER_OFFER, OWNER_OFFER_HOURS } from '@/lib/skills-map';
 import { COOP_OFFER } from '@/lib/coop-offer';
@@ -136,8 +133,6 @@ export async function createMembershipCheckout(opts: {
     }
   }
 
-  const mapFirstYear = Math.round((offerFounderRate ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD) * (100 - OWNER_OFFER.percentOff)) / 100;
-
   // Debug log (dev only): what the route decided about credit/trial/rate per
   // request. Gated so production checkout logs don't carry clerkIds.
   if (process.env.NODE_ENV !== 'production') {
@@ -154,28 +149,30 @@ export async function createMembershipCheckout(opts: {
   // Plain-words fine print shown above the pay button on the Stripe page.
   // Honest billing: spell out the trial mechanics and the founder rate
   // right where the card is entered, not just on our own pages.
-  const priceLine =
-    plan === 'monthly'
-      ? `$${MONTHLY_PRICE_USD}/month`
-      : `$${offerFounderRate ? FOUNDER_PRICE_USD : POST_FOUNDER_PRICE_USD}/year`;
+  //
+  // No dollar amounts here on purpose. Adaptive Pricing shows non-US buyers
+  // the price in their own currency at the top of the Stripe page, so a
+  // "$99/year" line here contradicted it (Nov 2026: 7 of 9 ad visitors left
+  // at this page, all 4 Australians). Stripe's own summary carries the amount.
+  const afterTrial = offerFounderRate ? 'your founder rate, locked in for life' : 'the regular price';
   const submitMessage = coopPromo
     ? applyTrial
-      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${COOP_OFFER.priceUsd} for your first year (co-op code ${coopPromo.code}), and $${FOUNDER_PRICE_USD}/year after that, your founder rate locked in for life. Cancel anytime before your trial ends and pay nothing.`
-      : `Co-op code ${coopPromo.code}: $${COOP_OFFER.priceUsd} for your first year, then $${FOUNDER_PRICE_USD}/year, your founder rate locked in for life.`
+      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then your co-op price for the first year (code ${coopPromo.code}), and your founder rate after that, locked in for life. Cancel anytime before your trial ends and pay nothing.`
+      : `Co-op code ${coopPromo.code}: your co-op price for the first year, then your founder rate, locked in for life.`
     : applyMapOffer
     ? applyTrial
-      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${mapFirstYear.toFixed(2)} for your first year (Skills Map owner, ${OWNER_OFFER.percentOff}% off), and ${priceLine} after that. Cancel anytime before your trial ends and pay nothing.`
-      : `Skills Map owner: ${OWNER_OFFER.percentOff}% off your first year ($${mapFirstYear.toFixed(2)}), then ${priceLine}.`
+      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then ${OWNER_OFFER.percentOff}% off your first year (Skills Map owner), and ${afterTrial} after that. Cancel anytime before your trial ends and pay nothing.`
+      : `Skills Map owner: ${OWNER_OFFER.percentOff}% off your first year, then ${afterTrial}.`
     : applyBlackFriday
     ? applyTrial
-      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then $${BLACK_FRIDAY_PRICE_USD} for your first year (${BLACK_FRIDAY_OFFER.name}), and $${FOUNDER_PRICE_USD}/year after that, your founder rate locked in for life. Cancel anytime before your trial ends and pay nothing.`
-      : `${BLACK_FRIDAY_OFFER.name}: $${BLACK_FRIDAY_PRICE_USD} for your first year, then $${FOUNDER_PRICE_USD}/year, your founder rate locked in for life.`
+      ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Then your ${BLACK_FRIDAY_OFFER.name} price for the first year, and your founder rate after that, locked in for life. Cancel anytime before your trial ends and pay nothing.`
+      : `${BLACK_FRIDAY_OFFER.name} price for your first year, then your founder rate, locked in for life.`
     : applyTrial
-    ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Downloads unlock when your membership starts, ${priceLine}${offerFounderRate ? ', your founder rate locked in for life' : ''}. Cancel anytime before then and pay nothing.`
+    ? `Free for ${TRIAL_DAYS} days: read every guide in your browser. Downloads unlock when your membership starts${offerFounderRate ? ', at your founder rate, locked in for life' : ''}. Cancel anytime before then and pay nothing.`
     : offerFounderRate
-      ? `Founder rate: $${FOUNDER_PRICE_USD}/year, locked in for life.`
+      ? `Founder rate, locked in for life.`
       : plan === 'monthly'
-        ? `$${MONTHLY_PRICE_USD}/month, cancel anytime.`
+        ? `Cancel anytime.`
         : undefined;
 
   const session = await stripe.checkout.sessions.create({
