@@ -688,10 +688,10 @@ export default async function HomePage() {
               <div className="mb-10 text-center">
                 <Eyebrow center>The membership</Eyebrow>
                 <h2 className="mb-3.5 mt-4 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.06] tracking-tight text-balance">
-                  One price. All of it.
+                  We do the deciding. You do the together part.
                 </h2>
-                <p className="mx-auto max-w-[520px] text-lg leading-[1.65] text-gray-600">
-                  {`No bundles to pick between, no upsells. Start with ${TRIAL_DAYS} days free, you're not charged until they're up.`}
+                <p className="mx-auto max-w-[560px] text-lg leading-[1.65] text-gray-600">
+                  {`Every month, the next activities are already picked, put in order and matched to your kids, and you can see what each one is building. Nothing to search, prompt or plan. Start with ${TRIAL_DAYS} days free, you're not charged until they're up.`}
                 </p>
               </div>
             </ScrollReveal>
