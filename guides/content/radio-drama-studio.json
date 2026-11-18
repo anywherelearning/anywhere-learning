@@ -1,0 +1,367 @@
+{
+  "slug": "radio-drama-studio",
+  "category": "Writing & Communication",
+  "title": "Radio Drama Studio",
+  "tagline": "Cast · Mark · Rehearse · Sound · Record",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid turns a story into an audio drama people can listen to. They pick a scene from a book they love or a story they wrote, mark the script for pauses and feeling, slow down until every word is clear, make the sound effects with things around the house, then record, edit and share it with family and friends.",
+  "need": [
+    "A favourite book, or a story your kid already wrote",
+    "A phone or tablet that records sound, and a free editing app like iMovie or GarageBand",
+    "Household things for sound effects: paper, a bowl of water, shoes, a sheet",
+    "A quiet corner, a closet full of clothes or a blanket fort"
+  ],
+  "academics": [
+    {
+      "subject": "Reading",
+      "text": "reading aloud with pace, pauses and expression"
+    },
+    {
+      "subject": "Speaking",
+      "text": "saying every word clearly"
+    },
+    {
+      "subject": "Math",
+      "text": "counting words per minute to check the pace"
+    },
+    {
+      "subject": "Media arts",
+      "text": "sound effects, music and editing"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Most kids rush. Excited readers race to the good part, and nervous ones race to the end. Your job is to be the first listener: play their test take back with them, ask what a listener would miss, and let the recording show them what speed really sounds like.",
+    "plan": [
+      {
+        "when": "One sitting",
+        "what": "Pick the scene, cast it and mark the script (Steps 1 and 2)."
+      },
+      {
+        "when": "A few short practices",
+        "what": "Rehearse, record test takes and listen back (Step 3)."
+      },
+      {
+        "when": "An afternoon",
+        "what": "Make the sounds, then record, edit and share (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They still read too fast",
+        "a": "Have them read for one minute on a timer and count the words, then beat their own number by going slower. A number is easier to fix than 'slow down'."
+      },
+      {
+        "q": "They hate hearing their own voice",
+        "a": "Almost everyone does at first. Listen to one take together, name one thing that worked, then move on."
+      },
+      {
+        "q": "Siblings argue over parts",
+        "a": "Let one be the narrator and the other play every character with different voices. Swap for the next scene."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A listener can't see the page. Everything they understand comes from the voice: the speed, the pauses, the clear words and the feeling. Reading for an audience is a different skill from reading to yourself, and recording is the fastest way to hear the difference.",
+    "before": "Reading the whole story fast, the way it sounds in your head.",
+    "model": [
+      {
+        "part": "First take",
+        "line": "Too fast, with words running into each other."
+      },
+      {
+        "part": "Marked",
+        "line": "Pauses slashed into the script, tricky words circled."
+      },
+      {
+        "part": "Next take",
+        "line": "Slower, every word said clearly, a pause before the big moment."
+      },
+      {
+        "part": "Finished",
+        "line": "Sound effects and music added, then shared for friends and family."
+      }
+    ],
+    "modelNote": "Nothing about the story changed between takes. Hearing the first recording played back, and marking where to slow down, turned a rushed reading into something people could actually follow and enjoy."
+  },
+  "steps": [
+    {
+      "title": "Pick the scene and cast it",
+      "why": "A short scene with a few characters is the right size for a first audio drama.",
+      "kid": "Your kid picks a scene from a book they love or a story they wrote, then lists every character and the narrator, using the Cast it card in the Radio Drama Toolkit at the end of the guide. They decide who reads what and how each character sounds.",
+      "you": "Help them pick something short, 2 to 5 minutes read aloud. Offer to play a part if they want a cast.",
+      "ask": [
+        "Which scene would sound best without pictures?",
+        "How does each character sound?"
+      ],
+      "tip": "Scenes with a surprise, a scare or a chase work best. Something has to happen.",
+      "levels": {
+        "explore": "Pick one page from a favourite book, and try one character's voice.",
+        "develop": "Pick a scene, list every character and the narrator, and describe each voice.",
+        "extend": "Rewrite a scene from a book so it works with no pictures, putting what the reader would see into the dialogue."
+      }
+    },
+    {
+      "title": "Mark the script",
+      "why": "Marks on the page remind you to slow down and to feel it, right when it matters.",
+      "kid": "Your kid copies or prints their lines and marks them, using the Script marks card: slashes for pauses, underlines for words to stress, arrows for the voice going up or down. They circle any word that's hard to say and practise it on its own.",
+      "you": "Read a line two ways, flat and then marked, and ask which one they'd rather listen to.",
+      "ask": [
+        "Where should the listener get a moment to breathe?",
+        "Which words are hardest to say?"
+      ],
+      "tip": "A long pause before the big moment does more than any sound effect.",
+      "levels": {
+        "explore": "Mark three pauses in your lines with a parent.",
+        "develop": "Mark the whole script with pauses, stresses and circled words.",
+        "extend": "Mark the script, then mark a second copy completely differently, record both and choose the better one."
+      }
+    },
+    {
+      "title": "Slow down and say it clearly",
+      "why": "Most first takes are too fast. Hearing yourself is how you fix it.",
+      "kid": "Your kid warms up with the Warm up card, records a test take, then listens back using the Listen back card: speed, clear words and feeling. They read for one minute on a timer, count the words, and try again until it sounds right.",
+      "you": "Listen with them, not to them. Ask what a listener would miss, and let them decide what to change.",
+      "ask": [
+        "Could a listener follow every word?",
+        "Where did you speed up without meaning to?"
+      ],
+      "tip": "Most first takes are faster than a listener can follow. For confident readers, around 150 words a minute is comfortable; for younger readers, slower than the first take is the goal.",
+      "levels": {
+        "explore": "Record one line, listen to it, and say it again slower.",
+        "develop": "Record a test take, count your words per minute, and record again slower, near 150 if you're a confident reader.",
+        "extend": "Compare your pace in the calm part and the scary or exciting part, and decide where faster actually helps."
+      }
+    },
+    {
+      "title": "Make the sounds",
+      "why": "Sound effects tell the listener where they are and what just happened.",
+      "kid": "Your kid lists every sound the story needs, then makes each one with things around the house, using the Sound kitchen card, and records them. They pick music too, from a free library in their app or made up and hummed.",
+      "you": "Help them test sounds. Ask 'What does that sound like with your eyes closed?' before they keep it.",
+      "ask": [
+        "Which sound was the hardest to make?",
+        "What will the music tell the listener?"
+      ],
+      "tip": "Record sound effects close to the phone, then listen with eyes closed. If you can't tell what it is, try another object.",
+      "levels": {
+        "explore": "Make one sound effect for your story, and let someone guess what it is.",
+        "develop": "Make every sound your scene needs, and pick music for the start and the end.",
+        "extend": "Tell part of the scene with sound only, no words, and see if a listener can follow what happened."
+      }
+    },
+    {
+      "title": "Record, edit and share",
+      "why": "A finished drama with a real audience makes every slow, clear word worth it.",
+      "kid": "Your kid records the final takes in a quiet spot, using the Quiet studio card, then edits it in their app: cutting mistakes, adding the sound effects and music. They share it with family and friends, and ask listeners one question.",
+      "you": "Help find the quietest spot, and share it somewhere only family and friends can listen. Let them do the editing, even if it takes longer.",
+      "ask": [
+        "What did your listeners like best?",
+        "What would you change for the next one?"
+      ],
+      "tip": "Record each part in short pieces. It's much easier to redo one sentence than the whole scene.",
+      "levels": {
+        "explore": "Record your scene with a parent, and play it for one person.",
+        "develop": "Record, edit in the sound effects and music, and share it with family and friends.",
+        "extend": "Make a second episode, and use your listeners' answers to make it better than the first."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Radio Drama Toolkit",
+    "intro": "How to cast a scene, mark a script, warm up, listen back, make sounds and set up a quiet studio.",
+    "items": [
+      {
+        "name": "Cast it",
+        "lines": [
+          {
+            "k": "Narrator:",
+            "v": "tells what the listener can't see"
+          },
+          {
+            "k": "Characters:",
+            "v": "one line each on how they sound"
+          },
+          {
+            "k": "Voices:",
+            "v": "high, low, slow, fast, scratchy, whispery"
+          },
+          {
+            "k": "Doubles:",
+            "v": "one reader can play two characters"
+          }
+        ],
+        "ask": "How will a listener tell the characters apart?"
+      },
+      {
+        "name": "Script marks",
+        "lines": [
+          {
+            "k": "/",
+            "v": "short pause"
+          },
+          {
+            "k": "//",
+            "v": "long pause"
+          },
+          {
+            "k": "Underline:",
+            "v": "stress this word"
+          },
+          {
+            "k": "↑ ↓",
+            "v": "voice goes up or down"
+          },
+          {
+            "k": "Circle:",
+            "v": "a hard word to practise alone"
+          }
+        ],
+        "ask": "Which mark changed your reading most?"
+      },
+      {
+        "name": "Warm up",
+        "lines": [
+          {
+            "k": "Lips:",
+            "v": "'red leather, yellow leather', five times"
+          },
+          {
+            "k": "Tongue:",
+            "v": "'unique New York', five times"
+          },
+          {
+            "k": "Breath:",
+            "v": "in for 4, out on a long 'sss'"
+          },
+          {
+            "k": "Face:",
+            "v": "big yawn, big smile, then relax"
+          }
+        ],
+        "ask": "Which warm-up made your words clearer?"
+      },
+      {
+        "name": "Listen back",
+        "lines": [
+          {
+            "k": "Speed:",
+            "v": "read for one minute on a timer, count the words"
+          },
+          {
+            "k": "Clear:",
+            "v": "could you hear every word?"
+          },
+          {
+            "k": "Pauses:",
+            "v": "did the big moments get one?"
+          },
+          {
+            "k": "Feeling:",
+            "v": "did each voice sound like the character?"
+          }
+        ],
+        "ask": "What's the one thing to fix in the next take?"
+      },
+      {
+        "name": "Sound kitchen",
+        "lines": [
+          {
+            "k": "Fire:",
+            "v": "slowly crumple a sheet of paper"
+          },
+          {
+            "k": "Wind:",
+            "v": "shake a sheet, or blow across a bottle"
+          },
+          {
+            "k": "Footsteps:",
+            "v": "shoes on a table, or on a tray of gravel"
+          },
+          {
+            "k": "Door knock:",
+            "v": "knuckles on a cutting board"
+          },
+          {
+            "k": "Splash:",
+            "v": "a hand in a bowl of water"
+          }
+        ],
+        "ask": "Which sound fooled your listener?"
+      },
+      {
+        "name": "Quiet studio",
+        "lines": [
+          {
+            "k": "Where:",
+            "v": "a closet full of clothes, or under a blanket"
+          },
+          {
+            "k": "Phone:",
+            "v": "a hand's width from your mouth, a little to the side"
+          },
+          {
+            "k": "Off:",
+            "v": "fans, fridge doors, notifications"
+          },
+          {
+            "k": "Pieces:",
+            "v": "record a few lines at a time"
+          }
+        ],
+        "ask": "What noise did you not notice until you listened back?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Fluent reading",
+      "text": "pace, pauses and expression"
+    },
+    {
+      "name": "Clear speaking",
+      "text": "every word heard"
+    },
+    {
+      "name": "Sound design",
+      "text": "telling a story with sounds"
+    },
+    {
+      "name": "Self-review",
+      "text": "listening back and fixing one thing"
+    }
+  ],
+  "conclusion": {
+    "headline": "They read a story so others could see it with their ears.",
+    "text": "Listen to them read aloud a week later, even a recipe or a road sign. If they pause before the important part and finish their words, the drama did its work.",
+    "celebrate": "When the finished recording plays for the first time, say: 'I could hear every word, and I didn't want it to stop.'",
+    "extensions": [
+      "Record a bedtime story for a younger cousin or a grandparent, in every character's voice",
+      "Turn a family trip into a short radio report, with sounds you recorded while you were there",
+      "Listen to a real audio drama or audiobook together, and count the sound effects in one scene",
+      "If your family speaks a second language, read the same scene in it, and compare which was harder to say clearly"
+    ]
+  },
+  "signs": [
+    "They slow down on their own when reading aloud",
+    "They pause before the important part",
+    "They notice sounds around them and say what they could use them for"
+  ],
+  "makeItReal": "Tonight, record your kid reading one page of their favourite book, play it back together, and ask what a listener would miss.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "fromHome": {
+    "text": "For Halloween, my kids each wrote a story and turned it into an audiobook in iMovie, with sound effects and music. We shared them with friends and family on our family website. The hardest part was slowing down and saying every word clearly.",
+    "quotes": []
+  },
+  "photo": {
+    "src": "guides/assets/radio-drama-studio.jpg",
+    "alt": "Watercolour illustration of a blanket-fort recording studio with a phone on a stack of books, headphones, a lamp and a script",
+    "caption": "A blanket fort, a phone and a marked-up script."
+  }
+}

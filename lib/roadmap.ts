@@ -214,7 +214,7 @@ export const TERRITORIES: readonly Territory[] = [
       ],
     },
     activities: [
-      'directions-challenge', 'community-tour-guide', 'two-minute-story', 'neighbourhood-interview', 'complaint-to-product', 'marketing-campaign', 'shark-tank-pitch', 'market-stall-pitch',
+      'directions-challenge', 'community-tour-guide', 'two-minute-story', 'radio-drama-studio', 'neighbourhood-interview', 'complaint-to-product', 'marketing-campaign', 'shark-tank-pitch', 'market-stall-pitch',
       'mini-movie', 'board-game-studio', 'family-debate-night',
     ],
   },
@@ -448,6 +448,7 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'square-foot-safari': ['critical-thinking'],
   'nature-crafts': ['physical'],
   'adventure-story-map': ['creativity'],
+  'radio-drama-studio': ['writing', 'creativity'],
   'community-tour-guide': ['reading-media'],
   'directions-challenge': ['writing'],
   'market-stall-pitch': ['math', 'life-skills'],

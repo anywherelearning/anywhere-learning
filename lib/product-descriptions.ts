@@ -3388,6 +3388,30 @@ export const productDescriptions: Record<string, ProductDescription> = {
     },
     format: 'Project Guide',
   },
+  'radio-drama-studio': {
+    opening:
+      'Your kid turns a story into an audio drama people can listen to. They pick a scene from a book they love or a story they wrote, mark the script for pauses and feeling, slow down until every word is clear, make sound effects with things around the house, then record, edit and share it with family and friends.',
+    whatsIncluded: [
+      'Five steps, from picking a scene to sharing the finished recording',
+      'Cast it, Script marks, Warm up, Listen back, Sound kitchen and Quiet studio cards',
+      'A words-per-minute check that turns \'slow down\' into a number',
+      'Sound effects from things around the house, and a closet-of-clothes studio',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Reading Aloud', 'Fluency', 'Clear Speaking', 'Sound Design', 'Storytelling'],
+    insideTheLearning: {
+      lead:
+        'Your kid reads for an audience that can\'t see the page. Marking a script, listening back to their own takes and counting words per minute builds fluent, expressive reading, and the sound effects and editing make it a finished show people want to hear.',
+      skills: [
+        { skill: 'Reading', where: 'Pace, pauses and expression when reading aloud' },
+        { skill: 'Speaking', where: 'Saying every word clearly' },
+        { skill: 'Math', where: 'Counting words per minute to check the pace' },
+        { skill: 'Sound Design', where: 'Telling a story with sound effects and music' },
+        { skill: 'Self-Review', where: 'Listening back and fixing one thing at a time' },
+      ],
+    },
+    format: 'Project Guide',
+  },
   'play-the-world': {
     opening:
       'Your kid finds a game that kids where you are staying really play, learns it from them, and writes down the rules the same day so it is not forgotten. Then they teach it to the family and compare it with a game from home.',

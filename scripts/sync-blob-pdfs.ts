@@ -152,6 +152,7 @@ const SLUG_TO_FILE: Record<string, string> = {
   'three-ais-one-question': 'AI + Digital Literacy - THREE AIs, ONE QUESTION.pdf',
   'complaint-to-product': 'Entrepreneurship - Complaint to Product.pdf',
   'two-minute-story': 'Communication & Writing - The Two Minute Story.pdf',
+  'radio-drama-studio': 'Communication & Writing - Radio Drama Studio.pdf',
   'plan-a-mini-adventure': 'Planning & Problem-Solving Plan a Mini Adventure.pdf',
 
   // Debundled seasonal-pack activities

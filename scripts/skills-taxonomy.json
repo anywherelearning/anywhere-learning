@@ -1237,6 +1237,20 @@
         "Creativity & Making",
         "Planning & Self-Management"
       ]
+    },
+    "radio-drama-studio": {
+      "canonical": [
+        "Reading Aloud",
+        "Fluency",
+        "Speaking",
+        "Storytelling",
+        "Sound Design"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Tech & Digital"
+      ]
     }
   }
 }
