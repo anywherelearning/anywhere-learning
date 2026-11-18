@@ -1,0 +1,260 @@
+{
+  "type": "capable",
+  "slug": "the-capable-kid-guide",
+  "title": "The Capable Kid Guide",
+  "tagline": "Raising capable kids, one skill at a time.",
+  "chips": [
+    "Ages 6 to 14",
+    "24 real skills",
+    "Three age stages"
+  ],
+  "photo": {
+    "src": "guides/assets/capable-kid.jpg",
+    "alt": "A girl and her older brother rolling out dough together at the kitchen counter",
+    "caption": "Their dough, their mess, their dinner."
+  },
+  "avatar": "guides/assets/amelie-portrait.jpg",
+  "why": {
+    "eyebrow": "Start here",
+    "title": "Why capability, not compliance",
+    "paras": [
+      "Here is something most parents are never told. Kids today get far less independence than kids did a generation ago. We hover more, we rescue faster, and we hand over fewer real responsibilities than our own parents did at the same age. It comes from love. It also quietly teaches kids that they can't be trusted with their own lives.",
+      "Capability doesn't come from being told. It comes from doing. A kid who can scramble their own eggs, call to ask a question and budget their own money isn't just \"helpful.\" They've learned the deeper lesson underneath all of it: I can figure things out. That belief carries into everything else they try.",
+      "So this guide isn't a chore chart. Chores are about getting the house clean. This is about building a person who can run their own life, one handed-over skill at a time."
+    ],
+    "pull": "Confidence doesn't come first and produce competence. Competence comes first, and confidence follows it."
+  },
+  "method": {
+    "eyebrow": "The method",
+    "title": "Hand it over in four stages",
+    "intro": "You're a teacher whether you signed up for it or not, so here is the one teaching tool that matters most. It's called gradual release, and it has four stages. Skipping stages is where most parents get frustrated.",
+    "stages": [
+      {
+        "title": "Watch me",
+        "text": "You do the whole thing while they watch, and you narrate: \"I'm checking the recipe first so I don't miss a step.\""
+      },
+      {
+        "title": "Help me",
+        "text": "They do part, you do the rest. Hand over the easy, safe pieces first."
+      },
+      {
+        "title": "I watch you",
+        "text": "They do the whole thing while you sit on your hands and let it be slow and imperfect."
+      },
+      {
+        "title": "You're on your own",
+        "text": "They own it. You stop checking."
+      }
+    ],
+    "after": "Most of us live in stage one forever, because doing it ourselves is faster today. It costs us capability tomorrow. The whole job is moving them through the stages on purpose.",
+    "note": "It will feel slower and messier than doing it yourself, because it is, for a while. You'll be tempted to take it back roughly a thousand times. Don't measure a good day by a clean kitchen. Measure it by what they did themselves, badly, and got a little better at. That's the whole thing working."
+  },
+  "rules": {
+    "eyebrow": "Three rules",
+    "title": "What makes it stick",
+    "items": [
+      {
+        "title": "Three before me",
+        "text": "Before they ask you for help, they try three things first. It's the best cure for \"I can't\" and for the constant interruptions. It teaches the brain to reach for its own ideas before reaching for you."
+      },
+      {
+        "title": "One new skill a month",
+        "text": "Not a transformation. One thing. That's twelve a year, and a kid who learns twelve real skills a year is unrecognizable in three."
+      },
+      {
+        "title": "Let it be lumpy",
+        "text": "A bed they made badly beats a bed you made perfectly, every single time. The imperfect version is the one that builds the kid. Bite your tongue and let it stand."
+      }
+    ],
+    "how": "On the next three pages: eight skills for each age, from 6 to 14. Start on your kid's age page, but look at the younger pages too: a 12-year-old who has never ordered their own food starts there. Tick what they already own, then pick one to hand over this month. Where a library guide builds that skill step by step, it's named under the skill."
+  },
+  "stages": [
+    {
+      "ages": "Ages 6 to 8",
+      "title": "The early wins",
+      "accent": "#588157",
+      "intro": "At this age, kids badly want to be \"big.\" Use it. They're capable of far more than we hand them, and the eagerness won't last forever, so spend it now. Keep tasks short, physical and visible, and expect to narrate everything the first ten times.",
+      "skills": [
+        {
+          "title": "A simple breakfast",
+          "text": "Toast, cereal, or eggs with you nearby. Cooking is math, reading and confidence in one task."
+        },
+        {
+          "title": "Pour and pack",
+          "text": "Pouring their own drink and packing part of their own lunch."
+        },
+        {
+          "title": "Dressed for the weather",
+          "text": "Getting dressed for the actual day and tying their own shoes. Being cold once teaches more than a lecture."
+        },
+        {
+          "title": "The morning routine",
+          "text": "Teeth, face and ready without being told twice. A simple picture list on the wall does the reminding so you don't have to."
+        },
+        {
+          "title": "Order their own food",
+          "text": "Speaking to the person at the counter and ordering for themselves. This is the root of the \"can't call the dentist\" problem, so start it at six.",
+          "guide": {
+            "slug": "solo-mission",
+            "title": "Solo Mission"
+          }
+        },
+        {
+          "title": "Answer the phone",
+          "text": "Picking up and speaking politely to whoever is calling. A tiny, regular dose of real-world manners and nerve."
+        },
+        {
+          "title": "Pay and wait for change",
+          "text": "Handing over the money and waiting for the change. Money becomes real the moment it passes through their own hands.",
+          "guide": {
+            "slug": "snack-mission",
+            "title": "The $20 Snack Mission"
+          }
+        },
+        {
+          "title": "Bed, pet and laundry",
+          "text": "Making their bed, feeding a pet and putting away their own clothes. Lumpy and theirs beats perfect and yours.",
+          "guide": {
+            "slug": "swap-day-challenge",
+            "title": "The Swap Day Challenge"
+          }
+        }
+      ],
+      "note": "Your job here is to slow down and let them fumble. The temptation to step in is strongest at this age because they're slow and you're busy. Every time you wait an extra thirty seconds instead of taking over, you're teaching them they're capable."
+    },
+    {
+      "ages": "Ages 9 to 11",
+      "title": "Growing independence",
+      "accent": "#c4836a",
+      "intro": "This is the sweet spot. They have the coordination and the attention to do real things start to finish, and they still care what you think. Push the independence harder than feels comfortable. The mistake at this age is keeping the training wheels on out of habit.",
+      "skills": [
+        {
+          "title": "Follow a recipe",
+          "text": "A simple recipe start to finish, stovetop with you in the room. Reading a recipe is following multi-step instructions, a real workout for the planning part of the brain.",
+          "guide": {
+            "slug": "bread-lab",
+            "title": "Bread Lab"
+          }
+        },
+        {
+          "title": "Pack and clear",
+          "text": "Packing a full lunch, then clearing and loading the dishwasher. The whole cycle of a meal, not just the eating."
+        },
+        {
+          "title": "Make the call",
+          "text": "Phoning to ask a real question, like the library's hours. Write the question down together first, then let them talk. Awkward is how it gets less awkward."
+        },
+        {
+          "title": "Introduce yourself",
+          "text": "Shaking hands, making eye contact and writing a thank-you note. The social muscles that open doors their whole life.",
+          "guide": {
+            "slug": "neighbourhood-interview",
+            "title": "Neighbourhood Interview Project"
+          }
+        },
+        {
+          "title": "Save and wait",
+          "text": "Saving up for something over weeks instead of buying it now. Waiting is a skill, and it sits underneath every money decision they'll ever make.",
+          "guide": {
+            "slug": "savings-goal-tracker",
+            "title": "Savings Goal Tracker"
+          }
+        },
+        {
+          "title": "Spot the better deal",
+          "text": "Comparing two prices and saying which is the smarter buy. Real math with real stakes.",
+          "guide": {
+            "slug": "smart-shopper",
+            "title": "Smart Shopper Lab"
+          }
+        },
+        {
+          "title": "Laundry, start to finish",
+          "text": "Their own laundry, from hamper to folded drawer. One full grown-up system they can own completely."
+        },
+        {
+          "title": "On time, by the clock",
+          "text": "Being ready on time for something they care about, like practice or a visit, using a clock instead of your voice. Let the clock be the boss, not you."
+        }
+      ],
+      "note": "Stop being the external hard drive. When you remember their water bottle, their library book and their jacket for them, they never learn to. Let a forgotten thing be a small natural consequence instead of a thing you carry."
+    },
+    {
+      "ages": "Ages 12 to 14",
+      "title": "Real-world ready",
+      "accent": "#4f8aa0",
+      "intro": "The goal here is simple and a little scary: in a few short years this person leaves your house. Everything they can't do then, they'll have to learn alone and far from you. Better to fumble it now, in a safe place, with you nearby. Treat these years as the dress rehearsal for adulthood.",
+      "skills": [
+        {
+          "title": "Cook for the family",
+          "text": "Planning and cooking a full meal, and shopping for it from a list and a budget. Give them a real number and let them solve it.",
+          "guide": {
+            "slug": "kitchen-math-challenge",
+            "title": "Kitchen Math & Meal Planning Challenge"
+          }
+        },
+        {
+          "title": "Build a budget",
+          "text": "Making a simple budget and explaining needs versus wants. The difference between money that lasts and money that vanishes.",
+          "guide": {
+            "slug": "budget-challenge",
+            "title": "Real-Life Budget Challenge"
+          }
+        },
+        {
+          "title": "Earn their own money",
+          "text": "A job, a sale or a side gig that's genuinely theirs. Money they earned teaches what money you gave never will.",
+          "guide": {
+            "slug": "micro-business",
+            "title": "Micro-Business Challenge"
+          }
+        },
+        {
+          "title": "Speak for themselves",
+          "text": "Writing a clear email and speaking up with a coach or teacher, instead of you doing it for them."
+        },
+        {
+          "title": "Make the appointment",
+          "text": "Calling to book their own appointment. Yes, the dentist. The skill this whole guide is quietly building toward."
+        },
+        {
+          "title": "Run their own schedule",
+          "text": "Owning their schedule, deadlines and alarm. Let them feel the weight of a missed deadline now, while it's still a small one.",
+          "guide": {
+            "slug": "time-energy-planner",
+            "title": "Time & Energy Planner"
+          }
+        },
+        {
+          "title": "Handle an emergency",
+          "text": "Knowing exactly who to call and what to say when something goes wrong. Calm in a crisis is taught before the crisis.",
+          "guide": {
+            "slug": "emergency-ready",
+            "title": "Emergency Ready Challenge"
+          }
+        },
+        {
+          "title": "Find their own way",
+          "text": "Navigating a route, directions or transit on their own. The final piece of \"I can get myself there.\"",
+          "guide": {
+            "slug": "directions-challenge",
+            "title": "Directions Challenge"
+          }
+        }
+      ],
+      "note": "Your role shifts from manager to consultant. You're available when asked, and you stop directing when you're not. The hardest and most important word at this age is the one you say when you want to jump in: nothing."
+    }
+  ],
+  "finish": {
+    "eyebrow": "One last thing",
+    "headline": "You have the map. Here's the shortcut.",
+    "paras": [
+      "Most kids who freeze at the dentist's phone number aren't missing ability. They're missing practice, because nobody ever handed them the phone.",
+      "Knowing what your kid can do is the easy part. Building it into a normal, busy week is where most of us stall. That's exactly what Anywhere Learning is for: a library of 120+ real-world activities, planned step by step, that build these exact skills while you open the guide and follow along. No curriculum. Low prep. Done together."
+    ],
+    "cta": "Try the whole library free for 7 days",
+    "href": "https://anywherelearning.co/join",
+    "url": "anywherelearning.co/join",
+    "bio": "Hi, I'm Amelie. I taught for 15 years, then spent a year traveling and learning through real life with my own two kids, and we kept going. This guide is the philosophy our family runs on, and Anywhere Learning is where I turn it into activities for families like yours."
+  }
+}

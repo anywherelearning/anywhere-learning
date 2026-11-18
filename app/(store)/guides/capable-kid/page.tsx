@@ -57,7 +57,7 @@ const guideLd = {
   },
 };
 
-// The skills as listed in the guide itself (pages 4 to 6), eight per band.
+// The skills as listed in the guide itself (pages 5 to 7), eight per band.
 const AGE_BANDS = [
   {
     band: '6 to 8',
@@ -109,7 +109,7 @@ const AGE_BANDS = [
   },
 ];
 
-// The four stages from "The method that actually works" (page 2), in the guide's words.
+// The four stages from "Hand it over in four stages" (page 3), in the guide's words.
 const STAGES = [
   ['Watch me', 'You do the whole thing while they observe and you narrate.'],
   ['Help me', 'They do part, you do the rest. Hand over the easy, safe pieces first.'],

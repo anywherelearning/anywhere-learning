@@ -1054,3 +1054,121 @@ a.cta{display:block;text-decoration:none;color:#fff}.daylist a,.dnext a{color:in
 <body class="${layout}${bw ? ' bw' : ''}">${cover}${letter}${howto}${days}${finish}</body></html>`;
 }
 
+
+// Free guide: The Capable Kid Guide. Same look as the library guides:
+// cover, why, the four-stage method, three rules, one page per age stage
+// (eight skills with tick boxes and the library guide that builds each),
+// then the finish page with the free-trial link.
+export function buildCapableHtml(g, mode) {
+  const bw = mode === 'print-bw';
+  const layout = mode === 'phone' ? 'phone' : 'print';
+  const base = ACCENTS['Outdoor Learning'];
+  const foot = (label) => `<footer class="foot"><span>${esc(g.title)}</span><span>${esc(label)}</span></footer>`;
+  const mix = (hex, w) => { const n = parseInt(hex.slice(1), 16); const c = [n >> 16, (n >> 8) & 255, n & 255].map((v) => Math.round(v + (255 - v) * w)); return '#' + c.map((v) => v.toString(16).padStart(2, '0')).join(''); };
+  const tint = (a) => `--accent:${a};--soft:${mix(a, 0.8)};--paper:${mix(a, 0.94)};--trail:${a}`;
+  const byline = `<div class="byline"><img src="${img(g.avatar)}" alt="Amelie"><p>Made by <b>Amelie Drouin</b>,<br>former teacher and homeschooling mom</p></div>`;
+
+  const cover = `
+<section class="pg cover ckcover">
+  ${contours()}
+  <div class="cover-in">
+    <div class="ctitle"><div class="eyebrow">Free guide</div>
+    <h1>${esc(g.title)}</h1>
+    <p class="tagline">${esc(g.tagline)}</p>
+    <div class="chips">${g.chips.map((c) => `<span>${esc(c)}</span>`).join('')}</div></div>
+    <figure class="snap cksnap"><img src="${img(g.photo.src)}" alt="${esc(g.photo.alt)}"><figcaption>${esc(g.photo.caption)}</figcaption></figure>
+    <ol class="ckstages">${g.stages.map((s, i) => `<li style="${tint(s.accent)}">${blaze(i + 1, 'sm')}<span><b>${esc(s.ages)}</b>${esc(s.title)}</span></li>`).join('')}</ol>
+  </div>
+  <div class="brand"><img src="${WORDMARK}" alt="Anywhere Learning"></div>
+</section>`;
+
+  const W = g.why;
+  const why = `
+<section class="pg spread ckwhy">
+  ${contours()}
+  <div class="grp"><div class="eyebrow">${esc(W.eyebrow)}</div><h2>${esc(W.title)}</h2></div>
+  <div class="grp">${W.paras.map((p) => `<p class="lead">${esc(p)}</p>`).join('')}</div>
+  <p class="pull">${esc(W.pull)}</p>
+  ${byline}
+  ${foot('Why')}
+</section>`;
+
+  const M = g.method;
+  const method = `
+<section class="pg spread ckmethod">
+  <div class="grp"><div class="eyebrow">${esc(M.eyebrow)}</div><h2>${esc(M.title)}</h2></div>
+  <p class="lead">${esc(M.intro)}</p>
+  <ol class="ckrelease">${M.stages.map((s, i) => `<li><span class="tipn">${i + 1}</span><div><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></div></li>`).join('')}</ol>
+  <p class="lead">${esc(M.after)}</p>
+  <div class="cknote"><b>Coaching note</b><p>${esc(M.note)}</p></div>
+  ${foot('The method')}
+</section>`;
+
+  const R = g.rules;
+  const rules = `
+<section class="pg spread ckrules">
+  ${contours()}
+  <div class="grp"><div class="eyebrow">${esc(R.eyebrow)}</div><h2>${esc(R.title)}</h2></div>
+  <div class="tips">${R.items.map((t, i) => `<div class="tip"><span class="tipn">${i + 1}</span><div><h3>${esc(t.title)}</h3><p>${esc(t.text)}</p></div></div>`).join('')}</div>
+  <div class="box ckhow"><div class="label">How to use the next pages</div><p>${esc(R.how)}</p>
+    <ul class="cklegend">${g.stages.map((s) => `<li><span class="ddot" style="background:${s.accent}"></span><span><b>${esc(s.ages)}</b>: ${esc(s.title)}</span></li>`).join('')}</ul></div>
+  ${foot('Three rules')}
+</section>`;
+
+  const stages = g.stages.map((s, i) => `
+<section class="pg ckstage" style="${tint(s.accent)}">
+  <header class="stephead">${blaze(i + 1)}<div><div class="eyebrow">${esc(s.ages)}</div><h2>${esc(s.title)}</h2></div></header>
+  <p class="ckintro">${esc(s.intro)}</p>
+  <div class="label cklabel">What they can own</div>
+  <div class="ckskills">${s.skills.map((k) => `
+    <div class="ckskill"><span class="ckbox"></span><div><h3>${esc(k.title)}</h3><p>${esc(k.text)}</p>${k.guide ? `<a class="ckguide" href="https://anywherelearning.co/shop/${k.guide.slug}">In the library: <b>${esc(k.guide.title)}</b></a>` : ''}</div></div>`).join('')}
+  </div>
+  <div class="cknote"><b>Coaching note</b><p>${esc(s.note)}</p></div>
+  ${foot(s.ages)}
+</section>`).join('');
+
+  const F = g.finish;
+  const finish = `
+<section class="pg spread finish ckfinish">
+  ${contours()}
+  <div class="grp"><div class="eyebrow">${esc(F.eyebrow)}</div><h2>${esc(F.headline)}</h2></div>
+  <div class="grp">${F.paras.map((p) => `<p class="lead">${esc(p)}</p>`).join('')}</div>
+  <a class="cta" href="${esc(F.href)}"><p>${esc(F.cta)}</p><span class="ctaurl">${esc(F.url)} &rarr;</span></a>
+  <div class="box ckbio"><img src="${img(g.avatar)}" alt="Amelie"><div><div class="label">Who's behind this</div><p>${esc(F.bio)}</p></div></div>
+  <p class="legal">&copy; Anywhere Learning &middot; Free to use with your family &middot; anywherelearning.co</p>
+</section>`;
+
+  const extra = `
+a.cta{display:block;text-decoration:none;color:#fff}
+.pg.spread{display:flex!important;flex-direction:column!important;justify-content:center!important}.spread > .foot{position:absolute}.spread > *:not(.foot):not(.topo) + *:not(.foot){margin-top:calc(var(--sp,1) * 18px)!important}.grp > h2{margin-top:6px}.grp > .lead + .lead{margin-top:12px}
+.spread .lead{font-size:16.5px;line-height:1.55}
+.pull{font:500 italic 19px/1.4 'DM Sans';color:var(--forest);border-left:4px solid var(--gold);padding-left:14px}
+.byline{display:flex;align-items:center;gap:14px;justify-content:flex-end}.byline img{width:62px;height:62px;border-radius:50%;object-fit:cover;object-position:50% 35%;border:3px solid #fff;box-shadow:0 4px 12px -6px rgba(50,40,20,.5)}.byline p{font-size:14px;line-height:1.45;color:var(--muted)}.byline b{color:var(--forest)}
+.ckcover .cover-in{flex:1;display:flex;flex-direction:column;justify-content:space-evenly}
+.cksnap{transform:rotate(-2deg);max-width:5.4in;margin:0 auto}.cksnap img{height:3.6in;object-fit:cover;object-position:50% 45%}.cksnap figcaption{font-size:14px;font-style:italic}
+.ckstages{list-style:none;display:flex;justify-content:center;gap:18px;padding:0;margin:0}.ckstages li{display:flex;align-items:center;gap:10px}.ckstages .blaze{background:var(--accent)}.ckstages span b{display:block;font:700 11px 'JetBrains Mono';letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}.ckstages li > span:last-child{font:700 16px 'Bricolage Grotesque';line-height:1.2}
+.ckrelease{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}.ckrelease li{display:flex;gap:14px;background:var(--card);border:1px solid rgba(93,125,83,.16);border-radius:16px;padding:15px 17px}.ckrelease h3{font-size:18px;margin-bottom:4px}.ckrelease p{font-size:15px;line-height:1.45}
+.cknote{background:#f6e9dc;border-left:5px solid var(--gold);border-radius:14px;padding:14px 18px}.cknote b{font:700 11px 'JetBrains Mono';letter-spacing:.14em;text-transform:uppercase;color:#a0672f}.cknote p{margin-top:5px;font-size:15.5px;line-height:1.5}
+.ckrules .tips{grid-template-columns:1fr}.ckrules .tip h3{font-size:19px}.ckrules .tip p{font-size:16px;line-height:1.5}
+.ckhow p{font-size:15.5px;line-height:1.5}.cklegend{list-style:none;padding:0;margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 22px}.cklegend li{display:flex;align-items:center;gap:8px;font-size:14.5px}.ddot{flex:none;width:11px;height:11px;border-radius:50%}
+.ckstage{display:flex;flex-direction:column}.ckintro{font-size:16px;line-height:1.5;margin-top:16px}.cklabel{color:var(--accent);margin:18px 0 10px}
+.ckskills{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;flex:1;align-content:start}
+.ckskill{display:flex;gap:11px;background:var(--card);border:1px solid rgba(93,125,83,.16);border-top:4px solid var(--accent);border-radius:14px;padding:11px 14px}
+.ckbox{flex:none;width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;margin-top:2px;background:#fff}
+.ckskill h3{font-size:16px;margin-bottom:3px}.ckskill p{font-size:13.5px;line-height:1.42}
+.ckguide{display:inline-block;margin-top:6px;font-size:12px;color:var(--accent);text-decoration:none}.ckguide b{text-decoration:underline;text-underline-offset:2px}
+.ckstage .cknote{margin-top:14px}
+.ckbio{display:flex;gap:16px;align-items:center}.ckbio img{flex:none;width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 35%;border:3px solid #fff;box-shadow:0 4px 12px -6px rgba(50,40,20,.5)}.ckbio p{font-size:15px;line-height:1.5}
+.ckfinish .cta p{font-size:19px;font-weight:700}.legal{font-size:12px;color:var(--muted);text-align:center}
+.phone .ckrelease,.phone .ckskills{grid-template-columns:1fr}.phone .cksnap img{height:2.4in}.phone .ckstages{flex-direction:column;align-items:flex-start;gap:8px;margin:0 auto}.phone .ckskills{flex:none}
+.print .spread h2{font-size:46px}.print .spread .lead{font-size:18.5px;line-height:1.55}.print .pull{font-size:22px}.print .ckrelease h3{font-size:20px}.print .ckrelease p{font-size:16.5px}.print .ckrelease li{padding:18px 20px}.print .cknote p{font-size:16.5px}.print .ckrules .tip{flex-direction:row!important;padding:20px 22px}.print .ckrules .tip h3{font-size:21px}.print .ckrules .tip p{font-size:17.5px}.print .ckhow p{font-size:16.5px}.print .ckbio p{font-size:16.5px}.print .ckfinish .cta p{font-size:22px}.print .ckwhy .byline p{font-size:15px}.print .ckstages li > span:last-child{font-size:18px}.ckcover h1{font-size:76px!important}.print .cksnap img{height:4.1in}.print .ckstage h2{font-size:40px}
+.bw .cknote{background:#fff;border:1.5px solid #000}.bw .cknote b{color:#000}.bw .ckskill,.bw .ckrelease li{border:1.5px solid #000;background:#fff}.bw .ckbox{border-color:#000}.bw .ckguide{color:#000}.bw img{filter:grayscale(1)}.bw .ckstages .blaze{background:#000}`;
+
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(g.title)}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>${css(layout, base.accent, base.soft, bw, base.paper)}${extra}</style></head>
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${why}${method}${rules}${stages}${finish}</body></html>`;
+}
