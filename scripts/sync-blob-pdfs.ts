@@ -163,6 +163,7 @@ const SLUG_TO_FILE: Record<string, string> = {
   // New 10 (Jul 2026)
   'grow-it-eat-it': 'Outdoor & Nature - GROW IT, EAT IT.pdf',
   'kitchen-science-lab': 'Creativity & Maker Kitchen Science Lab.pdf',
+  'bread-lab': 'Creativity & Maker Bread Lab.pdf',
   'probability-lab': 'Real-world math - The Probability Lab.pdf',
   'secret-code-lab': 'Planning & Problem-Solving Secret Code Lab.pdf',
   'body-owners-manual': "Planning & Problem-Solving THE BODY OWNER'S MANUAL.pdf",

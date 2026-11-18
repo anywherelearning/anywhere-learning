@@ -3364,6 +3364,30 @@ export const productDescriptions: Record<string, ProductDescription> = {
     },
     format: 'Project Guide',
   },
+  'bread-lab': {
+    opening:
+      'Your kid finds out that bread is alive before it\'s food. They wake yeast in cold, warm and hot water, feed it until it blows up a balloon, knead dough until it stretches thin as a window, measure the rise, then bake a real loaf and use baker\'s math to scale it. Real-world STEM: biology, chemistry and percentages in one loaf.',
+    whatsIncluded: [
+      'Five steps, from waking the yeast to scaling the recipe',
+      'Yeast test, Balloon test, Basic loaf, Knead it, Rise watch and Baker\'s math cards',
+      'A real loaf recipe by weight, with the window test for kneading',
+      'Baker\'s percentages, the math bakers use to make any size of loaf',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['STEM', 'Science', 'Measurement', 'Percentages', 'Baking'],
+    insideTheLearning: {
+      lead:
+        'Your kid proves yeast is alive, catches its gas in a balloon and measures the dough rising, then bakes a real loaf. Baker\'s percentages turn one recipe into any size, which is real math they will use again.',
+      skills: [
+        { skill: 'Science', where: 'Yeast is alive: it eats sugar and makes gas' },
+        { skill: 'Fair Testing', where: 'Cold, warm and hot water side by side' },
+        { skill: 'Measurement', where: 'Weighing ingredients and tracking the rise' },
+        { skill: 'Percentages', where: 'Scaling a recipe with baker\'s math' },
+        { skill: 'Life Skills', where: 'Baking a real loaf from scratch' },
+      ],
+    },
+    format: 'Project Guide',
+  },
   'play-the-world': {
     opening:
       'Your kid finds a game that kids where you are staying really play, learns it from them, and writes down the rules the same day so it is not forgotten. Then they teach it to the family and compare it with a game from home.',

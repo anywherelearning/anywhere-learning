@@ -1222,6 +1222,21 @@
         "Creativity & Making",
         "Critical Thinking & Reasoning"
       ]
+    },
+    "bread-lab": {
+      "canonical": [
+        "STEM",
+        "Science",
+        "Measurement",
+        "Percentages",
+        "Baking"
+      ],
+      "families": [
+        "Nature & Science",
+        "Math & Money",
+        "Creativity & Making",
+        "Planning & Self-Management"
+      ]
     }
   }
 }

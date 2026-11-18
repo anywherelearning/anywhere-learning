@@ -1,0 +1,375 @@
+{
+  "slug": "bread-lab",
+  "category": "Creativity & Maker",
+  "title": "Bread Lab",
+  "tagline": "Wake · Feed · Knead · Rise · Bake",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds out that bread is alive before it's food. They wake yeast in cold, warm and hot water, feed it and watch it blow up a balloon, knead dough until it stretches thin as a window, measure the rise, then bake a real loaf and use baker's math to scale it for the whole family.",
+  "need": [
+    "About 600 g of flour, salt, a little sugar and 3 packets of dry yeast (or a small jar)",
+    "A kitchen scale, 3 cups and 3 small bottles",
+    "3 balloons if you have them, or 3 clear glasses instead",
+    "A tall straight glass, tape, a ruler and an oven"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "yeast is alive: it eats sugar and makes gas"
+    },
+    {
+      "subject": "Math",
+      "text": "weighing, measuring the rise and baker's percentages"
+    },
+    {
+      "subject": "Data",
+      "text": "timing and tracking a change"
+    },
+    {
+      "subject": "Life skills",
+      "text": "baking a real loaf from scratch"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Bread rewards patience more than skill, so pick a slow day at home. Handle the oven and the hot water yourself, let them get their hands in the dough, and keep asking what they think the yeast is doing right now.",
+    "plan": [
+      {
+        "when": "The first 30 minutes",
+        "what": "Wake the yeast and set up the balloon test (Steps 1 and 2)."
+      },
+      {
+        "when": "The next 1 to 2 hours",
+        "what": "Mix, knead, then measure the rise (Steps 3 and 4)."
+      },
+      {
+        "when": "The last 90 minutes",
+        "what": "Shape, rise again, bake, slice and scale (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "Nothing foamed",
+        "a": "The yeast may be old, or the water too hot. Try a fresh packet and water that feels like a warm bath on the inside of your wrist."
+      },
+      {
+        "q": "The dough is too sticky to knead",
+        "a": "Keep kneading for a few minutes before adding flour. It usually gets smoother on its own. Add flour a spoonful at a time only if it doesn't."
+      },
+      {
+        "q": "The loaf came out flat and heavy",
+        "a": "Good data. Ask what was different: shorter kneading, a cold kitchen, less rise time. Change one thing next time."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Yeast is a tiny living thing. Give it warm water and something to eat, and it makes gas, like bubbles. Kneading builds stretchy strands in the dough that trap those bubbles, and that's what makes bread rise.",
+    "before": "'Bread just puffs up in the oven.'",
+    "model": [
+      {
+        "part": "Cold cup",
+        "line": "Almost nothing after 10 minutes."
+      },
+      {
+        "part": "Warm cup",
+        "line": "A thick layer of foam that smells like bread."
+      },
+      {
+        "part": "Hot cup",
+        "line": "Nothing at all, even after an hour."
+      },
+      {
+        "part": "So",
+        "line": "Yeast is alive. Too cold and it's slow, too hot and it dies."
+      }
+    ],
+    "modelNote": "'It just puffs up' had nothing living in it. Three cups side by side showed the yeast waking up, and the hot one that never foamed showed it could die."
+  },
+  "steps": [
+    {
+      "title": "Wake the yeast",
+      "why": "Yeast looks like dust. The first test shows it's alive, and what it needs.",
+      "kid": "Your kid puts a teaspoon of yeast and a pinch of sugar in three cups, then adds cold, warm and very hot water, using the Yeast test card in the Bread Lab Toolkit at the end of the guide. They guess first, then check every 5 minutes.",
+      "you": "Pour the very hot water yourself, from a kettle that has cooled for a minute. Ask them to write their guess before anything happens.",
+      "ask": [
+        "Which cup do you think will foam first?",
+        "Why do you think the hot one didn't foam?"
+      ],
+      "tip": "Smell the warm cup. That bread smell is the yeast at work.",
+      "levels": {
+        "explore": "Watch the three cups, and point to the one that foams the most.",
+        "develop": "Guess, then measure the foam in each cup at 5 and 10 minutes.",
+        "extend": "With a kitchen thermometer, test two more temperatures between warm and very hot, and find the warmest water that still foams."
+      }
+    },
+    {
+      "title": "Feed it and catch the gas",
+      "why": "Seeing the gas fill a balloon makes the invisible visible.",
+      "kid": "Your kid fills three bottles with warm water and yeast: one plain, one with sugar, one with sugar and salt. They stretch a balloon over each, using the Balloon test card, and measure each balloon with a string every 15 minutes.",
+      "you": "Help with the balloons. Ask them to predict which will grow biggest, and why salt might matter.",
+      "ask": [
+        "Which balloon grew most?",
+        "What did the salt do to the yeast?"
+      ],
+      "tip": "No balloons? Use three clear glasses and mark the foam line with tape every 15 minutes.",
+      "levels": {
+        "explore": "Watch the balloons, and say which one is biggest.",
+        "develop": "Measure each balloon every 15 minutes, and make a table.",
+        "extend": "Add a fourth bottle with a change you choose, like honey or flour instead of sugar, and test it."
+      }
+    },
+    {
+      "title": "Mix and knead",
+      "why": "Kneading builds the stretchy strands that trap the gas.",
+      "kid": "Your kid weighs the ingredients from the Basic loaf card, mixes them, then kneads for 10 minutes, using the Knead it card. They stop and do the window test: stretch a small piece of dough until light shines through without it tearing.",
+      "you": "Show one push, fold and turn, then let them take over. Take turns when arms get tired. Raw dough isn't for tasting, so save the taste test for the baked loaf.",
+      "ask": [
+        "How does the dough feel now compared with the start?",
+        "Does it pass the window test yet?"
+      ],
+      "tip": "Weigh everything. Grams are more exact than cups, and it's easier to scale later.",
+      "levels": {
+        "explore": "Help pour and mix, then knead for as long as you can.",
+        "develop": "Weigh, mix and knead until the dough passes the window test.",
+        "extend": "Keep a small ball of dough unkneaded, bake it beside the loaf, and compare the inside."
+      }
+    },
+    {
+      "title": "Watch it rise",
+      "why": "Measuring the rise turns waiting into data.",
+      "kid": "Your kid puts a walnut-sized piece of dough in a tall straight glass, presses it flat and marks the top with tape. They set the bowl and the glass in a warm spot and measure the height in the glass every 20 minutes, using the Rise watch card, until it doubles.",
+      "you": "Help find a warm spot, away from drafts. Set a timer so they remember to measure.",
+      "ask": [
+        "How long did it take to double?",
+        "When did it rise fastest?"
+      ],
+      "tip": "The glass shows what the big bowl is doing, in a way they can measure with a ruler.",
+      "levels": {
+        "explore": "Look at the tape mark, and say if the dough has grown.",
+        "develop": "Measure every 20 minutes, and draw a line graph of the rise.",
+        "extend": "Put a second glass somewhere cooler, and compare how fast each one rises."
+      }
+    },
+    {
+      "title": "Bake it and scale it",
+      "why": "A real loaf is the reward, and baker's math is how bakers make any size they need.",
+      "kid": "Your kid shapes the loaf, lets it rise again, then watches you bake it. Once it's cool, they slice it and look at the holes the gas made. Then they use the Baker's math card to scale the recipe for a bigger loaf, or for a loaf to give away.",
+      "you": "Handle the oven. Ask them to tap the bottom of the loaf and listen for the hollow sound that means it's done.",
+      "ask": [
+        "What made the holes inside?",
+        "How much water would you need for 750 grams of flour?"
+      ],
+      "tip": "Let it cool before slicing. It's still baking inside for a few minutes after it comes out.",
+      "levels": {
+        "explore": "Tap the loaf, and look at the holes inside with a magnifying glass or up close.",
+        "develop": "Scale the recipe to 750 grams of flour with baker's percentages.",
+        "extend": "Design your own loaf by changing one percentage, like more water, and bake it to test your idea."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Bread Lab Toolkit",
+    "intro": "The tests, the recipe, how to knead and the math bakers use.",
+    "items": [
+      {
+        "name": "Yeast test",
+        "lines": [
+          {
+            "k": "Each cup:",
+            "v": "1 tsp yeast, a pinch of sugar, 100 ml water"
+          },
+          {
+            "k": "Cold:",
+            "v": "straight from the tap"
+          },
+          {
+            "k": "Warm:",
+            "v": "like a warm bath, about 40°C (105°F)"
+          },
+          {
+            "k": "Very hot:",
+            "v": "from the kettle, poured by a grown-up"
+          },
+          {
+            "k": "Check:",
+            "v": "foam height at 5 and 10 minutes"
+          }
+        ],
+        "ask": "Which cup did what you guessed?"
+      },
+      {
+        "name": "Balloon test",
+        "lines": [
+          {
+            "k": "Each bottle:",
+            "v": "1 tsp yeast and half a cup of warm water"
+          },
+          {
+            "k": "Bottle 1:",
+            "v": "nothing else"
+          },
+          {
+            "k": "Bottle 2:",
+            "v": "plus 1 tbsp sugar"
+          },
+          {
+            "k": "Bottle 3:",
+            "v": "plus 1 tbsp sugar and 1 tsp salt"
+          },
+          {
+            "k": "Measure:",
+            "v": "string around each balloon, every 15 minutes"
+          }
+        ],
+        "ask": "What does yeast need to make the most gas?"
+      },
+      {
+        "name": "Basic loaf",
+        "lines": [
+          {
+            "k": "Flour:",
+            "v": "500 g, bread or all-purpose"
+          },
+          {
+            "k": "Warm water:",
+            "v": "325 g (325 ml)"
+          },
+          {
+            "k": "Salt:",
+            "v": "10 g"
+          },
+          {
+            "k": "Dry yeast:",
+            "v": "7 g, one packet"
+          },
+          {
+            "k": "Bake:",
+            "v": "220°C (425°F), about 30 minutes, until it sounds hollow"
+          }
+        ],
+        "ask": "Which ingredient is the only living one?"
+      },
+      {
+        "name": "Knead it",
+        "lines": [
+          {
+            "k": "Push:",
+            "v": "away with the heel of your hand"
+          },
+          {
+            "k": "Fold:",
+            "v": "back over itself"
+          },
+          {
+            "k": "Turn:",
+            "v": "a quarter turn, then again"
+          },
+          {
+            "k": "Time:",
+            "v": "about 10 minutes"
+          },
+          {
+            "k": "Window test:",
+            "v": "stretches thin enough to see light; if it tears, knead 2 more minutes"
+          }
+        ],
+        "ask": "How did the dough change while you kneaded?"
+      },
+      {
+        "name": "Rise watch",
+        "lines": [
+          {
+            "k": "Glass:",
+            "v": "a walnut of dough, pressed flat"
+          },
+          {
+            "k": "Mark:",
+            "v": "tape at the starting line"
+          },
+          {
+            "k": "Measure:",
+            "v": "height every 20 minutes"
+          },
+          {
+            "k": "Done:",
+            "v": "when it has doubled, often 1 to 2 hours"
+          }
+        ],
+        "ask": "Did it rise at the same speed the whole time?"
+      },
+      {
+        "name": "Baker's math",
+        "lines": [
+          {
+            "k": "Flour:",
+            "v": "always 100%"
+          },
+          {
+            "k": "Water:",
+            "v": "65% of the flour"
+          },
+          {
+            "k": "Salt:",
+            "v": "2% of the flour"
+          },
+          {
+            "k": "Yeast:",
+            "v": "1.4% of the flour"
+          },
+          {
+            "k": "Example:",
+            "v": "750 g flour needs 487.5 g water, 15 g salt, 10.5 g yeast"
+          }
+        ],
+        "ask": "Why do bakers start every recipe from the flour?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Testing",
+      "text": "one change at a time, side by side"
+    },
+    {
+      "name": "Measuring",
+      "text": "weighing, timing and tracking a rise"
+    },
+    {
+      "name": "Patience",
+      "text": "waiting for something alive to do its work"
+    },
+    {
+      "name": "Baking",
+      "text": "a real loaf from flour, water, salt and yeast"
+    }
+  ],
+  "conclusion": {
+    "headline": "They baked a loaf and know why it rose.",
+    "text": "Give them the next loaf with no recipe card, only the baker's percentages. Whether they weigh the flour first and work out the rest says more about what stuck than the bread itself.",
+    "celebrate": "When they slice the first loaf, say: 'You woke up the yeast, fed it, and built the bread that caught its bubbles. You made that.'",
+    "extensions": [
+      "Make pizza dough with the same baker's math, and change only the water",
+      "Bake a loaf for a neighbour or a friend, and write the recipe card to go with it",
+      "Find out how bread is made in another country, like tortillas, naan or pita, and what's different",
+      "Start a sourdough starter with flour and water only, and feed it for a week to catch wild yeast"
+    ]
+  },
+  "signs": [
+    "They talk about yeast as something alive",
+    "They weigh ingredients instead of guessing",
+    "They know why a loaf came out flat"
+  ],
+  "makeItReal": "Pick one slow morning this week, put flour, salt and yeast on the counter, and let your kid wake the yeast before you do anything else.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/bread-lab.jpg",
+    "alt": "Watercolour illustration of a homemade loaf on a board beside three bottles with balloons and a tall glass of dough marked with tape",
+    "caption": "Three balloons, one loaf, and a tape line that kept climbing."
+  }
+}

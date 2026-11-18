@@ -48,6 +48,7 @@ export const productSkills: Record<string, ProductSkills> = {
   "bias-fairness-lab": { canonical: ["AI Literacy","Ethics","Critical Thinking","Data & Graphs"], families: ["tech-and-digital","critical-thinking-and-reasoning","empathy-and-people"] },
   "board-game-studio": { canonical: ["Design Thinking","Maths","Writing","Strategy","Art"], families: ["creativity-and-making","math-and-money"] },
   "brand-builder": { canonical: ["Art","Creative Thinking","Critical Thinking","Storytelling"], families: ["communication-and-writing","creativity-and-making","critical-thinking-and-reasoning"] },
+  "bread-lab": { canonical: ["STEM","Science","Measurement","Percentages","Baking"], families: ["nature-and-science","math-and-money","creativity-and-making","planning-and-self-management"] },
   "budget-challenge": { canonical: ["STEM","Real-World Math","Budgeting","Problem-Solving"], families: ["communication-and-writing","critical-thinking-and-reasoning","entrepreneurship-and-money","math-and-money","planning-and-self-management"] },
   "build-ai-helper": { canonical: ["AI Literacy","Systems Thinking","Ethics","Writing"], families: ["tech-and-digital","critical-thinking-and-reasoning","communication-and-writing"] },
   "business-failure-lab": { canonical: ["Adaptability","Communication","Critical Thinking","Problem-Solving","Resilience","Systems Thinking"], families: ["communication-and-writing","critical-thinking-and-reasoning","empathy-and-people","planning-and-self-management"] },
