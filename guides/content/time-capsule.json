@@ -1,0 +1,379 @@
+{
+  "slug": "time-capsule",
+  "category": "Writing & Communication",
+  "title": "Time Capsule to Future Me",
+  "tagline": "Price · Measure · Ask · Predict · Seal",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid packs a record of right now for the person they'll be in a few years. They survey real prices, cut a paper strip to their exact height, trace their hand and foot, ask everyone at home the same questions, write predictions and a letter to future them, then seal it with an opening date and a small ceremony.",
+  "need": [
+    "A box, tin or large envelope that closes well",
+    "A receipt, a flyer or a trip to a store for real prices",
+    "A long strip of paper, scissors, a tape measure and a pencil",
+    "Paper for letters and interviews, and a phone to record if you like"
+  ],
+  "academics": [
+    {
+      "subject": "Writing",
+      "text": "a letter to a real future reader"
+    },
+    {
+      "subject": "Math",
+      "text": "prices, measuring and percent change when it opens"
+    },
+    {
+      "subject": "Communication",
+      "text": "interviewing family with the same questions"
+    },
+    {
+      "subject": "Thinking",
+      "text": "making predictions with reasons"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Ordinary things are what future them will find most surprising: the price of bread, the size of a hand, what a sibling said at dinner. Push for exact numbers and real words instead of 'stuff I like', and take part yourself, because your answers go in the box too.",
+    "plan": [
+      {
+        "when": "A shopping trip",
+        "what": "Do the price survey (Step 1)."
+      },
+      {
+        "when": "One afternoon",
+        "what": "Measure, then interview the family (Steps 2 and 3)."
+      },
+      {
+        "when": "A quiet evening",
+        "what": "Write, predict and seal it (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to open it next week",
+        "a": "Meet in the middle. One year, on their next birthday, is long enough for a 6-year-old to notice real changes. Older kids can choose five years."
+      },
+      {
+        "q": "The interviews are one-word answers",
+        "a": "Ask for an example: 'What's your favourite food right now, and when did you last eat it?' A story is easier to give than a list."
+      },
+      {
+        "q": "We'll forget where we put it",
+        "a": "Write the place and the opening date on the calendar, and in a note on your phone, the day you seal it."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A time capsule is a message to a reader who doesn't exist yet: the older version of your kid. What future them will want most is exact, everyday detail, numbers they can check and words in people's own voices, and a few predictions to find out if they were right.",
+    "before": "'I'll put in my favourite toy and a drawing.'",
+    "model": [
+      {
+        "part": "Prices",
+        "line": "Milk $2.50 for 1 litre, a pizza slice $3, bus ticket $2.75."
+      },
+      {
+        "part": "Me",
+        "line": "A paper strip 128 cm long, a traced hand, a traced foot, shoe size 1."
+      },
+      {
+        "part": "Family",
+        "line": "Five people, same four questions, answers written down word for word."
+      },
+      {
+        "part": "Predictions",
+        "line": "'I'll be about 140 cm, because kids grow around 6 cm a year.'"
+      }
+    ],
+    "modelNote": "'A toy and a drawing' tells future them what they liked. Prices, a strip of paper and five sets of answers give them things to measure against, so opening day becomes a comparison instead of just a memory."
+  },
+  "steps": [
+    {
+      "title": "Survey the prices",
+      "why": "A real price list now makes real math on opening day.",
+      "kid": "Your kid picks 8 to 10 everyday things, like milk, bread, a banana, a stamp, a bus ticket and their favourite treat, and writes down the exact price and size of each, using the Price survey card in the Time Capsule Toolkit at the end of the guide.",
+      "you": "Take them to the store or hand them this week's receipt. Help them read the size on the label, so the same item can be compared later.",
+      "ask": [
+        "Which price do you think will go up the most?",
+        "Which one could go down?"
+      ],
+      "tip": "Add a flyer, or a photocopy of the receipt. Shop receipts fade over the years, but a copy or a flyer stays readable.",
+      "levels": {
+        "explore": "Pick five things at the store, and help a parent write down each price.",
+        "develop": "Survey 8 to 10 items with exact prices and sizes, and guess each future price.",
+        "extend": "Ask a grandparent what three of the items cost when they were your age, and work out how many times higher the price is now."
+      }
+    },
+    {
+      "title": "Measure me now",
+      "why": "Kids never see themselves grow. A paper strip to unroll later makes it something to hold.",
+      "kid": "Your kid stands against a wall while you mark their height, then cuts a paper strip exactly that long and writes the date on it. They trace their hand and their foot, and record shoe size and arm span, using the Measure me card.",
+      "you": "Make the height mark with a book flat on their head. Measure twice, and let them read the tape measure.",
+      "ask": [
+        "How much taller do you think you'll be when it opens?",
+        "Is your arm span longer or shorter than your height?"
+      ],
+      "tip": "Roll the strip loosely instead of folding it. Folds crack paper over the years.",
+      "levels": {
+        "explore": "Trace your hand and your foot, and help cut your height strip.",
+        "develop": "Measure your height, arm span and shoe size, and cut the strip exactly.",
+        "extend": "Use about 6 cm a year to predict your height when it opens, and mark that prediction on your strip in a second colour."
+      }
+    },
+    {
+      "title": "Ask everyone the same questions",
+      "why": "Same questions for everyone make a family snapshot, and a fair comparison later.",
+      "kid": "Your kid picks four questions from the Family snapshot card and asks every person at home, plus anyone else they'd like, writing the answers word for word or recording them. One question is always about the future: 'What do you think I'll be like when this opens?'",
+      "you": "Answer properly when it's your turn. Help with spelling or recording, and keep each interview short, five minutes at most.",
+      "ask": [
+        "Whose answer surprised you most?",
+        "Which question do you want to ask them again on opening day?"
+      ],
+      "tip": "If you record on a phone, write the answers down too. Paper will open in ten years; a file might not.",
+      "levels": {
+        "explore": "Ask two people one question each, and draw their answers.",
+        "develop": "Ask four questions to everyone at home, and write the answers word for word.",
+        "extend": "Answer the four questions yourself, then predict how each person's answer will change by the time you open it."
+      }
+    },
+    {
+      "title": "Predict and write to future me",
+      "why": "A prediction with a reason is a real test of how well they understand the world now.",
+      "kid": "Your kid writes five predictions for opening day, each with a reason and how sure they are, using the Predictions card. Then they write a letter using the Letter to future me card: who they are now, what's hard, what they hope, and one question for future them.",
+      "you": "Ask 'Why do you think that?' after each prediction. Write your own short letter to them, to open on the same day.",
+      "ask": [
+        "Which prediction are you most sure about?",
+        "What question do you want future you to answer?"
+      ],
+      "tip": "Specific predictions are more fun to check. 'Milk will cost $3.10' beats 'things will cost more'.",
+      "levels": {
+        "explore": "Say three things you think will be different, and draw a picture of future you.",
+        "develop": "Write five predictions with reasons, and a one-page letter.",
+        "extend": "Rate each prediction from 1 to 10 for how sure you are, and write what would have to happen to prove you wrong."
+      }
+    },
+    {
+      "title": "Pack it and seal it",
+      "why": "A date and a ceremony turn a box of papers into something they'll wait for.",
+      "kid": "Your kid chooses the opening date and packs everything, using the Pack and open card. They write the date and 'Do not open until' on the outside, then seal it with a small ceremony they design: everyone signs the lid, says one wish, or watches it go into its hiding place.",
+      "you": "Help find a cool, dry spot inside the home, away from heaters. Put the opening date in your calendar while they watch.",
+      "ask": [
+        "Why did you choose that date?",
+        "What do you think you'll check first when you open it?"
+      ],
+      "tip": "Leave out batteries, food and anything with rubber. They break down and can ruin the paper.",
+      "levels": {
+        "explore": "Help pack the box, and sign the lid with the whole family.",
+        "develop": "Pick the date, pack it carefully, and run the sealing ceremony.",
+        "extend": "Write the opening-day instructions: what to compare first, and how to work out each price change as a percent."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Time Capsule Toolkit",
+    "intro": "What to price, what to measure, what to ask, how to predict, what to write and how to pack it.",
+    "items": [
+      {
+        "name": "Price survey",
+        "lines": [
+          {
+            "k": "Food:",
+            "v": "milk, bread, eggs, a banana"
+          },
+          {
+            "k": "Treat:",
+            "v": "your favourite snack or ice cream"
+          },
+          {
+            "k": "Getting around:",
+            "v": "a bus ticket, fuel per litre"
+          },
+          {
+            "k": "Other:",
+            "v": "a stamp, a book, a haircut"
+          },
+          {
+            "k": "Write:",
+            "v": "exact price, size and store"
+          }
+        ],
+        "ask": "Which price will change the most?"
+      },
+      {
+        "name": "Measure me",
+        "lines": [
+          {
+            "k": "Height:",
+            "v": "paper strip cut to size, dated"
+          },
+          {
+            "k": "Hand:",
+            "v": "traced, fingers spread"
+          },
+          {
+            "k": "Foot:",
+            "v": "traced, standing on the paper"
+          },
+          {
+            "k": "Shoe size:",
+            "v": "and the size of a parent's"
+          },
+          {
+            "k": "Arm span:",
+            "v": "fingertip to fingertip"
+          }
+        ],
+        "ask": "Which measurement will change most?"
+      },
+      {
+        "name": "Family snapshot",
+        "lines": [
+          {
+            "k": "Now:",
+            "v": "'What's your favourite thing to do?'"
+          },
+          {
+            "k": "Hard:",
+            "v": "'What's hardest for you right now?'"
+          },
+          {
+            "k": "Me:",
+            "v": "'What am I like these days?'"
+          },
+          {
+            "k": "Future:",
+            "v": "'What will I be like when this opens?'"
+          },
+          {
+            "k": "Same:",
+            "v": "four questions, everyone"
+          }
+        ],
+        "ask": "Which answer do you most want to hear again?"
+      },
+      {
+        "name": "Predictions",
+        "lines": [
+          {
+            "k": "Me:",
+            "v": "height, shoe size, best friend"
+          },
+          {
+            "k": "Home:",
+            "v": "where we live, who lives with us"
+          },
+          {
+            "k": "World:",
+            "v": "one price, one invention"
+          },
+          {
+            "k": "Reason:",
+            "v": "'because...' for every one"
+          },
+          {
+            "k": "Sure:",
+            "v": "1 to 10"
+          }
+        ],
+        "ask": "Which prediction would surprise you most if it came true?"
+      },
+      {
+        "name": "Letter to future me",
+        "lines": [
+          {
+            "k": "Start:",
+            "v": "'Dear me, today is...'"
+          },
+          {
+            "k": "Now:",
+            "v": "what a normal day looks like"
+          },
+          {
+            "k": "Hard:",
+            "v": "one thing that's tricky right now"
+          },
+          {
+            "k": "Hope:",
+            "v": "one thing I hope I can do by then"
+          },
+          {
+            "k": "Ask:",
+            "v": "one question for future me"
+          }
+        ],
+        "ask": "What will future you want to know most?"
+      },
+      {
+        "name": "Pack and open",
+        "lines": [
+          {
+            "k": "Date:",
+            "v": "1 year for young kids, up to 5 or 10"
+          },
+          {
+            "k": "Pack:",
+            "v": "papers rolled loose, no tape on them"
+          },
+          {
+            "k": "Leave out:",
+            "v": "batteries, food, anything rubber"
+          },
+          {
+            "k": "Store:",
+            "v": "cool, dry, inside the home"
+          },
+          {
+            "k": "Price change:",
+            "v": "(new - old) ÷ old × 100 = %"
+          }
+        ],
+        "ask": "What will you compare first on opening day?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Writing for a reader",
+      "text": "a letter someone will really open"
+    },
+    {
+      "name": "Measuring",
+      "text": "exact numbers, worth comparing later"
+    },
+    {
+      "name": "Interviewing",
+      "text": "the same questions, word for word"
+    },
+    {
+      "name": "Predicting",
+      "text": "a guess with a reason behind it"
+    }
+  ],
+  "conclusion": {
+    "headline": "They sent a message to the person they'll grow into.",
+    "text": "Keep the opening date somewhere you'll both see it. In the months after, notice when they mention a price, a measurement or a prediction from the box, because that's them already checking it against the world.",
+    "celebrate": "When the lid is signed and sealed, say: 'Future you is going to open this and meet exactly who you are today.'",
+    "extensions": [
+      "Make a second, tiny capsule to open in just one month, and test your short-term predictions",
+      "Run the same price survey in another town or country you visit, and compare the two lists",
+      "Make a capsule for a younger sibling or cousin, with their measurements and your predictions about them",
+      "Plan the opening day now: who comes, what you'll eat, and which question you'll ask everyone again"
+    ]
+  },
+  "signs": [
+    "They notice and mention what things cost",
+    "They back up predictions with a reason",
+    "They talk about who they're becoming, not only who they are"
+  ],
+  "makeItReal": "On your next grocery run, hand your kid the receipt at the checkout and ask which three prices they'd want to remember in five years.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/time-capsule.jpg",
+    "alt": "Watercolour illustration of an open tin box on a wooden table holding a rolled paper strip, a traced paper hand, a folded letter and a grocery receipt, with a tape measure curled beside it",
+    "caption": "A paper strip, a traced hand, and a receipt for later."
+  }
+}

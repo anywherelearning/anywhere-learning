@@ -1251,6 +1251,146 @@
         "Creativity & Making",
         "Tech & Digital"
       ]
+    },
+    "build-the-book": {
+      "canonical": [
+        "Close Reading",
+        "Inference",
+        "Evidence",
+        "Building",
+        "Reading Comprehension"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "time-capsule": {
+      "canonical": [
+        "Writing",
+        "Measurement",
+        "Interviewing",
+        "Predictions",
+        "Percent Change"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Math & Money",
+        "Empathy & People"
+      ]
+    },
+    "training-plan": {
+      "canonical": [
+        "Planning",
+        "Endurance",
+        "Data",
+        "Self-Discipline",
+        "Healthy Habits"
+      ],
+      "families": [
+        "Planning & Self-Management",
+        "Nature & Science",
+        "Math & Money"
+      ]
+    },
+    "risky-play-lab": {
+      "canonical": [
+        "Risk Judgment",
+        "Physical Confidence",
+        "Hazard Spotting",
+        "Decision-Making",
+        "Outdoor Play"
+      ],
+      "families": [
+        "Nature & Science",
+        "Planning & Self-Management",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "mend-it-make-it": {
+      "canonical": [
+        "Sewing",
+        "Measurement",
+        "Life Skills",
+        "Sustainability",
+        "Making"
+      ],
+      "families": [
+        "Creativity & Making",
+        "Planning & Self-Management",
+        "Math & Money"
+      ]
+    },
+    "navigate-by-the-stars": {
+      "canonical": [
+        "STEM",
+        "Astronomy",
+        "Navigation",
+        "Measurement",
+        "Geography"
+      ],
+      "families": [
+        "Nature & Science",
+        "World & Geography",
+        "Math & Money"
+      ]
+    },
+    "learn-a-local-dance": {
+      "canonical": [
+        "Cultural Awareness",
+        "Movement",
+        "Music",
+        "Respect",
+        "Performance"
+      ],
+      "families": [
+        "World & Geography",
+        "Empathy & People",
+        "Creativity & Making"
+      ]
+    },
+    "feedback-studio": {
+      "canonical": [
+        "Giving Feedback",
+        "Receiving Feedback",
+        "Communication",
+        "Growth Mindset",
+        "Revision"
+      ],
+      "families": [
+        "Empathy & People",
+        "Communication & Writing",
+        "Creativity & Making"
+      ]
+    },
+    "fundraiser-challenge": {
+      "canonical": [
+        "Giving Back",
+        "Percentages",
+        "Public Speaking",
+        "Accountability",
+        "Planning"
+      ],
+      "families": [
+        "Entrepreneurship & Money",
+        "Empathy & People",
+        "Math & Money"
+      ]
+    },
+    "how-does-it-make-money": {
+      "canonical": [
+        "Business Models",
+        "Media Literacy",
+        "Estimation",
+        "Data",
+        "Critical Thinking"
+      ],
+      "families": [
+        "Entrepreneurship & Money",
+        "Tech & Digital",
+        "Critical Thinking & Reasoning"
+      ]
     }
   }
 }

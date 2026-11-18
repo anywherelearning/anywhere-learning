@@ -3412,6 +3412,246 @@ export const productDescriptions: Record<string, ProductDescription> = {
     },
     format: 'Project Guide',
   },
+  'build-the-book': {
+    opening:
+      'Your kid builds the setting of a book they love, in a shoebox, with LEGO or out in the yard, using only what the words say. They hunt the clues, sort what the book said from what they guessed, flag every guess, check the build line by line, then compare it with someone else\'s.',
+    whatsIncluded: [
+      'Five steps, from hunting clues to touring the finished build',
+      'Good passages, Clue hunt, Said or guessed, Build rules, Line check and Where we differ cards',
+      'Two colours of flags: what the book said, and what your kid guessed',
+      'A line-by-line check that catches what the first reading skipped',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Close Reading', 'Inference', 'Evidence', 'Building', 'Reading Comprehension'],
+    insideTheLearning: {
+      lead:
+        'Your kid builds a book\'s setting from the words alone, then proves every piece with a line from the text. Flags in two colours make the difference between what the author wrote and what the reader assumed something they can see and count.',
+      skills: [
+        { skill: 'Close Reading', where: 'Hunting every clue about a place' },
+        { skill: 'Inference', where: 'A guess with a clue behind it' },
+        { skill: 'Evidence', where: 'Pointing to the line that proves each piece' },
+        { skill: 'Building', where: 'Turning words into a model' },
+        { skill: 'Comparing', where: 'Settling differences by rereading' },
+      ],
+    },
+    format: 'Project Guide',
+  },
+  'time-capsule': {
+    opening:
+      'Your kid packs a record of right now for the person they\'ll be in a few years. They survey real prices, cut a paper strip to their exact height, trace their hand and foot, ask everyone at home the same questions, write predictions and a letter to future them, then seal it with an opening date and a small ceremony.',
+    whatsIncluded: [
+      'Five steps, from a price survey to the sealing ceremony',
+      'Price survey, Measure me, Family snapshot, Predictions, Letter to future me and Pack and open cards',
+      'A height strip, traced hand and foot, and four questions for everyone at home',
+      'The percent-change formula for comparing prices on opening day',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Writing', 'Measurement', 'Interviewing', 'Predictions', 'Percent Change'],
+    insideTheLearning: {
+      lead:
+        'Your kid packs a record of right now for the person they\'ll grow into: real prices, real measurements, the family\'s own words and predictions with reasons. Opening day turns it into a comparison they can measure, not just a memory.',
+      skills: [
+        { skill: 'Writing', where: 'A letter to a real future reader' },
+        { skill: 'Math', where: 'Prices, measurements and percent change' },
+        { skill: 'Interviewing', where: 'The same questions for everyone' },
+        { skill: 'Predicting', where: 'A guess with a reason and a certainty score' },
+        { skill: 'Self-Awareness', where: 'Who they are now, and who they\'re becoming' },
+      ],
+    },
+    format: 'Project Guide',
+  },
+  'training-plan': {
+    opening:
+      'Your kid trains for 30 days toward one thing their body can\'t do yet: run 2 km without stopping, hold a plank for a minute, swim a length or land a cartwheel. They test where they start, build a calendar with rest days in it, log every session, adjust the plan on day 15, then test again on day 30 the exact same way.',
+    whatsIncluded: [
+      'Five steps, from picking a goal to the day-30 retest',
+      'Goal check, Start test, Build-up rules, Sample plans, Log and adjust and Sore or hurt cards',
+      'Sample plans for running, push-ups, a plank, a cartwheel and swimming',
+      'A day-15 check that changes the plan from the log',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Planning', 'Endurance', 'Data', 'Self-Discipline', 'Healthy Habits'],
+    insideTheLearning: {
+      lead:
+        'Your kid picks something their body can\'t do yet and plans 30 days to get there, with rest days, a log and a fair retest. Goals are about what the body does, never how it looks, and the graph shows exactly what the plan achieved.',
+      skills: [
+        { skill: 'Planning', where: 'A 30-day calendar with rest built in' },
+        { skill: 'Physical Health', where: 'Steady training toward one goal' },
+        { skill: 'Data', where: 'A start test, a log and a retest graphed' },
+        { skill: 'Self-Discipline', where: 'Showing up on the planned days' },
+        { skill: 'Problem-Solving', where: 'Adjusting the plan on day 15' },
+      ],
+    },
+    format: 'Project Guide',
+  },
+  'risky-play-lab': {
+    opening:
+      'Your kid learns to judge a physical risk instead of avoiding it or ignoring it. They hunt for hidden hazards, score the risk of a climb, a balance, a jump, a fast slope or a real hammer, set their own safe-enough line inside the limits you choose, try it, and step it up one notch at a time to a top rung they pick themselves.',
+    whatsIncluded: [
+      'Five steps, from picking a challenge to stepping it up',
+      'Risky play types, Outer limits, Hazard hunt, Risk score, Say this instead and Step it up cards',
+      'Risk versus hazard, and a simple chance times ouch score',
+      'A card of words to use instead of \'be careful\'',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Risk Judgment', 'Physical Confidence', 'Hazard Spotting', 'Decision-Making', 'Outdoor Play'],
+    insideTheLearning: {
+      lead:
+        'Your kid learns to judge a physical risk instead of avoiding or ignoring it. Inside limits you set, they check for hidden hazards, score the risk, set their own line and step it up gradually, which builds real confidence and real judgment.',
+      skills: [
+        { skill: 'Risk Judgment', where: 'Chance times ouch, scored before each try' },
+        { skill: 'Hazard Spotting', where: 'Finding what can\'t be seen from the ground' },
+        { skill: 'Physical Skills', where: 'Climbing, balancing, jumping and tools' },
+        { skill: 'Decision-Making', where: 'Choosing a safe-enough line and a stop word' },
+        { skill: 'Confidence', where: 'Small steps up, each one judged' },
+      ],
+    },
+    format: 'Project Guide',
+  },
+  'mend-it-make-it': {
+    opening:
+      'Your kid learns to keep clothes going instead of giving up on them. They thread a needle and test two stitches, sew a loose button back on so it lasts, measure and sew a patch over a hole, then turn a worn-out shirt or pair of jeans into something new they\'ll use every day: a cushion cover, a bag or a scrunchie.',
+    whatsIncluded: [
+      'Five steps, from two test stitches to a finished remake',
+      'Stitch basics, Button, Patch it, Remake ideas, Measure and cut and Test it cards',
+      'A cushion cover, bag or scrunchie from old clothes, with seam allowance math',
+      'Needle safety for young kids, with big blunt needles',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Sewing', 'Measurement', 'Life Skills', 'Sustainability', 'Making'],
+    insideTheLearning: {
+      lead:
+        'Your kid learns to keep clothes going: a button that stays on, a patch that holds, and a worn-out shirt turned into something they use every day. Measuring, seam allowances and a real test make it a maker project, not a chore.',
+      skills: [
+        { skill: 'Life Skills', where: 'Sewing on buttons and patching holes' },
+        { skill: 'Measurement', where: 'Patch sizes and seam allowances' },
+        { skill: 'Making', where: 'Turning old clothes into something new' },
+        { skill: 'Fine Motor', where: 'Threading, knotting and even stitches' },
+        { skill: 'Sustainability', where: 'Repairing instead of replacing' },
+      ],
+    },
+    format: 'Project Guide',
+  },
+  'navigate-by-the-stars': {
+    opening:
+      'Your kid finds north with nothing but the night sky. They turn their hand into a sky ruler, follow the Big Dipper to the North Star (or the Southern Cross to south), measure how high it sits to work out how far north you live, build the moon\'s phases with a lamp and an orange, then lead the family on a short night walk by the stars.',
+    whatsIncluded: [
+      'Five steps, from a hand sky ruler to leading a night walk',
+      'Hand ruler, Find north, Southern sky, Latitude, Moon model and Night walk cards',
+      'How to find the North Star, with a Cassiopeia backup and a Southern Cross version',
+      'A lamp-and-orange moon model you can do indoors on a cloudy night',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['STEM', 'Astronomy', 'Navigation', 'Measurement', 'Geography'],
+    insideTheLearning: {
+      lead:
+        'Your kid finds north with nothing but the night sky, then measures how far north they live with their own fist and checks it on a map. Real-world STEM: astronomy, angles and navigation, ending with a night walk they lead themselves.',
+      skills: [
+        { skill: 'Astronomy', where: 'Finding the North Star and the moon\'s phases' },
+        { skill: 'Measurement', where: 'Angles measured with a fist' },
+        { skill: 'Geography', where: 'Latitude worked out from the sky' },
+        { skill: 'Navigation', where: 'Leading a walk by the stars' },
+        { skill: 'Science', where: 'A model of why the moon changes shape' },
+      ],
+    },
+    format: 'Project Guide',
+  },
+  'learn-a-local-dance': {
+    opening:
+      'Your kid learns a traditional dance from someone who keeps it, where you\'re travelling or from your family\'s own roots. They ask what the dance is for, find the count hiding in its music, break the moves into a map they can practise in small chunks, then tell its story and perform it for family.',
+    whatsIncluded: [
+      'Five steps, from finding the dance to a family show night',
+      'Find the dance, Ask the dancer, Count the music, Move map and Show night cards',
+      'Works while travelling or at home through family roots and community dance nights',
+      'How to tell dances everyone may join from dances kept for ceremonies',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Cultural Awareness', 'Movement', 'Music', 'Respect', 'Performance'],
+    insideTheLearning: {
+      lead:
+        'Your kid learns a dance from the people who keep it, asks what it means, finds the count in its music and maps the moves. The show night ends with its story told in their own words.',
+      skills: [
+        { skill: 'Social Studies', where: 'What a dance celebrates and where it comes from' },
+        { skill: 'Music', where: 'Finding the count and the strong beat' },
+        { skill: 'Movement', where: 'Learning a dance in small chunks' },
+        { skill: 'Respect', where: 'Asking first, and knowing which dances to only watch' },
+        { skill: 'Performance', where: 'Telling the story, then dancing it' },
+      ],
+    },
+    format: 'Project Guide',
+  },
+  'feedback-studio': {
+    opening:
+      'Your kid learns to give feedback someone can actually use, and to hear it without arguing back. They sort useful feedback from empty praise, try a simple method on low-stakes things like a muffin or a chess game, practise taking it without a single \'but\', run a family studio session, then use one piece of feedback to make a second version and show the two side by side.',
+    whatsIncluded: [
+      'Five steps, from sorting useful feedback to making version 2',
+      'Feedback test, Point ask try, Take it in, Studio session and Use it or not cards',
+      'A But jar that counts every \'but\' and \'I meant to\', grown-ups included',
+      'A family studio session where every maker asks one focus question',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Giving Feedback', 'Receiving Feedback', 'Communication', 'Growth Mindset', 'Revision'],
+    insideTheLearning: {
+      lead:
+        'Your kid learns to give feedback someone can actually use, and to take it without arguing back. A family studio session and a version 2 shown beside version 1 make the change something everyone can see.',
+      skills: [
+        { skill: 'Communication', where: 'Specific, kind, useful feedback' },
+        { skill: 'Emotional Skills', where: 'Taking feedback without defending' },
+        { skill: 'Revision', where: 'Making version 2 from real feedback' },
+        { skill: 'Listening', where: 'Hearing the whole comment before answering' },
+        { skill: 'Judgment', where: 'Choosing which feedback to use' },
+      ],
+    },
+    format: 'Project Guide',
+  },
+  'fundraiser-challenge': {
+    opening:
+      'Your kid raises real money for a cause they care about. They find out who it helps and what a set amount buys, turn that into a goal they can picture, pick a way to raise it, ask people they know for support, count every dollar in the open, then give it and tell every donor exactly what their money did.',
+    whatsIncluded: [
+      'Five steps, from choosing a cause to reporting back',
+      'Cause check, Goal math, Ways to raise, Sponsor math, The ask and Report back cards',
+      'Bake sale, car wash or a sponsored challenge, with the math for each',
+      'Safe asking: only people you know, with a parent beside them',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Giving Back', 'Percentages', 'Public Speaking', 'Accountability', 'Planning'],
+    insideTheLearning: {
+      lead:
+        'Your kid raises real money for a cause they care about, with a goal they can picture, an ask in their own words and every dollar counted in the open. The report back to donors, with a photo of what the money bought, is the proudest part.',
+      skills: [
+        { skill: 'Citizenship', where: 'Helping a cause they chose' },
+        { skill: 'Math', where: 'Goal math, sponsor pledges and percent of goal' },
+        { skill: 'Communication', where: 'Asking for support in their own words' },
+        { skill: 'Accountability', where: 'Counting openly and reporting back' },
+        { skill: 'Planning', where: 'Choosing and running the fundraiser' },
+      ],
+    },
+    format: 'Project Guide',
+  },
+  'how-does-it-make-money': {
+    opening:
+      'Your kid finds out how something free or cheap really pays for itself. They pick a free game, a video site, a museum or a day out, collect real evidence like counted ads, receipts and what\'s sold at the exit, estimate the money with simple math, draw a one-page money map, then plan how an idea of their own would make money.',
+    whatsIncluded: [
+      'Five steps, from a first guess to your own money plan',
+      'Money finder, Ad count, Day-out clues, Money math, Money map and Your money plan cards',
+      'Real evidence: counted ads, receipts and what\'s sold at the exit',
+      'A one-page money map with thicker arrows for bigger money',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Business Models', 'Media Literacy', 'Estimation', 'Data', 'Critical Thinking'],
+    insideTheLearning: {
+      lead:
+        'Your kid finds out who really pays for the free things they use, from counted ads and real receipts. A money map and a plan for their own idea turn \'it\'s free\' into an understanding of business models and advertising.',
+      skills: [
+        { skill: 'Business', where: 'How free things make money' },
+        { skill: 'Media Literacy', where: 'Ads, data and who pays for your attention' },
+        { skill: 'Math', where: 'Estimating money from real counts' },
+        { skill: 'Critical Thinking', where: 'Testing a guess against evidence' },
+        { skill: 'Planning', where: 'A fair money plan for their own idea' },
+      ],
+    },
+    format: 'Project Guide',
+  },
   'play-the-world': {
     opening:
       'Your kid finds a game that kids where you are staying really play, learns it from them, and writes down the rules the same day so it is not forgotten. Then they teach it to the family and compare it with a game from home.',

@@ -1,0 +1,371 @@
+{
+  "slug": "mend-it-make-it",
+  "category": "Creativity & Maker",
+  "title": "Mend It, Make It",
+  "tagline": "Thread · Button · Patch · Plan · Remake",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns to keep clothes going instead of giving up on them. They thread a needle and test two stitches, sew a loose button back on so it lasts, measure and sew a patch over a hole, then turn a worn-out shirt or pair of jeans into something new they'll use every day: a cushion cover, a bag or a scrunchie.",
+  "need": [
+    "Something that needs mending, plus a cushion insert or stuffing and a hair tie for the remakes",
+    "A worn-out shirt, T-shirt or pair of jeans to cut up",
+    "Hand-sewing needles with big eyes, a needle threader and thread",
+    "Sharp scissors, a few pins, a ruler, chalk and a toothpick"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "measuring holes, patches and seam allowances in centimetres"
+    },
+    {
+      "subject": "Design",
+      "text": "planning a new thing from what's already there"
+    },
+    {
+      "subject": "Science",
+      "text": "why some stitches hold and others pull out"
+    },
+    {
+      "subject": "Life skills",
+      "text": "sewing on a button and fixing a hole by hand"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Sit side by side with a needle each. Kids learn stitching by copying hands, not by hearing it explained, and the thread will tangle for both of you. Keep the scissors and pins on your side, count the needles out and back in, and leave the crooked first stitch where it is.",
+    "plan": [
+      {
+        "when": "The first sitting",
+        "what": "Thread up, test stitches and sew the button (Steps 1 and 2)."
+      },
+      {
+        "when": "Another day",
+        "what": "Measure and sew the patch (Step 3)."
+      },
+      {
+        "when": "A long afternoon",
+        "what": "Plan, cut, sew and test the remake (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "The thread keeps tangling",
+        "a": "Cut it shorter, about the length from their hand to their elbow. Every few stitches, let the needle hang and spin until the twist comes out."
+      },
+      {
+        "q": "The needle won't go through the jeans",
+        "a": "Denim is thick. Push with a thimble, or grip the needle with a scrap of balloon or rubber glove. Younger kids can do the remake in a soft T-shirt instead."
+      },
+      {
+        "q": "The fabric bunches up",
+        "a": "They're pulling each stitch too tight. Pull until the thread lies flat on the fabric, then smooth the fabric along the line with a finger."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A stitch only holds if the thread can't slide back out. A knot at the start, small even stitches, and a few stitches on top of each other at the end are what keep a button on and a seam closed. Every mend and every remake is built from those three things.",
+    "before": "'Once it has a hole, it's done.'",
+    "model": [
+      {
+        "part": "Hole",
+        "line": "A 3 cm tear near the knee of old jeans."
+      },
+      {
+        "part": "Patch",
+        "line": "Cut 7 cm square: the hole plus 2 cm on every side."
+      },
+      {
+        "part": "Stitch",
+        "line": "A grid of running stitches 1 cm apart, right over the patch."
+      },
+      {
+        "part": "Test",
+        "line": "Stretched, washed and worn to the park. Still holding."
+      }
+    ],
+    "modelNote": "'It's done' was a guess about the jeans. Measuring the hole and adding 2 cm all round gave the stitches solid fabric to grip, which is why the patch held when the knee bent."
+  },
+  "steps": [
+    {
+      "title": "Thread up and test two stitches",
+      "why": "Every repair is the same three moves: thread, knot, stitch. A practice scrap takes the pressure off the real thing.",
+      "kid": "Your kid threads a needle, ties a knot and sews a line of running stitch and a line of backstitch on a scrap of the old shirt, using the Stitch basics card in the Mend It, Make It Toolkit at the end of the guide. They measure the stitches and aim for even ones.",
+      "you": "Cut the scrap and the thread yourself, and sew your own line beside theirs. Show one stitch slowly, then let them copy.",
+      "ask": [
+        "Which line would you trust to hold a seam?",
+        "What happens when you pull a stitch too tight?"
+      ],
+      "tip": "Count the needles out and count them back in at the end. A needle lost in a couch is a real hazard.",
+      "levels": {
+        "explore": "With a big blunt needle and thick thread, sew in and out of a piece of felt or a loose-knit T-shirt.",
+        "develop": "Sew a line of running stitch and a line of backstitch, with stitches about 5 mm long.",
+        "extend": "Snip the end knot on both lines, pull each thread, and explain why one comes out faster."
+      }
+    },
+    {
+      "title": "Sew on a button that lasts",
+      "why": "A missing button is the most common repair there is, and one plenty of adults never learned.",
+      "kid": "Your kid lays a toothpick across the top of the button and sews over it through the holes, using the Button card. Then they pull the toothpick out, wrap the thread under the button to make a short stem, and knot it on the back.",
+      "you": "Hold the fabric flat for them at first. Ask them to button and unbutton it ten times before calling it done.",
+      "ask": [
+        "Why does the button need a little space under it?",
+        "Did it pass the ten-button test?"
+      ],
+      "tip": "Many shirts come with a spare button sewn near the label or inside a seam. Check there first.",
+      "levels": {
+        "explore": "Sew a big button with big holes onto felt, up through one hole and down through the other.",
+        "develop": "Sew a four-hole button back onto real clothing, with the toothpick stem.",
+        "extend": "Sew on a button with a loop on its back, and work out why it doesn't need a toothpick."
+      }
+    },
+    {
+      "title": "Patch the hole",
+      "why": "A patch keeps a favourite piece in use, and a visible one makes the repair part of the design.",
+      "kid": "Your kid measures the hole, cuts a patch 2 cm bigger on every side from the old shirt, pins it on and sews it down with a grid of running stitches, using the Patch it card. They choose: hidden on the inside, or bright on the outside.",
+      "you": "Handle the pins and the sharp scissors. For a knee or an elbow, slide a piece of cardboard inside so they don't sew the front to the back.",
+      "ask": [
+        "How big does the patch need to be?",
+        "Hidden or on show, and why?"
+      ],
+      "tip": "Thread in a contrasting colour makes every stitch easy to see, and easy to be proud of.",
+      "levels": {
+        "explore": "Sew a felt shape over a hole in a flat scrap of old T-shirt, with big stitches all the way round.",
+        "develop": "Measure, cut and pin a patch, and sew it down with a running stitch grid.",
+        "extend": "Darn a small hole instead: weave thread across it, then over and under the other way, until it's filled."
+      }
+    },
+    {
+      "title": "Plan the remake",
+      "why": "A worn-out shirt is free fabric. Planning the cut is where the measuring happens.",
+      "kid": "Your kid picks a make from the Remake ideas card and measures what it has to fit: a cushion, a book, a wrist. They add the seam allowance and chalk the cutting lines, using the Measure and cut card, then check every line twice.",
+      "you": "Check the numbers with them before anything is cut. Cut together, with you on the scissors for younger kids.",
+      "ask": [
+        "How big does the fabric need to be for a 40 cm cushion?",
+        "Why do we add extra on every side?"
+      ],
+      "tip": "Chalk on the inside of the fabric, so no line shows on the finished piece.",
+      "levels": {
+        "explore": "Lay a cushion on the shirt, and trace around it with chalk.",
+        "develop": "Measure, add 1 cm on every side, and draw straight cutting lines with a ruler.",
+        "extend": "Design your own make from a sketch, and list every piece and its size before anything is cut."
+      }
+    },
+    {
+      "title": "Sew it and use it",
+      "why": "Something they made and use every day is the proudest finish there is.",
+      "kid": "Your kid pins the pieces with the outside of the fabric facing in, sews around the edges with backstitch 1 cm in, then turns it right side out. Then they put it to work, using the Test it card, and find the weakest spot.",
+      "you": "Pin with them and keep the corners square. Snip the corners for them before turning, close to the stitches but never through them.",
+      "ask": [
+        "Which seam took the most strain?",
+        "What would you change on the next one?"
+      ],
+      "tip": "On a cushion cover made from a button-up shirt, the shirt's own buttons become the opening. Unbutton it to turn it and to fill it.",
+      "levels": {
+        "explore": "Sew one straight seam with a grown-up, and turn the piece right side out.",
+        "develop": "Sew every seam, turn it, and run the test on the Test it card.",
+        "extend": "Add a pocket or a strap cut from the leftover fabric, and test how much weight it holds."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Mend It, Make It Toolkit",
+    "intro": "The stitches, the button, the patch and the measurements for the remake.",
+    "items": [
+      {
+        "name": "Stitch basics",
+        "lines": [
+          {
+            "k": "Thread:",
+            "v": "from your hand to your elbow"
+          },
+          {
+            "k": "Knot:",
+            "v": "wrap the end round a finger, roll, pull"
+          },
+          {
+            "k": "Running:",
+            "v": "in, out, in, out, like a dashed line"
+          },
+          {
+            "k": "Backstitch:",
+            "v": "up one ahead, back down at the last"
+          },
+          {
+            "k": "Finish:",
+            "v": "3 tiny stitches on top of each other"
+          }
+        ],
+        "ask": "Which stitch would you use for a seam?"
+      },
+      {
+        "name": "Button",
+        "lines": [
+          {
+            "k": "Mark:",
+            "v": "a dot where the old one was"
+          },
+          {
+            "k": "Spacer:",
+            "v": "a toothpick across the top"
+          },
+          {
+            "k": "Sew:",
+            "v": "5 or 6 times through each pair of holes"
+          },
+          {
+            "k": "Stem:",
+            "v": "toothpick out, wrap the thread 5 times"
+          },
+          {
+            "k": "Test:",
+            "v": "button and unbutton 10 times"
+          }
+        ],
+        "ask": "What does the stem under the button do?"
+      },
+      {
+        "name": "Patch it",
+        "lines": [
+          {
+            "k": "Measure:",
+            "v": "the hole, at its widest"
+          },
+          {
+            "k": "Cut:",
+            "v": "the hole plus 2 cm on every side"
+          },
+          {
+            "k": "Example:",
+            "v": "a 3 cm hole needs a 7 cm patch"
+          },
+          {
+            "k": "Inside:",
+            "v": "cardboard in, so you sew one layer"
+          },
+          {
+            "k": "Stitch:",
+            "v": "running stitch grid, 1 cm apart"
+          }
+        ],
+        "ask": "Why does the patch need to be bigger than the hole?"
+      },
+      {
+        "name": "Remake ideas",
+        "lines": [
+          {
+            "k": "Cushion:",
+            "v": "a shirt, its buttons as the opening"
+          },
+          {
+            "k": "Bag:",
+            "v": "a jeans leg, sewn shut at the bottom"
+          },
+          {
+            "k": "Strap:",
+            "v": "the jeans' hem or a folded strip"
+          },
+          {
+            "k": "Scrunchie:",
+            "v": "sew a 50 by 10 cm strip into a tube, hair tie in"
+          }
+        ],
+        "ask": "Which old piece of clothing suits which make?"
+      },
+      {
+        "name": "Measure and cut",
+        "lines": [
+          {
+            "k": "Measure:",
+            "v": "the thing it has to fit"
+          },
+          {
+            "k": "Seam allowance:",
+            "v": "add 1 cm on every side"
+          },
+          {
+            "k": "40 cm cushion:",
+            "v": "cut two pieces, 42 by 42 cm"
+          },
+          {
+            "k": "Mark:",
+            "v": "chalk on the inside of the fabric"
+          },
+          {
+            "k": "Check:",
+            "v": "measure twice before cutting"
+          }
+        ],
+        "ask": "How big would you cut for a 30 cm cushion?"
+      },
+      {
+        "name": "Test it",
+        "lines": [
+          {
+            "k": "Cushion:",
+            "v": "fill it, then sit on it"
+          },
+          {
+            "k": "Bag:",
+            "v": "carry 5 books across the room"
+          },
+          {
+            "k": "Scrunchie:",
+            "v": "stretch it over a wrist 20 times"
+          },
+          {
+            "k": "Weak spot:",
+            "v": "add a few backstitches there"
+          }
+        ],
+        "ask": "Where did it start to pull first?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Mending",
+      "text": "a button, a patch and a seam that hold"
+    },
+    {
+      "name": "Measuring",
+      "text": "holes, patches and seam allowances"
+    },
+    {
+      "name": "Planning",
+      "text": "measuring and drawing before cutting"
+    },
+    {
+      "name": "Making do",
+      "text": "seeing new fabric in worn-out clothes"
+    }
+  ],
+  "conclusion": {
+    "headline": "They can save a shirt, or turn it into something new.",
+    "text": "Leave the needle kit where they can reach it, with the threader on top. When the next button pops off, notice whether they go for the kit before they come to you.",
+    "celebrate": "When they use the thing they made for the first time, say: 'That was a shirt nobody wore. You measured it, cut it and sewed every stitch.'",
+    "extensions": [
+      "Learn sashiko, a Japanese way of mending with rows of running stitch, and use it on the next patch",
+      "Host a mending afternoon: friends bring one thing with a missing button or a hole, and your kid shows them how",
+      "Unpick an old shirt seam by seam to see how a factory put it together",
+      "Price a cushion cover or a bag like theirs in a store, and work out what theirs cost to make"
+    ]
+  },
+  "signs": [
+    "They check a hole before saying a piece of clothing is done",
+    "They thread a needle and tie a knot without help",
+    "They look at old clothes and see fabric for something else"
+  ],
+  "makeItReal": "Find one piece of clothing in the house with a missing button, put a needle, thread and a toothpick beside it, and sew it back on side by side today.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/mend-it-make-it.jpg",
+    "alt": "Watercolour illustration of folded jeans with a bright square patch, a cushion cover made from a checked shirt with its buttons down the middle, spools of thread, a pincushion, a toothpick and a loose button on a wooden table",
+    "caption": "One patch, one button, and a shirt that became a cushion."
+  }
+}

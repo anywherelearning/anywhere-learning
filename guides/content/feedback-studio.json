@@ -1,0 +1,349 @@
+{
+  "slug": "feedback-studio",
+  "category": "Emotional & Social",
+  "title": "Feedback Studio",
+  "tagline": "Sort · Give · Take · Swap · Revise",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns to give feedback someone can actually use, and to hear it without arguing back. They sort useful feedback from empty praise, try a simple method on low-stakes things like a muffin or a chess game, practise taking it without a single 'but', run a family studio session, then use one piece of feedback to make a second version and show the two side by side.",
+  "need": [
+    "Small things the family already made: a drawing, a snack, a story, a Lego build, a chess game",
+    "Slips of paper and a pencil",
+    "A jar and a handful of dried beans or buttons",
+    "A table where everyone's work can sit side by side"
+  ],
+  "academics": [
+    {
+      "subject": "Speaking",
+      "text": "specific, kind and useful words"
+    },
+    {
+      "subject": "Listening",
+      "text": "hearing someone out before answering"
+    },
+    {
+      "subject": "Art and writing",
+      "text": "revising a piece into a second version"
+    },
+    {
+      "subject": "Life skills",
+      "text": "staying calm while your work is talked about"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Go first, and go on the receiving end. Bring something you made, ask your kid for feedback on it, and show them what it looks like to say thanks without explaining yourself. Kids copy how you take feedback far more than anything you tell them about giving it.",
+    "plan": [
+      {
+        "when": "One evening",
+        "what": "Sort the slips and give feedback on your work (Steps 1 and 2)."
+      },
+      {
+        "when": "Over a few days",
+        "what": "Practise taking it, with the But jar (Step 3)."
+      },
+      {
+        "when": "A weekend",
+        "what": "Run the studio session, then make version 2 (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They only ever say 'it's nice'",
+        "a": "Ask them to put a finger on the exact spot they mean. Once they have to point, the words usually follow."
+      },
+      {
+        "q": "They cry or storm off when it's their turn",
+        "a": "Shrink the stakes: pick something that took five minutes, and let them write the focus question so they decide what gets talked about. One piece of feedback is enough for today."
+      },
+      {
+        "q": "Siblings use feedback to get at each other",
+        "a": "Every piece has to pass the Feedback test first. If it can't be pointed to or used, it doesn't count, and the giver tries again."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Useful feedback points at something exact and gives the maker something to try. Taking it well means listening all the way through, saying thanks, and deciding later what to use. You don't have to use all of it, but you do have to hear it.",
+    "before": "'Feedback means telling someone what's wrong with their work.'",
+    "model": [
+      {
+        "part": "Focus",
+        "line": "The maker asks: 'Does my dragon look scary?'"
+      },
+      {
+        "part": "Given",
+        "line": "'The teeth work. Is it roaring? You could try narrower eyes.'"
+      },
+      {
+        "part": "Taken",
+        "line": "'Thanks. Narrow like a cat's?' No 'but', no excuses."
+      },
+      {
+        "part": "Version 2",
+        "line": "Narrow eyes, same teeth. Now it looks scary."
+      }
+    ],
+    "modelNote": "'What's wrong with it' had no question behind it. The maker named the one thing they wanted to know, the giver answered only that, and the drawing changed because the idea was something a hand could do."
+  },
+  "steps": [
+    {
+      "title": "Sort useful from useless",
+      "why": "Most kids think feedback is either praise or criticism. Sorting real examples shows them a third kind: the kind you can use.",
+      "kid": "Your kid looks at a drawing while you read out feedback slips you wrote, like 'Nice!', 'It's bad' or 'The three blues in the sky make it look like evening'. They sort each slip into Useful or Not, using the Feedback test card in the Feedback Studio Toolkit at the end of the guide.",
+      "you": "Write 8 slips before you start: some empty praise, some unkind, some vague, some specific and kind. Let them argue for where each one goes.",
+      "ask": [
+        "Which slip could the artist actually do something with?",
+        "Can a slip be kind and still useless?"
+      ],
+      "tip": "Include one slip that's kind but vague, and one that's specific but unkind. Those two start the best arguments.",
+      "levels": {
+        "explore": "Sort the slips into a happy pile and a sad pile, then find one that tells the artist what to try.",
+        "develop": "Sort all 8 slips with the Feedback test, and rewrite one useless slip so it's useful.",
+        "extend": "Rewrite the specific but unkind slip so it keeps the information and loses the sting."
+      }
+    },
+    {
+      "title": "Give it on something small",
+      "why": "Practising on a muffin or a chess move keeps the stakes low while the method sinks in.",
+      "kid": "Your kid gives feedback on something you made: a batch of muffins, a sketch, or the chess game you just played together. They use the Point, ask, try card: point to one thing that works, ask one real question, offer one idea to try.",
+      "you": "Ask for it, then take it the way you want them to: listen, say thanks, ask one question. Don't explain why you did it that way.",
+      "ask": [
+        "Can you put your finger on the part that works?",
+        "What would you try if it were yours?"
+      ],
+      "tip": "Food is perfect for practice. 'Too sweet' becomes 'The crunchy top works. Is that cinnamon? You could try less sugar next batch.'",
+      "levels": {
+        "explore": "Point to one thing you like, and say exactly why.",
+        "develop": "Give one point, one question and one idea on two different things.",
+        "extend": "Give feedback to a cousin or friend who asks for it, and notice what you change about how you say it."
+      }
+    },
+    {
+      "title": "Take it without a 'but'",
+      "why": "The hard half of feedback is hearing it. Defending is a reflex, and reflexes change with practice.",
+      "kid": "Your kid brings something they made, and you give them feedback with Point, ask, try. They take it using the Take it in card: lips closed until you finish, say thanks, ask one question. Every 'but', 'I was going to' or 'I meant to' drops a bean in the But jar. Do one short round a day for a few days.",
+      "you": "Keep it to one point, one question and one idea. Put your own beans in the jar when you defend yourself during the week, and let them catch you.",
+      "ask": [
+        "What did you want to say while I was talking?",
+        "Which part stung, and which part helped?"
+      ],
+      "tip": "Count the beans each day for a few days. Fewer beans by the end of the week is a real result.",
+      "levels": {
+        "explore": "Listen to one piece of feedback with your lips closed, then say thank you.",
+        "develop": "Take feedback on two things you made, and ask one question each time.",
+        "extend": "Ask for feedback on the part you feel least sure about, the one you'd rather nobody mentioned, and take it with no beans."
+      }
+    },
+    {
+      "title": "Run a studio session",
+      "why": "Artists, writers and makers swap feedback in groups. Now the whole family gets to try it.",
+      "kid": "Your kid runs a studio session, using the Studio session card. Each person brings one piece of work and one focus question, like 'Can you tell it's a fox?' Everyone gives feedback with Point, ask, try, and the maker writes each piece on a slip (a parent writes for younger makers) before the next person goes.",
+      "you": "Bring real work of your own, something you care about. Keep time, and hold everyone, yourself included, to the maker's focus question.",
+      "ask": [
+        "Whose focus question got the most useful answers?",
+        "What will you do with the slips you got?"
+      ],
+      "tip": "The focus question does most of the work. 'Is it good?' gets nothing; 'Is the ending a surprise?' gets something to use.",
+      "levels": {
+        "explore": "Bring one drawing, and ask the family one question about it.",
+        "develop": "Run the whole session, and write every piece of feedback you get on a slip.",
+        "extend": "Add a step where each maker repeats the feedback back in their own words before writing it down, and see if they heard it right."
+      }
+    },
+    {
+      "title": "Make version 2",
+      "why": "Feedback only counts once it changes something. A before and after shows that it did.",
+      "kid": "Your kid sorts their slips from the studio session, using the Use it or not card: use now, maybe later or no thanks. They make version 2 with one or two changes, set it beside version 1, and show it to the person whose feedback they used.",
+      "you": "Help them choose what to change, then let them do it. Ask about the slips they left out too: deciding not to use a piece of feedback is part of the skill.",
+      "ask": [
+        "Which piece of feedback made the biggest difference?",
+        "Why did you leave that one out?"
+      ],
+      "tip": "Keep version 1. The side by side is the proof, and the proudest part.",
+      "levels": {
+        "explore": "Change one thing someone suggested, and show the two versions side by side.",
+        "develop": "Make version 2 with one or two changes, and explain which feedback you used and why.",
+        "extend": "Take version 2 to someone outside the family, like a neighbour tasting a second batch of muffins, and ask only your focus question."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Feedback Studio Toolkit",
+    "intro": "How to test feedback, give it, take it, run a session and decide what to use.",
+    "items": [
+      {
+        "name": "Feedback test",
+        "lines": [
+          {
+            "k": "Point:",
+            "v": "can you put a finger on it?"
+          },
+          {
+            "k": "Use:",
+            "v": "can the maker do something with it?"
+          },
+          {
+            "k": "Kind:",
+            "v": "would you say it to their face?"
+          },
+          {
+            "k": "Not this:",
+            "v": "'Nice!', 'It's bad', 'Meh'"
+          }
+        ],
+        "ask": "Which slip passed all three?"
+      },
+      {
+        "name": "Point, ask, try",
+        "lines": [
+          {
+            "k": "Point:",
+            "v": "one thing that works, and where"
+          },
+          {
+            "k": "Ask:",
+            "v": "one real question you wonder about"
+          },
+          {
+            "k": "Try:",
+            "v": "one idea: 'You could try...'"
+          },
+          {
+            "k": "Size:",
+            "v": "one of each, not a list"
+          },
+          {
+            "k": "Example:",
+            "v": "'The crust works. Is that lemon? Try less sugar.'"
+          }
+        ],
+        "ask": "Which part was hardest to say?"
+      },
+      {
+        "name": "Take it in",
+        "lines": [
+          {
+            "k": "Lips:",
+            "v": "closed until they finish"
+          },
+          {
+            "k": "Say:",
+            "v": "'Thanks.'"
+          },
+          {
+            "k": "Ask:",
+            "v": "'What do you mean by...?'"
+          },
+          {
+            "k": "Skip:",
+            "v": "'but', 'I was going to', 'I meant to'"
+          },
+          {
+            "k": "Decide:",
+            "v": "later, not right now"
+          }
+        ],
+        "ask": "Which word is hardest to hold in?"
+      },
+      {
+        "name": "Studio session",
+        "lines": [
+          {
+            "k": "Bring:",
+            "v": "one piece of work each"
+          },
+          {
+            "k": "Focus:",
+            "v": "one question you want answered"
+          },
+          {
+            "k": "Show:",
+            "v": "1 minute, the maker talks"
+          },
+          {
+            "k": "Feedback:",
+            "v": "2 minutes, Point, ask, try"
+          },
+          {
+            "k": "Slips:",
+            "v": "the maker writes each one down"
+          }
+        ],
+        "ask": "Was your focus question the right one?"
+      },
+      {
+        "name": "Use it or not",
+        "lines": [
+          {
+            "k": "Use now:",
+            "v": "fits what you were trying to do"
+          },
+          {
+            "k": "Maybe later:",
+            "v": "a good idea for another piece"
+          },
+          {
+            "k": "No thanks:",
+            "v": "not your idea, and that's fine"
+          },
+          {
+            "k": "Change:",
+            "v": "one or two things, not all"
+          },
+          {
+            "k": "Show:",
+            "v": "version 1 beside version 2"
+          }
+        ],
+        "ask": "Which slip changed version 2 the most?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Specific words",
+      "text": "pointing to exactly what works"
+    },
+    {
+      "name": "Listening",
+      "text": "hearing it all before answering"
+    },
+    {
+      "name": "Taking it in",
+      "text": "thanks first, decisions later"
+    },
+    {
+      "name": "Revising",
+      "text": "turning feedback into a better version 2"
+    }
+  ],
+  "conclusion": {
+    "headline": "They can hear 'you could try' without hearing 'you failed'.",
+    "text": "Ask them for feedback on something of yours a few weeks from now, with no card in sight. If they point to one exact spot before saying anything else, they've made the method their own.",
+    "celebrate": "When they show version 1 beside version 2, say: 'You listened, picked what helped, and the second one shows it.'",
+    "extensions": [
+      "Ask someone outside the family, a coach, a neighbour or a grandparent, for feedback on something you care about",
+      "Keep a version 1 and version 2 folder, and add to it every time feedback changes something",
+      "Write your focus question before you start a project, not after, and see if it changes how you make it",
+      "Give a family member feedback on something they're learning, like an instrument or a recipe, at their request"
+    ]
+  },
+  "signs": [
+    "They point to something exact when they praise",
+    "They say thanks before they explain",
+    "They choose which feedback to use, and can say why"
+  ],
+  "makeItReal": "Bring one thing you made today, a meal, a sketch or a message, and ask your kid for one point, one question and one idea about it.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/feedback-studio.jpg",
+    "alt": "Watercolour illustration of two versions of a child's dragon drawing side by side on a wooden table, with small paper slips, a pencil and a glass jar of dried beans",
+    "caption": "Version 1, version 2, and fewer beans in the jar than last week."
+  }
+}

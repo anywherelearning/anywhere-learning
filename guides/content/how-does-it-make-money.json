@@ -1,0 +1,379 @@
+{
+  "slug": "how-does-it-make-money",
+  "category": "Entrepreneurship",
+  "title": "How Does It Make Money?",
+  "tagline": "Guess · Count · Estimate · Map · Plan",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds out how something free or cheap really pays for itself. They pick a free game, a video site, a museum or a day out, collect real evidence like counted ads, receipts and what's sold at the exit, estimate the money with simple math, draw a one-page money map, then plan how an idea of their own would make money.",
+  "need": [
+    "One free or cheap thing your kid uses: a free game or app, a video site, a museum or a day out",
+    "Your phone or tablet for the screen version, with purchases locked",
+    "Receipts, a price list or a map from a day out",
+    "A timer, paper and coloured pencils"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "multiplying people by what each spends"
+    },
+    {
+      "subject": "Data",
+      "text": "tallying and timing what you see"
+    },
+    {
+      "subject": "Economics",
+      "text": "the different ways a business earns"
+    },
+    {
+      "subject": "Media sense",
+      "text": "noticing who pays for free"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Kids assume free means nobody pays. Hold back the answer and play detective alongside them: you hold the device and the wallet, they hold the tally, and every arrow on the money map has to point to something you both saw.",
+    "plan": [
+      {
+        "when": "One sitting",
+        "what": "Pick it and write the first guess (Step 1)."
+      },
+      {
+        "when": "A playtime or day out",
+        "what": "Collect the evidence (Step 2)."
+      },
+      {
+        "when": "An afternoon",
+        "what": "Estimate, map and plan your own (Steps 3 to 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They want to buy something in the game",
+        "a": "Agree before you start that this is a detective visit, not a shopping trip. They write the price in the tally instead. Counting it is the job."
+      },
+      {
+        "q": "We can't find how much it earns",
+        "a": "Companies rarely say, and small places almost never do. A clear estimate is the goal, not the right answer. Ask which number would change their guess most."
+      },
+      {
+        "q": "It has no ads and costs nothing",
+        "a": "A great case. Look for the other payers: taxes for a library or park, donations, members, or a sponsor's name on a sign."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Almost nothing is free to run. When the person using it doesn't pay, someone else does: companies paying for ads to reach you, a few players buying extras, or visitors paying for food, parking and the shop on the way out.",
+    "before": "'It's free, so it doesn't make money.'",
+    "model": [
+      {
+        "part": "Counted",
+        "line": "4 ads in 10 minutes of a free game, plus a 30-second ad for an extra life."
+      },
+      {
+        "part": "Shop",
+        "line": "Coin packs from $0.99, and $4.99 to switch the ads off."
+      },
+      {
+        "part": "Estimate",
+        "line": "1,000 players a day, 2 in 100 buy a $4.99 pack: 20 × $4.99 = $99.80."
+      },
+      {
+        "part": "So",
+        "line": "The 980 who never pay still earn it money, by watching the ads."
+      }
+    ],
+    "modelNote": "'Free' was where the first guess stopped. Ten minutes of counting found two kinds of payer: companies buying the players' attention with ads, and a few players buying their way past them."
+  },
+  "steps": [
+    {
+      "title": "Pick it and guess",
+      "why": "A guess written down first makes the evidence surprising.",
+      "kid": "Your kid picks one free or cheap thing they use, like a free game, a video site, a free museum or a zoo, and writes their guess: who pays for it? Then they read the Money finder card in the Money Map Toolkit at the end of the guide and tick every way they think it earns.",
+      "you": "Write your own guess too, fold it up, and open both at the end. Don't hint.",
+      "ask": [
+        "Who do you think pays the people who made it?",
+        "What would happen if nobody paid?"
+      ],
+      "tip": "Something they love works best. They'll look harder at how it earns.",
+      "levels": {
+        "explore": "Pick it, and say who you think pays for it.",
+        "develop": "Tick every way on the Money finder card it might earn, and rank them by your guess.",
+        "extend": "Pick two things that do the same job, one free and one paid, and guess how the paid one manages with no ads."
+      }
+    },
+    {
+      "title": "Collect the evidence",
+      "why": "A money map built on guesses is a story. Built on counts, it's a case.",
+      "kid": "Screen version: your kid watches you play a free game or a video site for 10 minutes and tallies every ad, buy button and 'watch an ad to' offer, using the Ad count card. Day-out version: they keep every receipt, photograph the price board and note what's sold at the exit, using the Day-out clues card.",
+      "you": "Hold the device yourself and keep purchases locked. Nobody taps an ad or a buy button. On a day out, hand them the receipts and let them ask staff one question.",
+      "ask": [
+        "What was the first thing it tried to sell you?",
+        "Which ads were hardest to skip?"
+      ],
+      "tip": "Notice where the shop is. If the only way out goes through it, that's evidence too.",
+      "levels": {
+        "explore": "Make a tally mark every time an ad appears while a parent plays.",
+        "develop": "Count for 10 minutes, time each ad, and work out minutes of ads per hour.",
+        "extend": "Compare the price of one thing inside, like a bottle of water, with the price at a store, and work out why people pay more there."
+      }
+    },
+    {
+      "title": "Estimate the money",
+      "why": "Simple multiplying turns a pile of clues into a number you can argue about.",
+      "kid": "Your kid estimates one day's money, using the Money math card: people per day times what each spends. For a game, it's players times the share who buy times the price. They round, show every step and circle the number they trust least.",
+      "you": "Help find a starting number: a visitor count on a sign or website, or a guess from how busy it was. Ask 'Too high or too low?' about each one.",
+      "ask": [
+        "Which number are you least sure of?",
+        "Which way earns the most?"
+      ],
+      "tip": "Round to easy numbers. 487 visitors becomes 500, and the math gets easy.",
+      "levels": {
+        "explore": "Count the people in one line or one room, and say if that's a lot.",
+        "develop": "Estimate one day's money for two ways it earns, and compare them.",
+        "extend": "The app store keeps about 30 cents of every dollar, or 15 for small makers. Take that out of your game estimate, then estimate one cost, like staff for a day."
+      }
+    },
+    {
+      "title": "Draw the money map",
+      "why": "One page shows the whole business at a glance.",
+      "kid": "Your kid draws the thing in the middle of a page and every payer around it, using the Money map card: who pays, what for and roughly how much a day. Thicker arrows mean more money. Then they open the folded guesses from Step 1 and compare.",
+      "you": "Ask them to explain the map as if you'd never seen it. Ask about the thinnest arrow.",
+      "ask": [
+        "Who pays the most?",
+        "Who pays without spending any money?"
+      ],
+      "tip": "If people pay with their time or attention, give that an arrow too.",
+      "levels": {
+        "explore": "Draw the thing in the middle, and one arrow for each payer.",
+        "develop": "Draw the full map with thicker arrows for bigger money, and compare it with your guess.",
+        "extend": "Take one payer away, like the ads, and redraw the map to show what would have to change to keep it running."
+      }
+    },
+    {
+      "title": "Plan your own money",
+      "why": "Once they can read how a business earns, they can choose how theirs will.",
+      "kid": "Your kid picks an idea of their own, like a stall, a game they'd design or a family event, and plans two ways it could earn, using the Your money plan card. They run each through the fair test, then draw its money map.",
+      "you": "Ask about the person paying: 'How would you feel paying that way?' Let them change the plan.",
+      "ask": [
+        "Who pays in your plan, and for what?",
+        "Would you happily tell customers how you earn?"
+      ],
+      "tip": "The best plans earn money in a way the customer is glad about.",
+      "levels": {
+        "explore": "Pick your idea, and choose one way it could make money.",
+        "develop": "Plan two ways it could earn, run the fair test, and draw the money map.",
+        "extend": "Design a version that's free for kids, and work out who else could pay so it still runs."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Money Map Toolkit",
+    "intro": "The ways things earn, what to count, the math, the map and your own plan.",
+    "items": [
+      {
+        "name": "Money finder",
+        "lines": [
+          {
+            "k": "Ads:",
+            "v": "companies pay to reach you"
+          },
+          {
+            "k": "Extras:",
+            "v": "coins, lives, skins, 'no ads'"
+          },
+          {
+            "k": "Data:",
+            "v": "what they learn about you helps sell ads"
+          },
+          {
+            "k": "On the day:",
+            "v": "tickets, food, parking, the shop"
+          },
+          {
+            "k": "Behind it:",
+            "v": "members, donations, taxes, sponsors"
+          }
+        ],
+        "ask": "Which one did you not expect?"
+      },
+      {
+        "name": "Ad count",
+        "lines": [
+          {
+            "k": "Time:",
+            "v": "10 minutes on a timer"
+          },
+          {
+            "k": "Tally:",
+            "v": "every ad, and how long it lasts"
+          },
+          {
+            "k": "Buy buttons:",
+            "v": "every offer to spend"
+          },
+          {
+            "k": "Trades:",
+            "v": "'watch an ad to get...'"
+          },
+          {
+            "k": "Rule:",
+            "v": "a parent holds it, nobody taps"
+          }
+        ],
+        "ask": "How many minutes of ads would an hour be?"
+      },
+      {
+        "name": "Day-out clues",
+        "lines": [
+          {
+            "k": "Receipts:",
+            "v": "keep every one"
+          },
+          {
+            "k": "Price board:",
+            "v": "photograph it"
+          },
+          {
+            "k": "Exit:",
+            "v": "what's sold on the way out?"
+          },
+          {
+            "k": "Extras:",
+            "v": "parking, lockers, photos"
+          },
+          {
+            "k": "Ask staff:",
+            "v": "'What sells most here?'"
+          }
+        ],
+        "ask": "What did you spend on top of the ticket?"
+      },
+      {
+        "name": "Money math",
+        "lines": [
+          {
+            "k": "Day:",
+            "v": "people per day × average spend"
+          },
+          {
+            "k": "Example:",
+            "v": "500 people × $8 at the café = $4,000"
+          },
+          {
+            "k": "Game:",
+            "v": "players × share who buy × price"
+          },
+          {
+            "k": "Example:",
+            "v": "1,000 × 2 in 100 × $4.99 = $99.80"
+          },
+          {
+            "k": "Ads:",
+            "v": "views × a guess, like 1 cent each"
+          }
+        ],
+        "ask": "Which number would change your answer most?"
+      },
+      {
+        "name": "Money map",
+        "lines": [
+          {
+            "k": "Middle:",
+            "v": "the thing itself"
+          },
+          {
+            "k": "Around:",
+            "v": "every payer, one arrow each"
+          },
+          {
+            "k": "Arrows:",
+            "v": "thicker for more money"
+          },
+          {
+            "k": "Labels:",
+            "v": "what they pay for, and how much"
+          },
+          {
+            "k": "Attention:",
+            "v": "an arrow for time spent, too"
+          }
+        ],
+        "ask": "Who pays most, and who pays nothing?"
+      },
+      {
+        "name": "Your money plan",
+        "lines": [
+          {
+            "k": "Idea:",
+            "v": "a stall, a game, a family event"
+          },
+          {
+            "k": "Way 1:",
+            "v": "the main way it earns"
+          },
+          {
+            "k": "Way 2:",
+            "v": "a second way, as a backup"
+          },
+          {
+            "k": "Who pays:",
+            "v": "the user, or someone else?"
+          },
+          {
+            "k": "Fair test:",
+            "v": "happy to tell every customer?"
+          }
+        ],
+        "ask": "Which way would your customers like best?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Evidence",
+      "text": "counting what's really there"
+    },
+    {
+      "name": "Estimating",
+      "text": "big numbers from small clues"
+    },
+    {
+      "name": "Business sense",
+      "text": "reading how something earns"
+    },
+    {
+      "name": "Fairness",
+      "text": "choosing a way to earn you'd explain proudly"
+    }
+  ],
+  "conclusion": {
+    "headline": "They know who pays for free.",
+    "text": "Wait for the next free thing that comes into the house, a new app or a free sample. If they ask 'So who's paying?' before you do, they're reading the world like a business owner.",
+    "celebrate": "When they explain their money map to someone, say: 'You counted it, you worked it out, and now you can see who pays.'",
+    "extensions": [
+      "Make a money map for your library or a public park, and find out with a parent who pays for it",
+      "Watch a sports game together and count every sponsor's name you can see",
+      "Compare a paid app with no ads and its free version, and decide which you'd choose",
+      "Ask someone who runs a small business near you where their money comes from, and draw their map"
+    ]
+  },
+  "signs": [
+    "They ask 'Who pays for this?' about free things",
+    "They spot ads and buy buttons without being told",
+    "They estimate big numbers by multiplying small ones"
+  ],
+  "makeItReal": "Sit beside your kid with a timer and a pencil while you play their favourite free game, and count the ads together for 10 minutes.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/how-does-it-make-money.jpg",
+    "alt": "Watercolour illustration of a tablet with a colourful game screen beside a tally sheet, a ticket stub, a folded receipt, a few coins and a hand-drawn map with arrows of different thickness",
+    "caption": "Ten minutes, four ads, and a map of who really pays."
+  }
+}

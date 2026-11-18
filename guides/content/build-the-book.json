@@ -1,0 +1,367 @@
+{
+  "slug": "build-the-book",
+  "category": "Creativity & Maker",
+  "title": "Build the Book",
+  "tagline": "Hunt · Sort · Build · Check · Compare",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid builds the setting of a book they love, in a shoebox, with LEGO or out in the yard, using only what the words say. They hunt the clues, sort what the book said from what they guessed, flag every guess, check the build line by line, then compare it with someone else's.",
+  "need": [
+    "A book you're reading together, with one page or two that describes a place",
+    "A shoebox, LEGO, or a corner of the yard with sticks, stones and leaves",
+    "Paper, tape, scissors and whatever is around to build with",
+    "Sticky notes, or paper flags taped to toothpicks, in two colours, and a pencil"
+  ],
+  "academics": [
+    {
+      "subject": "Reading",
+      "text": "close reading and rereading for detail"
+    },
+    {
+      "subject": "Thinking",
+      "text": "telling what the text says from what we infer"
+    },
+    {
+      "subject": "Writing",
+      "text": "backing up an idea with words from the book"
+    },
+    {
+      "subject": "Making",
+      "text": "turning words into a model you can walk through"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Kids fill the gaps in a story without noticing they're doing it, and so do we. Your job is to be the stubborn reader: hold the book, ask 'Where does it say that?' about every piece, and be glad, not disappointed, every time the answer is 'It doesn't.'",
+    "plan": [
+      {
+        "when": "One reading session",
+        "what": "Hunt the clues and sort them (Steps 1 and 2)."
+      },
+      {
+        "when": "An afternoon",
+        "what": "Build the setting and flag the guesses (Step 3)."
+      },
+      {
+        "when": "Another day",
+        "what": "Check it line by line and compare (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "The passage barely describes the place",
+        "a": "Pick another one. Look for the chapter where a character arrives somewhere new. Authors describe a place most when someone sees it for the first time."
+      },
+      {
+        "q": "They want to add everything they imagine",
+        "a": "Let them, with a guess flag on each piece. The imagining is good reading, as long as they know which parts came from them."
+      },
+      {
+        "q": "They get upset when a piece has no clue",
+        "a": "Keep the piece and move the flag. A guess with a good reason is called an inference, and it's exactly what strong readers do."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Every reader builds a picture while they read. Some of it comes from the words on the page, and some of it we fill in ourselves from clues and from places we already know. Close reading means knowing which is which, and being able to point to the line.",
+    "before": "'I know what it looks like. I read it.'",
+    "model": [
+      {
+        "part": "Said",
+        "line": "A narrow kitchen, one window over the sink, a red door at the end."
+      },
+      {
+        "part": "Guessed",
+        "line": "A wooden table, because 'they pulled out the bench' fits a table."
+      },
+      {
+        "part": "Missed",
+        "line": "The line check found 'snow against the glass', so cotton went on the window."
+      },
+      {
+        "part": "Flags",
+        "line": "Eleven pieces from the text, three guesses, each with its clue."
+      }
+    ],
+    "modelNote": "'I know what it looks like' mixed the book and the reader together. Two colours of flags showed which pieces the author built, which ones the reader added, and the line everyone skimmed past."
+  },
+  "steps": [
+    {
+      "title": "Hunt the clues",
+      "why": "Hunting the clues slows reading down, so they see which words made the picture.",
+      "kid": "Your kid picks a passage that describes a place, using the Good passages card in the Build the Book Toolkit at the end of the guide, and you read it aloud together twice. On the second read, they write down every clue about where things are, their size and what they're made of, using the Clue hunt card.",
+      "you": "Read slowly and stop after each sentence. Ask 'Did that tell us anything about the place?' Let them miss clues on the first read.",
+      "ask": [
+        "Which word told you the most about this place?",
+        "What did the second read catch that the first one missed?"
+      ],
+      "tip": "Little words count: 'behind', 'below', 'at the far end'. They decide where everything goes in the build.",
+      "levels": {
+        "explore": "Listen to the passage, and say three things that are in the place.",
+        "develop": "List every clue about the place, with the page number.",
+        "extend": "Hunt the clues across two chapters, and find one detail about the place that only shows up later."
+      }
+    },
+    {
+      "title": "Sort said from guessed",
+      "why": "A guess is fine. Not knowing it's a guess is the problem.",
+      "kid": "Your kid draws two columns: 'The book said' and 'I guessed'. Every piece they want in the build goes in one column, using the Said or guessed card. Each guess gets its reason, starting with 'because'.",
+      "you": "Hold the book. For each piece, ask 'Where does it say that?' and let them find the line, or move it to the guess column.",
+      "ask": [
+        "Where does it say that?",
+        "What clue made you guess that?"
+      ],
+      "tip": "A guess with a clue behind it is an inference. A guess with no clue at all is imagination. Both are allowed, they just get labelled.",
+      "levels": {
+        "explore": "Point to one thing the book said, and one thing you imagined.",
+        "develop": "Sort every piece into two columns, with a 'because' for each guess.",
+        "extend": "Rate each guess as strong, medium or weak, depending on how many clues back it up."
+      }
+    },
+    {
+      "title": "Build it",
+      "why": "Building forces choices a picture in your head never makes: how far, how big, which side.",
+      "kid": "Your kid builds the setting in a shoebox, with LEGO or in the yard, using the Build rules card. Every piece the book said gets a flag in one colour with its page number. Every guessed piece gets a flag in the second colour, with its clue written on it.",
+      "you": "Help with cutting and taping. When they hesitate over where something goes, send them back to the text instead of answering.",
+      "ask": [
+        "Does the book tell you which side the door is on?",
+        "Which piece was hardest to place?"
+      ],
+      "tip": "Make a 'not sure' pile on the side for pieces the book barely mentions. Some of them will get placed after the line check.",
+      "levels": {
+        "explore": "Build three things from the passage, and put a flag on one guess.",
+        "develop": "Build the whole setting, and flag every guess with its clue.",
+        "extend": "Work out a scale from one size the book gives, like 'two steps wide' or 'taller than the door', and build everything to match it."
+      }
+    },
+    {
+      "title": "Check it line by line",
+      "why": "Rereading with a build in front of you shows what the first reading skipped.",
+      "kid": "You read the passage aloud one sentence at a time. After each sentence, your kid points to the piece in the build it describes, using the Line check card. Missing pieces get added, and pieces with no line get a guess flag. They count the flags of each colour at the end.",
+      "you": "Read slower than feels natural, and pause after every sentence. Count the flags with them, without judging the numbers.",
+      "ask": [
+        "Which sentence did your build miss?",
+        "Did any piece turn out to be a guess you thought the book said?"
+      ],
+      "tip": "Swap jobs if they're reading confidently: they read, you point. Hearing the passage in someone else's voice catches different things.",
+      "levels": {
+        "explore": "Point to the matching piece each time a parent reads a sentence.",
+        "develop": "Check every sentence, fix the build, and count both colours of flags.",
+        "extend": "Find one sentence that could mean two different things, and build both versions side by side."
+      }
+    },
+    {
+      "title": "Compare and tour it",
+      "why": "Two readers never build the same place. Comparing shows which differences are guesses and which are misreads.",
+      "kid": "A parent or sibling makes a quick sketch of the same passage without peeking, or your kid compares with the book's illustrations. They list every difference using the Where we differ card, reread to settle each one, then give a tour, pointing to the line for each piece.",
+      "you": "Make your sketch honestly, from the text only. Let your guesses be wrong in front of them, and say so out loud.",
+      "ask": [
+        "Was that difference a guess or a misread?",
+        "Which guess of yours do you still think is right, and why?"
+      ],
+      "tip": "If the illustrator got something different from the words, that's a great find. Illustrators infer too.",
+      "levels": {
+        "explore": "Look at the two builds, and find one thing that's different.",
+        "develop": "List every difference, reread to settle it, and give the tour.",
+        "extend": "Write a note to the illustrator or author about one place the picture and the words disagree, with the line that proves it."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Build the Book Toolkit",
+    "intro": "How to pick the passage, hunt clues, sort them, build, check and compare.",
+    "items": [
+      {
+        "name": "Good passages",
+        "lines": [
+          {
+            "k": "Arrival:",
+            "v": "someone sees a place for the first time"
+          },
+          {
+            "k": "Length:",
+            "v": "one page or two"
+          },
+          {
+            "k": "Look for:",
+            "v": "rooms, paths, buildings, a shore"
+          },
+          {
+            "k": "Skip:",
+            "v": "pages that are mostly talking"
+          }
+        ],
+        "ask": "Which page makes you see the place best?"
+      },
+      {
+        "name": "Clue hunt",
+        "lines": [
+          {
+            "k": "What:",
+            "v": "every object or feature named"
+          },
+          {
+            "k": "Where:",
+            "v": "behind, below, beside, far end"
+          },
+          {
+            "k": "Size:",
+            "v": "tiny, huge, narrow, a mile off"
+          },
+          {
+            "k": "Made of:",
+            "v": "stone, wood, glass, mud"
+          },
+          {
+            "k": "Senses:",
+            "v": "light, sound, smell, cold"
+          }
+        ],
+        "ask": "Which kind of clue was hardest to find?"
+      },
+      {
+        "name": "Said or guessed",
+        "lines": [
+          {
+            "k": "Said:",
+            "v": "you can point to the words"
+          },
+          {
+            "k": "Inferred:",
+            "v": "a guess, with a clue behind it"
+          },
+          {
+            "k": "Imagined:",
+            "v": "a guess with no clue at all"
+          },
+          {
+            "k": "Test:",
+            "v": "'Where does it say that?'"
+          }
+        ],
+        "ask": "Which column has the most in it?"
+      },
+      {
+        "name": "Build rules",
+        "lines": [
+          {
+            "k": "Said:",
+            "v": "it goes in, with a page-number flag"
+          },
+          {
+            "k": "Guessed:",
+            "v": "it goes in with a colour flag"
+          },
+          {
+            "k": "Flag:",
+            "v": "write the clue on it"
+          },
+          {
+            "k": "Not sure:",
+            "v": "a pile beside the build"
+          },
+          {
+            "k": "Size:",
+            "v": "pick one thing, size the rest to it"
+          }
+        ],
+        "ask": "Which rule was hardest to keep?"
+      },
+      {
+        "name": "Line check",
+        "lines": [
+          {
+            "k": "Read:",
+            "v": "one sentence, then stop"
+          },
+          {
+            "k": "Point:",
+            "v": "to the piece it describes"
+          },
+          {
+            "k": "Missing:",
+            "v": "add it now"
+          },
+          {
+            "k": "No line:",
+            "v": "it gets a guess flag"
+          },
+          {
+            "k": "Count:",
+            "v": "pieces from the text, and guesses"
+          }
+        ],
+        "ask": "What did the reread catch?"
+      },
+      {
+        "name": "Where we differ",
+        "lines": [
+          {
+            "k": "Same:",
+            "v": "you both read it the same"
+          },
+          {
+            "k": "Guess:",
+            "v": "the book doesn't say, so you guessed differently"
+          },
+          {
+            "k": "Misread:",
+            "v": "the book says, one of you missed it"
+          },
+          {
+            "k": "Settle it:",
+            "v": "reread the line out loud"
+          }
+        ],
+        "ask": "Who misread more, and where?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Close reading",
+      "text": "noticing every word that matters"
+    },
+    {
+      "name": "Inference",
+      "text": "a guess with a clue behind it"
+    },
+    {
+      "name": "Evidence",
+      "text": "pointing to the line that proves it"
+    },
+    {
+      "name": "Building",
+      "text": "turning words into a place you can see"
+    }
+  ],
+  "conclusion": {
+    "headline": "They can point to the line that built every piece.",
+    "text": "Next time you're reading together and they say what a place or a person is like, ask 'Did it say that, or did you guess?' If they flip back to find the line before they answer, they're reading like a detective.",
+    "celebrate": "During the tour, when they point to a piece and read the exact line behind it, say: 'You didn't just picture it. You can prove it.'",
+    "extensions": [
+      "Build a character's bedroom from clues about who they are, then flag every guess about their personality",
+      "Pick a place you know well, write one paragraph about it, and see what someone else builds from your words",
+      "Read the same scene in a film or graphic novel version, and list what the director added that the book never said",
+      "Build the setting of a poem, where almost every piece is an inference"
+    ]
+  },
+  "signs": [
+    "They ask 'Where does it say that?' about stories and news",
+    "They reread a line to check before they argue",
+    "They notice when a picture doesn't match the words"
+  ],
+  "makeItReal": "Tonight, read one page that describes a place, then ask your kid to draw it and put a star on everything they guessed.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/build-the-book.jpg",
+    "alt": "Watercolour illustration of a shoebox scene of a small cottage room on a table, with tiny paper flags in two colours stuck in it, beside an open book and a pencil",
+    "caption": "An open book, a shoebox, and a flag on every guess."
+  }
+}

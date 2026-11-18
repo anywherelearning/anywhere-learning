@@ -1,0 +1,379 @@
+{
+  "slug": "training-plan",
+  "category": "Planning & Problem-Solving",
+  "title": "30-Day Training Plan",
+  "tagline": "Pick · Test · Plan · Train · Retest",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid trains for 30 days toward one thing their body can't do yet: run 2 km without stopping, hold a plank for a minute, swim a length or land a cartwheel. They test where they start, build a calendar with rest days in it, log every session, adjust the plan on day 15, then test again on day 30 the exact same way.",
+  "need": [
+    "A calendar page or a notebook page with 30 squares",
+    "A timer, and a tape measure or a phone for distances",
+    "Shoes that fit, and a safe place for the goal: a yard, a park, a pool with a lifeguard",
+    "Coloured pencils for the plan and the graph"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "measuring, adding a little each week and graphing three tests"
+    },
+    {
+      "subject": "Data",
+      "text": "logging the plan against what really happened"
+    },
+    {
+      "subject": "Health",
+      "text": "effort, rest days, and sore versus hurt"
+    },
+    {
+      "subject": "Life skills",
+      "text": "planning a month and following through"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Expect a flat-out first day and a slump by day five unless the plan has rest built in. Set your limits before they choose anything, count the tests yourself, and guard the rest days as closely as the training days.",
+    "plan": [
+      {
+        "when": "Day 1",
+        "what": "Pick the goal, test the start and build the calendar (Steps 1 to 3)."
+      },
+      {
+        "when": "Days 2 to 29",
+        "what": "Train, log and adjust at day 15 (Step 4)."
+      },
+      {
+        "when": "Day 30",
+        "what": "Test again the same way and compare (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "It's too easy by week two",
+        "a": "That's what the day-15 check is for. Add a set or a harder version, like full push-ups instead of knee push-ups, rather than extra training days."
+      },
+      {
+        "q": "Something hurts",
+        "a": "Use the Sore or hurt card together. Sharp pain or a sore joint means stop and rest, and if it's still there in a few days, ask a doctor. The plan waits."
+      },
+      {
+        "q": "Their goal is about how they look",
+        "a": "Turn it into something the body does, like a longer run or a stronger hold. Never weigh or measure their body for this guide; the numbers are reps, seconds and metres."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Muscles, heart and lungs get stronger in the rest after the work, not during it. A plan that starts below your best, adds a little each week and leaves rest days in between beats going all out every day, and it's far less likely to end in an injury.",
+    "before": "'I'll do as many as I can every day until I get there.'",
+    "model": [
+      {
+        "part": "Day 1",
+        "line": "6 push-ups with good form, counted by a grown-up."
+      },
+      {
+        "part": "Plan",
+        "line": "3 sets of 3, three days a week, 1 more per set each week."
+      },
+      {
+        "part": "Day 15",
+        "line": "9 push-ups. Most sessions felt like working, so the plan stayed."
+      },
+      {
+        "part": "Day 30",
+        "line": "After an easy day 29: 14 push-ups, same rule, same time."
+      }
+    ],
+    "modelNote": "'As many as I can every day' left no time to rebuild. Sets of half the start number, rest days and a check halfway turned 6 into 14, and the same counting rule on both days proves it."
+  },
+  "steps": [
+    {
+      "title": "Pick a goal your body can do",
+      "why": "A goal with a number can be tested on day 30. A goal about looks can't, and isn't the point.",
+      "kid": "Your kid picks one thing they want their body to do in 30 days, like run 2 km without stopping, hold a plank for a minute or swim a length, and checks it against the Goal check card in the Training Plan Toolkit at the end of the guide. They write the goal as one sentence with a number in it.",
+      "you": "Set your limits first: where they can train, and what needs you there, like pools, roads or anything upside down. Steer any goal about weight or looks toward something the body does.",
+      "ask": [
+        "How will we know on day 30 that you did it?",
+        "Is this hard now, but possible in a month?"
+      ],
+      "tip": "One goal, not three. One plan is easier to follow and to measure.",
+      "levels": {
+        "explore": "Pick something to do by the end of the month, like a cartwheel, and show a parent your first try.",
+        "develop": "Write the goal with a number, and check it against every line of the Goal check card.",
+        "extend": "Pick a goal that needs two things, like distance and speed, and decide which one to train first and why."
+      }
+    },
+    {
+      "title": "Test where you start",
+      "why": "Without a start number, day 30 has nothing to compare with.",
+      "kid": "Your kid warms up, then does one honest test using the Start test card: the most push-ups with good form, the longest plank, or how far they run before they have to walk. First they write the rule for what counts as one, so day 30 is judged the same way.",
+      "you": "Count or time it yourself, and stick to the rule they wrote. Keep it light: this number is a starting point, not a score.",
+      "ask": [
+        "What counts as one, and what doesn't?",
+        "What would make the day-30 test unfair?"
+      ],
+      "tip": "Write down the time of day, the place and the shoes. Day 30 should match all three.",
+      "levels": {
+        "explore": "Try it once while a parent counts or times, and colour in your start number.",
+        "develop": "Write the rule, do the test, and record the number with the time, place and shoes.",
+        "extend": "Test on two different days, and decide which number is your true start, and why."
+      }
+    },
+    {
+      "title": "Build the 30 days",
+      "why": "A plan that adds a little and rests often beats going all out every day.",
+      "kid": "Your kid draws 30 squares and fills them in using the Build-up rules card: training days, rest days, a check on day 15, an easy day 29 and the retest on day 30. They pick a starting practice from the Sample plans card, then write how much they'll add each week.",
+      "you": "Check the plan with them: a rest day after each hard one, and no big jumps. Agree when training happens, so it fits your real days.",
+      "ask": [
+        "Why does day 29 need to be easy?",
+        "How much will you add each week?"
+      ],
+      "tip": "Three or four training days a week is plenty. More days doesn't make a better plan.",
+      "levels": {
+        "explore": "Colour training days one colour and rest days another on a calendar, with a parent.",
+        "develop": "Fill in all 30 squares with what to do on each training day.",
+        "extend": "Predict your day-30 number from what you'll add each week, and write it in the day-30 square now."
+      }
+    },
+    {
+      "title": "Train, log and adjust",
+      "why": "The log shows whether the plan fits the body, and day 15 is where good planners change it.",
+      "kid": "On each training day, your kid does the plan and writes one line using the Log and adjust card: what the plan said, what they really did, how hard it felt and how their body feels. On day 15 they do a mini test, read the log and decide: add, hold or ease off.",
+      "you": "Train alongside them when you can, with a goal of your own. If they mention pain, go through the Sore or hurt card together, and make the call on stopping yourself.",
+      "ask": [
+        "Were most sessions easy, working or all out?",
+        "What does your day-15 number say about the plan?"
+      ],
+      "tip": "Missed a day? Pick up where the calendar is. Don't double up to catch up.",
+      "levels": {
+        "explore": "After each practice, tell a parent if it felt easy, okay or hard, and draw a face for it.",
+        "develop": "Log every training day, and change the plan on day 15 if the log says to.",
+        "extend": "Note one thing outside training beside each log line for a week, like sleep or a busy day, and see if it matches how sessions felt."
+      }
+    },
+    {
+      "title": "Test again on day 30",
+      "why": "The same test, done the same way, is the only fair way to know if the plan worked.",
+      "kid": "After an easy day 29, your kid repeats the start test with the same rule, time, place and shoes. They put day 1, day 15 and day 30 on a simple graph, compare it with their prediction, and write in a notebook what they'd keep and change for the next 30 days.",
+      "you": "Count with the same rule you used on day 1, even if it costs them one. Then celebrate the planning, whatever the number.",
+      "ask": [
+        "How far did you come from day 1?",
+        "What would you change in the next plan?"
+      ],
+      "tip": "Short of the goal? The graph still shows how far they came. Keep the plan and push the retest two weeks later.",
+      "levels": {
+        "explore": "Do the test again while a parent counts, and put your day 1 and day 30 numbers side by side.",
+        "develop": "Retest, graph your three numbers, and write what you'd keep and change.",
+        "extend": "Work out how much you gained per week, and use it to set a fair goal and date for a different skill."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Training Plan Toolkit",
+    "intro": "Picking the goal, testing fairly, building the month and knowing when to rest.",
+    "items": [
+      {
+        "name": "Goal check",
+        "lines": [
+          {
+            "k": "Does:",
+            "v": "something your body does, not looks"
+          },
+          {
+            "k": "Number:",
+            "v": "reps, seconds, metres, or yes or no"
+          },
+          {
+            "k": "Size:",
+            "v": "hard now, possible in 30 days"
+          },
+          {
+            "k": "Grown-up:",
+            "v": "says yes and sets the limits"
+          },
+          {
+            "k": "Like:",
+            "v": "run 2 km, swim a length, a cartwheel"
+          }
+        ],
+        "ask": "How will you know on day 30?"
+      },
+      {
+        "name": "Start test",
+        "lines": [
+          {
+            "k": "Warm up:",
+            "v": "5 minutes of easy moving"
+          },
+          {
+            "k": "Rule:",
+            "v": "write what counts as one"
+          },
+          {
+            "k": "Same:",
+            "v": "time of day, place and shoes"
+          },
+          {
+            "k": "Counter:",
+            "v": "a grown-up counts or times"
+          },
+          {
+            "k": "Tries:",
+            "v": "one honest try, rested"
+          }
+        ],
+        "ask": "What would make the test unfair?"
+      },
+      {
+        "name": "Build-up rules",
+        "lines": [
+          {
+            "k": "Week:",
+            "v": "3 or 4 training days"
+          },
+          {
+            "k": "Rest:",
+            "v": "a day off after each hard day"
+          },
+          {
+            "k": "Start:",
+            "v": "about half your test, in 2 or 3 sets"
+          },
+          {
+            "k": "Add:",
+            "v": "a little each week, not each day"
+          },
+          {
+            "k": "Days 15, 29, 30:",
+            "v": "check, easy day, retest"
+          }
+        ],
+        "ask": "Where are your rest days?"
+      },
+      {
+        "name": "Sample plans",
+        "lines": [
+          {
+            "k": "Run 2 km:",
+            "v": "run 1 min, walk 1 min, 8 times"
+          },
+          {
+            "k": "Push-ups:",
+            "v": "sets of half your test"
+          },
+          {
+            "k": "Plank:",
+            "v": "3 holds of half your best time"
+          },
+          {
+            "k": "Cartwheel:",
+            "v": "10 tries: hand, hand, foot, foot"
+          },
+          {
+            "k": "Swim:",
+            "v": "half lengths, a grown-up in reach"
+          }
+        ],
+        "ask": "Which part of your plan grows first?"
+      },
+      {
+        "name": "Log and adjust",
+        "lines": [
+          {
+            "k": "Plan:",
+            "v": "what the calendar said"
+          },
+          {
+            "k": "Done:",
+            "v": "what you really did"
+          },
+          {
+            "k": "Effort:",
+            "v": "easy, working (can talk), all out"
+          },
+          {
+            "k": "Body:",
+            "v": "fine, sore or hurt"
+          },
+          {
+            "k": "Day 15:",
+            "v": "mostly easy, add; working, hold; all out, ease off"
+          }
+        ],
+        "ask": "What is your log telling you to change?"
+      },
+      {
+        "name": "Sore or hurt",
+        "lines": [
+          {
+            "k": "Sore:",
+            "v": "achy muscles a day later, go light"
+          },
+          {
+            "k": "Hurt:",
+            "v": "sharp pain or a joint, stop and tell"
+          },
+          {
+            "k": "Sick:",
+            "v": "a rest day, and it counts"
+          },
+          {
+            "k": "Never:",
+            "v": "heavy weights or pushing through pain"
+          },
+          {
+            "k": "Back on:",
+            "v": "when it feels normal again"
+          }
+        ],
+        "ask": "Is this sore, or is it hurt?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Planning",
+      "text": "a month of training, rest days included"
+    },
+    {
+      "name": "Measuring",
+      "text": "a fair test, done the same way twice"
+    },
+    {
+      "name": "Body sense",
+      "text": "reading effort, soreness and pain"
+    },
+    {
+      "name": "Follow-through",
+      "text": "showing up on day 12, not only day 1"
+    }
+  ],
+  "conclusion": {
+    "headline": "They trained for a month and can prove what worked.",
+    "text": "Pick a goal of your own for the next 30 days and ask them to build your plan. If they start by testing you and leave you rest days, they understood the plan, not only the push-ups.",
+    "celebrate": "When they put the day-1 and day-30 numbers side by side, say: 'You built that number yourself, one planned day at a time, rest days included.'",
+    "extensions": [
+      "Train a parent or a sibling for 30 days using a plan they write",
+      "Pick a new goal in a different area, like balance after strength, and build a fresh plan",
+      "Find out how a real athlete in a sport they like plans the week before a race, and compare it with their day 29",
+      "Swap one training day a week for a new activity, like swimming for a runner, and see what the log shows"
+    ]
+  },
+  "signs": [
+    "They ask 'what counts?' before measuring anything",
+    "They take rest days without feeling guilty",
+    "They change a plan because of what the numbers say"
+  ],
+  "makeItReal": "Ask your kid at dinner what one thing they wish their body could do by next month, then do the start test together tomorrow.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/training-plan.jpg",
+    "alt": "Watercolour illustration of a hand-drawn calendar of 30 squares, some coloured in, beside worn running shoes, a stopwatch, a water bottle and coloured pencils",
+    "caption": "Thirty squares, three tests, and the rest days coloured in too."
+  }
+}

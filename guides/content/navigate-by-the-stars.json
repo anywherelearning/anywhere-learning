@@ -1,0 +1,387 @@
+{
+  "slug": "navigate-by-the-stars",
+  "category": "Outdoor Learning",
+  "title": "Navigate by the Stars",
+  "tagline": "Measure · Find · Estimate · Model · Lead",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid finds north with nothing but the night sky. They turn their hand into a sky ruler, follow the Big Dipper to the North Star (or the Southern Cross to south), measure how high it sits to work out how far north you live, build the moon's phases with a lamp and an orange, then lead the family on a short night walk by the stars.",
+  "need": [
+    "A clear night, a dark spot away from bright lights, and warm clothes",
+    "A flashlight with red cellophane or red tape over the front",
+    "A lamp with the shade off, an orange and a fork, in a room you can make dark",
+    "A map or a phone to check your latitude and north at the end"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "why the North Star stays put and the moon changes shape"
+    },
+    {
+      "subject": "Math",
+      "text": "measuring angles in degrees with a fist"
+    },
+    {
+      "subject": "Geography",
+      "text": "latitude, and finding north without a compass"
+    },
+    {
+      "subject": "Life skills",
+      "text": "leading a safe walk in the dark"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Star patterns are hard to spot on a first try, even for adults, and one look at a bright phone screen undoes 20 minutes of night eyes. Learn the shapes together, keep phones in pockets until the final check, and let your kid be the one who points first.",
+    "plan": [
+      {
+        "when": "Before dark",
+        "what": "Test the hand ruler on trees and roofs (Step 1)."
+      },
+      {
+        "when": "A clear night",
+        "what": "Find the North Star, measure it and lead the walk (Steps 2, 3 and 5)."
+      },
+      {
+        "when": "A dark room, any night",
+        "what": "Build the moon model (Step 4)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They can't find the Big Dipper",
+        "a": "It turns through the night and the seasons, and on autumn evenings it can sit below the trees or the horizon. Then find Cassiopeia, a bright W on the other side: the North Star sits about halfway between them."
+      },
+      {
+        "q": "It's cloudy for days",
+        "a": "Do the hand ruler and the moon model first. Both work indoors or in daylight, and the sky will be easier to read once the shapes are familiar."
+      },
+      {
+        "q": "Our sky is full of city light",
+        "a": "The Dipper and the North Star are bright enough to see from most towns. Stand in the darkest spot you can, with streetlights behind a wall or your back."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "The whole night sky seems to turn around one point, and the North Star sits almost on it. Find that star and you've found north. Measure how high it sits and you know roughly how far north you are, because it's straight overhead at the North Pole and on the horizon at the equator.",
+    "before": "'You need a phone or a compass to know which way is north.'",
+    "model": [
+      {
+        "part": "Find",
+        "line": "Big Dipper low in the north; the pointers lead to a lone star."
+      },
+      {
+        "part": "Measure",
+        "line": "Four and a half fists from the horizon to that star."
+      },
+      {
+        "part": "Estimate",
+        "line": "4.5 × 10 = about 45 degrees north."
+      },
+      {
+        "part": "Check",
+        "line": "The map says 44 degrees. One degree off, by hand."
+      }
+    ],
+    "modelNote": "'You need a phone' assumed north was something only a device knows. Two stars showed where it was, and a fist at arm's length measured a number that landed within a few degrees of the map."
+  },
+  "steps": [
+    {
+      "title": "Make your hand a sky ruler",
+      "why": "Sky distances are measured in degrees, and everyone carries a ruler for them at the end of their arm.",
+      "kid": "Your kid stretches one arm out straight and stacks fist on fist from the horizon to straight overhead, using the Hand ruler card in the Navigate by the Stars Toolkit at the end of the guide. About 9 fists means it works: overhead is 90 degrees up.",
+      "you": "Do it beside them with your own fist. Adults and kids land close to the same number, because bigger hands come with longer arms.",
+      "ask": [
+        "How many fists from the horizon to straight up?",
+        "Why doesn't a smaller hand change the answer much?"
+      ],
+      "tip": "Arm straight, elbow locked. A bent arm brings the fist closer and throws every number off.",
+      "levels": {
+        "explore": "Stack fists from the ground to the top of a tree or a roof, and count them.",
+        "develop": "Stack fists from the horizon to straight overhead, and check you get close to 9.",
+        "extend": "Check how much of your little finger the full moon covers, then work out how many moons would fit across one fist."
+      }
+    },
+    {
+      "title": "Find the North Star",
+      "why": "The North Star sits almost straight above the North Pole, so it stays put while the rest of the sky turns around it.",
+      "kid": "Your kid finds the Big Dipper and follows the two stars at the outer edge of its cup, using the Find north card. About five gaps along is the North Star, and straight below it on the horizon is north. South of the equator, they use the Southern sky card instead.",
+      "you": "Give everyone's eyes 20 minutes in the dark first, with red light only. Show the Dipper once, then let them find the pointers.",
+      "ask": [
+        "Is the North Star the brightest star you can see?",
+        "What's on the horizon right under it?"
+      ],
+      "tip": "Mark north with a stick or a stone on the ground, so you can check it in daylight.",
+      "levels": {
+        "explore": "Find the Big Dipper with a grown-up, and trace the cup and the handle with a finger.",
+        "develop": "Follow the pointer stars to the North Star, and mark north on the ground.",
+        "extend": "Sketch the Dipper and the North Star at bedtime and again two hours later, and work out what fraction of a full turn it made."
+      }
+    },
+    {
+      "title": "Measure how far north you are",
+      "why": "How high the North Star sits tells you your latitude. Sailors used this long before GPS.",
+      "kid": "Your kid faces north and stacks fists from the horizon to the North Star, using the Latitude card. Each fist is about 10 degrees, so they multiply, then check the real latitude on a map. South of the equator, they measure up to the point the Southern Cross showed them.",
+      "you": "Write their estimate down before anyone checks. Help them find the horizon, or guess where it would be behind the trees.",
+      "ask": [
+        "How many fists high is the North Star?",
+        "How far off were you, and why?"
+      ],
+      "tip": "Half fists count. Three middle fingers side by side make about 5 degrees.",
+      "levels": {
+        "explore": "Count how many fists high the North Star is.",
+        "develop": "Turn fists into degrees, and compare with your real latitude.",
+        "extend": "Work out where the North Star would sit at the North Pole and at the equator, and what a sailor would see happen on a trip south."
+      }
+    },
+    {
+      "title": "Build the moon",
+      "why": "The moon's shape changes because we see more or less of its sunny half, not because of Earth's shadow. A lamp and an orange show it in minutes.",
+      "kid": "In a dark room, your kid holds an orange on a fork at arm's length, faces the lamp and turns slowly to their left, using the Moon model card. They watch the lit part grow from nothing to a full circle and shrink back, then find the shape that matches the real moon tonight.",
+      "you": "Set up the lamp with the shade off and the cord out of the way. Ask where the sun, the earth and the moon are at each shape.",
+      "ask": [
+        "Where was the orange when it looked full?",
+        "Is half the orange lit the whole time?"
+      ],
+      "tip": "For the full moon, hold the orange a little above your head, or your head makes an eclipse.",
+      "levels": {
+        "explore": "Turn slowly with the orange, and say when it looks like a thin smile, a half and a full circle.",
+        "develop": "Stop at eight spots on the way round, and draw the shape you see at each one.",
+        "extend": "Make a lunar eclipse on purpose with your head, then find out why there isn't one every month."
+      }
+    },
+    {
+      "title": "Lead the night walk",
+      "why": "Finding north once is a trick. Leading people by it is a skill.",
+      "kid": "At a spot on a path you know, your kid finds north from the sky, then uses it to point toward home or the car, out of sight, and leads the family that way to the next junction, using the Night walk card. Everyone checks with a phone compass at each stop.",
+      "you": "Choose a safe, familiar path and walk beside them. Agree on a turn-back time before you set out.",
+      "ask": [
+        "Which way is home from here?",
+        "How did you keep your direction when trees hid the sky?"
+      ],
+      "tip": "Pick a tree or a roof on the horizon under the North Star and walk toward it. It's easier than looking up every few steps.",
+      "levels": {
+        "explore": "Hold a grown-up's hand, and point north before you start and when you stop.",
+        "develop": "Lead the walk north, east, south or west to a landmark, and check it with a compass.",
+        "extend": "On another night, teach a grandparent or a friend to find north without telling them where the star is."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Navigate by the Stars Toolkit",
+    "intro": "Your hand ruler, both ways to find the pole, the latitude math, the moon model and the walk.",
+    "items": [
+      {
+        "name": "Hand ruler",
+        "lines": [
+          {
+            "k": "Arm:",
+            "v": "straight out, elbow locked"
+          },
+          {
+            "k": "Little finger:",
+            "v": "about 1 degree"
+          },
+          {
+            "k": "Three fingers:",
+            "v": "about 5 degrees"
+          },
+          {
+            "k": "Fist:",
+            "v": "about 10 degrees"
+          },
+          {
+            "k": "Overhead:",
+            "v": "90 degrees, about 9 fists"
+          }
+        ],
+        "ask": "How many fists is it to straight overhead?"
+      },
+      {
+        "name": "Find north",
+        "lines": [
+          {
+            "k": "First:",
+            "v": "the Big Dipper's cup and handle"
+          },
+          {
+            "k": "Pointers:",
+            "v": "2 stars at the cup's outer edge"
+          },
+          {
+            "k": "Follow:",
+            "v": "out of the cup, 5 times their gap"
+          },
+          {
+            "k": "North Star:",
+            "v": "medium bright, on its own"
+          },
+          {
+            "k": "North:",
+            "v": "straight down to the horizon"
+          },
+          {
+            "k": "Backup:",
+            "v": "Cassiopeia's W, star halfway between"
+          }
+        ],
+        "ask": "Did the line land on a star on its own?"
+      },
+      {
+        "name": "Southern sky",
+        "lines": [
+          {
+            "k": "Find:",
+            "v": "the Southern Cross, 4 bright stars"
+          },
+          {
+            "k": "Check:",
+            "v": "2 bright Pointer stars lead to it"
+          },
+          {
+            "k": "Long arm:",
+            "v": "from the top star to the foot"
+          },
+          {
+            "k": "Follow:",
+            "v": "about 4.5 times that length"
+          },
+          {
+            "k": "South:",
+            "v": "straight down from that point"
+          }
+        ],
+        "ask": "Why is there no bright South Star to find?"
+      },
+      {
+        "name": "Latitude",
+        "lines": [
+          {
+            "k": "Face:",
+            "v": "north, with a clear horizon"
+          },
+          {
+            "k": "Stack:",
+            "v": "fists from horizon to North Star"
+          },
+          {
+            "k": "Multiply:",
+            "v": "fists × 10 = degrees"
+          },
+          {
+            "k": "Example:",
+            "v": "4.5 fists is about 45 degrees"
+          },
+          {
+            "k": "Check:",
+            "v": "your real latitude on a map"
+          }
+        ],
+        "ask": "How close did your fists get?"
+      },
+      {
+        "name": "Moon model",
+        "lines": [
+          {
+            "k": "Sun:",
+            "v": "a lamp with the shade off"
+          },
+          {
+            "k": "Moon:",
+            "v": "an orange on a fork, arm's length"
+          },
+          {
+            "k": "Earth:",
+            "v": "your head"
+          },
+          {
+            "k": "Turn:",
+            "v": "slowly to your left, all the way"
+          },
+          {
+            "k": "Full moon:",
+            "v": "hold it just above your head"
+          },
+          {
+            "k": "South:",
+            "v": "the lit side is flipped"
+          }
+        ],
+        "ask": "How much of the orange is lit the whole time?"
+      },
+      {
+        "name": "Night walk",
+        "lines": [
+          {
+            "k": "Path:",
+            "v": "one you know in daylight"
+          },
+          {
+            "k": "Eyes:",
+            "v": "20 minutes in the dark first"
+          },
+          {
+            "k": "Light:",
+            "v": "red only; white resets night eyes"
+          },
+          {
+            "k": "Aim:",
+            "v": "a landmark under the North Star"
+          },
+          {
+            "k": "Check:",
+            "v": "a phone compass at the end"
+          }
+        ],
+        "ask": "Which way is home from here?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Observing",
+      "text": "finding patterns in a dark sky"
+    },
+    {
+      "name": "Measuring",
+      "text": "angles by hand, checked against a map"
+    },
+    {
+      "name": "Modelling",
+      "text": "a lamp and an orange to explain the moon"
+    },
+    {
+      "name": "Leading",
+      "text": "guiding people safely in the dark"
+    }
+  ],
+  "conclusion": {
+    "headline": "They found north with two stars and a fist.",
+    "text": "Turn off the outside lights on the next clear night and say nothing. Notice where they look first.",
+    "celebrate": "When the phone compass agrees with them at the end of the walk, say: 'You found north with your own eyes and your own hand.'",
+    "extensions": [
+      "On a trip north or south, measure the North Star again and see how much higher or lower it sits",
+      "Find out how Polynesian navigators crossed the Pacific by reading stars, waves and birds",
+      "Find out why a different star was the pole star when the pyramids were built",
+      "Find a bright 'star' that doesn't twinkle, and check with a sky map whether it's a planet"
+    ]
+  },
+  "signs": [
+    "They point to north outside without being asked",
+    "They use a fist to measure things in the sky",
+    "They explain the moon's shape by where the sun is"
+  ],
+  "makeItReal": "Pick the next clear night, turn off the outside lights, and give your kid 20 minutes in the dark to find the Big Dipper before you point at anything.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/navigate-by-the-stars.jpg",
+    "alt": "Watercolour illustration of a deep blue night sky over a dark field with the Big Dipper and the North Star, a flashlight glowing red on a fence post, and an orange on a fork beside a small lamp on a windowsill",
+    "caption": "Two pointer stars, one orange and a red flashlight."
+  }
+}

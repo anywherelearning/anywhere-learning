@@ -176,6 +176,16 @@ export const EFFORT_BY_SLUG: Record<string, Effort> = {
   'gift-budget-challenge': 'Project',
   'bread-lab': 'Half-Day',
   'radio-drama-studio': 'Project',
+  'how-does-it-make-money': 'Project',
+  'fundraiser-challenge': 'Project',
+  'feedback-studio': 'Project',
+  'learn-a-local-dance': 'Project',
+  'navigate-by-the-stars': 'Project',
+  'mend-it-make-it': 'Project',
+  'risky-play-lab': 'Project',
+  'training-plan': 'Project',
+  'time-capsule': 'Project',
+  'build-the-book': 'Project',
 };
 
 /** Returns the effort bucket for a slug, or null if it's not an individual activity. */

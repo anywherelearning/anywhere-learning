@@ -1,0 +1,353 @@
+{
+  "slug": "learn-a-local-dance",
+  "category": "Worldschooling",
+  "title": "Learn a Local Dance",
+  "tagline": "Find · Ask · Count · Map · Perform",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns a traditional dance from someone who keeps it, where you're travelling or from your family's own roots. They ask what the dance is for, find the count hiding in its music, break the moves into a map they can practise in small chunks, then tell its story and perform it for family.",
+  "need": [
+    "Someone who knows a traditional dance: a teacher, a cultural centre, a festival workshop or a grandparent",
+    "The dance's music, recorded or on a phone (ask the teacher which song)",
+    "A notebook and a pencil",
+    "Room to move: furniture pushed back, a yard or a park"
+  ],
+  "academics": [
+    {
+      "subject": "Social studies",
+      "text": "what a dance says about the people who keep it"
+    },
+    {
+      "subject": "Music",
+      "text": "hearing the beat and finding the count"
+    },
+    {
+      "subject": "Math",
+      "text": "counting in groups of 2, 3, 4, 6 and even 7"
+    },
+    {
+      "subject": "Movement",
+      "text": "coordination, balance and memory for steps"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Your part is the introductions and the courage. Find the person who knows the dance, ask whether it's one you're welcome to learn, then dance beside your kid at every lesson and practice, wobbly steps included, so the first tries belong to both of you.",
+    "plan": [
+      {
+        "when": "Before the first lesson",
+        "what": "Find the dance and its keeper (Step 1)."
+      },
+      {
+        "when": "The first lesson",
+        "what": "Ask for its story and find the count (Steps 2 and 3)."
+      },
+      {
+        "when": "Short practices",
+        "what": "Map the moves, then perform it (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "We're not travelling right now",
+        "a": "Ask the oldest relatives you can reach what they danced at weddings and festivals. Look for a cultural association from your family's roots, or a ceilidh or barn dance night, where a caller usually walks beginners through each dance first."
+      },
+      {
+        "q": "The steps are too fast",
+        "a": "Turn the music off. Say the counts out loud at half speed until the feet know the way, then add the music back for one chunk at a time."
+      },
+      {
+        "q": "They freeze when people watch",
+        "a": "Perform side by side with them, or for one person first. Let them start with the story, which gives them a minute to settle before the first step."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A traditional dance is a pattern of moves laid over a count, and kept for a reason: a wedding, a harvest, a festival, a way of saying who you are. Once you can hear the count and see the moves as small pieces, almost anyone can learn it.",
+    "before": "'I can't dance. I just don't have rhythm.'",
+    "model": [
+      {
+        "part": "Count",
+        "line": "The music goes in 3. Clapped ONE two three until it felt easy."
+      },
+      {
+        "part": "Map",
+        "line": "Four moves, each drawn as footprints with its counts underneath."
+      },
+      {
+        "part": "Chunks",
+        "line": "Move 1 alone, then 1 and 2, then all four, slowly and without music."
+      },
+      {
+        "part": "Show",
+        "line": "Told the family it's a wedding dance, then danced it with the music."
+      }
+    ],
+    "modelNote": "'No rhythm' turned out to be no count. Once the music had numbers and the dance had a map, every step had a place to land, and the kid who had 'no rhythm' danced it start to finish."
+  },
+  "steps": [
+    {
+      "title": "Find the dance and its keeper",
+      "why": "A dance learned from a person comes with the corrections, the stories and the welcome that a video can't give.",
+      "kid": "Your kid looks for a traditional dance from where you are, or from your family's roots, using the Find the dance card in the Local Dance Toolkit at the end of the guide. They find someone who knows it, a teacher, a cultural centre, a festival workshop or a grandparent, and ask if it's one visitors can learn.",
+      "you": "Make the first contact, and offer to pay for a lesson. If a dance belongs to a ceremony or to certain people only, watch it with respect and choose a social dance instead.",
+      "ask": [
+        "Who here, or in our family, still dances the old way?",
+        "Is this a dance anyone is welcome to learn?"
+      ],
+      "tip": "Dances for weddings, village festivals and community nights are often the ones meant for everyone to join.",
+      "levels": {
+        "explore": "Watch a dance with a parent, and point to the move you'd most like to try.",
+        "develop": "Find a dance and someone who can teach it, and ask if visitors may learn it.",
+        "extend": "Find out which dances here are for everyone and which are kept for ceremonies or certain people, and why that difference matters."
+      }
+    },
+    {
+      "title": "Ask for its story",
+      "why": "Every move was kept for a reason. Knowing it changes how you dance it.",
+      "kid": "Before or during the first lesson, your kid asks the person teaching about the dance, using the Ask the dancer card: when people dance it, what it celebrates, what the moves mean and how it has changed. They write the answers in a notebook as the dance's story.",
+      "you": "Learn a few polite words in the local language if you need them, then let your kid do the asking. Take the lesson yourself, beside them, not from the bench.",
+      "ask": [
+        "When do people dance this, and why?",
+        "Does any move copy something real, like work, animals or a story?"
+      ],
+      "tip": "Ask about the clothes, the music and any shouts or claps too. A dance is more than the feet.",
+      "levels": {
+        "explore": "Ask one question about the dance, and draw what it's for.",
+        "develop": "Ask three questions from the card, and write the dance's story in a notebook.",
+        "extend": "Find a second dance from the same place for a different occasion, and compare what each one is for."
+      }
+    },
+    {
+      "title": "Find the count",
+      "why": "Every dance sits on a count. Once you can hear it, the steps have somewhere to land.",
+      "kid": "Your kid listens to the dance's music and claps the beat, then finds the strong beat that starts each group, using the Count the music card. They count it out loud: in 2s, 3s, 4s or 6s, or in 7 like the Greek kalamatianos, slow, quick, quick.",
+      "you": "Clap with them. Ask the teacher which song goes with the dance, and whether you may record it to practise with later.",
+      "ask": [
+        "Where does the strong beat land?",
+        "Is this music counted in 2, 3, 4 or something else?"
+      ],
+      "tip": "Clap on every beat, then stamp only on the 1. When the stamp feels easy, you've found the count.",
+      "levels": {
+        "explore": "Clap along to the music, and stamp your foot when the beat feels strong.",
+        "develop": "Find the count, and say it out loud through the whole song.",
+        "extend": "Clap the count of a favourite song from home, try one move of the dance to it, and work out whether it fits, and why or why not."
+      }
+    },
+    {
+      "title": "Map the moves",
+      "why": "A dance is easier to learn as a few small chunks than as one long blur.",
+      "kid": "Your kid breaks the dance into moves and draws a move map, using the Move map card: each move as footprints or a stick figure, with its counts underneath. Then they practise one chunk at a time, slowly and without music, and add the next only when the first feels easy.",
+      "you": "Learn it beside them and say the counts out loud together. Make mistakes too, and laugh at them. Show the map to the teacher if you can, so they can fix it.",
+      "ask": [
+        "Which move is hardest to remember?",
+        "How many counts does one full round take?"
+      ],
+      "tip": "Practise in short bursts, 10 minutes a day for a few days, rather than once for an hour.",
+      "levels": {
+        "explore": "Learn the first move with a parent, and say its counts out loud.",
+        "develop": "Draw the full move map, and dance it through at half speed.",
+        "extend": "Circle where the dance repeats on your map, and work out how many rounds fit in the whole song."
+      }
+    },
+    {
+      "title": "Perform it for family",
+      "why": "Dancing it for people who love you turns practice into something you did.",
+      "kid": "Your kid plans a show night, using the Show night card. They tell the audience the dance's story and who taught it, perform it with the music, then answer the audience's questions. Then they write in a notebook: the dance, the teacher, the place and the date.",
+      "you": "Ask the teacher if it's all right to show the dance, and to share a video with family. Dance as their partner if they want one, and clap loudest at the end.",
+      "ask": [
+        "What do you want the audience to know before you start?",
+        "What would your teacher say about how you danced it?"
+      ],
+      "tip": "Grandparents far away can watch on a video call. Some will remember a dance of their own.",
+      "levels": {
+        "explore": "Dance one chunk for family, with a parent beside you.",
+        "develop": "Tell the dance's story, then perform the whole dance with the music.",
+        "extend": "Ask a family member to teach you a dance they grew up with, map it the same way, and compare its count with yours."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Local Dance Toolkit",
+    "intro": "Where to find a dance, what to ask, how to count the music, map the moves and run a show night.",
+    "items": [
+      {
+        "name": "Find the dance",
+        "lines": [
+          {
+            "k": "Travelling:",
+            "v": "cultural centre, festival, a class"
+          },
+          {
+            "k": "At home:",
+            "v": "grandparents, a roots community group"
+          },
+          {
+            "k": "Dance nights:",
+            "v": "folk, ceilidh or barn dance"
+          },
+          {
+            "k": "Ask:",
+            "v": "'Can visitors learn this dance?'"
+          },
+          {
+            "k": "Watch only:",
+            "v": "ceremonies and sacred dances"
+          }
+        ],
+        "ask": "Who could teach it to you?"
+      },
+      {
+        "name": "Ask the dancer",
+        "lines": [
+          {
+            "k": "When:",
+            "v": "'When do people dance this?'"
+          },
+          {
+            "k": "Why:",
+            "v": "'What does it celebrate?'"
+          },
+          {
+            "k": "Moves:",
+            "v": "'Does a move copy something real?'"
+          },
+          {
+            "k": "Wear:",
+            "v": "'What do dancers wear, and why?'"
+          },
+          {
+            "k": "Then:",
+            "v": "'How has it changed?'"
+          }
+        ],
+        "ask": "Which answer will start the dance's story?"
+      },
+      {
+        "name": "Count the music",
+        "lines": [
+          {
+            "k": "Find 1:",
+            "v": "the strong beat that starts each group"
+          },
+          {
+            "k": "In 3:",
+            "v": "a waltz, 1 2 3"
+          },
+          {
+            "k": "In 4:",
+            "v": "a reel, 1 2 3 4"
+          },
+          {
+            "k": "In 6:",
+            "v": "a jig, 1 2 3, 4 5 6"
+          },
+          {
+            "k": "In 7:",
+            "v": "kalamatianos, slow quick quick"
+          }
+        ],
+        "ask": "Which count does your dance use?"
+      },
+      {
+        "name": "Move map",
+        "lines": [
+          {
+            "k": "Draw:",
+            "v": "each move as footprints or stick figures"
+          },
+          {
+            "k": "Under it:",
+            "v": "the counts for that move"
+          },
+          {
+            "k": "Repeats:",
+            "v": "circle what comes back"
+          },
+          {
+            "k": "Chunks:",
+            "v": "learn one, then add the next"
+          },
+          {
+            "k": "Speed:",
+            "v": "no music, half speed, then music"
+          }
+        ],
+        "ask": "Where does the dance start again?"
+      },
+      {
+        "name": "Show night",
+        "lines": [
+          {
+            "k": "Before:",
+            "v": "the dance's story and who taught it"
+          },
+          {
+            "k": "Music:",
+            "v": "ready, tested and loud enough"
+          },
+          {
+            "k": "Space:",
+            "v": "furniture back, the right shoes"
+          },
+          {
+            "k": "After:",
+            "v": "take the audience's questions"
+          },
+          {
+            "k": "Thanks:",
+            "v": "send a message to your teacher"
+          }
+        ],
+        "ask": "What do you want them to remember?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Hearing the count",
+      "text": "finding the 1 in any music"
+    },
+    {
+      "name": "Learning in chunks",
+      "text": "one move, then the next"
+    },
+    {
+      "name": "Respect",
+      "text": "learning a dance from the people who keep it"
+    },
+    {
+      "name": "Performing",
+      "text": "telling a story, then dancing it"
+    }
+  ],
+  "conclusion": {
+    "headline": "They danced a tradition someone trusted them with.",
+    "text": "Put on any song in the kitchen a week from now. Clapping for the 1 in music they never danced to shows they learned to listen, not only to move.",
+    "celebrate": "When the music stops after the show, say: 'Someone who keeps this dance taught it to you, and you carried it all the way here.'",
+    "extensions": [
+      "Find how the same dance is done in a nearby town or by families who moved abroad, and spot what changed",
+      "Teach the first chunk to a friend using only your move map, and see where the map needs fixing",
+      "Find out what the dancers' clothes are made of and why, and how they move when the dance does",
+      "Find the instrument that keeps the beat in the dance's music, and ask someone to show you how it's played"
+    ]
+  },
+  "signs": [
+    "They clap for the 1 in songs without being asked",
+    "They ask what a dance is for before joining it",
+    "They break a hard thing into small chunks to learn it"
+  ],
+  "makeItReal": "Over the next few days, ask one person, a grandparent, a neighbour or someone at a cultural centre where you are, which dance they grew up with, and whether they'd show your kid the first move.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/learn-a-local-dance.jpg",
+    "alt": "Watercolour illustration of a pair of small dance shoes beside a folded embroidered scarf, a small hand drum and a notebook with footprint drawings",
+    "caption": "Footprints on a page, counted out loud until they became steps."
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "slug": "risky-play-lab",
+  "category": "Outdoor Learning",
+  "title": "Risky Play Lab",
+  "tagline": "Pick · Hunt · Score · Try · Step up",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns to judge a physical risk instead of avoiding it or ignoring it. They hunt for hidden hazards, score the risk of a climb, a balance, a jump, a fast slope or a real hammer, set their own safe-enough line inside the limits you choose, try it, and step it up one notch at a time to a top rung they pick themselves.",
+  "need": [
+    "An outdoor spot with something to climb, balance on or jump from: a tree, a log, rocks, a low wall",
+    "A slope for speed, on running feet, a bike or a scooter, with a helmet on wheels",
+    "For tools: a hammer, a few nails, safety glasses or sunglasses, and an old stump or thick log",
+    "Shoes that grip, a notebook and a pencil"
+  ],
+  "academics": [
+    {
+      "subject": "Science",
+      "text": "balance, grip, speed and landing"
+    },
+    {
+      "subject": "Math",
+      "text": "scoring chance times ouch, and comparing scores"
+    },
+    {
+      "subject": "Health",
+      "text": "knowing the body's limits, and landing well"
+    },
+    {
+      "subject": "Life skills",
+      "text": "judging a risk and making your own call"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Say your outer limits once, out loud, before anyone climbs. Those are yours, and they don't move. Everything inside them belongs to your kid. Stand close enough to reach them on a first try, then step further back each time they show good judgment.",
+    "plan": [
+      {
+        "when": "First visit",
+        "what": "Pick the challenge, set limits and hunt for hazards (Steps 1 and 2)."
+      },
+      {
+        "when": "Same visit",
+        "what": "Score it, set the line and try it (Steps 3 and 4)."
+      },
+      {
+        "when": "Over a few visits",
+        "what": "Step it up one notch at a time (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They won't try anything",
+        "a": "Start at ground level: a log lying flat, a jump off a curb. A score of 1 still counts. Never push, dare or bribe; the choice to try is part of the skill."
+      },
+      {
+        "q": "They want to go straight to the top",
+        "a": "Score it together first. An ouch of 3 means lower it before trying, and the outer limits don't move, however good the argument."
+      },
+      {
+        "q": "I can't stop saying 'be careful'",
+        "a": "Put your hands in your pockets and pick one line from the Say this instead card. One swap a day is enough to start."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A risk is something you can see and choose, like how high to climb. A hazard is something you can't see or judge, like a rotten branch or glass in the sand. Grown-ups fix or avoid hazards. Risks get judged, and judging them well is a skill that grows with practice.",
+    "before": "'It's dangerous, so I won't.' Or: 'It's fine, watch this!'",
+    "model": [
+      {
+        "part": "Hunt",
+        "line": "Kicked the log: one end rolls, so that end is out of bounds."
+      },
+      {
+        "part": "Score",
+        "line": "Walk the log at knee height: chance 2, ouch 1, score 2."
+      },
+      {
+        "part": "Line",
+        "line": "Safe enough: to the branch stub, arms out, stop word 'down'."
+      },
+      {
+        "part": "Step up",
+        "line": "Next rung: the higher log, scored again before the first step."
+      }
+    ],
+    "modelNote": "'It's dangerous' and 'watch this' were both guesses. A kicked log, a score of 2 and a line drawn before the first step turned the guess into a judgment the kid made themselves."
+  },
+  "steps": [
+    {
+      "title": "Pick the risky fun",
+      "why": "Kids already crave height, speed and real tools. Naming the kind of risk is where judgment starts.",
+      "kid": "Your kid picks one challenge from the Risky play types card in the Risky Play Lab Toolkit at the end of the guide: a tree or rock to climb, a log to balance on, a jump, a fast slope, or hammering nails into a stump. They say what makes it exciting and what makes it scary.",
+      "you": "Before they choose, say your outer limits out loud, using the Outer limits card, so they know the edges. Then let them pick anything inside them.",
+      "ask": [
+        "What's the fun part?",
+        "What's the scary part?"
+      ],
+      "tip": "A little scary, not terrifying. For nails, start with gentle taps holding the nail low, and let go before swinging harder.",
+      "levels": {
+        "explore": "Point to one thing outside you'd like to climb, balance on or jump from, and say why.",
+        "develop": "Pick a challenge, and name the fun part and the scary part.",
+        "extend": "Pick two from different types, like heights and tools, and say which one you're more ready for, and why."
+      }
+    },
+    {
+      "title": "Hunt for hazards",
+      "why": "Some dangers can't be seen from the ground. Checking first means the only risks left are ones your kid can judge.",
+      "kid": "Before anyone climbs, jumps or swings a hammer, your kid checks the spot with you using the Hazard hunt card: push and pull branches, kick logs and rocks, check the landing, look for glass, wet moss or anything sharp. Each thing they find is removed, avoided or marked out of bounds.",
+      "you": "Test the big things yourself, like whether a branch holds a grown-up's pull. Say each call out loud: 'That's a hazard, so it's out. That's a risk, so it's yours.'",
+      "ask": [
+        "What could hurt you that you can't see from here?",
+        "Is that a risk or a hazard?"
+      ],
+      "tip": "Look up as well as down. Dead branches overhead are the hazard kids miss most.",
+      "levels": {
+        "explore": "Push, pull and kick with a parent, and point to one thing that's out of bounds.",
+        "develop": "Do the full hazard hunt, and sort what you found into risks and hazards.",
+        "extend": "Check the same spot after rain, and list what changed and why."
+      }
+    },
+    {
+      "title": "Score it and set your line",
+      "why": "Scoring makes kids think about chance and how bad it could be, not only how scary it feels.",
+      "kid": "Your kid scores the challenge with the Risk score card: how likely something is to go wrong, and how bad it would be, each from 1 to 3, multiplied together. Then they set their safe-enough line, like 'up to the fork' or 'from the second rock', choose a stop word, and say what the good part is worth to them.",
+      "you": "Check the line sits inside your outer limits. If it does, it's theirs, even if it's lower or higher than you'd pick.",
+      "ask": [
+        "What's the chance, and what's the ouch?",
+        "Where is your safe-enough line today?"
+      ],
+      "tip": "A low score isn't the goal. A score they can explain is.",
+      "levels": {
+        "explore": "Show with your hands: a little or a big chance of falling, and a small or a big ouch.",
+        "develop": "Score it, set your line and a stop word, and write them in a notebook.",
+        "extend": "Find one way to lower the score without making it boring, like a softer landing, and score it again."
+      }
+    },
+    {
+      "title": "Try it while you step back",
+      "why": "Kids judge better when the grown-up's voice gives them information instead of worry.",
+      "kid": "Your kid tries the challenge up to their line, with you nearby but not hovering. They call their stop word whenever they want to stop, and notice what their body is telling them: grip, balance, breath, wobble.",
+      "you": "Swap 'be careful' for the specific words on the Say this instead card, and stay in reach on the first try. Step back a little more each time they show good judgment.",
+      "ask": [
+        "What did your hands and feet tell you up there?",
+        "Was your line right, too low or too high?"
+      ],
+      "tip": "Bite back the gasp. Kids read your face before they read the branch.",
+      "levels": {
+        "explore": "Try it with a parent close by, and stop whenever you want.",
+        "develop": "Try it up to your line, then say whether the line was right.",
+        "extend": "Coach a parent through the same challenge using only questions from the Say this instead card."
+      }
+    },
+    {
+      "title": "Step it up one notch",
+      "why": "Small steps up, each one judged again, are how real confidence gets built.",
+      "kid": "Your kid changes one thing only, using the Step it up card: a little higher, a little faster, a narrower log or a smaller nail. They score each new rung before trying it, and stop at a top rung they choose. Then they write their ladder in a notebook: every rung, its score and the one they're proudest of.",
+      "you": "Hold the outer limits, and say no to two changes at once. Praise a kid who decides a rung isn't for today; that's the judgment you're building.",
+      "ask": [
+        "What's the one thing you changed?",
+        "Why is that your top rung today?"
+      ],
+      "tip": "Jumps: land on both feet with soft, bent knees. Next visit, start one rung below where they stopped.",
+      "levels": {
+        "explore": "Do it once more, a little higher or faster, with a parent close by.",
+        "develop": "Step up one change at a time, scoring each rung, and write your ladder.",
+        "extend": "Take what you learned to a new type of risk, like speed after heights, and build that ladder from the bottom."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Risky Play Lab Toolkit",
+    "intro": "The kinds of risky play, your limits, the hazard hunt, the score and the words to use.",
+    "items": [
+      {
+        "name": "Risky play types",
+        "lines": [
+          {
+            "k": "Heights:",
+            "v": "climb a tree, a rock, a low wall"
+          },
+          {
+            "k": "Balance:",
+            "v": "a log, a curb, stepping stones"
+          },
+          {
+            "k": "Jumps:",
+            "v": "from a rock or step to soft ground"
+          },
+          {
+            "k": "Speed:",
+            "v": "a slope on feet, a bike or a scooter"
+          },
+          {
+            "k": "Tools:",
+            "v": "hammer nails into a stump"
+          }
+        ],
+        "ask": "Which one gives you butterflies?"
+      },
+      {
+        "name": "Outer limits",
+        "lines": [
+          {
+            "k": "Always:",
+            "v": "a grown-up in sight, close at first"
+          },
+          {
+            "k": "Heights:",
+            "v": "only what you can climb down alone"
+          },
+          {
+            "k": "Speed:",
+            "v": "helmet on wheels, never near roads"
+          },
+          {
+            "k": "Tools:",
+            "v": "glasses on, a clear zone, eyes on the nail"
+          },
+          {
+            "k": "Stop:",
+            "v": "a grown-up's stop means stop"
+          }
+        ],
+        "ask": "Which limit would you like explained?"
+      },
+      {
+        "name": "Hazard hunt",
+        "lines": [
+          {
+            "k": "Branches:",
+            "v": "alive, and holds a grown-up's pull"
+          },
+          {
+            "k": "Logs and rocks:",
+            "v": "kick them: wobble or roll?"
+          },
+          {
+            "k": "Landing:",
+            "v": "soft, flat, nothing hidden"
+          },
+          {
+            "k": "Ground:",
+            "v": "glass, wet moss, ice, stings"
+          },
+          {
+            "k": "Fix it:",
+            "v": "remove, avoid or mark out of bounds"
+          }
+        ],
+        "ask": "Which hazard did you almost miss?"
+      },
+      {
+        "name": "Risk score",
+        "lines": [
+          {
+            "k": "Chance:",
+            "v": "1 unlikely, 2 could, 3 likely"
+          },
+          {
+            "k": "Ouch:",
+            "v": "1 a bump, 2 a scrape, 3 a real injury"
+          },
+          {
+            "k": "Score:",
+            "v": "chance times ouch, 1 to 9"
+          },
+          {
+            "k": "Ouch of 3:",
+            "v": "lower it before you try"
+          },
+          {
+            "k": "Rule:",
+            "v": "1 to 3, go; 4 or more, lower one first"
+          }
+        ],
+        "ask": "Which number could you change?"
+      },
+      {
+        "name": "Say this instead",
+        "lines": [
+          {
+            "k": "Feet:",
+            "v": "'Where will your foot go next?'"
+          },
+          {
+            "k": "Grip:",
+            "v": "'Is that branch strong? Test it.'"
+          },
+          {
+            "k": "Down:",
+            "v": "'How will you get down?'"
+          },
+          {
+            "k": "Body:",
+            "v": "'How do your legs feel up there?'"
+          },
+          {
+            "k": "Choice:",
+            "v": "'You decide. I'm right here.'"
+          }
+        ],
+        "ask": "Which question helped you most?"
+      },
+      {
+        "name": "Step it up",
+        "lines": [
+          {
+            "k": "Change one:",
+            "v": "height, speed, width or surface"
+          },
+          {
+            "k": "Score again:",
+            "v": "before every new rung"
+          },
+          {
+            "k": "Never:",
+            "v": "two changes at once"
+          },
+          {
+            "k": "Stop:",
+            "v": "at a rung you choose, no dares"
+          },
+          {
+            "k": "Next time:",
+            "v": "start one rung below your top"
+          }
+        ],
+        "ask": "Which rung are you proudest of?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Risk judgment",
+      "text": "telling risks from hazards, and scoring them"
+    },
+    {
+      "name": "Body awareness",
+      "text": "grip, balance and landing"
+    },
+    {
+      "name": "Self-trust",
+      "text": "setting their own line and keeping it"
+    },
+    {
+      "name": "Courage",
+      "text": "one notch past comfortable, by choice"
+    }
+  ],
+  "conclusion": {
+    "headline": "They can tell a risk they can judge from one they can't.",
+    "text": "Keep an eye out on the next trail or playground. A kid who kicks a log before stepping on it, or calls a branch a hazard, is running the hunt in their own head now.",
+    "celebrate": "When they choose to stop at a rung they could have pushed past, say: 'That was your call, and it was a good one.'",
+    "extensions": [
+      "Teach a younger cousin or friend the hazard hunt, and let them score a log or a curb with you",
+      "Find out how climbers, roofers or lifeguards check for hazards before they start, and add one of their checks to your hunt",
+      "Run a family hazard hunt in a new park or campsite before anyone plays",
+      "Score an everyday risk together, like carrying a hot pot or crossing a busy street, and decide which number you'd lower first"
+    ]
+  },
+  "signs": [
+    "They test a branch or a log before trusting it",
+    "They say where their line is before they start",
+    "They stop on their own and don't call it failing"
+  ],
+  "makeItReal": "This weekend, pick one tree or log you both walk past, say your outer limits out loud, and let your kid hunt for hazards before they climb.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/risky-play-lab.jpg",
+    "alt": "Watercolour illustration of a mossy fallen log beneath a sturdy low tree branch, with grippy sneakers, a hammer, a few nails driven into an old stump and an open notebook nearby",
+    "caption": "One log, one stump, and a ladder of rungs they chose themselves."
+  }
+}

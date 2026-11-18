@@ -1,0 +1,379 @@
+{
+  "slug": "fundraiser-challenge",
+  "category": "Entrepreneurship",
+  "title": "Fundraiser Challenge",
+  "tagline": "Choose · Picture · Ask · Count · Report",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid raises real money for a cause they care about. They find out who it helps and what a set amount buys, turn that into a goal they can picture, pick a way to raise it, ask people they know for support, count every dollar in the open, then give it and tell every donor exactly what their money did.",
+  "need": [
+    "A cause your kid cares about, and a few minutes online with you to check it",
+    "A jar or tin with a label, and a notebook for every gift",
+    "What the fundraiser needs: baking supplies, buckets and sponges, or a route to walk",
+    "Paper and pencils for the goal chart"
+  ],
+  "academics": [
+    {
+      "subject": "Math",
+      "text": "multiplying pledges and percent of a goal"
+    },
+    {
+      "subject": "Research",
+      "text": "finding who a cause helps and how"
+    },
+    {
+      "subject": "Speaking",
+      "text": "asking for support out loud"
+    },
+    {
+      "subject": "Life skills",
+      "text": "handling other people's money honestly"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Your hardest job is staying quiet during the ask. Stand beside them when they talk to a neighbour, handle any money that comes in online, and let them explain the cause in their own words, even when it comes out shaky.",
+    "plan": [
+      {
+        "when": "One sitting",
+        "what": "Choose the cause and set the goal (Steps 1 and 2)."
+      },
+      {
+        "when": "Over a week or two",
+        "what": "Make the asks, then raise and count (Steps 3 and 4)."
+      },
+      {
+        "when": "Giving day",
+        "what": "Hand it over and send the report (Step 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "They picked a huge cause, like saving the ocean",
+        "a": "Find the local piece: a beach clean-up group or a wildlife rescue near you. Then ask what one amount buys there."
+      },
+      {
+        "q": "They didn't reach the goal",
+        "a": "Report what they did reach, honestly: '3 bags of 4, 75%'. Donors care that the money went where it was promised more than that it hit the number."
+      },
+      {
+        "q": "A relative offers to give the whole amount",
+        "a": "Thank them, and ask if they'd give last instead, as the gift that closes the gap. Your kid still does the asking, and the relative still helps."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "Fundraising is asking people to give for something they'll never hold. They say yes when they can picture exactly what their money does, and they trust you next time when you come back and show them it did.",
+    "before": "'I'll put a jar out and see what happens.'",
+    "model": [
+      {
+        "part": "Cause",
+        "line": "The local animal shelter. $30 buys one big bag of dog food."
+      },
+      {
+        "part": "Goal",
+        "line": "$120, four bags, drawn on the fridge to colour in."
+      },
+      {
+        "part": "Raised",
+        "line": "Bake sale $46, walk 8 sponsors × $1 a km × 9 km = $72. Total $118, 98%."
+      },
+      {
+        "part": "Report",
+        "line": "$2 of their own savings closed the gap. A photo of the four bags went to every donor."
+      }
+    ],
+    "modelNote": "A jar with no cause or number asks people to guess. A named cost of $30 a bag gave every donor something to picture, and the photo of four real bags showed them it happened."
+  },
+  "steps": [
+    {
+      "title": "Choose a cause and check it",
+      "why": "People give to a cause they can picture. Your kid has to picture it first.",
+      "kid": "Your kid lists three things they care about, like animals, a park clean-up group or kids in hospital, and picks one. Then they find out who it helps and what a set amount buys, using the Cause check card in the Fundraiser Toolkit at the end of the guide.",
+      "you": "Look the charity up together on your country's official charity list, or call a local group you know, like a shelter or food bank. Make any call or email yourself, and let them ask the question.",
+      "ask": [
+        "Who will this money help?",
+        "What does $10 buy there?"
+      ],
+      "tip": "A local cause works best. Your kid can see the shelter, the clean-up or the food bank, and so can the people they ask.",
+      "levels": {
+        "explore": "Pick the cause, and draw who it helps.",
+        "develop": "Fill in the Cause check card, and find what $10 and $25 buy.",
+        "extend": "Compare two charities for the same cause, and decide which one your money would help more, and why."
+      }
+    },
+    {
+      "title": "Set a goal you can picture",
+      "why": "'Raise a lot' isn't a goal. 'Four bags of dog food' is.",
+      "kid": "Your kid turns what one amount buys into a goal, using the Goal math card, and draws it on a chart for the fridge as things to colour in. Then they pick a way to raise it from the Ways to raise card. For a sponsored challenge, they use the Sponsor math card to work out how far they'd need to go.",
+      "you": "Check the goal is reachable in a couple of weeks with the people you know. Smaller and reached beats big and half done.",
+      "ask": [
+        "How many people would need to give to reach it?",
+        "Which way of raising fits you best?"
+      ],
+      "tip": "For a bake sale or car wash, ask family to donate the supplies, so every dollar goes to the cause.",
+      "levels": {
+        "explore": "Choose how many things to give, like four bags, and draw them on the chart.",
+        "develop": "Work out the goal, pick a way to raise it, and estimate what it will bring in.",
+        "extend": "Ask a relative or a local business, with a parent, to match what you raise up to a set amount, and work out how much you now need to raise yourself."
+      }
+    },
+    {
+      "title": "Make the ask",
+      "why": "Asking for money face to face is brave. A script makes it doable.",
+      "kid": "Your kid writes their ask using The ask card and practises it on you twice. Then they ask people they know: family, neighbours, friends' parents, a grandparent on a video call. For a sponsored challenge, each sponsor writes their pledge in the notebook.",
+      "you": "Stand beside them for every ask, or join the call. Ask only people you know. If anyone wants to give online, you handle it and write it in the notebook together.",
+      "ask": [
+        "What did people ask you back?",
+        "How did the first 'no' feel?"
+      ],
+      "tip": "Thank the people who say no, too. 'Thanks for listening' keeps every door open.",
+      "levels": {
+        "explore": "Say one sentence about your cause to a grandparent or neighbour, with a parent beside you.",
+        "develop": "Write the ask, practise it twice, and ask at least five people.",
+        "extend": "With a parent, ask a shop you already know to donate something you can use, like flour or a prize, and log what it's worth."
+      }
+    },
+    {
+      "title": "Raise it and count it",
+      "why": "It's other people's money now. Counting it in the open is how they keep the trust.",
+      "kid": "Your kid runs the fundraiser: the bake sale, the car wash or the sponsored walk. Every gift goes in the notebook: who, how much and how. After every count, done by two people, they colour in the goal chart and work out the percent with the Goal math card. After a sponsored challenge, they go back to each sponsor with the final count, collect the pledge, and log it.",
+      "you": "Count with them every time, out loud. Keep the money somewhere safe, apart from family money.",
+      "ask": [
+        "How far are you from the goal now?",
+        "Which part brought in the most?"
+      ],
+      "tip": "Write 'anonymous' for a gift with no name. Every dollar still goes in the book.",
+      "levels": {
+        "explore": "Drop each gift in the jar, and colour in the chart with a parent.",
+        "develop": "Log every gift, count with a second person, and work out the percent of the goal.",
+        "extend": "If anything cost money, work out how many cents of every dollar given reached the cause, and why charities share that number."
+      }
+    },
+    {
+      "title": "Give it and report back",
+      "why": "Donors gave without getting anything back. The report is what they get.",
+      "kid": "Your kid hands over the money, or sends it with you, and asks for a receipt or a photo of what it bought. Then they write a short report for every donor, using the Report back card: the total, where it went, what it did and a thank-you.",
+      "you": "Go with them to hand it over if you can. Send the report from your phone or email, or help them deliver notes by hand.",
+      "ask": [
+        "What did your money do?",
+        "What would you tell someone thinking of giving?"
+      ],
+      "tip": "A photo of the real thing, like four bags stacked at the shelter, says more than the number.",
+      "levels": {
+        "explore": "Draw what the money bought, and give the drawing to one donor.",
+        "develop": "Write the report with all five parts, and send it to every donor.",
+        "extend": "Find out a month later what the cause needs next, and send donors a short second update."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Fundraiser Toolkit",
+    "intro": "How to check a cause, set the goal, choose a way to raise it, ask and report back.",
+    "items": [
+      {
+        "name": "Cause check",
+        "lines": [
+          {
+            "k": "Who:",
+            "v": "who or what does it help?"
+          },
+          {
+            "k": "Buys:",
+            "v": "what does $10 or $25 pay for?"
+          },
+          {
+            "k": "Near you:",
+            "v": "can you see the help happen?"
+          },
+          {
+            "k": "Registered:",
+            "v": "check the official list together"
+          },
+          {
+            "k": "Ask them:",
+            "v": "'What do you need most right now?'"
+          }
+        ],
+        "ask": "Why this cause and not another?"
+      },
+      {
+        "name": "Goal math",
+        "lines": [
+          {
+            "k": "One thing:",
+            "v": "what one amount buys, like a bag"
+          },
+          {
+            "k": "How many:",
+            "v": "how many you want to give"
+          },
+          {
+            "k": "Goal:",
+            "v": "cost of one × how many"
+          },
+          {
+            "k": "Progress:",
+            "v": "raised ÷ goal × 100"
+          },
+          {
+            "k": "Example:",
+            "v": "$90 of $120 = 75%, three bags"
+          }
+        ],
+        "ask": "What will your goal buy, exactly?"
+      },
+      {
+        "name": "Ways to raise",
+        "lines": [
+          {
+            "k": "Bake sale:",
+            "v": "family donates, label every allergen"
+          },
+          {
+            "k": "Car wash:",
+            "v": "your driveway, people you know"
+          },
+          {
+            "k": "Sponsored:",
+            "v": "per km, per book, per lap"
+          },
+          {
+            "k": "By donation:",
+            "v": "people give what they like"
+          },
+          {
+            "k": "Show:",
+            "v": "a family concert with a jar"
+          }
+        ],
+        "ask": "Which way fits your goal and your week?"
+      },
+      {
+        "name": "Sponsor math",
+        "lines": [
+          {
+            "k": "Pledge:",
+            "v": "an amount per km, book or lap"
+          },
+          {
+            "k": "Total:",
+            "v": "pledge × how many you do"
+          },
+          {
+            "k": "Example:",
+            "v": "$1 a km × 9 km = $9"
+          },
+          {
+            "k": "Cap:",
+            "v": "a top amount, like 'up to $20'"
+          },
+          {
+            "k": "Or:",
+            "v": "one set amount if you finish"
+          }
+        ],
+        "ask": "How far must you go to reach the goal?"
+      },
+      {
+        "name": "The ask",
+        "lines": [
+          {
+            "k": "Me:",
+            "v": "who you are, in one line"
+          },
+          {
+            "k": "Cause:",
+            "v": "who it helps and why you care"
+          },
+          {
+            "k": "Buys:",
+            "v": "what each $10 does"
+          },
+          {
+            "k": "Goal:",
+            "v": "how far you are, how far to go"
+          },
+          {
+            "k": "Thanks:",
+            "v": "'Thank you for listening', either way"
+          }
+        ],
+        "ask": "Which part was hardest to say?"
+      },
+      {
+        "name": "Report back",
+        "lines": [
+          {
+            "k": "Total:",
+            "v": "what you raised, to the cent"
+          },
+          {
+            "k": "Gave:",
+            "v": "where it went, and when"
+          },
+          {
+            "k": "Did:",
+            "v": "what it bought, with a photo"
+          },
+          {
+            "k": "You:",
+            "v": "'Your gift was part of that'"
+          },
+          {
+            "k": "Next:",
+            "v": "what the cause needs now"
+          }
+        ],
+        "ask": "What do donors most want to know?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Asking",
+      "text": "speaking up for a cause with nothing to sell"
+    },
+    {
+      "name": "Money math",
+      "text": "goals, pledges and percent"
+    },
+    {
+      "name": "Honesty",
+      "text": "counting and reporting every dollar"
+    },
+    {
+      "name": "Following through",
+      "text": "coming back to say what the money did"
+    }
+  ],
+  "conclusion": {
+    "headline": "They raised it, gave it and showed everyone what it did.",
+    "text": "Hand them the next donation box or sponsor form that comes your way, before you decide anything. Notice whether they ask what the money buys first.",
+    "celebrate": "When they give the report to the first donor, say: 'People trusted you with their money, and you showed them exactly where it went.'",
+    "extensions": [
+      "Run the same fundraiser for the same cause a year later, and compare the totals",
+      "Visit a food bank or shelter and ask how they decide what to spend donations on",
+      "Start a family giving jar for the year, and vote together on where it goes",
+      "Read a real charity's yearly report together, and find what share went to the work itself"
+    ]
+  },
+  "signs": [
+    "They ask where the money goes before giving",
+    "They thank people who say no",
+    "They count other people's money carefully"
+  ],
+  "makeItReal": "At dinner this week, ask your kid what they'd raise money for if they could pick anything, and what $10 would buy there.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/fundraiser-challenge.jpg",
+    "alt": "Watercolour illustration of a labelled glass jar of coins and folded bills beside a hand-drawn goal chart of four bags, a plate of wrapped cookies and an open notebook with a pencil",
+    "caption": "Four bags to fill, one jar, every dollar in the book."
+  }
+}
