@@ -1,15 +1,15 @@
 {
   "familyCounts": {
-    "Critical Thinking & Reasoning": 63,
-    "Communication & Writing": 55,
-    "Planning & Self-Management": 38,
-    "Empathy & People": 25,
-    "Math & Money": 20,
-    "Creativity & Making": 19,
-    "Nature & Science": 19,
-    "Entrepreneurship & Money": 16,
-    "Tech & Digital": 11,
-    "World & Geography": 8
+    "Tech & Digital": 16,
+    "Critical Thinking & Reasoning": 80,
+    "Nature & Science": 48,
+    "Empathy & People": 47,
+    "Communication & Writing": 66,
+    "Creativity & Making": 35,
+    "Planning & Self-Management": 59,
+    "Entrepreneurship & Money": 22,
+    "Math & Money": 34,
+    "World & Geography": 13
   },
   "canonicalCounts": {
     "Communication": 40,
@@ -1390,6 +1390,546 @@
         "Entrepreneurship & Money",
         "Tech & Digital",
         "Critical Thinking & Reasoning"
+      ]
+    },
+    "nature-journal-walks": {
+      "canonical": [
+        "Observation",
+        "Journaling",
+        "Science",
+        "Art",
+        "Writing"
+      ],
+      "families": [
+        "Nature & Science",
+        "Communication & Writing",
+        "Creativity & Making"
+      ]
+    },
+    "nature-walk-task-cards": {
+      "canonical": [
+        "Observation",
+        "Nature",
+        "Sensory Learning",
+        "Science"
+      ],
+      "families": [
+        "Nature & Science"
+      ]
+    },
+    "nature-choice-boards": {
+      "canonical": [
+        "Self-Direction",
+        "Nature",
+        "Science",
+        "Art",
+        "Decision-Making"
+      ],
+      "families": [
+        "Nature & Science",
+        "Planning & Self-Management",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "outdoor-learning-missions": {
+      "canonical": [
+        "Problem-Solving",
+        "Nature",
+        "Engineering",
+        "Observation",
+        "Science"
+      ],
+      "families": [
+        "Nature & Science",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "outdoor-stem-challenges": {
+      "canonical": [
+        "STEM",
+        "Engineering",
+        "Science",
+        "Problem-Solving",
+        "Nature"
+      ],
+      "families": [
+        "Nature & Science",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "outdoor-stem-challenges-volume-2": {
+      "canonical": [
+        "STEM",
+        "Engineering",
+        "Science",
+        "Problem-Solving",
+        "Nature"
+      ],
+      "families": [
+        "Nature & Science",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "outdoor-movement-challenge-cards": {
+      "canonical": [
+        "Physical Challenge",
+        "Healthy Habits",
+        "Perseverance",
+        "Outdoor Confidence",
+        "Movement"
+      ],
+      "families": [
+        "Nature & Science",
+        "Planning & Self-Management"
+      ]
+    },
+    "land-art-challenges": {
+      "canonical": [
+        "Art",
+        "Nature",
+        "Patterns",
+        "Creativity",
+        "Observation"
+      ],
+      "families": [
+        "Nature & Science",
+        "Creativity & Making",
+        "Math & Money"
+      ]
+    },
+    "nature-crafts": {
+      "canonical": [
+        "Art",
+        "Nature",
+        "Crafts",
+        "Observation",
+        "Fine Motor Skills"
+      ],
+      "families": [
+        "Nature & Science",
+        "Creativity & Making"
+      ]
+    },
+    "build-a-museum": {
+      "canonical": [
+        "Research",
+        "Writing",
+        "Design",
+        "Curation",
+        "Presentation"
+      ],
+      "families": [
+        "Creativity & Making",
+        "Communication & Writing"
+      ]
+    },
+    "calm-down-toolkit": {
+      "canonical": [
+        "Self-Regulation",
+        "Emotional Awareness",
+        "Coping Skills",
+        "Self-Knowledge",
+        "Asking for Help"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management"
+      ]
+    },
+    "big-feelings-lab": {
+      "canonical": [
+        "Emotional Vocabulary",
+        "Emotional Awareness",
+        "Body Awareness",
+        "Self-Reflection",
+        "Mindfulness"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management"
+      ]
+    },
+    "boredom-toolkit": {
+      "canonical": [
+        "Self-Direction",
+        "Creativity",
+        "Independence",
+        "Patience",
+        "Self-Knowledge"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management",
+        "Creativity & Making"
+      ]
+    },
+    "frustration-tolerance-cards": {
+      "canonical": [
+        "Frustration Tolerance",
+        "Emotional Regulation",
+        "Perseverance",
+        "Sportsmanship",
+        "Self-Control"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management"
+      ]
+    },
+    "comeback-journal": {
+      "canonical": [
+        "Resilience",
+        "Growth Mindset",
+        "Self-Reflection",
+        "Goal Setting",
+        "Emotional Regulation"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management"
+      ]
+    },
+    "hard-thing-challenge": {
+      "canonical": [
+        "Perseverance",
+        "Goal Setting",
+        "Resilience",
+        "Self-Knowledge",
+        "Planning"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management"
+      ]
+    },
+    "kindness-missions": {
+      "canonical": [
+        "Kindness",
+        "Empathy",
+        "Social Awareness",
+        "Courage",
+        "Community"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management"
+      ]
+    },
+    "reading-the-room": {
+      "canonical": [
+        "Social Awareness",
+        "Empathy",
+        "Observation",
+        "Communication",
+        "Kindness"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management",
+        "Nature & Science",
+        "Communication & Writing"
+      ]
+    },
+    "conflict-fix": {
+      "canonical": [
+        "Conflict Resolution",
+        "Communication",
+        "Accountability",
+        "Active Listening",
+        "Problem-Solving"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management",
+        "Communication & Writing",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "solo-mission": {
+      "canonical": [
+        "Independence",
+        "Confidence",
+        "Preparation",
+        "Communication",
+        "Self-Knowledge"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management",
+        "Communication & Writing"
+      ]
+    },
+    "worry-sorter": {
+      "canonical": [
+        "Coping Skills",
+        "Emotional Regulation",
+        "Problem-Solving",
+        "Planning",
+        "Resilience"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "square-foot-safari": {
+      "canonical": [
+        "STEM",
+        "Science",
+        "Observation",
+        "Nature",
+        "Field Notes"
+      ],
+      "families": [
+        "Nature & Science"
+      ]
+    },
+    "snack-mission": {
+      "canonical": [
+        "STEM",
+        "Real-World Math",
+        "Budgeting",
+        "Decision-Making"
+      ],
+      "families": [
+        "Math & Money",
+        "Nature & Science",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "household-orchestra": {
+      "canonical": [
+        "Creativity",
+        "Science of Sound",
+        "Rhythm",
+        "Composition",
+        "Music"
+      ],
+      "families": [
+        "Creativity & Making",
+        "Nature & Science"
+      ]
+    },
+    "complaint-to-product": {
+      "canonical": [
+        "Entrepreneurship",
+        "Design Thinking",
+        "Listening",
+        "Prototyping",
+        "Empathy"
+      ],
+      "families": [
+        "Entrepreneurship & Money",
+        "Communication & Writing",
+        "Creativity & Making",
+        "Empathy & People"
+      ]
+    },
+    "two-minute-story": {
+      "canonical": [
+        "Storytelling",
+        "Public Speaking",
+        "Communication",
+        "Confidence"
+      ],
+      "families": [
+        "Communication & Writing"
+      ]
+    },
+    "decomposition-detective": {
+      "canonical": [
+        "STEM",
+        "Science",
+        "Observation",
+        "Patience",
+        "Cause & Effect"
+      ],
+      "families": [
+        "Nature & Science",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "seed-travelers": {
+      "canonical": [
+        "STEM",
+        "Science",
+        "Classification",
+        "Prediction",
+        "Adaptation"
+      ],
+      "families": [
+        "Nature & Science",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "camouflage-challenge": {
+      "canonical": [
+        "STEM",
+        "Science",
+        "Observation",
+        "Adaptation",
+        "Evidence"
+      ],
+      "families": [
+        "Nature & Science",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "nature-data-tracker": {
+      "canonical": [
+        "STEM",
+        "Real-World Math",
+        "Data",
+        "Pattern Recognition",
+        "Prediction"
+      ],
+      "families": [
+        "Math & Money",
+        "Nature & Science",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "grow-it-eat-it": {
+      "canonical": [
+        "STEM",
+        "Science",
+        "Responsibility",
+        "Patience",
+        "Observation"
+      ],
+      "families": [
+        "Nature & Science",
+        "Planning & Self-Management"
+      ]
+    },
+    "kitchen-science-lab": {
+      "canonical": [
+        "STEM",
+        "Science",
+        "Scientific Method",
+        "Prediction",
+        "Chemistry"
+      ],
+      "families": [
+        "Planning & Self-Management",
+        "Critical Thinking & Reasoning",
+        "Nature & Science"
+      ]
+    },
+    "probability-lab": {
+      "canonical": [
+        "STEM",
+        "Real-World Math",
+        "Probability",
+        "Expected Value",
+        "Healthy Skepticism"
+      ],
+      "families": [
+        "Math & Money",
+        "Nature & Science",
+        "Entrepreneurship & Money",
+        "Critical Thinking & Reasoning"
+      ]
+    },
+    "secret-code-lab": {
+      "canonical": [
+        "STEM",
+        "Logic",
+        "Pattern Recognition",
+        "Cryptography",
+        "Digital Safety"
+      ],
+      "families": [
+        "Planning & Self-Management",
+        "Critical Thinking & Reasoning",
+        "Nature & Science",
+        "Tech & Digital"
+      ]
+    },
+    "body-owners-manual": {
+      "canonical": [
+        "STEM",
+        "Science",
+        "Measurement",
+        "Body Literacy",
+        "Data"
+      ],
+      "families": [
+        "Planning & Self-Management",
+        "Critical Thinking & Reasoning",
+        "Nature & Science",
+        "Math & Money"
+      ]
+    },
+    "family-history-detective": {
+      "canonical": [
+        "Interviewing",
+        "Active Listening",
+        "Storytelling",
+        "Writing",
+        "History"
+      ],
+      "families": [
+        "Communication & Writing",
+        "Empathy & People"
+      ]
+    },
+    "teach-it-to-learn-it": {
+      "canonical": [
+        "Teaching",
+        "Public Speaking",
+        "Structuring Ideas",
+        "Communication",
+        "Metacognition"
+      ],
+      "families": [
+        "Communication & Writing"
+      ]
+    },
+    "trade-it-up": {
+      "canonical": [
+        "Negotiation",
+        "Understanding Value",
+        "Communication",
+        "Courage",
+        "Fairness"
+      ],
+      "families": [
+        "Entrepreneurship & Money",
+        "Communication & Writing",
+        "Empathy & People"
+      ]
+    },
+    "play-the-world": {
+      "canonical": [
+        "Cultural Awareness",
+        "Communication",
+        "Writing",
+        "Courage",
+        "Physical Play"
+      ],
+      "families": [
+        "World & Geography",
+        "Empathy & People",
+        "Communication & Writing"
+      ]
+    },
+    "people-scientist": {
+      "canonical": [
+        "Scientific Method",
+        "Observation",
+        "Social Confidence",
+        "Data Collection",
+        "Open-Mindedness"
+      ],
+      "families": [
+        "Empathy & People",
+        "Planning & Self-Management",
+        "Critical Thinking & Reasoning",
+        "Nature & Science",
+        "Math & Money"
       ]
     }
   }
