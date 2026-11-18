@@ -134,11 +134,11 @@
     {
       "title": "Lay it out with real spacing",
       "why": "Division decides how many plants fit.",
-      "kid": "Your kid divides the length and width of the bed by each plant's spacing to work out how many fit, then draws a layout: tall plants at the back so they don't shade the short ones, and room to reach in. For pots, it's one big plant or a few small ones per pot.",
+      "kid": "Your kid divides the length and width of the bed by each plant's spacing to work out how many fit, then draws a layout: tall plants on the north side so they don't shade the short ones, and room to reach in. For pots, it's one big plant or a few small ones per pot.",
       "you": "Ask 'did you check the spacing?' and 'can you reach the middle without stepping on anything?' Let them redraw if it doesn't fit.",
       "ask": [
         "Your row is 48 inches and lettuce needs 8. How many fit?",
-        "Which plants go at the back, and why?"
+        "Which plants go on the north side, and why?"
       ],
       "tip": "Lay string or sticks on the real bed to mark the rows before drawing. Seeing the spacing on the ground makes the numbers make sense.",
       "levels": {
@@ -156,7 +156,7 @@
         "A bed 4 ft × 2 ft × 1 ft deep: how many cubic feet of soil?",
         "Plant carrots today, 70 days to harvest: what's the date?"
       ],
-      "tip": "Building a raised bed? The wood is the perimeter: 4 + 2 + 4 + 2 = 12 ft for a 4 × 2 ft bed.",
+      "tip": "Building a raised bed? The wood is the perimeter for each row of boards: 4 + 2 + 4 + 2 = 12 ft. A 1 ft deep bed of 6-inch boards needs two rows, so 24 ft.",
       "levels": {
         "explore": "Price what you need, count out the money, and circle sprout day on the calendar.",
         "develop": "Price everything, make 2 trade-offs to stay on budget, and build a planting calendar.",

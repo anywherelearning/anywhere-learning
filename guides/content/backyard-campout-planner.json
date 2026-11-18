@@ -151,23 +151,23 @@
       "levels": {
         "explore": "Gather 10 camp things into 2 or 3 piles, then name anything you'd still need to get.",
         "develop": "List 15 items, mark each 'have it' or 'need it', and make 2 trade-offs to stay on budget.",
-        "extend": "For each thing to buy, find its cost per campout if used 1, 3 or 5 times. When does buying beat borrowing?"
+        "extend": "Add up the store price of everything you borrowed. What would this campout have cost if you'd bought it all?"
       }
     },
     {
-      "title": "Plan the food and the schedule",
+      "title": "Plan the snacks and the dark",
       "why": "Quantities per person and a timeline that leaves room for surprises.",
-      "kid": "Your kid plans the menu (dinner or snack, an evening treat, breakfast) and multiplies the quantities by the number of campers. Then they write the schedule from setup to pack-up, with how long each part takes and when it gets dark.",
+      "kid": "Your kid plans a simple menu with the Food per person card, then works out the night: how many hours from sunset to sunrise? They check the hours each flashlight or headlamp lasts (it's on the package), decide which lights must last all night, and pack spare batteries if the math comes up short.",
       "you": "Let them choose the food. Then push on time: 'How long will setup really take?' and 'What happens if dinner runs late?' Look up tonight's sunset time together.",
       "ask": [
-        "4 people, 2 s'mores each: how many marshmallows do you need?",
-        "If setup starts at 5:00 and takes 45 minutes, when are you ready?"
+        "Sunset is at 8:40 and sunrise at 6:10. How many hours of dark is that?",
+        "Your headlamp lasts 6 hours on high. Is that enough, and what could you change?"
       ],
-      "tip": "Have them add a 15-minute buffer somewhere in the schedule. They'll understand why on campout night.",
+      "tip": "Most lights only need to cover bedtime and one trip to the house. Count the hours each one really has to run.",
       "levels": {
         "explore": "Bag one snack per camper, then order the evening on 5 sticky notes.",
         "develop": "Plan the full menu with quantities for everyone, and an hour-by-hour schedule with durations.",
-        "extend": "Work backward from sunset, minus 30 minutes, setup time and a 15-minute buffer. When do you start?"
+        "extend": "Find the hours on high and on low for each light. Plan which ones run on low, and check that one set of batteries lasts the night."
       }
     },
     {
@@ -305,7 +305,7 @@
       "lines": [
         "Area = length × width",
         "Food to bring = amount per person × number of campers",
-        "Ready time = start time + setup time + a 15-minute buffer"
+        "Hours of dark = time from sunset to sunrise"
       ]
     }
   },

@@ -2,7 +2,7 @@
   "slug": "hallucination-detective",
   "category": "AI & Digital",
   "title": "Hallucination Detective",
-  "tagline": "Ask · Compare · Spot · Check · Decide",
+  "tagline": "Pick · Ask · Compare · Check · Decide",
   "ages": "Ages 6 to 14",
   "goal": "Your kid learns that AI can sound sure and still be wrong. They ask two or three AI tools the exact same question, compare the answers, spot where they disagree or make things up, check against real sources, and decide on an answer of their own that they can actually trust.",
   "need": [
@@ -162,7 +162,7 @@
       "levels": {
         "explore": "Say your answer, and one way you checked it.",
         "develop": "Write your answer, what you checked, and how sure you are.",
-        "extend": "Write what you'd tell a friend who only asked one AI."
+        "extend": "Tell the AI that got something wrong what the official source says, and see if it fixes it, argues, or makes up something new."
       }
     }
   ],

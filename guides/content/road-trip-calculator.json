@@ -149,19 +149,19 @@
       }
     },
     {
-      "title": "Budget the whole trip",
+      "title": "Split the cost: fixed or per person",
       "why": "Gas is only the start.",
-      "kid": "Your kid lists every cost: gas, food for everyone in the car, snacks, activities and a hotel if it's overnight, using the Food and fun card for ranges. They find the total, then the cost per mile and per person. If it's over the budget, they decide what to cut.",
+      "kid": "Your kid lists every cost, using the Food and fun card for ranges, and sorts each one: fixed (gas, parking, a park pass per car) or per person (meals, snacks, tickets). They total both, find the cost per person, then work out what it becomes with one more passenger.",
       "you": "Help them look up real prices for food and things to do there. When it's too much, ask what matters most, then let them choose.",
       "ask": [
         "Which cost is the biggest?",
-        "You're $30 over. What would you cut?"
+        "Grandma joins the trip. Which costs go up, and which stay the same?"
       ],
-      "tip": "Day trip for 4, 150 miles each way: gas $42 + lunch 4 × $12 = $48 + snacks 4 × $3 = $12 + park $20 = $122. That's $122 ÷ 300 miles, about 41¢ a mile, or $30.50 each.",
+      "tip": "Day trip for 4, 150 miles each way. Fixed: gas $42 + park pass $20 = $62. Per person: lunch $12 + snacks $3 = $15, so $60. Total $122, or $30.50 each. With 5: $62 + $75 = $137, or $27.40 each.",
       "levels": {
         "explore": "Total 3 costs: gas, food and one activity.",
-        "develop": "Total 5 or more costs, find the cost per mile, and fit a set budget.",
-        "extend": "Sort costs into per-passenger (food) and fixed (gas). What does one more person add?"
+        "develop": "Sort 5 or more costs into fixed and per person, and find the cost per person.",
+        "extend": "Add an overnight where one hotel room sleeps 4. Find the cost per person for 4, 5 and 6 travellers, and explain the jump."
       }
     },
     {

@@ -202,23 +202,23 @@
         "lines": [
           {
             "k": "Blind spot:",
-            "v": "an X, a dot and one eye closed"
+            "v": "X and dot 8 cm apart, one eye shut, slide in"
           },
           {
             "k": "Smell:",
-            "v": "name foods with your eyes closed"
+            "v": "5 foods in cups, eyes closed: how many?"
           },
           {
             "k": "Whisper:",
-            "v": "how far away does it still work?"
+            "v": "a step back each time: last one heard"
           },
           {
             "k": "Two points:",
-            "v": "two paperclip tips on a fingertip, then on the back"
+            "v": "clip tips 1 cm apart, finger then arm"
           },
           {
             "k": "Afterimage:",
-            "v": "stare at a colour, then at white"
+            "v": "stare at red 30 s, then at white"
           }
         ],
         "ask": "Where's the edge?"

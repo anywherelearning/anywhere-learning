@@ -13,27 +13,27 @@
     "Play money or homemade tickets (optional)"
   ],
   "lesson": {
-    "text": "Where you put things decides how people move. A good park map pulls visitors through the whole park instead of jamming them at the gate.",
-    "before": "The roller coaster, the snack stand and the bathrooms are all right by the gate.",
+    "text": "A line forms when people arrive faster than a ride can take them. Count how many riders a ride takes each minute, and you can predict the line before anyone joins it.",
+    "before": "'Everyone will want the Jungle Drop, so it'll be the best ride.'",
     "model": [
       {
-        "part": "Problem",
-        "line": "Everyone stops at the gate at once. Instant traffic jam."
+        "part": "Capacity",
+        "line": "The Jungle Drop takes 2 riders every 3 minutes."
       },
       {
-        "part": "Big ride",
-        "line": "Put it at the far end of the park, so people walk past everything else to get there."
+        "part": "Arrivals",
+        "line": "6 guests want it in the first 5 minutes."
       },
       {
-        "part": "Food",
-        "line": "Put the snack stand between two thrill rides, where people get hungry."
+        "part": "Line",
+        "line": "The last one waits 9 minutes, and two wander off."
       },
       {
-        "part": "So",
-        "line": "The map decides where people go, so plan it on purpose."
+        "part": "Fix",
+        "line": "A second seat, and a game booth beside the line."
       }
     ],
-    "modelNote": "Everything by the gate means everyone stops at the gate. Spread the big draws out and visitors walk the whole park."
+    "modelNote": "'The best ride' only counted how fun it was. Counting riders per minute showed the line coming, and a second seat plus something to do while waiting fixed it."
   },
   "academics": [
     {
@@ -167,7 +167,7 @@
     {
       "title": "Test it, fix one thing, open the gates",
       "why": "A real visitor shows what the plan missed.",
-      "kid": "Your kid gives someone a full tour: the entrance, a ticket, the paths, every ride. They watch what confuses the visitor, then fix the one thing that would help most. Then the grand opening: a ribbon, the park's name announced, tickets taken, tours given, food served.",
+      "kid": "Your kid opens the park to real guests: family, friends, or toys moved by a sibling. They time each ride per rider and count who's waiting, then fix the worst line, like adding a seat or a game booth beside it. Then the grand opening: a ribbon, the park's name announced, tickets taken and food served.",
       "you": "Be an honest visitor first. Don't fake excitement for parts that don't work yet. On opening day, bring the energy of someone who waited in line all morning.",
       "ask": [
         "What part of the tour surprised you?",
@@ -177,7 +177,7 @@
       "levels": {
         "explore": "Give one tour, fix one thing, and open the park.",
         "develop": "Run 2 tours, fix the biggest problem, and hold an opening with roles for helpers.",
-        "extend": "The star ride takes 8 riders every 2 minutes. How many is that in an hour, and if 300 want it, how many are still waiting?"
+        "extend": "Work out each ride's riders per hour, find the one that can't keep up with the guests who want it, and decide whether to add a seat or move it."
       }
     }
   ],

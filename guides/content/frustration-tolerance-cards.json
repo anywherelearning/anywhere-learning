@@ -155,8 +155,8 @@
         },
         {
           "name": "New Knot",
-          "t": "Learn a new knot from a picture, with no help for five minutes. When it won't come right: Name it. 'I'm frustrated with this knot.' Then try again.",
-          "d": "Tie it again with your eyes closed.",
+          "t": "Tie your laces the way you don't usually do it: bunny ears if you loop and wrap, or loop and wrap if you do bunny ears. When it won't come right: Name it. 'I'm frustrated with this knot.' Then try again.",
+          "d": "Tie it with your eyes closed, then try a square knot.",
           "icon": "link",
           "art": "wc/frust-knot.jpg"
         },

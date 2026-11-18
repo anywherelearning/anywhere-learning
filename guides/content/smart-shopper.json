@@ -11,32 +11,32 @@
     "A store to see both options, or a device to look up products, prices and reviews"
   ],
   "lesson": {
-    "text": "The price tag isn't the real cost. Divide the price by how many times you'll use it, and the cheap option is often the expensive one.",
-    "before": "The $5 water bottle is cheaper, obviously.",
+    "text": "A score only means something if it counts what matters most. Weight your top criteria, and the winner can change.",
+    "before": "'The $45 headphones look better, so they win.'",
     "model": [
       {
-        "part": "Option A",
-        "line": "$30 bottle, used every day for a year: $30 ÷ 365 = about 8¢ per use."
+        "part": "Scores",
+        "line": "Out of 5. Cheap pair: price 5, comfort 2, battery 3. Pricey pair: price 2, comfort 5, battery 4."
       },
       {
-        "part": "Option B",
-        "line": "$5 bottle, lost after a month: $5 ÷ 30 = about 17¢ per use."
+        "part": "Add",
+        "line": "Cheap 10, pricey 11. Close."
+      },
+      {
+        "part": "Weight",
+        "line": "Comfort matters most, so it counts double. Cheap 12, pricey 16."
       },
       {
         "part": "So",
-        "line": "The 'cheap' bottle costs twice as much every time you drink from it."
-      },
-      {
-        "part": "Decision",
-        "line": "Buy A, if you'll really keep it. That 'if' is the honest part."
+        "line": "Pricey wins on what you care about. Double price instead and it flips: cheap 15, pricey 13."
       }
     ],
-    "modelNote": "Price tags hide how long a thing lasts. Cost per use counts that, plus the month the cheap bottle goes missing."
+    "modelNote": "'Looks better' was one feeling standing in for a decision. Doubling the thing that matters most showed the winner, and showed it flips when the priority does."
   },
   "academics": [
     {
       "subject": "Math",
-      "text": "division, cost per use, percentages and totals"
+      "text": "division, weighted scores, percentages and totals"
     },
     {
       "subject": "Money",
@@ -85,8 +85,8 @@
       "text": "scoring options on what matters"
     },
     {
-      "name": "Cost thinking",
-      "text": "price per use, not price per tag"
+      "name": "Weighing",
+      "text": "counting what matters most"
     },
     {
       "name": "Skepticism",
@@ -140,17 +140,17 @@
     {
       "title": "See them, then work out the true cost",
       "why": "What it's like in your hands, and what it really costs, not what the tag says.",
-      "kid": "If they can, your kid sees both options in person: holds them, tries them on, reads the box. Then they find the true cost: price ÷ uses, plus hidden costs like batteries, refills or shipping, and the opportunity cost: 'If I don't buy this, the money could go to ___.' Then they update the rubric.",
+      "kid": "If they can, your kid sees both options in person: holds them, tries them on, reads the box. Then they find the true cost: the price plus hidden costs like batteries, refills, cases or shipping, and the opportunity cost: 'If I don't buy this, the money could go to ___.' Then they update the rubric scores.",
       "you": "Take them to the store if you can, and let them handle both. Help with the division if needed. Estimating uses is fine: about twice a week for a year is about 100 uses.",
       "ask": [
         "What did you notice in person that the picture didn't show?",
-        "Which one is cheaper once you count how long it lasts?"
+        "Which one is cheaper once you add the hidden costs?"
       ],
       "tip": "Shoes that pinch, a lid that won't close, headphones that hurt after ten minutes: holding the thing settles more than any review.",
       "levels": {
-        "explore": "Hold both and say one thing you'd only know in person. Then divide each price by its uses on a calculator.",
+        "explore": "Hold both and say one thing you'd only know in person. Then add one hidden cost to each price.",
         "develop": "See both if you can, add one hidden cost each, and name the opportunity cost.",
-        "extend": "Per month: $45 shoes lasting 12 months or $20 lasting 4? How long must the $45 pair last to win?"
+        "extend": "Batteries cost $6 a month. Add a year of them to the $25 pair and compare with the $40 rechargeable one."
       }
     },
     {
@@ -289,15 +289,15 @@
       "label": "Before you buy: the 3-question check",
       "lines": [
         "1. Is this a need or a want?",
-        "2. What does it cost per use, not just at the till?",
+        "2. What does it really cost, with the hidden costs added?",
         "3. Will I still want it in two weeks?"
       ]
     }
   },
   "conclusion": {
-    "headline": "They check cost per use now, not just the tag.",
-    "text": "At the store, hold up two versions of something you buy, like two packs of batteries, and ask which is the better deal. Listen for 'how long does it last?' before 'which is cheaper?' If that question comes first, the cost-per-use math stuck.",
-    "celebrate": "Repeat back the number that decided it: 'So the pricier one is cheaper every time you use it. That's going to change how I shop too.'",
+    "headline": "Their pick has a reason they can name.",
+    "text": "When they next ask for something, ask which two things matter most about it. Listen for them to rank before they compare prices, and to say what would change their mind.",
+    "celebrate": "Read the winning score back: 'Comfort counted double, and that's why this pair won. You decided what mattered before the store did.'",
     "extensions": [
       "Check what each option resells for used after a year, and subtract that from its true cost.",
       "Compare two stores' return policies and warranties, and decide what a warranty is really worth.",
@@ -306,7 +306,7 @@
     ]
   },
   "signs": [
-    "They ask how long something will last before buying",
+    "They name what matters most before comparing prices",
     "They point out crossed-out prices and countdown timers",
     "They say 'let me wait a few days' about something they want"
   ],
@@ -334,5 +334,5 @@
     "Spot the selling tricks aimed at visitors, like 'last one' or 'special price for you', and match each to the Marketing Tricks page.",
     "Add the hidden travel costs to one souvenir, like bag space and carrying it for weeks, before deciding it's worth it."
   ],
-  "backHome": "Look at what you bought on the trip a month later, and work out its cost per use so far."
+  "backHome": "Look at what you bought on the trip a month later, and check whether the reason you weighted most still holds."
 }

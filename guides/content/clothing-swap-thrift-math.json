@@ -61,7 +61,7 @@
       },
       {
         "when": "Day 2",
-        "what": "Price the swap pile (Step 3) and plan the swap or the thrift trip."
+        "what": "Score the swap pile (Step 3) and plan the swap or the thrift trip."
       },
       {
         "when": "Swap or shop day",
@@ -76,7 +76,7 @@
       },
       {
         "q": "No one to swap with",
-        "a": "Swap within the family, or skip the swap and do the thrift trip. Pricing the pile still works for a donation or a garage sale."
+        "a": "Swap within the family, or skip the swap and do the thrift trip. The points still work for a sibling swap."
       }
     ]
   },
@@ -138,19 +138,19 @@
       }
     },
     {
-      "title": "Price the swap pile",
-      "why": "Pricing is part math, part judgement.",
-      "kid": "Your kid sets a fair price on every item they're swapping or selling. They use the condition rating and look up what similar things sell for at a thrift store or a secondhand site. Then they write one line explaining each price.",
-      "you": "Ask 'would you pay that for it?' and 'why is this one worth more than that one?' Help them check real secondhand prices, in a store or online.",
+      "title": "Turn the swap pile into points",
+      "why": "A swap only feels fair when everyone knows what each thing is worth.",
+      "kid": "Your kid gives every item in the swap pile points with the Swap points card, then adjusts for condition: excellent adds a point, fair takes one away. They check a few against the Thrift ballpark prices card, where 1 point is about $3, and write the points on a tag.",
+      "you": "Ask 'would you trade your 3-point jacket for this?' Let them change a score once they've argued for it.",
       "ask": [
-        "Would a small stain or a missing button change the price?",
-        "If the same brand sells for $8 at the thrift store, is $10 fair?"
+        "Your hoodie has a small stain. Does it stay at 2 points?",
+        "A jacket sells for $12 at the thrift store. How many points is that?"
       ],
-      "tip": "Most kids price their own things too high at first. Real reference prices bring the numbers down fast.",
+      "tip": "Most kids score their own things too high. Asking 'would I give up a 3-point item for it?' brings the numbers down fast.",
       "levels": {
-        "explore": "Sort 5 to 10 items into $1, $3 and $5 piles by condition.",
-        "develop": "Price everything, check 3 to 5 real reference prices, and explain each price.",
-        "extend": "Set a swap price two ways: $2 under the thrift price, or a third under it. Try both on a $3 tee and a $15 jacket. Which rule is fair to both sides?"
+        "explore": "Sort 5 to 10 items into 1, 2 and 3 point piles, with a sticker on each.",
+        "develop": "Score every item, adjust for condition, and check 3 against real thrift prices.",
+        "extend": "Everyone brought tops but only two jackets. Should a jacket stay at 3 points when everyone wants one? Set a rule for scarce items and test it."
       }
     },
     {

@@ -303,7 +303,7 @@
   "conclusion": {
     "headline": "Dinner came from their list.",
     "text": "At the grocery store, stop at two sizes of the same thing and ask which is the better deal. See whether they divide first, and whether they ask how much you'll actually use.",
-    "celebrate": "Once the plates are down, let them tell the table: 'The market beat the store on the carrots, and our shopper found it.'",
+    "celebrate": "Once the plates are down, tell the table: 'Every vegetable here was picked and paid for by our shopper, and it came to $___ a plate.'",
     "extensions": [
       "Go back in a different season and compare what's for sale and the prices",
       "Ask a grower how they decide the price of one thing they sell, and what it costs them to grow.",

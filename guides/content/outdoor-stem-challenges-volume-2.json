@@ -243,7 +243,7 @@
         },
         {
           "name": "Sail Power",
-          "t": "Attach a sail to something that rolls or slides. Move it one step with wind or your breath.",
+          "t": "Stand a leaf sail in a flat piece of bark on a smooth path or a puddle. Move it one step with your breath.",
           "d": "Race two sail shapes: tall and narrow against short and wide.",
           "icon": "sailboat",
           "art": "wc/stem2-18.jpg"
@@ -269,7 +269,7 @@
       "cards": [
         {
           "name": "Rock Mover",
-          "t": "Lever a too-heavy rock over a pivot stone, pivot near, then far. Keep fingers and toes clear.",
+          "t": "Lever a too-heavy rock over a pivot stone: pivot close to the rock, then far from it. Keep fingers and toes clear.",
           "d": "The easy setup means pushing farther but lighter. That's the lever's trade.",
           "icon": "move-up",
           "art": "wc/stem2-21.jpg"

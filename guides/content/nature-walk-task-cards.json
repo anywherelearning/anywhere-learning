@@ -142,8 +142,8 @@
           "art": "wc/walk-06.jpg"
         },
         {
-          "t": "Look for 3 different greens (or 3 different browns).",
-          "d": "Which one blends in best here?",
+          "t": "Find two leaves from one plant, one in sun and one in shade. Which is bigger?",
+          "d": "Why would a shade leaf grow that way?",
           "icon": "leaf",
           "art": "wc/walk-07.jpg"
         },
@@ -171,8 +171,8 @@
       "title": "Shapes and patterns",
       "cards": [
         {
-          "t": "Find a pattern: spots, stripes, or something that repeats. Point to it.",
-          "d": "What might that pattern help with?",
+          "t": "Find a tree with most of its branches on one side.",
+          "d": "Where do the wind or the light come from here?",
           "icon": "layers",
           "art": "wc/walk-11.jpg"
         },
@@ -396,8 +396,8 @@
           "icon": "recycle"
         },
         {
-          "t": "Find something that seems balanced.",
-          "d": "What would knock it over?",
+          "t": "Find a tree that leans. Which way is it leaning?",
+          "d": "Is it reaching for light, or was it pushed?",
           "icon": "scale",
           "art": "wc/walk-47.jpg"
         },
@@ -455,8 +455,8 @@
           "art": "wc/walk-55.jpg"
         },
         {
-          "t": "Choose one object and give it a new name.",
-          "d": "Explain why that name fits.",
+          "t": "Eyes closed, your grown-up hands you 3 found things. Name each by touch.",
+          "d": "Which clue gave each one away?",
           "icon": "pencil-line",
           "art": "wc/walk-56.jpg"
         },

@@ -44,10 +44,6 @@
       {
         "title": "Let them find the mistake",
         "text": "When you end up in the wrong place, don't explain what went wrong. Just stop and wait. Give your kid the chance to look at their words and work it out."
-      },
-      {
-        "title": "Keep it light",
-        "text": "This activity is funniest when it goes wrong, so laugh together. A wrong turn isn't a failure. It's the clue that shows which words need fixing."
       }
     ],
     "troubleshoot": [
@@ -66,6 +62,20 @@
       {
         "q": "They say you're going wrong on purpose",
         "a": "Agree up front: when a step could mean two things, you say both and pick one. 'Turn could be left or right. I'm picking right.'"
+      }
+    ],
+    "plan": [
+      {
+        "when": "One sitting",
+        "what": "Write, run and find what broke (Steps 1 to 3)."
+      },
+      {
+        "when": "Right after",
+        "what": "Fix it and run it again (Step 4)."
+      },
+      {
+        "when": "Next guest",
+        "what": "Directions for a real visitor (Step 5)."
       }
     ]
   },
@@ -162,7 +172,7 @@
     {
       "title": "Write it for a real visitor",
       "why": "Directions for someone who actually needs them are the real test.",
-      "kid": "Your kid writes new directions for someone who really needs them: a guest finding the bathroom, a friend walking from the corner, a grandparent finding the spare key. They use every fix from the first set, leave the directions out, then ask how it went and fix any step that failed.",
+      "kid": "Your kid writes new directions for someone who really needs them: a guest finding the bathroom, a friend walking from the corner, a babysitter finding the first-aid kit. They use every fix from the first set, leave the directions out, then ask how it went and fix any step that failed.",
       "you": "Pick a real reason together, then stay out of the writing. If you can see a step will fail, ask 'What will they see right there?' and let your kid decide.",
       "ask": [
         "Where did the visitor slow down or ask?",

@@ -50,7 +50,7 @@
     "troubleshoot": [
       {
         "q": "It's worrying them",
-        "a": "Pick a playful one, like Ten things or Kids in charge. Finish by asking what might be better in that world."
+        "a": "Pick a playful one, like Ten things or No car. Finish by asking what might be better in that world."
       },
       {
         "q": "They give one-line answers",
@@ -191,8 +191,8 @@
             "v": "a new country, tomorrow"
           },
           {
-            "k": "Kids in charge:",
-            "v": "kids run the town for a month"
+            "k": "No car:",
+            "v": "the car is gone for a month"
           }
         ],
         "ask": "What makes it hard, not just different?"
@@ -243,8 +243,8 @@
             "v": "one afternoon getting by with ten words of another language"
           },
           {
-            "k": "Kids in charge:",
-            "v": "kids decide, for one day"
+            "k": "No car:",
+            "v": "one day on foot, by bike or by bus"
           }
         ],
         "ask": "What was harder than you planned?"

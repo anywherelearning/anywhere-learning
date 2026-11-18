@@ -75,7 +75,7 @@
       },
       {
         "part": "Built",
-        "line": "With AI, on his computer."
+        "line": "The job and the rule saved as the project's instructions."
       },
       {
         "part": "Next helper",
@@ -126,7 +126,7 @@
         "What should we call it?",
         "Is everything it needs in the instructions?"
       ],
-      "tip": "Older kids can build a helper with code, or an agent: a helper that takes steps on its own, like searching the web. The rules matter just as much.",
+      "tip": "After saving, ask the helper 'What's your job, and what will you never do?' If its answer misses a rule, that rule needs clearer words.",
       "levels": {
         "explore": "Watch a parent set it up, and choose the helper's name.",
         "develop": "Set up the helper with its job and rules, with a parent.",
@@ -186,8 +186,8 @@
             "v": "drafts messages you check before sending"
           },
           {
-            "k": "Planner:",
-            "v": "turns a list into a plan"
+            "k": "Family expert:",
+            "v": "answers only from one sheet you give it"
           }
         ],
         "ask": "Which job would you use every week?"
@@ -219,7 +219,7 @@
         "lines": [
           {
             "k": "Where:",
-            "v": "a Project in ChatGPT or Claude, or a Gem in Gemini"
+            "v": "ChatGPT or Claude: a Project. Gemini: a Gem"
           },
           {
             "k": "Name:",

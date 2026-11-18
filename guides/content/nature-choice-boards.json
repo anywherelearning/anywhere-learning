@@ -115,8 +115,8 @@
           "art": "wc/starter-textures.jpg"
         },
         {
-          "t": "Find 5 different greens or browns.",
-          "art": "wc/starter-colours.jpg"
+          "t": "Pour a cup of water on grass, then on dirt. Which drinks it faster?",
+          "art": "wc/water-wet-soil.jpg"
         },
         {
           "t": "Close your eyes. Listen for 3 sounds and name them.",
@@ -135,16 +135,16 @@
           "art": "wc/starter-slow-steps.jpg"
         },
         {
-          "t": "Find 3 shapes: a circle, a triangle and a spiral.",
-          "art": "wc/starter-shapes.jpg"
+          "t": "Drop a leaf, a feather and a pebble together. Which lands last?",
+          "art": "wc/signs-feather.jpg"
         },
         {
           "t": "Say 3 'I wonder...' questions out loud.",
           "art": "wc/starter-wonder.jpg"
         },
         {
-          "t": "Find 2 patterns: stripes, spots or repeating shapes.",
-          "art": "wc/starter-patterns.jpg"
+          "t": "Make a mud ball and a sand ball. Which one holds together?",
+          "art": "wc/rocks-sand.jpg"
         },
         {
           "t": "Make a tiny museum of 6 fallen things. Then put them back.",
@@ -178,16 +178,16 @@
           "art": "wc/explorer-hiding.jpg"
         },
         {
-          "t": "Make a pattern line: leaf, stone, leaf, stone.",
-          "art": "wc/explorer-pattern-line.jpg"
+          "t": "Throw a pinecone, a stick and a leaf. Which flies farthest?",
+          "art": "wc/signs-chewed-cone.jpg"
         },
         {
           "t": "Find 3 clues, like an eaten leaf or tracks. Guess the story.",
           "art": "wc/explorer-clues.jpg"
         },
         {
-          "t": "Find a weather clue: clouds, wind direction, damp soil.",
-          "art": "wc/explorer-weather.jpg"
+          "t": "Find two puddles. Guess which dries first, then check later.",
+          "art": "wc/water-dry-soil.jpg"
         },
         {
           "t": "Follow one ant or beetle for 2 minutes. Where did it go, and what did it carry?",
@@ -229,7 +229,7 @@
           "icon": "sprout"
         },
         {
-          "t": "Trace a water path: where would rain flow from here?",
+          "t": "Pour a cup of water at the top of a slope. Follow it and mark where it stops.",
           "art": "wc/scientist-water-path.jpg"
         },
         {
@@ -253,8 +253,8 @@
           "art": "wc/scientist-claim.jpg"
         },
         {
-          "t": "Find 5 textures on plants. Guess each one's job: protect, hold water or hide.",
-          "art": "wc/scientist-textures.jpg"
+          "t": "Count the rings on a cut stump or log end. How old was the tree?",
+          "art": "wc/scientist-time.jpg"
         },
         {
           "t": "Draw a tiny habitat. Label its shelter, food and water.",
@@ -340,8 +340,8 @@
           "art": "wc/researcher-photos.jpg"
         },
         {
-          "t": "Draw a micro-map of this spot with a legend of 5 symbols.",
-          "art": "wc/researcher-micro-map.jpg"
+          "t": "Mark a stick's shadow tip, wait 15 minutes, mark again. That line runs west to east.",
+          "art": "wc/crafts-shadow.jpg"
         },
         {
           "t": "Sit for 10 minutes. Note what changes every 2 minutes.",
@@ -360,8 +360,8 @@
           "icon": "footprints"
         },
         {
-          "t": "Hold a stick at arm's length, back up until it covers a tree, then pace to the trunk.",
-          "art": "wc/builder-measure.jpg"
+          "t": "Hold an arm-long stick at arm's length. Back up until it covers a tree, then pace to it.",
+          "art": "wc/builder-tool.jpg"
         },
         {
           "t": "Predict which of two spots has more insects. Then count.",

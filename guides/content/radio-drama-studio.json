@@ -64,26 +64,26 @@
   },
   "lesson": {
     "text": "A listener can't see the page. Everything they understand comes from the voice: the speed, the pauses, the clear words and the feeling. Reading for an audience is a different skill from reading to yourself, and recording is the fastest way to hear the difference.",
-    "before": "Reading the whole story fast, the way it sounds in your head.",
+    "before": "'The door opened and nobody was there and she screamed,' read in one breath.",
     "model": [
       {
-        "part": "First take",
-        "line": "Too fast, with words running into each other."
+        "part": "Pause",
+        "line": "The door / opened. //"
       },
       {
-        "part": "Marked",
-        "line": "Pauses slashed into the script, tricky words circled."
+        "part": "Stress",
+        "line": "Nobody was there, with 'Nobody' underlined."
       },
       {
-        "part": "Next take",
-        "line": "Slower, every word said clearly, a pause before the big moment."
+        "part": "Sound",
+        "line": "A creak before 'opened', then two seconds of silence."
       },
       {
-        "part": "Finished",
-        "line": "Sound effects and music added, then shared for friends and family."
+        "part": "Pace",
+        "line": "Slow on the last line, then the scream."
       }
     ],
-    "modelNote": "Nothing about the story changed between takes. Hearing the first recording played back, and marking where to slow down, turned a rushed reading into something people could actually follow and enjoy."
+    "modelNote": "In one breath, the scare is over before the listener gets there. Two slashes, one underlined word and a silence give them time to feel it, and not one word of the story changed."
   },
   "steps": [
     {
@@ -347,7 +347,7 @@
     "They pause before the important part",
     "They notice sounds around them and say what they could use them for"
   ],
-  "makeItReal": "Tonight, record your kid reading one page of their favourite book, play it back together, and ask what a listener would miss.",
+  "makeItReal": "Offer a recording to someone who will really listen: a bedtime chapter for a younger cousin, a story for a grandparent whose eyes get tired. Let your kid ask them what they want to hear next, then record that one.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

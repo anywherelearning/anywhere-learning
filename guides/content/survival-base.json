@@ -102,7 +102,7 @@
     {
       "title": "Pick the destination and the mission",
       "why": "Where you are decides every danger you'll face.",
-      "kid": "Your kid picks a destination, real-ish like a desert or the Arctic, or imaginary like an alien planet. Then they write the mission in one sentence: 'We're here to...'",
+      "kid": "Your kid picks a destination: a real one first, like the backyard for a night out, a campsite you're heading to or where you're staying, or an imaginary one like an alien planet. Then they write the mission in one sentence: 'We're here to...'",
       "you": "Help them commit to one idea. If they're stuck, offer two choices: 'hot and dry, or cold and icy?' gets an answer faster than 'where do you want to go?'",
       "ask": [
         "What's the main goal of the expedition?",
@@ -175,7 +175,7 @@
       "tip": "If the shelter 'floods,' ask 'what would you change?' not 'move it uphill.' The gap between the plan and the storm is where the learning is.",
       "levels": {
         "explore": "Face one scenario, make one fix and give a quick tour.",
-        "develop": "Face two scenarios, upgrade the base and give a narrated tour.",
+        "develop": "Face two scenarios, upgrade the base, then spend a real hour in it, or a night if it's outside, and fix what that finds.",
         "extend": "Score each danger 1 to 3 for how likely and 1 to 3 for how bad, multiply, and spend your upgrade on the highest score."
       }
     }

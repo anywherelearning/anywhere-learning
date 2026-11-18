@@ -198,7 +198,7 @@
         {
           "name": "Mini Tower",
           "t": "Build the tallest tower you can from loose stones, sticks or pinecones, away from trails.",
-          "d": "Put big stones on top of small ones. Take it down before you leave, so nobody mistakes it for a trail marker.",
+          "d": "Now flip it: big stones on top of small ones. How tall can that go?",
           "icon": "tower-control",
           "art": "wc/landart-13.jpg"
         },
@@ -328,7 +328,7 @@
         {
           "name": "Nature Rainbow",
           "t": "Make a 'rainbow' using what you can find.",
-          "d": "Give your rainbow a name, like 'Forest Rainbow'.",
+          "d": "Put the colours in rainbow order. Which was hardest to find here, and why?",
           "icon": "rainbow",
           "art": "wc/landart-31.jpg"
         },
@@ -363,7 +363,7 @@
         {
           "name": "Shadow Drawing",
           "t": "Place items so their shadows form a picture.",
-          "d": "Come back in 30 minutes. How has the picture changed, and why?",
+          "d": "Trace the shadow picture in the dirt with a stick. Can someone guess it without the objects?",
           "icon": "moon-star",
           "art": "wc/landart-36.jpg"
         }
@@ -394,11 +394,11 @@
           "art": "wc/landart-39.jpg"
         },
         {
-          "name": "Mini Museum",
-          "t": "Create 3 small artworks in a row, like an art show.",
-          "d": "Give each one a title.",
+          "name": "Water Painting",
+          "t": "Paint a picture on a warm, dry rock using only water and a leaf brush.",
+          "d": "Finish before the first line dries. Which lines vanish first, and why?",
           "icon": "gallery-horizontal",
-          "art": "wc/landart-40.jpg"
+          "art": "wc/builder-paintbrush.jpg"
         },
         {
           "name": "Nature Clock",
@@ -429,11 +429,11 @@
           "art": "wc/landart-44.jpg"
         },
         {
-          "name": "Frame a View",
-          "t": "Build a frame on the ground around something beautiful.",
-          "d": "Take a photo from above and give it a title.",
+          "name": "Reflection Art",
+          "t": "Build half a design at the edge of a still puddle so the water finishes it.",
+          "d": "Photograph it low, from the water's side. Does it look whole?",
           "icon": "scan",
-          "art": "wc/landart-45.jpg"
+          "art": "wc/water-reflection.jpg"
         },
         {
           "name": "Nature Letter Art",

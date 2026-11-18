@@ -38,7 +38,7 @@
   "academics": [
     {
       "subject": "Science",
-      "text": "forces, materials, water flow, insulation and seed dispersal"
+      "text": "forces, materials, water flow, insulation and sound"
     },
     {
       "subject": "Engineering",
@@ -126,11 +126,11 @@
           "art": "wc/stem-03.jpg"
         },
         {
-          "name": "Habitat Builder",
-          "t": "Design a micro-habitat for an imaginary tiny creature, using found items.",
-          "d": "Include three features: shelter, a water plan, and a food plan.",
+          "name": "Ground Anchor",
+          "t": "Push a stick into the ground, tie on a string and pull. When does it pop out?",
+          "d": "Lean the stick away from the pull, like a tent peg. Does it hold more?",
           "icon": "bug",
-          "art": "wc/stem-04.jpg"
+          "art": "wc/eng-anchor.jpg"
         },
         {
           "name": "Egg Nest",
@@ -184,11 +184,11 @@
       "title": "Test the materials",
       "cards": [
         {
-          "name": "Strong vs Flexible",
-          "t": "Find 3 materials that are strong and 3 that are flexible.",
-          "d": "Use both kinds to build something that's stable and bendy.",
+          "name": "Beam Test",
+          "t": "Lay a stick across two stones and hang a bag of pebbles from its middle. How far does it sag?",
+          "d": "Tie two thin sticks together. Do they beat one thick stick?",
           "icon": "shield-check",
-          "art": "wc/stem-11.jpg"
+          "art": "wc/eng-strong.jpg"
         },
         {
           "name": "The Waterproof Test",
@@ -205,11 +205,11 @@
           "art": "wc/stem-13.jpg"
         },
         {
-          "name": "Sun vs Shade Lab",
-          "t": "Find a sunny spot and a shady spot, and compare: temperature, moisture, plants.",
-          "d": "Predict which spot will change faster over 30 minutes, and explain why.",
+          "name": "Mud Brick",
+          "t": "Shape two mud bricks, one with dry grass mixed in. Leave both in the sun until tomorrow.",
+          "d": "Which one cracked? Drop both from knee height to test strength.",
           "icon": "sun",
-          "art": "wc/stem-14.jpg"
+          "art": "wc/rocks-clay.jpg"
         },
         {
           "name": "Muddy Water Filter",
@@ -244,11 +244,11 @@
           "art": "wc/rev-friction.jpg"
         },
         {
-          "name": "Sink or Float",
-          "t": "Predict which of 8 found items will float, then test them in a puddle or dish.",
-          "d": "Make one sinker float by changing its shape or adding something.",
+          "name": "Pendulum Count",
+          "t": "Hang a stone on a string from a branch. Count its swings in 10 seconds.",
+          "d": "Shorten the string, then try a heavier stone. Which changes the count?",
           "icon": "wind",
-          "art": "wc/rev-sinkfloat.jpg"
+          "art": "wc/frust-string.jpg"
         },
         {
           "name": "Balance Mobile",
@@ -269,11 +269,11 @@
           "art": "wc/signs-chewed-cone.jpg"
         },
         {
-          "name": "Nature Signal System",
-          "t": "Create a silent signal system with rocks and sticks: 3 symbols for start, stop and danger.",
-          "d": "Teach it to someone and test whether they understand.",
+          "name": "Leaf Megaphone",
+          "t": "Roll a big leaf or a strip of bark into a cone and call to someone 20 steps away.",
+          "d": "Make it longer or wider. Which carries your voice farther?",
           "icon": "signpost",
-          "art": "wc/stem-22.jpg"
+          "art": "wc/sound-voice.jpg"
         },
         {
           "name": "Leaf Roof",

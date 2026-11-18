@@ -9,7 +9,8 @@
     "Paper and a pencil",
     "A clock or a phone timer",
     "An ordinary day, at home or on the go",
-    "Coloured pencils for the energy line (optional)"
+    "Coloured pencils for the energy line (optional)",
+    "A deck of cards"
   ],
   "academics": [
     {
@@ -105,7 +106,7 @@
     {
       "title": "Catch your energy",
       "why": "You can't guess this one. You have to catch it.",
-      "kid": "Your kid stops at least five times in a day and gives themselves a number from the Fuel check card, writing down the time and what they'd just been doing. Then they join the dots into an energy line and look for the highs and the crash.",
+      "kid": "Your kid stops at least five times in a day, gives themselves a number from the Fuel check card and writes down the time. At each stop they also sort a shuffled half deck of cards into suits while you time it. Then they plot both on one energy line and see whether the number and the time agree.",
       "you": "Do it with them and say your numbers out loud. At the end, put your lines side by side and find out when you're both out of fuel.",
       "ask": [
         "What's your number right now?",
@@ -114,7 +115,7 @@
       "tip": "Look at what they'd just eaten or done before each big change. That's usually where the surprises are.",
       "levels": {
         "explore": "Say your number at breakfast, lunch and bedtime, and colour in three dots.",
-        "develop": "Check in five or six times, draw your line and name what pushed it up or down.",
+        "develop": "Check in five or six times with a number and a card-sort time, draw your line and name what pushed it up or down.",
         "extend": "Track two different kinds of day, compare the lines and explain what's different."
       }
     },
@@ -219,6 +220,10 @@
           {
             "k": "1:",
             "v": "done for now"
+          },
+          {
+            "k": "Prove it:",
+            "v": "sort half a deck into suits, timed"
           }
         ],
         "ask": "What's your number right now?"

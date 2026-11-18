@@ -141,7 +141,7 @@
     {
       "title": "See it for yourselves",
       "why": "Seeing the evidence with your own eyes is what makes the answer stick.",
-      "kid": "Your kid visits the feature and fills in the Field notes card: photos, sketches, what they see, hear and smell, plus one simple measurement that tests their answer, like timing a leaf down a stream or pacing a beach. If there's a guide, they ask one question.",
+      "kid": "Your kid visits the feature and fills in the Field notes card: photos, sketches, and what they see, hear and smell, plus one clue they check on the spot that tests their answer, like a sulfur smell at a crater or roots standing in water. If there's a guide, they ask one question from the Ask the guide card.",
       "you": "Book a guide where it makes sense, and stay on marked trails. Keep them beside you near edges, water and wildlife. Point out evidence quietly and let them find the rest. Never touch hot springs or crater water.",
       "ask": [
         "What did you see that proves your answer, or doesn't?",
@@ -157,7 +157,7 @@
     {
       "title": "Explain it",
       "why": "If they can explain it to someone else, they've really understood it.",
-      "kid": "Your kid makes a field study page in a notebook: the question, the guess, the answer, the evidence and how the feature shapes life here, like what grows, what lives there and where people build.",
+      "kid": "Your kid makes a field study page in a notebook: the question, the guess, the answer, the evidence and how the feature shapes life here. Then they explain it in one minute to someone who hasn't seen it, like a friend on a video call or the next family heading there, and answer their questions.",
       "you": "Ask them to explain it to you first, out loud, before anything is written. Then ask 'So how does this change life for people here?'",
       "ask": [
         "How would you explain it to a friend in one minute?",

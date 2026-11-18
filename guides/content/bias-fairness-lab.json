@@ -130,14 +130,14 @@
       "levels": {
         "explore": "Count one thing, like how many were men and how many were women.",
         "develop": "Tally four things for each description, and circle the biggest pattern.",
-        "extend": "Turn your tallies into a simple chart, and explain what it shows."
+        "extend": "Find the real number for one job, like the share of nurses who are men where you live, and decide if the AI matches real life or exaggerates it."
       }
     },
     {
       "title": "Compare languages",
       "why": "AI usually learned the most from English, so it often works best in English.",
       "kid": "Your kid asks the same question in two languages, using the Two languages card, and compares how good, how long and how accurate each answer is.",
-      "you": "If your family speaks another language, use it. If not, ask the question in a language you don't speak, ask the AI to translate its answer back, and compare it with the answer in yours.",
+      "you": "If your family speaks another language, use it. If not, ask about your own town in English and in a language with fewer speakers online, like Welsh or Swahili, then have the AI translate that answer back and compare the facts.",
       "ask": [
         "Which answer was better?",
         "Why might that be?"
@@ -162,7 +162,7 @@
       "levels": {
         "explore": "Add one detail to your prompt, and see if the picture changes.",
         "develop": "Rewrite two prompts to be fairer, test them and compare.",
-        "extend": "Write a short note to the company that makes the AI, with your evidence."
+        "extend": "Find a description where even your specific prompt still fails, and work out which word the AI keeps ignoring."
       }
     }
   ],

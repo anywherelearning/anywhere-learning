@@ -102,7 +102,7 @@
       "title": "Fly a paper helicopter",
       "why": "A quick spinning toy, then the hunt for real seeds that do the same.",
       "kid": "Cut a strip of paper, split the top into two flaps, fold them opposite ways, fold the bottom up for weight and drop it from up high: it spins down slowly. That's the same trick a maple key uses. Then head outside and gather 5 to 10 different seeds or pods. The more different, the better: a spinning maple key, a sticky burr, a heavy acorn, a fluffy dandelion.",
-      "you": "Help make the helicopter, then steer them toward variety on the hunt and let them lead. Seeds are everywhere once you look: in cracks, under trees, stuck to your own socks. Longer wings usually fall slower: more paper pushing against the air.",
+      "you": "Help make the helicopter, then steer them toward variety on the hunt and let them lead. Seeds are everywhere once you look: in cracks, under trees, stuck to your own socks. For Extend: most seeds land close to the parent, which is why the few that get far matter so much.",
       "starters": [
         "Maple keys",
         "Burrs",
@@ -119,7 +119,7 @@
       "levels": {
         "explore": "Fly the helicopter, then collect 3 or 4 different seeds.",
         "develop": "Collect 5 to 10 seeds with different shapes.",
-        "extend": "Fly one with longer wings too. Which falls slower?"
+        "extend": "Pace out from one tree and count its seeds at 2, 5 and 10 steps. Where does the count drop off?"
       }
     },
     {

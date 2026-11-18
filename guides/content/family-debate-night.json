@@ -4,7 +4,7 @@
   "title": "Family Debate Night",
   "tagline": "Persuasion · Critical thinking · Respectful disagreement",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid picks a topic with two real sides, researches both, builds a case and argues it in a real family debate, with a timer, a judge and a verdict. They learn to back up what they say and to answer the other side's best point, without it turning into a fight.",
+  "goal": "Your kid picks a real question with two sides, ideally a family decision that's still open, builds a case and argues it in a family debate with a timer, a judge and a verdict that actually decides it. They learn to back up what they say and to answer the other side's best point, without it turning into a fight.",
   "need": [
     "A topic with two sides (ideas in Step 1), and a family member to debate or judge",
     "Paper and pencil for notes",
@@ -109,15 +109,15 @@
     {
       "title": "Warm up with silly debates",
       "why": "One-minute arguments about hot dogs and pizza loosen everyone up before the topic is chosen.",
-      "kid": "Flip a coin to pick sides, then debate a silly question for one minute each: is a hot dog a sandwich? Should pizza be eaten with a fork? Do a few rounds. Then your kid picks the topic for the real debate. It needs two sides people genuinely disagree on, and they decide which side they'll argue.",
+      "kid": "Flip a coin to pick sides, then debate a silly question for one minute each: is a hot dog a sandwich? Should pizza be eaten with a fork? Do a few rounds. Then your kid picks the real topic, ideally a family decision that's actually open, so the verdict settles something. They decide which side they'll argue.",
       "you": "Run the timer and play along, arguing your side with a straight face. Then help brainstorm topics and let them choose. Fun topics are great for a first debate. Serious ones can wait until they're comfortable with the format.",
       "starters": [
-        "Should kids have a bedtime?",
-        "Should kids pick their own clothes?",
-        "Summer or winter?",
+        "Where we go this Saturday",
+        "What's for dinner on Friday",
         "Should kids get paid for chores?",
-        "Books or movies?",
-        "Should we have a screen-free day?"
+        "Should kids have a bedtime?",
+        "How weekend screen time works",
+        "Which pet we get, or whether we get one"
       ],
       "ask": [
         "Can you think of a good reason for the other side?",

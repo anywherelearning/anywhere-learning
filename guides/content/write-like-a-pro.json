@@ -105,7 +105,7 @@
     {
       "title": "Play style switch",
       "why": "One sentence about the dog in three voices, then the style and topic.",
-      "kid": "Pick something silly, like the family dog. Your kid describes it in one sentence as a news reporter, then as a restaurant critic. Then they flip through the Writing Style Cards at the end of the guide, pick a style and a topic they care about, and write: 'I'm writing a [style] about [topic].'",
+      "kid": "Pick something silly, like the family dog. Your kid describes it in one sentence as a news reporter, then a restaurant critic, then a sports commentator. Then they flip through the Writing Style Cards at the end of the guide, pick a style and a topic they care about, and write: 'I'm writing a [style] about [topic].'",
       "you": "Play the game too, the more dramatic the better. Then help them find a style and topic combination with enough to say, and let them choose.",
       "starters": [
         "Review + a game or book",
@@ -138,7 +138,7 @@
       "tip": "When kids know a real person will read it, they suddenly care whether it makes sense.",
       "levels": {
         "explore": "Name your reader and pick a tone.",
-        "develop": "Answer all four questions, and write one sentence about how your reader changes your writing.",
+        "develop": "Write down your reader's answer, what they already know, what they want and the tone, then one sentence on how this reader changes your writing.",
         "extend": "Write down the first question or 'but...' your reader will have, and plan where you'll answer it."
       }
     },

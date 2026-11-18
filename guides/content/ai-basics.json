@@ -126,7 +126,7 @@
         "Did it get anything wrong?",
         "Does it know you, or just what's been typed?"
       ],
-      "tip": "Ask it something only your family knows, like the colour of your front door. Watch whether it says it can't know, or guesses.",
+      "tip": "If it gets a local question right, ask how it knows. Many tools search the web now, and that's looking it up, not knowing.",
       "levels": {
         "explore": "Test one myth with a parent, like 'it knows everything'.",
         "develop": "Test three myths, and say which ones fell apart.",
@@ -162,7 +162,7 @@
       "levels": {
         "explore": "Help pick one rule, and draw a picture for it.",
         "develop": "Write four or five rules together, and put them on the fridge.",
-        "extend": "Write the rules, then check back in a month and change one that isn't working."
+        "extend": "Write one rule for an AI that talks to you first, like a chatbot in a game, an app or a shop website."
       }
     }
   ],
@@ -219,7 +219,7 @@
         "lines": [
           {
             "k": "'It knows everything.'",
-            "v": "ask about a tiny local thing, like your library's hours, then check"
+            "v": "ask what's on the table beside you, and see if it admits it can't know"
           },
           {
             "k": "'A person types the answers.'",

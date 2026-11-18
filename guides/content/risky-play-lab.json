@@ -8,7 +8,7 @@
   "need": [
     "An outdoor spot with something to climb, balance on or jump from: a tree, a log, rocks, a low wall",
     "A slope for speed, on running feet, a bike or a scooter, with a helmet on wheels",
-    "For tools: a hammer, a few nails, safety glasses or sunglasses, and an old stump or thick log",
+    "For tools: a hammer, a few nails, safety glasses (sunglasses aren't made to stop flying bits) and an old stump or thick log",
     "Shoes that grip, a notebook and a pencil"
   ],
   "academics": [
@@ -214,7 +214,7 @@
           },
           {
             "k": "Tools:",
-            "v": "glasses on, a clear zone, eyes on the nail"
+            "v": "safety glasses on, a clear zone, eyes on the nail"
           },
           {
             "k": "Stop:",

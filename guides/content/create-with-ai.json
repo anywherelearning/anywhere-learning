@@ -38,7 +38,7 @@
       },
       {
         "when": "One or more sittings",
-        "what": "Make it and steer it (Steps 3 and 4)."
+        "what": "Make it, then test it on the person it's for (Steps 3 and 4)."
       },
       {
         "when": "When it's finished",
@@ -98,7 +98,7 @@
       "levels": {
         "explore": "Pick a project, and say one part you'll do yourself.",
         "develop": "Fill in the Who does what card for your project.",
-        "extend": "Split a bigger project, and explain why each part is yours or AI's."
+        "extend": "Pick one part AI could do well, keep it for yourself anyway, and explain what you'd lose by handing it over."
       }
     },
     {
@@ -162,7 +162,7 @@
       "levels": {
         "explore": "Show it to someone, and say one part you did and one part AI did.",
         "develop": "Share it with the person it's for, with an honest how-I-made-it line.",
-        "extend": "Write the email or message to the person it's for yourself, with no AI help."
+        "extend": "Before you share, find the AI rules of the place it's going, like a contest, a market listing or a video site, and follow them."
       }
     }
   ],

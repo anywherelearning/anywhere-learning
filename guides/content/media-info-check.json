@@ -7,7 +7,7 @@
   "goal": "Your kid learns to check before they believe or share. Faced with a post, a photo or a video, they pause when it makes them feel a lot, find out who made it, look closely for signs it was edited or made by AI, search for it somewhere else, and decide: real, fake or not sure yet.",
   "need": [
     "A screen you can look at together",
-    "A few things to check: the hurricane shark photo, the Pacific Northwest Tree Octopus website, and one real surprising photo",
+    "Two hurricane sharks to compare: the fake 2017 Houston highway photo and the real 2022 Fort Myers video, plus the Tree Octopus website",
     "A search engine, with you beside them"
   ],
   "academics": [
@@ -162,7 +162,7 @@
       "levels": {
         "explore": "Say real, fake or not sure, and why.",
         "develop": "Decide, then explain your three best clues to someone at home.",
-        "extend": "Check three things you see this week, and tell the family which ones fooled you at first."
+        "extend": "Find a real photo shared with a false caption, and explain why the photo checks passed but the story didn't."
       }
     }
   ],

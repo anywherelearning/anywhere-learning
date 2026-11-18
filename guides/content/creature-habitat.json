@@ -167,7 +167,7 @@
     {
       "title": "Make the field guide and reveal it",
       "why": "Scientists document a discovery, then share it.",
-      "kid": "Your kid makes a field guide page for their new species, using the Field guide checklist card. Then the test: hide the creature in its habitat, give someone only the page, and see if they can find it and say what it eats and fears. Last, they present the discovery.",
+      "kid": "Your kid makes a field guide page for their new species, using the Field guide checklist card. Then the test: they send the page, without the model, to a grandparent or friend who draws the creature from the words alone. Wherever the drawing is wrong, the page was unclear, so they fix that line. Last, they reveal the real creature.",
       "you": "Be a curious audience. Ask real questions, not quiz questions.",
       "ask": [
         "What did they get wrong from the page alone?",
@@ -176,7 +176,7 @@
       "tip": "Don't worry about spelling. Younger kids can dictate while you write, or just draw and label.",
       "levels": {
         "explore": "Draw and label it, then show it to someone.",
-        "develop": "Fill in every part of the checklist, run the find-it test with someone, then fix the page.",
+        "develop": "Fill in every part of the checklist, run the draw-it test with someone, then fix the page.",
         "extend": "Give it a two-part scientific name, like Vulpes zerda for the fennec fox, and add a 'not to be confused with' line saying how to tell it from a real animal."
       }
     }
@@ -308,7 +308,7 @@
       "Invent a second creature for the same habitat and work out how the two get along",
       "Write a short story starring the creature",
       "Compare their habitat with a real ecosystem",
-      "Send the field guide page to a cousin or grandparent and ask them to draw the creature from the words alone"
+      "Find a real species described in the last few years, and compare its first description with your page."
     ]
   },
   "signs": [

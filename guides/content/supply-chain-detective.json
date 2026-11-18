@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "Most adults can't say where their own jam comes from, so look things up side by side. Read the small print, drive to the store, and ask 'Where was it before this?' at every stop until the trail runs out.",
+    "intro": "Most adults can't say where their own jam comes from, so look things up side by side. Read the small print, walk or drive to the store, and ask 'Where was it before this?' at every stop until the trail runs out.",
     "plan": [
       {
         "when": "Session 1",
@@ -146,7 +146,7 @@
       "tip": "Make your town the last stop. Seeing your own street at the end of a long line makes it real.",
       "levels": {
         "explore": "Name four jobs it took to get your product to you.",
-        "develop": "Estimate the total distance, and list at least eight jobs.",
+        "develop": "Estimate the total distance, list eight jobs, then split a real dollar in coins into piles, one per job, by how much you think each gets.",
         "extend": "Guess what share of the price each job gets, then check one guess by asking or looking it up."
       }
     },
@@ -303,7 +303,7 @@
       "Trace a piece of clothing from the field to the store",
       "Map a whole meal and count the countries on the plate",
       "Trace something you throw away, like a can or a jar, to where it goes after the bin",
-      "Trace one thing from a takeout meal back to its farm"
+      "Find one thing in your home made within an hour of where you live, and trace its whole chain."
     ]
   },
   "signs": [

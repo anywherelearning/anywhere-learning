@@ -12,27 +12,27 @@
     "Two minutes at the same time every day"
   ],
   "lesson": {
-    "text": "One day doesn't make a trend. Compare averages, not single days, to see where the numbers are really going.",
-    "before": "Today was colder than yesterday, so it's getting colder.",
+    "text": "Some numbers drift steadily and some bounce. Sunset moves by about the same few minutes every day, so you can predict it weeks ahead. Temperature bounces, so you can only predict a range.",
+    "before": "'It's getting dark earlier. Soon it'll be dark at dinner.'",
     "model": [
       {
-        "part": "A week",
-        "line": "12°, 15°, 11°, 14°, 16°, 13°, 17°."
+        "part": "Track",
+        "line": "Sunset on Day 1: 6:12. Day 8: 5:58. That's 14 minutes in 7 days."
       },
       {
-        "part": "Day to day",
-        "line": "+3, −4, +3, +2, −3, +4. Bumpy, up and down."
+        "part": "Rate",
+        "line": "14 ÷ 7 = 2 minutes earlier each day."
       },
       {
-        "part": "Averages",
-        "line": "First 3 days: 38 ÷ 3 ≈ 12.7°. Last 3 days: 46 ÷ 3 ≈ 15.3°."
+        "part": "Predict",
+        "line": "Dinner is at 5:30. 5:58 − 5:30 = 28 minutes, and 28 ÷ 2 = 14 days. Dark at dinner in two weeks."
       },
       {
-        "part": "So",
-        "line": "It's warming up by about 2.7°, even with a few colder days in the middle."
+        "part": "Compare",
+        "line": "That week's temperatures went 12°, 15°, 11°, 14°. No steady rate, so forecast a range, not a date."
       }
     ],
-    "modelNote": "Two days can't show a trend. Averaging 3 days at each end means one cold morning can't fool you."
+    "modelNote": "'Soon' had no date in it. A steady rate turned it into a day on the calendar, and the bumpy temperatures showed when a rate can't be trusted."
   },
   "academics": [
     {
@@ -173,7 +173,7 @@
     {
       "title": "Predict and check",
       "why": "A forecaster's payoff: using the trend to see ahead.",
-      "kid": "Using the trend, your kid forecasts the next few days with a reason, and the family uses it for one real call: which jacket, a picnic day, when to water the garden. Then they keep tracking and check. Were they right, close or way off?",
+      "kid": "Your kid uses the daily rate to predict a date the family cares about, like the first evening it's dark at dinner, marks it on the calendar and keeps tracking to check. For a bumpy number like temperature, they forecast a range for tomorrow instead.",
       "you": "Treat their prediction like a real forecast. A miss is a great result: 'why didn't it go the way the pattern said?' is the best question in the guide.",
       "ask": [
         "What will tomorrow's number be, and why?",
@@ -301,7 +301,7 @@
       "lines": [
         "Change = today − yesterday",
         "Average = total ÷ number of days",
-        "Prediction = last number + typical daily change"
+        "Days until = minutes still to go ÷ change per day"
       ]
     }
   },

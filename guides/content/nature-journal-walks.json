@@ -123,7 +123,7 @@
           "t": "Draw the shapes you see in the clouds right now.",
           "d": "Draw the same patch of sky 10 minutes later. Which clouds moved, and which way?",
           "art": "wc/journal-03.jpg",
-          "jp": "Look at the clouds and draw the shapes you see. Write a short story about one of the clouds."
+          "jp": "Draw the shapes in the clouds, then the same patch of sky 10 minutes later. Which clouds moved, and which way?"
         },
         {
           "name": "Adopt a Tree",
@@ -151,7 +151,7 @@
           "t": "Find a spider web. Draw it from the middle out, counting the spokes. Look, don't touch.",
           "d": "Is the spiral even, or are there gaps? Look for the spider nearby.",
           "art": "wc/signs-spider-web.jpg",
-          "jp": "Find different shapes in nature, like circles, triangles or spirals. Draw them and describe where you found them."
+          "jp": "Find a spider web. Draw it from the middle out and count the spokes. Is the spiral even, or are there gaps?"
         },
         {
           "name": "Rock Portrait",
@@ -165,7 +165,7 @@
           "t": "Draw how the wind moves the grass, the leaves or the water.",
           "d": "Drop a pinch of dry grass. Draw an arrow showing which way the wind took it.",
           "art": "wc/journal-09.jpg",
-          "jp": "Feel the wind on your face. Draw the wind moving through the trees or the grass, and write a story about where the wind is going."
+          "jp": "Draw how the wind moves the grass or leaves. Drop a pinch of dry grass and draw an arrow showing where the wind took it."
         },
         {
           "name": "Insect-Eye View",
@@ -202,10 +202,10 @@
         },
         {
           "name": "Getting Ready",
-          "t": "Choose an animal and draw how it gets ready for winter.",
-          "d": "How does it stay warm or find food when it's cold?",
+          "t": "Watch a squirrel, bird or insect for 5 minutes. Draw what it's carrying, eating or hiding.",
+          "d": "Is it getting ready for winter? What's your clue?",
           "art": "wc/journal-14.jpg",
-          "jp": "Choose an animal and draw how it gets ready for winter (thicker fur, a hiding place...). Write about what this animal does to stay warm."
+          "jp": "Watch a squirrel, bird or insect for 5 minutes. Draw what it carries, eats or hides. Is it getting ready for winter? Write your clue."
         },
         {
           "name": "Leaf Investigation",
@@ -294,10 +294,10 @@
         },
         {
           "name": "Under the Snow",
-          "t": "Draw what you think is happening under the snow: sleeping animals, waiting plants.",
-          "d": "Write a story about one of them.",
+          "t": "Dig a small hole in deep snow down to the ground. Draw the layers from top to bottom.",
+          "d": "Put a hand on the ground at the bottom, then on top of the snow. Where would a mouse rather be?",
           "art": "wc/journal-25.jpg",
-          "jp": "Imagine what is happening under the snow, where animals hide and plants wait for spring. Draw this hidden world and write a story about it."
+          "jp": "Dig a small hole in deep snow down to the ground and draw the layers. Feel the bottom and the top. Where would a mouse rather live, and why?"
         },
         {
           "name": "Bare Branches",
@@ -334,7 +334,7 @@
         {
           "name": "Spring Rain",
           "t": "Watch the rain. Draw the drops, the puddles and the ripples.",
-          "d": "How does rain help nature wake up?",
+          "d": "Follow where the rain goes after it lands. Draw its path from leaf to ground.",
           "art": "wc/journal-30.jpg",
           "jp": "Watch a rainy spring day. Draw the raindrops or the puddles and write about how rain helps nature wake up."
         },

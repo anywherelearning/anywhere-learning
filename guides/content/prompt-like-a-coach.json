@@ -80,7 +80,7 @@
       },
       {
         "part": "Finished",
-        "line": "Some pages, a break until the next day. Some, what it gave them."
+        "line": "Some pages after a break until the next day, some with what it gave them."
       }
     ],
     "modelNote": "The pictures didn't get better from trying harder. They got better from smaller, clearer requests, fresh starts, and knowing when a picture was good enough for the book."
@@ -105,7 +105,7 @@
     {
       "title": "Write the first prompt",
       "why": "A clear first prompt does most of the work. Vague words get vague pictures.",
-      "kid": "Your kid turns the sketch into a prompt, using the Prompt parts card: who, doing what, where, the style, and what to leave out.",
+      "kid": "Your kid turns the sketch into a prompt, using the Prompt parts card: who, doing what, where, the style, and what to show instead of what they don't want.",
       "you": "Read it back to them out loud. If you can picture it from their words alone, it's ready.",
       "ask": [
         "Could someone draw this from your words alone?",
@@ -213,8 +213,8 @@
             "v": "'colourful cartoon, like a picture book'"
           },
           {
-            "k": "5. Leave out:",
-            "v": "'a plain background', not a list of don'ts"
+            "k": "5. Say it, don't ban it:",
+            "v": "'a plain white background'"
           }
         ],
         "ask": "Which part do you usually forget?"
