@@ -7,7 +7,7 @@
   "goal": "Your kid makes something real with AI, like a website, a story or a poster, and stays the one in charge. They decide what it's for and who it's for, do the parts that need them, let AI help with the rest, steer it until it matches what they had in mind, and are honest about what AI made.",
   "need": [
     "A grown-up's account on an AI tool",
-    "A real project with a real audience, like a client, a family member or a friend",
+    "A real project with a real person waiting for it, like a party invitation, a poster for a sale or a recipe card for a grandparent",
     "A notebook for the plan and the who-did-what list"
   ],
   "academics": [
@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is either banning AI from creative work or letting it do everything. Your job is to help them decide which parts are theirs, keep them as the boss of the result, and make honesty about AI normal.",
+    "intro": "Banning AI from creative work and letting it do everything fail the same way. Help them decide which parts are theirs, keep them the boss of the result, and make saying 'AI helped' normal.",
     "plan": [
       {
         "when": "Before the screen",
@@ -57,7 +57,7 @@
       },
       {
         "q": "They want to copy someone else's work or style",
-        "a": "Use AI to make something new, not a copy of a real artist's work. Their style took them years; your idea is what makes it yours."
+        "a": "Use AI to make something new, not a copy of a real artist's work. That style took the artist years; your kid's own idea is what makes it theirs."
       }
     ]
   },
@@ -71,7 +71,7 @@
       },
       {
         "part": "AI",
-        "line": "Claude makes a mockup from his ideas, and does the coding."
+        "line": "AI makes a mockup from his ideas, and does the coding."
       },
       {
         "part": "Steers",
@@ -134,9 +134,9 @@
       }
     },
     {
-      "title": "Steer it until it's yours",
+      "title": "Test it on the person it's for",
       "why": "The first version is AI's. The final version should be theirs.",
-      "kid": "Your kid asks for changes until it matches what they had in mind, using the Steer it card, and does any part they decided was theirs, like the words or the final touches.",
+      "kid": "Your kid shows the unfinished version to the person it's for, notes what they say and where they get confused, then uses the Steer it card to change it and does any part they decided was theirs.",
       "you": "Ask 'Is this what you wanted?' before 'Is it finished?' They decide when it's done.",
       "ask": [
         "Is it the way you want it yet?",
@@ -146,7 +146,7 @@
       "levels": {
         "explore": "Ask for one change, and say if it's better.",
         "develop": "Steer it until it matches your brief, and do your own part.",
-        "extend": "Show the first and final versions side by side, and explain every big change."
+        "extend": "Watch the person use it without explaining anything, write down every place they hesitate, and fix those first."
       }
     },
     {

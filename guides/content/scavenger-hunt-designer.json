@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need to be an event planner. Your job is to be the first player, and a slightly confused one. They plan, you play. When something goes wrong, resist fixing it, because a clue nobody can solve teaches more than a clue you rewrote for them.",
+    "intro": "Be the first player, and a slightly confused one. They plan, you play. When a clue doesn't work, resist rewriting it, because a clue nobody can solve teaches more than one you fixed for them. Save your feedback for the very end.",
     "plan": [
       {
         "when": "Session 1",
@@ -83,7 +83,7 @@
         "line": "Added a small drawing of a shoe for him."
       }
     ],
-    "modelNote": "The first version is an instruction. The second is a small puzzle, tested on real players and fixed for the youngest one."
+    "modelNote": "A doormat instruction gets found in two seconds and forgotten. The riddle made players think, and testing it on the youngest player is what added the shoe drawing."
   },
   "steps": [
     {
@@ -163,7 +163,7 @@
       "levels": {
         "explore": "Hide your clues, run the hunt and pick one thing to change.",
         "develop": "Test it first, run it, then fix at least two clues.",
-        "extend": "Time it, collect feedback from every player, and run round two for a new group."
+        "extend": "Write an easy and a hard version of every clue, and choose which to hand over based on how fast the last spot went."
       }
     }
   ],
@@ -306,7 +306,7 @@
   ],
   "conclusion": {
     "headline": "They ran the whole thing, and everyone had fun because of it.",
-    "text": "Listen while they gather up the clues. If they're already saying 'Next time, I'd put that clue later' or planning one for the cousins, they've started thinking like someone who makes things happen for other people.",
+    "text": "Listen while they gather up the clues. They'll already be fixing them: this one later, that one with a drawing. Ask who they'd make the next one for, and put a date on it.",
     "celebrate": "Ask them to take a bow at the finish, and say: 'You made this whole afternoon happen.'",
     "extensions": [
       "Design a hunt for players who can't read yet: pictures, sounds and colours only",

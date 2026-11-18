@@ -102,7 +102,7 @@
     {
       "title": "Scout and measure the site",
       "why": "Every good campout starts with the right spot, and the numbers to back it up.",
-      "kid": "Your kid walks the outdoor space and finds 2 or 3 possible spots. For each one they check: is the ground flat, is it sheltered from wind, would it stay dry in rain, how far is the bathroom? They pick the best one, then measure its length and width and work out the area.",
+      "kid": "Your kid tests 2 or 3 spots like a camper: lies down on each to feel for bumps and slope, checks where rain would run, and times the walk to the bathroom. They pick the best one, then measure its length and width and work out the area.",
       "you": "Walk it with them and ask questions, but let them make the final call. Help hold the end of the tape, and let them read and record the numbers.",
       "ask": [
         "What would happen to this spot if it rained?",
@@ -112,13 +112,13 @@
       "levels": {
         "explore": "Measure the spot with the tape, then lay a sleeping bag on it. How many fit side by side?",
         "develop": "Compare 2 spots with a pros and cons list, then measure the winner and subtract any unusable areas.",
-        "extend": "Score 3 spots from 1 to 5 on flatness, shelter, distance and safety, counting the most important one double."
+        "extend": "Find the slope of each spot: lay a long board on it, prop up the low end until a ball sits still, and measure the gap. Which spot drops least?"
       }
     },
     {
       "title": "Draw the camp layout",
       "why": "Turning measurements into a plan that fits.",
-      "kid": "Your kid lists the zones the camp needs, like sleeping, snacks, sitting and an activity area. They measure or look up the size of each one, add up the areas and check it fits. Then they draw a bird's-eye layout with a clear path to the house.",
+      "kid": "Your kid lists the zones the camp needs: sleeping, snacks, sitting and games. They measure each one, or use the Space card in Campout Numbers at the end of the guide, add up the areas and check it fits. Then they draw a bird's-eye layout with a clear path to the house.",
       "you": "Ask them to explain the layout. 'Can you walk between the tent and the chairs in the dark?' and 'How fast can you get to the house?' are the questions that matter.",
       "starters": [
         "Sleeping",
@@ -172,7 +172,7 @@
     },
     {
       "title": "Camp out and compare the plan with reality",
-      "why": "The payoff, and the maths that only happens afterward.",
+      "why": "The payoff, and the math that only happens afterward.",
       "kid": "Your kid sets up the camp following their layout and checks items off the list. During the campout they follow their schedule and handle surprises. The next morning they pack up and compare plan with reality: setup time, food used or left over, and what it actually cost.",
       "you": "Set up together: they direct, you lift and hold. During the evening, when something goes wrong, ask 'what's your plan?' instead of fixing it.",
       "ask": [
@@ -219,7 +219,7 @@
             "v": "at least 2 ft wide"
           }
         ],
-        "ask": "Does your tent fit with a 2 ft path all around it?"
+        "ask": "Does your layout leave a 2 ft path to the house?"
       },
       {
         "name": "Food per person",
@@ -301,7 +301,7 @@
       }
     ],
     "after": {
-      "label": "The campout maths",
+      "label": "The campout math",
       "lines": [
         "Area = length × width",
         "Food to bring = amount per person × number of campers",

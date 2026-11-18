@@ -63,6 +63,10 @@
       {
         "q": "The family has allergies or diets",
         "a": "Pick a dish everyone can eat, or investigate one dish while eating another."
+      },
+      {
+        "q": "We're not travelling right now",
+        "a": "Pick a dish from a family-run restaurant in your town, or a grandparent's dish, and investigate it the same way with that cook."
       }
     ]
   },
@@ -76,7 +80,7 @@
       },
       {
         "part": "Trace",
-        "line": "The corn is ground into masa on the only grinder around, right in the restaurant."
+        "line": "The corn is ground into masa on the village's only grinder, then shaped by hand at the class."
       },
       {
         "part": "Learn",
@@ -141,10 +145,10 @@
     {
       "title": "Learn it from a local cook",
       "why": "A cook's hands know things no recipe writes down.",
-      "kid": "Your kid learns to make the dish from someone local: a cooking class, a cook at a stall or a host. They watch first, ask the questions on the Ask the cook card, then make it with their own hands, including what's served with it.",
+      "kid": "Your kid learns to make the dish from someone local: a cooking class, a cook at a stall or a host. They watch, ask the questions on the Ask the cook card, then make it with their own hands, writing down the recipe and amounts as they go.",
       "you": "Find the lesson and help with the asking. Stand right beside them at the griddle, and handle the knives yourself. Let the cook correct your kid, not you, and take photos of their hands at work.",
       "ask": [
-        "What's the one thing beginners always get wrong?",
+        "What do you do by feel that no recipe says?",
         "What do you put on the side, and why?"
       ],
       "tip": "Ask the cook how they learned it. The answer is often a story about their family.",
@@ -261,8 +265,8 @@
             "v": "'Who taught you to make it?'"
           },
           {
-            "k": "Mistake:",
-            "v": "'What do beginners get wrong?'"
+            "k": "By feel:",
+            "v": "'What do you do without measuring?'"
           },
           {
             "k": "Secret:",
@@ -291,8 +295,8 @@
       "text": "noticing what each cook does differently"
     },
     {
-      "name": "Respect",
-      "text": "learning a dish from the people who make it"
+      "name": "Cooking by feel",
+      "text": "shaping, flipping and seasoning like the cook"
     },
     {
       "name": "Trying again",

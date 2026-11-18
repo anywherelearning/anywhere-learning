@@ -72,7 +72,7 @@
     "troubleshoot": [
       {
         "q": "They won't let go of anything",
-        "a": "That's fine. Don't push. The cost-per-wear maths often changes their mind on its own, and keeping things is a decision too."
+        "a": "That's fine. Don't push. The cost-per-wear math often changes their mind on its own, and keeping things is a decision too."
       },
       {
         "q": "No one to swap with",
@@ -139,7 +139,7 @@
     },
     {
       "title": "Price the swap pile",
-      "why": "Pricing is part maths, part judgement.",
+      "why": "Pricing is part math, part judgement.",
       "kid": "Your kid sets a fair price on every item they're swapping or selling. They use the condition rating and look up what similar things sell for at a thrift store or a secondhand site. Then they write one line explaining each price.",
       "you": "Ask 'would you pay that for it?' and 'why is this one worth more than that one?' Help them check real secondhand prices, in a store or online.",
       "ask": [
@@ -178,17 +178,17 @@
     {
       "title": "Compare new and secondhand",
       "why": "Where percentages prove whether secondhand was worth it.",
-      "kid": "For 3 to 5 things they got, your kid looks up the price new and works out the saving and the percentage off. Then they predict how many times they'll wear each one, find the predicted cost per wear, and add up the totals: spent, saved, and items given a second life.",
+      "kid": "For 3 to 5 things they got, your kid looks up the price new and works out the saving and the percentage off. Then they add up the totals: spent, saved, and items given a second life, and work out what a season of buying this way would save the family.",
       "you": "Help them look up new prices. Ask 'is the secondhand one just as good?' and 'if you did this every season, how much would you save in a year?'",
       "ask": [
         "A $40 jacket for $10: how much did you save, and what percentage off is that?",
-        "Which find will be the best value a few months from now?"
+        "Which find saved the biggest share of its new price?"
       ],
       "tip": "Have them write the yearly total big at the bottom of the page. It's usually a number that surprises the whole family.",
       "levels": {
         "explore": "For 3 items, count up from the thrift price to the new price to find what you saved.",
         "develop": "Compare 5 items with savings and percentages, and rank them by biggest saving.",
-        "extend": "By cost per wear, when does a bargain you'll rarely wear lose to a full-price item you wear all the time?"
+        "extend": "Find the average percentage off across everything you got, then explain why it isn't the same as total saved ÷ total new price."
       }
     }
   ],
@@ -294,7 +294,7 @@
       }
     ],
     "after": {
-      "label": "The thrift maths",
+      "label": "The thrift math",
       "lines": [
         "Cost per wear = price ÷ number of wears",
         "Saved = new price − secondhand price",

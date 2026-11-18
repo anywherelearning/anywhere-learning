@@ -152,7 +152,7 @@
       "title": "Add the details and the prices",
       "why": "Signs, tickets and a menu turn rides into a place.",
       "kid": "Your kid adds an entrance sign, tickets or wristbands and a menu for at least one food stand, with prices. Then they work out what a family of four would spend in a day. Extras if they want: a gift shop, a mascot or a safety rules poster.",
-      "you": "Nudge the business side: 'What does a hot dog cost at your park?' Let the maths happen without pointing it out.",
+      "you": "Nudge the business side: 'What does a hot dog cost at your park?' Let the math happen without pointing it out.",
       "ask": [
         "What would a family of four spend for a whole day?",
         "What souvenir would people buy to remember it?"
@@ -183,7 +183,7 @@
   ],
   "reference": {
     "title": "Park Designer's Toolkit",
-    "intro": "Themes to pick from, the mix of rides that works, what goes on the map and the maths behind a day at the park.",
+    "intro": "Themes to pick from, the mix of rides that works, what goes on the map and the math behind a day at the park.",
     "items": [
       {
         "name": "Theme ideas",
@@ -260,7 +260,7 @@
         "ask": "Where would the traffic jam happen?"
       },
       {
-        "name": "Park maths",
+        "name": "Park math",
         "lines": [
           {
             "k": "Family day:",

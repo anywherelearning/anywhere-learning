@@ -75,7 +75,7 @@
       },
       {
         "part": "Also",
-        "line": "Book characters drawn their way, not as described."
+        "line": "'A family having dinner' came back as the same kind of family, three times."
       },
       {
         "part": "Learned",
@@ -104,7 +104,7 @@
     {
       "title": "Test it",
       "why": "One try can be luck. A few tries show what the AI does by habit.",
-      "kid": "Your kid asks the AI for each description, the same way each time, using the Run a fair test card, and saves the results.",
+      "kid": "Your kid asks the AI for each description, the same way each time, using the Run a fair test card. With an image tool, ask it to draw one. With a chat tool, ask 'Write two sentences about a scientist, and give them a name', then look at the names and he or she.",
       "you": "Keep the words exactly the same between tries.",
       "ask": [
         "Did it match your guess?",
@@ -137,7 +137,7 @@
       "title": "Compare languages",
       "why": "AI usually learned the most from English, so it often works best in English.",
       "kid": "Your kid asks the same question in two languages, using the Two languages card, and compares how good, how long and how accurate each answer is.",
-      "you": "If your family speaks another language, use it. If not, ask the AI to translate a short sentence into another language and back into yours, and compare it with the original.",
+      "you": "If your family speaks another language, use it. If not, ask the question in a language you don't speak, ask the AI to translate its answer back, and compare it with the answer in yours.",
       "ask": [
         "Which answer was better?",
         "Why might that be?"
@@ -197,7 +197,7 @@
         "lines": [
           {
             "k": "Same words:",
-            "v": "copy and paste each time"
+            "v": "copy and paste, in a new chat each time"
           },
           {
             "k": "Few details:",
@@ -302,7 +302,7 @@
   ],
   "conclusion": {
     "headline": "They know AI has habits, and how to work around them.",
-    "text": "Over the next few weeks, look at what they add to a prompt before they hit enter. A kid who types 'show different kinds of scientists' without being told has learned to check the default.",
+    "text": "Over the next few weeks, look at what they add to a prompt before they hit enter. Typing 'show different kinds of scientists' without being told means they now check the default.",
     "celebrate": "When they spot a habit and fix their prompt, say: 'You noticed what the AI assumed, and you changed it.'",
     "extensions": [
       "Look for the same habits in ads, picture books or video thumbnails",
@@ -316,7 +316,7 @@
     "They add detail to prompts to get fairer results",
     "They say why an answer might be different in another language"
   ],
-  "makeItReal": "Next time you use AI to make a picture or answer a question together, leave one detail out on purpose, see what it fills in, then talk about why.",
+  "makeItReal": "This week, when you use AI for a picture or an answer together, leave one detail out on purpose, see what it fills in, and talk about why.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

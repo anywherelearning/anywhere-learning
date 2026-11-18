@@ -177,7 +177,7 @@
       "levels": {
         "explore": "Play, change one thing, play again and crown a winner.",
         "develop": "Playtest with someone new, fix 2 things, and hold a best-of-3 championship.",
-        "extend": "Play 6 games, swapping ends each time. If one end wins most of them (sun, slope, wind), the field is unfair: change it and test again."
+        "extend": "Design a handicap for the youngest player, like starting closer or scoring double, and adjust it until the final ends within 2 points."
       }
     }
   ],

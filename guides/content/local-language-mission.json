@@ -163,7 +163,7 @@
       "levels": {
         "explore": "Draw the mission, and say the words you used.",
         "develop": "Fill in the log, and pick the next mission on the ladder.",
-        "extend": "Fill in the log, and find the one word that came up in every mission so far."
+        "extend": "Fill in the log, then write the next mission's card before looking anything up, and check which word guesses were right."
       }
     }
   ],

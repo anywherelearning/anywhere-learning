@@ -118,7 +118,7 @@
     {
       "title": "Map the dangers, plan the zones",
       "why": "Each zone needs a reason to be where it is.",
-      "kid": "Your kid lists 3 to 5 dangers of their destination, using the Dangers and zones card in the Expedition Toolkit at the end of the guide. Then they plan the zones the base needs, like shelter, water, food, safety and a lookout, and connect every danger to at least one zone. They sketch the layout from above.",
+      "kid": "Your kid lists 3 to 5 dangers of their destination, using the Dangers and zones card in the Expedition Toolkit at the end of the guide. Then they plan the zones the base needs, link every danger to a zone and sketch the layout from above.",
       "you": "Help them connect dangers to solutions: 'Floods are a risk. So where should the shelter go?' Push past the first answer.",
       "ask": [
         "Which danger worries you most?",
@@ -156,7 +156,7 @@
         "What if you run out of water? What's Plan B?",
         "What are the 3 rules everyone has to follow?"
       ],
-      "tip": "Ration maths: each person drinks about 2 litres a day. Multiply by people, then by days, to find what to store.",
+      "tip": "Ration math: each person drinks about 2 litres a day. Multiply by people, then by days, to find what to store.",
       "levels": {
         "explore": "Tell how one system works, out loud or in a drawing.",
         "develop": "Write 2 systems with a Plan B, and 3 base rules.",
@@ -323,7 +323,7 @@
   },
   "onTheRoad": [
     "Make where you're staying the destination, and list the real dangers here, like heat, storms, insects or steep ground.",
-    "Study how local houses answer those dangers, like stilts, thick walls, steep roofs or shutters, and borrow one for your base.",
+    "Ask your host, with your help, about the worst storm or heat here in living memory, and turn it into a new scenario card.",
     "Ask your host, with your help, what people here do when the power or water goes out, and write it into your manual."
   ],
   "backHome": "Name the dangers your own home is built for, like cold or rain, and point out the feature that handles each one."

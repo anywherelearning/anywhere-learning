@@ -4,7 +4,7 @@
   "title": "Real-Life Budget Challenge",
   "tagline": "Real prices · A buffer · A day you actually do",
   "ages": "Ages 9 to 14",
-  "goal": "Your kid plans a day out the family will actually do, inside a real budget: a beach day, a birthday outing, a day trip. They find the real prices, build in a buffer, pitch it to you, then run the money on the day and see how close they came. It's the maths every adult uses: can I afford this, and what do I cut when I can't?",
+  "goal": "Your kid plans a day out the family will actually do, inside a real budget: a beach day, a birthday outing, a day trip. They find the real prices, build in a buffer, pitch it to you, then run the money on the day and see how close they came. It's the math every adult uses: can I afford this, and what do I cut when I can't?",
   "need": [
     "A day out you're willing to do in the next few weeks, and a budget for it",
     "Paper and a pencil, or a notes app, and a calculator",
@@ -13,7 +13,7 @@
   ],
   "lesson": {
     "text": "A budget is a plan that has to add up. When it doesn't, you don't change the budget: you choose what to cut, and say why.",
-    "before": "We'll go to the beach and get lunch and stuff.",
+    "before": "'We'll go to the beach and get lunch and stuff.'",
     "model": [
       {
         "part": "Budget",
@@ -125,7 +125,7 @@
     {
       "title": "Find the real prices",
       "why": "Not guesses: what it actually costs, and where that number came from.",
-      "kid": "Your kid lists everything the day will cost, from getting there to the last treat, and finds the real price of each: the place's website, a menu online, last time's receipt or a phone call. They write how many, the price each and where it came from. The Hidden costs card in the Day Out Toolkit at the end of the guide catches the ones everyone forgets.",
+      "kid": "Your kid lists everything the day will cost, from the drive to the last treat, and finds each real price: a website, a menu, last time's receipt or a phone call. They note how many, the price each and the source. The Hidden costs card in the Day Out Toolkit at the end of the guide catches the rest.",
       "you": "Help with the phone call or the website if they need it, then let them write it down. Don't point out a missing cost yet. The day itself will.",
       "ask": [
         "What will you actually spend money on?",
@@ -157,7 +157,7 @@
     {
       "title": "Pitch it and survive the what-ifs",
       "why": "A plan is only ready when it holds up to a surprise.",
-      "kid": "Your kid pitches the day to you: what it costs, what's in the buffer and why it's worth it. You throw two what-ifs at it: parking is $8, it rains, gas went up $6, one place is closed. For each one, they show where the money comes from, using the buffer or the cut list. If the plan holds, you approve it and pick the date.",
+      "kid": "Your kid pitches the day to you: the cost, the buffer and why it's worth it. You throw two what-ifs at it, like parking is $8 or one place is closed. For each, they show where the money comes from, the buffer or the cut list. If the plan holds, you approve it and pick the date.",
       "you": "Listen like you're really deciding, because you are. Don't offer more money. If a what-if breaks the plan, send it back for one fix, not a rebuild.",
       "starters": [
         "Parking $8",
@@ -180,7 +180,7 @@
     {
       "title": "Do the day and track it",
       "why": "The real day is the test. The receipts are the results.",
-      "kid": "On the day, your kid carries the plan and keeps score with the Day tracker card: each time money is spent, they write the planned price, the real one and the difference. When something costs more, they decide on the spot: buffer first, then the cut list. At home, they total it up. Over or under, and which line was furthest off?",
+      "kid": "On the day, your kid carries the plan and keeps score on the Day tracker card: planned price, real price, difference. When something costs more, they decide on the spot: buffer first, then the cut list. At home, they total it up and find the line that was furthest off.",
       "you": "Hand them the cash, or the job of tracking every spend, and let them make the calls, even ones you'd make differently. Save your opinions for the drive home.",
       "ask": [
         "Which line was furthest off, and why?",
@@ -308,7 +308,7 @@
       }
     ],
     "after": {
-      "label": "Budget maths",
+      "label": "Budget math",
       "lines": [
         "Line total = how many × price each",
         "Plan total + buffer = budget",

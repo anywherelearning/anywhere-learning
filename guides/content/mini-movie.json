@@ -4,7 +4,7 @@
   "title": "Mini Movie",
   "tagline": "Write · Build · Premiere",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid becomes the writer, director and producer of their own show: a live play, a mini movie, a stop-motion film or a radio drama. They invent the characters, storyboard it shot by shot, build the set, rehearse, then record and edit it, or perform it live, and hold a premiere. No tech needed: a live show in the kitchen counts.",
+  "goal": "Your kid becomes the writer, director and producer of their own show: a live play, a mini movie or a stop-motion film. They invent the characters, storyboard it shot by shot, build the set, rehearse, then record and edit it, or perform it live, and hold a premiere. No tech needed: a live show in the kitchen counts.",
   "need": [
     "Paper, markers, cardboard and tape",
     "Toys, figurines, LEGO or clay for characters",
@@ -103,7 +103,7 @@
     {
       "title": "Pick the format and the story",
       "why": "One sentence of story is enough to start.",
-      "kid": "Your kid picks a format from the Formats card in the Studio Toolkit at the end of the guide: a live show, a mini movie, stop-motion or a radio drama. Then they pick a story seed and say the whole story in one sentence.",
+      "kid": "Your kid picks a format from the Formats card in the Studio Toolkit at the end of the guide: a live show, a mini movie or stop-motion. Then they pick a story seed and say the whole story in one sentence.",
       "you": "Help them pick a format that fits what you have, and a story small enough to finish. If they're overthinking it: 'Pick the one that sounds most fun. We can change it.'",
       "ask": [
         "What kind of show sounds most exciting right now?",
@@ -135,13 +135,13 @@
     {
       "title": "Storyboard it, shot by shot",
       "why": "Directors decide what the audience sees before anyone picks up a camera.",
-      "kid": "Your kid draws a storyboard: 4 to 8 boxes, one shot or moment in each, with the line said underneath. For a film or stop-motion, they mark each box wide, medium or close-up, using the Shot types card in the Studio Toolkit at the end of the guide. For a live show, they mark where each actor stands. For radio, which sound comes first.",
+      "kid": "Your kid draws a storyboard of 4 to 8 boxes, one shot in each, with the line underneath. For film or stop-motion, they mark each box wide, medium or close-up, using the Shot types card. For a live show, they mark where each actor stands.",
       "you": "Help them pick boxes over pages: younger kids can draw three pictures and talk the rest. If the plan runs long, help them cut a scene.",
       "ask": [
         "What's the first thing the audience sees?",
         "Which moment needs a close-up, and why that one?"
       ],
-      "tip": "Stop-motion maths: at 12 photos a second, a 10-second scene takes 120 photos. Plan short scenes.",
+      "tip": "Stop-motion math: at 12 photos a second, a 10-second scene takes 120 photos. Plan short scenes.",
       "levels": {
         "explore": "Draw the beginning, middle and end as 3 pictures, and tell them out loud.",
         "develop": "Draw 4 to 8 boxes, write the key line under each, and mark each one wide, medium or close-up.",
@@ -151,7 +151,7 @@
     {
       "title": "Build the set and rehearse",
       "why": "Simple sets, then a full run-through before anything counts.",
-      "kid": "Your kid builds the world with what's around: a blanket fort cave, a cardboard box spaceship, a shoebox stage for stop-motion, sound effects for radio. Then they do one full run-through, ask what the best part was and what's one thing to make clearer, and fix that one thing.",
+      "kid": "Your kid builds the world with what's around: a blanket fort cave, a cardboard box spaceship, a shoebox stage for stop-motion, a blanket backdrop for a live show. Then they do one full run-through, ask what the best part was and what's one thing to make clearer, and fix that one thing.",
       "you": "Keep the building short and simple. Be the first audience: say the best part first, then one specific thing to fix.",
       "ask": [
         "What's the most important place in your story?",
@@ -167,7 +167,7 @@
     {
       "title": "Record, edit and premiere",
       "why": "A finished show and a real audience make it a real production.",
-      "kid": "Your kid records it shot by shot, following the storyboard, with the phone propped so it doesn't move. Then they edit: trim the start and end of each clip, put the clips in order, and add a title and credits in any free video app. Live show? A full dress rehearsal instead. Last, the premiere: introduce the show, play it, take questions.",
+      "kid": "Your kid films shot by shot from the storyboard, phone propped still, then edits in any free video app: trim each clip, put them in order, add a title and credits. Live show? A dress rehearsal instead. Last, the premiere: introduce it, play it, take questions.",
       "you": "Hold the camera if needed, and help with the app if they ask. At the premiere, watch for real, laugh at the funny parts and ask real questions.",
       "ask": [
         "Which shot was hardest to get right?",
@@ -201,8 +201,8 @@
             "v": "move toys a little, one photo per move"
           },
           {
-            "k": "Radio drama:",
-            "v": "only voices and sound effects"
+            "k": "Voices only:",
+            "v": "try the Radio Drama Studio guide"
           }
         ],
         "ask": "Does the format fit what you have?"
@@ -267,7 +267,7 @@
             "v": "tiny moves; 12 photos make about 1 second"
           },
           {
-            "k": "Radio:",
+            "k": "Sound:",
             "v": "rice on a pan for rain, a wobbly baking sheet for thunder"
           },
           {
@@ -298,7 +298,7 @@
     "celebrate": "After the premiere, quote back the line that got the biggest reaction and say what it did: 'That line got a laugh, and after it everyone wanted your character to win.'",
     "extensions": [
       "Make a sequel with a new problem",
-      "Try a different format: a movie becomes a radio drama",
+      "Turn one scene into a voices-only version with the Radio Drama Studio guide",
       "Remake one scene with a different ending and compare",
       "Turn the story into a comic or a poster"
     ]

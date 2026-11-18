@@ -65,7 +65,11 @@
       },
       {
         "when": "Session 3",
-        "what": "Write the rules, playtest, fix it and make it official (Steps 4 and 5)."
+        "what": "Write the rules and playtest (Step 4)."
+      },
+      {
+        "when": "Game night",
+        "what": "Fix it, make it official and host (Step 5)."
       }
     ],
     "tips": [],
@@ -144,7 +148,7 @@
       "levels": {
         "explore": "A path with 5 special spaces and a few cards.",
         "develop": "A full board, 10 to 15 cards and tokens.",
-        "extend": "Roll 2 dice 36 times and tally the totals. Why does 7 win? (6 of the 36 ways to roll make 7.) Put your best surprise space 7 spaces from the start, where most first rolls land."
+        "extend": "If your game uses 2 dice, roll them 36 times and tally the totals. Why does 7 come up most? (6 of the 36 ways make 7.) Put your best surprise space 7 from the start."
       }
     },
     {

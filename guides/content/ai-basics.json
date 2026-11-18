@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is either making AI sound magic or making it sound scary. Your job is to test it together, out loud, so they see for themselves what it can and can't do, then make the rules with them, not for them.",
+    "intro": "AI sounds either magic or scary until you test it. Sit at the screen together, try things out loud so they see for themselves what it can and can't do, then write the rules with them, not for them.",
     "plan": [
       {
         "when": "Away from the screen",
@@ -57,7 +57,7 @@
       },
       {
         "q": "Your kid wants their own AI account",
-        "a": "Most AI tools are 13+. Use yours, side by side, and let them do the asking."
+        "a": "AI chat tools have age limits: ChatGPT is 13+ with a parent's OK, Claude is 18+. Use yours, side by side, and let them do the asking."
       }
     ]
   },
@@ -114,7 +114,7 @@
       "levels": {
         "explore": "Finish easy sentences like 'Once upon a...' and 'Happy birthday to...'",
         "develop": "Play ten rounds, and notice when your guess was right and why.",
-        "extend": "Try a sentence with no clear pattern, and explain why it was harder to predict."
+        "extend": "On a phone, type 'Once upon a' and tap the middle suggested word ten times. Compare its sentence with yours, and explain why it's AI's trick, only much smaller."
       }
     },
     {
@@ -219,7 +219,7 @@
         "lines": [
           {
             "k": "'It knows everything.'",
-            "v": "ask what you ate for breakfast"
+            "v": "ask about a tiny local thing, like your library's hours, then check"
           },
           {
             "k": "'A person types the answers.'",
@@ -311,7 +311,7 @@
     }
   ],
   "conclusion": {
-    "headline": "They know what AI is, and how your family uses it.",
+    "headline": "AI is a word-guesser now, not a mystery.",
     "text": "You'll know it landed when they're the one explaining it: telling a cousin 'it just predicts words', or asking 'job for AI or for my brain?' before they open it.",
     "celebrate": "When they follow a family AI rule on their own, say: 'You remembered our rule, and you used AI the smart way.'",
     "extensions": [

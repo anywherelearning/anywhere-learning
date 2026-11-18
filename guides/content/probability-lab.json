@@ -4,7 +4,7 @@
   "title": "The Probability Lab",
   "tagline": "Odds · Price and prize · The house edge",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid builds a carnival game, like a spinner, a cup shuffle or a dice game, and works out the real odds of winning it. Then they set a price and a prize so the game makes money over time, run it for the family, and watch the maths come true.",
+  "goal": "Your kid builds a carnival game, like a spinner, a cup shuffle or a dice game, and works out the real odds of winning it. Then they set a price and a prize so the game makes money over time, run it for the family, and watch the math come true.",
   "need": [
     "Something to build a simple game: a paper plate and a paperclip for a spinner, 3 cups and a ball, dice or a deck of cards",
     "Paper and a pencil for the odds and the tally",
@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "Play to win. If you go easy, the till won't tell the truth. Don't do the maths for them, and keep the numbers friendly: 'out of 10 tries, how many would you win?' comes before any fractions.",
+    "intro": "Play to win. If you go easy, the till won't tell the truth. Don't do the math for them, and keep the numbers friendly: 'out of 10 tries, how many would you win?' comes before any fractions.",
     "plan": [
       {
         "when": "Session 1",
@@ -105,7 +105,7 @@
   "steps": [
     {
       "title": "Play first, guess the odds",
-      "why": "A gut feeling first makes the maths mean something later.",
+      "why": "A gut feeling first makes the math mean something later.",
       "kid": "Before building anything, your kid plays a quick game of pure chance with you: roll for a six, flip for heads or draw a heart. First they write a guess: out of 12 tries, how many wins? Then they play 12 rounds, tally the wins and compare with their guess.",
       "you": "Play along and say out loud how it feels: 'I almost never get a six!' Don't explain the odds yet. The hunch that it's harder than it looks is what you want.",
       "ask": [
@@ -122,7 +122,7 @@
     {
       "title": "Build your game",
       "why": "Simple games are easy to play and easy to count later.",
-      "kid": "Your kid invents a carnival game of chance: a paper-plate spinner with one prize wedge, a ball hidden under one of 3 shuffled cups, roll a six, or draw a heart. They build it and play it for fun, lots of times, with no maths yet.",
+      "kid": "Your kid invents a carnival game of chance: a paper-plate spinner with one prize wedge (the Make a spinner card in the Odds Toolkit at the end of the guide shows how), a ball under one of 3 shuffled cups, roll a six or draw a heart. They build it and play it lots, with no math yet.",
       "you": "Be the first player, and the second, and the tenth. Ask how it feels to play. Simple is better, so steer them away from games with too many rules to count.",
       "ask": [
         "Does it feel fair, too easy or too hard?",

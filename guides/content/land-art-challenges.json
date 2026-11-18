@@ -170,11 +170,11 @@
           "art": "wc/landart-09.jpg"
         },
         {
-          "name": "Concentric Circles",
-          "t": "Make 3 circles, one inside the other.",
-          "d": "Each circle must use a different texture.",
+          "name": "Tessellation",
+          "t": "Fit flat stones, bark or leaves together like tiles, with no gaps.",
+          "d": "Use only one shape, like bark triangles, and cover a whole square.",
           "icon": "target",
-          "art": "wc/landart-10.jpg"
+          "art": "wc/researcher-tiles.jpg"
         },
         {
           "name": "Fractal Feel",
@@ -184,11 +184,11 @@
           "art": "wc/landart-11.jpg"
         },
         {
-          "name": "Border Design",
-          "t": "Create a frame around a space, like a picture frame.",
-          "d": "Make the corners different from the sides.",
+          "name": "Leaf Chain",
+          "t": "Join fallen leaves into a chain by pinning each one to the next with its own stem or a pine needle.",
+          "d": "Make it long enough to circle a tree trunk, alternating two colours.",
           "icon": "frame",
-          "art": "wc/landart-12.jpg"
+          "art": "wc/plants-jagged-leaf.jpg"
         }
       ]
     },
@@ -233,7 +233,7 @@
         {
           "name": "Fairy Door",
           "t": "Build a tiny doorway at the base of a tree, with a path leading to it.",
-          "d": "Make the path lead straight to the door.",
+          "d": "Add a welcome mat or a sign, and say who lives behind the door.",
           "icon": "house"
         },
         {

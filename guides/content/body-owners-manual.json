@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need to know any biology. You hold the stopwatch, drop the ruler and keep every test fair and gentle. Your most useful question is 'What changed the number?' Run the tests on yourself too. Kids love beating your reaction time.",
+    "intro": "Keep it from becoming a fitness test with a winner. Hold the stopwatch, drop the ruler and keep every test the same each time, so the only thing that moves the number is the one thing you changed. Run the tests on yourself too. Kids love beating your reaction time.",
     "plan": [
       {
         "when": "Session 1",
@@ -89,7 +89,7 @@
     {
       "title": "Find your pulse",
       "why": "Every manual starts with the specs.",
-      "kid": "Your kid sits still for a minute, finds their pulse at the wrist or neck and counts the beats for 15 seconds while you time it. They multiply by four, do it three times and keep the middle number. Then they count their breaths for a minute, using the Engine tests card in the Body Toolkit at the end of the guide.",
+      "kid": "Your kid sits still for a minute, then counts their pulse at the wrist or neck for 15 seconds while you time it. They multiply by four, repeat three times and keep the middle number. Then they count breaths for a minute, using the Engine tests card in the Body Toolkit at the end of the guide.",
       "you": "Show them where to press, with two fingers and not the thumb, then say 'Go' and 'Stop'. Then swap and let them time you.",
       "ask": [
         "What's your heart doing when you're perfectly still?",
@@ -227,8 +227,8 @@
         "name": "Control centre tests",
         "lines": [
           {
-            "k": "Ruler:",
-            "v": "best of five catches"
+            "k": "Ruler to seconds:",
+            "v": "10 cm 0.14, 15 cm 0.17, 20 cm 0.20, 25 cm 0.23"
           },
           {
             "k": "Hands:",
@@ -306,7 +306,7 @@
   ],
   "conclusion": {
     "headline": "They wrote the manual for their own body.",
-    "text": "Give it a month. If they check their pulse after running up the stairs, or say 'Let's test it' when someone makes a claim, they've started thinking like a scientist.",
+    "text": "Give it a month, then ask them to retest one number without saying how. Whether they sit still first, take it three times and keep the middle one tells you the fair test stuck.",
     "celebrate": "When they read you a number they measured themselves, say: 'Nobody else in the world has that manual.'",
     "extensions": [
       "Test a grandparent's reaction time and pulse, and add a page on how bodies change with age",

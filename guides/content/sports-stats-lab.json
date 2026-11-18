@@ -53,7 +53,7 @@
     }
   ],
   "howTo": {
-    "intro": "Keep the data real, even when it's unflattering. Let them pick the sport and the question, and let them do the maths, with a calculator if they like. Their own play makes the best data, because they care about every number, bad games included.",
+    "intro": "Keep the data real, even when it's unflattering. Let them pick the sport and the question, and let them do the math, with a calculator if they like. Their own play makes the best data, because they care about every number, bad games included.",
     "plan": [
       {
         "when": "Session 1",
@@ -139,7 +139,7 @@
       "title": "Work out the averages",
       "why": "An average shows what's typical, if no odd game is pulling it.",
       "kid": "Your kid adds up each stat and divides by the number of games to find the average. They find the highest and lowest results and the range between them. Then they check whether one unusual game is pulling the average up or down.",
-      "you": "Let them do the maths. Ask 'does that average look like a normal game?'",
+      "you": "Let them do the math. Ask 'does that average look like a normal game?'",
       "ask": [
         "8, 12, 6, 10 and 9 points in 5 games. What's the average?",
         "Swap the 9 for a 30-point game. What happens to the average?"
@@ -154,7 +154,7 @@
     {
       "title": "Use percentages to compare fairly",
       "why": "Totals reward whoever had the most chances. Percentages don't.",
-      "kid": "Your kid turns stats into percentages or per-game rates: shots made ÷ shots taken, goals ÷ games. Then they compare players, teams or their own close and far shots, and rank them by the total and by the percent. They notice when the order changes.",
+      "kid": "Your kid turns stats into percentages or per-game rates, using the Fair comparisons card in the Stats Toolkit at the end of the guide. Then they rank players, teams or their own close and far shots by the total and by the percent, and notice when the order changes.",
       "you": "Ask 'what stat are you ranking by?' and 'would the ranking change with a different one?' There often isn't one best, and that's a great thing to find out.",
       "ask": [
         "15 shots in from 25. What's the percent?",
@@ -168,15 +168,15 @@
       }
     },
     {
-      "title": "Chart it, predict, check",
+      "title": "Make the stat sheet and test it",
       "why": "The real test of a stat is whether it can predict.",
-      "kid": "Your kid draws a chart: a bar chart to compare, a line graph to show change over time. They look at the last few games against the average to spot a trend. Then they predict the next game as a range, write down what could make it wrong, and check it after the game.",
+      "kid": "Your kid turns the findings into a one-page stat sheet for a real reader: their coach, a teammate or the family before the next game. One chart, the fair comparison from Step 4, and the answer to their question in one sentence. Then they watch the next game and see if it holds.",
       "you": "Be the audience. Ask what the chart shows that the numbers didn't, and what their prediction is based on.",
       "ask": [
-        "The average is 9, but the last 3 games were 11, 12 and 13. What do you predict?",
+        "Which one number on your sheet answers your question best?",
         "What could make your prediction wrong?"
       ],
-      "tip": "Predict a range, not one number: 'between 10 and 14.' A range that comes true beats an exact guess that misses.",
+      "tip": "Put the answer at the top in one sentence and the chart right under it. Anyone should get it in 10 seconds.",
       "levels": {
         "explore": "Draw one chart and predict one stat for the next game.",
         "develop": "Draw a chart with labels, predict a range and explain why.",
@@ -298,7 +298,7 @@
       "Compare your stats in practice with your stats in a real game, and explain the gap.",
       "Test whether home advantage is real: home vs away stats",
       "Invent a scoring system for a fantasy team using weighted stats",
-      "After a game, make a one-page stat sheet for your team or coach, with one stat that surprised you."
+      "Track one pro player's stat across a season and see whether their hot streaks last."
     ]
   },
   "signs": [

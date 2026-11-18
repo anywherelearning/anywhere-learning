@@ -11,7 +11,7 @@
     "Paper for planning the lesson"
   ],
   "lesson": {
-    "text": "Good teachers don't just explain. They show it, let the student try with help, then step back and check. Four moves: show, explain, try together, check.",
+    "text": "A good lesson isn't just explaining. You show it, let the learner try with help, then step back and check. Four moves: show, explain, try together, check.",
     "before": "Okay, you just do this, then this, see? Easy. Got it?",
     "model": [
       {
@@ -79,7 +79,7 @@
       },
       {
         "q": "A sibling student won't take it seriously",
-        "a": "Keep it under 10 minutes and let them pick a prize for passing the check. Or you play student first, and the sibling gets Step 5's lesson."
+        "a": "Keep it under 10 minutes and let the sibling choose which skill they want to learn. Or you play student first, and the sibling gets the improved lesson in Step 5."
       }
     ]
   },
@@ -109,7 +109,7 @@
     {
       "title": "Watch a terrible lesson",
       "why": "You teach them something badly on purpose, then they pick their own skill.",
-      "kid": "First, your kid watches you teach them something simple in the worst way possible: you mumble, skip steps, go too fast and never let them try. They spot everything that went wrong. Then they choose a skill they really know well, small enough to teach in one lesson and something they're a bit of an expert in.",
+      "kid": "First, your kid watches you teach them something simple in the worst way possible: you mumble, skip steps, rush and never let them try. They spot everything that went wrong. Then they choose a skill they know really well, small enough to teach in one sitting.",
       "you": "Teach something small, like a paper plane, and ham it up: 'You just fold it, then, you know, do the thing. Done!' Then ask what would have made it a good lesson. Help them pick a skill, and steer away from anything too big for one sitting.",
       "starters": [
         "A card or coin trick",
@@ -133,7 +133,7 @@
     {
       "title": "Break it down and find the tricky bit",
       "why": "Your kid turns the skill into clear steps and spots where beginners get stuck.",
-      "kid": "Your kid does the skill very slowly and writes each move as a step, in order: 'first you cross the laces, then you make a loop.' They'll skip the little automatic moves at first, and finding those is the whole discovery. Then they circle the step where beginners always get stuck and plan how to explain it extra clearly.",
+      "kid": "Your kid does the skill very slowly and writes each move as a step, in order: 'first you cross the laces, then you make a loop.' They'll skip tiny automatic moves at first, and finding those is the discovery. Then they circle the step where beginners get stuck and plan how to explain it.",
       "you": "Keep asking 'what do you do first? and then?' Play the confused beginner to help them find the tricky part: 'Wait, how did your fingers do that?'",
       "ask": [
         "What do you do that you almost didn't notice?",

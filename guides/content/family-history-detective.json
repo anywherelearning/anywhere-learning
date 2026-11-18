@@ -105,7 +105,7 @@
     {
       "title": "Play photo detective",
       "why": "Your kid reads an old photo for clues before choosing who to interview.",
-      "kid": "Find one old family photo. Your kid studies it like a detective and writes down guesses: who is it, how old are they, what year is it, where are they, what's happening? They'll check the guesses with someone who knows. Then they pick the person to interview, ideally the oldest person they can reach.",
+      "kid": "Find one old family photo. Your kid studies it like a detective and writes down guesses: who is it, how old are they, what year is it, what's happening? Someone who knows will check the guesses. Then they pick the person to interview, ideally the oldest person they can reach.",
       "you": "Dig out a photo or two and play along with your own guesses. Then help choose the person, and make the ask together: 'Would you sit down with me for an interview about your life?' Most older people are delighted. Almost nobody asks them.",
       "ask": [
         "What clues in the photo tell you when it was taken?",
@@ -145,8 +145,8 @@
     {
       "title": "Do the interview",
       "why": "The heart of it: asking, listening, and digging for the real stories.",
-      "kid": "Your kid asks their questions, listens closely, and follows the good bits with 'What happened next?' or 'What was that like?' They go past the facts (born here, worked there) to the real stories: the time they got in trouble, the scariest day, the day everything changed. They take notes, or record with permission.",
-      "you": "Sit back and let them run it. When the person pauses to remember, don't fill the silence: the best stories come right after the quiet. The first few minutes can be stiff. Then a memory catches, and suddenly they're off. Let it run long, or split it into two shorter visits if your kid tires.",
+      "kid": "Your kid asks their questions, listens closely, and follows the good bits with 'What happened next?' or 'What was that like?' They go past the facts (born here, worked there) to the stories: the scariest day, the day everything changed. They take notes, or record with permission.",
+      "you": "Sit back and let them run it. If the answers stay short, slide the old photo across the table and let your kid ask 'who's this?' Let it run long, or split it into two visits if your kid tires.",
       "ask": [
         "That sounds interesting, what happened next?",
         "Is there a story about your life most people don't know?"
@@ -161,7 +161,7 @@
     {
       "title": "Build the timeline and the tree",
       "why": "Your kid puts the life in order and maps who connects to who.",
-      "kid": "Memories come out jumbled. Your kid sorts them onto a timeline: birth, childhood, big moments, in order. When a date is fuzzy, they estimate from clues ('that was around when she started work'). Then they draw a family tree, starting with themselves and branching back through parents and grandparents, with a detail or story next to each person they can.",
+      "kid": "Your kid sorts the jumbled memories onto a timeline, in order. When a date is fuzzy, they estimate from clues ('around when she started work'). Then they draw a family tree, starting with themselves and branching back through parents and grandparents, with a detail beside each person.",
       "you": "Help sort the memories and fill in the branches your kid can't know. Point out connections the timeline shows: the move that came right before the new job, the hard year that came after a loss.",
       "ask": [
         "What came first, and what came after?",
@@ -177,7 +177,7 @@
     {
       "title": "Tell one story and share it",
       "why": "One story gets written down for good, and the family hears it.",
-      "kid": "Your kid picks their favourite story from the interview and writes it up properly: how it starts, the moment it turns, and why it matters. In the person's spirit, but in your kid's words. Then they share it with the family: read it at dinner, walk everyone through the timeline, show the tree, or play a favourite recorded moment.",
+      "kid": "Your kid picks their favourite story from the interview and writes it up: how it starts, the moment it turns, and why it matters, in their own words. Then they share it with the family: read it at dinner, walk everyone through the timeline, or play a recorded moment.",
       "you": "Gather the family and make it an occasion. Treat the finished story like the keepsake it is, and make sure the person they interviewed gets a copy.",
       "ask": [
         "How would you tell it so someone who wasn't there can feel it?",

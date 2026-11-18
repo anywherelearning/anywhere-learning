@@ -59,6 +59,10 @@
       {
         "q": "They don't want to write afterwards",
         "a": "Let them talk it through while you jot down their words, or start the page with photos and labels."
+      },
+      {
+        "q": "We're not travelling right now",
+        "a": "Pick a celebration in your own town that your family has never joined, like another community's new year, a saint's day or a harvest fair, and go as guests."
       }
     ]
   },
@@ -153,7 +157,7 @@
     {
       "title": "Write the celebration page",
       "why": "Writing it up is where the noticing turns into understanding.",
-      "kid": "Your kid writes a page in their celebration journal: what it celebrates, what they saw, what someone told them and what it shows about the place.",
+      "kid": "Your kid writes a page in their celebration journal: what it celebrates, what they saw, what someone told them and what it shows about the place. Then they send a photo of the page to someone who's never been, and ask what they'd most want to see.",
       "you": "Sit with them, look through the photos together, and ask 'So what is this place proud of?' Help them choose the best photo or sketch for the page.",
       "ask": [
         "If a friend had never heard of it, how would you explain it?",

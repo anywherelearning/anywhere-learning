@@ -109,7 +109,7 @@
     {
       "title": "Play 'sell me this'",
       "why": "Selling a spoon to each other shows what a pitch is before your kid picks a product.",
-      "kid": "Grab any object in the room (a spoon, a sock, a pencil) and take turns selling it to each other in 30 seconds. Then your kid decides what they'll really sell: something they make, something they own, or a service. They pick something they're proud of and write down why someone would want it, not just what it is.",
+      "kid": "Grab any object in the room, like a spoon or a sock, and take turns selling it to each other in 30 seconds. Then your kid decides what they'll really sell: something they make, something they own, or a service. They write down why someone would want it, not just what it is.",
       "you": "Play the game and be a tough customer: 'Why would I need a spoon?' Then help brainstorm what they could sell, and let them choose. They'll pitch better if it feels like theirs.",
       "starters": [
         "Lemonade or cookies",
@@ -127,13 +127,13 @@
       "levels": {
         "explore": "Play a few rounds, then pick a product and say one reason someone should buy it.",
         "develop": "Pick a product, list 3 reasons it's worth buying, and say who the ideal customer is.",
-        "extend": "Pick two different customers, like a grandparent and a 10-year-old, and the one reason that sells each."
+        "extend": "Before choosing, ask three people what they'd actually pay for, and pick the product with the most yeses."
       }
     },
     {
       "title": "Know the product and the price",
       "why": "Your kid gets ready for every question a customer could ask.",
-      "kid": "Your kid writes down everything about the product: what it's made of, how it's made, what makes it better than the alternatives. Then they turn features into benefits (a feature is what it is; a benefit is what it does for the buyer), work out a price that covers what it cost to make, and prepare answers to the tough questions.",
+      "kid": "Your kid writes down what the product is made of, how it's made and why it beats the alternatives. They turn features into benefits (a feature is what it is, a benefit is what it does for the buyer), work out a price that covers what it cost to make, and prepare answers to tough questions.",
       "you": "Ask tricky customer questions: 'Is it worth the price?' 'Why shouldn't I just make my own?' If they're selling something homemade, help them add up what the ingredients cost, so the price makes a profit.",
       "ask": [
         "What does it do for the person who buys it?",
@@ -143,7 +143,7 @@
       "levels": {
         "explore": "Say 3 great things about it, then pick a price by laying out coins.",
         "develop": "List features and benefits separately, set a price that covers your costs, and prepare 3 tough answers.",
-        "extend": "Write the three hardest questions a customer could ask, and a one-line answer for each that starts with what they get."
+        "extend": "Make a deal price, like two cups for $1.50. Work out the profit on one and on two, and decide if the deal is worth it."
       }
     },
     {
@@ -179,7 +179,7 @@
       }
     },
     {
-      "title": "Count it up and look back",
+      "title": "Count it up",
       "why": "The numbers, and what your kid learned about persuading people.",
       "kid": "Your kid counts the money, subtracts what it cost, and works out the profit. Then they think about the whole experience: what worked, what was hardest, what made people say yes, and what they'd change at the next stall.",
       "you": "Celebrate the courage, not just the sales. Standing in front of people and asking them to buy takes guts. Give specific praise: 'You handled that 'too expensive' question really well.'",

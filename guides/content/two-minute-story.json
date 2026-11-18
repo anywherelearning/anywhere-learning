@@ -105,7 +105,7 @@
     {
       "title": "Play two truths and a lie",
       "why": "Two truths and a lie, then the one true story worth telling.",
-      "kid": "Everyone tells three very short things that happened to them, two true and one made up, and the others guess the lie. Your kid notices which ones sounded most true, and why. Then they pick one true moment from their own life to turn into a two-minute story: something funny, scary, surprising, or that changed their mind.",
+      "kid": "Everyone tells three very short things that happened to them, two true and one made up, and the others guess the lie. Your kid notices which ones sounded true, and why. Then they pick one true moment of their own to tell: funny, scary, surprising, or one that changed their mind.",
       "you": "Play the game too. Then help them brainstorm real moments and let them choose. Steer them away from 'my whole trip' toward one small, specific moment.",
       "starters": [
         "When I got lost",
@@ -137,7 +137,7 @@
       ],
       "tip": "No turn? Ask 'what did you think would happen, and what happened instead?' The gap between those is the turn.",
       "levels": {
-        "explore": "Name the beginning and the end.",
+        "explore": "Lay three spoons on the table. Tell the beginning at the first, the moment it changed at the second, the end at the third.",
         "develop": "Find all three: beginning, turn and point.",
         "extend": "Plant one small detail early that only matters at the turn, like the teddy bears at the fair."
       }
@@ -177,7 +177,7 @@
     {
       "title": "Tell it for real",
       "why": "Showtime: the family at dinner, or a grandparent on a call.",
-      "kid": "Your kid tells their two-minute story to the family at dinner, or to a grandparent on a call. Afterward, they talk about what landed and what they'd do differently next time.",
+      "kid": "Your kid tells their two-minute story to the family at dinner, or to a grandparent on a call, with no notes. Afterward, they ask their listeners which moment they could picture best, and decide what they'd keep and what they'd change for the next telling.",
       "you": "Give full attention: laugh, react, lean in. Put your fork down and look at them, so everyone else does too. Then ask which part got the best reaction.",
       "ask": [
         "How did it feel to have people listening?",
@@ -187,7 +187,7 @@
       "levels": {
         "explore": "Tell it to one person and ask which part they'd want more of.",
         "develop": "Tell it to the family without notes, then ask someone to say the turn back in one line.",
-        "extend": "Adjust it for two listeners, one older, one younger. What changed?"
+        "extend": "Ask a listener to retell your story to someone tomorrow. Listen in: which part survived, and which got lost?"
       }
     }
   ],

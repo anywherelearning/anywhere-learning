@@ -59,6 +59,10 @@
       {
         "q": "Leading the whole trip feels like too much",
         "a": "Give them one leg to lead, like finding the stop or the meeting point, and lead the rest yourself. Next trip, give them two."
+      },
+      {
+        "q": "We're not travelling right now",
+        "a": "Pick a day trip from home you've never made without the car, and let them plan every leg by bus, train or ferry."
       }
     ]
   },
@@ -115,7 +119,7 @@
       "levels": {
         "explore": "Compare two options with pictures: which is faster, and which is cheaper?",
         "develop": "Compare three options for time, cost for the family and what's included, then choose.",
-        "extend": "Work out what each option costs per hour of travel, and decide if the faster one is worth it."
+        "extend": "Work out how much extra the faster option costs for each hour it saves, and decide if that hour is worth it."
       }
     },
     {
@@ -147,7 +151,7 @@
       "levels": {
         "explore": "Hold the picture strip and tell everyone what comes next.",
         "develop": "Lead every leg, checking the time and the landmarks yourself.",
-        "extend": "Note the real time of each leg as you go, and spot the one that took longest."
+        "extend": "Note the planned and real time of each leg, and work out which leg needs the biggest buffer next time, and why."
       }
     },
     {
@@ -162,7 +166,7 @@
       "tip": "Drawing from memory first, then checking a real map, shows them how much they noticed on the way.",
       "levels": {
         "explore": "Draw the trip from memory, with three things you saw on the way.",
-        "develop": "Draw the map with every leg and landmark, then fill in the route log.",
+        "develop": "Draw the map with every leg and landmark, then write in the notebook what each leg really took and cost.",
         "extend": "Compare your map with a real one, and work out the real distance of each leg."
       }
     }

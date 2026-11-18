@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is setting screen limits for them and enforcing them alone. Your job is to let them notice, ask what they think is fair, decide together, and then let the plan, not you, do the stopping.",
+    "intro": "Limits you set alone are limits you enforce alone. Let them notice, ask what they think is fair, decide together, and then let the plan, not you, do the stopping.",
     "plan": [
       {
         "when": "For a week",
@@ -110,7 +110,7 @@
         "How do you feel right after?",
         "How do you feel after a screen-free day?"
       ],
-      "tip": "Compare a long screen day with a screen-free one. The difference usually speaks for itself.",
+      "tip": "If the week has a lighter screen day, compare it with a long one. Let them say what's different before you do.",
       "levels": {
         "explore": "Point to a face that shows how you feel after screens.",
         "develop": "Rate mood and energy after screens for a week.",
@@ -142,7 +142,7 @@
         "What happens when time's up?",
         "When can we talk about changing it?"
       ],
-      "tip": "Automatic limits, like a screen that shuts off, take the fight out of the end.",
+      "tip": "Before anyone signs, test-drive the limit for three days with the timer on. A plan they've tried is easier to keep than one on paper.",
       "levels": {
         "explore": "Help choose your limit, and set the timer with a parent.",
         "develop": "Agree on your plan, sign it and set the limits on the device.",
@@ -162,7 +162,7 @@
       "levels": {
         "explore": "Say one thing you like about the plan, and one you'd change.",
         "develop": "Look at a few weeks, and suggest one change with a reason.",
-        "extend": "Compare how you felt before and after the plan, and present it to the family."
+        "extend": "Write the next version of your plan for a year from now: what changes, and what you'd want to show to earn it."
       }
     }
   ],
@@ -231,7 +231,7 @@
           },
           {
             "k": "AI:",
-            "v": "does it count as screen time?"
+            "v": "what it's for, who sits with you, never a secret friend"
           }
         ],
         "ask": "Why might your limit be different from a sibling's?"
@@ -313,7 +313,7 @@
   ],
   "conclusion": {
     "headline": "Their screen limits are theirs, not just yours.",
-    "text": "In a few weeks, the end of screen time should feel boring: a timer, a quick 'can I have five more?', a no, and on to something else. Boring is the goal.",
+    "text": "In a few weeks, notice the moment the timer goes off. A quick 'can I have five more?', a no, and on to something else means the plan is doing the stopping, not you.",
     "celebrate": "When they stop without a fuss, say: 'You stuck to the plan you helped make. That's real self-control.'",
     "extensions": [
       "Swap roles for a day: the kids write a fair limit for a parent, and the parent tries it",

@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is fixing boredom for them, with a screen, a plan or an idea. Your job is to say 'Okay, that's good, go find something to do', then step back and let the empty feeling do its work.",
+    "intro": "When they say 'I'm bored', your whole job is one calm sentence: 'Okay, that's good, go find something to do.' No screen, no plan, no idea from you. Then step back and let the empty feeling do its work.",
     "plan": [
       {
         "when": "One quiet afternoon",
@@ -49,7 +49,7 @@
     "troubleshoot": [
       {
         "q": "They keep asking for a screen",
-        "a": "Keep your screen rule simple and the same every day. Screens to create can count differently from screens to watch."
+        "a": "Say the same line every time, like 'Not now. Your kit is right there,' then walk away. Keep the screen rule the same every day; screens to create can count differently from screens to watch."
       },
       {
         "q": "They follow you around the house",
@@ -97,8 +97,8 @@
       "tip": "The first five minutes are the hardest. Most kids find something right after the moment they think they can't.",
       "levels": {
         "explore": "Sit with the bored feeling for five minutes, and notice what happens.",
-        "develop": "Wait ten minutes without a screen, then write the first idea that came.",
-        "extend": "Wait it out, then notice how long it takes your brain to come up with something."
+        "develop": "Wait without a screen, and time how many minutes pass before your first idea. Write the number down.",
+        "extend": "Wait it out in a room with almost nothing in it, and list every idea that comes, even the silly ones."
       }
     },
     {
@@ -161,7 +161,7 @@
       "tip": "The log is proof. Looking back at what boredom turned into is the best motivation for next time.",
       "levels": {
         "explore": "Swap one thing in your kit for something new.",
-        "develop": "Refresh the kit every two weeks, and keep the log going.",
+        "develop": "Refresh the kit every two weeks, and compare your bored-to-busy minutes with the first time.",
         "extend": "Make a kit for someone else, like a sibling, a cousin or a friend."
       }
     }

@@ -11,7 +11,7 @@
     "A real reader: you, a grandparent, a friend"
   ],
   "lesson": {
-    "text": "Every style does a different job, so the same topic sounds completely different depending on who's reading and why. Before writing a word, your kid answers two questions: who is this for, and what do they need from me?",
+    "text": "The same topic sounds completely different depending on who's reading and what you want from them. Before writing a word, your kid answers two questions: who is this for, and what do they need from me?",
     "before": "Bedtime should be later because I want it to be.",
     "model": [
       {
@@ -105,7 +105,7 @@
     {
       "title": "Play style switch",
       "why": "One sentence about the dog in three voices, then the style and topic.",
-      "kid": "Pick something silly, like the family dog or last night's dinner. Your kid says one sentence about it as a news reporter, then as a restaurant critic, then as a letter to the dog. Then they flip through the Writing Style Cards at the end of the guide, choose a style, and pick a topic they actually care about or know a lot about. They write it as one line: 'I'm writing a [style] about [topic].'",
+      "kid": "Pick something silly, like the family dog. Your kid describes it in one sentence as a news reporter, then as a restaurant critic. Then they flip through the Writing Style Cards at the end of the guide, pick a style and a topic they care about, and write: 'I'm writing a [style] about [topic].'",
       "you": "Play the game too, the more dramatic the better. Then help them find a style and topic combination with enough to say, and let them choose.",
       "starters": [
         "Review + a game or book",
@@ -129,7 +129,7 @@
     {
       "title": "Know your reader",
       "why": "Your kid figures out who they're writing for and what that person needs.",
-      "kid": "Before writing a word, your kid answers four questions: who exactly is reading this? What do they already know? What do they want: to be entertained, informed or convinced? And what tone fits: casual, formal, funny or serious?",
+      "kid": "Before writing a word, your kid asks their real reader one quick question, like 'What would you need to hear to say yes?', and writes the answer down. Then they decide what the reader already knows, what they want (a laugh, facts or a reason to say yes), and which tone fits.",
       "you": "Ask the questions that make them think past themselves. A how-to for a five-year-old looks nothing like one for a teenager, and a letter to Grandma has a different tone than a letter to a company.",
       "ask": [
         "If this person picked up your writing, what would make them keep reading?",
@@ -177,7 +177,7 @@
     {
       "title": "Revise and send it",
       "why": "Version 2, then the piece goes to the person it was written for.",
-      "kid": "Your kid makes their changes: an opening that grabs, the main point clear early, no sentences that don't add anything, an ending that feels finished. They put Version 1 and Version 2 side by side and notice what changed. Then they send it to its real reader: mail the letter, test the how-to on someone, read the opinion piece at dinner.",
+      "kid": "Your kid makes their changes: an opening that grabs, the main point early, no sentences that add nothing, an ending that feels finished. They set Version 1 beside Version 2 and spot what changed. Then they send it: mail the letter, test the how-to, read the opinion piece at dinner.",
       "you": "Help them see the gap between the two versions: that gap is the learning. Then handle the logistics of sending (an envelope and stamp, a slot at dinner, a friend to test the how-to), and let your kid do the handing over.",
       "ask": [
         "What's the biggest change between Version 1 and Version 2?",
@@ -187,7 +187,7 @@
       "levels": {
         "explore": "Fix the one thing you picked, read the new version to your reader, and point to the part that's better.",
         "develop": "Rewrite the full piece with all edits, and send it to a real reader.",
-        "extend": "Cut it by a third, keep the main point, and send the shorter one."
+        "extend": "Before sending, write the reply you hope to get back. Then check: does your piece give the reader everything they'd need to write it?"
       }
     }
   ],

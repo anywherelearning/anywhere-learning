@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need to organize anything. You're the reality check and the ride. Keep asking 'What's the smallest version of this that would really help someone?' Go with them when they talk to people, and let them do the talking. It'll probably take longer than you think and go sideways once. That's part of it.",
+    "intro": "The hard part is holding back your own idea of what people need. Drive them there, stand beside them when they ask, and let them do the talking. Keep asking 'What's the smallest version of this that would really help someone?' It will take longer than you think and go sideways once.",
     "plan": [
       {
         "when": "Session 1",
@@ -147,7 +147,7 @@
       "levels": {
         "explore": "Do one action for 15 to 30 minutes, and take a before and after photo.",
         "develop": "Finish a project with a few steps and record each one.",
-        "extend": "Run the whole thing, get others to help and count exactly what changed."
+        "extend": "Recruit one helper, write them a one-line job so they know exactly what to do, and run it together."
       }
     },
     {
@@ -297,7 +297,7 @@
   ],
   "conclusion": {
     "headline": "They saw something, and they did something about it.",
-    "text": "You'll see it in small moments after this. If they notice who's struggling with the door, or say 'We could do something about that', they've started to see themselves as someone who can.",
+    "text": "Notice who they notice now: the neighbour with heavy bags, the kid on their own at the park. See whether they ask what would help before jumping in. That question is what this project was for.",
     "celebrate": "Stand back and look at it together, and say: 'That's better now because of you.'",
     "extensions": [
       "Run the same project again in six months, and see what changed",

@@ -124,7 +124,7 @@
     {
       "title": "Need or want, then build the rubric",
       "why": "An honest label, and a scorecard built on what matters to them.",
-      "kid": "First, your kid decides: need or want? A need is something you can't really go without to stay warm, safe and fed, like a winter coat. A want is something you'd enjoy but could live without. Then they pick criteria (price, quality, reviews, features, style, how long it lasts) and draw a rubric: criteria down the side, both options across the top, a score from 1 to 5 in every box.",
+      "kid": "First, your kid decides: need or want? A need keeps you warm, safe and fed, like a winter coat. A want is nice, but you'd live without it. Then they draw a rubric: criteria down the side (price, quality, how long it lasts, style), both options across the top, a score from 1 to 5 in each box.",
       "you": "Ask questions, don't judge. If colour matters more than durability to them, let the rubric show the trade-off. Watch for the moment a 'need' turns out to be a 'want.'",
       "ask": [
         "If you could only check two things before buying, what would they be?",
@@ -140,7 +140,7 @@
     {
       "title": "See them, then work out the true cost",
       "why": "What it's like in your hands, and what it really costs, not what the tag says.",
-      "kid": "If they can, your kid goes to see both options: holds them, tries them on, reads the box for what's included. Then they look past the sticker price three ways. Cost per use: price ÷ number of uses. Hidden costs: batteries, refills, accessories, shipping, a subscription. Opportunity cost: 'If I don't buy this, I could use the money for ___.' Then they update the rubric.",
+      "kid": "If they can, your kid sees both options in person: holds them, tries them on, reads the box. Then they find the true cost: price ÷ uses, plus hidden costs like batteries, refills or shipping, and the opportunity cost: 'If I don't buy this, the money could go to ___.' Then they update the rubric.",
       "you": "Take them to the store if you can, and let them handle both. Help with the division if needed. Estimating uses is fine: about twice a week for a year is about 100 uses.",
       "ask": [
         "What did you notice in person that the picture didn't show?",
@@ -156,7 +156,7 @@
     {
       "title": "Spot the marketing tricks",
       "why": "Stop looking at the product. Look at the selling.",
-      "kid": "Your kid looks at how each option is sold (the product page, the box, the ad) and finds at least 3 tricks from the Marketing Tricks page at the end of the guide: urgency, fake scarcity, crossed-out prices, star counts, paid influencers, free shipping thresholds, 'you deserve this' language. Then they ask: did any of these sneak into my scores?",
+      "kid": "Your kid looks at how each option is sold (the product page, the box, the ad) and finds at least 3 tricks from the Marketing Tricks page at the end of the guide, like a countdown clock, a crossed-out price or a paid influencer. Then they ask: did any of these sneak into my scores?",
       "you": "Let them go down the rabbit hole. This step is the one they'll use for life.",
       "ask": [
         "Is the product good, or is the marketing just good?",
@@ -172,7 +172,7 @@
     {
       "title": "Decide, wait, then buy",
       "why": "A decision someone else could follow, and time to find out if it's real.",
-      "kid": "Your kid writes the pick in one sentence with the top reasons from the rubric and the true cost, and checks the gut pick from Step 1. Then the decision waits: two weeks for a want, a few days for a need. If they still want it, they buy it, with their own money if it's theirs, and put a date on the calendar a month later: do I still use it?",
+      "kid": "Your kid writes the pick in one sentence, with the top reasons and the true cost, and checks it against the gut pick from Step 1. Then it waits: two weeks for a want, a few days for a need. If they still want it, they buy it and mark a date a month later: do I still use it?",
       "you": "Hold the wait, even if they beg. If the price drops or a bad review shows up during it, let them adjust: that's real information. Praise a changed mind out loud.",
       "starters": [
         "Price drops",
@@ -296,7 +296,7 @@
   },
   "conclusion": {
     "headline": "They check cost per use now, not just the tag.",
-    "text": "At the store, hold up two versions of something you buy, like two packs of batteries, and ask which is the better deal. Listen for 'how long does it last?' before 'which is cheaper?' If that question comes first, the cost-per-use maths stuck.",
+    "text": "At the store, hold up two versions of something you buy, like two packs of batteries, and ask which is the better deal. Listen for 'how long does it last?' before 'which is cheaper?' If that question comes first, the cost-per-use math stuck.",
     "celebrate": "Repeat back the number that decided it: 'So the pricier one is cheaper every time you use it. That's going to change how I shop too.'",
     "extensions": [
       "Check what each option resells for used after a year, and subtract that from its true cost.",

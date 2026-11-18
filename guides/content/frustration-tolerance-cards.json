@@ -7,7 +7,7 @@
   "goal": "24 short challenges that are a little frustrating on purpose: a tower that keeps falling, a knot that won't come right the first time, a game where someone breaks the rules. Each card comes with one move your kid practises while the frustration is really happening, in a small, safe dose, with you right there.",
   "need": [
     "These cards, on your phone or printed and cut out",
-    "Things you already have: stones, cards, string, dice, a spoon",
+    "Things you already have: stones, playing cards, string, dice, a balloon, blocks, coins, a puzzle, a spoon and a potato (dominoes if you have them)",
     "Ten minutes and a good mood, not a hard day"
   ],
   "lesson": {
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "The trap is rescuing them the second it gets hard. Pick a good day, do the cards with them, and let them see you get frustrated too, and use the move.",
+    "intro": "Pick a good day, do the cards with them, and resist rescuing the second it gets hard. Let them see you get frustrated too, and use the move out loud.",
     "plan": [
       {
         "when": "Before you start",
@@ -216,7 +216,7 @@
         },
         {
           "name": "Talking Turn",
-          "t": "Tell a story as a family, one sentence each. Wait until the person before you finishes. When you want to jump in: Hands off.",
+          "t": "Tell a story as a family, one sentence each. Wait until the person before you finishes. When you want to jump in: Slow breath, and wait for their last word.",
           "d": "Make the turns longer, and listen for one detail to use in yours.",
           "icon": "circle",
           "art": "wc/frust-hourglass.jpg"

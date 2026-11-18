@@ -153,7 +153,7 @@
     {
       "title": "Lead the night walk",
       "why": "Finding north once is a trick. Leading people by it is a skill.",
-      "kid": "At a spot on a path you know, your kid finds north from the sky, then uses it to point toward home or the car, out of sight, and leads the family that way to the next junction, using the Night walk card. Everyone checks with a phone compass at each stop.",
+      "kid": "At a spot on a path you know, your kid finds north from the sky, uses it to point toward home or the car, out of sight, and leads the family to the next junction, using the Night walk card. There, one grown-up checks a dimmed phone compass while the rest keep their night eyes.",
       "you": "Choose a safe, familiar path and walk beside them. Agree on a turn-back time before you set out.",
       "ask": [
         "Which way is home from here?",
@@ -275,6 +275,10 @@
           {
             "k": "Check:",
             "v": "your real latitude on a map"
+          },
+          {
+            "k": "South:",
+            "v": "fists up to the Southern Cross point"
           }
         ],
         "ask": "How close did your fists get?"
@@ -371,7 +375,7 @@
     "They use a fist to measure things in the sky",
     "They explain the moon's shape by where the sun is"
   ],
-  "makeItReal": "Pick the next clear night, turn off the outside lights, and give your kid 20 minutes in the dark to find the Big Dipper before you point at anything.",
+  "makeItReal": "On your next evening out, stop before you reach the car or the door and ask your kid to point toward home using only the sky.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

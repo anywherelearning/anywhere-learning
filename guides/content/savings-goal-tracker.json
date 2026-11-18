@@ -4,7 +4,7 @@
   "title": "Savings Goal Tracker",
   "tagline": "Goal · Timeline · Percent saved",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid picks something real they want, finds the true price, and works out how long it will take to save for it. Then they find ways to earn more, track every deposit, do the maths when they're tempted to spend, and watch the total climb until they can buy it with their own money.",
+  "goal": "Your kid picks something real they want, finds the true price, and works out how long it will take to save for it. Then they find ways to earn more, track every deposit, do the math when they're tempted to spend, and watch the total climb until they can buy it with their own money.",
   "need": [
     "A real goal your kid picked: a game, a toy, gear, a gift for someone, a trip fund",
     "A jar, an envelope or a bank account for the savings",
@@ -61,7 +61,7 @@
       },
       {
         "when": "Every deposit",
-        "what": "Update the tracker, and do the maths before any spend (Step 4)."
+        "what": "Update the tracker, and do the math before any spend (Step 4)."
       },
       {
         "when": "After 2 to 4 weeks",
@@ -134,7 +134,7 @@
     {
       "title": "Find ways to earn more",
       "why": "Earning is the fast lane to the goal.",
-      "kid": "Your kid brainstorms ways to earn: extra jobs at home, helping a neighbour, returning cans and bottles, selling outgrown things, a baking stand. For each one they estimate the pay and the time, and work out the hourly rate. They pick one or two and redo the timeline with the extra money.",
+      "kid": "Your kid brainstorms ways to earn with the Ways kids can earn card in the Saver's Toolkit at the end of the guide: extra jobs at home, helping a neighbour, returning cans, selling outgrown things. For each, they estimate the pay and the time, work out the hourly rate and redo the timeline.",
       "you": "Brainstorm with them, but don't hand over the money. Decide together which jobs are extra and paid, and which are just part of family life. Keep jobs safe, and go with them to any neighbour's door.",
       "ask": [
         "Washing a car pays $5 and takes 30 minutes. What's your hourly rate?",
@@ -150,7 +150,7 @@
     {
       "title": "Track it and face the spending test",
       "why": "Real numbers, and a real choice when temptation shows up.",
-      "kid": "Your kid sets up a tracker: date, amount, where it came from, the new total and the percent of the goal. They update it every time money goes in or out. When they want to spend on something else, they stop and work out how many weeks it adds before deciding.",
+      "kid": "Your kid sets up a tracker with the Tracker columns card and updates it every time money goes in or out, including the percent of the goal. When they want to spend on something else, they stop and work out how many weeks it adds before deciding.",
       "you": "Remind them to update the tracker. When they want to spend, don't say no. Ask 'how many weeks does that add?' and let them choose.",
       "ask": [
         "After this deposit, what percent of the goal do you have?",
@@ -159,7 +159,7 @@
       "tip": "Percent of goal = saved ÷ goal × 100. $15 of $60 is 15 ÷ 60 = 0.25, so 25%.",
       "levels": {
         "explore": "Put each deposit in the jar, count it all, and write the new total.",
-        "develop": "Track the percent of the goal, and do the maths before any spend.",
+        "develop": "Track the percent of the goal, and do the math before any spend.",
         "extend": "If a $3 spend happens every two weeks, how many weeks does it add to the plan?"
       }
     },

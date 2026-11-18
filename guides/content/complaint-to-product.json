@@ -2,7 +2,7 @@
   "slug": "complaint-to-product",
   "category": "Entrepreneurship",
   "title": "Complaint to Product",
-  "tagline": "Listen · Pattern · Build · Test",
+  "tagline": "Listen · Pattern · Build · Watch · Fix",
   "ages": "Ages 6 to 14",
   "goal": "Your kid designs a product for someone else's problem, not their own. They collect complaints from real people, find the one that keeps coming up, build a rough model from cardboard, watch the people who complained try it, then fix it and find out if anyone would really choose it.",
   "need": [
@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need to be handy or creative. You're the first person they interview and the ride to the others. Your most useful question is 'Who's it for?' Keep bringing them back to the people who complained, especially when they fall in love with their own idea.",
+    "intro": "Kids want to start building on day one. Hold them at the listening stage longer than feels comfortable: be the first person they interview and the ride to everyone else, and keep asking 'Who's it for?' until the answer is someone who actually complained.",
     "plan": [
       {
         "when": "Session 1",
@@ -89,7 +89,7 @@
     {
       "title": "Collect complaints",
       "why": "Every product you own started as someone's complaint.",
-      "kid": "Your kid asks at least five people about one part of their day, like getting out the door, meals, trips or chores, using the Listening questions card in the Product Toolkit at the end of the guide. They write down people's exact words, not just the gist.",
+      "kid": "Your kid asks at least five people about one part of their day, like cooking, tidying, trips or chores, using the Listening questions card in the Product Toolkit at the end of the guide. They write down people's exact words, not just the gist.",
       "you": "Be the practice interview and give real answers. Then help them reach people outside the family, like a friend's parent, a coach or a neighbour, and stay nearby while they ask.",
       "ask": [
         "What did they say, word for word?",
@@ -145,7 +145,7 @@
       ],
       "tip": "Don't explain it first. If it needs explaining, that's the most useful thing you'll learn.",
       "levels": {
-        "explore": "Show one person your model and ask what they think.",
+        "explore": "Hand your model to one person without explaining, and watch what their hands do first.",
         "develop": "Test it with three people without explaining, and write down where they got stuck.",
         "extend": "Test both models with the same people, and count which one they choose."
       }

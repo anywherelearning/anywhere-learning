@@ -102,7 +102,7 @@
     {
       "title": "Pick what to track and set it up",
       "why": "The best thing to track has a clear number and changes a little every day.",
-      "kid": "Your kid picks one thing to measure: the temperature at one time each day, the rain in a jar, the sunset time, the birds at a feeder. Then they set it up: a thermometer in the shade, a rain gauge made from a straight-sided jar and a ruler, or a weather app for sunset times.",
+      "kid": "Your kid picks one thing to measure: the temperature at one time each day, the rain in a jar, the sunset time, the birds at a feeder. Then they set it up: a thermometer in the shade, a rain gauge from the Make a rain gauge card in the Tracker Toolkit at the end of the guide, or a weather app.",
       "you": "Help them pick something easy to check at the same time every day. 'The temperature after breakfast' gives sharper data than 'the weather'.",
       "starters": [
         "Temperature",
@@ -142,7 +142,7 @@
       "title": "Work out the daily changes",
       "why": "The difference between days is where the story starts.",
       "kid": "Next to each number, your kid writes the change from the day before: +3 for 3 degrees warmer, +2 for a sunset 2 minutes later. Then they find the biggest jump and the smallest change. Tracking rain? Each day's rain stands on its own, so keep a running total instead and count the rainy days.",
-      "you": "Keep the maths conversational, in real-life words: warmer by, colder by, later than. Ask 'how do you know?'",
+      "you": "Keep the math conversational, in real-life words: warmer by, colder by, later than. Ask 'how do you know?'",
       "ask": [
         "Was today warmer or colder than yesterday, and by how much?",
         "Which day had the biggest change?"
@@ -173,7 +173,7 @@
     {
       "title": "Predict and check",
       "why": "A forecaster's payoff: using the trend to see ahead.",
-      "kid": "Using the trend, your kid predicts the next few days and writes each prediction with a reason: 'Sunset will keep getting about 2 minutes earlier each day.' Then they keep tracking and check. Were they right, close or way off?",
+      "kid": "Using the trend, your kid forecasts the next few days with a reason, and the family uses it for one real call: which jacket, a picnic day, when to water the garden. Then they keep tracking and check. Were they right, close or way off?",
       "you": "Treat their prediction like a real forecast. A miss is a great result: 'why didn't it go the way the pattern said?' is the best question in the guide.",
       "ask": [
         "What will tomorrow's number be, and why?",
@@ -297,7 +297,7 @@
       }
     ],
     "after": {
-      "label": "The tracker maths",
+      "label": "The tracker math",
       "lines": [
         "Change = today − yesterday",
         "Average = total ÷ number of days",

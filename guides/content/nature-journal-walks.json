@@ -121,7 +121,7 @@
         {
           "name": "Cloud Stories",
           "t": "Draw the shapes you see in the clouds right now.",
-          "d": "Write a short story about one of the clouds.",
+          "d": "Draw the same patch of sky 10 minutes later. Which clouds moved, and which way?",
           "art": "wc/journal-03.jpg",
           "jp": "Look at the clouds and draw the shapes you see. Write a short story about one of the clouds."
         },
@@ -147,10 +147,10 @@
           "jp": "Draw the sky. Write the temperature, the wind and how it feels outside. What will the weather do next?"
         },
         {
-          "name": "Shape Hunt",
-          "t": "Find a circle, a spiral and a triangle in nature. Draw each one.",
-          "d": "Why might a plant or an animal be that shape?",
-          "art": "wc/journal-07.jpg",
+          "name": "Web Watch",
+          "t": "Find a spider web. Draw it from the middle out, counting the spokes. Look, don't touch.",
+          "d": "Is the spiral even, or are there gaps? Look for the spider nearby.",
+          "art": "wc/signs-spider-web.jpg",
           "jp": "Find different shapes in nature, like circles, triangles or spirals. Draw them and describe where you found them."
         },
         {
@@ -163,7 +163,7 @@
         {
           "name": "Wind Watch",
           "t": "Draw how the wind moves the grass, the leaves or the water.",
-          "d": "Write where you think the wind is going next.",
+          "d": "Drop a pinch of dry grass. Draw an arrow showing which way the wind took it.",
           "art": "wc/journal-09.jpg",
           "jp": "Feel the wind on your face. Draw the wind moving through the trees or the grass, and write a story about where the wind is going."
         },
@@ -251,7 +251,7 @@
         {
           "name": "Colour Change",
           "t": "Pick 3 leaves from one tree: still green, turning, fully turned. Draw them side by side.",
-          "d": "Which colour was hiding under the green all summer?",
+          "d": "Yellow and orange hid under the green all summer; red is new, made in fall. Which do yours show?",
           "icon": "leaf",
           "jp": "Find three leaves from the same tree at different stages of changing colour. Draw them side by side and write what you notice."
         }
@@ -277,7 +277,7 @@
         {
           "name": "Snowflakes Up Close",
           "t": "Catch snowflakes on a dark mitten. Draw three different shapes.",
-          "d": "How many points does each one have? (Whole ones always have six.)",
+          "d": "How many points does each one have? (Whole ones almost always have six.)",
           "art": "wc/journal-23.jpg",
           "jp": "Look closely at snowflakes. Draw their shapes and write what you find fascinating about them."
         },

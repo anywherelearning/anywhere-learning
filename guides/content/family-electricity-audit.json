@@ -102,8 +102,8 @@
     {
       "title": "Hunt the appliances and read the labels",
       "why": "A full inventory of everything that uses electricity, with its wattage.",
-      "kid": "Your kid walks through the house room by room and lists every device that uses electricity, including the hidden ones: phone chargers, the Wi-Fi router, a game console on standby. Then they find the wattage on each label (on the back or the bottom, or in the manual) and write it next to the item. No label, or only volts and amps? The Typical watts and Reading a label cards in the Energy Toolkit at the end of the guide help.",
-      "you": "Walk with them, but let them lead. Point to the rooms they skip, like the laundry room or the garage. Help with labels that are hard to read or to find online.",
+      "kid": "Your kid walks through the house and lists every device that plugs in, hidden ones too: chargers, the Wi-Fi router, a console on standby. They write the watts from each label next to it. No label? Use the Typical watts and Reading a label cards in the Energy Toolkit at the end of the guide.",
+      "you": "Walk with them, but let them lead. Pull heavy appliances out yourself, and keep labels a look-only job: nothing gets unplugged without you. Point to the rooms they skip, like the laundry room.",
       "starters": [
         "The fridge",
         "The Wi-Fi router",
@@ -158,7 +158,7 @@
     {
       "title": "Rank them and make a plan",
       "why": "Finding the energy-hungry devices, then a plan to use less.",
-      "kid": "Your kid ranks the appliances from most to least expensive and finds the biggest surprises. Then they choose 3 to 5 specific changes the family could try (turn off standby, shorter dryer loads, lights off when leaving a room) and calculate how much each one would save in a week. They write the plan so the whole family can follow it.",
+      "kid": "Your kid ranks the appliances from most to least expensive and finds the biggest surprise. Then they choose 3 to 5 changes the family could try, like switching off standby or shorter dryer loads, work out each one's weekly saving, and write the plan where everyone will see it.",
       "you": "Let them come up with the ideas: don't hand them a list. Ask which change is easiest and which would save the most. Those are often different.",
       "ask": [
         "What's our number one energy user? Did you guess right?",
@@ -174,7 +174,7 @@
     {
       "title": "Test it for a week and report",
       "why": "Plan versus reality, then real results for a real audience.",
-      "kid": "The family follows the plan for 7 days while your kid tracks which changes happened each day. At the end of the week, they recalculate the savings based on what actually happened, not the plan, and project the yearly saving if you kept going. Then they present their findings and recommend which changes to keep.",
+      "kid": "The family follows the plan for 7 days while your kid tracks which changes happened each day. Then they recalculate the saving from what really happened, not the plan, project it over a year, and present which changes to keep and why.",
       "you": "Support the plan without taking it over. If someone forgets, let your kid be the one to remind them. Be a real audience for the final report.",
       "ask": [
         "If we stuck to 4 changes out of 5, how does that change the savings?",
@@ -201,7 +201,7 @@
   },
   "signs": [
     "They switch off lights and standby devices on their way out of a room",
-    "They read labels and do quick wattage maths in their head",
+    "They read labels and do quick wattage math in their head",
     "They ask what things cost to run before using them"
   ],
   "makeItReal": "Put the savings to work: agree as a family that the money saved in a month goes to something your kid chooses, like a family outing or a donation. Then check the bill together and hand it over.",

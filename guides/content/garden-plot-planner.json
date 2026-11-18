@@ -65,7 +65,7 @@
       },
       {
         "when": "Planting day, then weekly",
-        "what": "Plant, track the growth and do the final maths (Step 5)."
+        "what": "Plant, track the growth and do the final math (Step 5)."
       }
     ],
     "tips": [],
@@ -150,13 +150,13 @@
     {
       "title": "Budget it and set the dates",
       "why": "What it costs, and when you'll eat it.",
-      "kid": "Your kid lists what they need (seeds, soil, pots, labels), marks what you already have, prices the rest and checks it against the budget. Then they add each plant's days to harvest to the planting date to find its harvest date, and put it all on a calendar. Building a raised bed? They also work out the wood to cut (the perimeter: 4 + 2 + 4 + 2 = 12 ft for a 4 × 2 ft bed) and how much soil fills it: length × width × depth.",
+      "kid": "Your kid lists what they need (seeds, soil, pots, labels), marks what you already have, prices the rest and checks the budget. Then they add each plant's days to harvest to the planting date and mark it on a calendar. Building a raised bed? They work out the soil: length × width × depth.",
       "you": "Set a real budget, like $5 to $15. Ask 'can you grow it from seed instead of buying plants?' and 'what could you use instead of a new pot?'",
       "ask": [
         "A bed 4 ft × 2 ft × 1 ft deep: how many cubic feet of soil?",
         "Plant carrots today, 70 days to harvest: what's the date?"
       ],
-      "tip": "Yogurt tubs with holes poked in the bottom make good free pots.",
+      "tip": "Building a raised bed? The wood is the perimeter: 4 + 2 + 4 + 2 = 12 ft for a 4 × 2 ft bed.",
       "levels": {
         "explore": "Price what you need, count out the money, and circle sprout day on the calendar.",
         "develop": "Price everything, make 2 trade-offs to stay on budget, and build a planting calendar.",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "title": "Plant it, track it, do the final maths",
+      "title": "Plant it, track it, do the final math",
       "why": "The plan becomes real, and the data starts coming in.",
       "kid": "Your kid plants following their layout, at the depth on the packet, then waters and labels everything. Every few days they record what sprouted and how tall each plant is. At the end they work out the growth per day and the cost per plant, and whether growing it beat buying it.",
       "you": "Let them do the planting and the measuring. Remind them to check in, and ask 'what changed since last time?'",
@@ -286,7 +286,7 @@
       }
     ],
     "after": {
-      "label": "The garden maths",
+      "label": "The garden math",
       "lines": [
         "Plants in a row = row length ÷ spacing",
         "Soil to fill a bed = length × width × depth",

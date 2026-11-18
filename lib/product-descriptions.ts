@@ -2127,7 +2127,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'A 5-step guide from choosing a scenario to a real trip plan',
       'A worked example of what to do if you get lost',
       'Scenarios card and Priorities card',
-      'If you are lost card and Skills to try card',
+      'If you\'re lost card and Skills to try card',
       'Trip plan to fill in before every outing',
     ],
     skillTags: ['Planning', 'Critical Thinking', 'Outdoor Skills', 'Resourcefulness', 'Life Skills'],
@@ -2867,7 +2867,7 @@ export const productDescriptions: Record<string, ProductDescription> = {
       'Track a running total in the store',
       'Make real trade-offs when it does not all fit',
       'Check out, count the change, and review',
-      'A Shopper\'s Toolkit: rounding, shelf tags and counting change',
+      'A Shopper\'s Toolkit: rounding as you go, counting change, and what to do when it won\'t all fit',
     ],
     skillTags: ['STEM', 'Real-World Math', 'Budgeting', 'Decision-Making'],
     insideTheLearning: {

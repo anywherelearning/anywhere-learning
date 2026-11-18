@@ -50,20 +50,6 @@
         "text": "This activity is funniest when it goes wrong, so laugh together. A wrong turn isn't a failure. It's the clue that shows which words need fixing."
       }
     ],
-    "example": {
-      "title": "What a fix looks like",
-      "before": [
-        "Go to the kitchen.",
-        "Turn.",
-        "Open it."
-      ],
-      "after": [
-        "Walk 6 big steps to the kitchen door.",
-        "Turn left so the fridge is in front of you.",
-        "Open the fridge door."
-      ],
-      "why": "The fixed version says how far to go, which way to turn, and what 'it' is. That's what your kid is aiming for."
-    },
     "troubleshoot": [
       {
         "q": "Your kid doesn't like writing yet",
@@ -105,7 +91,7 @@
     {
       "title": "Plan it and write it",
       "why": "Your kid picks a challenge and writes the first set of directions.",
-      "kid": "Your kid chooses something to give directions for: a route (kitchen to mailbox) or a task (a block tower, a sandwich, or the hidden drawing, where they draw something and hide it). Then they write the directions one step per line, saying exactly how far or how many: 'take 4 steps,' not 'go a bit.'",
+      "kid": "Your kid chooses something to give directions for: a route (kitchen to mailbox) or a task (a block tower, a sandwich, or a hidden drawing they make and keep secret). Then they write the directions one step per line, saying exactly how far or how many: 'take 4 steps,' not 'go a bit.'",
       "you": "Help brainstorm a few ideas from the list below, then let your kid choose. Agree on the rule together: words only, no pointing or showing. While they write, don't look. You'll find out how clear the directions are in Step 2.",
       "starters": [
         "Couch to fridge",
@@ -122,7 +108,7 @@
       "levels": {
         "explore": "Draw each step as a picture card (a foot with a number, an arrow, a door), up to 5 cards, and say each one out loud.",
         "develop": "Aim for 6 to 10 steps, using distances (12 steps) or landmarks (the big chair).",
-        "extend": "Have them add a checkpoint every few steps, like 'You should now see the front door.'"
+        "extend": "Add a checkpoint every few steps, like 'You should now see the front door.'"
       }
     },
     {
@@ -136,9 +122,9 @@
       ],
       "tip": "This first run is supposed to go a bit wrong. That's not failure. It's exactly what Step 3 needs.",
       "levels": {
-        "explore": "Your kid reads and watches, then points out afterward where things went off track.",
-        "develop": "Your kid gives no hints at all and marks every step where something unexpected happened.",
-        "extend": "After each step, your kid quietly writes down what they expected and what actually happened."
+        "explore": "Read your directions and watch. Afterward, point to where things went off track.",
+        "develop": "Give no hints at all, and mark every step where something unexpected happened.",
+        "extend": "After each step, quietly write what you expected and what actually happened."
       }
     },
     {
@@ -152,9 +138,9 @@
       ],
       "tip": "The big lesson here: when someone gets lost, the problem usually isn't the listener. It's the message.",
       "levels": {
-        "explore": "Your kid circles the steps that didn't work and says what went wrong in their own words.",
-        "develop": "Next to each circled step, your kid writes the cause: vague, missing step, wrong order, or assumed.",
-        "extend": "Your kid makes a table: what they said, what you did, and why it went wrong. Then looks for a pattern."
+        "explore": "Circle the steps that didn't work, and say what went wrong in your own words.",
+        "develop": "Next to each circled step, write the cause: vague, missing step, wrong order, or assumed.",
+        "extend": "Make a table: what you said, what I did, and why. Look for the mistake you made most."
       }
     },
     {
@@ -168,25 +154,25 @@
       ],
       "tip": "When the second run works, say so out loud: 'I didn't have to guess once that time.' That moment is the payoff.",
       "levels": {
-        "explore": "Your kid fixes the 2 or 3 steps that caused the most trouble, then tries again.",
-        "develop": "Your kid rewrites every step that went wrong and compares the second run to the first.",
+        "explore": "Fix the 2 or 3 steps that caused the most trouble, then try again.",
+        "develop": "Rewrite every step that went wrong, and compare the second run with the first.",
         "extend": "'6 big steps' depends on whose legs. Test one step with a short and a tall follower, then add a landmark so it works for both."
       }
     },
     {
-      "title": "Look back together",
-      "why": "You talk about what changed, and where else it matters.",
-      "kid": "Your kid talks about the whole activity: the biggest surprise, what they learned about giving clear directions, and where else in real life being clear matters (a recipe, a game, a new place).",
-      "you": "Share your side too: tell them about a time you got lost or confused because someone's directions weren't clear. Then celebrate the fix, not just the finish. Getting it right the second time is the whole point.",
+      "title": "Write it for a real visitor",
+      "why": "Directions for someone who actually needs them are the real test.",
+      "kid": "Your kid writes new directions for someone who really needs them: a guest finding the bathroom, a friend walking from the corner, a grandparent finding the spare key. They use every fix from the first set, leave the directions out, then ask how it went and fix any step that failed.",
+      "you": "Pick a real reason together, then stay out of the writing. If you can see a step will fail, ask 'What will they see right there?' and let your kid decide.",
       "ask": [
-        "How is telling someone what to do different from showing them?",
-        "What would you tell someone doing this for the first time?"
+        "Where did the visitor slow down or ask?",
+        "What will you write differently next time?"
       ],
       "tip": "End by picking the next challenge together: a route if you did a task, or a task if you did a route.",
       "levels": {
-        "explore": "Your kid shares one thing that surprised them and one thing they'd do differently.",
-        "develop": "Your kid writes a few sentences about what they learned, with one real-life example.",
-        "extend": "Your kid rewrites the directions for someone starting at another door. Which words only worked from their spot?"
+        "explore": "Draw picture-card directions from the front door to the bathroom, and tape them up for a visitor.",
+        "develop": "Write directions for a real guest, leave them out, and fix every step they asked about.",
+        "extend": "Write the same route twice, for someone walking and someone on a bike. Which steps had to change, and why?"
       }
     }
   ],
@@ -206,7 +192,7 @@
     "Ask where something is and you get a number or a landmark back",
     "When someone misunderstands, they check their own words first"
   ],
-  "makeItReal": "Write directions for an actual visitor, like front door to the guest bed, or the bus stop to your door. Leave them out for the next guest and see if they get there alone.",
+  "makeItReal": "When you're out walking, let your kid give the directions home, words only, and follow them exactly, wrong turns and all.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
@@ -225,5 +211,24 @@
     "Ask a local for directions, with your help, and notice whether they use landmarks, street names or just point.",
     "Learn the local words for left, right, straight and stop, and guide a family member using only those words."
   ],
-  "backHome": "Rewrite one set of directions at home in the landmark style you heard on the road, and test it on someone."
+  "backHome": "Rewrite one set of directions at home in the landmark style you heard on the road, and test it on someone.",
+  "lesson": {
+    "text": "Clear directions answer three questions at every step: how far, which way, and to what. Leave one out and the follower has to guess.",
+    "before": "'Go to the kitchen. Turn. Open it.'",
+    "model": [
+      {
+        "part": "How far",
+        "line": "Walk 6 big steps to the kitchen door."
+      },
+      {
+        "part": "Which way",
+        "line": "Turn left so the fridge is in front of you."
+      },
+      {
+        "part": "To what",
+        "line": "Open the fridge door."
+      }
+    ],
+    "modelNote": "'Open it' made sense to the writer, who could see the fridge. The fix names the distance, the turn and the thing, so nobody has to guess."
+  }
 }

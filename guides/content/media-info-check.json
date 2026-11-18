@@ -7,7 +7,7 @@
   "goal": "Your kid learns to check before they believe or share. Faced with a post, a photo or a video, they pause when it makes them feel a lot, find out who made it, look closely for signs it was edited or made by AI, search for it somewhere else, and decide: real, fake or not sure yet.",
   "need": [
     "A screen you can look at together",
-    "A few videos, photos or posts to check, real and fake. Fact-check sites like Snopes list fakes going around right now.",
+    "A few things to check: the hurricane shark photo, the Pacific Northwest Tree Octopus website, and one real surprising photo",
     "A search engine, with you beside them"
   ],
   "academics": [
@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is a list of warnings about the internet. Your job is to check things together, out loud, so they hear how you think, and to make 'let's check' sound fun, not scary.",
+    "intro": "A list of internet warnings won't stick. Check things together, out loud, so they hear how you think, and make 'let's check' sound fun, not scary.",
     "plan": [
       {
         "when": "One sitting, together",
@@ -230,8 +230,8 @@
             "v": "signs and letters that don't make sense"
           },
           {
-            "k": "Sound:",
-            "v": "voices that don't match the lips"
+            "k": "Video:",
+            "v": "short clips, things melting together, a watermark"
           }
         ],
         "ask": "Which clue is hardest to spot?"
@@ -248,8 +248,8 @@
             "v": "a trusted news site you know"
           },
           {
-            "k": "Image search:",
-            "v": "has this picture been used before?"
+            "k": "Image check:",
+            "v": "Google Lens finds older copies of a photo"
           },
           {
             "k": "Two sources:",
@@ -302,7 +302,7 @@
   ],
   "conclusion": {
     "headline": "They check before they believe, or share.",
-    "text": "Notice the next time they see something amazing on a screen. If their first words are 'is that real?' or 'let's check', the pause is becoming a habit.",
+    "text": "Send them a surprising photo from your own phone this week and ask 'Real?' Notice which check they reach for first.",
     "celebrate": "When they catch a fake, or choose not to share something they're unsure about, say: 'That pause just stopped a fake from spreading.'",
     "extensions": [
       "Pick a family safe word, so if anyone gets a call or voice message that sounds like a family member asking for help or money, you can check it's really them",
@@ -316,7 +316,7 @@
     "They look for who made something before believing it",
     "They wait instead of sharing when they're unsure"
   ],
-  "makeItReal": "The next time a video or post surprises your family, stop and check it together, out loud, before anyone shares it.",
+  "makeItReal": "This week, pick one surprising post or video together and run all five checks on it, out loud, before anyone shares it.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

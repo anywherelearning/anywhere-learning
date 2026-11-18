@@ -89,8 +89,8 @@
     {
       "title": "Hunt the clues",
       "why": "Hunting the clues slows reading down, so they see which words made the picture.",
-      "kid": "Your kid picks a passage that describes a place, using the Good passages card in the Build the Book Toolkit at the end of the guide, and you read it aloud together twice. On the second read, they write down every clue about where things are, their size and what they're made of, using the Clue hunt card.",
-      "you": "Read slowly and stop after each sentence. Ask 'Did that tell us anything about the place?' Let them miss clues on the first read.",
+      "kid": "Your kid picks a passage that describes a place, using the Good passages card in the Build the Book Toolkit at the end of the guide. You read it aloud twice. On the second read, they list every clue about where things sit, their size and what they're made of, on the Clue hunt card.",
+      "you": "Read slowly and stop after each sentence. After the second read, make your own quick sketch of the place from the words alone, fold it up and save it for Step 5.",
       "ask": [
         "Which word told you the most about this place?",
         "What did the second read catch that the first one missed?"
@@ -153,8 +153,8 @@
     {
       "title": "Compare and tour it",
       "why": "Two readers never build the same place. Comparing shows which differences are guesses and which are misreads.",
-      "kid": "A parent or sibling makes a quick sketch of the same passage without peeking, or your kid compares with the book's illustrations. They list every difference using the Where we differ card, reread to settle each one, then give a tour, pointing to the line for each piece.",
-      "you": "Make your sketch honestly, from the text only. Let your guesses be wrong in front of them, and say so out loud.",
+      "kid": "Your kid unfolds the sketch you made in Step 1, or compares with a sibling's sketch or the book's illustrations. They list every difference using the Where we differ card, reread to settle each one, then give a tour, pointing to the line for each piece.",
+      "you": "Let your sketch's guesses be wrong in front of them, and say so out loud.",
       "ask": [
         "Was that difference a guess or a misread?",
         "Which guess of yours do you still think is right, and why?"

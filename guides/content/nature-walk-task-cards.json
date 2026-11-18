@@ -11,23 +11,27 @@
     "Optional: a notebook and pencil, or a phone for quick photos"
   ],
   "lesson": {
-    "text": "Every card works better with the same three-part answer, the one real naturalists use: I notice (something specific), I wonder (a question), it reminds me of (a comparison).",
-    "before": "There's green stuff.",
+    "text": "Every card gets a better answer when the words get exact. Swap 'cool' and 'big' for a size you can check, a texture, a shape and a comparison.",
+    "before": "'A leaf.'",
     "model": [
       {
-        "part": "I notice",
-        "line": "The moss is bright and fuzzy, the fern is darker and shiny, the pine needles are almost blue."
+        "part": "Size",
+        "line": "As long as my thumb."
       },
       {
-        "part": "I wonder",
-        "line": "Why is the moss so much brighter? Does it get more sun?"
+        "part": "Texture",
+        "line": "Fuzzy underneath, smooth on top."
       },
       {
-        "part": "Reminds me",
-        "line": "The moss looks like a tiny forest for ants."
+        "part": "Shape",
+        "line": "Three bumps, like a mitten."
+      },
+      {
+        "part": "Like",
+        "line": "The fuzz feels like the inside of my hat."
       }
     ],
-    "modelNote": "Three named greens replaced 'green stuff'. Once the words were specific, the question about the sun followed on its own."
+    "modelNote": "'A leaf' could be any of thousands on the path. A thumb's length, a fuzzy underside and a mitten shape point to just one."
   },
   "academics": [
     {
@@ -75,7 +79,7 @@
       },
       {
         "q": "My older kid finds it too easy",
-        "a": "Hand them the deck. They choose and read the cards for you or a younger sibling, and they do the notebook level on their own."
+        "a": "Hand them the deck. They choose and read the cards for you or a younger sibling, and answer every Deeper question in a notebook as they go."
       }
     ]
   },
@@ -231,10 +235,10 @@
       "title": "Animal detective",
       "cards": [
         {
-          "t": "Find evidence that something ate something.",
-          "d": "What do you think was eaten?",
+          "t": "Find a leaf with a hole. Chewed from the edge, or a hole in the middle?",
+          "d": "Look under the leaf. Can you find who did it?",
           "icon": "apple",
-          "art": "wc/walk-21.jpg"
+          "art": "wc/signs-chewed-leaf.jpg"
         },
         {
           "t": "Find evidence that something travelled through here.",
@@ -243,10 +247,10 @@
           "art": "wc/walk-22.jpg"
         },
         {
-          "t": "Find a place where a small creature could hide.",
-          "d": "What makes it a good hiding spot?",
+          "t": "Find a spot where a bird could sit and see everything without being seen.",
+          "d": "Stand where a cat would wait. Would the bird see it coming?",
           "icon": "bug",
-          "art": "wc/walk-23.jpg"
+          "art": "wc/signs-nest.jpg"
         },
         {
           "t": "Find a home clue: a nest, a web, a hole, or a shelter.",
@@ -307,8 +311,8 @@
           "art": "wc/walk-32.jpg"
         },
         {
-          "t": "Touch two safe surfaces. Which one feels warmer?",
-          "d": "Why would that happen?",
+          "t": "Wet the back of your hand and hold it up. Which side feels coldest?",
+          "d": "That's where the wind comes from. Check the treetops: do they agree?",
           "icon": "thermometer",
           "art": "wc/walk-33.jpg"
         },
@@ -324,10 +328,10 @@
           "icon": "sun"
         },
         {
-          "t": "Find a tiny path where water would run: a groove, a slope, a channel.",
-          "d": "Where does it lead?",
+          "t": "Find a spot where water has already run: a fan of sand, a line of washed-up twigs.",
+          "d": "Where did the water come from, and how high did it get?",
           "icon": "waves",
-          "art": "wc/walk-36.jpg"
+          "art": "wc/water-runs.jpg"
         },
         {
           "t": "Find something that helps hold water in the ground: moss, soil, leaf litter.",
@@ -404,8 +408,8 @@
           "art": "wc/walk-48.jpg"
         },
         {
-          "t": "Find something that shows change: decay, growth, or something broken and healing.",
-          "d": "Is change good, bad, or both?",
+          "t": "Find a fallen twig and snap it. Is it green and bendy inside, or dry?",
+          "d": "Scratch a bush twig lightly with a fingernail. Green under the skin means alive, even in winter.",
           "icon": "refresh-ccw",
           "art": "wc/walk-49.jpg"
         },
@@ -498,8 +502,8 @@
           "art": "wc/walk-62.jpg"
         },
         {
-          "t": "Find two things that look alike but are actually different. Tell me how you know.",
-          "d": "Which differences matter most?",
+          "t": "Hold a leaf up to the sky. Which parts let light through, and which block it?",
+          "d": "Find a leaf that lets in more light. What's different about it?",
           "icon": "split",
           "art": "wc/walk-63.jpg"
         },
@@ -525,7 +529,7 @@
     }
   ],
   "conclusion": {
-    "headline": "Three greens where they used to see one.",
+    "headline": "One leaf, a dozen details now.",
     "text": "Hand them one leaf and a minute, and count the details they give you before they run out: the edge, the veins, a hole, the colour underneath. Try the same thing in a month and compare the count.",
     "celebrate": "'I'd have walked right past that.' Say it the moment they show you something small you missed, then ask how they spotted it.",
     "extensions": [

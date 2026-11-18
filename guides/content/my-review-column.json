@@ -122,7 +122,7 @@
     {
       "title": "Run a blind taste test",
       "why": "A silly first review that teaches the whole skill, then a list of things to review.",
-      "kid": "You hide the labels on 3 snacks, cereals or drinks (3 juices, 3 sodas, 3 kinds of milk), and everyone, your kid included, tries each one blind. Your kid rates them and says why: which won, which lost, and what exactly made the difference. Then they make a list of real things they could review this week and pick 3 to 5 they have strong feelings about, good or bad.",
+      "kid": "You hide the labels on 3 snacks, cereals or drinks, and everyone, your kid included, tries each one blind. Your kid rates them and says what exactly made the difference. Then they list real things they could review this week and pick 3 to 5 they have strong feelings about, good or bad.",
       "you": "Set up the taste test and play along. When your kid says 'this one's better,' ask what makes it better until you get something specific, like 'crunchier' or 'less sweet.' Then help them remember what they've eaten, read, played or visited lately, and let them choose.",
       "starters": [
         "A book or comic",
@@ -146,7 +146,7 @@
     {
       "title": "Make the rating system",
       "why": "Your kid decides how the column scores things, and what each score means.",
-      "kid": "Your kid invents the rating system they'll use for every review. It can be stars, a number out of 10, or something of their own like acorns or slices of pizza. Older kids can score out of 100 with categories, ten points each, and take points off with a reason. Then they write down what the top and bottom scores mean and test the system on the taste-test winner.",
+      "kid": "Your kid invents the rating system for every review: stars, a number out of 10, or their own unit like acorns or pizza slices. They write what the top and bottom scores mean, then test the system on the taste-test winner and the loser. If both scores feel wrong, they change the system.",
       "you": "Ask the questions that pin it down. What's the difference between a 3 and a 4? Could a stranger understand the score without asking? Let them change it after the test.",
       "starters": [
         "Stars out of 5",
@@ -168,7 +168,7 @@
     {
       "title": "Try it with a reviewer's eye",
       "why": "Before writing, your kid tries each thing again and takes notes.",
-      "kid": "Your kid tries each thing again, this time on purpose: rereads the chapter, goes back to the park, eats the snack slowly. They jot down what they notice, the good and the bad, and anything a reader would want to know first. If it costs money, they find out the price and compare it with something similar.",
+      "kid": "Your kid tries each thing again, on purpose this time: rereads the chapter, goes back to the park, eats the snack slowly. They jot down what they notice, good and bad, and what a reader would want to know first. If it costs money, they note the price and compare it with something similar.",
       "you": "Join them if you can. Ask what they're noticing, not what they think of it yet. If the notes say 'fun' or 'yummy,' ask what exactly made it fun.",
       "ask": [
         "What would someone want to know before trying this?",
@@ -185,7 +185,7 @@
       "title": "Write the reviews",
       "why": "Your kid turns the notes into reviews, then fixes them for a reader.",
       "kid": "Your kid writes each review the way the example at the start does: opinion first, then a reason, proof from their notes, one fair downside, and whether it was worth it, with the rating at the end. Then they read it out loud and swap vague words like 'good,' 'nice' and 'fun' for exact ones.",
-      "you": "Read each review as if you've never tried the thing. Could you decide from it? Give one suggestion per review, like 'tell me why the pizza was the best,' then let them make the change.",
+      "you": "Before reading, say what you'd use it for: 'I'm choosing a park for Saturday.' Then read and tell them whether it helped you choose. Give one suggestion per review, then let them make the change.",
       "ask": [
         "If someone only read your first sentence, would they know your opinion?",
         "Who would love this? Who would hate it? Did you say so?"
@@ -194,7 +194,7 @@
       "levels": {
         "explore": "Say it first: what it is, what you think, and one 'because'. Then write or dictate it.",
         "develop": "Write an opinion, 2 or 3 reasons with proof, one downside, and a rating.",
-        "extend": "Rewrite one review for a different reader, like a grandparent or a 5-year-old. Which details stay, and which go?"
+        "extend": "Review two similar things in one piece, like two parks, and end by saying which reader should pick which."
       }
     },
     {

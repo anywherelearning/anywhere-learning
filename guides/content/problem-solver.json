@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You're the coach, not the problem-solver. Let them pick something that truly annoys them, even if it isn't what annoys you. Slow them down at 'why', because kids want to jump straight to fixing. And keep it light: a test that fails is the most useful part.",
+    "intro": "Let them pick something that truly annoys them, even if it isn't what annoys you. Then slow them down at 'why', because kids want to jump straight to fixing. Keep it light: a test that fails is the most useful part, and the fix is theirs to build.",
     "plan": [
       {
         "when": "Session 1",
@@ -141,7 +141,7 @@
     {
       "title": "Pick one and build it",
       "why": "The best idea is the one you'll still do when you're tired.",
-      "kid": "Your kid runs their circled ideas through the Tired-day tests card and picks one. Then they build it for real: a hook, a label, a box, a checklist, an alarm.",
+      "kid": "Your kid runs their circled ideas through the Tired-day tests card and picks the one that passes the most lines. Then they build it for real, right where the problem happens: a hook, a label, a box, a checklist or an alarm.",
       "you": "Steer them toward simple, and help with anything that needs a drill. Otherwise let it be a bit wonky. Help them pick something to count.",
       "ask": [
         "What could you build in ten minutes?",
@@ -167,7 +167,7 @@
       "levels": {
         "explore": "Try it once, change one thing and tell someone what you changed.",
         "develop": "Test it for two or three days, count the results and make two changes.",
-        "extend": "Test it for five days, rate each day and make a guide someone else could follow."
+        "extend": "Hand your fix to someone else in the family for three days without explaining it, and see if it works for a person who didn't design it."
       }
     }
   ],
@@ -195,8 +195,8 @@
             "v": "45 minutes and nothing yet"
           },
           {
-            "k": "Mornings:",
-            "v": "the same rush every day"
+            "k": "Chores:",
+            "v": "the same job forgotten every week"
           }
         ],
         "ask": "What bugs you every week?"
@@ -301,7 +301,7 @@
   ],
   "conclusion": {
     "headline": "One less thing bugging them, and they fixed it themselves.",
-    "text": "The real sign comes later, when something new starts bugging them. If they ask 'Why does that keep happening?' instead of complaining, or quietly put up another hook, they've started to see problems as something they can work on.",
+    "text": "When something new starts bugging them, hold back your fix. Wait to see if they go looking for the because, or quietly put up another hook. That move, without you, is what the studio built.",
     "celebrate": "The first time it works on a tired day, say: 'You built that, and it's still working.'",
     "extensions": [
       "Solve a shared family problem the same way, like what's for supper",

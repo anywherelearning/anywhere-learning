@@ -59,6 +59,10 @@
       {
         "q": "They lose interest on the hike",
         "a": "Give them the evidence job: three photos that help answer the why. A job with a goal carries tired legs a long way."
+      },
+      {
+        "q": "We're not travelling right now",
+        "a": "Study a feature near home you've never asked about: a river, a hill, a beach. Park signs and ranger walks often answer the why."
       }
     ]
   },
@@ -137,8 +141,8 @@
     {
       "title": "See it for yourselves",
       "why": "Seeing the evidence with your own eyes is what makes the answer stick.",
-      "kid": "Your kid visits the feature and collects evidence, using the Field notes card: photos, sketches, what they see, hear and smell. If there's a guide, they ask a question from the Ask the guide card.",
-      "you": "Book a guide where it makes sense, and stay on marked trails. Keep them beside you near edges, water and wildlife. Point out evidence quietly and let them find the rest.",
+      "kid": "Your kid visits the feature and fills in the Field notes card: photos, sketches, what they see, hear and smell, plus one simple measurement that tests their answer, like timing a leaf down a stream or pacing a beach. If there's a guide, they ask one question.",
+      "you": "Book a guide where it makes sense, and stay on marked trails. Keep them beside you near edges, water and wildlife. Point out evidence quietly and let them find the rest. Never touch hot springs or crater water.",
       "ask": [
         "What did you see that proves your answer, or doesn't?",
         "What did the guide point out that you'd have walked past?"
@@ -296,7 +300,7 @@
     }
   ],
   "conclusion": {
-    "headline": "They didn't just see the view. They understood it.",
+    "headline": "The view came with an answer they went and checked.",
     "text": "On your next walk, stop and point at something in the land, like a cliff, a stream or a leaning tree, and ask how it got like that. Listen for a guess with a reason, then a question about how they could check it.",
     "celebrate": "When they explain it to you, say: 'You went and checked it with your own eyes. That's what scientists do.'",
     "extensions": [

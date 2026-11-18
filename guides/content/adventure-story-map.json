@@ -43,8 +43,8 @@
       "text": "drawing a place from above, compass directions, and a rough scale"
     },
     {
-      "subject": "Reading aloud",
-      "text": "reading with expression, pacing and voices, if they record it as an audiobook"
+      "subject": "Math",
+      "text": "pacing out paths and choosing a scale for the map"
     },
     {
       "subject": "Creativity",
@@ -105,7 +105,7 @@
     {
       "title": "Go on a what-if walk",
       "why": "Your kid picks a place they know and walks it, looking for where a story could happen.",
-      "kid": "Your kid picks a place they know well and walks it slowly with you. At each interesting spot, you both play 'what if': what if this drain led to a tunnel? What if someone hid something in that tree? They jot down the best what-ifs and the details around them: sounds, smells, colours, hiding spots, paths.",
+      "kid": "Your kid picks a place they know well and walks it slowly with you. At each interesting spot, you both play 'what if': what if this drain led to a tunnel? They jot down the best what-ifs and the details around them: sounds, smells, colours, hiding spots, paths.",
       "you": "Walk with them and play along. Ask storyteller questions instead of grown-up ones: where would a character hide? What would you hear here at night? Let the silly ideas come. The good ones show up after the silly ones.",
       "starters": [
         "Our street",
@@ -167,15 +167,15 @@
         "Can the reader picture exactly where your character is standing?",
         "Did you use a real sound or smell from the walk?"
       ],
-      "tip": "Keep the Riverside Park example from the start nearby. Pointing at 'senses' is easier than explaining it again.",
+      "tip": "Read one paragraph aloud and ask: could you hear or smell anything there? If not, open the walk notes and pick one detail to drop in.",
       "levels": {
         "explore": "Tell the story aloud while a grown-up writes it, using 3 things you noticed on the walk.",
         "develop": "Write several paragraphs with a clear plot, settings from your map and at least one bit of dialogue.",
-        "extend": "Write the full story, then cut a quarter of it: keep every landmark and lose the words that repeat."
+        "extend": "Write one scene twice, once in the past ('Leo crept') and once in the present ('Leo creeps'). Read both aloud and keep the faster one."
       }
     },
     {
-      "title": "Link the map, share and look back",
+      "title": "Link the map and hand it over",
       "why": "The story and the map come together, and a reader follows the adventure, map in hand.",
       "kid": "Your kid numbers each big moment of the story on the map and adds a legend, then checks that the route makes sense (no teleporting). They fix unclear sentences and spelling, then give the story and map to someone to read together.",
       "you": "Be the first reader, story in one hand, map in the other. Watch whether you can follow along. Tell them the spot where you could picture it best, add one suggestion, then ask which scene they'd read aloud first.",
@@ -187,13 +187,13 @@
       "levels": {
         "explore": "Put stickers on 2 or 3 story spots and share the story with one person.",
         "develop": "Number every big moment, add a legend, and share with 2 people.",
-        "extend": "Give the story and map to someone who's never been there and watch them follow it. Rewrite every spot where they got lost."
+        "extend": "Give the character a speed. Pace how long each leg of the route really takes, and make the story's clock match the map."
       }
     }
   ],
   "conclusion": {
     "headline": "An ordinary place has a story in it now.",
-    "text": "Walk past one of the story spots and ask what happens there. They'll point to the exact place and tell you what the character wanted and what got in the way. That pair is the engine of every story they'll write.",
+    "text": "Walk past one of the story spots and ask what happens there. Listen for the exact place, what the character wanted, and what got in the way.",
     "celebrate": "Read back the line built from something you both noticed on the walk, and add: 'I remember that exact sound. You put me right back there.'",
     "extensions": [
       "Record it as an audiobook, reading every scene out loud",
@@ -223,7 +223,7 @@
     "caption": "Florida, where my kids' stories were set. Real life sent plenty of characters."
   },
   "fromHome": {
-    "text": "Last year in Florida, my kids each set a story in the places around us: one in a mysterious old house in the Keys, one about baby sea turtles hatching on the beach. Once the stories were written, they recorded them as audiobooks, reading every line themselves with pictures for each scene.",
+    "text": "Last year in Florida, my kids each set a story in the places around us: one in a mysterious old house in the Keys, one about baby sea turtles hatching on the beach.",
     "quotes": []
   },
   "onTheRoad": [

@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "Be the assistant, not the repair person. Hand over the tools, keep the safety rules, and let them be the one who figures it out. Your best line is 'What have you checked so far?'",
+    "intro": "Your hands will itch to take over. Hand over the tools, keep the safety rules, and let them be the one who figures it out. Take on anything sharp, hot or high yourself, and keep asking 'What have you checked so far?'",
     "plan": [
       {
         "when": "Session 1",
@@ -128,7 +128,7 @@
       ],
       "tip": "Take a phone photo before anything comes apart. It shows how it goes back together.",
       "levels": {
-        "explore": "Check one easy suspect with me, like the batteries or a loose screw.",
+        "explore": "Check one easy suspect with a grown-up, like the batteries or a loose screw.",
         "develop": "Work through the Easy suspects in order, one change at a time, and find the cause.",
         "extend": "Before testing, predict the cause and explain why, then see if the checks prove you right."
       }
@@ -144,7 +144,7 @@
       ],
       "tip": "Check the cupboard before the store. Soap, wax, a pencil and a toothpick fix more than you'd think.",
       "levels": {
-        "explore": "Pick the fix from the Common fixes card and gather what we need.",
+        "explore": "Pick the fix from the Common fixes card, and gather what you need with a grown-up.",
         "develop": "Compare two ways to fix it, choose one and list the tools and steps.",
         "extend": "Work out the cost of fixing against replacing, including your time, and decide if it's worth it."
       }

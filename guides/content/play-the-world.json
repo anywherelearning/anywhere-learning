@@ -59,12 +59,16 @@
       {
         "q": "There are no kids around",
         "a": "Ask an adult what they played as a kid. Hosts, guides and shop owners usually light up, and many will show you."
+      },
+      {
+        "q": "We're not travelling right now",
+        "a": "Ask a grandparent or a neighbour who grew up somewhere else what they played as a kid, or visit a park in a different neighbourhood and watch first."
       }
     ]
   },
   "lesson": {
     "text": "A game is easy to learn and easy to forget. Writing it down the same day, with its name, rules and words, is what turns a fun afternoon into a game you can bring home.",
-    "before": "We played a fun game at recess. I don't remember what it was called.",
+    "before": "'We played a fun game in the park with some kids. I don't remember what it was called.'",
     "model": [
       {
         "part": "Name",

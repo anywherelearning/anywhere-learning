@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need survival training. Keep it adventurous, not scary, and make sure every scenario ends with being found. Let them decide first and ask before you answer. Then go outside, because a shelter that looks great on paper tends to leak.",
+    "intro": "Keep it adventurous, not scary, and end every scenario with being found. Let them decide first and hold your answer until they've tried. Then go outside, because a shelter that looks great on paper tends to leak, and a whistle that seemed loud gets lost in the trees.",
     "plan": [
       {
         "when": "Session 1",
@@ -83,7 +83,7 @@
         "line": "Rain jacket on, sit on my pack, off the cold ground."
       }
     ],
-    "modelNote": "The first plan makes you harder to find with every step. The second one keeps you warm, in one place and easy to hear."
+    "modelNote": "Walking on felt like doing something, but every step moved them further from where searchers would look. Staying put, warm and loud is what gets someone found."
   },
   "steps": [
     {
@@ -192,7 +192,7 @@
           },
           {
             "k": "Turn back if:",
-            "v": "it's turnaround time (half your time before sunset is gone), there's thunder, someone can't keep going"
+            "v": "half your daylight is gone, there's thunder, someone can't keep going"
           }
         ],
         "ask": "What's the biggest danger here?"

@@ -154,7 +154,7 @@
     {
       "title": "Test the real cupboard",
       "why": "Now the tests do a real job in your kitchen.",
-      "kid": "Your kid uses what they learned on the real cupboard. They test whether your baking powder and baking soda still work (a teaspoon of baking powder in hot water should fizz hard, and baking soda should fizz hard in vinegar), label each box with the date and the result, then pick their own 'what would happen if' question from the Question ideas card and test it fairly, using the Fair test card.",
+      "kid": "Your kid tests the real cupboard: a teaspoon of baking powder in hot water should fizz hard, and so should baking soda in vinegar. They label each box with the date and the result, then pick a question from the Question ideas card and test it fairly, using the Fair test card.",
       "you": "Hand over the real boxes from the cupboard and pour the hot water. Then treat their question like real research: ask what they're changing and what stays the same.",
       "ask": [
         "Is our baking powder still good enough to bake with?",
@@ -304,7 +304,7 @@
     "They ask for a control before they trust a result",
     "They notice small differences other people miss"
   ],
-  "makeItReal": "Before the next batch of muffins, let them test the baking powder. If the bread doesn't rise or the cookies spread flat, ask what changed, and let them pick one thing to change on the next batch.",
+  "makeItReal": "Before the next batch of muffins or pancakes, let them test the baking powder. If they come out flat, ask what changed, and let them pick one thing to change on the next batch.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

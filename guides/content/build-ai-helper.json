@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is building something impressive that nobody uses. Your job is to keep the job small and real, make sure a person checks anything the helper sends or does, and let 'we won't use it' be a good result too.",
+    "intro": "An impressive helper nobody uses teaches little. Keep the job small and real, make sure a person checks anything it sends or does, and treat 'we won't use it' as a good result.",
     "plan": [
       {
         "when": "One sitting, on paper",
@@ -56,8 +56,8 @@
         "a": "Make the rules shorter and clearer, and put the most important one first. Then test again."
       },
       {
-        "q": "They lose interest once it works",
-        "a": "That's useful information. A helper nobody uses is a good lesson about what's worth building."
+        "q": "They want a helper that's a friend to chat with",
+        "a": "Keep it a job, not a friend. A helper built to act like a friend is the one kind not to build, at any age."
       }
     ]
   },
@@ -75,7 +75,7 @@
       },
       {
         "part": "Built",
-        "line": "With Claude, on his computer."
+        "line": "With AI, on his computer."
       },
       {
         "part": "Next helper",
@@ -130,7 +130,7 @@
       "levels": {
         "explore": "Watch a parent set it up, and choose the helper's name.",
         "develop": "Set up the helper with its job and rules, with a parent.",
-        "extend": "Build it as a small project with code, with a grown-up. The API key stays on the grown-up's account and never goes into shared code."
+        "extend": "Give the helper one file to work from, like the family recipe list or a pet care sheet, and test whether it answers only from that file."
       }
     },
     {
@@ -301,7 +301,7 @@
     }
   ],
   "conclusion": {
-    "headline": "They know how AI helpers work, from the inside.",
+    "headline": "They've built a helper and judged it honestly.",
     "text": "The next time they use an AI tool, see if they wonder what instructions it was given, or who checks what it sends. That's how a builder thinks.",
     "celebrate": "When they decide honestly about their helper, keep or drop, say: 'You built it, then judged it like it was someone else's.'",
     "extensions": [

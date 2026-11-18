@@ -4,7 +4,7 @@
   "title": "Garage Sale Math",
   "tagline": "Pricing · Making change · Profit",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid runs a real garage sale, or a pretend one at home. They pick what to sell, price it, decide their lowest price before anyone haggles, make change for real customers, keep a sales log, and work out what they really earned.",
+  "goal": "Your kid runs a real garage sale, or a small table at a community sale or a neighbour's. They pick what to sell, price it, decide their lowest price before anyone haggles, make change for real customers, keep a sales log, and work out what they really earned.",
   "need": [
     "Things to sell: outgrown toys, books, games, sports gear, clean clothes",
     "Sticky notes or scrap paper, markers and tape for price tags",
@@ -61,7 +61,7 @@
       },
       {
         "when": "Sale morning",
-        "what": "Run the sale and keep the log (Step 3). A pretend sale at home takes about 30 minutes."
+        "what": "Run the sale and keep the log (Step 3). A small table of 10 things takes about an hour."
       },
       {
         "when": "After the sale",
@@ -90,7 +90,7 @@
       "text": "knowing your lowest price"
     },
     {
-      "name": "Quick maths",
+      "name": "Quick math",
       "text": "change counted back to a stranger"
     },
     {
@@ -102,7 +102,7 @@
     {
       "title": "Pick it, price it, tag it",
       "why": "A good price starts with what someone would actually pay.",
-      "kid": "Your kid walks through the house and picks things they've outgrown or don't use. For each one they set a price, using the rule of thumb in the Seller's Cheat Sheet at the end of the guide: about 10% to 30% of the price new for toys, games and gear, and less for books and clothes. They write a lowest price on the back of each tag before the sale, then make big, clear tags.",
+      "kid": "Your kid walks through the house and picks things they've outgrown or don't use. They price each one with the Ballpark prices card in the Seller's Cheat Sheet at the end of the guide, or about 10% to 30% of the price new, then write a lowest price on the back of each tag and make big, clear tags.",
       "you": "Don't tell them the price. Ask 'is it in good condition?' and 'what would you pay?' Skip anything broken or unsafe, and skip car seats and bike helmets, since you can't know if they've been in a crash.",
       "ask": [
         "Why would someone want to buy this?",
@@ -162,7 +162,7 @@
         "What did it cost to run the sale?",
         "Does the cash box match the sales log? If not, why?"
       ],
-      "tip": "If the box and the log don't match, don't fix it for them. Finding the missing sale is great maths.",
+      "tip": "If the box and the log don't match, don't fix it for them. Finding the missing sale is great math.",
       "levels": {
         "explore": "Set the float aside first, then count what's left.",
         "develop": "Find sales, costs and profit, and which items earned the most.",
@@ -288,7 +288,7 @@
       }
     ],
     "after": {
-      "label": "The garage sale maths",
+      "label": "The garage sale math",
       "lines": [
         "Garage sale price = about 10% to 30% of new (less for books and clothes)",
         "Sales = cash box − float",
@@ -299,7 +299,7 @@
   "conclusion": {
     "headline": "They know sales from profit.",
     "text": "Mention a lemonade stand that took in $30 and ask what it made. They should want to know what the lemons and cups cost before they answer. And when they want to sell something, expect them to pick a lowest price before anyone asks.",
-    "celebrate": "Right after they hold a price on a haggle, tell them: 'You said no to a grown-up and stayed friendly. That's harder than the maths.'",
+    "celebrate": "Right after they hold a price on a haggle, tell them: 'You said no to a grown-up and stayed friendly. That's harder than the math.'",
     "extensions": [
       "Give the 'give' part of the profit to a cause they choose",
       "Add a 'free with any purchase' box and see whether it changes how much each customer spends.",

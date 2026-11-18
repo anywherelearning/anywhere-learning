@@ -105,7 +105,7 @@
     {
       "title": "Be a reporter for 2 minutes",
       "why": "Two minutes with a spoon microphone, then the person to interview.",
-      "kid": "Your kid interviews you for 2 minutes like a TV reporter: microphone (a spoon works), serious voice, real questions about your job or your childhood. Then they make a list of 3 to 5 people in your community they're curious about, and pick one: someone whose work or life they'd genuinely like to know more about.",
+      "kid": "Your kid interviews you for 2 minutes like a TV reporter: a spoon for a microphone, serious voice, real questions about your job or your childhood. Then they list 3 to 5 people in your community they're curious about, and pick the one whose work or life they'd most like to know about.",
       "you": "Answer the practice interview for real, with a story or two. Then help brainstorm people and let your kid choose. A grandparent is a safe start, but encourage someone outside the family if they're ready: the baker, a neighbour with an interesting job, a coach.",
       "starters": [
         "The baker or grocer",
@@ -129,7 +129,7 @@
     {
       "title": "Write the questions and ask",
       "why": "Your kid prepares open questions, then makes the request.",
-      "kid": "Your kid writes at least 5 open questions, the kind that start with what, how, why or 'tell me about'. They order them from easy warm-ups to deeper ones, and add 1 or 2 follow-ups. Then, with you, they ask the person if they'd do a short interview, explaining the project in a sentence.",
+      "kid": "Your kid writes at least 5 questions, including one 'show me' question about the work itself, like 'Can you show me how you shape a loaf?' They order them from easy to deeper. Then, with you, they ask the person for a short interview and explain the project in one sentence.",
       "you": "Help them practise the ask out loud once: who they are, what the project is, how long it takes. Then go with your kid to make the ask, and set a time and place you're comfortable with.",
       "ask": [
         "Which question do you think will get the longest answer?",
@@ -145,8 +145,8 @@
     {
       "title": "Do the interview",
       "why": "The real conversation: ask, listen, follow the good bits.",
-      "kid": "Your kid greets the person, explains the project briefly, and asks their questions one at a time, listening to each answer fully before moving on. They take notes on key points (not everything), ask at least one follow-up based on something the person said, write down any great exact words, and thank them at the end.",
-      "you": "Stay nearby but in the background. Don't jump in unless your kid asks. Let pauses happen: the best answers often come right after a silence. Afterward, ask how it felt and what surprised them.",
+      "kid": "Your kid greets the person, explains the project, and asks one question at a time, listening to each answer fully. They note key points, not everything, ask at least one follow-up about something the person said, write down any great exact words, and say thank you at the end.",
+      "you": "Stay nearby but in the background, and don't jump in unless your kid asks. If they freeze, catch their eye and tap the next question on their list. Afterward, ask what surprised them.",
       "ask": [
         "They just said something interesting. What could you ask next?",
         "What was the most surprising thing they told you?"
@@ -175,7 +175,7 @@
       }
     },
     {
-      "title": "Share it and look back",
+      "title": "Deliver the profile",
       "why": "The profile goes back to the person, and your kid thinks about what they learned.",
       "kid": "Your kid shares the profile: reads it to the family, and gives a copy to the person they interviewed. They ask whether they captured them right. Then they think about the whole project: what was hard, what surprised them, and who they'd interview next.",
       "you": "Be an attentive audience and give specific praise: 'I loved how you started with the ovens.' Celebrate the courage it took to ask a stranger, not just the writing.",

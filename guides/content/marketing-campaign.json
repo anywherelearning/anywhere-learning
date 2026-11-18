@@ -2,7 +2,7 @@
   "slug": "marketing-campaign",
   "category": "Entrepreneurship",
   "title": "Marketing Campaign Creator",
-  "tagline": "Who · Look · Message · Count",
+  "tagline": "Who · Look · Message · Where · Count",
   "ages": "Ages 6 to 14",
   "goal": "Your kid gets real people to notice something real. They pick one kind of person to reach, give the thing a name and a look, write one clear message, put it where that person will see it, then count the responses to find out which sign actually worked.",
   "need": [
@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You're the honest first reader, and the one who asks the places that need asking. Your most useful question is 'What do you want them to do?' Keep it about something real with a date, so there's something to count at the end.",
+    "intro": "Pick something real with a date before anyone draws a logo, or there will be nothing to count at the end. Read every draft honestly, ask for permission alongside them, and keep asking 'What do you want them to do?'",
     "plan": [
       {
         "when": "Session 1",
@@ -64,19 +64,19 @@
   },
   "lesson": {
     "text": "A good campaign doesn't talk to everyone. It picks one kind of person, says one clear thing in the place they'll see it, and counts what happened.",
-    "before": "Come to my bake sale!!! Lots of stuff!!!",
+    "before": "'YARD SALE!!! Lots of stuff!!!'",
     "model": [
       {
         "part": "Who",
-        "line": "Neighbours walking their dogs past our house on Saturday mornings."
+        "line": "Parents with toddlers who walk to the park on Saturday mornings."
       },
       {
         "part": "Message",
-        "line": "Warm muffins for your walk. Saturday, 9 to 11."
+        "line": "Outgrown toys and kids' books, $1 each. Saturday, 9 to 11."
       },
       {
         "part": "Where",
-        "line": "A sign at the corner where the dogs turn, and one on the community board."
+        "line": "A sign at the corner by the park gate, and one on the community board."
       },
       {
         "part": "Count",

@@ -4,7 +4,7 @@
   "title": "Nature Choice Boards",
   "tagline": "5 boards · 60 outdoor options · Kids choose",
   "ages": "Ages 6 to 14",
-  "goal": "Five outdoor menus, from a first-time explorer to a 10-and-up field researcher. You pick the board and the boundary, your kid picks the options the board asks for and heads out, then comes back to show you their best discovery.",
+  "goal": "Five outdoor menus, from a first-time explorer to a 10-and-up field researcher. You pick the board and the boundary, your kid picks the options, and you head out together: they lead, you do one option of your own nearby, then you each show the other your best discovery.",
   "need": [
     "These boards, on your phone or printed",
     "A safe outdoor space with a clear boundary you can see: a yard, a park, a campsite",
@@ -89,8 +89,8 @@
       "text": "noticing details most people walk past"
     },
     {
-      "name": "Independence",
-      "text": "choosing, planning and finishing on their own"
+      "name": "Choosing",
+      "text": "picking a plan and seeing it through"
     },
     {
       "name": "Science thinking",
@@ -127,8 +127,8 @@
           "art": "wc/starter-tiny-world.jpg"
         },
         {
-          "t": "Draw your favourite thing you can see.",
-          "art": "wc/starter-draw.jpg"
+          "t": "Eyes closed, let a grown-up lead you to a tree. Feel it, walk back, then find it.",
+          "art": "wc/plants-rough-bark.jpg"
         },
         {
           "t": "Walk 20 slow steps. What changes as you go?",
@@ -194,8 +194,8 @@
           "art": "wc/rev-ant.jpg"
         },
         {
-          "t": "Tell a 3-sentence nature story: beginning, middle, end.",
-          "art": "wc/explorer-story.jpg"
+          "t": "Find 3 things to test in a puddle. Guess float or sink, then try.",
+          "art": "wc/rev-sinkfloat.jpg"
         },
         {
           "t": "Stand in the sun, then in the shade. What feels different?",
@@ -313,8 +313,8 @@
           "art": "wc/builder-measure.jpg"
         },
         {
-          "t": "Make a paintbrush from grass and a twig. Paint a rock with mud.",
-          "art": "wc/builder-paintbrush.jpg"
+          "t": "Whistle with a grass blade between your thumbs. Can you change the note?",
+          "art": "wc/frust-whistle.jpg"
         },
         {
           "t": "Build a ramp that rolls a pinecone as far as possible.",
@@ -360,8 +360,8 @@
           "icon": "footprints"
         },
         {
-          "t": "Draw 5 symbol tiles. Tell a 5-sentence story using them.",
-          "art": "wc/researcher-tiles.jpg"
+          "t": "Hold a stick at arm's length, back up until it covers a tree, then pace to the trunk.",
+          "art": "wc/builder-measure.jpg"
         },
         {
           "t": "Predict which of two spots has more insects. Then count.",

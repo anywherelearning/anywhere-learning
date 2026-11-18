@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is lecturing about screens. Your job is to get curious with them about how the app decides, run the experiment together, and let them discover the tricks for themselves.",
+    "intro": "Lecturing about screens won't teach this. Get curious with them about how the app decides, run the experiment side by side, and let them find the tricks for themselves.",
     "plan": [
       {
         "when": "During their usual screen time",
@@ -302,12 +302,12 @@
     }
   ],
   "conclusion": {
-    "headline": "They know why the app shows them what it shows.",
+    "headline": "They can see the app choosing for them.",
     "text": "Watch the end of a video. If they reach past the countdown and pick the next one themselves, they've seen the algorithm at work and decided anyway.",
     "celebrate": "When they pick the next video themselves instead of letting it autoplay, say: 'You chose that one, not the app.'",
     "extensions": [
       "With a parent, turn off YouTube watch history for a week, and see what the home page shows when the app can't follow you",
-      "On a parent's account, open 'Why this ad?' on an ad, and read what the app has guessed about you",
+      "On a parent's account, tap the three dots on a YouTube ad, open 'My Ad Center', and read what the app has guessed about you",
       "Look up how a streaming app decides what to suggest, in its own help pages",
       "Notice suggestions in other places, like online shops and music apps"
     ]

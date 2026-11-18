@@ -119,8 +119,8 @@
     {
       "title": "Work out the driving time",
       "why": "Real speed and real stops, not just the speed limit.",
-      "kid": "Your kid divides the distance by a real average speed to get the driving time. Then they plan the stops, a short break about every 2 hours and a meal, and add them in. Last, they work back from when you want to arrive to find when you need to leave.",
-      "you": "Share what you know from real drives: how long a stop really takes with kids, and where traffic usually slows down. Let them do the maths.",
+      "kid": "Your kid divides the distance by a real average speed from the Speed and stops card in Road Trip Numbers at the end of the guide. Then they add the stops, a short break about every 2 hours and a meal, and work back from when you want to arrive to find when to leave.",
+      "you": "Share what you know from real drives: how long a stop really takes with kids, and where traffic usually slows down. Let them do the math.",
       "ask": [
         "At 50 mph, how long does 150 miles take?",
         "Lunch takes 45 minutes. What time do we arrive now?"
@@ -151,16 +151,16 @@
     {
       "title": "Budget the whole trip",
       "why": "Gas is only the start.",
-      "kid": "Your kid lists every cost: gas, food for everyone in the car, snacks, activities and a hotel if it's overnight. They add a buffer of about 10% for surprises and find the total. If it's over the budget, they decide what to cut.",
+      "kid": "Your kid lists every cost: gas, food for everyone in the car, snacks, activities and a hotel if it's overnight, using the Food and fun card for ranges. They find the total, then the cost per mile and per person. If it's over the budget, they decide what to cut.",
       "you": "Help them look up real prices for food and things to do there. When it's too much, ask what matters most, then let them choose.",
       "ask": [
         "Which cost is the biggest?",
         "You're $30 over. What would you cut?"
       ],
-      "tip": "Day trip for 4, 150 miles each way: gas 12 gallons × $3.50 = $42 + lunch 4 × $12 = $48 + snacks 4 × $3 = $12 + park $20 = $122. Add 10% ($12.20) for $134.20.",
+      "tip": "Day trip for 4, 150 miles each way: gas $42 + lunch 4 × $12 = $48 + snacks 4 × $3 = $12 + park $20 = $122. That's $122 ÷ 300 miles, about 41¢ a mile, or $30.50 each.",
       "levels": {
         "explore": "Total 3 costs: gas, food and one activity.",
-        "develop": "Total 5 or more costs, add a buffer and fit a set budget.",
+        "develop": "Total 5 or more costs, find the cost per mile, and fit a set budget.",
         "extend": "Sort costs into per-passenger (food) and fixed (gas). What does one more person add?"
       }
     },
@@ -335,5 +335,5 @@
     "Ride one leg on local transport, log every wait and transfer, and compare the real time with what the timetable promised.",
     "Read the speed limit signs here, in kilometres or miles, and redo your driving time with the local numbers."
   ],
-  "backHome": "Plan a day trip from home with the same maths, and compare what an hour of driving costs there and here."
+  "backHome": "Plan a day trip from home with the same math, and compare what an hour of driving costs there and here."
 }

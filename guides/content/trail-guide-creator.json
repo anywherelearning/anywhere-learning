@@ -105,7 +105,7 @@
     {
       "title": "Play find-my-tree",
       "why": "A blindfold game that trains exactly what a trail guide needs, then the place for the trail.",
-      "kid": "One person wears a blindfold. Their partner guides them slowly by the arm to a tree (or a bench, a post, a planter), lets them feel it carefully, then walks them back to the start a different way. Blindfold off: now the walker has to retrace the route and find the exact thing they touched, using what they noticed: steps counted, turns, slopes, what was underfoot. Swap roles. Then your kid picks the place for their trail.",
+      "kid": "One person wears a blindfold. Their partner walks them by the arm to a tree, lets them feel it, then leads them back another way. Blindfold off, the walker finds that exact tree using what they noticed: steps, turns, slopes, roots underfoot. Swap, then your kid picks the trail's place.",
       "you": "Pick a safe, flat spot and guide slowly, holding their arm. Afterward, ask what helped them find it: the step count, the turn, the root under their feet, the rough bark? Those are exactly the details a trail guide needs. Then walk the place they choose for their trail together.",
       "starters": [
         "A park",
@@ -129,8 +129,8 @@
     {
       "title": "Walk and notice",
       "why": "Your kid walks the trail slowly and gathers details at every stop.",
-      "kid": "Your kid walks the trail slowly, stopping at every spot that catches their attention. At each stop they write what they see, hear, smell and feel: colours, shapes, textures, sounds, movement. They look things up or ask about anything interesting (what plant is this? what's the story of that building?), and mark each stop on a rough sketch.",
-      "you": "Check any plant isn't poison ivy, poison oak or nettle before they touch or sniff it, and leave taste off the list. Then ask sensory questions: what does the air feel like here? Can you hear anything? Don't tell them what to write. Help them notice, and help find sources if they want to identify something.",
+      "kid": "Your kid walks the trail slowly, stopping wherever something catches their attention. At each stop they write what they see, hear, smell and feel. They look up or ask about anything interesting (what plant is this? who built that wall?), and mark each stop on a rough sketch.",
+      "you": "Check that no plant is poison ivy, poison oak or nettle before they touch or sniff it, and leave taste off the list. Then ask sensory questions: what does the air feel like here? Help them notice, and help find a source if they want to name something.",
       "ask": [
         "What's the most interesting thing about this exact spot?",
         "If someone couldn't see this place, how would you describe it in words?"
@@ -139,13 +139,13 @@
       "levels": {
         "explore": "Stop at 3 or 4 spots and say or draw 2 things you notice at each.",
         "develop": "Stop at 5 or 6 spots, use all your senses, and find one fact for each.",
-        "extend": "Find one thing a fast walker would miss at each stop, and cut any fact you can't find in two sources."
+        "extend": "At each stop, find one thing a fast walker would miss, and write it as a challenge: 'Count the holes in the third fence post.'"
       }
     },
     {
       "title": "Plan the route and the map",
       "why": "Your kid chooses the final stops, their order, and draws the map.",
-      "kid": "Your kid decides which stops make the final trail and in what order: start with the most exciting, or build up to it? They draw a trail map with numbered stops and a clear start and end, count steps or estimate distances between stops, and choose a theme if one fits (nature, history, hidden gems).",
+      "kid": "Your kid chooses the final stops and their order: start with the most exciting, or build up to it? They draw a trail map with numbered stops and a clear start and end, count steps or estimate the distance between stops, and pick a theme if one fits, like nature, history or hidden gems.",
       "you": "Review the plan together. Is the order logical? Are the stops close enough to walk? Is there a clear beginning and end?",
       "ask": [
         "Is there a natural starting and ending point?",

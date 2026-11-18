@@ -83,7 +83,7 @@
         "line": "Narrow eyes, same teeth. Now it looks scary."
       }
     ],
-    "modelNote": "'What's wrong with it' had no question behind it. The maker named the one thing they wanted to know, the giver answered only that, and the drawing changed because the idea was something a hand could do."
+    "modelNote": "'What's wrong with it' left the giver hunting for faults. The maker named the one thing they wanted to know, the giver answered only that, and the drawing changed because the idea was something a hand could do."
   },
   "steps": [
     {
@@ -111,7 +111,7 @@
         "Can you put your finger on the part that works?",
         "What would you try if it were yours?"
       ],
-      "tip": "Food is perfect for practice. 'Too sweet' becomes 'The crunchy top works. Is that cinnamon? You could try less sugar next batch.'",
+      "tip": "Food is perfect for practice. 'Too salty' becomes 'The crispy edges work. Did you add cheese? You could try half the salt next time.'",
       "levels": {
         "explore": "Point to one thing you like, and say exactly why.",
         "develop": "Give one point, one question and one idea on two different things.",

@@ -232,7 +232,7 @@
         },
         {
           "name": "Bark Sled",
-          "t": "Make a sled from bark or a flat stick that slides down a slope the farthest.",
+          "t": "Make a sled from fallen bark or a flat stick that slides farthest down a slope.",
           "d": "Change only the bottom: smooth bark, rough bark, a leaf underneath. Which wins?",
           "icon": "trending-down"
         },
@@ -262,11 +262,11 @@
       "title": "Design a system",
       "cards": [
         {
-          "name": "Sorting System Engineer",
-          "t": "Pick one rule (size, texture, colour or weight) and sort 12 found items into 3 groups by it.",
-          "d": "Make a 'rule card' that explains your system clearly.",
+          "name": "Pinecone Weather Station",
+          "t": "Put one pinecone in a cup of water and one in the sun. Check both after 2 hours.",
+          "d": "Keep a dry one by the door. Does it close up before rain?",
           "icon": "list-filter",
-          "art": "wc/stem-21.jpg"
+          "art": "wc/signs-chewed-cone.jpg"
         },
         {
           "name": "Nature Signal System",

@@ -65,14 +65,14 @@
       },
       {
         "when": "Back home",
-        "what": "Cook it together and do the final maths (Step 5)."
+        "what": "Cook it together and do the final math (Step 5)."
       }
     ],
     "tips": [],
     "troubleshoot": [
       {
         "q": "No farmers market nearby",
-        "a": "Use the produce section of a grocery store, a roadside stand, or a pretend market at home with real flyer prices. The maths is the same."
+        "a": "Use the produce section of a grocery store, a roadside stand, or a pretend market at home with real flyer prices. The math is the same."
       },
       {
         "q": "They're too shy to talk to the growers",
@@ -130,7 +130,7 @@
         "3 peppers for $4 or 5 for $6: which is cheaper per pepper?",
         "Is the cheaper one just as fresh?"
       ],
-      "tip": "Some stalls price by the pound and some by the basket. Ask if you can weigh a basket. It turns a guess into real maths.",
+      "tip": "Some stalls price by the pound and some by the basket. Ask if you can weigh a basket. It turns a guess into real math.",
       "levels": {
         "explore": "Compare one squash at two stalls: which is cheaper?",
         "develop": "Find unit prices for 3 to 5 items and pick the best stall for each.",
@@ -156,7 +156,7 @@
     {
       "title": "Shop and talk to the growers",
       "why": "Real money, real people and a real budget in real time.",
-      "kid": "Your kid goes stall to stall, asks at least one grower a question, pays, counts the change and writes down each real price. They keep a running total and adjust if something costs more than expected or is sold out.",
+      "kid": "Your kid goes stall to stall, asks at least one grower a question from the Questions to ask a grower card in the Market Guide at the end of the guide, pays, counts the change and writes down each real price. They keep a running total and adjust if something costs more or is sold out.",
       "you": "Let them handle every purchase. Stand nearby, and step in only if they ask. Afterward, ask how it felt to handle the money.",
       "ask": [
         "How much have you spent, and how much is left?",
@@ -170,13 +170,13 @@
       }
     },
     {
-      "title": "Cook it and do the final maths",
+      "title": "Cook it and do the final math",
       "why": "The payoff, plus the numbers that only show up afterward.",
-      "kid": "Back home, your kid cooks or puts together the meal with you. Then they add up what they spent, compare it with the plan, and work out the cost per serving: total ÷ number of servings. Last question: would this meal have cost more or less at the supermarket?",
+      "kid": "Back home, your kid cooks or puts together the meal with you. Then they compare what they spent with the plan, and price the same ingredients from a supermarket flyer or website. Which store won, on which items, and by how much in all?",
       "you": "Handle the knives and the heat as needed, but let them lead the meal. If the numbers don't add up, ask 'can you check that?' rather than correcting it.",
       "ask": [
         "Were you over or under budget, and by how much?",
-        "What did one serving cost?"
+        "Which item was cheaper at the market?"
       ],
       "tip": "Eat it together and let them tell the family what each serving cost. They'll be proud of that number.",
       "levels": {
@@ -292,7 +292,7 @@
       }
     ],
     "after": {
-      "label": "The market maths",
+      "label": "The market math",
       "lines": [
         "Unit price = price ÷ amount",
         "Left to spend = budget − running total",
@@ -303,7 +303,7 @@
   "conclusion": {
     "headline": "Dinner came from their list.",
     "text": "At the grocery store, stop at two sizes of the same thing and ask which is the better deal. See whether they divide first, and whether they ask how much you'll actually use.",
-    "celebrate": "Once the plates are down, say their cost per serving out loud: 'Two dollars a plate, and our shopper did all the maths.'",
+    "celebrate": "Once the plates are down, let them tell the table: 'The market beat the store on the carrots, and our shopper found it.'",
     "extensions": [
       "Go back in a different season and compare what's for sale and the prices",
       "Ask a grower how they decide the price of one thing they sell, and what it costs them to grow.",

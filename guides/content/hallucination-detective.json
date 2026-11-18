@@ -6,7 +6,7 @@
   "ages": "Ages 6 to 14",
   "goal": "Your kid learns that AI can sound sure and still be wrong. They ask two or three AI tools the exact same question, compare the answers, spot where they disagree or make things up, check against real sources, and decide on an answer of their own that they can actually trust.",
   "need": [
-    "A grown-up's account on two or three AI tools, like ChatGPT, Claude or Gemini (most are 13+)",
+    "Two or three AI tools on a grown-up's account, like ChatGPT, Claude or Gemini (kids use yours: these tools are 13+ or 18+)",
     "A question you really want answered",
     "A notebook or a shared screen to compare answers"
   ],
@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is treating the first AI answer as the answer. Your job is to sit at the keyboard with them, ask the same question more than once, and make 'how do we know?' the habit.",
+    "intro": "The first AI answer is only a first draft. Sit at the keyboard with them, ask the same question in more than one place, and make 'how do we know?' the habit.",
     "plan": [
       {
         "when": "One sitting, together",
@@ -112,7 +112,7 @@
       ],
       "tip": "Save each answer as you go, with a copy or a screenshot. Ask again later and it might say something different.",
       "levels": {
-        "explore": "Listen while a parent reads two answers out loud.",
+        "explore": "Say the question out loud while a parent types it into two tools, then hold up a finger for each thing that's different.",
         "develop": "Ask two AI tools the same question, and save both answers.",
         "extend": "Ask three tools, then ask one of them again and see if its answer changes."
       }
@@ -280,7 +280,7 @@
   ],
   "conclusion": {
     "headline": "They know AI can be wrong, and how to check it.",
-    "text": "Pay attention to the next time AI answers a question at your house. If they say 'let's ask another one' or 'where's the official site?', the detective habit has stuck.",
+    "text": "Hand them the next planning question for your family, a hike or a museum day, with two AI tools open. Let them run the comparison and tell you which detail they checked.",
     "celebrate": "When they catch an AI mistake, say: 'Good catch. You didn't just believe it, you checked.'",
     "extensions": [
       "Ask an AI for three books about your favourite animal, with authors, and check the library catalogue to see if each one really exists",
@@ -294,7 +294,7 @@
     "They look for the official source on their own",
     "They say how sure they are, not just what the answer is"
   ],
-  "makeItReal": "Next time your family uses AI to plan something, like a trip, a day out or a recipe, ask two tools the same question together, compare, and check one detail before you go.",
+  "makeItReal": "When your family plans the next trip, day out or recipe, ask two AI tools the same question together, compare, and check one detail before you go.",
   "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
   "ctaUrl": "anywherelearning.co/choose-plan",
   "done": {

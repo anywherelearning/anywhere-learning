@@ -7,7 +7,7 @@
   "goal": "Your kid turns a story into an audio drama people can listen to. They pick a scene from a book they love or a story they wrote, mark the script for pauses and feeling, slow down until every word is clear, make the sound effects with things around the house, then record, edit and share it with family and friends.",
   "need": [
     "A favourite book, or a story your kid already wrote",
-    "A phone or tablet that records sound, and a free editing app like iMovie or GarageBand",
+    "A phone or tablet that records sound, and a free editing app like GarageBand, iMovie or Audacity",
     "Household things for sound effects: paper, a bowl of water, shoes, a sheet",
     "A quiet corner, a closet full of clothes or a blanket fort"
   ],
@@ -153,7 +153,7 @@
     {
       "title": "Record, edit and share",
       "why": "A finished drama with a real audience makes every slow, clear word worth it.",
-      "kid": "Your kid records the final takes in a quiet spot, using the Quiet studio card, then edits it in their app: cutting mistakes, adding the sound effects and music. They share it with family and friends, and ask listeners one question.",
+      "kid": "Your kid records the final takes in a quiet spot, using the Quiet studio card, then edits it in their app: cutting mistakes, adding the sound effects and music. They share it with family and friends, and ask which moment they could picture best.",
       "you": "Help find the quietest spot, and share it somewhere only family and friends can listen. Let them do the editing, even if it takes longer.",
       "ask": [
         "What did your listeners like best?",
@@ -163,7 +163,7 @@
       "levels": {
         "explore": "Record your scene with a parent, and play it for one person.",
         "develop": "Record, edit in the sound effects and music, and share it with family and friends.",
-        "extend": "Make a second episode, and use your listeners' answers to make it better than the first."
+        "extend": "Make a 20-second trailer from your best line and one sound. Play it to someone who hasn't heard the drama, and ask if they want the rest."
       }
     }
   ],

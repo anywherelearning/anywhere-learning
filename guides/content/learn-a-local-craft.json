@@ -147,7 +147,7 @@
       "levels": {
         "explore": "Count how long your small piece took, and say if the real price feels fair.",
         "develop": "Work out what the maker earns per hour on one piece.",
-        "extend": "Compare the maker's hourly earnings with the price of a machine-made copy, and explain who gets the money in each case."
+        "extend": "Find out how much of the shop price reaches the maker when a reseller sells it, and work out the maker's hourly pay that way."
       }
     },
     {
@@ -313,18 +313,18 @@
       "text": "working out what someone's time is worth"
     },
     {
-      "name": "Respect",
-      "text": "learning a tradition from the people who keep it"
+      "name": "Patience",
+      "text": "slow, careful work with your hands"
     }
   ],
   "conclusion": {
     "headline": "They learned a craft from the hands that keep it alive.",
     "text": "Pass a market stall with them a few weeks later. A kid who has made even one small piece by hand picks things up differently, turns them over, and asks who made them.",
-    "celebrate": "When they tell the story of their piece to someone, say: 'You didn't just buy it. You learned it from the person who makes it.'",
+    "celebrate": "When they tell the story of their piece to someone, say: 'That piece has a teacher, a place and your own hours in it.'",
     "extensions": [
       "Find the same craft in another place you visit, and compare the patterns, tools and prices",
       "Learn the plant, animal or earth the main material comes from, and see it in the wild if you can",
-      "Ask a grandparent or older neighbour to teach the craft they grew up with, and compare it with this one",
+      "Visit a market or museum with the same craft from another place, and compare the patterns and tools",
       "Make a small piece as a thank-you gift for the maker or your host"
     ]
   },

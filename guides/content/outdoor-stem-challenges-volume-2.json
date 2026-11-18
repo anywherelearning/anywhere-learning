@@ -123,7 +123,7 @@
         },
         {
           "name": "The Hanging Test",
-          "t": "Tie a stick between two supports with a different knot on each end. Which knot slips first?",
+          "t": "Tie a stick between two supports: an overhand knot on one end, two half hitches on the other. Hang stones in the middle. Which slips first?",
           "d": "Learn a clove hitch and test again. Does it grip the stick better, and why?",
           "icon": "link",
           "art": "wc/stem2-03.jpg"
@@ -216,11 +216,11 @@
           "art": "wc/stem2-14.jpg"
         },
         {
-          "name": "Water Wheel",
-          "t": "Build a small wheel from a stick and leaves or spoons that spins when you pour water over it.",
-          "d": "Add more paddles, or fewer. Which spins fastest?",
+          "name": "Water Clock",
+          "t": "Poke a pin hole in a cup's bottom, fill it, and time how long it takes to empty.",
+          "d": "Mark the water line every minute. Can it time a 3-minute job?",
           "icon": "ferris-wheel",
-          "art": "wc/stem2-15.jpg"
+          "art": "wc/water-drip.jpg"
         }
       ]
     },

@@ -73,7 +73,7 @@
     "troubleshoot": [
       {
         "q": "The research never ends",
-        "a": "Set a limit: 'Pick 5 to 8 things, and we start building tomorrow.' More can go in a Season 2 room."
+        "a": "Set a limit: 'Pick 5 to 8 things, and we start building tomorrow.' More can go in a second room later."
       },
       {
         "q": "A visitor asks a question they can't answer",
@@ -135,7 +135,7 @@
     {
       "title": "Lay out the museum and build the exhibits",
       "why": "The order tells the story.",
-      "kid": "Your kid decides the order of the story: which piece opens it, which ones build it, and which one is the big finish that lands the angle. They choose one table, a walking path, stations, or a trail in the yard. Then they build each exhibit: mounted on cardboard, set in a shoebox diorama, on a tray or propped on a chair.",
+      "kid": "Your kid decides the order: which piece opens the story, which ones build it and which is the big finish that lands the angle. They pick a layout, one table, a path or a trail in the yard, then build each exhibit on cardboard, in a shoebox or on a tray.",
       "you": "Ask them to tell you the story in order, one piece at a time, before anything gets glued down. If a piece doesn't move the story along, ask where it belongs. Don't redesign their layout.",
       "ask": [
         "What should a visitor see first, and why?",

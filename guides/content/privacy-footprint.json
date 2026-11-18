@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is scaring them about strangers online. Your job is to map their real accounts with them, sort what's private together, and practise exactly what to do when something asks for their information.",
+    "intro": "Stranger-danger scares don't build the skill. Map their real accounts with them, sort what's private together, and practise exactly what to do when something asks for their information.",
     "plan": [
       {
         "when": "One sitting, on paper",
@@ -57,7 +57,7 @@
       },
       {
         "q": "They want an account you're not sure about",
-        "a": "Map it first: what it asks for, who can see what, and who they could talk to. Decide together."
+        "a": "Map it first: what it asks for, who can see what, who they could talk to. Check its minimum age too; most social apps are 13+. Decide together."
       }
     ]
   },
@@ -66,23 +66,23 @@
     "before": "'It's only my birthday. What's the harm?'",
     "model": [
       {
-        "part": "Asked",
-        "line": "A site or game asks for personal information."
+        "part": "Username",
+        "line": "ski_kid_2016, so a birth year."
       },
       {
-        "part": "Stop",
-        "line": "Don't type it. Talk to a parent first."
+        "part": "Photo",
+        "line": "A team jersey with the town's name on it."
       },
       {
-        "part": "Why",
-        "line": "Together, work out why it shouldn't be shared."
+        "part": "Post",
+        "line": "'Party Saturday for my 10th!'"
       },
       {
-        "part": "Rules",
-        "line": "No full name, no personal info, a username that isn't your name."
+        "part": "Together",
+        "line": "Her age, her town, her team and her birthday week."
       }
     ],
-    "modelNote": "The best moment to talk about privacy is right when something asks for it. One real 'should I type this?' teaches more than any list of rules."
+    "modelNote": "Each piece alone looked harmless. On one page, the username, the jersey and the party post told a stranger her age, town and birthday, and that's the moment the trail stops being okay."
   },
   "steps": [
     {
@@ -126,7 +126,7 @@
         "Why is your full name private, but your favourite colour isn't?",
         "What could someone do with your birthday and city?"
       ],
-      "tip": "Combinations matter. A first name alone is fine; a first name, a city and a school together isn't.",
+      "tip": "Combinations matter. A first name alone is fine; a first name, a city and a team together isn't.",
       "levels": {
         "explore": "Sort five examples into private and okay, with a parent.",
         "develop": "Sort the whole card, and explain three choices.",
@@ -310,7 +310,7 @@
     }
   ],
   "conclusion": {
-    "headline": "They know what's in their trail, and how to protect it.",
+    "headline": "Their trail is mapped, and the plan is by the computer.",
     "text": "The next time a game or site asks for something, see if they stop and come find you before typing. Stopping to ask is the whole skill.",
     "celebrate": "When they stop and ask before sharing, say: 'You asked first. That's how your information stays yours.'",
     "extensions": [

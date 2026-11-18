@@ -58,7 +58,7 @@
       },
       {
         "q": "They get upset talking about it",
-        "a": "Stop and come back on a calmer day. This is a guide for after the feeling, never in the middle of it. If big feelings are taking over their days, talk to your doctor."
+        "a": "Stop and come back on a calmer day. Talk it through only after a feeling has passed; in the middle of one, just name it and wait. If big feelings are taking over their days, talk to your doctor."
       }
     ]
   },
@@ -161,7 +161,7 @@
       ],
       "tip": "Patterns are the prize. 'I always feel nervous before something new' is a sentence that helps for years.",
       "levels": {
-        "explore": "Each evening, point to the face that matches your day, and say why.",
+        "explore": "Each evening, draw a face for your day, and say which feeling it was.",
         "develop": "Track a week of feelings, then fill in My feelings map.",
         "extend": "Track a week, then find one pattern and plan what would help next time."
       }

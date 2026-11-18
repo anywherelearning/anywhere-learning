@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "The trap is turning people into test subjects. Your job is to keep every experiment kind, stay right beside them, and help them treat a 'no answer' as data, not as a rejection.",
+    "intro": "Keep every experiment kind: a hi, a smile, a nod, in public, with you right beside them. When nobody answers, help them treat it as data, not as a rejection.",
     "plan": [
       {
         "when": "One walk",
@@ -114,7 +114,7 @@
       "levels": {
         "explore": "Guess yes or no: will people say hi back?",
         "develop": "Predict how many out of ten will answer.",
-        "extend": "Predict, and write why you think so."
+        "extend": "Predict for two places or two times of day, and say which will get more answers, and why."
       }
     },
     {

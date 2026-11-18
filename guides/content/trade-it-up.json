@@ -2,7 +2,7 @@
   "slug": "trade-it-up",
   "category": "Entrepreneurship",
   "title": "Trade It Up",
-  "tagline": "Start · Match · Offer · Climb",
+  "tagline": "Start · Match · Offer · Climb · Look back",
   "ages": "Ages 6 to 14",
   "goal": "Your kid starts with one tiny, nearly worthless object and trades their way up through real swaps, with no money changing hands. They find who wants what they've got, make real offers, hear real no's, keep a log of the climb, then lay out the chain and see how far a paperclip can go.",
   "need": [
@@ -31,7 +31,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You set the boundaries, they make the deals. Your most useful question is 'Who wants it more than you do?' No money changes hands, ever. Let them hear no, let them make the odd bad trade, and only step in to keep it safe and fair.",
+    "intro": "Set the trading circle before the first offer, then let them make the deals. No money changes hands, ever. Let them hear no and make the odd bad trade, keep asking 'Who wants it more than you do?', and only step in to keep it safe and fair.",
     "plan": [
       {
         "when": "Day 1",

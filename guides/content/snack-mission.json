@@ -2,9 +2,9 @@
   "slug": "snack-mission",
   "category": "Real-World Math",
   "title": "The $20 Snack Mission",
-  "tagline": "Budgeting · Mental maths · Trade-offs",
+  "tagline": "Budgeting · Mental math · Trade-offs",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid takes a real budget into a real store with a real mission: snacks for the week, a movie night spread, or the ingredients for a meal they'll help cook. They plan, guess prices, keep a running total, make the hard trade-offs, and pay. If the total goes over, something they wanted goes back on the shelf.",
+  "goal": "Your kid takes a real budget into a real store with a real mission: snacks for the week, a movie night spread, or a picnic lunch. They plan, guess prices, keep a running total, make the hard trade-offs, and pay. If the total goes over, something they wanted goes back on the shelf.",
   "need": [
     "A set budget in real money ($20 works, any amount is fine)",
     "A notebook and a pencil, and a calculator if they want one",
@@ -36,7 +36,7 @@
   "academics": [
     {
       "subject": "Math",
-      "text": "adding, rounding, estimating, subtracting change and unit prices"
+      "text": "adding, rounding, estimating and subtracting change"
     },
     {
       "subject": "Money",
@@ -52,7 +52,7 @@
     }
   ],
   "howTo": {
-    "intro": "The hardest part is staying quiet. Hand over the list, the maths and the choices, even the ones you wouldn't make. If they go over budget at the till, let them fix it right there. When they're adding in their head, wait it out.",
+    "intro": "The hardest part is staying quiet. Hand over the list, the math and the choices, even the ones you wouldn't make. If they go over budget at the till, let them fix it right there. When they're adding in their head, wait it out.",
     "plan": [
       {
         "when": "At home",
@@ -74,7 +74,7 @@
         "a": "Hand it back: 'It's your mission. What matters most to you?' The choice is the lesson."
       },
       {
-        "q": "They freeze on the mental maths",
+        "q": "They freeze on the mental math",
         "a": "Round each price up to the next whole dollar first. Exact numbers can wait until the till."
       },
       {
@@ -89,7 +89,7 @@
       "text": "matching what you want to what you have"
     },
     {
-      "name": "Mental maths",
+      "name": "Mental math",
       "text": "adding and rounding on the fly"
     },
     {
@@ -110,7 +110,7 @@
       "starters": [
         "Snacks for the week",
         "Movie night spread",
-        "Ingredients for a meal",
+        "Road trip snacks",
         "A picnic lunch"
       ],
       "ask": [
@@ -143,17 +143,17 @@
     {
       "title": "Shop and keep a running total",
       "why": "The plan meets real prices, and the total stays in their hands.",
-      "kid": "In the store, your kid finds each item and checks the real price against their guess. Every time something goes in the cart, they round it up and add it to a running total, using the Round as you go card in the Shopper's Toolkit at the end of the guide, on paper, a calculator or in their head. They compare two similar items with the Read the shelf tag card to find the better deal.",
-      "you": "Walk with them and let them do the adding. Show them one pro move: the small unit price on the shelf tag. The bigger bag isn't always the better deal.",
+      "kid": "In the store, your kid finds each item and checks the real price against their guess. Every time something goes in the cart, they round it up and add it to a running total, using the Round as you go card, on paper, a calculator or in their head.",
+      "you": "Walk with them and let them do the adding. When they hesitate, ask for the running total out loud before the next item goes in.",
       "ask": [
         "How close was the real price to your guess?",
-        "Which one is the better deal here, and how can you tell?"
+        "What's your running total right now?"
       ],
       "tip": "A running total feels slow at first. Stick with it. Knowing the total before the till is what keeps them in control.",
       "levels": {
         "explore": "Carry the cash in an envelope. Move each item's dollars, rounded up, to your pocket.",
-        "develop": "Keep the running total on their own.",
-        "extend": "Compare unit prices across deals: is '2 for $5' cheaper than the $2.29 single?"
+        "develop": "Keep the running total yourself, item by item.",
+        "extend": "Keep two totals, one rounded up and one exact, and see how far apart they are at the till."
       }
     },
     {
@@ -165,23 +165,23 @@
         "What will you put back, and why that one?",
         "Was anything not worth the price once you saw it?"
       ],
-      "tip": "Expect a small sting when a treat goes back on the shelf. Don't top it up from your wallet. Ask what they'd put back to keep it, and let them do the swap maths.",
+      "tip": "Expect a small sting when a treat goes back on the shelf. Don't top it up from your wallet. Ask what they'd put back to keep it, and let them do the swap math.",
       "levels": {
         "explore": "Choose one thing to put back to fit the budget.",
         "develop": "Rebalance the whole cart to land under budget.",
-        "extend": "Build two carts that both hit the mission, and keep the one with the lower cost per serving."
+        "extend": "Build two carts that both hit the mission, and keep the one that leaves the most money over."
       }
     },
     {
       "title": "Check out and look back",
       "why": "Paying, counting the change, and turning one trip into a skill.",
-      "kid": "At the till, your kid pays and counts the change up, like the Count the change up card. Was the final total close to their running total? Did they come in under budget? Back home, they take two minutes to look back: what worked, what surprised them, and what they'd do differently with the same twenty dollars next time.",
+      "kid": "At the till, your kid pays and counts the change up, using the Count the change up card. Was the final total close to their running total, and under budget? Back home, they take two minutes to look back: what worked, what surprised them, what they'd change next time.",
       "you": "Let them hand over the money and count the change back themselves. Then ask the look-back questions and really listen.",
       "ask": [
         "Did you come in under budget? By how much?",
         "What would you do differently with the same money next time?"
       ],
-      "tip": "Counting real change is mental maths with a reason. Let the cashier wait a few seconds.",
+      "tip": "Counting real change is mental math with a reason. Let the cashier wait a few seconds.",
       "levels": {
         "explore": "Pay, then count the change into your hand with a grown-up.",
         "develop": "Compare the final total to the running total they kept.",
@@ -195,7 +195,7 @@
     "celebrate": "At the till, when the total lands under budget, say: 'You put something back so the rest would fit, and you still came in under. I saw that.'",
     "extensions": [
       "Shop for a food bank drive with the same $20, choosing what lasts and feeds the most people.",
-      "Give them a budget for a small gift for someone",
+      "Shop a grandparent's or neighbour's short list with their money, and bring back the receipt and the change.",
       "Let them plan the snacks for your next road trip",
       "Shop the same list at full price and again using a flyer's deals, and work out what the deals really saved."
     ]
@@ -255,32 +255,6 @@
         "ask": "Is your running total a little over the real prices?"
       },
       {
-        "name": "Read the shelf tag",
-        "lines": [
-          {
-            "k": "Big number:",
-            "v": "the price"
-          },
-          {
-            "k": "Small number:",
-            "v": "the unit price, per 100 g or each"
-          },
-          {
-            "k": "500 g for $3.50:",
-            "v": "70¢ per 100 g"
-          },
-          {
-            "k": "200 g for $1.80:",
-            "v": "90¢ per 100 g"
-          },
-          {
-            "k": "2 for $5:",
-            "v": "$2.50 each, so check the single price"
-          }
-        ],
-        "ask": "Are you comparing the same unit?"
-      },
-      {
         "name": "Count the change up",
         "lines": [
           {
@@ -330,11 +304,10 @@
       }
     ],
     "after": {
-      "label": "Shopper's maths",
+      "label": "Shopper's math",
       "lines": [
         "Running total = last total + rounded price",
-        "Change = money paid − total",
-        "Unit price = price ÷ amount"
+        "Change = money paid − total"
       ]
     }
   },

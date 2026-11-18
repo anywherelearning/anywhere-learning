@@ -33,7 +33,7 @@
         "line": "Food rounds up. The budget decides what's on the menu."
       }
     ],
-    "modelNote": "The first try forgot that juice comes in whole bottles. Divide, round up, then check the price: your kid will run those three moves on every food on the list."
+    "modelNote": "Juice comes in whole bottles, so 4.5 can't stay 4.5. Divide, round up, then check the price: your kid will run those three moves on every food on the list."
   },
   "academics": [
     {
@@ -70,7 +70,7 @@
       },
       {
         "when": "Party day",
-        "what": "Host it, then do the final maths (Step 5)."
+        "what": "Host it, then do the final math (Step 5)."
       }
     ],
     "tips": [],
@@ -139,7 +139,7 @@
     {
       "title": "Work out the food per guest",
       "why": "Multiply, divide, round up, then check the budget.",
-      "kid": "Your kid picks the food and drinks. For each one they multiply by the guests, divide by the pack size, round up and price it. Then they add it all up and check it fits the food budget.",
+      "kid": "Your kid picks the food and drinks. For each one they multiply the amount per guest by the guests, divide by the pack size and round up, using the How much per guest and Pack sizes cards in the Party Planner's Cheat Sheet at the end of the guide. Then they price it all and check the food budget.",
       "you": "Before they plan, check with each guest's family about allergies and foods they can't eat, and pass that on. Then let them run the numbers.",
       "ask": [
         "8 guests × 2 slices. A pizza has 8 slices. How many pizzas?",
@@ -169,7 +169,7 @@
       }
     },
     {
-      "title": "Host it and do the final maths",
+      "title": "Host it and do the final math",
       "why": "The party is the test, and the numbers are the report.",
       "kid": "Your kid sets up from their plan and hosts: welcomes guests, serves the food, runs the games and handles small surprises. After, before anything is thrown out, they count what's left. Then they add up the receipts, compare with the budget and work out the cost per guest.",
       "you": "Help with heavy things during setup, then let them be the host. When the juice runs low or a game flops, wait before you help.",
@@ -297,7 +297,7 @@
   },
   "conclusion": {
     "headline": "The party happened because their numbers worked.",
-    "text": "Ask them how many pizzas a party for 10 would need. Watch them multiply, divide by 8 and round up to 3 without being told. That's the maths from this guide, and they learned it feeding people they care about.",
+    "text": "Ask them how many pizzas a party for 10 would need. Notice whether they multiply, divide by 8 and round up to 3 without being told, and whether they ask about the budget before the toppings.",
     "celebrate": "When the last guest leaves, look at what's left on the table together: 'Everyone had enough, and almost nothing is left over. Your numbers did that.'",
     "extensions": [
       "Plan a potluck where each guest brings one dish, and work out what the host still has to buy.",

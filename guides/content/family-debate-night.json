@@ -152,7 +152,7 @@
       "kid": "Your kid turns the notes into a short case: a one-sentence opening, their reasons in order, an answer to the other side's best point, and a closing line. They say it out loud once, standing up, in about 2 minutes.",
       "you": "Be the practice audience. Throw the starred counter-argument at them and let them answer. Name the line that worked best, then one note: did the answer deal with what you actually said?",
       "ask": [
-        "If you only had 30 seconds, what's the one thing you'd say?",
+        "Which reason would you keep if you could only use one?",
         "What will you say if they make a really good point?"
       ],
       "tip": "Notes on small cards, one point per card, are easier to glance at than a full page.",
@@ -179,9 +179,9 @@
       }
     },
     {
-      "title": "Judge it and look back",
+      "title": "Give the verdict",
       "why": "A fair verdict, and a conversation about what everyone learned.",
-      "kid": "After the debate, your kid judges it fairly, or a family member does: who had the stronger arguments? The better evidence? Who answered the other side best? They name the best point made by each side. Then they talk about what was hard, and whether the debate changed their mind at all.",
+      "kid": "After the debate, a family member who didn't argue gives the verdict: stronger arguments, better evidence, best answer to the other side. Your kid listens, then names the best point made by each side, including the one that beat them, and says whether anything changed their mind.",
       "you": "If you judge, name each side's best point before the verdict, and explain your reasoning. Praise the thinking: 'That was strong because you backed it up with an example.' Then ask what was harder, building their case or answering the other side.",
       "ask": [
         "If you hadn't picked a side, would one side have convinced you?",

@@ -161,9 +161,9 @@
           "art": "wc/move-07.jpg"
         },
         {
-          "name": "The Same Loop",
-          "t": "Walk or run the same short outdoor route every day this week. Count the days out loud.",
-          "d": "Notice one thing on the route that changed each day.",
+          "name": "Never Miss Twice",
+          "t": "If a day gets missed, the rule is never two in a row. Count your comebacks next to your streak.",
+          "d": "Which number makes you prouder, your streak or your comebacks?",
           "icon": "route",
           "art": "wc/move-08.jpg"
         },
@@ -243,7 +243,7 @@
         {
           "name": "Pack Weight",
           "t": "Load a backpack (books, water), no more than about a tenth of your body weight, and take your usual walk. How far is still comfortable?",
-          "d": "Same distance, one more water bottle.",
+          "d": "Move the heavy things close to your back and walk again. Which way felt lighter?",
           "icon": "backpack",
           "art": "wc/move-18.jpg"
         },

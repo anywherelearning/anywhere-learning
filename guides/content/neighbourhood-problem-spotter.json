@@ -30,7 +30,7 @@
   ],
   "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
   "howTo": {
-    "intro": "You don't need to know anything about city planning. Your job is to be the walking partner: go slowly, take what they notice seriously and keep asking 'Who would have trouble here?' A kid's eye level catches things adults stopped seeing years ago.",
+    "intro": "Adults stopped seeing most of their street years ago, so let your kid's eye lead. Walk slowly, take everything they notice seriously and keep asking 'Who would have trouble here?' Come along for every conversation, and read anything before it leaves the family.",
     "plan": [
       {
         "when": "Session 1",
@@ -82,7 +82,7 @@
         "line": "An email to the parks department, with our count."
       }
     ],
-    "modelNote": "The first version is a grumble. The second has a count, a cause and a person to send it to."
+    "modelNote": "'Always gross' gave nobody anything to do. Four visits turned it into one full bin, one cause and one person with the power to add a second."
   },
   "steps": [
     {
@@ -135,7 +135,7 @@
     },
     {
       "title": "Design the simplest fix",
-      "why": "The fix that gets done beats the perfect one that doesn't.",
+      "why": "Whoever says yes has to picture it working by next month.",
       "kid": "Your kid comes up with at least two fixes, then picks the simplest one that could really work. They write down what it needs, who would have to agree and how long it would take, then fill in the Proposal page at the end of the guide.",
       "you": "Ask 'How would that actually work?' Then play the other side: 'There's no money for this' or 'My neighbour likes it the way it is.' Let them answer.",
       "ask": [
@@ -305,7 +305,7 @@
   ],
   "conclusion": {
     "headline": "They'll never walk that street the same way again.",
-    "text": "Walk the same loop in a month. If they point at something and say 'Why is it like that?' or 'Who looks after that?', they've started to see their neighbourhood as something people make, and something they can have a say in.",
+    "text": "Walk the same loop in a month and let them lead. Count how often they stop to ask 'Who looks after that?' Each one is a corner they now see as something people made, and can change.",
     "celebrate": "Go back together to the spot it all started and do their small fix there. Then say: 'You noticed this. Most people just walk by.'",
     "extensions": [
       "Do the same walk in a different neighbourhood and compare",

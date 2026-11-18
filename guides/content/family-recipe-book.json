@@ -89,7 +89,7 @@
     ]
   },
   "fromHome": {
-    "text": "Our kids each have a dish that's theirs now: my daughter's chili and my son's smashburgers. We also eat a pasta everyone calls Mamie's pastas, and their grand-maman makes a hazelnut cake, le gâteau aux avelines, that the kids ask for every single birthday.",
+    "text": "Our kids each have a dish that's theirs now: my daughter's chili and my son's smashburgers. Their grand-maman's hazelnut cake, le gâteau aux avelines, is the one they ask for every birthday.",
     "quotes": []
   },
   "skills": [
@@ -114,7 +114,7 @@
     {
       "title": "Play taste detective",
       "why": "Tasting a dish everyone loves gets your kid asking how it's made, and that's where the book starts.",
-      "kid": "Your kid picks a family dish everyone loves and tastes it slowly, one bite at a time. They write down every ingredient they think is in it, and how they think it's made. The cook's recipe will settle it in the interview. Then they make a list of dishes that mean something to your family and pick 3 to 5, ideally from different people.",
+      "kid": "Your kid tastes a family dish everyone loves, one slow bite at a time, and writes down every ingredient they think is in it and how it's made. The cook will settle it in the interview. Then they list dishes that mean something to your family and pick 3 to 5, ideally from different cooks.",
       "you": "Serve the dish (leftovers work) and play along: write your own guesses and compare who got closer once the cook tells you. Then help them think of family dishes and who makes them, and let them choose. Try to include someone they don't talk to often.",
       "starters": [
         "A holiday dish",
@@ -138,7 +138,7 @@
     {
       "title": "Interview the cooks",
       "why": "Your kid gets each recipe, and the story behind it, straight from the cook.",
-      "kid": "Your kid talks to the person who makes each dish, in person, by phone or on video. They ask for the ingredients and the steps, how long things take, and any secret tricks. Then they ask where the recipe came from and what memory goes with it. They write down both. For the taste-detective dish, they compare their guesses with the cook's list.",
+      "kid": "Your kid talks to the person who makes each dish, in person, by phone or on video. They ask for the ingredients, the steps, how long things take and any secret tricks, then where the recipe came from and what memory goes with it. They also check their taste-detective guesses.",
       "you": "Set up the conversations, then let your kid do the asking. Practise a couple of questions together before the first call. When the cook says 'a pinch' or 'until it looks right,' nudge your kid to ask what that means.",
       "ask": [
         "What's the one thing that makes this dish turn out right?",
@@ -170,8 +170,8 @@
     {
       "title": "Write the recipe cards",
       "why": "Your kid turns the notes into recipe cards a stranger could follow.",
-      "kid": "Your kid writes a card for each dish, all in the same format: the name, who it comes from, a short story or quote, the ingredients with exact amounts, and numbered steps. Every step gets an action and a sign it's done, plus an amount whenever something goes in, like the example at the start. Then they read each card out loud and fix anything vague.",
-      "you": "Read each card as if you've never made the dish. Could you cook it from this alone? Point out one or two spots that would trip you up, then let your kid fix them.",
+      "kid": "Your kid writes a card for each dish in the same format: the name, who it comes from, a short story or quote, exact amounts, and numbered steps. Every step gets an action, an amount and a sign it's done, like the example at the start. Then they read it aloud and fix anything vague.",
+      "you": "Cook from the card out loud in your head: 'I'm adding the flour... now what?' Stop wherever the card goes quiet, and let your kid fill that gap on the card.",
       "ask": [
         "Could a friend make this without calling you?",
         "How would someone know when this step is done?"

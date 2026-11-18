@@ -4,7 +4,7 @@
   "title": "Kitchen Math & Meal Planning Challenge",
   "tagline": "Servings · Packages · A meal you actually eat",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid plans one to three real meals for the family, checks what's already at home, turns the meals into a shopping list, prices it by the package, shops it and helps make it. Then the receipt goes next to the plan. It's the maths of every grocery run: what one serving costs, and what the store makes you buy.",
+  "goal": "Your kid plans one to three real meals for the family, checks what's already at home, turns the meals into a shopping list, prices it by the package, shops it and helps make it. Then the receipt goes next to the plan. It's the math of every grocery run: what one serving costs, and what the store makes you buy.",
   "need": [
     "A day this week when your kid plans one to three family meals",
     "Paper and a pencil, or a notes app, and a calculator",
@@ -157,13 +157,13 @@
     {
       "title": "Shop it",
       "why": "Their list, their basket, real prices on the shelf.",
-      "kid": "At the store, your kid shops from their own list and checks each shelf price against their plan. When there's a bigger size, they decide if it's really a deal: cheaper per serving only counts if you'll use it before it goes off. Before the till, they estimate the total, then compare it with the receipt.",
+      "kid": "At the store, your kid shops from their own list and checks each shelf price against the plan. When there's a bigger size, they decide if it's really a deal: cheaper per serving only counts if it gets used before it goes off. Before the till, they estimate the total.",
       "you": "Push the cart and stay out of the choices. If something is missing or costs more, ask what they'd swap and let them decide.",
       "ask": [
         "Is the big pack a deal if half of it gets thrown out?",
         "How close was your estimate to the till?"
       ],
-      "tip": "Rounding each price to the nearest dollar as it goes in the basket makes the estimate quick, and usually close.",
+      "tip": "Ask how many meals the bigger pack covers before it goes in the basket. If the answer is 'some day', the small one is the deal.",
       "levels": {
         "explore": "Find 3 things from the list in the store and put them in the basket yourself.",
         "develop": "Shop the whole list, compare one bigger and smaller size, and estimate the total before the till.",
