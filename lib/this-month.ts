@@ -108,7 +108,7 @@ const OCTOBER_2026 = {
     // Six Critical Thinking picks (no overlap with any other month's set).
     slugs: [
       'secret-code-lab',         // make and crack real codes
-      'kitchen-science-lab',     // predict, test, change one thing, explain
+      'bread-lab',               // predict, test, change one thing, explain
       'decomposition-detective', // a slow mystery in a jar: what breaks this down?
       'camouflage-challenge',    // prove a rule of camouflage with a fair test
       'probability-lab',         // test what's likely against what actually happens

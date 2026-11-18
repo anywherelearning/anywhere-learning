@@ -2392,7 +2392,7 @@ const resources: ResourcePage[] = [
         type: 'list',
         ordered: false,
         items: [
-          'Kitchen chemistry: baking, fermenting, freezing, dissolving. Why does bread rise? What happens to the eggs? Our [Kitchen Science Lab](/shop/kitchen-science-lab) turns this into a mystery-powder investigation.',
+          'Kitchen chemistry: baking, fermenting, freezing, dissolving. Why does bread rise? What happens to the eggs? Our [Bread Lab](/shop/bread-lab) turns this into a real experiment that ends in a loaf.',
           'Backyard biology and ecology: the same trail walked weekly, a nature journal, seasonal observation. Forest school principles apply at any scale.',
           'Weather, water, and sky: a window thermometer, a homemade rain gauge, mapping shadows across a season.',
           'Backyard experiments with controls: which surface keeps an ice cube longest, which soil grows seedlings fastest. The post on [backyard science experiments](/blog/backyard-science-experiments) collects 15 no-prep ideas.',

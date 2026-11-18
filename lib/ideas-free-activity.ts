@@ -27,7 +27,7 @@ import { getFallbackProductBySlug } from '@/lib/fallback-products';
 /** Idea category slug -> the activity slug given away on that category's lists. */
 const CATEGORY_TO_ACTIVITY: Record<string, string> = {
   nature: 'nature-walk-task-cards',
-  kitchen: 'kitchen-science-lab',
+  kitchen: 'bread-lab',
   'life-skills': 'body-owners-manual',
   stem: 'rube-goldberg-machine',
   creative: 'board-game-studio',
@@ -40,8 +40,8 @@ const CATEGORY_TO_ACTIVITY: Record<string, string> = {
 const BLURBS: Record<string, string> = {
   'nature-walk-task-cards':
     'Sixty-six read-aloud cards that turn any ordinary walk into a proper expedition. Read one out, let your kid do the noticing, and follow where it goes.',
-  'kitchen-science-lab':
-    'Five white powders that look the same, one mystery cup and a colour-changing juice made from red cabbage. Your kid rules suspects out, test by test, until only one fits.',
+  'bread-lab':
+    'Wake up yeast in three cups of water, watch it blow up a balloon, then knead, measure the rise and bake a real loaf. Baker\'s math scales it for the whole family.',
   'body-owners-manual':
     'Your kid finds their pulse, times how fast their heart comes back, tests their senses and reaction time, then writes it all into an owner\'s manual with their real numbers.',
   'rube-goldberg-machine':

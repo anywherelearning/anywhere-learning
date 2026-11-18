@@ -2843,7 +2843,7 @@ export const fallbackProducts: FallbackProduct[] = [
     activityCount: null,
     ageRange: "Ages 6–14",
     sortOrder: 42,
-    active: true,
+    active: false, // retired Nov 2026: replaced by Bread Lab,
     createdAt: new Date("2026-07-14"),
   },
   {
