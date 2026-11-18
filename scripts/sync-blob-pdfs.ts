@@ -170,6 +170,8 @@ const SLUG_TO_FILE: Record<string, string> = {
   'teach-it-to-learn-it': 'Communication & Writing - Teach It To Learn It.pdf',
   'trade-it-up': 'Entrepreneurship - Trade It Up.pdf',
   'play-the-world': 'Worldschooling - Play The World.pdf',
+  'house-detective': 'Worldschooling - House Detective.pdf',
+  'learn-a-local-craft': 'Worldschooling - Learn a Local Craft.pdf',
   'people-scientist': 'Emotional & Social Skills - Be a People Scientist.pdf',
   'frustration-tolerance-cards': 'Emotional & Social Skills - Frustration Tolerance Challenge Cards.pdf',
 };

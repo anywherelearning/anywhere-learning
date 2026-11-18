@@ -1193,6 +1193,35 @@
         "Planning & Self-Management",
         "Empathy & People"
       ]
+    },
+    "learn-a-local-craft": {
+      "canonical": [
+        "Cultural Awareness",
+        "Hands-On Making",
+        "Fair Value",
+        "Observation"
+      ],
+      "families": [
+        "World & Geography",
+        "Creativity & Making",
+        "Math & Money",
+        "Empathy & People"
+      ]
+    },
+    "house-detective": {
+      "canonical": [
+        "STEM",
+        "Geography",
+        "Engineering",
+        "Climate",
+        "Fair Testing"
+      ],
+      "families": [
+        "World & Geography",
+        "Nature & Science",
+        "Creativity & Making",
+        "Critical Thinking & Reasoning"
+      ]
     }
   }
 }

@@ -3316,6 +3316,54 @@ export const productDescriptions: Record<string, ProductDescription> = {
     },
     format: 'Project Guide',
   },
+  'learn-a-local-craft': {
+    opening:
+      'Your kid learns a traditional craft from the hands of someone who still makes it: a weaver, a potter, a carver, or a grandparent who knits. They read a finished piece like a detective, take a real lesson, work out what the maker earns per hour, then make a piece on their own and write its story.',
+    whatsIncluded: [
+      'Five steps, from finding the craft to making a piece on your own',
+      'Find the craft, Read a piece, Ask the maker, Count the cost and Story cards',
+      'How to find a maker who teaches, at home or wherever you travel',
+      'The math of a fair price: hours, materials and what the maker earns per hour',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['Cultural Awareness', 'Hands-On Making', 'Fair Value', 'Observation', 'Respect'],
+    insideTheLearning: {
+      lead:
+        'Your kid learns a craft from the person who keeps it alive. Reading a finished piece, making one with their own hands and working out the maker\'s hourly earnings turns a souvenir into a lesson in history, materials and fair value.',
+      skills: [
+        { skill: 'Social Studies', where: 'How a craft carries a place\'s history' },
+        { skill: 'Hands-On Making', where: 'Copying a maker, then making a piece alone' },
+        { skill: 'Math', where: 'Hours, materials and earnings per hour' },
+        { skill: 'Observation', where: 'Reading how a finished piece was made' },
+        { skill: 'Respect', where: 'Paying for a lesson and asking before copying a pattern' },
+      ],
+    },
+    format: 'Project Guide',
+  },
+  'house-detective': {
+    opening:
+      'Your kid works out why houses look the way they do where you are. They sketch the houses around them, match every roof, wall and window to the weather, check their theory with someone who lives there, then build a small model house for this climate and test it against the sun, the rain and the wind. Real-world STEM: geography, heat, design and fair testing in one walk and one build.',
+    whatsIncluded: [
+      'Five steps, from a slow walk to testing your own model house',
+      'House clues, Why it\'s built that way, Ask a local, Build it and Test it cards',
+      'An ice cube test for heat, plus rain and wind tests, with a plain box to compare',
+      'Works where you travel or on your own street at home',
+      'Three levels per step, from ages 6 to 14',
+    ],
+    skillTags: ['STEM', 'Geography', 'Engineering', 'Observation', 'Fair Testing'],
+    insideTheLearning: {
+      lead:
+        'Your kid reads a house like a weather report. Spotting what repeats, matching it to the climate and testing a model of their own turns a walk through a new place into geography, science and design.',
+      skills: [
+        { skill: 'Geography', where: 'How climate shapes the way people build' },
+        { skill: 'Science', where: 'Heat, shade, rain and wind on a building' },
+        { skill: 'Engineering', where: 'Designing, building and testing a model house' },
+        { skill: 'Observation', where: 'Sketching what repeats on every house' },
+        { skill: 'Fair Testing', where: 'Two same-size houses, one change at a time' },
+      ],
+    },
+    format: 'Project Guide',
+  },
   'play-the-world': {
     opening:
       'Your kid finds a game that kids where you are staying really play, learns it from them, and writes down the rules the same day so it is not forgotten. Then they teach it to the family and compare it with a game from home.',

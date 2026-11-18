@@ -1,0 +1,349 @@
+{
+  "slug": "house-detective",
+  "category": "Worldschooling",
+  "title": "House Detective",
+  "tagline": "Spot · Read · Ask · Build · Test",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid works out why houses look the way they do where you are. They sketch the houses around them, match every roof, wall and window to the weather, check their theory with someone who lives there, then build a small model house for this climate and test it against the sun, the rain and the wind.",
+  "need": [
+    "A street, village or neighbourhood to walk through, wherever you are",
+    "A notebook and pencil for sketches",
+    "Cardboard, tape, and whatever is around for walls and roofs: clay, mud, leaves, grass, paper",
+    "Ice cubes and a cup of water for the tests"
+  ],
+  "academics": [
+    {
+      "subject": "Geography",
+      "text": "how climate shapes the way people live"
+    },
+    {
+      "subject": "Science",
+      "text": "heat, shade, rain and wind on a building"
+    },
+    {
+      "subject": "Engineering",
+      "text": "designing, building and testing a model"
+    },
+    {
+      "subject": "Social studies",
+      "text": "how local materials and traditions shape a home"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Resist explaining the houses yourself on the first walk. Slow the walk down, ask 'Why do you think it's built like that?', and let them form a theory before anyone who lives there confirms or breaks it.",
+    "plan": [
+      {
+        "when": "A slow walk",
+        "what": "Spot the patterns and read the climate (Steps 1 and 2)."
+      },
+      {
+        "when": "Another day",
+        "what": "Ask someone who lives there (Step 3)."
+      },
+      {
+        "when": "An afternoon",
+        "what": "Build the model and test it (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "All the houses look the same to them",
+        "a": "Good, that's a pattern. Ask why every house here has it, then find one house that breaks the pattern and ask why it's different."
+      },
+      {
+        "q": "We're not travelling right now",
+        "a": "Play detective on your own street. Why is your roof that shape? Why are the windows that size? Then compare with photos of houses from a place with the opposite weather."
+      },
+      {
+        "q": "The model falls apart in the rain test",
+        "a": "That's the test doing its job. Ask what failed first, fix only that, and test again."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A traditional house is an answer to the weather. The roof, the walls, the windows and even the colour were chosen, over many years, to deal with the heat, the cold, the rain or the wind of that place, using what was close at hand.",
+    "before": "'Houses here are just old and small.'",
+    "model": [
+      {
+        "part": "Spotted",
+        "line": "Thick walls, tiny windows, a wide roof that sticks out past the walls."
+      },
+      {
+        "part": "Weather",
+        "line": "Hot afternoons, then heavy rain almost every day in the rainy season."
+      },
+      {
+        "part": "Theory",
+        "line": "Thick walls keep the heat out; the wide roof keeps rain off the walls."
+      },
+      {
+        "part": "Test",
+        "line": "Under the sun, the ice in the thick-walled model melted last."
+      }
+    ],
+    "modelNote": "'Old and small' was a judgment. 'Thick walls against the heat, a wide roof against the rain' is an explanation, and the ice cube that lasted longest proved it."
+  },
+  "steps": [
+    {
+      "title": "Spot the patterns",
+      "why": "Houses in one place share features for a reason. Seeing what repeats is where the investigation starts.",
+      "kid": "On a slow walk, your kid sketches three to five houses and fills in the House clues card in the House Detective Toolkit at the end of the guide: roof shape, wall material, window size, colour, and whether the house sits on the ground or above it.",
+      "you": "Walk slowly and stop often. Ask 'What do you see on every house?' and 'Which one is different?' Ask before photographing anyone's home.",
+      "ask": [
+        "What do almost all the houses here have?",
+        "Which house breaks the pattern?"
+      ],
+      "tip": "Sketching makes them look longer than a photo does. A quick outline with arrows and labels is enough.",
+      "levels": {
+        "explore": "Draw one house, and point to its roof, walls and windows.",
+        "develop": "Sketch three houses, fill in the House clues card, and circle what repeats.",
+        "extend": "Compare old houses with new ones on the same street, and list what changed."
+      }
+    },
+    {
+      "title": "Read the weather",
+      "why": "The features only make sense once you know what the house is up against.",
+      "kid": "Your kid writes down what the weather is like here through the year: heat, cold, rain, wind, snow, earthquakes. Then they match each house feature to a reason, using the Why it's built that way card, and write their theory.",
+      "you": "Help them look up the year's weather if you're only here for one season. Write their theory down as they say it, even if you know it's wrong.",
+      "ask": [
+        "What is this house protecting people from?",
+        "Why do you think the roof is that shape?"
+      ],
+      "tip": "Look at what's close at hand too: clay, stone, wood, palm leaves. Houses are often built from what was easy to get.",
+      "levels": {
+        "explore": "Say if it's hot, cold or rainy here, and point to one thing on a house that helps.",
+        "develop": "Match three features to the weather, and write your theory.",
+        "extend": "Find one feature that has nothing to do with weather, like safety, money or tradition, and explain it."
+      }
+    },
+    {
+      "title": "Ask someone who lives there",
+      "why": "A theory gets better when someone who lives in the house tests it.",
+      "kid": "Your kid asks a host, a neighbour, a shop owner or a builder the questions on the Ask a local card, then compares the answers with their theory: what they got right, what they missed, what surprised them.",
+      "you": "Help with the language and the introductions. Your host is often the easiest person to ask.",
+      "ask": [
+        "What did they say that you didn't guess?",
+        "What would you change in your theory now?"
+      ],
+      "tip": "Ask what's hardest about living in the house in the worst season. The answer tells you what the house is really fighting.",
+      "levels": {
+        "explore": "Ask one question with a parent's help, and say what you learned.",
+        "develop": "Ask three questions, and mark your theory right, wrong or surprising.",
+        "extend": "Ask how houses here have changed since their grandparents' time, and why."
+      }
+    },
+    {
+      "title": "Build a house for here",
+      "why": "Designing a house for this weather shows whether they really understood it.",
+      "kid": "Your kid builds a small model house for this climate from cardboard and whatever is around, using the Build it card: walls, roof, windows and colour chosen on purpose. They also build a plain box house to compare it with.",
+      "you": "Help with cutting and taping. Ask 'Why did you choose that?' for every part, and let them choose, even if you'd do it differently.",
+      "ask": [
+        "Which part of your house fights the weather here?",
+        "What did you build it from, and why?"
+      ],
+      "tip": "Keep both houses the same size, so the tests are fair.",
+      "levels": {
+        "explore": "Build a small house with a roof, and say what it keeps out.",
+        "develop": "Build a model for this climate, and a plain box house to compare.",
+        "extend": "Build a second model for the opposite climate, and explain every difference."
+      }
+    },
+    {
+      "title": "Test it",
+      "why": "A real test, not an opinion, decides which design works.",
+      "kid": "Your kid tests both houses, using the Test it card: an ice cube inside each in the sun, a cup of water poured over the roof, a strong breath or a fan for wind. They record what happened and decide which house wins each test.",
+      "you": "Time the ice cubes with them, and pour the water slowly. Ask 'What would you change?' after each test, then let them fix one thing and test again.",
+      "ask": [
+        "Which house kept the ice longest, and why?",
+        "What would you change if you lived in it?"
+      ],
+      "tip": "The ice cube test works anywhere with sun: the house that keeps the inside coolest melts the ice slowest.",
+      "levels": {
+        "explore": "Put an ice cube in each house in the sun, and see which melts first.",
+        "develop": "Run all three tests, record the results, and pick a winner.",
+        "extend": "Change one feature, like the roof colour or wall thickness, and test whether it makes a difference."
+      }
+    }
+  ],
+  "reference": {
+    "title": "House Detective Toolkit",
+    "intro": "What to look for, why houses are built that way, what to ask and how to test your model.",
+    "items": [
+      {
+        "name": "House clues",
+        "lines": [
+          {
+            "k": "Roof:",
+            "v": "steep, flat, wide, made of what?"
+          },
+          {
+            "k": "Walls:",
+            "v": "thick or thin, clay, stone, wood, concrete"
+          },
+          {
+            "k": "Windows:",
+            "v": "big or small, shutters, bars, screens"
+          },
+          {
+            "k": "Colour:",
+            "v": "light or dark"
+          },
+          {
+            "k": "Height:",
+            "v": "on the ground, raised, on stilts"
+          }
+        ],
+        "ask": "What do almost all the houses here share?"
+      },
+      {
+        "name": "Why it's built that way",
+        "lines": [
+          {
+            "k": "Steep roof:",
+            "v": "rain or snow slides off"
+          },
+          {
+            "k": "Wide roof edge:",
+            "v": "shade, and rain kept off the walls"
+          },
+          {
+            "k": "Thick walls:",
+            "v": "slow to heat up, slow to cool down"
+          },
+          {
+            "k": "Light colour:",
+            "v": "bounces back the sun's heat"
+          },
+          {
+            "k": "Raised house:",
+            "v": "away from floods, and air flows underneath"
+          }
+        ],
+        "ask": "Which reason fits the houses here best?"
+      },
+      {
+        "name": "Ask a local",
+        "lines": [
+          {
+            "k": "Why:",
+            "v": "'Why is the roof built like this?'"
+          },
+          {
+            "k": "Made of:",
+            "v": "'What are the walls made of?'"
+          },
+          {
+            "k": "Hardest:",
+            "v": "'What's the hardest season in this house?'"
+          },
+          {
+            "k": "Built by:",
+            "v": "'Who built it, and how long did it take?'"
+          },
+          {
+            "k": "Changed:",
+            "v": "'Do new houses here look different?'"
+          }
+        ],
+        "ask": "Which answer changed your theory?"
+      },
+      {
+        "name": "Build it",
+        "lines": [
+          {
+            "k": "Base:",
+            "v": "a small cardboard box"
+          },
+          {
+            "k": "Walls:",
+            "v": "extra cardboard, clay or mud for thickness"
+          },
+          {
+            "k": "Roof:",
+            "v": "card, leaves or grass, at the angle you chose"
+          },
+          {
+            "k": "Windows:",
+            "v": "cut them the size the weather needs"
+          },
+          {
+            "k": "Compare:",
+            "v": "a plain box house the same size"
+          }
+        ],
+        "ask": "Which choice was hardest to make?"
+      },
+      {
+        "name": "Test it",
+        "lines": [
+          {
+            "k": "Sun:",
+            "v": "same-size ice cube on a lid inside each, check every 10 minutes"
+          },
+          {
+            "k": "Rain:",
+            "v": "a cup of water over the roof, then check inside"
+          },
+          {
+            "k": "Wind:",
+            "v": "a strong breath or a fan, from one side"
+          },
+          {
+            "k": "Fix:",
+            "v": "change one thing, test again"
+          }
+        ],
+        "ask": "Which test surprised you?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Observation",
+      "text": "spotting patterns in the places around them"
+    },
+    {
+      "name": "Theory building",
+      "text": "explaining why, then checking it"
+    },
+    {
+      "name": "Design",
+      "text": "building for a real place and its weather"
+    },
+    {
+      "name": "Fair testing",
+      "text": "comparing two models the same way"
+    }
+  ],
+  "conclusion": {
+    "headline": "They can read a house like a weather report.",
+    "text": "In the next new place you arrive, notice what they point at first. Kids who have done this read roofs and walls the way others read signs, and they'll often guess the weather before anyone tells them.",
+    "celebrate": "When they explain a house to someone else, say: 'You worked out why it's built that way, and you tested it yourself.'",
+    "extensions": [
+      "Visit an old building, a church or a museum house, and compare it with the houses people live in today",
+      "Find out how houses here are built to survive the worst thing that can happen, like earthquakes, hurricanes or floods",
+      "Walk a new neighbourhood and guess its weather from the houses alone, then check",
+      "Redesign your own room or home for the climate here, and list what you'd change"
+    ]
+  },
+  "signs": [
+    "They comment on roofs, walls and windows in new places",
+    "They connect what they see to the weather",
+    "They ask locals why things are built the way they are"
+  ],
+  "makeItReal": "On your next walk, stop in front of one house and ask your kid to explain one thing about it you'd never noticed.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/house-detective.jpg",
+    "alt": "Watercolour illustration of two small cardboard model houses on a table in the sun, one with a wide roof and thick walls, the other a plain box, with ice cubes and a sketchbook of houses nearby",
+    "caption": "Two houses, two ice cubes, one sunny windowsill."
+  }
+}

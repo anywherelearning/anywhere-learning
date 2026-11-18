@@ -410,6 +410,8 @@ const SUPPLEMENTAL_TERRITORY_TAGS: Record<string, string[]> = {
   'teach-it-to-learn-it': ['communication', 'emotional'],
   'trade-it-up': ['communication', 'math', 'life-skills'],
   'play-the-world': ['citizenship', 'physical', 'communication'],
+  'house-detective': ['critical-thinking', 'creativity', 'citizenship'],
+  'learn-a-local-craft': ['citizenship', 'creativity', 'math'],
   'gift-budget-challenge': ['math', 'life-skills', 'emotional'],
   'local-language-mission': ['communication'],
   'people-scientist': ['emotional', 'critical-thinking'],

@@ -1,0 +1,349 @@
+{
+  "slug": "learn-a-local-craft",
+  "category": "Worldschooling",
+  "title": "Learn a Local Craft",
+  "tagline": "Find · Read · Learn · Count · Make",
+  "ages": "Ages 6 to 14",
+  "goal": "Your kid learns a traditional craft from the hands of someone who still makes it: a weaver, a potter, a carver, or a grandparent who knits. They read a finished piece like a detective, learn the craft in a real lesson, work out what the maker's time is really worth, then make a piece on their own and tell its story.",
+  "need": [
+    "Someone who makes a traditional craft by hand: a local maker, a workshop or market stall, or an elder in your family",
+    "Money to pay for the lesson or to buy a piece from the maker",
+    "The craft's own materials, which the maker usually provides",
+    "A notebook for the craft file"
+  ],
+  "academics": [
+    {
+      "subject": "Social studies",
+      "text": "how a craft carries a place's history"
+    },
+    {
+      "subject": "Science",
+      "text": "where the materials come from, and how they change"
+    },
+    {
+      "subject": "Math",
+      "text": "hours of work, materials and a fair price"
+    },
+    {
+      "subject": "Art",
+      "text": "pattern, colour and making by hand"
+    }
+  ],
+  "levelsLine": "Every step has three levels: Explore, Develop, Extend. Pick the one that fits your kid today, and change it anytime. Siblings can do the same step at different levels, side by side.",
+  "howTo": {
+    "intro": "Most families treat a craft as a souvenir stop: a quick look, a photo, a purchase. Your job is to find a maker who will teach, pay them for their time, and stay quiet during the lesson so your kid asks the questions and the maker does the correcting.",
+    "plan": [
+      {
+        "when": "The first days",
+        "what": "Find the craft and read a finished piece (Steps 1 and 2)."
+      },
+      {
+        "when": "The lesson",
+        "what": "Learn it from the maker (Step 3)."
+      },
+      {
+        "when": "After the lesson",
+        "what": "Count the real cost, then make a piece alone (Steps 4 and 5)."
+      }
+    ],
+    "tips": [],
+    "troubleshoot": [
+      {
+        "q": "We can't find a lesson",
+        "a": "Ask at a market stall, a cooperative or your host. Many makers will show a curious kid for a small fee at a quiet time. At home, ask the oldest people you know what they learned to make by hand."
+      },
+      {
+        "q": "The lesson is in another language",
+        "a": "Hands teach better than words. Learn three words before you go: thread, again and thank you. Then let your kid copy the maker's hands."
+      },
+      {
+        "q": "Their first piece is messy",
+        "a": "Good. Ask the maker what their first piece looked like. Most will laugh and tell you."
+      }
+    ]
+  },
+  "lesson": {
+    "text": "A craft is knowledge held in someone's hands. The materials, the patterns and the hours of work all tell you about the place it comes from, and the fastest way to understand it is to try making it yourself.",
+    "before": "'It's just a bracelet. Why does it cost so much?'",
+    "model": [
+      {
+        "part": "Read",
+        "line": "Six colours, a pattern that repeats every few centimetres, cotton dyed by hand."
+      },
+      {
+        "part": "Learn",
+        "line": "Half an hour to weave two centimetres, with the maker fixing every second row."
+      },
+      {
+        "part": "Count",
+        "line": "About four hours for one bracelet that sells for $8. That's $2 an hour, before the cotton."
+      },
+      {
+        "part": "Now",
+        "line": "'It's cheap for how long it takes.'"
+      }
+    ],
+    "modelNote": "Nothing about the bracelet changed. Two slow centimetres made by their own hands turned 'it costs too much' into $2 an hour, and a price that suddenly looked low."
+  },
+  "steps": [
+    {
+      "title": "Find the craft",
+      "why": "Most places have something people still make by hand the old way. Finding it is the first piece of detective work.",
+      "kid": "Your kid finds out what people here make by hand, using the Find the craft card in the Craft Toolkit at the end of the guide: what's sold at the market, what locals wear or use, what a host says their grandparents made. They pick one craft to learn.",
+      "you": "Ask 'What do people here still make by hand?' rather than 'What should we buy?' At home, ask grandparents and older neighbours what they learned to make.",
+      "ask": [
+        "What do you see made by hand everywhere here?",
+        "Which one would you most like to try?"
+      ],
+      "tip": "Markets and cooperatives often know the makers. Ask who made a piece, and whether they teach.",
+      "levels": {
+        "explore": "Spot three handmade things at a market, and pick the one you'd like to make.",
+        "develop": "Find the local craft and three facts about it before the lesson.",
+        "extend": "Find out how long people here have made it, and what has changed since."
+      }
+    },
+    {
+      "title": "Read a finished piece",
+      "why": "A finished piece is full of clues about how it was made, if you look slowly.",
+      "kid": "Your kid studies one finished piece up close, using the Read a piece card: what it's made of, the colours and pattern, the tools it needed and the marks of a hand. Then they guess how many hours it took.",
+      "you": "Ask the seller before anyone touches it. Write down your kid's hour guess; you'll check it after the lesson.",
+      "ask": [
+        "What do you think it's made of?",
+        "How long do you think it took to make?"
+      ],
+      "tip": "In some places a pattern or colour shows where a piece comes from or what it's for. Ask what this one means.",
+      "levels": {
+        "explore": "Look closely at one piece, and draw its pattern.",
+        "develop": "Fill in the Read a piece card, and guess the hours.",
+        "extend": "Compare a handmade piece with a machine-made copy, and list every difference you can find."
+      }
+    },
+    {
+      "title": "Learn it from the maker",
+      "why": "Hands teach what no video can: the pressure, the rhythm, the small fixes.",
+      "kid": "Your kid takes a real lesson. They watch first, ask the questions on the Ask the maker card, then make a small piece with their own hands while the maker corrects them.",
+      "you": "Pay the maker for their time. Stand back and let the maker do the teaching. Handle sharp tools, hot kilns and dye pots yourself, and ask before taking photos.",
+      "ask": [
+        "Who taught you, and how old were you?",
+        "What do beginners always get wrong?"
+      ],
+      "tip": "Time how long your kid's small piece takes. You'll need that number in the next step.",
+      "levels": {
+        "explore": "Watch the maker, then do one part yourself with their help.",
+        "develop": "Make a small piece in the lesson, and ask two questions from the card.",
+        "extend": "Ask the maker what's hardest about earning a living from the craft, and write down the answer."
+      }
+    },
+    {
+      "title": "Count the real cost",
+      "why": "Once you've tried it, the price of a handmade piece starts to make sense.",
+      "kid": "Your kid works out the real cost of one finished piece, using the Count the cost card: the hours, the materials and the price it sells for. They divide to find what the maker earns per hour, then compare it with a machine-made copy.",
+      "you": "Help with the division. Then ask the question that matters: 'Is that a fair price?' Let them decide what they'd charge.",
+      "ask": [
+        "How close was your hour guess?",
+        "What would be a fair price, and why?"
+      ],
+      "tip": "Use their own timing. If two centimetres took them 30 minutes, how long would the whole piece take them?",
+      "levels": {
+        "explore": "Count how long your small piece took, and say if the real price feels fair.",
+        "develop": "Work out what the maker earns per hour on one piece.",
+        "extend": "Compare the maker's hourly earnings with the price of a machine-made copy, and explain who gets the money in each case."
+      }
+    },
+    {
+      "title": "Make one on your own",
+      "why": "Making a second piece without help shows what really stuck.",
+      "kid": "Your kid makes a second piece on their own, using what they learned. Then they write its story on the Story card: who taught them, where the materials came from, what the pattern means and how long it took.",
+      "you": "Help them get the materials, then step away. If they want to use the maker's pattern, ask the maker first. When it's done, ask them to tell the story out loud to someone who wasn't there.",
+      "ask": [
+        "What did you remember, and what did you have to work out?",
+        "Who will you show it to?"
+      ],
+      "tip": "Keep the story with the piece. Ten years from now, the story is what will make it matter.",
+      "levels": {
+        "explore": "Make a small piece with a little help, and say who taught you.",
+        "develop": "Make a piece on your own, and fill in its Story card.",
+        "extend": "Change one thing, like the pattern or the colours, so the piece is yours, and explain what the maker would think."
+      }
+    }
+  ],
+  "reference": {
+    "title": "Craft Toolkit",
+    "intro": "How to find a craft, read a finished piece, ask a maker and work out what the work is worth.",
+    "items": [
+      {
+        "name": "Find the craft",
+        "lines": [
+          {
+            "k": "Market:",
+            "v": "what's handmade, not stacked by the hundred"
+          },
+          {
+            "k": "Worn or used:",
+            "v": "clothes, baskets, pots people use every day"
+          },
+          {
+            "k": "Ask:",
+            "v": "'What do people here still make by hand?'"
+          },
+          {
+            "k": "At home:",
+            "v": "'What did your grandparents make?'"
+          },
+          {
+            "k": "Examples:",
+            "v": "weaving, pottery, carving, baskets, knitting, embroidery"
+          }
+        ],
+        "ask": "Which craft do you see most often here?"
+      },
+      {
+        "name": "Read a piece",
+        "lines": [
+          {
+            "k": "Made of:",
+            "v": "cotton, wool, clay, wood, reeds, beads"
+          },
+          {
+            "k": "Pattern:",
+            "v": "what repeats, and how often"
+          },
+          {
+            "k": "Colours:",
+            "v": "natural dyes or bought ones?"
+          },
+          {
+            "k": "Hand marks:",
+            "v": "tiny differences a machine wouldn't make"
+          },
+          {
+            "k": "Hours:",
+            "v": "your guess, before the lesson"
+          }
+        ],
+        "ask": "What tells you a hand made it?"
+      },
+      {
+        "name": "Ask the maker",
+        "lines": [
+          {
+            "k": "Learned:",
+            "v": "'Who taught you, and how old were you?'"
+          },
+          {
+            "k": "Materials:",
+            "v": "'Where does this come from?'"
+          },
+          {
+            "k": "Meaning:",
+            "v": "'What does this pattern mean?'"
+          },
+          {
+            "k": "Time:",
+            "v": "'How long does one piece take?'"
+          },
+          {
+            "k": "Future:",
+            "v": "'Do young people still learn it?'"
+          }
+        ],
+        "ask": "Which answer surprised you most?"
+      },
+      {
+        "name": "Count the cost",
+        "lines": [
+          {
+            "k": "Hours:",
+            "v": "how long one piece takes the maker"
+          },
+          {
+            "k": "Materials:",
+            "v": "what goes into one piece"
+          },
+          {
+            "k": "Price:",
+            "v": "what it sells for"
+          },
+          {
+            "k": "Per hour:",
+            "v": "price minus materials, divided by hours"
+          },
+          {
+            "k": "Copy:",
+            "v": "the price of a machine-made one"
+          }
+        ],
+        "ask": "Would you work that many hours for that price?"
+      },
+      {
+        "name": "Story card",
+        "lines": [
+          {
+            "k": "Taught by:",
+            "v": "name and place"
+          },
+          {
+            "k": "Materials:",
+            "v": "where they came from"
+          },
+          {
+            "k": "Pattern:",
+            "v": "what it means"
+          },
+          {
+            "k": "Time:",
+            "v": "how long yours took"
+          }
+        ],
+        "ask": "What's the one thing you'd tell someone about it?"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Close looking",
+      "text": "reading how something was made"
+    },
+    {
+      "name": "Learning by hand",
+      "text": "copying a maker, then making it alone"
+    },
+    {
+      "name": "Fair value",
+      "text": "working out what someone's time is worth"
+    },
+    {
+      "name": "Respect",
+      "text": "learning a tradition from the people who keep it"
+    }
+  ],
+  "conclusion": {
+    "headline": "They learned a craft from the hands that keep it alive.",
+    "text": "Pass a market stall with them a few weeks later. A kid who has made even one small piece by hand picks things up differently, turns them over, and asks who made them.",
+    "celebrate": "When they tell the story of their piece to someone, say: 'You didn't just buy it. You learned it from the person who makes it.'",
+    "extensions": [
+      "Find the same craft in another place you visit, and compare the patterns, tools and prices",
+      "Learn the plant, animal or earth the main material comes from, and see it in the wild if you can",
+      "Ask a grandparent or older neighbour to teach the craft they grew up with, and compare it with this one",
+      "Make a small piece as a thank-you gift for the maker or your host"
+    ]
+  },
+  "signs": [
+    "They ask who made something before they ask what it costs",
+    "They notice the difference between handmade and machine-made",
+    "They tell the story of their piece without being asked"
+  ],
+  "makeItReal": "This week, find one person who still makes something by hand, here or in your family, and ask if your kid can watch them work for half an hour.",
+  "cta": "Want the next one? This guide is one of 120+ in the Anywhere Learning library, each with your job and your kid's job at every step.",
+  "ctaUrl": "anywherelearning.co/choose-plan",
+  "done": {
+    "text": "Done? Tap it on your trail so it shows up in your kid's record.",
+    "url": "https://anywherelearning.co/account/home",
+    "label": "Open my trail"
+  },
+  "photo": {
+    "src": "guides/assets/learn-a-local-craft.jpg",
+    "alt": "Watercolour illustration of a child's hands weaving colourful threads on a small backstrap loom beside an adult's hands",
+    "caption": "Two slow centimetres, and a new respect for the whole piece."
+  }
+}
