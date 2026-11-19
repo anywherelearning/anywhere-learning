@@ -11,7 +11,10 @@ const img = (src) => src.startsWith('http') ? src : `data:image/jpeg;base64,${fs
 // Card icons: Lucide line icons (ISC licence, guides/icons/LICENSE-lucide.txt),
 // inlined so they take the category accent colour.
 // Clipart: Microsoft Fluent Emoji (MIT, see guides/clipart/LICENSE).
-const art = (file) => `<img class="bart${file.endsWith('.svg') ? '' : ' wc'}" alt="" src="data:image/${file.endsWith('.svg') ? 'svg+xml' : 'jpeg'};base64,${fs.readFileSync(path.resolve('guides/clipart', file)).toString('base64')}">`;
+// Black and white prints get colouring-page line art (guides/clipart/wc-line, made from wc/).
+let LINE_ART = false;
+const artFile = (file) => (LINE_ART && file.startsWith('wc/') && fs.existsSync(path.resolve('guides/clipart', 'wc-line/' + file.slice(3)))) ? 'wc-line/' + file.slice(3) : file;
+const art = (file) => `<img class="bart${file.endsWith('.svg') ? '' : ' wc'}" alt="" src="data:image/${file.endsWith('.svg') ? 'svg+xml' : 'jpeg'};base64,${fs.readFileSync(path.resolve('guides/clipart', artFile(file))).toString('base64')}">`;
 const icon = (name) => {
   if (!name) return '';
   const svg = fs.readFileSync(path.resolve('guides/icons', `${name}.svg`), 'utf8').replace(/<!--.*?-->/s, '');
@@ -90,6 +93,7 @@ const levelRow = (lv) => `
 
 export function buildHtml(g, mode, { bonus = false, tpt = false } = {}) {
   const bw = mode === 'print-bw';
+  LINE_ART = bw;
   const layout = mode === 'phone' ? 'phone' : 'print';
   const { accent, soft, paper } = ACCENTS[g.category] ?? ACCENTS.default;
   const n = (g.steps || []).length;
@@ -676,6 +680,7 @@ html,body,.pg{background:#fff!important}
 // ─── The Future-Ready Skills Map: same design system, map-specific pages ───
 export function buildMapHtml(g, mode, { bonus = false, review = false, tpt = false } = {}) {
   const bw = mode === 'print-bw';
+  LINE_ART = bw;
   const layout = mode === 'phone' ? 'phone' : 'print';
   let pn = 1; // cover is page 1
   const foot = (label) => `<footer class="foot"><span>The Future-Ready Skills Map &middot; ${esc(label)}</span><span class="pnum">${++pn}</span></footer>`;
@@ -923,6 +928,7 @@ ${bw ? `
 // Same look as the library guides, lighter: why, what you need, four moves, three levels.
 export function buildDaysHtml(g, mode) {
   const bw = mode === 'print-bw';
+  LINE_ART = bw;
   const layout = mode === 'phone' ? 'phone' : 'print';
   const base = ACCENTS['Outdoor Learning'];
   const n = g.days.length;
@@ -1098,6 +1104,7 @@ a.cta{display:block;text-decoration:none;color:#fff}.daylist a,.dnext a{color:in
 // then the finish page with the free-trial link.
 export function buildCapableHtml(g, mode) {
   const bw = mode === 'print-bw';
+  LINE_ART = bw;
   const layout = mode === 'phone' ? 'phone' : 'print';
   const base = ACCENTS['Outdoor Learning'];
   const foot = (label) => `<footer class="foot"><span>${esc(g.title)}</span><span>${esc(label)}</span></footer>`;
