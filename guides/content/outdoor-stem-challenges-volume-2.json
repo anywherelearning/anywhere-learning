@@ -335,8 +335,8 @@
     "intro": "Volume 2 runs well with a class because every challenge comes down to one fair test with a number at the end. Groups build, measure and change one thing at a time, then compare results.",
     "tips": [
       {
-        "t": "Groups of four",
-        "d": "Jobs: a builder, a launcher or pourer who runs the test, a measurer who counts steps or seconds, and a recorder. Rotate jobs for each new version."
+        "t": "Builder, tester, measurer, recorder",
+        "d": "A builder makes it, a launcher or pourer runs the test, a measurer counts steps or seconds, and a recorder writes it down. Rotate jobs with every new version."
       },
       {
         "t": "Kit per group",
@@ -355,10 +355,10 @@
         "d": "Make this the rule of the room: one change per test. Post a class chart where groups log each change and its result, so everyone sees which change mattered."
       },
       {
-        "t": "Compare and debrief",
-        "d": "End each card by putting every group's best number on the board. Ask which single change made the biggest difference, and why three changes at once couldn't tell you."
+        "t": "Best numbers on the board",
+        "d": "Every group's best number goes on the board after each card. Ask which single change made the biggest difference, and why three changes at once couldn't tell you."
       }
     ],
-    "timing": "Each card takes 15 to 30 minutes, so a 45-minute period fits one card plus measuring and clean-up. One theme a week gives five weeks outdoors, and Stone Skipper plus any card a group loved goes home to try with family."
+    "timing": "Five weeks outdoors, one theme a week, works well. A card takes 15 to 30 minutes, so a 45-minute period fits one card plus measuring and clean-up. Stone Skipper and any card a group loved go home to try with family."
   }
 }

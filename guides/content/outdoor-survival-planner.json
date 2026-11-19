@@ -347,12 +347,12 @@
     "intro": "The planning steps work well in a classroom, and the skills come alive on the school field. Teams plan for the same scenario, then test shelters and whistles outside, always inside a supervised space.",
     "tips": [
       {
-        "t": "Teams of four",
-        "d": "Each team has a reader, a recorder, a gear checker and a tester. Every team plans the same scenario from the Scenarios card, so the debrief can compare priority orders."
+        "t": "Same scenario, every team",
+        "d": "Every team plans the same scenario from the Scenarios card, so the debrief can compare priority orders. Inside each team: a reader, a recorder, a gear checker and a tester."
       },
       {
         "t": "One pack per team",
-        "d": "Give each team a small pack with a water bottle, a whistle, a tarp or rope and a few extras. Teams list what's inside and match each item to the Priorities card."
+        "d": "A small pack per team holds a water bottle, a whistle, a tarp or rope and a few extras. Teams list what's inside and match each item to the Priorities card."
       },
       {
         "t": "Skills on school grounds",
@@ -363,14 +363,14 @@
         "d": "Build only with tarps, rope and fallen sticks, low to the ground. Pour a cup of water on the roof as the test, and leave out cutting, fires and wild food completely."
       },
       {
-        "t": "Levels in one field",
-        "d": "Explore teams try one skill and report back. Develop teams test two skills and rate how each one worked. Extend teams fix a shelter that failed and test it again."
+        "t": "One skill or a rebuild",
+        "d": "A team that tries one skill and reports back has done enough. Others test two skills and rate each one, and a team whose shelter failed can fix it and test again."
       },
       {
         "t": "Plan a real outing",
         "d": "For Step 5, the class writes turn-back rules and a Trip plan for an actual class field trip, or each student takes it home for the family's next outing."
       }
     ],
-    "timing": "Plan two 45-minute classroom sessions for the scenario, the priorities and the packs, then one longer outdoor session for the skills. Step 5 takes one more session, or goes home as a family trip plan."
+    "timing": "Start with two 45-minute classroom sessions for the scenario, the priorities and the packs, then one longer outdoor session for the skills. Step 5 takes one more session, or goes home as a family trip plan."
   }
 }

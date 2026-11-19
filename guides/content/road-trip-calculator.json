@@ -340,8 +340,8 @@
     "intro": "Groups plan road trips to different real destinations from your school, all with the same car and today's gas price. Every group does the same math with different numbers, so comparing the plans at the end is half the fun.",
     "tips": [
       {
-        "t": "Groups of four, four jobs",
-        "d": "Give each group a navigator for the route, a timekeeper for speed and stops, a fuel officer for gallons and cost, and a treasurer for the fixed and per person costs."
+        "t": "Navigator, timekeeper, fuel officer, treasurer",
+        "d": "A navigator plans the route, a timekeeper handles speed and stops, a fuel officer works out gallons and cost, and a treasurer adds the fixed and per person costs."
       },
       {
         "t": "Different trips, same car",
@@ -360,10 +360,10 @@
         "d": "Instead of riding along, each group pulls 2 twist cards from Road Trip Numbers and fixes its plan. Kids who take a real family drive can track it as navigator at home."
       },
       {
-        "t": "Levels and a trip fair",
-        "d": "Explore groups take a short trip and divide by 50, while Extend groups plan two or three stops in the best order. End with a trip fair where groups compare cost per person."
+        "t": "A closing trip fair",
+        "d": "Groups compare cost per person at a closing trip fair. A short trip divided by 50 suits younger groups; older ones plan two or three stops in the best order."
       }
     ],
-    "timing": "Plan three periods of about 45 minutes: route and driving time (Steps 1 and 2), fuel and the budget (Steps 3 and 4), then twist cards and the trip fair. A real family drive is an optional home extension."
+    "timing": "Route and driving time (Steps 1 and 2) fill the first of three periods of about 45 minutes, then fuel and the budget (Steps 3 and 4), then twist cards and the trip fair. A real family drive is an optional home extension."
   }
 }

@@ -359,7 +359,7 @@
     "tall": true
   },
   "classroom": {
-    "intro": "The Boredom Challenge makes a great class game: same timer, same rules, and you play too. The rounds move from the house to the classroom and the playground, and the winning ideas become a class menu for indoor recess.",
+    "intro": "The Boredom Challenge turns into a class game: same timer, same rules, and you play too. The rounds move from the house to the classroom and the playground, and the winning ideas become a class menu for indoor recess.",
     "tips": [
       {
         "t": "Everyone races at once",
@@ -378,8 +378,8 @@
         "d": "Run the Pocket Challenge at recess or outdoor time, inside the usual boundaries with adults on duty. Kids use only what's in their pockets, plus the sticks and stones they find."
       },
       {
-        "t": "Levels side by side",
-        "d": "Students pick a level each round: Explore kids invent one game, Develop kids score and compare rounds, Extend kids guess the minutes before the race or plan a perfect pocket kit."
+        "t": "Each kid picks a level",
+        "d": "Before each round, kids choose: invent one game, score and compare rounds, or guess the minutes before the race. A few like planning a perfect pocket kit instead."
       },
       {
         "t": "Vote and write the menu",

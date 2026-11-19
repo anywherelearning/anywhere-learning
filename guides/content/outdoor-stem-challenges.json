@@ -329,12 +329,12 @@
     "intro": "Engineering challenges work well with a class: groups plan, build, test and improve with fallen materials, and every group's first version is supposed to fail. You play the test, not the builder.",
     "tips": [
       {
-        "t": "Groups of four",
-        "d": "Jobs: a planner who sketches the design, two builders, and a tester who runs the test and records the result. Rotate jobs between version 1 and version 2."
+        "t": "Planner, two builders, tester",
+        "d": "A planner sketches the design, two builders put it together, and a tester runs the test and records what happened. Swap jobs between version 1 and version 2."
       },
       {
         "t": "Same card, every group",
-        "d": "Give every group the same card on the same day, like Bridge Builder or Raft Challenge. It turns the final test into a fair comparison across the whole class."
+        "d": "Everyone works the same card on the same day, like Bridge Builder or Raft Challenge. That turns the final test into a fair comparison across the whole class."
       },
       {
         "t": "Materials per group",
@@ -349,10 +349,10 @@
         "d": "Egg Nest drops happen outside, with hand washing after. Mini Dam stays in a dry channel or sand tray, never a real stream. Nobody drinks the Muddy Water Filter water, and check insulator piles first."
       },
       {
-        "t": "Design photos and share",
-        "d": "Each group photographs every version on a class tablet. End with a two-minute share: what failed, what changed, and why version 2 worked better. Then take builds apart and leave the space clean."
+        "t": "Photos and a quick share",
+        "d": "Groups photograph every version on a class tablet. In a two-minute share, they say what failed, what changed and why version 2 worked better. Then builds come apart and the space gets cleaned."
       }
     ],
-    "timing": "Each card takes 15 to 30 minutes, so a 45-minute period fits one card with the share and clean-up. Run one card a week; Mud Brick and Pinecone Weather Station need a later check, and favourite cards go home to try."
+    "timing": "One card a week fits a 45-minute period with the share and clean-up, since each takes 15 to 30 minutes. Mud Brick and Pinecone Weather Station need a later check, and favourite cards go home to try."
   }
 }

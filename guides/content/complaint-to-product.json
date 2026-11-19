@@ -331,15 +331,15 @@
   ],
   "backHome": "Bring one workaround you saw on the road home as a rough model, and test it on a complaint someone there keeps making.",
   "classroom": {
-    "intro": "A school is full of people with complaints worth solving, which makes this a strong class project. Groups interview people in the building, build cardboard models, and bring them back to the people who complained to test.",
+    "intro": "A school is full of people with complaints worth solving. Groups interview people in the building, build cardboard models, and bring them back to the people who complained to test.",
     "tips": [
       {
         "t": "Interview inside the school",
         "d": "Instead of neighbours, groups interview classmates, other classes, the librarian, the custodian or office staff, with you arranging the visits. Families can be extra interviews at home."
       },
       {
-        "t": "Groups of four with jobs",
-        "d": "Each group has an asker who uses the Listening questions card, a note taker who writes exact words, a builder, and a tester who watches people use the model with the Test it card."
+        "t": "Asker, note taker, builder, tester",
+        "d": "An asker uses the Listening questions card, a note taker writes exact words, a builder makes the model, and a tester watches people use it with the Test it card."
       },
       {
         "t": "Materials per group",
@@ -350,14 +350,14 @@
         "d": "Visit each table during Step 2 and keep asking 'Who's it for?' until the group names a real person who complained, not 'everyone'. Hold groups at listening longer than they'd like."
       },
       {
-        "t": "Levels in each group",
-        "d": "Explore students find two matching complaints and build one part, Develop students write the problem sentence and a full model, and Extend students build two models and count which one testers choose."
+        "t": "One model or two",
+        "d": "Students who want a challenge build two models and count which one testers choose. Others write the problem sentence and build a full model; younger ones find two matching complaints and build one part."
       },
       {
         "t": "Product fair to finish",
         "d": "Invite the people who complained to a short product fair. Groups hand over models without explaining, watch, then ask for a real yes. Debrief as a class on what surprised them."
       }
     ],
-    "timing": "Plan four or five sessions of 40 to 45 minutes across two weeks: interviewing, finding the pattern, building, then testing and fixing. Students can collect extra complaints at home with family."
+    "timing": "Across two weeks, run four or five sessions of 40 to 45 minutes: interviewing, finding the pattern, building, then testing and fixing. Students can collect extra complaints at home with family."
   }
 }

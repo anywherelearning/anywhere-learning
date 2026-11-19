@@ -342,8 +342,8 @@
         "d": "Use the Everyday problems card with the classroom in mind: lost stuff, shared space, getting started and forgotten jobs. The class lists them first, then each team picks one."
       },
       {
-        "t": "Teams of four",
-        "d": "Give each team a watcher who counts the problem, a recorder, a builder and a reporter. They keep the same problem from the first step to Version 2."
+        "t": "Watcher, recorder, builder, reporter",
+        "d": "A watcher counts the problem, a recorder writes it down, a builder makes the fix and a reporter shares it. The team keeps the same problem from the first step to Version 2."
       },
       {
         "t": "A shared build box",
@@ -354,14 +354,14 @@
         "d": "Keep every because about the setup, not a classmate: 'the bin is behind the door', never 'Sam forgets'. Any problem that points at one kid comes to you privately instead."
       },
       {
-        "t": "Levels by team",
-        "d": "Explore teams build the simplest version. Develop teams count results for three days. Extend teams hand their fix to another class to test without explaining it."
+        "t": "Simplest fix to outside test",
+        "d": "Start younger teams on the simplest version. Older teams count results for three days, and a few can hand their fix to another class to test without explaining it."
       },
       {
         "t": "Version 2 showcase",
         "d": "After the test days, each team shows its fix, its count and what changed in Version 2. The class keeps every fix that passed the Tired-day tests."
       }
     ],
-    "timing": "Plan two 45-minute sessions for the problem, the because and the ideas, then one to build. Testing runs over three to five school days, then a short session for Version 2. Kids can take the steps home to a family problem."
+    "timing": "Testing runs over three to five school days, after two 45-minute sessions for the problem, the because and the ideas, and one to build. A short session covers Version 2. Kids can take the steps home to a family problem."
   }
 }

@@ -349,26 +349,26 @@
         "d": "Collect broken things ahead of time: dim flashlights, stuck zippers, squeaky hinges, wobbly stools. Families can donate small items; screen them against the Never open line, and ask the custodian before fixing school furniture."
       },
       {
-        "t": "Teams of three",
-        "d": "One detective describes the symptom, one works down the Easy suspects card, and one keeps the Fix-it log. They switch roles with each new item."
+        "t": "Describer, suspect checker, logger",
+        "d": "One detective describes the symptom, one works down the Easy suspects card, and one keeps the Fix-it log. Roles switch with every new item, so nobody is stuck logging."
       },
       {
         "t": "One kit per table",
-        "d": "Each table gets a screwdriver, pliers, tape, a flashlight, bar soap, a pencil, toothpicks and a little glue. Anything with a blade stays at your desk, and you do those jobs yourself."
+        "d": "On every table: a screwdriver, pliers, tape, a flashlight, bar soap, a pencil, toothpicks and a little glue. Anything with a blade stays at your desk, and you do those jobs yourself."
       },
       {
         "t": "Safety rules first",
         "d": "Read the Safety rules card aloud before any tools come out: nothing plugged in, batteries out, and nothing from the Never open line. Stop everything at any burning smell."
       },
       {
-        "t": "Levels per team",
-        "d": "Explore teams check one easy suspect with you. Develop teams work the suspects in order, one change at a time. Extend teams predict the cause first and compare fixing with replacing."
+        "t": "Predict first, or check one",
+        "d": "Some teams predict the cause first and compare fixing with replacing. Most work the suspects in order, one change at a time, and the youngest check one easy suspect with you."
       },
       {
         "t": "Detective reports",
         "d": "Each team explains its symptom, cause and fix in two minutes. The class picks the trickiest diagnosis and adds every fix that worked to a class Common fixes list."
       }
     ],
-    "timing": "Plan three 45-minute sessions: hunt and describe, check the suspects and plan, then fix, test and report. Students can hunt for one problem at home and bring their Fix-it log back to share."
+    "timing": "Hunt and describe in the first 45-minute session, check the suspects and plan in the second, then fix, test and report in the third. Students can hunt for one problem at home and bring their Fix-it log back to share."
   }
 }

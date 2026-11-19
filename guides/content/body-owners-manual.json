@@ -338,12 +338,12 @@
     "intro": "The tests work well with a whole class because each one needs only a stopwatch, a ruler and a partner. Run them in small teams that rotate through stations, with you keeping every test the same for everyone.",
     "tips": [
       {
-        "t": "Teams of three",
-        "d": "One kid takes the test, one times or drops the ruler, and one records the numbers. They rotate after each test so everyone gets a turn in every job."
+        "t": "Tester, timer, recorder",
+        "d": "One kid takes the test, one times or drops the ruler, and one writes down the numbers. Rotate after each test so everyone gets a turn in every job."
       },
       {
         "t": "Stations, not every table",
-        "d": "Set up the Engine tests, Sensor tests and Control centre tests as stations around the room. One stopwatch, one ruler and one set of smell cups per station is plenty."
+        "d": "Spread the Engine tests, Sensor tests and Control centre tests around the room as stations. One stopwatch, one ruler and one set of smell cups per station is plenty."
       },
       {
         "t": "Keep numbers private",
@@ -354,14 +354,14 @@
         "d": "Keep Push the engine to one minute of jumping jacks or running on the spot, with room around each kid; anyone with a health note sits out. Check food allergies before the smell cups."
       },
       {
-        "t": "Three levels, one room",
-        "d": "Explore students count one pulse and catch the ruler five times. Develop students record middle numbers and compare. Extend students test what slows them down and chart it."
+        "t": "One pulse to full charts",
+        "d": "The youngest count one pulse and catch the ruler five times. Most students record middle numbers and compare. Anyone ready for more tests what slows them down and charts it."
       },
       {
         "t": "Pool the ruler data",
         "d": "Collect ruler catches without names on one class chart to see the range. Then ask what slowed catches down, and why keeping the test fair made the numbers comparable."
       }
     ],
-    "timing": "Plan three 45-minute sessions: pulse and recovery, then the senses and the ruler, then writing the manual. The retest a month later fits in a short warm-up, and students can test a family member at home for fun."
+    "timing": "Pulse and recovery come first, then the senses and the ruler, then writing the manual, three 45-minute sessions in all. The retest a month later fits a short warm-up, and students can test a family member at home for fun."
   }
 }

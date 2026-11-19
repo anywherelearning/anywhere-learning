@@ -331,8 +331,8 @@
     "intro": "Household Orchestra becomes a class of small bands, each with five objects and one piece to perform. It gets loud, so plan the space, and the five-object limit keeps every band creative and the cleanup quick.",
     "tips": [
       {
-        "t": "Bands of four or five",
-        "d": "Each band shares exactly five objects. Jobs: a beat keeper, a sound explorer, a composer who shapes the piece and an announcer who introduces it at the concert."
+        "t": "Five objects per band",
+        "d": "A band of four or five shares exactly five objects and four jobs: a beat keeper, a sound explorer, a composer who shapes the piece and an announcer who introduces it at the concert."
       },
       {
         "t": "Collect ahead of time",
@@ -344,17 +344,17 @@
       },
       {
         "t": "You keep the beat",
-        "d": "For Step 3, count 1, 2, 3, 4 for the whole class while every band holds a steady beat together. Then drop out and let each band layer its own pattern."
+        "d": "Count 1, 2, 3, 4 for the whole class in Step 3 while every band holds a steady beat together. Then drop out and let each band layer its own pattern."
       },
       {
-        "t": "Levels in every band",
-        "d": "Explore players find 2 sounds per object, and Develop players sort sounds high to low. Extend players tune three objects or write a score with symbols for another band to play."
+        "t": "Tuning and scores",
+        "d": "Players who want more tune three objects or write a score with symbols for another band to play. Others sort sounds high to low, and beginners find 2 sounds per object."
       },
       {
         "t": "Concert to finish",
         "d": "Each band announces its piece, its shape from the Piece shapes card and its job. Record within your school's media permissions, play it back, and let each band change one part."
       }
     ],
-    "timing": "Plan two sessions of about 45 minutes for gathering, finding sounds, rhythm and composing, plus a short third period for the concert. Objects can come from home, and everything else happens at school."
+    "timing": "Gathering, finding sounds, rhythm and composing fit into two sessions of about 45 minutes, with a short third period for the concert. Objects can come from home, and everything else happens at school."
   }
 }

@@ -346,8 +346,8 @@
         "d": "Pick a real class field trip or a pretend two-night camp, and give the whole class the same Read the trip answers: days, weather, plans and the bag."
       },
       {
-        "t": "Teams of three",
-        "d": "Each team gets one bag. One kid lists, one sorts with the Sort it card, and one packs. They rotate jobs for each round of cuts."
+        "t": "Lister, sorter, packer",
+        "d": "One bag per team. One kid lists, one sorts with the Sort it card, and one packs, and they rotate jobs for each round of cuts."
       },
       {
         "t": "Props, not belongings",
@@ -355,17 +355,17 @@
       },
       {
         "t": "Real limits",
-        "d": "Give each team a firm limit, like one small backpack and ten items, or a weight limit if you use real props. Show where real limits come from, like an airline's carry-on rule."
+        "d": "Every team gets a firm limit, like one small backpack and ten items, or a weight limit if you use real props. Show where real limits come from, like an airline's carry-on rule."
       },
       {
         "t": "Test it out loud",
         "d": "Call out Trip tests to the whole room, like 'It's raining!' or 'Where's your water?', and time how fast each team finds it. Teams repack whatever failed."
       },
       {
-        "t": "Levels in one room",
-        "d": "Explore teams cut their list to seven things. Develop teams use two limits and say why each thing got cut. Extend teams pack for a carry-on and a car trunk and compare."
+        "t": "Seven things or two bags",
+        "d": "Extend teams pack for a carry-on and a car trunk and compare. Younger teams cut their list to seven things, and the rest use two limits and say why each thing got cut."
       }
     ],
-    "timing": "Plan two 45-minute sessions: reading the trip, listing and cutting, then packing and testing. After a real field trip, do Step 5 as a class. Students can pack their own bag at home for the next family trip."
+    "timing": "Reading the trip, listing and cutting fill the first 45-minute session; packing and testing fill the second. After a real field trip, do Step 5 as a class. Students can pack their own bag at home for the next family trip."
   }
 }

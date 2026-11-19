@@ -335,33 +335,33 @@
     "caption": "His choice of videos, not the app's."
   },
   "classroom": {
-    "intro": "Every student already lives with recommendations, which makes this a great class discussion. In school, you run the apps on the projector with a fresh or teacher account, and students track their own suggestions at home with family permission.",
+    "intro": "Every student already lives with recommendations, so the talk gets going fast. In school, you run the apps on the projector with a fresh or teacher account, and students track their own suggestions at home with family permission.",
     "tips": [
       {
         "t": "Use a class account",
         "d": "Open YouTube or a video site on your projector, using a teacher account or a fresh one your school allows. Students never log in to their own accounts at school, and YouTube accounts are 13+."
       },
       {
-        "t": "Groups of three or four",
-        "d": "Give each group a pointer who reads the screen, a recorder for the What am I seeing? card, and a reporter. A fourth kid can be the skeptic who questions every guess."
+        "t": "Pointer, recorder, skeptic",
+        "d": "A pointer reads the screen, a recorder fills in the What am I seeing? card, and a reporter shares. If there's a fourth kid, make them the skeptic who questions every guess."
       },
       {
         "t": "Tracking goes home",
         "d": "Step 2 happens at home, with a note to families: three days, one line a day, during usual screen time. Students without access can track the class account's suggestions instead."
       },
       {
-        "t": "Run the class experiment",
-        "d": "For Step 3, the class votes on one new topic, predicts how many home-page suggestions will change, and you search it on the class account. Check the home page together the next day."
+        "t": "One topic, whole class",
+        "d": "The class votes on one new topic for Step 3 and predicts how many home-page suggestions will change. You search it on the class account, and everyone checks the home page together the next day."
       },
       {
-        "t": "Trick hunt by levels",
-        "d": "In Step 4, Explore groups find one keep-you-watching trick, Develop groups find three and how to turn them off, and Extend groups compare two apps to judge which one tries harder."
+        "t": "Hunting keep-you-watching tricks",
+        "d": "Younger groups hunt for one trick that keeps you watching. Others find three and how to turn them off, and your strongest groups compare two apps to judge which one tries harder."
       },
       {
         "t": "Debrief and choose",
         "d": "Close with a whole-class share: which trick gets you, and which move from the Take back control card will you try this week? Check in a week later on who tried it."
       }
     ],
-    "timing": "Plan three short sessions of 30 to 40 minutes over about a week: Step 1 and the experiment setup, a check-in after the tracking days at home, then Steps 4 and 5. Each student takes home one Take back control move to try."
+    "timing": "Over about a week, run three short sessions of 30 to 40 minutes: Step 1 and the experiment setup, a check-in after the tracking days at home, then Steps 4 and 5. Each student takes home one Take back control move to try."
   }
 }

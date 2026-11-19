@@ -742,11 +742,11 @@
     "quotes": []
   },
   "classroom": {
-    "intro": "Each mission is a scavenger hunt with 12 finds, which makes it easy to run with a class on the school grounds. Groups hunt together, tick off finds and explain why each one counts.",
+    "intro": "Each mission is a scavenger hunt with 12 finds, so a class can run it on the school grounds with almost no setup. Groups hunt together, tick off finds and explain why each one counts.",
     "tips": [
       {
-        "t": "Groups of three",
-        "d": "One reader, one searcher who points out finds, and one recorder who ticks the box and writes why it counts. Swap jobs every four finds so everyone searches."
+        "t": "Reader, searcher, recorder",
+        "d": "One kid reads, one searcher points out finds, and one recorder ticks the box and writes why it counts. Swap jobs every four finds so everyone searches."
       },
       {
         "t": "One mission per group",

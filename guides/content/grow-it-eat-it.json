@@ -226,11 +226,11 @@
     "quotes": []
   },
   "classroom": {
-    "intro": "A windowsill of pots makes this a great class project: every group grows its own fast crop and owns the daily care. Pick cress, pea shoots or radishes so the harvest lands before a break.",
+    "intro": "A windowsill of pots turns this into a class project: every group grows its own fast crop and owns the daily care. Pick cress, pea shoots or radishes so the harvest lands before a break.",
     "tips": [
       {
-        "t": "Groups of four",
-        "d": "Each group gets one pot or tray. Jobs: a waterer, a measurer, a recorder for the weekly notes and a troubleshooter. Rotate the waterer each week so everyone builds the daily habit."
+        "t": "Waterer, measurer, recorder, troubleshooter",
+        "d": "One pot or tray per group, with four jobs: a waterer, a measurer, a recorder for the weekly notes and a troubleshooter. Rotate the waterer weekly so everyone builds the daily habit."
       },
       {
         "t": "Soak beans as a class",
@@ -245,14 +245,14 @@
         "d": "Give groups different crops or spots, like the window versus the back of the room, so the Step 4 troubleshooting has real differences to compare across the class."
       },
       {
-        "t": "Levels in one room",
-        "d": "Explore groups grow cress and note one change a week. Develop groups plant to the right depth and measure weekly. Extend groups test deep sowing or the pea shoot cutting question."
+        "t": "Cress, depth or deep sowing",
+        "d": "Cress is the easy start: note one change a week. Groups ready for more plant to the right depth and measure weekly, and some test deep sowing or the pea shoot cutting question."
       },
       {
         "t": "Harvest tasting safely",
         "d": "Check allergies and your school's food rules before harvest day. Kids rinse and taste raw greens, or each group takes a share home to add to a family meal. No cooking in class."
       }
     ],
-    "timing": "Plan one 45-minute planting session, then 2 minutes of daily care and a 10-minute measuring check each week for three to four weeks. Harvest and tasting take one short session, and extra greens go home for a family meal."
+    "timing": "Planting takes one 45-minute session. After that, give 2 minutes of daily care and a 10-minute measuring check each week for three to four weeks. Harvest and tasting take one short session, and extra greens go home for a family meal."
   }
 }

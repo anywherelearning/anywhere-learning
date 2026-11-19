@@ -345,8 +345,8 @@
         "d": "Print the place's map and post its opening hours, show times and ticket prices. Every team plans from the same real information, so the plans can be compared."
       },
       {
-        "t": "Teams of four",
-        "d": "One collects must-dos, one orders the stops on the map, one does the Time math and one keeps the budget. They write the Plan B swaps together."
+        "t": "Must-dos, map, time, budget",
+        "d": "Split the work four ways: one collects must-dos, one orders the stops on the map, one does the Time math and one keeps the budget. Plan B swaps get written together."
       },
       {
         "t": "Must-dos from the class",
@@ -357,14 +357,14 @@
         "d": "Partway through Step 4, announce a twist from the Plan B swaps card for the whole room, like a closed exhibit or rain. Teams rework their afternoon in five minutes."
       },
       {
-        "t": "Levels by team",
-        "d": "Explore teams sort the stops into morning, lunch and afternoon. Develop teams add times and buffers. Extend teams compare two routes and work out their slack."
+        "t": "Slack for the ready",
+        "d": "Extend teams compare two routes and work out their slack. Develop teams add times and buffers, and younger teams sort the stops into morning, lunch and afternoon."
       },
       {
         "t": "Lead the real trip",
         "d": "On a real field trip, the class's chosen plan leads the day, with students calling the time and the next stop while you handle safety. Afterwards, fill in Plan vs real together."
       }
     ],
-    "timing": "Plan three 45-minute sessions: must-dos and order, the timeline and budget, then Plan B. For a real trip, Step 5 is the day itself plus a 20-minute debrief. Families can use the plan for their next day out."
+    "timing": "Must-dos and order come first, then the timeline and budget, then Plan B, about 45 minutes each. For a real trip, Step 5 is the day itself plus a 20-minute debrief. Families can use the plan for their next day out."
   }
 }

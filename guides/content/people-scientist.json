@@ -342,16 +342,16 @@
         "d": "Run the Kind tests in hallways, at the office, in the lunchroom or at pickup, with you or another adult nearby. No strangers off school grounds, no following, no personal questions."
       },
       {
-        "t": "Research teams of three",
-        "d": "One student runs the test, one tallies on the Reactions to count card, one notes the place and time. Rotate roles each round so everyone gets a turn at the hi."
+        "t": "Tester, tallier, note taker",
+        "d": "In threes, one student runs the test, one tallies on the Reactions to count card, and one notes the place and time. Rotate roles each round so everyone gets a turn at the hi."
       },
       {
         "t": "Predict before testing",
         "d": "Each team writes a prediction with the Make a prediction card, and you write yours on the board. Comparing every prediction with the results is the fun part."
       },
       {
-        "t": "Pool the data, three ways",
-        "d": "Put every team's tallies in one class table. Explore teams count yeses and nos, Develop teams total three kinds of reactions, Extend teams use fractions to compare places or times of day."
+        "t": "One class data table",
+        "d": "Every team's tallies go in one class table. Younger teams count yeses and nos, others total three kinds of reactions, and some use fractions to compare places or times of day."
       },
       {
         "t": "Shy kids start counting",
@@ -362,6 +362,6 @@
         "d": "In the class debrief, each team offers the kindest reason that fits the numbers, using the Explain it card. Then the class designs one new test that could tell two reasons apart."
       }
     ],
-    "timing": "Plan three sessions of 30 to 40 minutes: patterns and predictions, a testing round around the school, then pooling and explaining. Students can repeat the test on a walk with a grown-up at home and add it to the class data."
+    "timing": "Patterns and predictions come first, then a testing round around the school, then pooling and explaining, each 30 to 40 minutes. Students can repeat the test on a walk with a grown-up at home and add it to the class data."
   }
 }

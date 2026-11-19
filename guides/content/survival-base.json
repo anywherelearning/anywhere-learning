@@ -331,8 +331,8 @@
     "intro": "Survival Base works with a class when each group runs one expedition and builds a model base, or a life-size one outside. You read a scenario card to the whole room, and every group adapts its base at once.",
     "tips": [
       {
-        "t": "Expedition teams of four",
-        "d": "Jobs: a mapper for the Dangers and zones card, a builder, a systems writer for the manual and a briefer who gives the final tour. Everyone agrees on the 3 base rules."
+        "t": "Mapper, builder, writer, briefer",
+        "d": "Every expedition has a mapper for the Dangers and zones card, a builder, a systems writer for the manual and a briefer who gives the final tour. Everyone agrees on the 3 base rules."
       },
       {
         "t": "Models fit the classroom",
@@ -355,6 +355,6 @@
         "d": "Groups brief another group or a visiting class: the mission, the dangers, how the base handles them and what changed after the scenario. Visitors ask one real question each."
       }
     ],
-    "timing": "Plan three sessions of 45 to 60 minutes: destination and danger map, building and the manual, then the scenario and briefings. The real hour or night in the base from Step 5 stays a home option."
+    "timing": "The destination and danger map come first, then building and the manual, then the scenario and briefings, each a 45 to 60 minute session. The real hour or night in the base from Step 5 stays a home option."
   }
 }

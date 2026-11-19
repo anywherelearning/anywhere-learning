@@ -339,8 +339,8 @@
     "intro": "Invent a Sport fits a class naturally, since sports need teams anyway. Each group designs one sport in the classroom, then the whole class plays every sport during a gym or outdoor period.",
     "tips": [
       {
-        "t": "Teams of four",
-        "d": "Jobs: a rule writer, an equipment builder, a field marker and a referee who explains the rules in under a minute. Swap the referee for the championship round."
+        "t": "Rule writer to referee",
+        "d": "Four jobs per sport: a rule writer, an equipment builder, a field marker and a referee who explains the rules in under a minute. Swap the referee for the championship round."
       },
       {
         "t": "Book the space",
@@ -359,10 +359,10 @@
         "d": "Groups rotate to play another group's sport with the Fair play checks card while the designers referee. Then each group fixes 1 or 2 things before the championship."
       },
       {
-        "t": "Levels and a final",
-        "d": "Explore groups change one thing between rounds, and Develop groups run a best-of-3. Extend groups measure shots to set point values or design a handicap before the class sports day."
+        "t": "Best-of-3 and handicaps",
+        "d": "Before the class sports day, keen groups measure shots to set point values or design a handicap. Others run a best-of-3, and newer groups change one thing between rounds."
       }
     ],
-    "timing": "Plan four sessions of 45 to 60 minutes: type and field sketch in class with trials in the gym, rules and equipment in class, a gym period for playtests and fixes, then the championship. Rulebooks can go home for family play."
+    "timing": "Sketch the type and field in class with trials in the gym, write rules and build equipment, then use a gym period for playtests and fixes before the championship: four sessions of 45 to 60 minutes. Rulebooks can go home for family play."
   }
 }

@@ -338,7 +338,7 @@
     "tips": [
       {
         "t": "Find the class jobs",
-        "d": "For Step 1, students list every job that keeps the classroom going, then use The invisible work card: remembering supplies, noticing who's absent, deciding what comes next."
+        "d": "Students start Step 1 by listing every job that keeps the classroom going, then use The invisible work card: remembering supplies, noticing who's absent, deciding what comes next."
       },
       {
         "t": "Teams take a block",
@@ -353,14 +353,14 @@
         "d": "On Swap Day, ask each team 'What would you like me to do next?' If a block runs too smoothly, pull something from the Interruptions card, like a missing supply."
       },
       {
-        "t": "Levels by role",
-        "d": "Explore students take on three jobs. Develop students run a full block and note what ran late. Extend students handle an interruption and rework the rest of the schedule."
+        "t": "Three jobs or a rework",
+        "d": "Some students take on three jobs. Others run a full block and note what ran late, and a few handle an interruption and rework the rest of the schedule on the spot."
       },
       {
         "t": "Home stays optional",
         "d": "The home version of Swap Day can go home as an optional weekend project. Nobody has to share which jobs their family does, or who does them."
       }
     ],
-    "timing": "Plan two 40-minute sessions to find the work and plan the day, then run Swap Day as a half day or a full day. Finish with a 20-minute debrief where each team keeps one class job for the term."
+    "timing": "Finding the work and planning the day take two 40-minute sessions. Swap Day itself runs as a half day or a full day, then a 20-minute debrief where each team keeps one class job for the term."
   }
 }

@@ -350,8 +350,8 @@
         "d": "AI chat tools are 13+ or 18+, so use your own account on the projector, following school device policy. Students call out what to type; nobody enters a name or personal detail."
       },
       {
-        "t": "Groups of four",
-        "d": "Give each group a reader, a recorder, a tester who chooses what to ask the AI, and a reporter. Rotate the jobs between steps so every kid gets a turn at the question."
+        "t": "Reader, recorder, tester, reporter",
+        "d": "Four jobs per table: a reader, a recorder, a tester who chooses what to ask the AI, and a reporter. Rotate after every step so each kid gets a turn at the question."
       },
       {
         "t": "Prediction game in teams",
@@ -359,17 +359,17 @@
       },
       {
         "t": "One myth per group",
-        "d": "For Step 3, give each group one myth from the Myth or fact? card. They plan the test, you type it at the front, and the whole class judges whether the myth fell apart."
+        "d": "Hand out one myth per group from the Myth or fact? card for Step 3. They plan the test, you type it at the front, and the whole class judges whether the myth fell apart."
       },
       {
         "t": "Person or tool sort",
-        "d": "For Step 4, one volunteer chats with the AI on the projector for a minute while groups write down every line that sounded like a feeling, then sort them with the Person or tool? card."
+        "d": "One volunteer chats with the AI on the projector for a minute in Step 4. Groups write down every line that sounded like a feeling, then sort them with the Person or tool? card."
       },
       {
         "t": "Class AI rules",
         "d": "Finish Step 5 as a class. Each group proposes one rule from the Rule ideas card, the class votes on four or five, and the poster goes up next to wherever students use devices."
       }
     ],
-    "timing": "Plan two sessions of about 45 minutes. Session one covers Steps 1 and 2 away from the screen, session two runs Steps 3 to 5 on the projector. Students can bring the class rules home and compare them with their family's."
+    "timing": "Session one covers Steps 1 and 2 away from the screen; session two runs Steps 3 to 5 on the projector. Each takes about 45 minutes. Students can bring the class rules home and compare them with their family's."
   }
 }

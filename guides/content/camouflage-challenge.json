@@ -231,8 +231,8 @@
     "intro": "Camouflage works well with a class because every group can run its own fair test at the same time on the school grounds. Groups hide and search, and you keep the testing honest.",
     "tips": [
       {
-        "t": "Groups of four",
-        "d": "One hider, one timekeeper, one recorder and one predator who searches. Rotate jobs after each object so every kid hides, times and searches at least once."
+        "t": "Hider, timer, recorder, predator",
+        "d": "Every group has a hider, a timekeeper, a recorder and a predator who searches. Rotate jobs after each object so every kid hides, times and searches at least once."
       },
       {
         "t": "Objects per group",
@@ -247,14 +247,14 @@
         "d": "Do Step 1 yourself for the whole class: hide 3 classroom items in plain sight outside before the lesson, one well matched and one not, then give everyone 60 seconds."
       },
       {
-        "t": "Levels in one class",
-        "d": "Explore groups count aloud and compare. Develop groups time and record every object. Extend groups use three searchers and rank by the middle time, which gives spare kids a role."
+        "t": "Three searchers, middle time",
+        "d": "Groups ready for more use three searchers and rank by the middle time, which gives spare kids a role. Others time and record every object, and younger groups count aloud and compare."
       },
       {
         "t": "Pool the class data",
         "d": "For Step 4, every group tests a leaf on grass and on dirt, then all the times go on the board. A class-wide pattern makes the rule in Step 5 much stronger."
       }
     ],
-    "timing": "Plan two sessions of about 45 minutes: the warm-up, hiding and timing (Steps 1 to 3), then the background test, the class rule and a hunt for real camouflage on the grounds. The rule goes home for a backyard or park hunt."
+    "timing": "The warm-up, hiding and timing (Steps 1 to 3) fill a first session of about 45 minutes. The second covers the background test, the class rule and a hunt for real camouflage on the grounds. The rule goes home for a backyard or park hunt."
   }
 }

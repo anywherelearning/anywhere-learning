@@ -367,7 +367,7 @@
     "tips": [
       {
         "t": "One meal per group",
-        "d": "Groups of four each plan one no-cook class meal, like a picnic or packed lunches for a field trip. Jobs: planner, scaler, pricer and list keeper sorting the list by aisle."
+        "d": "Every group plans one no-cook class meal, like a picnic or packed lunches for a field trip, with a planner, a scaler, a pricer and a list keeper sorting by aisle."
       },
       {
         "t": "Scale for the class",
@@ -387,9 +387,9 @@
       },
       {
         "t": "Receipt debrief",
-        "d": "Put the receipt next to the plan and work out the cost per person together. Explore kids count plates filled, while Extend kids work out what the leftovers cost."
+        "d": "Lay the receipt next to the plan and work out the cost per person together. Younger kids count plates filled; older kids figure out what the leftovers cost."
       }
     ],
-    "timing": "Plan three periods of about 45 minutes for Steps 1 to 3, then the shop and the meal on another day. The receipt check fits a short final session. Families can run the full guide at home for one family meal."
+    "timing": "Shopping and the meal happen on their own day, after three periods of about 45 minutes for Steps 1 to 3. The receipt check fits a short final session. Families can run the full guide at home for one family meal."
   }
 }

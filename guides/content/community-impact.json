@@ -339,11 +339,11 @@
     "tips": [
       {
         "t": "Your school is the group",
-        "d": "Use the Who's around you card with the school in mind: the office staff, the custodians, the kindergarten class, the lunchroom helpers or a playground that needs new recess games."
+        "d": "Read the Who's around you card with the school in mind: the office staff, the custodians, the kindergarten class, the lunchroom helpers or a playground that needs new recess games."
       },
       {
-        "t": "Teams of four with jobs",
-        "d": "Each team has an asker, a note taker, a planner and a photographer who shoots places, not faces. Roles swap between Ask what they need and Do it, so quieter kids talk too."
+        "t": "Asker, note taker, planner, photographer",
+        "d": "Four roles per team: an asker, a note taker, a planner and a photographer who shoots places, not faces. Roles swap between Ask what they need and Do it, so quieter kids talk too."
       },
       {
         "t": "Interviews you set up",
@@ -354,14 +354,14 @@
         "d": "You or the principal says yes to each plan. Check every idea for safety, and keep any litter pickup to gloves, with no glass or needles touched."
       },
       {
-        "t": "Levels by team",
-        "d": "Explore teams do one action for 15 to 30 minutes. Develop teams write five steps with a date. Extend teams recruit a helper and hand the project over with a written job list."
+        "t": "Small action or full handover",
+        "d": "Some teams do one action for 15 to 30 minutes. Others write five steps with a date. A team ready for more recruits a helper and hands the project over with a written job list."
       },
       {
         "t": "Report back together",
         "d": "A week later, each team shares what they heard, what they did and whether it helped, using the Keep it going card. Pick one project the class keeps running all year."
       }
     ],
-    "timing": "Plan two or three 45-minute sessions for picking, asking and planning, then one session to do it. A week later, a short check-in covers Step 5. Students can repeat the steps at home with a family group they belong to."
+    "timing": "Picking, asking and planning take two or three 45-minute sessions, and doing it takes one more. A short check-in a week later covers Step 5. Students can repeat the steps at home with a family group they belong to."
   }
 }

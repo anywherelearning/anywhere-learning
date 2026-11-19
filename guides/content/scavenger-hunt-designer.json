@@ -341,8 +341,8 @@
     "intro": "A class of hunt designers works beautifully: every team builds a hunt and another team plays it. Use the classroom, the school or the schoolyard as the hiding ground, inside boundaries you set.",
     "tips": [
       {
-        "t": "Teams of four",
-        "d": "Each team has a scout, a clue writer, a mapmaker and a host. Everyone helps test, and the host gives the welcome and the hints on hunt day."
+        "t": "Scout, writer, mapmaker, host",
+        "d": "A scout finds spots, a clue writer drafts, a mapmaker draws and a host gives the welcome and the hints on hunt day. Everyone helps test."
       },
       {
         "t": "Set the boundaries",
@@ -357,14 +357,14 @@
         "d": "Play each team's clues before hunt day as a slightly confused player. Say where you got stuck, and leave the rewriting to them."
       },
       {
-        "t": "Levels by clue",
-        "d": "Explore teams write five clues that describe each spot. Develop teams use at least two clue types. Extend teams add a code clue and write an easy and a hard version of each."
+        "t": "Five clues to a code",
+        "d": "A first hunt can be five clues that describe each spot. Most teams mix at least two clue types, and some add a code clue with an easy and a hard version of each."
       },
       {
         "t": "Players give feedback",
         "d": "After each round, players name the best clue and the most confusing one. Teams fix at least two clues before running it again for another class."
       }
     ],
-    "timing": "Plan three 45-minute sessions: theme and scouting, the clues, then the map and the rules. Hunt day takes one longer session. Students can run their hunt at home for a family celebration."
+    "timing": "Theme and scouting, the clues, then the map and the rules: three 45-minute sessions. Hunt day takes one longer session. Students can run their hunt at home for a family celebration."
   }
 }

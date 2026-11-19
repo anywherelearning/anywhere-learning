@@ -322,8 +322,8 @@
     "intro": "Theme Park works with a class because each group can design and build a tabletop park from boxes, tubes and string. Opening day becomes a park fair where classmates visit, ride with figurines and pay with homemade tickets.",
     "tips": [
       {
-        "t": "Groups of four with roles",
-        "d": "Jobs: a chief designer who keeps the theme, a mapmaker, a ride engineer and a business manager who handles prices, tickets and the family of four total."
+        "t": "Designer, mapmaker, engineer, manager",
+        "d": "A chief designer keeps the theme, a mapmaker draws the park, a ride engineer builds, and a business manager handles prices, tickets and the family of four total."
       },
       {
         "t": "Recycling bin ahead",
@@ -338,14 +338,14 @@
         "d": "Before building, groups swap maps and do the finger walk on each other's park, marking where the crowd jams or nobody goes. Then each group fixes its own map."
       },
       {
-        "t": "Levels through the math",
-        "d": "Explore groups use whole-dollar prices and play coins, while Develop groups total a family's day. Extend groups compare the $12 wristband with $2 a ride, or work out riders per hour."
+        "t": "Prices from coins to wristbands",
+        "d": "The math grows with the group. Some use whole-dollar prices and play coins, others total a family's day, and the strongest compare the $12 wristband with $2 a ride, or work out riders per hour."
       },
       {
         "t": "Park fair opening",
         "d": "Half the groups run their park while the rest visit with figurines and tickets, then switch. Each group fixes its worst line before the second round."
       }
     ],
-    "timing": "Plan four sessions of 45 to 60 minutes: theme and map, building over two periods, then details, prices and the park fair. Students take home their family-of-four total to compare with a real outing, and parks go home after the fair."
+    "timing": "Theme and map take one session, building two more, then details, prices and the park fair a fourth, each 45 to 60 minutes. Students take home their family-of-four total to compare with a real outing, and parks go home after the fair."
   }
 }
