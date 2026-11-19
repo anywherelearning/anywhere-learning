@@ -18,6 +18,7 @@ import AddToWeekButton from '@/components/account/AddToWeekButton';
 import WeDidIt from '@/components/account/ReaderActions';
 import { effortFor } from '@/lib/activity-effort';
 import type { GuideContent } from '@/lib/guide-content';
+import { getActivityBwBlobUrl } from '@/lib/activity-bw-blob-urls';
 
 // Same category colours as the PDFs (guides/render/template.mjs).
 const ACCENTS: Record<string, { accent: string; soft: string; paper: string }> = {
@@ -226,6 +227,7 @@ export default function StepReader({ guide: g, title, tier, imageUrl, trialEndsA
       }}
     >
       <style>{`
+        .sr-bw{display:block;text-align:center;font-size:13px;color:var(--am-muted,#6b6152);text-decoration:underline;text-underline-offset:3px;margin-top:2px}
         .sr{min-height:100vh;background:var(--paper);color:var(--am-ink,#32302a);font-family:var(--font-body),system-ui,sans-serif;padding-bottom:92px}
         .sr-top{position:sticky;top:var(--navh,0px);z-index:20;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid rgba(58,44,23,.08)}
         .sr-bar{display:flex;align-items:center;gap:10px;padding:10px 16px 6px}
@@ -555,6 +557,9 @@ export default function StepReader({ guide: g, title, tier, imageUrl, trialEndsA
               <a href={`/api/download/activity/${g.slug}`} onClick={downloadClick} className="rd-btn sr-btn-ghost">
                 {tier === 'trial' ? 'Download with membership' : 'Download the PDF'}
               </a>
+              {tier !== 'trial' && getActivityBwBlobUrl(g.slug) && (
+                <a href={`/api/download/activity/${g.slug}?bw=1`} className="sr-bw">Black and white version, saves ink</a>
+              )}
             </div>
           </>
         )}

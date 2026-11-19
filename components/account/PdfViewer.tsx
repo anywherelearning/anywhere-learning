@@ -22,6 +22,7 @@ import WeDidIt from '@/components/account/ReaderActions';
 import { effortFor } from '@/lib/activity-effort';
 import { minsLabel } from '@/lib/activity-visuals';
 import { areaMetaForSlug } from '@/lib/roadmap';
+import { getActivityBwBlobUrl } from '@/lib/activity-bw-blob-urls';
 
 interface Props {
   slug: string;
@@ -58,6 +59,7 @@ export default function PdfViewer({
   const [capModalOpen, setCapModalOpen] = useState(false);
 
   const downloadHref = `/api/download/activity/${slug}`;
+  const hasBw = Boolean(getActivityBwBlobUrl(slug));
 
   useEffect(() => {
     let cancelled = false;
@@ -169,6 +171,7 @@ export default function PdfViewer({
         .rd-title{font-family:var(--font-plate),sans-serif;font-weight:800;font-size:19px;line-height:1.15;margin:4px 0 0;letter-spacing:-.01em}
         .rd-meta{font-size:13px;color:var(--am-muted);margin:12px 0 14px}
         .rd-actions{display:grid;gap:8px}
+        .rd-bw{display:block;margin-top:10px;text-align:center;font-size:12.5px;color:var(--am-muted);text-decoration:underline;text-underline-offset:3px}.rd-bw:hover{color:#3d5c3b}
         @media (max-width:959px){.rd-actions{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.rd-actions .rd-btn,.rd-trail>div>button{padding:10px 6px!important;font-size:12.5px!important;gap:4px!important}.rd-actions svg{display:none}.rd-meta{margin:10px 0 12px}.rd-menu{min-width:170px}.rd-card{padding:14px}}
         .rd-btn{display:flex;width:100%;align-items:center;justify-content:center;gap:7px;padding:11px 14px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;border:none;transition:filter .15s,background .15s}
         .rd-btn:hover{filter:brightness(.97)}
@@ -226,6 +229,9 @@ export default function PdfViewer({
                 {tier === 'trial' ? <><span className="rd-long">Download with membership</span><span className="rd-short">Download</span></> : 'Download'}
               </a>
             </div>
+            {tier !== 'trial' && hasBw && (
+              <a href={`${downloadHref}?bw=1`} className="rd-bw">Black and white version, saves ink</a>
+            )}
           </div>
           <div className="rd-grid-h" style={{ display: pageCount > 1 ? undefined : 'none' }}>Pages</div>
           <div className="rd-grid" ref={thumbsRef} />

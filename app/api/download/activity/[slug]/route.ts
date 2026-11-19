@@ -22,6 +22,7 @@
  *                another name), which would let trials download and members
  *                sidestep the cap. The Blob URL is only ever handed out here
  *                on a counted download.
+ *   - ?bw=1    → download the black-and-white (ink-saving) PDF instead
  *   - ?check=1 → JSON {allowed, used, cap, resetsAt} so the dashboard/viewer
  *                can show the right modal instead of navigating.
  */
@@ -31,6 +32,7 @@ import { auth } from '@clerk/nextjs/server';
 import { getDownloadUrl } from '@vercel/blob';
 import { getAccessContextForClerkId } from '@/lib/access';
 import { getActivityBlobUrl } from '@/lib/activity-blob-urls';
+import { getActivityBwBlobUrl } from '@/lib/activity-bw-blob-urls';
 import { getDownloadAllowance, logActivityEvent } from '@/lib/activity-events';
 import { relaxedLimiter, checkRateLimit } from '@/lib/rate-limit';
 import { downloadCapForPlan } from '@/lib/membership';
@@ -120,8 +122,11 @@ export async function GET(
     return friendlyRedirect('/account', 'download-cap');
   }
 
-  // Resolve the Blob URL
-  const blobUrl = getActivityBlobUrl(slug);
+  // Resolve the Blob URL. ?bw=1 → the ink-saving black-and-white version
+  // (colouring-page line art); falls back to colour if a guide has none.
+  // Same slug, so it counts against the cap like any re-download.
+  const wantBw = req.nextUrl.searchParams.get('bw') === '1';
+  const blobUrl = (wantBw && getActivityBwBlobUrl(slug)) || getActivityBlobUrl(slug);
   if (!blobUrl) {
     return friendlyRedirect('/account', 'activity-missing');
   }
