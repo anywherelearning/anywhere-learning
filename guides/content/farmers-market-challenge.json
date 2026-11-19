@@ -61,7 +61,7 @@
       },
       {
         "when": "At the market",
-        "what": "Scout, compare unit prices, plan the meal, then shop (Steps 1 to 4)."
+        "what": "Finish Step 1 by scouting, then compare unit prices, plan the meal and shop (Steps 2 to 4)."
       },
       {
         "when": "Back home",
@@ -349,7 +349,7 @@
       },
       {
         "t": "Play money budgets",
-        "d": "Give each group $20 in play money and one goal from the guide: a family dinner, snacks for the week, one recipe or breakfast. Real produce is a bonus, not a must."
+        "d": "Give each group $20 in play money and one goal: a family dinner, snacks for the week or one recipe. Real produce is a bonus, not a must; check allergies before anyone tastes it."
       },
       {
         "t": "Shoppers and stallholders",

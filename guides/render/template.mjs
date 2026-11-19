@@ -362,7 +362,7 @@ const TPT_CSS = `
 .thankspg .box{margin-top:16px}.thankspg .box p,.thankspg li{font-size:14.5px;line-height:1.5}.crosses{list-style:none;margin-top:8px}.crosses li{position:relative;padding-left:24px;margin-top:5px}.crosses li:before{content:'\\00d7';position:absolute;left:4px;top:-2px;font-weight:700;font-size:18px;color:#b05a4a}
 .print .thankspg,.print .classpg{display:flex;flex-direction:column;justify-content:center}.print .thankspg > .foot,.print .classpg > .foot{position:absolute}
 .print .thankspg .lead{font-size:18px;line-height:1.55}.print .thankspg .box p,.print .thankspg li{font-size:16.5px}.print .thanksme img{width:124px;height:124px}.print .thankspg .box{padding:20px 22px;margin-top:22px}.print .thankspg h2{font-size:44px}.print .classpg .tip h3{font-size:17px}.print .classpg .tip p{font-size:15px}
-.bw .thanksme img{filter:grayscale(1)}.bw .crosses li:before{color:#000}.bw .classpg .tipn{background:#000}`;
+.bw .thanksme img{filter:grayscale(1)}.bw .crosses li:before{color:#000}.bw .classpg .tipn{background:#000!important;color:#fff!important}`;
 
 function css(mode, accent, soft, bw, paper = '#f7f2e8') {
   return `

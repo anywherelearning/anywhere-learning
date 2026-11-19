@@ -385,11 +385,11 @@
       },
       {
         "t": "Partners count",
-        "d": "Pair students for the start test. One counts with the written rule while the other does it, then they swap. On day 30, the same partner counts again."
+        "d": "Pair students for the start test. One counts with the written rule while the other does it, then they swap. Day 30 uses the same partner, time of day, place and shoes."
       },
       {
-        "t": "Same test, same place",
-        "d": "Run the start test and the day 30 test at the same time of day, in the same place and the same shoes, just as the Start test card says."
+        "t": "Weekends count too",
+        "d": "Thirty days include weekends and holidays, so mark those as rest days or home sessions. Avoid starting right before a long break, or day 15 and day 30 land when nobody's at school."
       },
       {
         "t": "Body goals, not looks",

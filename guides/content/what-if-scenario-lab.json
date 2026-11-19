@@ -335,7 +335,7 @@
     "tips": [
       {
         "t": "Teams of four",
-        "d": "Each team picks a card from What-ifs. One reads the Keep asking card, one records the Day 1, Day 3 and Day 7 map, one argues the other side and one reports."
+        "d": "Each team picks one what-if from the What-ifs card. One reads the Keep asking card, one records the Day 1, Day 3 and Day 7 map, one argues the other side and one reports."
       },
       {
         "t": "Handle it gently",
@@ -358,6 +358,6 @@
         "d": "Teams present their final plans to the guest or another adult who knows. Then each team puts its Day 1 thinking beside the final plan and names the biggest change."
       }
     ],
-    "timing": "Plan two 45-minute sessions for choosing and mapping, one for the guest visit, and one for the plan and the slice. The final feedback session can come a few days later, with the same guest or a new one."
+    "timing": "Plan two 45-minute sessions for choosing and mapping, one for the guest visit, and one for the plan and the slice. Feedback comes a few days later, and the No car or No shops slice can go home as a family day."
   }
 }

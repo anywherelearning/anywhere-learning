@@ -349,7 +349,7 @@
       },
       {
         "t": "You become the bank",
-        "d": "Any start-up supplies are a small loan from you, written down and paid back first. You keep the cash jar locked away between sessions, and two people count it together."
+        "d": "Any start-up supplies are a small loan from you, written down and paid back first. You lock the cash jar away between sessions, two people count it, and money goes through the office."
       },
       {
         "t": "Levels in the books",
@@ -360,6 +360,6 @@
         "d": "At the end, each group adds up its books and presents keep, change, hand over or stop using the What next card. Classmates can ask one question about the numbers before the decision."
       }
     ],
-    "timing": "Plan one week of short sessions to pick the business, ask customers and set the price, then two or three weeks running it during a set time, like Friday recess. Finish with a 40-minute decision day."
+    "timing": "Plan one week of short sessions to pick the business, ask customers and set the price, then two or three weeks running it at a set time, like Friday recess. Finish with a 40-minute decision day. The books go home to show families."
   }
 }

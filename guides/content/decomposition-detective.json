@@ -137,7 +137,7 @@
     {
       "title": "Record Day One",
       "why": "Your kid captures the starting point, before anything changes.",
-      "kid": "Your kid draws both jars exactly as it looks today and writes a few words on the colour, size and feel of the leaves. This is the 'before' every experiment needs. Without it, they can't prove anything changed.",
+      "kid": "Your kid draws both jars exactly as they look today and writes a few words on the colour, size and feel of the leaves. This is the 'before' every experiment needs. Without it, they can't prove anything changed.",
       "you": "Write the date at the top together. It feels dull because nothing has happened yet, and that's exactly why it matters.",
       "ask": [
         "What colour and size are the leaves right now?",
@@ -247,6 +247,6 @@
         "d": "In Step 5, each group presents its variable and evidence in two minutes. Then the class decides which conditions sped up decomposition most, using every group's notes."
       }
     ],
-    "timing": "Day one takes about 45 minutes for the sort, both jars and the Day One sketch. Then plan 5 minute checks two or three times a week for about four weeks, and a final 45 minute session to close the case."
+    "timing": "Day one takes about 45 minutes for the sort, both jars and the Day One sketch. Then plan 5-minute checks two or three times a week for about four weeks, and a 45-minute session to close the case. Kids can start a home jar too."
   }
 }

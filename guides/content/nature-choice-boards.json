@@ -430,7 +430,7 @@
       },
       {
         "t": "Boards by readiness",
-        "d": "Hand out different boards in the same session: Curious starter or Explorer mode for some pairs, Young scientist and up for others. The rule on each board stays the same."
+        "d": "Hand out different boards in the same session: Curious starter or Explorer mode for some pairs, Young scientist and up for others. Each pair follows the pick rule printed on its own board."
       },
       {
         "t": "Materials per pair",
@@ -445,6 +445,6 @@
         "d": "Back in a circle, each pair shares its best discovery: what, where, a detail and a wonder. With a big class, pairs share with another pair first, then a few share with everyone."
       }
     ],
-    "timing": "One board takes 30 to 45 minutes outside plus 10 minutes for the show-and-tell. Use one board a week, and let pairs move up to the next board when they're ready."
+    "timing": "One board takes 30 to 45 minutes outside plus 10 minutes for the show-and-tell. Use one board a week, let pairs move up when they're ready, and send a board home for a weekend outing with family."
   }
 }

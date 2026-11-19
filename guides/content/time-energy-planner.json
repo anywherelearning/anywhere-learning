@@ -358,11 +358,11 @@
       },
       {
         "t": "Class-wide fuel checks",
-        "d": "Ring a chime five times across the day. Everyone writes their Fuel check number and the time, then sorts a half deck into suits while a partner times it."
+        "d": "Ring a chime five times across the day. Everyone writes their Fuel check number and the time, and pairs share a deck: one sorts half a deck into suits while the other times."
       },
       {
-        "t": "Decks per pair",
-        "d": "Pairs share one deck of cards and a timer. One sorts while the other times, then they swap. A handful of decks covers the whole class working in turns."
+        "t": "Plot a class line",
+        "d": "Put everyone's numbers, without names, on one class energy line. Does your hardest lesson land in the class's best-brain time? Try moving it for a week and track again."
       },
       {
         "t": "Lines stay personal",
@@ -377,6 +377,6 @@
         "d": "For Steps 4 and 5, students plan the parts of tomorrow they choose, like independent work time or the evening, then live it, test a reset and report back."
       }
     ],
-    "timing": "Day 1 runs across a normal school day, with check-ins of about two minutes. Steps 3 and 4 take one 40-minute session. The plan is lived the next day, followed by a 15-minute debrief on resets."
+    "timing": "Day 1 runs across a normal school day, with check-ins of about two minutes. Steps 3 and 4 take one 40-minute session, the plan is lived the next day, then a 15-minute debrief. A weekend line can be tracked at home."
   }
 }

@@ -330,7 +330,7 @@
     "tips": [
       {
         "t": "Personal or class goal",
-        "d": "Not every kid has pocket money, so offer a choice: a private personal goal tracked at home, or a shared class goal with points or a class fund you hold."
+        "d": "Not every kid has pocket money, so offer a choice: a private personal goal tracked at home, or a shared class goal using points or a class fund kept by the school office."
       },
       {
         "t": "Real prices on devices",
@@ -353,6 +353,6 @@
         "d": "Explore kids colour boxes and a thermometer, while Extend kids predict the finish date from the slope. After 2 to 4 weeks, share what made saving harder than expected."
       }
     ],
-    "timing": "One 45 minute period for Steps 1 to 3, then ten minutes a week for tracking and spending tests (Step 4). After 2 to 4 weeks, one more period covers the chart, the plan check and the look back."
+    "timing": "One 45 minute period for Steps 1 to 3, then ten minutes a week for tracking and spending tests (Step 4). After 2 to 4 weeks, one more period covers the chart, the plan check and the look back. Personal trackers stay at home."
   }
 }

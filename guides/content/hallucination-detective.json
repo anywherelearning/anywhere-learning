@@ -333,13 +333,13 @@
       },
       {
         "t": "Levels by group",
-        "d": "Explore groups find one same and one different, Develop groups mark every claim true, false or unsure, and Extend groups build a claim table and explain why an AI might have made its mistake."
+        "d": "Explore groups find one same and one different, Develop groups check three claims as true, false or unsure, and Extend groups build a claim table and explain why an AI might have slipped."
       },
       {
         "t": "Class verdict board",
         "d": "Finish with a board of every claim marked true, false or unsure. Celebrate the groups who caught a confident wrong answer, and praise any answer that honestly said 'I don't know'."
       }
     ],
-    "timing": "Plan two sessions of about 40 minutes: Steps 1 to 3 in the first, Steps 4 and 5 in the second. If the question connects to a field trip, the class can test the answer in real life there."
+    "timing": "Plan two sessions of about 40 minutes: Steps 1 to 3 in the first, Steps 4 and 5 in the second. If the question connects to a field trip, test the answer there. Students can try the two-AI check at home with family."
   }
 }

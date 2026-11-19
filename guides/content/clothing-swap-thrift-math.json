@@ -355,7 +355,7 @@
       },
       {
         "t": "Clear swap rules",
-        "d": "Agree ahead: clean clothes only, nothing a family hasn't approved, and leftovers go to donation. Kids who can't bring clothes can bring books or games, or help run the bank."
+        "d": "Agree ahead: clean, family-approved clothes only, no trying on (hold it up against yourself instead), and leftovers go to donation. Kids with nothing to bring earn points running the bank or checking."
       },
       {
         "t": "New prices from flyers",
@@ -366,6 +366,6 @@
         "d": "Explore kids sort into 1, 2 and 3 point piles, and Extend kids keep the ledger and sort out the jacket shortage. End with class totals: points traded and items given a second life."
       }
     ],
-    "timing": "Three sessions of about 40 minutes: cost per wear and the swap rules, scoring and tagging (Step 3), then swap day (Step 4). The closet sort happens at home the week before, and Step 5 fits one more period."
+    "timing": "Three sessions of about 40 minutes: sharing cost-per-wear tallies and setting swap rules, scoring and tagging (Step 3), then swap day (Step 4). The closet sort and tallies happen at home the week before; Step 5 fits one more period."
   }
 }
