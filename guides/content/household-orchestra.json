@@ -326,5 +326,35 @@
     "Pick your five instruments from where you're staying or a local market, like a gourd, a tin or a clay cup.",
     "Ask a street musician, with your help, what their instrument is called and how it makes a high or low sound."
   ],
-  "backHome": "Rebuild one rhythm you heard on the trip with your home instruments, and teach it to the family as a piece."
+  "backHome": "Rebuild one rhythm you heard on the trip with your home instruments, and teach it to the family as a piece.",
+  "classroom": {
+    "intro": "Household Orchestra becomes a class of small bands, each with five objects and one piece to perform. It gets loud, so plan the space, and the five-object limit keeps every band creative and the cleanup quick.",
+    "tips": [
+      {
+        "t": "Bands of four or five",
+        "d": "Each band shares exactly five objects. Jobs: a beat keeper, a sound explorer, a composer who shapes the piece and an announcer who introduces it at the concert."
+      },
+      {
+        "t": "Collect ahead of time",
+        "d": "Ask families a week early for clean tins, plastic tubs, wooden spoons, boxes, rubber bands and sealed jars of dried beans. Sort them into a class bin and let bands choose."
+      },
+      {
+        "t": "Spread out the sound",
+        "d": "Use the hallway, gym or outdoors for finding sounds, or give each band a corner and a quiet signal. Skip the glass water jars in a busy room."
+      },
+      {
+        "t": "You keep the beat",
+        "d": "For Step 3, count 1, 2, 3, 4 for the whole class while every band holds a steady beat together. Then drop out and let each band layer its own pattern."
+      },
+      {
+        "t": "Levels in every band",
+        "d": "Explore players find 2 sounds per object, and Develop players sort sounds high to low. Extend players tune three objects or write a score with symbols for another band to play."
+      },
+      {
+        "t": "Concert to finish",
+        "d": "Hold a class concert where each band announces its piece, its shape from the Piece shapes card and its job. Record it, play it back, and let each band change one part."
+      }
+    ],
+    "timing": "Plan two sessions of about 45 minutes for gathering, finding sounds, rhythm and composing, plus a short third period for the concert. Objects can come from home, and everything else happens at school."
+  }
 }

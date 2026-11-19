@@ -338,5 +338,35 @@
     "src": "guides/assets/backyard-campout-planner.jpg",
     "alt": "An orange tent pitched on grass by a wooden fence, with a river and mountains behind it and shoes left by the door",
     "caption": "Shoes off, tent up, a whole night planned."
+  },
+  "classroom": {
+    "intro": "This works with a whole class when the campout becomes a plan for a real space at school: a corner of the field, the playground or the gym. Groups design their own camp, then test the setup in class.",
+    "tips": [
+      {
+        "t": "Groups of four, four jobs",
+        "d": "Give each group a measurer, a mapmaker, a quartermaster for the gear list and budget, and a timekeeper for the menu and schedule. Rotate the jobs at each step."
+      },
+      {
+        "t": "Measure a school spot",
+        "d": "Take the class outside for Step 1 and give each group a marked patch of field or playground. Lying down to test for bumps and slope still works there."
+      },
+      {
+        "t": "Kit per group",
+        "d": "Each group needs a tape measure, a towel or blanket to size the zones in Step 2, and the Campout Numbers cards. Graph paper makes the scale drawing easier."
+      },
+      {
+        "t": "Price gear from flyers",
+        "d": "For Step 3, groups price their 'need it' items from printed store flyers or online store pages, all inside the same $10 to $20 budget, then compare their trade-offs."
+      },
+      {
+        "t": "Sleeping out stays home",
+        "d": "The overnight is an optional take-home part. In class, each group sets up its layout with blankets and a tarp, times it against the estimate, and shares what changed."
+      },
+      {
+        "t": "Levels side by side",
+        "d": "Younger groups mark zones with towels and order the evening on sticky notes. Older groups draw to scale, work out flashlight hours and find the percentage error."
+      }
+    ],
+    "timing": "Plan four periods of about 45 minutes: Steps 1 and 2 outside, then Step 3, then Step 4. The last period is the setup test and a gallery walk of the layouts. The real campout happens at home, if families choose."
   }
 }

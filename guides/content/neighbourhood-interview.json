@@ -231,5 +231,35 @@
     "Ask an older person here, with your help, how this place has changed since they were your age.",
     "Ask the same three questions to two people in different places you visit, with you alongside, and compare their answers."
   ],
-  "backHome": "Ask a neighbour at home the questions you asked on the road, and put the two profiles side by side."
+  "backHome": "Ask a neighbour at home the questions you asked on the road, and put the two profiles side by side.",
+  "classroom": {
+    "intro": "In a class, the community starts at the school door. Each pair interviews a staff member or school volunteer, writes a profile, and the class ends up with a set of profiles about the people who keep the school running.",
+    "tips": [
+      {
+        "t": "Line up interviewees",
+        "d": "Ask staff ahead of time: the custodian, a cook, the secretary, the school librarian, a bus driver. Give each a short note explaining the project and a 15 minute time slot."
+      },
+      {
+        "t": "Pairs with jobs",
+        "d": "One student asks the questions while the other takes notes and writes down great exact words. They swap halfway, and each pair profiles one person."
+      },
+      {
+        "t": "Reporter warm-up",
+        "d": "Do Step 1 with you as the subject: a volunteer interviews you for two minutes with a pencil microphone, and the class picks out the best follow-up question."
+      },
+      {
+        "t": "Practise the ask",
+        "d": "Pairs rehearse what they'll say: who they are, what the project is, how long it takes. You make first contact, and students make the ask in person."
+      },
+      {
+        "t": "Levels for the profile",
+        "d": "Explore kids draw the person at work and share three things they learned, Develop kids write a half-page profile with a quote, and Extend kids try two openings."
+      },
+      {
+        "t": "Deliver and display",
+        "d": "Each pair gives the profile to the person they interviewed and asks if it can go on a hallway board or in the school newsletter. Post it only with their yes."
+      }
+    ],
+    "timing": "Plan four sessions of 40 to 45 minutes: warm-up and questions, the interviews in scheduled slots over a week, writing, then delivery. Kids who want more can interview a neighbour at home with a parent."
+  }
 }

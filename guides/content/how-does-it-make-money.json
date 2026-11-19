@@ -375,5 +375,35 @@
     "src": "guides/assets/how-does-it-make-money.jpg",
     "alt": "Watercolour illustration of a tablet with a colourful game screen beside a tally sheet, a ticket stub, a folded receipt, a few coins and a hand-drawn map with arrows of different thickness",
     "caption": "Ten minutes, four ads, and a map of who really pays."
+  },
+  "classroom": {
+    "intro": "Kids are always surprised by who pays for free things, which makes this a lively class investigation. You hold the device on the projector or plan a field trip, and groups collect evidence, estimate and draw money maps.",
+    "tips": [
+      {
+        "t": "Pick a shared case",
+        "d": "Choose one free thing the whole class knows: a free game on the projector, a video site, or a museum, zoo or park on an upcoming field trip."
+      },
+      {
+        "t": "You hold the device",
+        "d": "Play the free game or video site on your account at the front with purchases locked, following school device policy. Nobody taps an ad or a buy button; groups only tally."
+      },
+      {
+        "t": "Groups of four with jobs",
+        "d": "Give each group an ad counter for the Ad count card, a timer, a price spotter and a map drawer. On a field trip, groups collect receipts and note what's sold at the exit."
+      },
+      {
+        "t": "Estimate with real numbers",
+        "d": "Give groups a starting number, like the museum's posted visitor count or how many students are in the school, so the Money math card has something real to multiply."
+      },
+      {
+        "t": "Levels on the money map",
+        "d": "Explore students draw one arrow for each payer, Develop students draw the full map with thick and thin arrows, and Extend students take one payer away and redraw what would have to change."
+      },
+      {
+        "t": "Gallery of money maps",
+        "d": "Post every group's map and open the folded guesses from Step 1. Students walk the gallery, find the thinnest arrow on each map and discuss which payer surprised them most."
+      }
+    ],
+    "timing": "Plan three sessions of about 40 minutes: guesses and evidence, estimating and the money map, then planning their own idea in Step 5. A field trip version adds the day out as the evidence session."
   }
 }

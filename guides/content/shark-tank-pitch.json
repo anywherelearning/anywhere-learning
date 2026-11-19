@@ -336,5 +336,35 @@
     "src": "guides/assets/shark-tank-pitch.jpg",
     "alt": "Watercolour of a wooden table with a handwritten agreement signed twice, folded bills and coins, a calculator, a notebook of numbers with a small bar chart, a pen and a paper bag of cookies",
     "caption": "What does the shark get?"
+  },
+  "classroom": {
+    "intro": "Pitching to a panel is a great whole-class event because everyone gets to be an investor and a pitcher. Groups build the numbers for a small class business idea and pitch to a panel of adult or student investors.",
+    "tips": [
+      {
+        "t": "Play money, real deals",
+        "d": "Unless your school approves real money, give each investor a set amount of class tokens or play money. Deals are still written, signed and paid back, so the promise is real."
+      },
+      {
+        "t": "Groups of three or four",
+        "d": "Each group has a numbers keeper for the Numbers card, a deal maker for the Deal options card, and one or two pitchers. Everyone answers at least one investor question."
+      },
+      {
+        "t": "Invite a fair panel",
+        "d": "Ask the principal, another teacher, a parent volunteer or older students to sit on the panel with the Shark panel card. Brief them to be kind but not easy."
+      },
+      {
+        "t": "You become the practice audience",
+        "d": "Before pitch day, hear each group twice. The first time, just listen. The second time, name the one part you didn't understand, just like the guide's practice round."
+      },
+      {
+        "t": "Levels on pitch day",
+        "d": "Explore students say each part of the pitch with help, Develop students deliver a timed one-minute pitch, and Extend students add a sample and prepare answers to their two hardest questions."
+      },
+      {
+        "t": "Keep the deals going",
+        "d": "Post every signed deal on the wall with its payback dates. Check in with groups on those dates, and debrief as a class on which offers were accepted and why."
+      }
+    ],
+    "timing": "Plan four sessions of 40 minutes: build the numbers, choose the deal, write and practise the pitch, then pitch day. Payback check-ins follow over the next few weeks, and students can pitch the same idea at home."
   }
 }

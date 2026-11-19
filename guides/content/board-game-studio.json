@@ -341,5 +341,35 @@
     "Ask a host or shopkeeper, with your help, which game families here play at home, then learn it together that evening.",
     "Build a version of your game on the place you're in, using local coins as tokens and real streets or stops as spaces."
   ],
-  "backHome": "Teach the family the game you learned on the trip, then borrow one of its rules for your own Version 2."
+  "backHome": "Teach the family the game you learned on the trip, then borrow one of its rules for your own Version 2.",
+  "classroom": {
+    "intro": "Board Game Studio runs well with a class because every team can build a playable game from paper, cards and scraps. The best part is the playtest swap, when teams hand their game to players from another table.",
+    "tips": [
+      {
+        "t": "Teams of three or four",
+        "d": "Each team shares one game. Give jobs: a rules writer, a board builder, a card maker and a playtest recorder who keeps the Playtest checklist card during swaps."
+      },
+      {
+        "t": "One kit per table",
+        "d": "Each table gets a poster board, a stack of index cards, markers, scissors and a cup of tokens. Collect buttons, bottle caps and spare dice in a class bin ahead of time."
+      },
+      {
+        "t": "Swap tables to playtest",
+        "d": "In Step 4, teams trade games with another table and play from the written rules only. The designers watch silently and write down every question instead of explaining."
+      },
+      {
+        "t": "Keep Version 1 small",
+        "d": "Walk the room during Steps 1 and 2 and ask each team to say how you win in one sentence. If they can't, the game is still too big."
+      },
+      {
+        "t": "Levels in one room",
+        "d": "Explore teams build a path with 5 special spaces, and Develop teams aim for 10 to 15 cards. Extend teams run the dice tally or track who goes first and who wins."
+      },
+      {
+        "t": "Store flat, host game day",
+        "d": "Keep each game in a labelled folder or cereal box between sessions. End with a game day where teams teach their game to another class or to visiting families."
+      }
+    ],
+    "timing": "Plan four sessions of 45 to 60 minutes: Steps 1 and 2, the ugly prototype, rules and the first playtest swap, then fixes, box covers and game day. No work needs to go home."
+  }
 }

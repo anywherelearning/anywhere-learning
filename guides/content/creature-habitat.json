@@ -335,5 +335,35 @@
     "Ask a local, with your help, which animal people here tell stories about, and borrow one of its real features for your creature.",
     "Invent a creature built for exactly this landscape, then build its habitat from fallen things nearby and photograph it before you put them back."
   ],
-  "backHome": "Move your travel creature into your home landscape, and work out which features it would have to change to survive."
+  "backHome": "Move your travel creature into your home landscape, and work out which features it would have to change to survive.",
+  "classroom": {
+    "intro": "Creature Habitat works with a whole class when pairs invent one creature together and build its shoebox habitat. The question 'how does that help it survive?' runs the room, asked by you and then by classmates.",
+    "tips": [
+      {
+        "t": "Pairs with clear jobs",
+        "d": "One partner leads the drawing and the creature build, the other leads the habitat and the field guide page. Both must explain every feature using the Real animal tricks card."
+      },
+      {
+        "t": "Shared supply tables",
+        "d": "Set up one table of clay, one of cardboard and craft scraps, and one of natural materials. A class bin of shoeboxes and recyclables, gathered ahead, saves the build day."
+      },
+      {
+        "t": "Survival questions only",
+        "d": "Instead of fixing builds, circulate asking about food, defences and weaknesses. Teach students to ask each other the same questions during a midpoint pair swap."
+      },
+      {
+        "t": "Glue and clay safety",
+        "d": "Stick to tape and school glue, or run one low-temperature glue gun station you supervise. Everyone washes hands after clay and natural materials, especially soil."
+      },
+      {
+        "t": "Draw-it test between pairs",
+        "d": "Pairs swap field guide pages without the model. The other pair draws the creature from the words alone, then the authors fix every unclear line before the reveal."
+      },
+      {
+        "t": "Levels and the showcase",
+        "d": "Explore pairs draw and name, and Develop pairs give every feature a job and a weakness. Extend pairs add a food chain, and everyone ends with a gallery walk of the habitats."
+      }
+    ],
+    "timing": "Plan three sessions of 45 to 60 minutes: invent and design, build the creature and habitat, then field guide pages and the reveal. Store creatures inside their labelled shoeboxes with lids on, so clay doesn't get squashed."
+  }
 }

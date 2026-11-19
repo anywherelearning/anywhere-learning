@@ -356,5 +356,35 @@
     "Hunt for the hidden costs that change from place to place, like tourist entry fees, tipping customs, bag charges or a bus fare.",
     "Find real prices the local way, from a posted menu or a fare board, or by asking at the counter with your help."
   ],
-  "backHome": "Plan the same kind of day back home, and compare which one cost more and which line made the biggest difference."
+  "backHome": "Plan the same kind of day back home, and compare which one cost more and which line made the biggest difference.",
+  "classroom": {
+    "intro": "Groups plan a real day out inside a real budget, so the class can compare plans side by side. Prices come from real menus and ticket pages, and the pitch in Step 4 becomes a lively class event.",
+    "tips": [
+      {
+        "t": "Groups of three",
+        "d": "One student is the researcher who finds prices, one is the accountant who builds the plan and the buffer, and one is the pitcher. Swap jobs for the next scenario."
+      },
+      {
+        "t": "Pick the day out",
+        "d": "Use a real field trip or class celebration with a set budget, or give each group a scenario: beach day, birthday outing, day trip, or movie and dinner."
+      },
+      {
+        "t": "Prices from screens and menus",
+        "d": "Step 2 runs on school devices, printed menus and ticket pages. Gather a few takeout menus and the local gas price ahead of time so every group finds real numbers."
+      },
+      {
+        "t": "You throw the what-ifs",
+        "d": "In Step 4 you play the parent who decides. Give each group two what-ifs, like parking is $8 or a place is closed, and approve only the plans that hold."
+      },
+      {
+        "t": "Track a real day",
+        "d": "If the class day out is real, one group tracks it on the Day tracker card. Otherwise Step 5 goes home: kids track one family outing and report the line furthest off."
+      },
+      {
+        "t": "Levels in one room",
+        "d": "Explore groups price 3 or 4 things and hold back $5. Extend groups find three prices per item and set a rule like nothing over 40% of the budget."
+      }
+    ],
+    "timing": "Three periods of 40 to 50 minutes: picking the day and finding prices (Steps 1 and 2), building the plan and cut list (Step 3), then pitches (Step 4). Step 5 happens on the class day or at home."
+  }
 }

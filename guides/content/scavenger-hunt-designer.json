@@ -336,5 +336,35 @@
   "fromHome": {
     "text": "For my daughter's birthday, a rockstar party, my son made a scavenger hunt all by himself. He wrote about 10 riddles and hid them around the house. Each one led the girls to a treat and the next clue, so by the end they each had a full goody bag.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "A class of hunt designers works beautifully: every team builds a hunt and another team plays it. Use the classroom, the school or the schoolyard as the hiding ground, inside boundaries you set.",
+    "tips": [
+      {
+        "t": "Teams of four",
+        "d": "Each team has a scout, a clue writer, a mapmaker and a host. Everyone helps test, and the host gives the welcome and the hints on hunt day."
+      },
+      {
+        "t": "Set the boundaries",
+        "d": "Walk the space first and name the limits: no climbing, no other classrooms, nothing near the street or the parking lot. Teams scout spots inside those lines."
+      },
+      {
+        "t": "Teams play each other",
+        "d": "Team A plays Team B's hunt while Team B hosts, then they swap. Every clue gets tested by players who've never seen it before."
+      },
+      {
+        "t": "You're the first player",
+        "d": "Play each team's clues before hunt day as a slightly confused player. Say where you got stuck, and leave the rewriting to them."
+      },
+      {
+        "t": "Levels by clue",
+        "d": "Explore teams write five clues that describe each spot. Develop teams use at least two clue types. Extend teams add a code clue and write an easy and a hard version of each."
+      },
+      {
+        "t": "Players give feedback",
+        "d": "After each round, players name the best clue and the most confusing one. Teams fix at least two clues before running it again for another class."
+      }
+    ],
+    "timing": "Plan three 45-minute sessions: theme and scouting, the clues, then the map and the rules. Hunt day takes one longer session. Students can run their hunt at home for a family celebration."
   }
 }

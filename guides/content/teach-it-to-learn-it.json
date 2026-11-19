@@ -231,5 +231,35 @@
     "Teach a quick trick to a kid who doesn't speak your language, with you close by, using only showing and trying together.",
     "Ask a local, with your help, to teach you a small skill, and notice which teaching moves they use."
   ],
-  "backHome": "Teach one skill you learned on the road to a friend at home, and tell them where you learned it."
+  "backHome": "Teach one skill you learned on the road to a friend at home, and tell them where you learned it.",
+  "classroom": {
+    "intro": "With a class, students teach each other: half the room teaches while the other half learns, then they switch. Everyone gets to be both teacher and student, and the final check shows what each lesson really taught.",
+    "tips": [
+      {
+        "t": "Teach the terrible lesson",
+        "d": "Open with Step 1 for the whole class: teach a paper plane the worst way possible. Students list everything that went wrong, and that list becomes their checklist."
+      },
+      {
+        "t": "Pairs, then swaps",
+        "d": "Pair students who know different skills. In round one, A teaches B, then B teaches A. For Step 5, each teacher finds a new student."
+      },
+      {
+        "t": "Skills that fit a classroom",
+        "d": "Steer students to skills with small props: a card trick, a paper fold, a drawing, a bracelet knot, a few words in another language. Skip anything needing a stove or a field."
+      },
+      {
+        "t": "Learners play real beginners",
+        "d": "The learner takes the parent's job: try with their hands, get stuck honestly, say out loud what confused them, and stay quiet at the final check."
+      },
+      {
+        "t": "Levels in the plan",
+        "d": "Explore kids plan three boxes: show, steps, their try. Develop kids add a hook and a helper card. Extend kids write the final check first and plan backwards."
+      },
+      {
+        "t": "Teach younger buddies",
+        "d": "Finish by having students teach their skill to a younger buddy class. It's the most real audience a school has, and little kids ask the honest questions."
+      }
+    ],
+    "timing": "Plan three sessions of about 45 minutes: the terrible lesson and breaking skills down, planning and helper cards, then teaching, checking and reteaching. A buddy class visit can be a fourth session."
+  }
 }

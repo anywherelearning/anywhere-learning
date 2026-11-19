@@ -342,5 +342,35 @@
     "Look for warning signs and evacuation arrows around town, and work out which emergencies this place plans for that home doesn't.",
     "With your help, ask your host what usually goes wrong here, like power cuts or storms, and what they keep ready."
   ],
-  "backHome": "Compare the hazards you learned about on the trip with the ones at home, and add anything missing to your three-day kit."
+  "backHome": "Compare the hazards you learned about on the trip with the ones at home, and add anything missing to your three-day kit.",
+  "classroom": {
+    "intro": "A class can build a real emergency plan for its own classroom, alongside the school's existing drills. The home plan, contact card and family drill become a take-home part, done with a parent and kept private.",
+    "tips": [
+      {
+        "t": "The classroom is the house",
+        "d": "For Step 1, students map the classroom and hallway from above with two ways out, using the Two ways out card. Walk it together and compare the map with the school's posted route."
+      },
+      {
+        "t": "Join the school drill",
+        "d": "Run Step 3 during a scheduled fire drill, following the school's rules and meeting spot. Students time it and suggest one improvement, instead of setting off an alarm of their own."
+      },
+      {
+        "t": "Teams of four",
+        "d": "Each team has a mapper, a timer, a recorder and a reporter. For the three-day kit, give every team a pretend family, with a set number of people and pets."
+      },
+      {
+        "t": "Kit math at three levels",
+        "d": "Explore groups pick five kit items for their pretend family. Develop groups work out the water with people × litres × 3 days. Extend groups add expiry dates and set a swap date."
+      },
+      {
+        "t": "Family details stay home",
+        "d": "Send the Contact card and Our emergency plan home for families to fill in together. Phone numbers, addresses and home maps are never shared in class or collected."
+      },
+      {
+        "t": "Keep it calm",
+        "d": "Some kids have lived through a fire, a flood or an evacuation. Keep the tone practical, let anyone sit out a twist, and use the Twist cards only for the class plan."
+      }
+    ],
+    "timing": "Plan three 40-minute sessions: the map and the risks, the plan and the drill, then the kit math and twists. The home map, contact card and family drill go home as a family project for the week."
+  }
 }

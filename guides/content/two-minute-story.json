@@ -225,5 +225,35 @@
   "fromHome": {
     "text": "Last year my kids each wrote a story about the other one (not everything in them was true!) and then performed it as a monologue, straight to the camera.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Everyone has a true moment to tell, so this works with any class and needs no materials. Students build their stories with a partner and tell them in small story circles, with a few volunteers for the whole room.",
+    "tips": [
+      {
+        "t": "Two truths and a lie",
+        "d": "Play Step 1 at tables of four. Students notice which stories sounded true, and why, before each picks one small true moment of their own to tell."
+      },
+      {
+        "t": "Story partners",
+        "d": "Partners take the parent's role: listen once without interrupting, ask what moment changed everything, and time each other with a phone or classroom timer."
+      },
+      {
+        "t": "Keep it safe to share",
+        "d": "Steer students toward funny, surprising or small moments. They choose what to tell, and anything private or painful stays out of a classroom story."
+      },
+      {
+        "t": "Map the shape first",
+        "d": "Draw beginning, turn and point on the board, then ask a volunteer to tell a short true moment while the class names each part out loud."
+      },
+      {
+        "t": "Levels at once",
+        "d": "Explore kids lay three objects for beginning, turn and end, Develop kids use a three-line card, and Extend kids cut to 60 seconds and plant one early detail."
+      },
+      {
+        "t": "Story circles",
+        "d": "Tell stories in circles of five or six so everyone has a real audience. The next day, listeners retell one story in a breath to see if the turn survived."
+      }
+    ],
+    "timing": "Two sessions of about 40 minutes work well: the game, choosing and shaping the story in the first, then cutting, practising and story circles in the second. Kids can tell it again at home that evening."
   }
 }

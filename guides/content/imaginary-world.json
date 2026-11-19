@@ -338,5 +338,35 @@
     "Ask a local, with your help, for a legend about a mountain, a lake or a building here, and retell it at dinner.",
     "Borrow one real custom you see here, like a greeting, a rest time or a festival, and give it a reason in your world."
   ],
-  "backHome": "Map your own town like a traveller would, and explain to the family why each place is where it is."
+  "backHome": "Map your own town like a traveller would, and explain to the family why each place is where it is.",
+  "classroom": {
+    "intro": "Imaginary World works with a class when each group invents one world together and keeps asking why things are the way they are. The tours at the end let groups travel to each other's worlds.",
+    "tips": [
+      {
+        "t": "Groups of three or four",
+        "d": "Jobs: a mapmaker, a builder for the 3D corner, a culture keeper who writes the rules, and a storyteller for the legend. Everyone has to agree on the big difference."
+      },
+      {
+        "t": "One big idea first",
+        "d": "Before groups build anything, each one shares its world type and big difference with the class. Classmates ask how it changes daily life, using the Big idea starters card."
+      },
+      {
+        "t": "Materials per table",
+        "d": "Each table needs large paper, markers, one shoebox and a little clay. Gather cardboard, small figurines and natural objects in a class bin ahead of time for the 3D corners."
+      },
+      {
+        "t": "You ask why",
+        "d": "Circulate with one question: 'Why do they live there and not over there?' When a group can't answer, that gap is their next thing to invent, not yours to fill."
+      },
+      {
+        "t": "Differentiate by step",
+        "d": "Explore students draw 3 regions, and Develop groups use the Map checklist card. Extend groups add a scale and travel distances, or tell the legend from the losers' side."
+      },
+      {
+        "t": "Travel day tours",
+        "d": "Half the groups stay as guides while the others travel with the Traveller's questions card, then switch. Store maps flat and models in labelled shoeboxes between sessions."
+      }
+    ],
+    "timing": "Plan three or four sessions of 45 to 60 minutes: the big idea and the land, culture and rules, the map and 3D corner, then legends and travel day. Legends can be finished at home."
+  }
 }

@@ -331,5 +331,35 @@
     "Ask a local guide, with your help, the one thing visitors get wrong about this place, and make that your angle.",
     "Write each label in two languages, using a translation app or a local you ask together, so someone from here could read it."
   ],
-  "backHome": "Open the pocket museum for family or friends back home, and see which label makes them want to visit."
+  "backHome": "Open the pocket museum for family or friends back home, and see which label makes them want to visit.",
+  "classroom": {
+    "intro": "Build a Museum turns a classroom into a real museum, with each group curating one exhibit hall on its own angle. Opening day becomes a gallery walk where visitors from another class learn from what students made.",
+    "tips": [
+      {
+        "t": "Groups of three or four",
+        "d": "Each group picks one topic and angle with the Topic to angle card. Give jobs: researcher, exhibit builder, label writer and the docent who gives the tour."
+      },
+      {
+        "t": "Collection bin ahead",
+        "d": "Ask families a week ahead for shoeboxes, trays, cardboard and small objects. Objects brought from home go in a labelled bag so nothing precious gets lost."
+      },
+      {
+        "t": "Research with a limit",
+        "d": "Set a timer for Step 2 and give each group books or a few chosen websites. They pick 5 to 8 pieces, and you check any fact that sounds off."
+      },
+      {
+        "t": "You are the stranger",
+        "d": "Before opening, walk one group's hall as a stranger and read every label aloud. Then groups swap and test each other's halls, fixing what confused the visitor."
+      },
+      {
+        "t": "Levels in one hall",
+        "d": "Explore students say titles for a partner to write, and Develop students write full labels with the Label formula card. Extend students write one label twice, for a younger and an older visitor."
+      },
+      {
+        "t": "Store it, then open",
+        "d": "Keep each hall on a tray or in a box on a shelf between sessions. On opening day, invite another class, run guided tours and leave a guest book at each exit."
+      }
+    ],
+    "timing": "Plan three or four sessions of 45 to 60 minutes: topic and research, layout and exhibits, labels and something to do, then the test walk and opening day. Objects can be gathered at home."
+  }
 }

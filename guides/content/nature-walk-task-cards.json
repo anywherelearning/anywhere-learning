@@ -560,5 +560,35 @@
   "fromHome": {
     "text": "On a walk, their grandmother taught my kids to feed chickadees by hand: seeds on a flat palm, arm out, and stand completely still. It only works if you slow right down and pay attention, which is exactly what these cards are for.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "The cards turn a class walk around the school grounds into real outdoor learning with no prep. Read a card to a small group, wait, and let kids do the noticing and the talking.",
+    "tips": [
+      {
+        "t": "Small walking groups",
+        "d": "Split the class into groups of four or five, each with one card reader who reads aloud and holds the Deeper question. The reader role rotates after every card."
+      },
+      {
+        "t": "Deal by theme",
+        "d": "Give each group five cards from one theme, like Animal detective or Weather and water, so every group explores something different on the same walk."
+      },
+      {
+        "t": "Stay in one boundary",
+        "d": "Keep all groups inside a boundary you can see, like the field and the tree line. Use a signal to bring everyone back together between cards."
+      },
+      {
+        "t": "Adults drift, not lead",
+        "d": "You and any helpers move between groups instead of leading. The card rule still holds: read it, then stop talking, and answer questions with 'let's look closer.'"
+      },
+      {
+        "t": "Deeper for fast groups",
+        "d": "The Deeper question is the built-in next level. Groups that answer quickly take it on, while others stay with the main card, so every group works at its own level."
+      },
+      {
+        "t": "Favourite find share",
+        "d": "Back inside, each group shows one favourite find, a photo or a sketch, and says why it caught their eye. The class can sort the finds by theme on the board."
+      }
+    ],
+    "timing": "A walk with 5 to 10 cards takes 20 to 30 minutes, plus 10 minutes to share. Use it as a weekly walk, rotating themes so groups cover all seven over a term."
   }
 }

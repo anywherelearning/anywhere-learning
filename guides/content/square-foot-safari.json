@@ -218,5 +218,35 @@
     "Look for something living in both your home square and this one, like ants or moss, and compare how they differ.",
     "Ask a local, with your help, what one creature from your square is called here, and add that name to your notes."
   ],
-  "backHome": "Revisit your home square with your road notes beside you, and count what lives there that the other square didn't have."
+  "backHome": "Revisit your home square with your road notes beside you, and count what lives there that the other square didn't have.",
+  "classroom": {
+    "intro": "A square foot is the perfect size for a class: every pair gets its own patch of the school grounds, and together the class builds a real field survey. It works on grass, gravel or a crack in the pavement.",
+    "tips": [
+      {
+        "t": "Pairs per square",
+        "d": "One kid looks and counts, the other sketches and tallies, then they swap halfway. Each pair gets string or four sticks, a ruler and one magnifying glass."
+      },
+      {
+        "t": "Random squares",
+        "d": "Use the Extend idea for everyone: each pair tosses a stick to choose its square. It's fair, quick to set up, and spreads squares across sunny, shady and damp spots."
+      },
+      {
+        "t": "Micro-hike warm-up",
+        "d": "Run Step 1 together: lay strings in lines and let pairs hike them as ants. It slows the whole class down before anyone marks a square."
+      },
+      {
+        "t": "Handling rules",
+        "d": "Lift rocks toward you, keep hands off anything that stings, put everything back and wash hands after. If your grounds have ticks, check clothes and skin when you come inside."
+      },
+      {
+        "t": "Levels side by side",
+        "d": "Explore pairs count three living things. Develop pairs count every kind and write a full entry. Extend pairs count one quarter, multiply by 4, then check against the full count."
+      },
+      {
+        "t": "Class survey board",
+        "d": "Put every pair's kinds and totals on one chart. Which squares had the most kinds, and where were they? The question about 50 ants or 8 kinds makes a strong debrief."
+      }
+    ],
+    "timing": "Plan one 45 minute session for the micro-hike, the first look and field notes. Mark each square with a labelled stick so pairs can return for 20 minutes after rain, a week later or next season."
+  }
 }

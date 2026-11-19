@@ -320,5 +320,35 @@
     "alt": "A smiling boy in a Premier Hoops Champions shirt holding a small MVP award in a sports hall",
     "caption": "Champions this year, and MVP.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "Every class has letdowns: a lost game at recess, a project that flopped, not getting picked. The Comeback Journal gives students a private, step-by-step way through them, and you teach each step on a low-stakes example first.",
+    "tips": [
+      {
+        "t": "Teach it with a character",
+        "d": "Model each step with a book character or a famous team's public loss before anyone uses their own. The class practises Facts or story? and My game together on that example."
+      },
+      {
+        "t": "Journals are private",
+        "d": "Each student keeps their own comeback journal. You read only what they choose to show you, and nobody reads a page out loud unless they offer."
+      },
+      {
+        "t": "Pairs turn stories into facts",
+        "d": "Pairs trade story lines like 'We always lose' or 'I'm bad at this' and rewrite them as facts. Use made-up lines, never something a classmate actually said."
+      },
+      {
+        "t": "Levels in the journal",
+        "d": "Explore students draw what happened and a feeling face, Develop students fill in the My game card and set one countable goal, Extend students track how many days each letdown takes to fade."
+      },
+      {
+        "t": "Look back as a class",
+        "d": "At the end of a season or term, students reread their own pages. Then ask the whole class, in general terms: does a letdown last fewer days now than at the start?"
+      },
+      {
+        "t": "When it's bigger",
+        "d": "Some letdowns are big, like a move or a loss at home. Keep the goal tiny, and if a student stays low for weeks or stops enjoying things, talk with your counselor and the family."
+      }
+    ],
+    "timing": "Teach Steps 1 to 4 in two 30-minute sessions using a shared example. After that, students use the journal after real letdowns: give it a day, then ten minutes for the facts, their game and a new personal goal."
   }
 }

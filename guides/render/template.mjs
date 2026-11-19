@@ -88,7 +88,7 @@ const levelRow = (lv) => `
     <div class="lv lv3"><span class="lvname">Extend</span><p>${esc(lv.extend)}</p></div>
   </div>`;
 
-export function buildHtml(g, mode, { bonus = false } = {}) {
+export function buildHtml(g, mode, { bonus = false, tpt = false } = {}) {
   const bw = mode === 'print-bw';
   const layout = mode === 'phone' ? 'phone' : 'print';
   const { accent, soft, paper } = ACCENTS[g.category] ?? ACCENTS.default;
@@ -312,20 +312,57 @@ export function buildHtml(g, mode, { bonus = false } = {}) {
   ${g.signs ? `<div class="box"><div class="label">Signs it's working</div><ul class="ticks">${g.signs.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
   ${g.makeItReal ? `<div class="box real"><div class="label">Make it real</div><p>${esc(g.makeItReal)}</p></div>` : ''}
   <div class="box"><div class="label">Keep it going</div><ul class="dots">${c.extensions.map((e) => `<li>${esc(e)}</li>`).join('')}</ul></div>
-  ${!bonus && g.done ? `<a class="donebox" href="${esc(g.done.url)}"><span class="donetick">&#10003;</span><span>${esc(g.done.text)}</span><b>${esc(g.done.label)} &rarr;</b></a>` : ''}
+  ${!bonus && !tpt && g.done ? `<a class="donebox" href="${esc(g.done.url)}"><span class="donetick">&#10003;</span><span>${esc(g.done.text)}</span><b>${esc(g.done.label)} &rarr;</b></a>` : ''}
   ${bonus ? `<div class="cta"><p>${esc(g.cta)}</p><span class="ctaurl">${esc(g.ctaUrl)}</span></div>` : ''}
-  <p class="legal">&copy; Anywhere Learning &middot; For your family's use. Please don't share, resell or upload this guide. &middot; anywherelearning.co</p>
+  <p class="legal">${tpt ? '&copy; Anywhere Learning Studio &middot; For one family or one classroom. Please don\'t share, resell or upload this guide.' : '&copy; Anywhere Learning &middot; For your family\'s use. Please don\'t share, resell or upload this guide. &middot; anywherelearning.co'}</p>
   ${/"art": ?"[^"]+\.svg"/.test(JSON.stringify(g)) ? `<p class="legal">Illustrations: Fluent Emoji &copy; Microsoft Corporation, MIT License.</p>` : ''}
 </section>`;
+
+  // TPT only: running it with a whole class, then thank you, terms of use and
+  // a follow-the-store note. No links to the website (TPT rules).
+  const K = g.classroom;
+  const classroom = tpt && K ? `
+<section class="pg classpg">
+  ${contours()}
+  <div class="eyebrow">In the classroom</div>
+  <h2>Running it with a whole class</h2>
+  <p class="lead">${esc(K.intro)}</p>
+  <div class="classtips">${K.tips.map((t, i) => `
+    <div class="tip"><span class="tipn">${i + 1}</span><div><h3>${esc(t.t)}</h3><p>${esc(t.d)}</p></div></div>`).join('')}
+  </div>
+  ${K.timing ? `<div class="box classtime"><div class="label">Fitting it into class time</div><p>${esc(K.timing)}</p></div>` : ''}
+  ${foot('In the classroom')}
+</section>` : '';
+  const thanks = tpt ? `
+<section class="pg thankspg">
+  ${contours()}
+  <div class="eyebrow">Thank you</div>
+  <h2>Thank you for choosing this guide</h2>
+  <div class="thanksme"><img src="${img('guides/assets/amelie-portrait.jpg')}" alt="Amelie"><p class="lead">I'm Amelie, a teacher of fifteen years and a mom of two. I write every guide for real kids doing real things, with an adult right beside them. I hope this one brings a little more meaning, and a lot more doing, to your days together.</p></div>
+  <div class="box"><div class="label">Terms of use</div>
+    <ul class="ticks"><li>Use it with your own children or your own students, year after year.</li><li>Print it, project it, or share it with your own students on a password-protected class platform.</li></ul>
+    <ul class="crosses"><li>Please don't share it with other teachers or families. Additional licenses are available at a discount on TPT.</li><li>Please don't post it online, resell it, or claim it as your own.</li></ul></div>
+  <div class="box"><div class="label">Let's stay in touch</div><p>Follow <b>Anywhere Learning Studio</b> on TPT: click the star next to the store name to hear about new guides and sales first. And if this guide worked for you, a short review helps other teachers and families find it, and earns you TPT credits for your next purchase. I read every one.</p></div>
+  <p class="legal">&copy; Anywhere Learning Studio. All rights reserved.</p>
+</section>` : '';
 
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(g.title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<style>${css(layout, accent, soft, bw, paper)}</style></head>
-<body class="${layout}${bw ? ' bw' : ''}">${cover}${idea}${howto}${steps}${R?.first ? reference : ''}${cards}${journal}${R?.first ? '' : reference}${road}${finish}</body></html>`;
+<style>${css(layout, accent, soft, bw, paper)}${tpt ? TPT_CSS : ''}</style></head>
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${thanks}${idea}${howto}${steps}${R?.first ? reference : ''}${cards}${journal}${R?.first ? '' : reference}${road}${classroom}${finish}</body></html>`;
 }
+
+const TPT_CSS = `
+.classpg .classtips{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.classpg .tip h3{font-size:16px;margin-bottom:3px}.classpg .tip p{font-size:14px;line-height:1.45}.classpg .tipn{background:var(--accent)}.classpg .lead{margin-top:6px}.classtime{margin-top:16px}.classtime .label{color:var(--accent)}
+.phone .classpg .classtips{grid-template-columns:1fr}
+.thanksme{display:flex;gap:18px;align-items:center;margin:8px 0 6px}.thanksme img{flex:none;width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 35%;border:3px solid #fff;box-shadow:0 4px 12px -6px rgba(50,40,20,.5)}
+.thankspg .box{margin-top:16px}.thankspg .box p,.thankspg li{font-size:14.5px;line-height:1.5}.crosses{list-style:none;margin-top:8px}.crosses li{position:relative;padding-left:24px;margin-top:5px}.crosses li:before{content:'\\00d7';position:absolute;left:4px;top:-2px;font-weight:700;font-size:18px;color:#b05a4a}
+.print .thankspg,.print .classpg{display:flex;flex-direction:column;justify-content:center}.print .thankspg > .foot,.print .classpg > .foot{position:absolute}
+.print .thankspg .lead{font-size:18px;line-height:1.55}.print .thankspg .box p,.print .thankspg li{font-size:16.5px}.print .thanksme img{width:124px;height:124px}.print .thankspg .box{padding:20px 22px;margin-top:22px}.print .thankspg h2{font-size:44px}.print .classpg .tip h3{font-size:17px}.print .classpg .tip p{font-size:15px}
+.bw .thanksme img{filter:grayscale(1)}.bw .crosses li:before{color:#000}.bw .classpg .tipn{background:#000}`;
 
 function css(mode, accent, soft, bw, paper = '#f7f2e8') {
   return `

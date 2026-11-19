@@ -363,5 +363,35 @@
     "src": "guides/assets/build-the-book.jpg",
     "alt": "Watercolour illustration of a shoebox scene of a small cottage room on a table, with tiny paper flags in two colours stuck in it, beside an open book and a pencil",
     "caption": "An open book, a shoebox, and a flag on every guess."
+  },
+  "classroom": {
+    "intro": "Build the Book works well with a class reading one novel together, since every group builds the same setting from the same passage. Comparing the builds at the end shows how differently readers fill the gaps.",
+    "tips": [
+      {
+        "t": "One passage, every group",
+        "d": "Pick one passage from your class novel with the Good passages card. Every group hunts the same clues, so the comparison in Step 5 has something real to compare."
+      },
+      {
+        "t": "Groups of four with jobs",
+        "d": "Give jobs: a reader who holds the book, a clue keeper for the Clue hunt card, a builder and a flag maker. Rotate the reader role each session."
+      },
+      {
+        "t": "You read, they point",
+        "d": "For the line check in Step 4, read the passage aloud to the whole class one sentence at a time while every group points to its matching piece."
+      },
+      {
+        "t": "A shoebox per group",
+        "d": "A shoebox per group, plus a class bin of paper, tape, scraps and two colours of sticky notes, keeps it simple. LEGO works too if you have a class set."
+      },
+      {
+        "t": "Levels side by side",
+        "d": "Explore students build three things and flag one guess, and Develop groups flag every guess with its clue. Extend groups work out a scale from one size the book gives."
+      },
+      {
+        "t": "Gallery walk to compare",
+        "d": "Line up all the builds and walk the room. Students list differences with the Where we differ card, then reread the line together to settle each one."
+      }
+    ],
+    "timing": "Plan three sessions: hunt and sort in one reading period, build in a 60-minute block, then the line check and comparison. Store the shoeboxes on a shelf with each group's name, and keep flags taped down."
   }
 }

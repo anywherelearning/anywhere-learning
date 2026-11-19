@@ -328,5 +328,35 @@
   "fromHome": {
     "text": "We do this pretty much every week: in the car, at dinner, walking somewhere, on a hike. One question is all it takes to start a great conversation, and usually a debate.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "The situations make great class discussion because every student has a gut answer and nobody has to share anything personal. Run Step 1 with the whole class, then move to small groups and the floor sheets.",
+    "tips": [
+      {
+        "t": "Secret answers first",
+        "d": "For Step 1, everyone writes a gut answer on a sticky note and holds it up at the same moment. Count the spread out loud, without saying which answer is right."
+      },
+      {
+        "t": "Groups of four",
+        "d": "Each group takes one situation and lays its option sheets on the floor. One reads, one writes the options, and two stand on sheets and follow them out loud, then they swap."
+      },
+      {
+        "t": "You bring the pressure",
+        "d": "Play the friend from the Pressure card yourself, at the front of the room, so no student has to pressure a classmate. Push on the idea, never on a particular kid."
+      },
+      {
+        "t": "Keep it on the cards",
+        "d": "Stick to the card situations. If an answer to A secret or Mean plan sounds like something real, follow up privately after class rather than in front of the group."
+      },
+      {
+        "t": "Levels in one room",
+        "d": "Explore students find two options and say one good and one bad thing for each. Develop students find four. Extend students compare tomorrow with a year from now and defend their ranking."
+      },
+      {
+        "t": "A real class decision",
+        "d": "For Step 5, the class uses its questions on a real decision of its own, like a field day activity or a classroom rule, then checks back together a week later."
+      }
+    ],
+    "timing": "Each situation takes about 20 minutes. Plan two 45-minute sessions for Steps 1 to 4, then a class decision for Step 5 with a short check-in a week later. Students can take their questions home for a family decision."
   }
 }

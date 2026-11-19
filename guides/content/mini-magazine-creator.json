@@ -224,5 +224,35 @@
   "fromHome": {
     "text": "During our seven months of travel, my kids published their own pages on our family travel website for every country. My son wrote a researched article on the Panama Canal that opens with a hook: in a normal year, about 14,000 ships cross it. Family and friends back home read every one.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Each student can make their own mini magazine, or small groups can make one issue together. Either way, everyone writes different kinds of pieces, and the class ends up with a stack of real magazines.",
+    "tips": [
+      {
+        "t": "Editorial teams of four",
+        "d": "If you go with groups, give each a shared topic and jobs: editor, fact checker, designer and writer, with everyone writing at least one piece."
+      },
+      {
+        "t": "Remix covers together",
+        "d": "Bring a few real magazines from home or the school library. Groups rewrite three cover headlines about something silly, like the class pet or Monday's lunch."
+      },
+      {
+        "t": "One folded booklet",
+        "d": "One sheet folded into an 8-page zine per student or group keeps materials simple. Share markers, scissors and staplers by table."
+      },
+      {
+        "t": "One note per piece",
+        "d": "Read each piece and give one specific suggestion, never a rewrite. Peer editors do the same, one sticky note per piece, and spelling waits for the design stage."
+      },
+      {
+        "t": "Short pieces count",
+        "d": "Explore kids make two or three short pieces (a quiz or a top 5 list counts), Develop kids write four or five styles, and Extend kids cut each piece to 100 words."
+      },
+      {
+        "t": "Launch day",
+        "d": "Set up a reading table where students swap issues and note which piece they turned to first. Put a few copies in the school library or deliver them to another class."
+      }
+    ],
+    "timing": "Plan five or six sessions of about 45 minutes: planning, research, two writing sessions, design and editing, then launch day. Students who get hooked can start Issue 2 at home."
   }
 }

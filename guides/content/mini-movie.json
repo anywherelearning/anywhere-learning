@@ -325,5 +325,35 @@
   "fromHome": {
     "text": "My kids wrote a script together, built the set, rehearsed and performed it. Then they turned it into a real movie, credits and all.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Mini Movie works with a class as a film studio: small crews each make one short live show, mini movie or stop-motion. The premiere becomes a class film festival, and live shows need no tech at all.",
+    "tips": [
+      {
+        "t": "Crews of four",
+        "d": "Jobs: a director who keeps the storyboard, a camera operator or stage manager, a set builder and the actors or animators. Rotate who directs if you run a second film."
+      },
+      {
+        "t": "Keep stories tiny",
+        "d": "Every crew says its story in one sentence with a who, a want and a problem before drawing anything. Cap each film or show at about one minute so it gets finished."
+      },
+      {
+        "t": "Share the devices",
+        "d": "One school tablet per crew is plenty. Without enough, some crews perform live shows, or crews take turns at one stop-motion station with a tablet propped on books."
+      },
+      {
+        "t": "Quiet filming corners",
+        "d": "Spread crews into corners, the hallway or a borrowed room to film, with a hand signal for quiet on set. Only film students who have photo permission."
+      },
+      {
+        "t": "Levels inside a crew",
+        "d": "Explore crews draw three pictures and tell the rest, while Develop crews storyboard 4 to 8 shots with the Shot types card. Extend crews plan one close-up on purpose or test the 180-degree rule."
+      },
+      {
+        "t": "Hold a film festival",
+        "d": "Screen every film and live show in one period, with each crew introducing its work and taking two questions. Sets stay in labelled boxes until festival day."
+      }
+    ],
+    "timing": "Plan four sessions of 45 to 60 minutes: story and characters, storyboard, sets and rehearsal, then filming and editing. Add a short period for the festival, and nothing needs to be filmed at home."
   }
 }

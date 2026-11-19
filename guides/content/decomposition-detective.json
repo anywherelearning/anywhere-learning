@@ -218,5 +218,35 @@
     "Tuck one leaf under a stone in a damp spot and another in a dry spot, and check both before you move on.",
     "Ask, with your help, what local families do with food scraps here, like compost, animals or a bin, and why."
   ],
-  "backHome": "Set up a second jar in the warmest, dampest spot you can find at home, and test the prediction from the trip."
+  "backHome": "Set up a second jar in the warmest, dampest spot you can find at home, and test the prediction from the trip.",
+  "classroom": {
+    "intro": "This one suits a classroom well: the jars sit on a shelf for weeks, and kids check them in a few minutes. Groups build the jars, and the class compares results across every fair test.",
+    "tips": [
+      {
+        "t": "Groups of four",
+        "d": "Each group builds one pair of jars. Jobs: a builder, a recorder who keeps the dated notes, an illustrator for the sketches, and a checker who reads moisture and leaf height."
+      },
+      {
+        "t": "Different tests, one shelf",
+        "d": "Let each group pick a different variable for Step 2: dry versus damp, torn versus whole, warm versus cool. The class gets several experiments from one setup."
+      },
+      {
+        "t": "Jar rules for school",
+        "d": "Keep lids loose, never open a mouldy jar indoors, and look through the glass only. Anyone with a mould allergy observes and records instead of handling. Everyone washes hands after."
+      },
+      {
+        "t": "One class log roll",
+        "d": "Do the Step 4 log roll as one supervised class walk to a damp corner of the school grounds. You roll the log toward you, kids look closely, then it goes back."
+      },
+      {
+        "t": "Levels at every table",
+        "d": "Explore groups note which jar changed more. Develop groups keep dated entries and use the word decomposer. Extend groups tape-mark the leaf layer and turn the shrinking into numbers."
+      },
+      {
+        "t": "Class case conference",
+        "d": "In Step 5, each group presents its variable and evidence in two minutes. Then the class decides which conditions sped up decomposition most, using every group's notes."
+      }
+    ],
+    "timing": "Day one takes about 45 minutes for the sort, both jars and the Day One sketch. Then plan 5 minute checks two or three times a week for about four weeks, and a final 45 minute session to close the case."
+  }
 }

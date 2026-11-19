@@ -340,5 +340,35 @@
     "Record the sunset time every evening as you travel, and work out how much earlier or later the sun sets after each move.",
     "Ask a local, with your help, what the weather usually does this month, then check their answer against a week of your readings."
   ],
-  "backHome": "Track the same thing at home for a week, and compare its average with the one you recorded on the road."
+  "backHome": "Track the same thing at home for a week, and compare its average with the one you recorded on the road.",
+  "classroom": {
+    "intro": "This is made for a classroom: the daily check-in takes two minutes, and a whole class collecting real data every day builds a much better chart than one kid alone. Groups can track different things and compare.",
+    "tips": [
+      {
+        "t": "One thing per group",
+        "d": "Groups of four each track one thing from the starters: temperature, rain, sunset time or birds at a feeder. Jobs: reader, recorder, guess keeper and change calculator."
+      },
+      {
+        "t": "Same time, same spot",
+        "d": "Pick a set time, like right after the morning bell, and a spot by the window or in the schoolyard. A thermometer in the shade and a jar rain gauge cost almost nothing."
+      },
+      {
+        "t": "A rotating data keeper",
+        "d": "Each day a different student reads the number aloud while the class guesses first. Post the log on the wall, so everyone sees the guesses next to the real numbers."
+      },
+      {
+        "t": "Plan for weekends",
+        "d": "School data has gaps on weekends. Kids can take the check home, look up the readings from a weather app afterward, or leave the gap and talk about what it does to the trend."
+      },
+      {
+        "t": "Chart it together",
+        "d": "For Step 4, build one big class chart on the wall, and have each group chart its own data too. Explore groups make a bar chart, Extend groups add an average line."
+      },
+      {
+        "t": "Forecast showdown",
+        "d": "In Step 5, each group forecasts tomorrow as a range, writes it on the board and checks it next morning. A miss starts the best talk: why didn't the pattern hold?"
+      }
+    ],
+    "timing": "One 40 minute period to choose and set up (Step 1), then two minutes every school day for one to two weeks. Two more periods cover the daily changes, the chart and the trend, then predictions run for a few days."
+  }
 }

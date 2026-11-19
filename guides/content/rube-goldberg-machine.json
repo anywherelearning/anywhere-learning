@@ -320,5 +320,35 @@
     "src": "guides/assets/rube-goldberg-machine.jpg",
     "alt": "Watercolour illustration of a homemade chain reaction on a living room floor: a cardboard tube ramp on books, a line of dominoes, a spoon lever and a small pot as a bell",
     "caption": "Ramp, dominoes, lever, bell. Way too many steps, on purpose."
+  },
+  "classroom": {
+    "intro": "Rube Goldberg Machine works well with a class because small teams can each build a 5 to 7 step chain from recyclables. The failures are the lesson, so plan for lots of them and plenty of floor space.",
+    "tips": [
+      {
+        "t": "Teams of three or four",
+        "d": "Jobs: a builder, a tester who runs each connection 3 times, a recorder who notes each change with the 'When it fails, check' card, and a reset manager."
+      },
+      {
+        "t": "Floor space and lanes",
+        "d": "Give each team a marked rectangle of floor or a table pushed against the wall. Tape lanes so marbles and cars don't roll into another team's machine."
+      },
+      {
+        "t": "Class supply bin",
+        "d": "Collect paper towel tubes, cardboard, cups, books, toy cars, dominoes and string ahead. Each team gets a tray of marbles and one roll of tape, counted back at the end."
+      },
+      {
+        "t": "One change at a time",
+        "d": "Post 'one change, then run it' on the board. When a team asks you to fix it, ask which one thing they will change this time."
+      },
+      {
+        "t": "Pack it to rebuild",
+        "d": "Mark every piece's spot with tape and number the steps, so machines pack onto a tray and rebuild fast. Photograph each layout before cleanup."
+      },
+      {
+        "t": "Demo day by level",
+        "d": "On demo day, Explore teams run 3 steps and Develop teams 4 to 6. Extend teams run theirs 10 times first and fix the step that fails most, then every run gets filmed."
+      }
+    ],
+    "timing": "Plan four sessions of 45 to 60 minutes: endings and the first 3 steps, testing and fixing, making it bigger, then demo day. Leave machines up if you can, since rebuilding from tape marks takes about ten minutes."
   }
 }

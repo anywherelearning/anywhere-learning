@@ -375,5 +375,35 @@
     "src": "guides/assets/training-plan.jpg",
     "alt": "Watercolour illustration of a hand-drawn calendar of 30 squares, some coloured in, beside worn running shoes, a stopwatch, a water bottle and coloured pencils",
     "caption": "Thirty squares, three tests, and the rest days coloured in too."
+  },
+  "classroom": {
+    "intro": "A whole class can train for 30 days together, each student toward their own goal, during gym or a daily movement break. The testing, calendar and log are the same for everyone, so it runs smoothly.",
+    "tips": [
+      {
+        "t": "Goals from a short list",
+        "d": "Offer goals that fit your space and supervision: a plank, a wall sit, push-ups, a skipping streak or a run around the field. Swimming goals only happen in supervised lessons."
+      },
+      {
+        "t": "Partners count",
+        "d": "Pair students for the start test. One counts with the written rule while the other does it, then they swap. On day 30, the same partner counts again."
+      },
+      {
+        "t": "Same test, same place",
+        "d": "Run the start test and the day 30 test at the same time of day, in the same place and the same shoes, just as the Start test card says."
+      },
+      {
+        "t": "Body goals, not looks",
+        "d": "Steer every goal toward something the body does, never weight or appearance. Logs and numbers stay private, and nobody compares scores out loud."
+      },
+      {
+        "t": "Know sore from hurt",
+        "d": "Teach the Sore or hurt card on day one. Anyone with sharp pain or a sore joint stops and tells you, and students with health limits get an adapted goal."
+      },
+      {
+        "t": "Levels in one room",
+        "d": "Explore students draw a face after each practice. Develop students log every session and adjust on day 15. Extend students predict day 30 and work out their weekly gain."
+      }
+    ],
+    "timing": "Day 1 takes one 45-minute session for goals, start tests and calendars. Training fits 10 to 15 minutes, three or four days a week. Day 30 brings retests and graphs. Students can add weekend sessions at home."
   }
 }

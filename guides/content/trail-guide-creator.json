@@ -224,5 +224,35 @@
   "fromHome": {
     "text": "When I was teaching, I played this blindfold game in the forest for years. The walker has to find the exact tree they touched, and suddenly they notice every step, every turn and every root. That's exactly the noticing a good trail guide needs.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Your school grounds become the trail. Small groups each design a trail guide, then swap guides and test them on each other, which is the moment every group finds out whether their words did the work.",
+    "tips": [
+      {
+        "t": "Find-my-tree in pairs",
+        "d": "Play Step 1 on a safe, flat part of the field, one partner guiding slowly by the arm. On a rainy day, guide from a desk to a door frame instead."
+      },
+      {
+        "t": "Groups of three or four",
+        "d": "Each group needs a clipboard, paper and markers. Jobs: note taker, step counter, mapmaker and fact finder, swapping jobs between stops."
+      },
+      {
+        "t": "Check plants first",
+        "d": "Walk the grounds ahead of time and point out anything not to touch, like nettle or poison ivy. Leave taste off the senses list for everyone."
+      },
+      {
+        "t": "You read as a stranger",
+        "d": "Read each draft as if you've never been there. Point to one or two spots that would trip you up, then let the group fix them."
+      },
+      {
+        "t": "Levels in one group",
+        "d": "Explore kids draw each stop and say a line, Develop kids write a paragraph per stop, and Extend kids fit each stop on a 40-word card or plan the short loop."
+      },
+      {
+        "t": "Swap and test",
+        "d": "Groups trade guides and follow them with no help from the authors, marking every place they hesitate. Finished guides can go to a younger class or to families."
+      }
+    ],
+    "timing": "Plan four sessions of about 45 minutes: find-my-tree and the walk, the route and map, writing, then testing and fixing. Keep all walking inside the school grounds and within your sight."
   }
 }

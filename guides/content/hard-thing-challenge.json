@@ -312,5 +312,35 @@
     "alt": "A girl in a pink jersey and full-face helmet riding her mountain bike down a rock ledge, with another rider watching behind her",
     "caption": "A black trail, by the end of summer.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "The Hard Thing Challenge works as a class project over a month or a term. Every student picks their own hard thing, the class goes through the messy middle together, and you check in weekly instead of standing beside each one.",
+    "tips": [
+      {
+        "t": "Each kid picks their own",
+        "d": "Students choose with the Pick it card: a times table, a recorder song, a cartwheel, a chapter book. Home goals with physical risk, like bike jumps, need the family on board."
+      },
+      {
+        "t": "Finish lines on display",
+        "d": "Each student writes a finish line, a date and three checkpoints. Post them on a wall chart with sticky notes, or keep them in the log if a student prefers privacy."
+      },
+      {
+        "t": "Short practice blocks",
+        "d": "Give two or three 15-minute blocks a week. Students practise and log the date, what they worked on and one thing that went better. Home goals get planned and logged here."
+      },
+      {
+        "t": "Warn about the messy middle",
+        "d": "Tell the class before it hits: there will be a week it feels worse. Post the Messy middle and Skip, pause, change or quit? cards, and agree that nobody quits on a bad day."
+      },
+      {
+        "t": "Check-in buddies",
+        "d": "Pair students for a weekly two-minute check-in: which checkpoint are you at, and what helped on a hard day? Buddies ask questions; they never judge the goal."
+      },
+      {
+        "t": "Levels for the whole stretch",
+        "d": "Explore students pick a month-long goal with your help, Develop students plan a whole term, and Extend students find out how others learned it and plan practice week by week."
+      }
+    ],
+    "timing": "Spend one 40-minute session picking goals and setting finish lines, then two or three short practice blocks a week for a month or a term. Finish with a session where students reread their logs and write the last page."
   }
 }

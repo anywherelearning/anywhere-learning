@@ -426,5 +426,35 @@
   "fromHome": {
     "text": "On a snowy day, my son set up a camp chair on the shore and sketched the lake while the snow fell. It was his idea: a sit spot moment, one place, one chair, and time to really look. Nobody told him what to draw.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Nature journaling works with a whole class because everyone works on their own page from the same card. Go outside together, sit spread out, draw first, then write the three lines.",
+    "tips": [
+      {
+        "t": "One card for all",
+        "d": "Read one card to the whole class, like Sound Map or Adopt a Tree, so the share at the end compares many different takes on the same prompt."
+      },
+      {
+        "t": "Give everyone a sit spot",
+        "d": "Each kid gets a sit spot inside a boundary you can see, an arm's length from the next kid. Quiet cards like Sound Map need that space to work."
+      },
+      {
+        "t": "Journals stay at school",
+        "d": "Each kid gets a notebook or the printed journal pages from the end of the guide, kept in a class bin. Add crayons for bark rubbings and sit mats for wet days."
+      },
+      {
+        "t": "You journal too",
+        "d": "Do the card on your own page while they work. Kids take it more seriously when the teacher is drawing too, and nobody grades the art."
+      },
+      {
+        "t": "Levels without labels",
+        "d": "Every card has a main prompt and a Deeper line. Some kids stop after the drawing and three lines, others take on the Deeper question, all in the same time outside."
+      },
+      {
+        "t": "Adopt a class tree",
+        "d": "Use Adopt a Tree and Same Spot, New Season as a class project: one tree on the grounds, drawn once a season, makes a record kids can flip back through."
+      }
+    ],
+    "timing": "Each card takes 10 to 20 minutes outside plus 5 minutes to share one wonder each. Use one card a week, picking cards that fit the season, and flip back through old pages together once a month."
   }
 }

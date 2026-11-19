@@ -232,5 +232,35 @@
     "Join a local walking tour together, and notice how the guide points, tells and asks at each stop.",
     "With you alongside, give a family who just arrived a short tour of the essentials, like the bakery and the playground, plus one surprising fact."
   ],
-  "backHome": "Give a tour of your own town as if you were the visitor, pointing out what travelling made you notice."
+  "backHome": "Give a tour of your own town as if you were the visitor, pointing out what travelling made you notice.",
+  "classroom": {
+    "intro": "With a class, the tour becomes a tour of your school, led by small groups. Each group owns a stop or two, and together the class builds one tour for a real audience.",
+    "tips": [
+      {
+        "t": "Tour the school",
+        "d": "Use the building and grounds as the route: the oldest classroom, the gym, the garden, the office. Every stop is safe, close and full of stories nobody has told yet."
+      },
+      {
+        "t": "Groups own the stops",
+        "d": "Split the class into groups of three or four, each with one or two stops. Jobs: researcher, scriptwriter, timekeeper and lead speaker, with speakers swapping between stops."
+      },
+      {
+        "t": "Interview school staff",
+        "d": "For Step 2's stories, groups interview the custodian, the secretary or a long-serving teacher you've asked ahead of time. Old yearbooks and photos from the office are great sources too."
+      },
+      {
+        "t": "Practise on location",
+        "d": "Walk the class through the route once for Step 4, so each group rehearses at its real stop. You give each group one note on volume, pace or eye contact."
+      },
+      {
+        "t": "Point, tell, ask levels",
+        "d": "Explore kids share one fact they can point at, Develop kids run the full stop with a question for the audience, and Extend kids trim the tour to time or find a thread."
+      },
+      {
+        "t": "Give it to newcomers",
+        "d": "Lead the finished tour for a younger class, new students or families at an open house. Afterward, ask guests which fact they remember and let groups compare."
+      }
+    ],
+    "timing": "Plan five sessions of about 45 minutes: house tour warm-up and choosing stops, research, scripts, a practice walk, then the real tour. Kids can give the three-minute house tour at home as a first try."
+  }
 }

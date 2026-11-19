@@ -328,5 +328,35 @@
     "src": "guides/assets/garden-plot-planner.jpg",
     "alt": "A dad, a girl and a boy screwing together the wooden sides of a raised garden bed outside",
     "caption": "Measured, cut and built together."
+  },
+  "classroom": {
+    "intro": "A class garden turns every step into shared, visible math: a school bed, a few planter boxes or pots on a sunny windowsill. Groups plan their own section, then the class plants and tracks it together.",
+    "tips": [
+      {
+        "t": "A section per group",
+        "d": "Give each group of four a section of the school bed, one planter box or a few pots. Jobs: measurer, seed researcher, layout drawer and budget keeper."
+      },
+      {
+        "t": "Check the sun at school",
+        "d": "For Step 1, groups shade a map of the schoolyard or classroom windows at 9, 12 and 3. Most vegetables need 6 hours of sun, so this decides where pots go."
+      },
+      {
+        "t": "Seed packets on every table",
+        "d": "Bring a mix of real seed packets for Step 2, plus the Garden Cheat Sheet. Kids read spacing, sun and days to harvest straight from the packets."
+      },
+      {
+        "t": "One class budget",
+        "d": "Give the class one budget, like $15, and have each group price its seeds and soil from a garden centre flyer or online. The class decides together what gets bought."
+      },
+      {
+        "t": "A watering rota",
+        "d": "Post a rota so two students water and measure each day. Weekends and holidays need a plan too: a self-watering pot, a volunteer family, or seeds that tolerate a dry spell."
+      },
+      {
+        "t": "Levels and the final math",
+        "d": "Explore kids cut a spacing stick and count lengths, while Extend kids try staggered rows and count back from the first frost. Share growth graphs and cost per plant at the end."
+      }
+    ],
+    "timing": "Plan three periods of about 45 minutes for Steps 1 to 4, then a planting session. After that, the growth log takes five minutes a day for two weeks or more, with one final period for the math."
   }
 }

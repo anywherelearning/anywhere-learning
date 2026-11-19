@@ -341,5 +341,35 @@
     "src": "guides/assets/ai-basics.jpg",
     "alt": "A mother and daughter sitting together at a laptop covered in stickers",
     "caption": "Exploring it together, on my computer."
+  },
+  "classroom": {
+    "intro": "This one works well with a whole class because most of it happens away from the screen. You run the AI tool on the projector, students guess and test in small groups, and the class writes its AI rules together.",
+    "tips": [
+      {
+        "t": "You drive the screen",
+        "d": "AI chat tools are 13+ or 18+, so use your own account on the projector, following school device policy. Students call out what to type; nobody enters a name or personal detail."
+      },
+      {
+        "t": "Groups of four",
+        "d": "Give each group a reader, a recorder, a tester who chooses what to ask the AI, and a reporter. Rotate the jobs between steps so every kid gets a turn at the question."
+      },
+      {
+        "t": "Prediction game in teams",
+        "d": "Step 2 needs no screen at all. One group starts a sentence, the others race to guess the next word, and you point out the patterns they used to get it right."
+      },
+      {
+        "t": "One myth per group",
+        "d": "For Step 3, give each group one myth from the Myth or fact? card. They plan the test, you type it at the front, and the whole class judges whether the myth fell apart."
+      },
+      {
+        "t": "Levels side by side",
+        "d": "Younger or newer students draw what's inside an AI, others list what it can and can't do, and your strongest writers explain step by step how it builds an answer."
+      },
+      {
+        "t": "Class AI rules",
+        "d": "Finish Step 5 as a class. Each group proposes one rule from the Rule ideas card, the class votes on four or five, and the poster goes up next to wherever students use devices."
+      }
+    ],
+    "timing": "Plan two sessions of about 45 minutes. Session one covers Steps 1 and 2 away from the screen, session two runs Steps 3 to 5 on the projector. Students can bring the class rules home and compare them with their family's."
   }
 }

@@ -311,5 +311,35 @@
     "alt": "A brother and sister sitting in a brightly painted tuk-tuk at a theme park",
     "caption": "Checking the AI's ride list in real life.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "Comparing AI answers is more fun with a whole class watching the disagreements appear. You ask two or three AI tools on the projector, groups compare and check the claims, and the class decides together what it can trust.",
+    "tips": [
+      {
+        "t": "Your accounts, one screen",
+        "d": "These tools are 13+ or 18+, so you type the question into each one on the projector from your accounts, inside your school's device policy. Print or display the answers side by side for groups."
+      },
+      {
+        "t": "Pick a class question",
+        "d": "Use the Good questions card to choose something the class can check: a fact about an animal you're studying, a place on an upcoming field trip, or a local landmark with an official website."
+      },
+      {
+        "t": "Groups of four",
+        "d": "Give each group a copy of the answers. One kid marks agree and disagree, one hunts bluffs with the Spot the bluff card, one checks sources, and one reports the verdict."
+      },
+      {
+        "t": "Check with real sources",
+        "d": "For Step 4, groups use classroom books, an official website you open on the projector, or school devices if your policy allows supervised searching. Each group checks a different claim."
+      },
+      {
+        "t": "Levels by group",
+        "d": "Explore groups find one same and one different, Develop groups mark every claim true, false or unsure, and Extend groups build a claim table and explain why an AI might have made its mistake."
+      },
+      {
+        "t": "Class verdict board",
+        "d": "Finish with a board of every claim marked true, false or unsure. Celebrate the groups who caught a confident wrong answer, and praise any answer that honestly said 'I don't know'."
+      }
+    ],
+    "timing": "Plan two sessions of about 40 minutes: Steps 1 to 3 in the first, Steps 4 and 5 in the second. If the question connects to a field trip, the class can test the answer in real life there."
   }
 }

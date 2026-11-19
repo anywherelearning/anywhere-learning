@@ -331,5 +331,35 @@
   "fromHome": {
     "text": "My daughter collects bottles and cans from our neighbours and takes them to the depot. She makes about $80 a month. She hired her brother for 20 to 25 percent, but he quit. He didn't think it was enough.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "A real business that keeps going works in school when the customers are inside the building. Groups run a small class business, like a weekly snack or supply stand, keep honest books, and decide at the end if it's worth keeping.",
+    "tips": [
+      {
+        "t": "School permission and play money",
+        "d": "Selling for real money needs your principal's OK. If it isn't allowed, run the business with class tokens or play money. Customers are classmates, other classes and staff, never strangers."
+      },
+      {
+        "t": "Businesses that repeat",
+        "d": "Steer groups toward things people need again each week: a recess snack stand if food rules allow, a pencil and eraser shop, plant care for other classes, or a book repair service."
+      },
+      {
+        "t": "Groups of four with jobs",
+        "d": "Give each group a manager, a bookkeeper who writes every line in the notebook, a seller, and an asker who runs the Ask first card. Rotate the jobs each week."
+      },
+      {
+        "t": "You become the bank",
+        "d": "Any start-up supplies are a small loan from you, written down and paid back first. You keep the cash jar locked away between sessions, and two people count it together."
+      },
+      {
+        "t": "Levels in the books",
+        "d": "Explore students write each sale in the notebook, Develop students work out profit at their price, and Extend students work out profit per hour and change one thing halfway through."
+      },
+      {
+        "t": "Decision day",
+        "d": "At the end, each group adds up its books and presents keep, change, hand over or stop using the What next card. Classmates can ask one question about the numbers before the decision."
+      }
+    ],
+    "timing": "Plan one week of short sessions to pick the business, ask customers and set the price, then two or three weeks running it during a set time, like Friday recess. Finish with a 40-minute decision day."
   }
 }

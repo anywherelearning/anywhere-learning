@@ -336,5 +336,35 @@
     "src": "guides/assets/big-feelings-lab.jpg",
     "alt": "A child in a green hat crouched in a forest clearing, frowning, with a pile of sticks nearby",
     "caption": "Not every feeling is a happy one."
+  },
+  "classroom": {
+    "intro": "Feeling words, body maps and size scales work well with a class because everyone builds the same vocabulary at once. Keep the talk about feelings in general and in characters, and keep anything personal in a private journal.",
+    "tips": [
+      {
+        "t": "Build the word wall together",
+        "d": "Collect the Feeling words families as a whole class on chart paper. Pairs add their own words, and the wall stays up so you can point to a precise word all year."
+      },
+      {
+        "t": "Body maps stay private",
+        "d": "Each student draws their own outline and colours their top feelings with the Body clues card. Nobody presents a map; volunteers can share one clue, like butterflies in the stomach, if they want."
+      },
+      {
+        "t": "Characters for Under the surface",
+        "d": "Run Step 3 with book or film characters, not classmates or families. Pairs read a cover-up line from the card, like 'I don't care', and guess what the character really feels."
+      },
+      {
+        "t": "One level per table",
+        "d": "Explore tables make the face for each feeling family, Develop tables pick their top five words, and Extend tables explain the difference between two close words, like nervous and scared."
+      },
+      {
+        "t": "Debrief with patterns, not stories",
+        "d": "At the end of the tracking week, ask which feeling came up most and what usually comes just before it. Use a show of hands or anonymous slips, never personal stories."
+      },
+      {
+        "t": "When to pass it on",
+        "d": "Journals are read only if the student offers. If a journal or a comment points to something heavy at home, or feelings taking over their days, talk with your school counselor."
+      }
+    ],
+    "timing": "Plan three sessions of 30 to 40 minutes: words and body maps, Under the surface, then the Size it scale, posted by your calm-down corner. The tracking week is a private journal, one minute each afternoon, with My feelings map on Friday."
   }
 }

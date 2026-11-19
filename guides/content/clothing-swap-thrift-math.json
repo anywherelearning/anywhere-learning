@@ -337,5 +337,35 @@
     "Price a layer you need for this climate, like a rain jacket or warm sweater, both secondhand and new, and work out the saving.",
     "Set up a small swap with another travelling family, with your help, for clothes the kids have outgrown on the road."
   ],
-  "backHome": "Compare the secondhand prices you found on the road with your thrift store at home, and work out the percentage difference."
+  "backHome": "Compare the secondhand prices you found on the road with your thrift store at home, and work out the percentage difference.",
+  "classroom": {
+    "intro": "A class clothing swap is a real event kids can run themselves, with points instead of money. Students sort their closets at home, score their swap pile in class, then hold the swap together.",
+    "tips": [
+      {
+        "t": "Sort at home first",
+        "d": "Steps 1 and 2 happen at home: kids sort one drawer into keep, swap, donate and sell, and tally wears. Send a note so families decide what can leave the house."
+      },
+      {
+        "t": "Teams with real jobs",
+        "d": "Split the class into teams: scorers use the Swap points card, a bank keeps the points ledger, checkers look for stains and holes, and hosts run the tables."
+      },
+      {
+        "t": "Points, not money",
+        "d": "Every item gets a points tag, with 1 point worth about $3 from the Thrift ballpark prices card. Kids get points for what they bring and spend them at the swap."
+      },
+      {
+        "t": "Clear swap rules",
+        "d": "Agree ahead: clean clothes only, nothing a family hasn't approved, and leftovers go to donation. Kids who can't bring clothes can bring books or games, or help run the bank."
+      },
+      {
+        "t": "New prices from flyers",
+        "d": "No store trip needed for Step 5. Kids look up new prices online or in flyers for 3 to 5 things they got, then work out the saving and the percentage off."
+      },
+      {
+        "t": "Levels and the debrief",
+        "d": "Explore kids sort into 1, 2 and 3 point piles, and Extend kids keep the ledger and sort out the jacket shortage. End with class totals: points traded and items given a second life."
+      }
+    ],
+    "timing": "Three sessions of about 40 minutes: cost per wear and the swap rules, scoring and tagging (Step 3), then swap day (Step 4). The closet sort happens at home the week before, and Step 5 fits one more period."
+  }
 }

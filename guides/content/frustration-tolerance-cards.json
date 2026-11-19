@@ -407,5 +407,35 @@
   "fromHome": {
     "text": "My daughter gets frustrated when she doesn't get a math concept right away, or doesn't understand a passage in the book she's reading. She starts being rude to the person trying to explain, and she shuts down. When I help her realize she's being rude, she stops, breathes and starts over.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "The cards work with a whole class because every challenge is short, needs almost nothing, and the move is the same for everyone. Run them in small groups, with you as the one who makes things frustrating on purpose.",
+    "tips": [
+      {
+        "t": "Teach the move first",
+        "d": "Read the card's move to the whole class and practise it once together before groups start, so everyone has the same words ready when it gets hard."
+      },
+      {
+        "t": "Groups of four",
+        "d": "Each group gets the card and its materials. One kid keeps time, one reads the move out loud, two take the challenge, then they swap."
+      },
+      {
+        "t": "Same card, every table",
+        "d": "Give every group the same card on the same day. The materials stay simple (stones, string or a deck of cards per table), and the debrief can compare how each group handled it."
+      },
+      {
+        "t": "You play the unfair one",
+        "d": "For Rule Bender, The Wrecker, Bad Ref and Unfair Shares, you play the rule breaker at the front of the room, or a student who agreed to it ahead of time. Never single out a kid without asking."
+      },
+      {
+        "t": "Post the moves",
+        "d": "Put the move names on the wall. When real frustration shows up, a lost game or a stuck problem, point to the move instead of giving a speech."
+      },
+      {
+        "t": "Debrief in a circle",
+        "d": "End with two questions for the whole class: when did it get hard, and which move helped? Kids learn the most from hearing that classmates felt it too."
+      }
+    ],
+    "timing": "One card takes 15 to 20 minutes with the debrief. Use one card a day as a warm-up for a month, or one a week during SEL time. The Long Wait and Talking Turn work as a whole-class circle."
   }
 }

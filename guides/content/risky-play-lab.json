@@ -375,5 +375,35 @@
     "src": "guides/assets/risky-play-lab.jpg",
     "alt": "Watercolour illustration of a mossy fallen log beneath a sturdy low tree branch, with grippy sneakers, a hammer, a few nails driven into an old stump and an open notebook nearby",
     "caption": "One log, one stump, and a ladder of rungs they chose themselves."
+  },
+  "classroom": {
+    "intro": "Risky play works with a class when you hold the outer limits and teach the judgment steps together. Kids learn the hazard hunt and the risk score as a group, then try challenges at small stations.",
+    "tips": [
+      {
+        "t": "Check your school's rules",
+        "d": "Before you start, check what your school allows: tree climbing, jump heights, scooters, hammers. Your outer limits come from that, said aloud once, and they don't move."
+      },
+      {
+        "t": "Hazard hunt as a class",
+        "d": "Walk the play area together with the Hazard hunt card. Kids push, pull and kick, and you call each one: hazard, so it's out, or risk, so it's theirs to judge."
+      },
+      {
+        "t": "Score in pairs",
+        "d": "Pairs score each challenge with the Risk score card and write their line and stop word in a notebook. Partners check that each line sits inside the outer limits."
+      },
+      {
+        "t": "One adult at tools",
+        "d": "Hammering nails into a stump needs its own station with an adult, safety glasses on everyone nearby and a clear zone. Run it with two or three kids at a time."
+      },
+      {
+        "t": "Kids pick their rung",
+        "d": "Explore kids try with you close by. Develop kids set a line and judge it afterward. Extend kids coach a partner using only questions from the Say this instead card."
+      },
+      {
+        "t": "Circle debrief",
+        "d": "End with a circle: which hazard did you almost miss, and which rung are you proudest of? Praise out loud any kid who decided a rung wasn't for today."
+      }
+    ],
+    "timing": "Plan three sessions of about 40 minutes: one for picking challenges and the hazard hunt, one for scoring and first tries, and one for stepping up a notch. Ladders can carry on in later outdoor time."
   }
 }

@@ -334,5 +334,35 @@
     "Spot the selling tricks aimed at visitors, like 'last one' or 'special price for you', and match each to the Marketing Tricks page.",
     "Add the hidden travel costs to one souvenir, like bag space and carrying it for weeks, before deciding it's worth it."
   ],
-  "backHome": "Look at what you bought on the trip a month later, and check whether the reason you weighted most still holds."
+  "backHome": "Look at what you bought on the trip a month later, and check whether the reason you weighted most still holds.",
+  "classroom": {
+    "intro": "Every group compares two real options for something the class actually needs, like a new class ball, a water bottle or headphones for the listening centre. The rubric and the marketing tricks hunt work beautifully in teams.",
+    "tips": [
+      {
+        "t": "A real class purchase",
+        "d": "Pick something the class really needs so the decision counts, and set a budget. Groups can also choose from the starters, like sneakers or a backpack, as practice."
+      },
+      {
+        "t": "Groups of four",
+        "d": "Jobs: a researcher who finds prices and reviews, a rubric keeper, a cost calculator for hidden and true costs, and a trick spotter who reads the box and the product page."
+      },
+      {
+        "t": "Bring both options in",
+        "d": "For Step 3, bring the two options into class if you can, or show close-up photos and the real boxes. Kids hold them, read the labels and update the rubric."
+      },
+      {
+        "t": "Print the ads",
+        "d": "For Step 4, print each product page and an ad or two. Groups circle at least 3 tricks from the Marketing Tricks page, like a crossed-out price or a countdown clock."
+      },
+      {
+        "t": "The class waits",
+        "d": "After groups present their picks, the class waits a week before buying. If the price drops or a bad review shows up, groups adjust and say why."
+      },
+      {
+        "t": "Levels and the vote",
+        "d": "Explore groups pick 3 things that matter and tick a winner, while Extend groups weight the criteria. End with a class vote, then check in a month: do we still use it?"
+      }
+    ],
+    "timing": "Three periods of about 45 minutes: options and the rubric (Steps 1 and 2), true cost and the tricks hunt (Steps 3 and 4), then presentations and the vote. The one-week wait and the purchase come after."
+  }
 }

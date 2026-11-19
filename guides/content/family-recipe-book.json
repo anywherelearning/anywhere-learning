@@ -236,5 +236,35 @@
     "Buy the ingredients for one local recipe at the market, and find out what each one is called here.",
     "Cook a recipe in your rental kitchen with whatever pans and measures it has, and rewrite the amounts to match."
   ],
-  "backHome": "Cook one dish from the trip for the family at home, and add its card to the book with the story behind it."
+  "backHome": "Cook one dish from the trip for the family at home, and add its card to the book with the story behind it.",
+  "classroom": {
+    "intro": "A class cookbook works beautifully: every student brings one family recipe and its story, and the class publishes the book together. The cooking happens at home, and the writing, testing and design happen in class.",
+    "tips": [
+      {
+        "t": "Taste detective in class",
+        "d": "Run Step 1 with one simple shared food, like three kinds of crackers or a fruit salad. Check allergies first and keep everything store-bought and labelled."
+      },
+      {
+        "t": "One recipe per student",
+        "d": "Each student collects one family recipe instead of three to five, interviewing the cook at home with a short list of questions you send home."
+      },
+      {
+        "t": "Cook at home first",
+        "d": "Students cook from their notes at home with an adult and mark every gap. In class, they turn the notes into a recipe card with amounts, actions and done signs."
+      },
+      {
+        "t": "Partners cook out loud",
+        "d": "Model Step 4 at the front: read a card aloud, 'I'm adding the flour... now what?', and stop wherever it goes quiet. Then partners do the same for each other."
+      },
+      {
+        "t": "Every family's food counts",
+        "d": "Tuesday spaghetti, a sandwich, or a store-bought favourite with a family twist all belong. Students can tell the story behind it, or keep it to one line if they'd rather."
+      },
+      {
+        "t": "Publish the class book",
+        "d": "Groups handle the cover, the table of contents and sections by meal. Each family gets a copy, and Extend kids rescale one recipe to serve the whole class."
+      }
+    ],
+    "timing": "Plan four class sessions of about 45 minutes over two weeks: taste test and interview questions, then card writing, partner testing and book design. Interviews and cooking happen at home in between."
+  }
 }

@@ -492,5 +492,35 @@
   "fromHome": {
     "text": "On a fall hike, while we stopped for lunch, my daughter and her friend built a whole family of inuksuit out of the rocks around them, made up a story about each one, and took them down before we left. Building it was the art. The story turned it into something they talked about for the rest of the hike.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "The cards work well with a class because they need no supplies, just the school grounds and fallen materials. Give each small group a card, and the whole class builds an outdoor gallery in one period.",
+    "tips": [
+      {
+        "t": "Groups of three",
+        "d": "One gatherer, one builder, and one photographer who also writes the title. On the next card, everyone swaps jobs, so each kid builds at least once."
+      },
+      {
+        "t": "One theme a day",
+        "d": "Choose one theme for the day, like Patterns and symmetry, and deal out its 12 cards. Groups then see different answers to similar problems on the gallery walk."
+      },
+      {
+        "t": "Set the gathering rules",
+        "d": "Before anyone gathers, read the rules aloud: fallen items only, never pick living plants, leave nests and animal homes alone, and stay inside the boundary you can see."
+      },
+      {
+        "t": "Deeper for fast groups",
+        "d": "Every card has a Deeper line. Groups that finish fast take it on, while others stay with the main prompt, so one class works at different levels at once."
+      },
+      {
+        "t": "One device per group",
+        "d": "A school tablet per group is enough for photos. Collect them into one slideshow so kids can see the art again after the materials go back."
+      },
+      {
+        "t": "Gallery walk, then return",
+        "d": "Before clean-up, the class walks from piece to piece while each group gives its title and the story behind it. Then every group returns its materials where they found them."
+      }
+    ],
+    "timing": "Each card takes 10 to 20 minutes, so one 45 minute period fits two cards plus the gallery walk and clean-up. Run it weekly through a season, one theme at a time."
   }
 }

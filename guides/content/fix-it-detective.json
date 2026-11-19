@@ -340,5 +340,35 @@
       "alt": "The girl under the kitchen sink unscrewing the connections"
     },
     "tall": true
+  },
+  "classroom": {
+    "intro": "In a classroom, the fixing happens on things that are really broken: sticky drawers, squeaky chairs, dead flashlights. Small teams each diagnose one item, with you as the adult on every tool.",
+    "tips": [
+      {
+        "t": "Build a fix-it box",
+        "d": "Collect broken things ahead of time: squeaky chairs, sticky drawers, dim flashlights, stuck zippers, wobbly stools. Families can send in small broken items they're happy to donate."
+      },
+      {
+        "t": "Teams of three",
+        "d": "One detective describes the symptom, one works down the Easy suspects card, and one keeps the Fix-it log. They switch roles with each new item."
+      },
+      {
+        "t": "One kit per table",
+        "d": "Each table gets a screwdriver, pliers, tape, a flashlight, bar soap, a pencil and toothpicks. Glue and anything with a blade stay at your desk, and you handle them."
+      },
+      {
+        "t": "Safety rules first",
+        "d": "Read the Safety rules card aloud before any tools come out: nothing plugged in, batteries out, and nothing from the Never open line. Stop everything at any burning smell."
+      },
+      {
+        "t": "Levels per team",
+        "d": "Explore teams check one easy suspect with you. Develop teams work the suspects in order, one change at a time. Extend teams predict the cause first and compare fixing with replacing."
+      },
+      {
+        "t": "Detective reports",
+        "d": "Each team explains its symptom, cause and fix in two minutes. The class picks the trickiest diagnosis and adds every fix that worked to a class Common fixes list."
+      }
+    ],
+    "timing": "Plan three 45-minute sessions: hunt and describe, check the suspects and plan, then fix, test and report. Students can hunt for one problem at home and bring their Fix-it log back to share."
   }
 }

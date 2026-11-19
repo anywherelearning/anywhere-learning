@@ -333,5 +333,35 @@
     "Ask a local, with your help, how they handle something that keeps bugging your family here, like the heat or the mosquitoes.",
     "Notice which fix from home stops working here, like a morning checklist when every day starts somewhere new, and rebuild it for the road."
   ],
-  "backHome": "Bring home one way people solved a problem where you were, and try it on something that bugs your family."
+  "backHome": "Bring home one way people solved a problem where you were, and try it on something that bugs your family.",
+  "classroom": {
+    "intro": "A classroom is full of problems that keep coming back: lost pencils, a crowded coat area, the recycling nobody empties. Teams each pick one and solve it for real, right where it happens.",
+    "tips": [
+      {
+        "t": "Classroom problems only",
+        "d": "Use the Everyday problems card with the classroom in mind: lost stuff, shared space, getting started and forgotten jobs. The class lists them first, then each team picks one."
+      },
+      {
+        "t": "Teams of four",
+        "d": "Give each team a watcher who counts the problem, a recorder, a builder and a reporter. They keep the same problem from the first step to Version 2."
+      },
+      {
+        "t": "A shared build box",
+        "d": "Set out one box for the class with tape, hooks, labels, cardboard, string and scissors. Anything that needs a drill or mounting goes to you or the custodian."
+      },
+      {
+        "t": "Idea sprint together",
+        "d": "Run Get every idea out as a five-minute timed sprint for every team at once. Nobody says 'that won't work' until the timer goes."
+      },
+      {
+        "t": "Levels by team",
+        "d": "Explore teams build the simplest version. Develop teams count results for three days. Extend teams hand their fix to another class to test without explaining it."
+      },
+      {
+        "t": "Version 2 showcase",
+        "d": "After the test days, each team shows its fix, its count and what changed in Version 2. The class keeps every fix that passed the Tired-day tests."
+      }
+    ],
+    "timing": "Plan two 45-minute sessions for the problem, the because and the ideas, then one to build. Testing runs over three to five school days, with a short final session for Version 2 and sharing."
+  }
 }

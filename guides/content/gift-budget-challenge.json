@@ -402,5 +402,35 @@
     "alt": "A boy holding up his Christmas stocking beside a small tree, with little gifts in paper bags and tissue and handmade cards underneath",
     "caption": "A small present from everyone, for everyone.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "With a whole class, give students one shared job: plan a thank-you gift for someone at school, like the custodian or a crossing guard, with a real class budget. Personal gift plans can go home afterward.",
+    "tips": [
+      {
+        "t": "A class gift, one budget",
+        "d": "Set one real amount for the class, write it on an envelope, and pick who it's for. Step 1 becomes a class vote on the number and the person."
+      },
+      {
+        "t": "Groups of four",
+        "d": "Each group plans one gift idea: a detective who collects clues, a pricer, a hidden costs checker for tax and wrapping, and a presenter who pitches it to the class."
+      },
+      {
+        "t": "Detective work at school",
+        "d": "For Step 3, kids notice what the person uses every day and ask other staff quiet questions, with your help. Keep it a surprise and the price out of it for now."
+      },
+      {
+        "t": "Real prices from flyers",
+        "d": "Step 4 runs on printed flyers and online store pages. Groups cut, swap or make until the gift fits, using the Make it fit and Homemade math cards."
+      },
+      {
+        "t": "Shop with an adult",
+        "d": "You or a parent volunteer buys the winning gift, with two students along if your school allows it. Back in class, everyone checks the receipt with the Receipt check card."
+      },
+      {
+        "t": "Take it home",
+        "d": "Afterward, kids can run the full guide at home for a family birthday or holiday with their own money. Explore kids share piles, Extend kids split unevenly with reasons."
+      }
+    ],
+    "timing": "Three periods of about 40 minutes: setting the number and the list (Steps 1 and 2), the gift detective work (Step 3), then pricing and pitching (Step 4). The purchase and receipt check take one short session after."
   }
 }

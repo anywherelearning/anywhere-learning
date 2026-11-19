@@ -311,5 +311,35 @@
     "alt": "A boy wiping the kitchen floor with a cloth while his sister dries a bowl at the counter",
     "caption": "The night I was sick, they took over.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "Reading the Room fits school well, because a school is full of rooms with different moods: the library, the gym, an assembly. Practise clues on pictures and characters first, then on the spaces themselves, not on classmates' faces.",
+    "tips": [
+      {
+        "t": "Clues from pictures first",
+        "d": "Use photos, picture books or a muted film clip for Spot the clues and Guess the mood. Pairs list face, voice and body clues from the People clues card before they guess."
+      },
+      {
+        "t": "Read real rooms together",
+        "d": "Walk the class to the library, the gym or the office and stop at the door for ten seconds. Students whisper Room clues to a partner, then match the volume and speed inside."
+      },
+      {
+        "t": "Guesses stay kind and quiet",
+        "d": "Nobody guesses a classmate's mood out loud. If a student thinks a friend isn't okay, they check privately with a Check it line, and tell you if they hear something worrying."
+      },
+      {
+        "t": "Role-play the check",
+        "d": "Pairs practise the Check it lines in made-up scenes, like a character who's gone quiet after recess. The partner answers honestly, including 'No, I'm not okay, I'd like space.'"
+      },
+      {
+        "t": "Small helps at school",
+        "d": "Step 5 becomes small helps at school: setting up for a substitute, quieting down when a classmate has a headache. At home, students log one reading a day with their family."
+      },
+      {
+        "t": "Levels and the log",
+        "d": "Explore students pick a mood word for a picture, Develop students log one reading a day, Extend students notice when a joke stops being funny and stop it. Debrief on the clue missed most."
+      }
+    ],
+    "timing": "Plan three 30-minute sessions: clues and moods with pictures, a walk through school spaces to read and match rooms, and check-it role-plays. The week of acting on it runs at school and home, with a short log review on Friday."
   }
 }

@@ -231,5 +231,35 @@
     "Start from the free map at the tourist office or your rental, then redraw it with your own story spots marked.",
     "Collect the sounds, smells and words you only hear here, like a market call or a local greeting, for the story."
   ],
-  "backHome": "Write a sequel where the same character turns up on your own street, carrying one thing from the trip."
+  "backHome": "Write a sequel where the same character turns up on your own street, carrying one thing from the trip.",
+  "classroom": {
+    "intro": "Every student can set a story in the same real place, which makes this easy to run with a class. Walk the schoolyard together, map it in small groups, then let each kid write their own adventure on the shared map.",
+    "tips": [
+      {
+        "t": "Use the schoolyard",
+        "d": "Make the school grounds, or a nearby park on a supervised class walk, the shared setting. Everyone knows the paths, so readers can check each other's maps against the real place."
+      },
+      {
+        "t": "Walk in groups of four",
+        "d": "On the what-if walk, each group gets a clipboard. One kid notes sounds, one smells and textures, one hiding spots, and one writes down the group's best what-ifs."
+      },
+      {
+        "t": "One big map per group",
+        "d": "Groups draw one large map on chart paper: paths first, then landmarks, labels and a compass. Each student copies it to mark where their own story's big moments happen."
+      },
+      {
+        "t": "You ask the story questions",
+        "d": "Circulate during planning and ask Step 3's questions: what does the character want, and what goes wrong at the second spot? Most stuck plans open up right there."
+      },
+      {
+        "t": "Levels side by side",
+        "d": "Explore kids tell or draw their story in comic panels, Develop kids write several paragraphs with dialogue, and Extend kids plant an early clue or write one scene in two tenses."
+      },
+      {
+        "t": "Finish with a story walk",
+        "d": "Swap stories and maps between groups, then walk the schoolyard while partners read each scene at its numbered spot. Readers note any place a character teleports."
+      }
+    ],
+    "timing": "Plan four or five sessions of 40 to 50 minutes: the walk, the map, planning, writing, then linking and sharing. Students who want more can set a second story on their own street at home."
+  }
 }

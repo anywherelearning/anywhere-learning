@@ -357,5 +357,35 @@
     "alt": "A girl in a kitchen pointing a homemade magic wand straight at the camera",
     "caption": "One bored afternoon, a magic wand.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "The Boredom Challenge makes a great class game: same timer, same rules, and you play too. The rounds move from the house to the classroom and the playground, and the winning ideas become a class menu for indoor recess.",
+    "tips": [
+      {
+        "t": "Everyone races at once",
+        "d": "Clear the desks and start the timer for Race to the first idea. Students raise a hand the moment they start a real idea, and a partner writes the minute on their score slip."
+      },
+      {
+        "t": "Empty Room Dare, school style",
+        "d": "Use a classroom with desks cleared, the gym or an empty stretch of hallway, with permission. Twenty minutes, nothing to use, then each table shows its best idea."
+      },
+      {
+        "t": "One material per student",
+        "d": "For the One Thing Challenge, hand each student one sheet of paper or one length of string. Partners tally each other's uses, and the class votes on the best three."
+      },
+      {
+        "t": "Pockets on the playground",
+        "d": "Run the Pocket Challenge at recess or outdoor time, inside the usual boundaries with adults on duty. Kids use only what's in their pockets, plus the sticks and stones they find."
+      },
+      {
+        "t": "Levels side by side",
+        "d": "Students pick a level each round: Explore kids invent one game, Develop kids score and compare rounds, Extend kids guess the minutes before the race or plan a perfect pocket kit."
+      },
+      {
+        "t": "Vote and write the menu",
+        "d": "Read the scores together and vote the winners onto a class Bored-day menu for indoor recess and early finishers. Students can copy My Bored-day menu to take home."
+      }
+    ],
+    "timing": "Run one 20-minute round a day or one a week, plus 10 minutes for show-and-tell and the vote. Step 5 takes one 30-minute session. Racing a grown-up at home, phones away, is an optional take-home challenge."
   }
 }

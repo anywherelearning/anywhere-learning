@@ -333,5 +333,35 @@
     "src": "guides/assets/algorithm-awareness.jpg",
     "alt": "A boy with headphones at a desk, watching a laptop screen",
     "caption": "His choice of videos, not the app's."
+  },
+  "classroom": {
+    "intro": "Every student already lives with recommendations, which makes this a great class discussion. In school, you run the apps on the projector with a fresh or teacher account, and students track their own suggestions at home with family permission.",
+    "tips": [
+      {
+        "t": "Use a class account",
+        "d": "Open YouTube or a video site on your projector, using a teacher account or a fresh one your school allows. Students never log in to their own accounts at school, and YouTube accounts are 13+."
+      },
+      {
+        "t": "Groups of three or four",
+        "d": "Give each group a pointer who reads the screen, a recorder for the What am I seeing? card, and a reporter. A fourth kid can be the skeptic who questions every guess."
+      },
+      {
+        "t": "Tracking goes home",
+        "d": "Step 2 happens at home, with a note to families: three days, one line a day, during usual screen time. Students without access can track the class account's suggestions instead."
+      },
+      {
+        "t": "Run the class experiment",
+        "d": "For Step 3, the class votes on one new topic, predicts how many home-page suggestions will change, and you search it on the class account. Check the home page together the next day."
+      },
+      {
+        "t": "Trick hunt by levels",
+        "d": "In Step 4, Explore groups find one keep-you-watching trick, Develop groups find three and how to turn them off, and Extend groups compare two apps to judge which one tries harder."
+      },
+      {
+        "t": "Debrief and choose",
+        "d": "Close with a whole-class share: which trick gets you, and which move from the Take back control card will you try this week? Check in a week later on who tried it."
+      }
+    ],
+    "timing": "Plan three short sessions of 30 to 40 minutes over about a week: Step 1 and the experiment setup, a check-in after the tracking days at home, then Steps 4 and 5 with the debrief."
   }
 }

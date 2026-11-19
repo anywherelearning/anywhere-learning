@@ -332,5 +332,35 @@
     "src": "guides/assets/swap-day-challenge.jpg",
     "alt": "Watercolour of a kitchen counter with a clipboard schedule, a clock, a bowl of eggs, a wooden spoon and an apron",
     "caption": "Most of the work is the part nobody sees."
+  },
+  "classroom": {
+    "intro": "Running the whole house can't happen at school, but running the classroom can. Students find the hidden work that keeps the room going, plan a swap day, then run the room while you work for them.",
+    "tips": [
+      {
+        "t": "Find the class jobs",
+        "d": "For Step 1, students list every job that keeps the classroom going, then use The invisible work card: remembering supplies, noticing who's absent, deciding what comes next."
+      },
+      {
+        "t": "Teams take a block",
+        "d": "Split the day into blocks and give each team of four one block to run: the morning routine, a transition, lunch cleanup or the end of the day."
+      },
+      {
+        "t": "Clear swap rules",
+        "d": "Rewrite the Swap rules card for school: students lead the schedule, tidying and routines. You keep safety, behaviour, anything medical and all contact with parents."
+      },
+      {
+        "t": "You clock in",
+        "d": "On Swap Day, ask each team 'What would you like me to do next?' If a block runs too smoothly, pull something from the Interruptions card, like a missing supply."
+      },
+      {
+        "t": "Levels by role",
+        "d": "Explore students take on three jobs. Develop students run a full block and note what ran late. Extend students handle an interruption and rework the rest of the schedule."
+      },
+      {
+        "t": "Home stays optional",
+        "d": "The home version of Swap Day can go home as an optional weekend project. Nobody has to share which jobs their family does, or who does them."
+      }
+    ],
+    "timing": "Plan two 40-minute sessions to find the work and plan the day, then run Swap Day as a half day or a full day. Finish with a 20-minute debrief where each team keeps one class job for the term."
   }
 }

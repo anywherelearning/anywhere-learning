@@ -367,5 +367,35 @@
     "src": "guides/assets/mend-it-make-it.jpg",
     "alt": "Watercolour illustration of folded jeans with a bright square patch, a cushion cover made from a checked shirt with its buttons down the middle, spools of thread, a pincushion, a toothpick and a loose button on a wooden table",
     "caption": "One patch, one button, and a shirt that became a cushion."
+  },
+  "classroom": {
+    "intro": "Mend It, Make It works with a class when you treat sewing like any other tool skill: small tables, needles counted out and back, and one station where only you handle sharp scissors and pins.",
+    "tips": [
+      {
+        "t": "Small sewing tables",
+        "d": "Seat four to six students per table with you or a helper circulating. Younger classes start with Explore: big blunt needles, thick thread and felt instead of real clothes."
+      },
+      {
+        "t": "Count the needles",
+        "d": "Hand out needles from a pincushion holding a set number, and count them back at the end of every session. Keep pins and sharp scissors at your station only."
+      },
+      {
+        "t": "Collect old clothes ahead",
+        "d": "Ask families for worn-out T-shirts, single buttons and fabric scraps a few weeks early. Pre-cut scraps, patches and thread lengths so sewing time isn't spent cutting."
+      },
+      {
+        "t": "A helper per table",
+        "d": "Invite a volunteer or older students who already sew to sit at tables. Demo each stitch from the Stitch basics card once, on a large piece of fabric everyone can see."
+      },
+      {
+        "t": "One shared remake",
+        "d": "Practise stitches, buttons and patches on scraps, never on clothes students are wearing. For the remake, the class makes the same simple item from the Remake ideas card, like a scrunchie."
+      },
+      {
+        "t": "Test day and show",
+        "d": "End with the Test it card: pull every seam and button, find the weakest spot, and fix it. Then lay the remakes out for a class show."
+      }
+    ],
+    "timing": "Plan four sessions of 40 to 50 minutes: stitches, buttons, patches, then a longer block for the remake. Store each student's work in a named zip bag, and let students mend a real item at home if they want."
   }
 }

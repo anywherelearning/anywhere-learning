@@ -332,5 +332,35 @@
     "src": "guides/assets/build-ai-helper.jpg",
     "alt": "A boy typing at a laptop on a desk, a document open on the screen",
     "caption": "Where his agents were built."
+  },
+  "classroom": {
+    "intro": "Building a helper works as a class project when groups design on paper and you do the setup. Each group plans one helper for a real class job, and you test the best designs together on the projector.",
+    "tips": [
+      {
+        "t": "You hold the account",
+        "d": "AI tools with saved instructions are 13+ or 18+, so the helper lives on your account and runs on the projector. Students never type names, addresses or anything about classmates into it."
+      },
+      {
+        "t": "Real class jobs",
+        "d": "Steer groups toward jobs the class actually has, like answering questions about the class bookshelf, drafting reminder notes for you to check, or quizzing spelling words from a list you provide."
+      },
+      {
+        "t": "Groups of four with roles",
+        "d": "Give each group a job writer, a rules writer, a tester who writes the five questions for the Test it card, and a reporter. Paper and the Helper Toolkit cards are all each group needs."
+      },
+      {
+        "t": "A person always checks",
+        "d": "Make it a class rule that the helper drafts and a person sends. Add one safety or privacy rule to every group's Rules card before you set anything up."
+      },
+      {
+        "t": "Levels in the rules",
+        "d": "Explore students say three rules while a partner writes, Develop students write a 'never' rule, and Extend students rank their rules and write a test list to rerun after every change."
+      },
+      {
+        "t": "Keep, change or drop vote",
+        "d": "After a week of use, the class looks at the tally of how often the helper was used and votes keep, change or drop. Celebrate a group whose honest answer is drop."
+      }
+    ],
+    "timing": "Plan three sessions: one of 45 minutes for Steps 1 and 2 on paper, one for setting up and testing two or three helpers on the projector, and a short one a week later for Step 5."
   }
 }

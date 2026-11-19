@@ -324,5 +324,35 @@
   "fromHome": {
     "text": "My daughter saves her can money, the refund from returning cans at the recycling depot. She saved $200 for our Universal trip. She skipped the wand she'd been saving for when she found out the exact same one sells used for a quarter of the price.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Saving takes weeks, so this runs best as a class project with short check-ins. Kids can track a personal goal, or the class can save together toward one real goal, like a game or a class outing.",
+    "tips": [
+      {
+        "t": "Personal or class goal",
+        "d": "Not every kid has pocket money, so offer a choice: a private personal goal tracked at home, or a shared class goal with points or a class fund you hold."
+      },
+      {
+        "t": "Real prices on devices",
+        "d": "For Step 1, kids find the real price of their goal in two places on school devices or flyers, checking new against used and adding any tax or shipping."
+      },
+      {
+        "t": "Pairs for the math",
+        "d": "Partners check each other's gap, weekly amount and target date in Step 2. Trying two weekly amounts side by side shows how much faster an extra $1 gets there."
+      },
+      {
+        "t": "Earning ideas stay safe",
+        "d": "Brainstorm the Ways kids can earn card as a class and work out hourly rates together. Earning happens at home, and any neighbour job means a grown-up goes too."
+      },
+      {
+        "t": "Weekly tracker check-in",
+        "d": "Set ten minutes each week for kids to update the tracker, the percent of the goal and any spending tests. A class goal gets one big thermometer chart on the wall."
+      },
+      {
+        "t": "Levels and the look back",
+        "d": "Explore kids colour boxes and a thermometer, while Extend kids predict the finish date from the slope. After 2 to 4 weeks, share what made saving harder than expected."
+      }
+    ],
+    "timing": "One 45 minute period for Steps 1 to 3, then ten minutes a week for tracking and spending tests (Step 4). After 2 to 4 weeks, one more period covers the chart, the plan check and the look back."
   }
 }

@@ -32,7 +32,7 @@ if (backRefs?.length) {
   console.error(`Says "at the back" for a page in the guide. Name the page and say "at the end of the guide":\n  ${backRefs.join('\n  ')}`);
   process.exit(1);
 }
-const build = (m, o) => (g.type === 'map' ? buildMapHtml(g, m, { ...o, review, tpt }) : g.type === 'days' ? buildDaysHtml(g, m) : g.type === 'capable' ? buildCapableHtml(g, m) : buildHtml(g, m, o));
+const build = (m, o) => (g.type === 'map' ? buildMapHtml(g, m, { ...o, review, tpt }) : g.type === 'days' ? buildDaysHtml(g, m) : g.type === 'capable' ? buildCapableHtml(g, m) : buildHtml(g, m, { ...o, tpt }));
 const tag = (bonus ? '-bonus' : '') + (review ? '-review' : '') + (tpt ? '-tpt' : '') + (preview ? '-preview' : '');
 const outDir = outArg ?? path.join('notes', 'guides');
 fs.mkdirSync(outDir, { recursive: true });
@@ -70,7 +70,8 @@ async function trimForPreview() {
   await evaluate(`(() => { const keep = ${JSON.stringify(PREVIEW_KEEP)}; const isMap = ${g.type === 'map'};
     // Guides: cover, The idea, and the first step (the preview format).
     const pgs = [...document.querySelectorAll('.pg')]; const firstStep = document.querySelector('.pg.step') || document.querySelector('.pg.cardpg');
-    pgs.forEach((p, i) => { const k = isMap ? keep.includes(p.id) : (i < 2 || p === firstStep); if (!k) p.remove(); });
+    const body = pgs.filter((p) => !p.classList.contains('thankspg'));
+    pgs.forEach((p, i) => { const k = isMap ? keep.includes(p.id) : (body.indexOf(p) > -1 && body.indexOf(p) < 2) || p === firstStep; if (!k) p.remove(); });
     const st = document.createElement('style'); st.textContent = '.stamp{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%) rotate(-18deg);font:900 120px Arial Black,Arial,sans-serif;color:rgba(40,40,40,.16);letter-spacing:.05em;pointer-events:none;z-index:9}';
     document.head.appendChild(st);
     document.querySelectorAll('.pg:not(.cover)').forEach(p => { const d = document.createElement('div'); d.className = 'stamp'; d.textContent = 'PREVIEW'; p.appendChild(d); }); return true; })()`);

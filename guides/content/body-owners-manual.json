@@ -333,5 +333,35 @@
     "alt": "Two kids seen from behind, sprinting through the shallow water on a wide sandy beach under a big blue sky",
     "caption": "Every engine needs a test run.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "The tests work well with a whole class because each one needs only a stopwatch, a ruler and a partner. Run them in small teams that rotate through stations, with you keeping every test the same for everyone.",
+    "tips": [
+      {
+        "t": "Teams of three",
+        "d": "One kid takes the test, one times or drops the ruler, and one records the numbers. They rotate after each test so everyone gets a turn in every job."
+      },
+      {
+        "t": "Stations, not every table",
+        "d": "Set up the Engine tests, Sensor tests and Control centre tests as stations around the room. One stopwatch, one ruler and one set of smell cups per station is plenty."
+      },
+      {
+        "t": "Keep numbers private",
+        "d": "Every body is different, so each manual stays with its owner. Never post heart rates, reaction times or Quirks and bests on the wall, and never rank them as a class."
+      },
+      {
+        "t": "Safe moving only",
+        "d": "Keep Push the engine to one minute of jumping jacks or running on the spot, with room around each kid. Check food allergies before the smell test, and skip breath-holding entirely."
+      },
+      {
+        "t": "Three levels, one room",
+        "d": "Explore students count one pulse and catch the ruler five times. Develop students record middle numbers and compare. Extend students test what slows them down and chart it."
+      },
+      {
+        "t": "Pool the ruler data",
+        "d": "Collect ruler catches without names on one class chart to see the range. Then ask what slowed catches down, and why keeping the test fair made the numbers comparable."
+      }
+    ],
+    "timing": "Plan three 45-minute sessions: pulse and recovery, then the senses and the ruler, then writing the manual. The retest a month later fits in a short warm-up, and students can test a family member at home for fun."
   }
 }

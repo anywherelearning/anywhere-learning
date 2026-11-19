@@ -321,5 +321,35 @@
     "src": "guides/assets/kinetic-sculpture.jpg",
     "alt": "Watercolour illustration of a homemade stick mobile with a bird, a fish, a leaf and a star hanging by a window, with a paper pinwheel, string and coins on the table",
     "caption": "Heavy close to the middle, light far out."
+  },
+  "classroom": {
+    "intro": "Kinetic Sculpture works with a class because most builds use cardboard, string and straws, and every collapse teaches something. Pairs or small groups each build one moving piece, then the class holds a real gallery show.",
+    "tips": [
+      {
+        "t": "Pairs or threes",
+        "d": "One student builds the base, one builds the moving part, and one tests and records what tipped and why. In pairs, the builder and tester swap after each try."
+      },
+      {
+        "t": "A recycling bin first",
+        "d": "Two weeks ahead, collect cardboard, tubes, coat hangers, bottle caps and string in a class bin. Add a jar of coins or washers for weights and a tray of paperclips per table."
+      },
+      {
+        "t": "Wire and sharp ends",
+        "d": "Cut coat hangers and wire yourself with pliers, and tape any sharp ends. Students wear safety glasses when bending wire or testing spinners near their faces."
+      },
+      {
+        "t": "Hang from one line",
+        "d": "Run a string across the room or use a coat rack as a shared hanging bar for mobiles and swings. It saves table space and makes balancing easy to watch."
+      },
+      {
+        "t": "Levels at the base",
+        "d": "Explore groups get one part moving, and Develop groups fix what stopped it. Extend groups test coin loads on wider and heavier bases, or balance a mobile with three bars."
+      },
+      {
+        "t": "Gallery show",
+        "d": "Groups write a title card and a one-sentence artist statement, then half the class presents while the other half visits. Leave the show up for other classes to see."
+      }
+    ],
+    "timing": "Plan three sessions of 45 to 60 minutes: choose and sketch, base and movement, then decorate and the gallery show. Store hanging pieces on the room's string line and standing ones on a shelf with names."
   }
 }

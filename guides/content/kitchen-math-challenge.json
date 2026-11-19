@@ -361,5 +361,35 @@
     "Price your list at a local supermarket, where the package sizes, brands and units may be nothing like the ones at home.",
     "Ask your host or a shopkeeper, with your help, what goes into one local dish, then cook it and find the cost per serving."
   ],
-  "backHome": "Cook that local dish again at home, and compare what one serving costs with ingredients from your own store."
+  "backHome": "Cook that local dish again at home, and compare what one serving costs with ingredients from your own store.",
+  "classroom": {
+    "intro": "In a classroom, the meal plan becomes a real class meal: a picnic, a snack day or a packed lunch for a field trip. Groups plan, scale and price it, and the class compares plans before anything gets bought.",
+    "tips": [
+      {
+        "t": "One meal per group",
+        "d": "Groups of four each plan one class meal from the starters: picnic, packed lunches or pancake breakfast. Jobs: planner, scaler, pricer and list keeper sorting by aisle."
+      },
+      {
+        "t": "Scale for the class",
+        "d": "In Step 2, groups scale for everyone in the room, so 25 sandwiches means 50 slices of bread. It's the same math as a family, with bigger numbers."
+      },
+      {
+        "t": "Price from flyers",
+        "d": "Step 3 runs on grocery flyers, online grocery pages or the Price Menu at the end of the guide. Every line gets the package price, not the serving price."
+      },
+      {
+        "t": "Start with what you have",
+        "d": "Replace the fridge check in Step 1 with what the class already has, like cups, napkins or a snack donation. Kids can also do the fridge check at home that night."
+      },
+      {
+        "t": "Shopping and cooking",
+        "d": "You or a parent volunteer shop from the winning list, and the meal gets made in a school kitchen or with no-cook food. Hot and sharp jobs stay with an adult."
+      },
+      {
+        "t": "Receipt debrief",
+        "d": "Put the receipt next to the plan and work out the cost per person together. Explore kids count plates filled, while Extend kids work out what the leftovers cost."
+      }
+    ],
+    "timing": "Plan three periods of about 45 minutes for Steps 1 to 3, then the shop and the meal on another day. The receipt check fits a short final session. Families can run the full guide at home for one family meal."
+  }
 }

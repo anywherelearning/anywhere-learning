@@ -226,5 +226,35 @@
     "Hunt for a local animal that matches this landscape, like a lizard on a stone wall or a crab on wet sand.",
     "Ask a local guide or ranger, with your help, which animal here is hardest to spot, then try to find one together."
   ],
-  "backHome": "Hide the same object in your own yard or park, and compare its time with the one you got on the road."
+  "backHome": "Hide the same object in your own yard or park, and compare its time with the one you got on the road.",
+  "classroom": {
+    "intro": "Camouflage works well with a class because every group can run its own fair test at the same time on the school grounds. Groups hide and search, and you keep the testing honest.",
+    "tips": [
+      {
+        "t": "Groups of four",
+        "d": "One hider, one timekeeper, one recorder and one predator who searches. Rotate jobs after each object so every kid hides, times and searches at least once."
+      },
+      {
+        "t": "Objects per group",
+        "d": "Each group gathers 3 to 5 fallen objects from the school grounds: a leaf, a stick, a pebble, a pinecone. One stopwatch or class tablet per group is enough."
+      },
+      {
+        "t": "Searchers face away",
+        "d": "Give each group its own patch of grass, dirt or bark, far enough apart that searchers can't watch other groups hide. Searchers face the fence while hiders work."
+      },
+      {
+        "t": "You run the warm-up",
+        "d": "Do Step 1 yourself for the whole class: hide 3 classroom items in plain sight outside before the lesson, one well matched and one not, then give everyone 60 seconds."
+      },
+      {
+        "t": "Levels in one class",
+        "d": "Explore groups count aloud and compare. Develop groups time and record every object. Extend groups use three searchers and rank by the middle time, which gives spare kids a role."
+      },
+      {
+        "t": "Pool the class data",
+        "d": "For Step 4, every group tests a leaf on grass and on dirt, then all the times go on the board. A class-wide pattern makes the rule in Step 5 much stronger."
+      }
+    ],
+    "timing": "Plan two sessions of about 45 minutes. Session one covers the warm-up, hiding and timing (Steps 1 to 3). Session two runs the background test, writes the class rule, and ends with a hunt for real camouflage on the grounds."
+  }
 }

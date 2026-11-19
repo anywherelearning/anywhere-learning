@@ -324,5 +324,35 @@
     "src": "guides/assets/solo-mission.jpg",
     "alt": "A brother and sister sitting on a bench at a city bus shelter, waiting for the bus",
     "caption": "Dropped off at the stop. From here, on their own."
+  },
+  "classroom": {
+    "intro": "In a school, Solo Mission moves inside the building: an errand to the office, a question for the librarian, paying at the book fair, ordering in the lunchroom. Students prepare, practise and move up stages with adults they know.",
+    "tips": [
+      {
+        "t": "School mission ideas",
+        "d": "Rewrite the Solo ideas card for your school: take a note to the office, ask the librarian for a book, pay at the school store, or ask a staff member for directions to a room."
+      },
+      {
+        "t": "Stages inside the building",
+        "d": "Use the Stages card: you beside them, you watching from the door, with a buddy, then alone inside the building. Each student picks their stage, and 'not yet' is a fine answer."
+      },
+      {
+        "t": "Prepare in pairs",
+        "d": "Partners plan with the Prepare it card: what they'll say, what they need, the route through the school and two 'what ifs'. Then they practise the lines on each other."
+      },
+      {
+        "t": "Tell the adults ahead",
+        "d": "Let office staff, the librarian and lunchroom workers know that students may come by on missions. A kind, patient adult makes the first solo try a good one."
+      },
+      {
+        "t": "Real-world missions go home",
+        "d": "Ordering at a café, taking the bus or walking home happen with family. Send home the Stages card and a note so each family picks the mission and stage that fits their rules."
+      },
+      {
+        "t": "Debrief feelings first",
+        "d": "After missions, ask the class how they felt before and after, then what felt strange. Students fill in My solo mission log and choose their next stage, or stay put for now."
+      }
+    ],
+    "timing": "Plan one 30-minute session to pick and prepare missions and one to practise them. Missions then run during the school day over a couple of weeks, five minutes each. Home missions are optional, with a grown-up deciding the stage."
   }
 }

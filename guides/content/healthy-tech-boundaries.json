@@ -365,5 +365,35 @@
     "alt": "A mother and two kids playing a board game together at a dining table",
     "caption": "What happens when the screen shuts off.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "This experiment works in class because every student guesses, predicts and tracks, and the pooled data is far more convincing than any lecture. Screen-time reports and the test week happen at home, with families, and the planning happens in class.",
+    "tips": [
+      {
+        "t": "Send a family note first",
+        "d": "Screen reports live on home devices, so send a short note asking families to open the report with their kid. Students without a device report can use a fridge tally of TV time instead."
+      },
+      {
+        "t": "Guesses stay private",
+        "d": "Collect screen-time guesses and real numbers on slips without names, then build a class chart of the gaps. Nobody has to share their number out loud, and no one gets compared."
+      },
+      {
+        "t": "Practise the turn in class",
+        "d": "Model Step 2 with a 15-minute class activity on devices, ringing a timer and having everyone hold up 1 to 5 fingers from the Mood check card. Students then run it at home."
+      },
+      {
+        "t": "Rules in groups of three",
+        "d": "In groups, students each pick a rule from the Rule menu card, write a prediction with a number, and a partner checks it's testable. Groups can test different rules to compare later."
+      },
+      {
+        "t": "Levels for the test week",
+        "d": "Explore students rate each day 1 to 5 and draw what they did instead, Develop students keep all three Test notes, and Extend students check the report for minutes saved."
+      },
+      {
+        "t": "Share the evidence",
+        "d": "After the week, groups pool their Test notes and report which rules changed something. Students take their findings home to write the family plan, rather than signing a plan at school."
+      }
+    ],
+    "timing": "Plan three class sessions of 30 to 40 minutes across two weeks: Steps 1 and 2 setup, Step 3 before the test week, and the share after it. Steps 1, 2, 4 and 5 happen mostly at home with family."
   }
 }

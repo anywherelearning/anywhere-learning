@@ -375,5 +375,35 @@
     "src": "guides/assets/fundraiser-challenge.jpg",
     "alt": "Watercolour illustration of a labelled glass jar of coins and folded bills beside a hand-drawn goal chart of four bags, a plate of wrapped cookies and an open notebook with a pencil",
     "caption": "Four bags to fill, one jar, every dollar in the book."
+  },
+  "classroom": {
+    "intro": "A class fundraiser can raise real money for a real cause when it runs through the school. Students choose the cause, set a goal they can picture and run the event, while you and the office handle permission and the money.",
+    "tips": [
+      {
+        "t": "Get school approval first",
+        "d": "Before anything is announced, check with your principal or office about fundraising rules, how money is handled and which charities are allowed. Pick a cause the class can check on the official charity list."
+      },
+      {
+        "t": "In-school ways to raise",
+        "d": "Choose an event that fits school: a bake sale at recess if food rules allow, a used-book swap, or a class market day for other classes. Families can sponsor a class challenge too."
+      },
+      {
+        "t": "Committees of four or five",
+        "d": "Split the class into cause checkers, goal math, ask writers, event crew and reporters. Each committee uses its own card from the Fundraiser Toolkit and reports to the class every session."
+      },
+      {
+        "t": "You hold the money",
+        "d": "Every gift goes in the class notebook, and two people count out loud, with you as one of them. Money is locked away and handed to the office, never carried home by students."
+      },
+      {
+        "t": "Levels on the goal chart",
+        "d": "Explore students colour the class chart after each count, Develop students work out the percent of the goal, and Extend students work out how many cents of each dollar reached the cause."
+      },
+      {
+        "t": "Report back together",
+        "d": "After giving day, the class writes one report for donors using the Report back card, sent home through your usual family channels. Celebrate what was reached, even if it's short of the goal."
+      }
+    ],
+    "timing": "Plan about two weeks: one session to choose the cause and set the goal, two or three to plan the asks and the event, the event itself, then one session to count, give and report back. Asks to family happen at home."
   }
 }

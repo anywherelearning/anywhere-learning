@@ -416,5 +416,35 @@
   "fromHome": {
     "text": "When we go to the coast, the kids spend hours finding treasures. They used to put everything in a pail and carry it back to the cottage. They learned the hard way that a pail of beach treasures smells terrible after a few days, so now the treasures stay on the beach.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Choice boards fit a class well because every student picks their own options inside one boundary you set. Kids work in pairs, you keep the whole group in sight, and everyone ends with a show-and-tell.",
+    "tips": [
+      {
+        "t": "Work in pairs",
+        "d": "Pairs choose their options together and take turns: one does the option, the other records in the notebook or takes the photo. Pairs stay together the whole time."
+      },
+      {
+        "t": "One boundary, in sight",
+        "d": "Walk the boundary with the class before anyone starts, and pick an area you can see from one spot. Use a whistle or a call for the return time."
+      },
+      {
+        "t": "Boards by readiness",
+        "d": "Hand out different boards in the same session: Curious starter or Explorer mode for some pairs, Young scientist and up for others. The rule on each board stays the same."
+      },
+      {
+        "t": "Materials per pair",
+        "d": "One notebook, one pencil and one shared timer per pair. Keep cups for the water options in one bin, and use a class device for photos instead of personal phones."
+      },
+      {
+        "t": "You do one too",
+        "d": "Pick an option yourself and do it where everyone can see you. It shows the class you're curious too, and you get a discovery of your own to share."
+      },
+      {
+        "t": "Show-and-tell circle",
+        "d": "Back in a circle, each pair shares its best discovery: what, where, a detail and a wonder. With a big class, pairs share with another pair first, then a few share with everyone."
+      }
+    ],
+    "timing": "One board takes 30 to 45 minutes outside plus 10 minutes for the show-and-tell. Use one board a week, and let pairs move up to the next board when they're ready."
   }
 }

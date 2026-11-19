@@ -316,5 +316,35 @@
     "Fit one food nobody in the family has tried into the budget, and decide what comes off the list to make room.",
     "Ask a stallholder, with your help, the price per kilo or pound of one fruit, then work out roughly what one piece costs."
   ],
-  "backHome": "Run the same mission at home with the same amount, and compare what the money bought in each place."
+  "backHome": "Run the same mission at home with the same amount, and compare what the money bought in each place.",
+  "classroom": {
+    "intro": "In a classroom, the store comes to you: a class store with real price tags and play money gives every group the same mission and the same hard choices. A real store trip can happen at home.",
+    "tips": [
+      {
+        "t": "Set up a class store",
+        "d": "Stock a table with empty snack boxes and wrappers, priced with real numbers from a grocery flyer or online store. Include a few treats that tempt kids over budget."
+      },
+      {
+        "t": "Groups of three",
+        "d": "Each group gets $20 in play money and one mission: snacks for the week, a movie night spread, road trip snacks or a picnic lunch. Jobs: list keeper, adder, cashier."
+      },
+      {
+        "t": "Guess before the store opens",
+        "d": "In Step 2, groups guess every price and add up the guesses before seeing the real tags. Write a few guesses on the board to compare later."
+      },
+      {
+        "t": "Run the store yourself",
+        "d": "You run the till at first, then hand it to a student cashier. Ask each group for its running total out loud before the next item goes in the basket."
+      },
+      {
+        "t": "Trade-offs out loud",
+        "d": "When a group goes over budget, they must put something back and say why. Explore groups put back one item, and Extend groups build two carts and keep the cheaper one."
+      },
+      {
+        "t": "Look back together",
+        "d": "After checkout, each group shares how close its running total was and what it put back. For homework, kids can do the mission for real on a family grocery trip."
+      }
+    ],
+    "timing": "One period to set the mission and plan (Steps 1 and 2), and one period for the class store, checkout and the look back (Steps 3 to 5). Each takes about 40 minutes, with setup time for the store."
+  }
 }

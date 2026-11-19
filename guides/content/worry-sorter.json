@@ -325,5 +325,35 @@
     "alt": "A girl gripping the rail on a black metal spiral staircase inside a lighthouse, looking up",
     "caption": "On the way down the lighthouse stairs.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "Worry Sorter teaches a whole class to split a worry into the part they can change and the part they can't. Teach the sorting with made-up worries together, then let students sort their own in private envelopes.",
+    "tips": [
+      {
+        "t": "Sort sample worries first",
+        "d": "Prepare slips with made-up worries, like a character nervous about a sleepover or a field trip. Groups of four sort them into mine and not mine, tearing any slip that has both parts."
+      },
+      {
+        "t": "Real worries stay private",
+        "d": "Each student gets an envelope for their own slips. Nobody reads anyone else's, and you only see what a student chooses to hand you."
+      },
+      {
+        "t": "Model a small worry",
+        "d": "Share a small, real worry first, like 'I'm worried the bus will be late for the field trip', and sort it out loud. Keep it light and school-sized."
+      },
+      {
+        "t": "Practise My part together",
+        "d": "Pick a shared event, like a test, a performance or a new seating plan. The class plans their part with the My part card and practises one move, like slow breaths or asking a question."
+      },
+      {
+        "t": "Levels at each table",
+        "d": "Explore students sort three sample worries with you, Develop students pin down and sort their own, and Extend students add a bowl for 'someone else's, but I can ask' and explain each choice."
+      },
+      {
+        "t": "When a worry is big",
+        "d": "If a slip or a conversation shows a serious worry, like illness or trouble at home, or worries taking over a student's days, talk with your school counselor and follow your school's process."
+      }
+    ],
+    "timing": "Plan two 30-minute sessions: sorting sample and private worries, then planning their part. After a shared event like a test or field trip, take 15 minutes for a class worry check on what really happened."
   }
 }

@@ -240,5 +240,35 @@
       }
     ],
     "modelNote": "'Open it' made sense to the writer, who could see the fridge. The fix names the distance, the turn and the thing, so nobody has to guess."
+  },
+  "classroom": {
+    "intro": "This one is made for pairs: one writes directions, the other follows them word for word. A classroom full of desks, doors and chairs gives every pair a route, and the wrong turns are just as funny.",
+    "tips": [
+      {
+        "t": "Pairs swap roles",
+        "d": "One student reads the directions while the partner follows exactly, then they swap. Each pair needs only paper, a pencil and a route or task they chose."
+      },
+      {
+        "t": "Routes inside the school",
+        "d": "Use routes like desk to pencil sharpener, door to the reading corner, or classroom to the office. Keep any hallway routes supervised and within your sight."
+      },
+      {
+        "t": "Tasks for small spaces",
+        "d": "When space is tight, use the task versions: a 4-block tower, a paper plane, or a hidden drawing the partner copies from spoken directions only, sitting back to back."
+      },
+      {
+        "t": "Model the literal follower",
+        "d": "Before pairs start, follow one student's directions at the front, walking forward until told to stop. The class sees why 'turn' needs a direction and 'forward' needs a distance."
+      },
+      {
+        "t": "Name the breakdown",
+        "d": "Post Step 3's four causes on the board: vague, missing step, wrong order, assumed. Explore kids circle steps, Develop kids label each cause, and Extend kids build the said, did, why table."
+      },
+      {
+        "t": "Real visitors for Step 5",
+        "d": "Pairs write directions someone really needs, like the front door to your classroom or to the school library. Tape them up for a guest or substitute and collect their comments."
+      }
+    ],
+    "timing": "Two sessions of 40 to 45 minutes work well: writing, the first run and finding breakdowns in the first, then fixing and rerunning in the second. Step 5's visitor directions can run over the following week."
   }
 }

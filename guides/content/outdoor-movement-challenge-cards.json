@@ -330,5 +330,35 @@
   "fromHome": {
     "text": "Every summer, I take the kids on a few hard hikes: steep switchbacks, long climbs above the trees, and one backpacking trip with heavy packs. There is always some complaining on the way up. And at the top, there is always the same thing: two kids who are proud of themselves, because they did something hard with their own legs.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "These challenges suit PE or outdoor blocks because every kid competes only against their own last number. Pairs time each other, and a tuned handicap makes the Versus cards fair across mixed abilities.",
+    "tips": [
+      {
+        "t": "Pairs with one timer",
+        "d": "One kid does the challenge while the partner times, marks the distance with a stick and records the number. Then they swap. One timer and one record card per pair."
+      },
+      {
+        "t": "Stations for records",
+        "d": "Set up the Personal record cards as stations: The Tree Sit, The Long Throw with pinecones only, The Sprint Loop and The Jump Line. Pairs rotate every 8 minutes."
+      },
+      {
+        "t": "Safety on the yard",
+        "d": "Throw only pinecones, all in one direction, with a clear zone in front. Skip The Hang unless there's a low branch or bar with soft ground below and an adult right there."
+      },
+      {
+        "t": "A class streak",
+        "d": "Turn Daily streak into a class streak: two minutes outside at the same time every school day. Never Miss Twice and Streak Saver plan ahead for rainy days."
+      },
+      {
+        "t": "Versus without losers",
+        "d": "Use The Fair Handicap and Coach Swap so faster and slower kids race fairly. Pairs tune the handicap until each one wins about half the time."
+      },
+      {
+        "t": "Adventure mode goes home",
+        "d": "The Night Walk, The Long Haul and Pack Weight fit a field trip or a family weekend better than a school day. Send them home as optional cards."
+      }
+    ],
+    "timing": "Each card takes 10 to 20 minutes, so a 40 minute PE block fits two cards. Keep best numbers on a class chart and repeat the same card a week later to see what changed."
   }
 }

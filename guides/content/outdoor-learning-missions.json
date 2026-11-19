@@ -740,5 +740,35 @@
   "fromHome": {
     "text": "On a trip to Vancouver Island, we found smooth carved rock full of water-filled holes. My daughter and her friend went from hole to hole, catching tiny crabs and tadpoles. Each hole was its own little world.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Each mission is a scavenger hunt with 12 finds, which makes it easy to run with a class on the school grounds. Groups hunt together, tick off finds and explain why each one counts.",
+    "tips": [
+      {
+        "t": "Groups of three",
+        "d": "One reader, one searcher who points out finds, and one recorder who ticks the box and writes why it counts. Swap jobs every four finds so everyone searches."
+      },
+      {
+        "t": "One mission per group",
+        "d": "Print one mission and grab a clipboard per group. Give the whole class the same mission, or hand out different ones so groups can teach each other afterward."
+      },
+      {
+        "t": "Set the boundary",
+        "d": "Walk the boundary first and keep it in sight. Read the safety lines aloud: look only at droppings and feathers, no nettles or fuzzy caterpillars, and wash hands after."
+      },
+      {
+        "t": "Your job: the why",
+        "d": "Move between groups and ask the one question that matters: why does that count? When a group is stuck, hand them a place to look, not the find."
+      },
+      {
+        "t": "Extras for fast finishers",
+        "d": "Groups that tick all 12 move on to the 3 Extras, like the micro-map or the case file. That keeps the whole class busy for the same stretch of time."
+      },
+      {
+        "t": "Pick missions to fit",
+        "d": "Soundscape and Human impact work on any school yard, and Water cycle is best after rain. Close with a class share: favourite find, trickiest one, what to hunt next."
+      }
+    ],
+    "timing": "A mission takes 20 to 45 minutes outside plus 10 minutes to share. Run one mission a week, which gives your class ten weeks of outdoor learning from one set of pages."
   }
 }

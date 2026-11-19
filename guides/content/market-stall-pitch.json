@@ -224,5 +224,35 @@
     "src": "guides/assets/market-stall-pitch.jpg",
     "alt": "A girl behind a table of popcorn bags with a hand-drawn sign",
     "caption": "My daughter's popcorn stand. The sign was her pitch."
+  },
+  "classroom": {
+    "intro": "A class market turns this into a whole-room event: small teams pick a product, set a price and pitch to classmates or a visiting class. Play money keeps it fair, and the pitches stay real.",
+    "tips": [
+      {
+        "t": "Teams of three",
+        "d": "Each team has a product lead, a numbers person for price, costs and change, and a pitcher. By market day, everyone on the team pitches at least once."
+      },
+      {
+        "t": "Products that fit school",
+        "d": "Pick things that work in a classroom: bookmarks, origami, drawings, or a service like a two-minute portrait. Skip food unless your school allows it and allergies are checked."
+      },
+      {
+        "t": "Play money market",
+        "d": "Give every buyer the same amount of play money. Teams track sales and what their materials cost, so Step 5's profit is real math even when the money isn't."
+      },
+      {
+        "t": "You are the tough customer",
+        "d": "During practice, play the hesitant buyer for each team: 'I'm not sure', 'Why not just make my own?' After you, the real customers feel easy."
+      },
+      {
+        "t": "Levels by role",
+        "d": "Explore kids say a three-part pitch on their fingers, Develop kids write a 30-second pitch and track which lines work, and Extend kids test two openings and tally the results."
+      },
+      {
+        "t": "Invite real buyers",
+        "d": "Invite another class, younger buddies or families at a school event. If you want to sell for real money, tie it to a school fundraiser your office approves."
+      }
+    ],
+    "timing": "Plan three sessions: products, prices and pitches in the first, making and practising in the second, then a 45 minute market and the count-up. Products can be finished at home if families want to help."
   }
 }

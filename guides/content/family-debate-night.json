@@ -228,5 +228,35 @@
   "fromHome": {
     "text": "On our six-month trip, we debated where to spend the last month. Everyone made their case at the table, notes and all. My daughter won with Mexico, because her arguments met the whole family's needs, not just her own.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "A debate already has two teams, so it fits a class well. Pick a real class decision that's still open, let the verdict settle it, and give every student a job: arguing, judging or keeping time.",
+    "tips": [
+      {
+        "t": "Teams of four",
+        "d": "Each side has an opener, two students for the main points and a closer who answers the other side. Run two debates at once, or one with the class watching."
+      },
+      {
+        "t": "Real class decisions",
+        "d": "Use questions your class can actually settle: which game at Friday recess, where the reading corner goes, which class job gets added. The winning side decides, so it matters."
+      },
+      {
+        "t": "Lightning rounds first",
+        "d": "Start with Step 1's silly one-minute debates as a whole class, sides picked by coin flip. Kids who argued that a hot dog is a sandwich keep the real one friendly."
+      },
+      {
+        "t": "You run the clock",
+        "d": "You take the referee's job: post the format on the board, keep time, and stop the clock if anyone goes after a person instead of an idea."
+      },
+      {
+        "t": "Student judges",
+        "d": "Students who aren't debating judge with a short note: who was stronger, the best point on each side, one tip for each. Extend kids vote only on what was actually said."
+      },
+      {
+        "t": "Debrief the respect",
+        "d": "End by asking which point from the losing side was strongest, and whether you can disagree with someone and still respect them. Swap sides for the next debate."
+      }
+    ],
+    "timing": "One debate fits a 45 to 60 minute period: 10 minutes of warm-up, 15 minutes of prep, then the timed debate and verdict. Run one a week so every student takes a turn speaking."
   }
 }

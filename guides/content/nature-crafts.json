@@ -276,5 +276,35 @@
     "Find a local craft made from natural materials at a market and, with your help, ask the seller how it's made.",
     "Build a wind chime from what's lying around here, like driftwood or seed pods, and tune it by ear before you leave."
   ],
-  "backHome": "Paint a story stone with one creature or place from the trip, and use it to tell that story at home."
+  "backHome": "Paint a story stone with one creature or place from the trip, and use it to tell that story at home.",
+  "classroom": {
+    "intro": "Six crafts give a class plenty to make on almost no budget. Gather on the school grounds together, then run one craft per session, or set up a few crafts as stations for small groups.",
+    "tips": [
+      {
+        "t": "Gather once, together",
+        "d": "Do one supervised gathering walk with the rules read aloud: fallen materials only, no living plants, leave nests and webs alone. Sort the haul into class bins by type."
+      },
+      {
+        "t": "Groups of four",
+        "d": "Each group shares one set of string, tape, paper and a paint plate. Jobs rotate: materials, builder, tester or listener, and the one who writes the title."
+      },
+      {
+        "t": "Stations with levels",
+        "d": "Run the frame, the prints and the story stones as three stations in one period. Each step lists Explore, Develop and Extend, so kids choose how far to take it."
+      },
+      {
+        "t": "Earth paint, kept tidy",
+        "d": "Collect the soils outside in labelled cups, then mix at tables with a few drops of water each. A drop of white glue per colour makes the paintings last for display."
+      },
+      {
+        "t": "Wait for sun",
+        "d": "Keep Step 5 on standby for the first sunny day, and run it on the playground with paper held down by stones. Do the blurry shadow question as one class demo."
+      },
+      {
+        "t": "Gallery and story round",
+        "d": "End with a gallery of frames, chimes, prints and paintings with their titles. Then finish with story stones in a circle, each group telling a three-stone story to the class."
+      }
+    ],
+    "timing": "Plan four or five sessions of 40 to 50 minutes: one for gathering, frames and chimes, one for prints and earth paint, one sunny slot for shadows, and one for story stones and the gallery."
+  }
 }

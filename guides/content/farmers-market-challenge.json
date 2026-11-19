@@ -339,5 +339,35 @@
     "Convert three market prices into your home money in your head, using a rounded exchange rate, then check them on a calculator.",
     "Notice how food is sold here, by the kilo, the pile, the bunch or the piece, and work out what one really costs."
   ],
-  "backHome": "Price the same three foods at your market at home, and compare them with what they cost on the road in your home money."
+  "backHome": "Price the same three foods at your market at home, and compare them with what they cost on the road in your home money.",
+  "classroom": {
+    "intro": "A whole class can't shop one market, but the math works just as well with a market built in the room. Groups get a budget, compare stalls, plan a meal and buy from classmates running the stalls.",
+    "tips": [
+      {
+        "t": "Build a class market",
+        "d": "Set up 4 to 6 stalls with printed price signs, using real prices from a local market or grocery flyer. Sell the same items at different prices and sizes so unit prices matter."
+      },
+      {
+        "t": "Play money budgets",
+        "d": "Give each group $20 in play money and one goal from the guide: a family dinner, snacks for the week, one recipe or breakfast. Real produce is a bonus, not a must."
+      },
+      {
+        "t": "Shoppers and stallholders",
+        "d": "Half the groups run stalls while the other half shop, then swap. Each shopping group has a scout, a list keeper, a calculator and a cashier who counts the change."
+      },
+      {
+        "t": "You play the grower",
+        "d": "Take one stall yourself and answer as a grower would. Shoppers ask a question from the Questions to ask a grower card before they buy, just as in Step 4."
+      },
+      {
+        "t": "Cook at home or school",
+        "d": "Step 5 goes home as a family meal, or to a school kitchen with an adult on the knives and heat. In class, groups price the same list from a supermarket flyer."
+      },
+      {
+        "t": "Levels and a debrief",
+        "d": "Explore kids compare one item at two stalls, and Extend kids compare per pound against per item. End by asking which stall won most often, and whether cheapest meant best."
+      }
+    ],
+    "timing": "Three sessions of about 45 minutes: scouting and unit prices (Steps 1 and 2), meal planning (Step 3), then market day (Step 4). Cooking happens at home or in a school kitchen, and the final math takes one more period."
+  }
 }

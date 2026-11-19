@@ -335,5 +335,35 @@
     "Ride one leg on local transport, log every wait and transfer, and compare the real time with what the timetable promised.",
     "Read the speed limit signs here, in kilometres or miles, and redo your driving time with the local numbers."
   ],
-  "backHome": "Plan a day trip from home with the same math, and compare what an hour of driving costs there and here."
+  "backHome": "Plan a day trip from home with the same math, and compare what an hour of driving costs there and here.",
+  "classroom": {
+    "intro": "Groups plan road trips to different real destinations from your school, all with the same car and today's gas price. Every group does the same math with different numbers, so comparing the plans at the end is half the fun.",
+    "tips": [
+      {
+        "t": "Groups of four, four jobs",
+        "d": "Give each group a navigator for the route, a timekeeper for speed and stops, a fuel officer for gallons and cost, and a treasurer for the fixed and per person costs."
+      },
+      {
+        "t": "Different trips, same car",
+        "d": "Give every group a destination card at a different distance, from a nearby park to a city 6 to 8 hours away. Use one class car with a set miles per gallon."
+      },
+      {
+        "t": "Maps on screens or paper",
+        "d": "Step 1 works on school devices with a map app, or on printed road maps with a scale bar. Groups compare two routes, like the fastest and the prettiest."
+      },
+      {
+        "t": "Post today's gas price",
+        "d": "Look up the local gas price that morning and write it on the board. For Step 3, hand every group the same what-if: gas goes up 50¢ a gallon."
+      },
+      {
+        "t": "Twist cards replace the drive",
+        "d": "Instead of riding along, each group pulls 2 twist cards from Road Trip Numbers and fixes its plan. Kids who take a real family drive can track it as navigator at home."
+      },
+      {
+        "t": "Levels and a trip fair",
+        "d": "Explore groups take a short trip and divide by 50, while Extend groups plan two or three stops in the best order. End with a trip fair where groups compare cost per person."
+      }
+    ],
+    "timing": "Plan three periods of about 45 minutes: route and driving time (Steps 1 and 2), fuel and the budget (Steps 3 and 4), then twist cards and the trip fair. A real family drive is an optional home extension."
+  }
 }

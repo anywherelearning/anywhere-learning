@@ -363,5 +363,35 @@
     "src": "guides/assets/radio-drama-studio.jpg",
     "alt": "Watercolour illustration of a blanket-fort recording studio with a phone on a stack of books, headphones, a lamp and a script",
     "caption": "A blanket fort, a phone and a marked-up script."
+  },
+  "classroom": {
+    "intro": "Radio drama is naturally a group project, with a cast, a sound crew and an editor. Run it in small production teams, each recording one short scene, and finish with a listening party for the whole class.",
+    "tips": [
+      {
+        "t": "Teams of four or five",
+        "d": "Each team has a narrator, characters, a sound person and an editor. Use the Cast it card to plan voices, and let one reader double up on two characters."
+      },
+      {
+        "t": "One device per team",
+        "d": "Each team needs one tablet or laptop with a free recording app, plus a bag of sound objects: paper, a bowl of water, shoes, a sheet."
+      },
+      {
+        "t": "Find quiet corners",
+        "d": "Recording needs quiet. Schedule recording slots in a quiet nook or the school library while the other teams rehearse and mark lines with the Script marks card."
+      },
+      {
+        "t": "You are the first listener",
+        "d": "Circulate and play back test takes with each team. Ask what a listener would miss, and use the one-minute word count from the Listen back card."
+      },
+      {
+        "t": "Levels inside a team",
+        "d": "Explore kids take one character or one sound effect, Develop kids mark the whole script and pace it, and Extend kids rewrite a scene so it works with no pictures."
+      },
+      {
+        "t": "Listening party",
+        "d": "Play every drama for the class with the lights low, and ask which moment listeners could picture best. Share recordings with families only, never publicly online."
+      }
+    ],
+    "timing": "Plan five sessions of about 45 minutes: casting and marking, rehearsing with test takes, making sounds, recording, then editing and the listening party. Younger teams often need an extra session for editing."
   }
 }

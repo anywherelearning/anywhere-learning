@@ -329,5 +329,35 @@
     "alt": "A brother and sister on a couch under a blanket, looking at a laptop screen together",
     "caption": "Is it real? Let's check, together.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "Checking posts together out loud is exactly how this skill grows, so a class is a great place for it. You pick the examples and run the searches on the projector, and groups work through the five checks.",
+    "tips": [
+      {
+        "t": "You choose the examples",
+        "d": "Use the guide's examples, the hurricane shark photos and the Tree Octopus site, plus one real post. Preview everything first so nothing upsetting comes up in front of the class."
+      },
+      {
+        "t": "Groups of four",
+        "d": "Each group gets one example. One kid names the feeling with the Pause signals card, one finds who made it, one looks closely for clues, and one reports the group's decision."
+      },
+      {
+        "t": "Search on the projector",
+        "d": "Run the Check elsewhere searches yourself at the front, or on school devices only if your policy allows supervised searching. Show the class how to spot a fact-checking site."
+      },
+      {
+        "t": "Pause and zoom together",
+        "d": "For Step 3, display each example large and pause videos. Let groups call out clues from the Look closely card, like hands, shadows or writing in the background, before you zoom in."
+      },
+      {
+        "t": "Levels in one room",
+        "d": "Explore students say real, fake or not sure with one reason, Develop students explain their three best clues, and Extend students compare an AI-made photo with a real one."
+      },
+      {
+        "t": "Respect not sure yet",
+        "d": "End with a class vote on each example: real, fake or not sure yet. Praise 'not sure yet' as an honest answer, and post the five checks on the wall for next time."
+      }
+    ],
+    "timing": "Plan one 45 to 60 minute session for Steps 1 to 5 with two or three examples, or two shorter sessions. Students can run the five checks on one surprising post at home with family."
   }
 }

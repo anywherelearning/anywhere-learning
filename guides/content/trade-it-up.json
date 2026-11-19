@@ -329,5 +329,35 @@
     "Learn the local words for swap and no thank you, then watch how people here make an offer and turn one down at a market or a shop.",
     "Make one trade with a travelling family you've got to know, with both parents agreeing, starting from something you brought from home."
   ],
-  "backHome": "Bring one small, common thing from the trip home, and see how far it trades up in your usual circle."
+  "backHome": "Bring one small, common thing from the trip home, and see how far it trades up in your usual circle.",
+  "classroom": {
+    "intro": "A classroom makes a ready-made trading circle, so this works well with a whole class. Every student starts with the same humble object and trades with classmates over a week or two, keeping a log of the climb.",
+    "tips": [
+      {
+        "t": "Set the class trading circle",
+        "d": "The circle is your class only, with no money ever. Use the Trading circle card to agree on rules: nothing valuable, nothing living, and family OK for anything from home."
+      },
+      {
+        "t": "Same starting object",
+        "d": "Give every student the same tiny object, like a paperclip or a bead. It makes the class comparison fair and shows how different chains grow from the same start."
+      },
+      {
+        "t": "Set trading times",
+        "d": "Open a short trading window, like the last ten minutes on two days a week, so trading doesn't take over the room. Students log each trade with a quick drawing or note."
+      },
+      {
+        "t": "You check every trade",
+        "d": "Anything bigger than the starting objects needs your yes before it changes hands. If a trade feels unfair to someone, undo it kindly and talk through the Fair trade check card."
+      },
+      {
+        "t": "Levels in the log",
+        "d": "Explore students make a few trades and draw each one, Develop students make five trades and write why each was a step up, and Extend students aim for a dream item and adjust their plan."
+      },
+      {
+        "t": "Chain gallery",
+        "d": "Finish with each student laying out their chain on their desk. The class walks the gallery, and each student names their best trade, their hardest no and whether both sides came out happy."
+      }
+    ],
+    "timing": "Plan a 40-minute launch for Steps 1 to 3, then short trading windows over one or two weeks for Step 4, and a 40-minute gallery for Step 5. Objects come from home only with family permission."
+  }
 }

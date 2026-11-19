@@ -371,5 +371,35 @@
     "src": "guides/assets/bread-lab.jpg",
     "alt": "Watercolour illustration of a homemade loaf on a board beside three bottles with balloons and a tall glass of dough marked with tape",
     "caption": "Three balloons, one loaf, and a tape line that kept climbing."
+  },
+  "classroom": {
+    "intro": "Bread Lab works with a whole class because the yeast and balloon tests run on a desk with cups and warm water. The kneading and baking need a school kitchen, a staff room oven or one demo station you run.",
+    "tips": [
+      {
+        "t": "Groups of four with jobs",
+        "d": "Each group runs the Yeast test and Balloon test together. One kid measures, one pours, one times every 5 or 15 minutes, and one records the results table."
+      },
+      {
+        "t": "You handle hot water",
+        "d": "Fill the very hot cups yourself from a kettle that has cooled a minute, and bring them to each table. Students only ever pour cold and warm water."
+      },
+      {
+        "t": "Check allergies first",
+        "d": "Check for wheat and gluten allergies before Step 3 and send a note home if needed. Raw dough is never for tasting, so save the taste test for the baked loaf."
+      },
+      {
+        "t": "Knead in shifts",
+        "d": "Mix one dough per group from the Basic loaf card. Kneading is tiring, so students take two-minute turns and the whole group checks the window test together."
+      },
+      {
+        "t": "Bake where there's an oven",
+        "d": "Use the school kitchen or a staff room oven with an adult in charge. If there's no oven, bake one loaf yourself ahead of time and bring it in to slice and compare."
+      },
+      {
+        "t": "Compare rises across groups",
+        "d": "Line up every group's tall glass on one windowsill with tape marks. Extend groups put a second glass somewhere cooler, and the class compares the line graphs at the end."
+      }
+    ],
+    "timing": "Steps 1 and 2 fit one 60-minute period, and mixing, kneading and the rise watch need a second long block, ideally a morning. Shaping and baking take 90 minutes near an oven, or use a demo loaf with the Baker's math card."
   }
 }

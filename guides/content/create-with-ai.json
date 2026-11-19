@@ -333,5 +333,35 @@
     "alt": "A boy at a desk with two large monitors, working on a website",
     "caption": "At his desk, steering the mockup.",
     "tall": true
+  },
+  "classroom": {
+    "intro": "Making something real for a real person works well in class when each group has a client inside the school. Groups plan and do their own parts on paper, and you run the AI requests on the projector.",
+    "tips": [
+      {
+        "t": "Find real school clients",
+        "d": "Pick projects people in the building actually need: a poster for the book fair, an invitation for a class event, a sign for the school garden. The office or another teacher can be the client."
+      },
+      {
+        "t": "You type the prompts",
+        "d": "AI tools have age limits, so you run them from your account on the projector, following school policy. Groups hand you their written brief and use made-up names, never real student details."
+      },
+      {
+        "t": "Groups of four",
+        "d": "Give each group a brief writer, a designer who does the hand-made parts, a steerer who decides what to change, and a credit keeper who fills in the Credit it card as they go."
+      },
+      {
+        "t": "Test on the client",
+        "d": "For Step 4, the client visits the class or groups take the draft to them with you. Groups watch the client react, note where they get confused, and steer from there."
+      },
+      {
+        "t": "Levels within the group",
+        "d": "Explore students pick one part they'll do themselves, Develop students fill in the full Who does what card, and Extend students keep a part AI could do well and explain what they'd lose."
+      },
+      {
+        "t": "Honest credit share",
+        "d": "End with a gallery walk where each project shows its how-it-was-made line from the Credit it card. Talk as a class about why saying 'AI helped' is normal and keeps it fair."
+      }
+    ],
+    "timing": "Plan three or four sessions of 40 to 45 minutes: Steps 1 and 2 on paper, Step 3 on the projector, Step 4 with the client, then Step 5 as a gallery walk. Hand-made parts can be finished at home."
   }
 }

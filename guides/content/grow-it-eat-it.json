@@ -224,5 +224,35 @@
   "fromHome": {
     "text": "This spring, my kids decided together what to plant in their small garden. Tomatoes were one of their picks, and the cherry tomatoes worked great: we ate quite a few, straight off the plant.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "A windowsill of pots makes this a great class project: every group grows its own fast crop and owns the daily care. Pick cress, pea shoots or radishes so the harvest lands before a break.",
+    "tips": [
+      {
+        "t": "Groups of four",
+        "d": "Each group gets one pot or tray. Jobs: a waterer, a measurer, a recorder for the weekly notes and a troubleshooter. Rotate the waterer each week so everyone builds the daily habit."
+      },
+      {
+        "t": "Soak beans as a class",
+        "d": "Soak one bowl of dried beans the night before Step 1 and hand out two per group to split open. Each group also starts one bean jar on the windowsill."
+      },
+      {
+        "t": "Plan the care rota",
+        "d": "Post a simple watering rota by the window. Plan for weekends and holidays: a self-watering tray, a colleague who checks in, or a family who takes a pot home."
+      },
+      {
+        "t": "Build in contrasts",
+        "d": "Give groups different crops or spots, like the window versus the back of the room, so the Step 4 troubleshooting has real differences to compare across the class."
+      },
+      {
+        "t": "Levels in one room",
+        "d": "Explore groups grow cress and note one change a week. Develop groups plant to the right depth and measure weekly. Extend groups test deep sowing or the pea shoot cutting question."
+      },
+      {
+        "t": "Harvest tasting safely",
+        "d": "Check allergies and your school's food rules before harvest day. Kids rinse and taste raw greens, or each group takes a share home to add to a family meal. No cooking in class."
+      }
+    ],
+    "timing": "Plan one 45 minute planting session, then 2 minutes of daily care and a 10 minute measuring check each week for three to four weeks. Harvest and tasting take one more short session at the end."
   }
 }

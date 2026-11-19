@@ -329,5 +329,35 @@
     "Run the Move what-if on your own family, talking through what changed for each of you by Day 1, Day 3 and Day 7.",
     "Count everything you're living with on this trip, then pick the ten you'd keep if you had to leave the rest behind."
   ],
-  "backHome": "Pick one thing you lived without on the trip and try going without it at home for a week."
+  "backHome": "Pick one thing you lived without on the trip and try going without it at home for a week.",
+  "classroom": {
+    "intro": "A class can take on big what-ifs together, with each team thinking one all the way through. It makes for rich discussion, and a visiting guest gives everyone a real person who has lived it.",
+    "tips": [
+      {
+        "t": "Teams of four",
+        "d": "Each team picks a card from What-ifs. One reads the Keep asking card, one records the Day 1, Day 3 and Day 7 map, one argues the other side and one reports."
+      },
+      {
+        "t": "Handle it gently",
+        "d": "Some what-ifs, like Move or No shops, may be real for a student. Let teams choose freely, and never ask a student to share their own family's story."
+      },
+      {
+        "t": "Bring the expert in",
+        "d": "For Step 3, invite a grandparent, a staff member or a community guest who has lived something like it. Students prepare questions from the Ask them card beforehand."
+      },
+      {
+        "t": "A class-sized slice",
+        "d": "Pick slices that work at school: one morning using only ten things from their desk, or an afternoon getting by with ten words of another language."
+      },
+      {
+        "t": "Levels by team",
+        "d": "Explore teams name three things that would change in the first week. Develop teams map Day 1, Day 3 and Day 7. Extend teams plan a month out and test their riskiest idea."
+      },
+      {
+        "t": "Close with feedback",
+        "d": "Teams present their final plans to the guest or another adult who knows. Then each team puts its Day 1 thinking beside the final plan and names the biggest change."
+      }
+    ],
+    "timing": "Plan two 45-minute sessions for choosing and mapping, one for the guest visit, and one for the plan and the slice. The final feedback session can come a few days later, with the same guest or a new one."
+  }
 }

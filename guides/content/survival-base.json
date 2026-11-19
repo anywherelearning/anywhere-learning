@@ -326,5 +326,35 @@
     "Ask your host, with your help, about the worst storm or heat here in living memory, and turn it into a new scenario card.",
     "Ask your host, with your help, what people here do when the power or water goes out, and write it into your manual."
   ],
-  "backHome": "Name the dangers your own home is built for, like cold or rain, and point out the feature that handles each one."
+  "backHome": "Name the dangers your own home is built for, like cold or rain, and point out the feature that handles each one.",
+  "classroom": {
+    "intro": "Survival Base works with a class when each group runs one expedition and builds a model base, or a life-size one outside. You read a scenario card to the whole room, and every group adapts its base at once.",
+    "tips": [
+      {
+        "t": "Expedition teams of four",
+        "d": "Jobs: a mapper for the Dangers and zones card, a builder, a systems writer for the manual and a briefer who gives the final tour. Everyone agrees on the 3 base rules."
+      },
+      {
+        "t": "Models fit the classroom",
+        "d": "Most groups build a model on a tray or in a shoebox, or chalk zones outside on the playground. Save blanket forts for a group with a quiet corner to use."
+      },
+      {
+        "t": "Collect materials ahead",
+        "d": "A class bin of boxes, sticks, fabric scraps, string, tape and sticky notes covers every base. Each group gets one tray, which also stores the base between sessions."
+      },
+      {
+        "t": "You deliver the storm",
+        "d": "Read one scenario card to the whole class at once, then step back while every group adapts. A second card later in the session keeps Develop groups working."
+      },
+      {
+        "t": "Extend with real tests",
+        "d": "Extend groups run the warm water cup test, with you pouring from the kettle, or work out the water for 4 people for 3 days and its weight."
+      },
+      {
+        "t": "Briefing tours",
+        "d": "Groups brief another group or a visiting class: the mission, the dangers, how the base handles them and what changed after the scenario. Visitors ask one real question each."
+      }
+    ],
+    "timing": "Plan three sessions of 45 to 60 minutes: destination and danger map, building and the manual, then the scenario and briefings. The real hour or night in the base from Step 5 stays a home option."
+  }
 }

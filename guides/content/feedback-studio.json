@@ -345,5 +345,35 @@
     "src": "guides/assets/feedback-studio.jpg",
     "alt": "Watercolour illustration of two versions of a child's dragon drawing side by side on a wooden table, with small paper slips, a pencil and a glass jar of dried beans",
     "caption": "Version 1, version 2, and fewer beans in the jar than last week."
+  },
+  "classroom": {
+    "intro": "Feedback Studio fits a class well because everyone already makes things. Groups of four run the studio session on low-stakes work, each maker sets the focus question, and everyone uses the same Point, ask, try method.",
+    "tips": [
+      {
+        "t": "Sort slips in pairs",
+        "d": "Give each pair an envelope with your 8 slips about one drawing. Pairs sort them with the Feedback test card. Explore pairs find one slip that helps; Extend pairs rewrite the unkind one."
+      },
+      {
+        "t": "Bring your own work",
+        "d": "Put something you made on the document camera and ask the class for Point, ask, try. Take it the way you want them to: thanks, one question, no explaining."
+      },
+      {
+        "t": "A But jar per table",
+        "d": "Each table gets a small cup and a handful of beans or buttons. Every 'but', 'I was going to' or 'I meant to' drops a bean, and that includes yours."
+      },
+      {
+        "t": "Groups of four for studio",
+        "d": "Rotate roles: one maker, one timekeeper for the 1 and 2 minute turns, and two givers. The maker asks the focus question and writes each piece of feedback on a slip."
+      },
+      {
+        "t": "Keep the stakes low",
+        "d": "Use quick pieces, like a five-minute sketch or a paragraph, not graded work. A student who feels shaky can ask for just one piece of feedback, on a question they choose."
+      },
+      {
+        "t": "Version 2 gallery walk",
+        "d": "Students set version 1 beside version 2 on their desks. The class walks around, and each maker explains which slip they used and which one they chose to leave out."
+      }
+    ],
+    "timing": "Plan four sessions of 30 to 40 minutes: sorting and giving (Steps 1 and 2), a few short But jar rounds, the studio session, then version 2 and the gallery walk. It slots easily into writing or art time."
   }
 }

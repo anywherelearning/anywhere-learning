@@ -334,5 +334,35 @@
     "Watch how one market seller gets people to stop, like calling out, handing out tastes or building a big display, and borrow the trick.",
     "Make one small sign in the local language, with your help, for something real, and see if people understand it."
   ],
-  "backHome": "Borrow one idea you saw on the road, like a picture instead of words, for your next sign at home."
+  "backHome": "Borrow one idea you saw on the road, like a picture instead of words, for your next sign at home.",
+  "classroom": {
+    "intro": "A real school event gives the whole class something to market and something to count. Groups pick who to reach, design a look and a message, put signs up around the school, and track which sign actually worked.",
+    "tips": [
+      {
+        "t": "Market a real school event",
+        "d": "Pick something with a date that needs people: a class play, a book fair, a lunchtime club or a class market day. The event has to be real so there's something to count."
+      },
+      {
+        "t": "Ask before you post",
+        "d": "Get permission from the office for every hallway, board or newsletter you use. Keep student names and photos off anything public, and only post online through the school's own channels."
+      },
+      {
+        "t": "Groups of four with jobs",
+        "d": "Give each group a researcher for the Who are they card, a designer for the Look and feel card, a writer for the One message card, and a counter who tracks responses."
+      },
+      {
+        "t": "Each group, a different person",
+        "d": "Have groups aim at different people, like younger students, older students, families or staff. Each group gets markers, paper and tape, and puts up two or three signs with its own code word."
+      },
+      {
+        "t": "Levels by role",
+        "d": "Explore students write what, when and where in big letters, Develop students write a headline and one thing to do, and Extend students test two headlines on three people before choosing."
+      },
+      {
+        "t": "Count and compare",
+        "d": "At the event, ask everyone how they heard or collect code words. Afterwards, the class lays out the counts side by side and each group picks one thing to change next time."
+      }
+    ],
+    "timing": "Plan three sessions of 40 minutes before the event: who to reach and the look, the message, then putting signs up. After the event, one session counts responses and decides what to change."
+  }
 }

@@ -379,5 +379,35 @@
   "fromHome": {
     "text": "Same facts, told a new way, is a game my kids already know. In Panama City, they each wrote the same treasure hunt in Santa Catalina, my son from his point of view and my daughter from hers. In El Salvador, they turned an informative text about the country into a song, set to a kids' tune we all knew. Both were for real readers: their grandparents, family and friends.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Three real readers work in a class when they're reachable from school: a letter that goes home or by mail, a bulletin for the class board or newsletter, and a how-to or story for a younger buddy class.",
+    "tips": [
+      {
+        "t": "School news counts",
+        "d": "Students can pick class or school news instead of family news: a new class pet, a field trip, something they just learned. Nobody has to share news from home."
+      },
+      {
+        "t": "Readers you can reach",
+        "d": "Help students choose: a family member or grandparent for the letter, the class board or school newsletter for the bulletin, and a younger buddy for the how-to or story."
+      },
+      {
+        "t": "Cards on every table",
+        "d": "Print one set of the Writing Style Cards per table: the Reader check, the four style cards and Did it land?. Students keep their style card open while they write."
+      },
+      {
+        "t": "Partners play the reader",
+        "d": "In Step 4, partners play each reader: a grandparent, a busy parent scrolling, a five-year-old. They wiggle at long sentences and look away after two lines."
+      },
+      {
+        "t": "Levels side by side",
+        "d": "Explore kids tell each version aloud while a partner writes, Develop kids write all three from the style cards, and Extend kids ask a reader what they'd want first."
+      },
+      {
+        "t": "Send for real",
+        "d": "Mail the letters, post the bulletins, and deliver the how-tos to the buddy class. As replies come in over the week, students check each one against its want-back line."
+      }
+    ],
+    "timing": "Plan three sessions of about 45 minutes: choosing readers and the Reader check, writing three Version 1s, then reading as each reader and writing Version 2s. Sending and checking replies happen over the following week."
   }
 }

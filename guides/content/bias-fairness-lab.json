@@ -332,5 +332,35 @@
     "src": "guides/assets/bias-fairness-lab.jpg",
     "alt": "An AI-made picture book illustration of a brother and sister standing in front of a wooden cabin by a beach",
     "caption": "The AI's version of them, from their book."
+  },
+  "classroom": {
+    "intro": "This is a strong class lab because counting is better with more hands. You run the AI tool on the projector, groups predict and tally, and the class pools its results to see patterns that one test would miss.",
+    "tips": [
+      {
+        "t": "One screen, your account",
+        "d": "AI image and chat tools have age limits, so you type every prompt on the projector from your account, inside your school's device and privacy rules. Students write the prompts on paper first."
+      },
+      {
+        "t": "Groups of four",
+        "d": "Each group takes two descriptions from the Test ideas card. One kid writes the prompt, one predicts, one tallies on the Count it card, and one reports the biggest pattern to the class."
+      },
+      {
+        "t": "Same words every time",
+        "d": "Post the exact prompt wording on the board so every test follows the Run a fair test card. Run each description three times so groups have real numbers to count, not a single picture."
+      },
+      {
+        "t": "Pool the tallies",
+        "d": "Put a class chart on the wall with a column per description. Each group adds its tally, and the class looks for the biggest pattern together instead of judging a single result."
+      },
+      {
+        "t": "Levels for every group",
+        "d": "Explore groups count one thing, Develop groups tally four things per description, and Extend groups look up a real number, like the share of nurses who are men, to check if the AI exaggerates."
+      },
+      {
+        "t": "Keep it kind",
+        "d": "Talk about results as the AI's habits from its data, never as truths about people. If a result upsets someone, pause and move straight to the Make it fairer card as a class."
+      }
+    ],
+    "timing": "Plan two sessions of 45 minutes. Steps 1 to 3 fill the first, and Steps 4 and 5 the second. Families who speak another language can help a student write a question for Step 4 at home."
   }
 }

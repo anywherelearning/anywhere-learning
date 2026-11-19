@@ -370,5 +370,35 @@
     "src": "guides/assets/kindness-missions.jpg",
     "alt": "A girl hugging her smiling grandfather from behind",
     "caption": "It starts with going first."
+  },
+  "classroom": {
+    "intro": "In a school, Kindness Missions move from the bus and the store to the hallway, the lunchroom and the playground. Students practise going first with people they see every day, and public outings become an optional family take-home.",
+    "tips": [
+      {
+        "t": "Spot chances at school",
+        "d": "Rewrite the Where to look card together for your building: the office door, a dropped pencil, a kid alone at recess, a younger student carrying a heavy bin, a full lunch tray."
+      },
+      {
+        "t": "Tally in pairs",
+        "d": "Pairs keep the Walk-past tally at lunch or recess for a week, counting chances and walk-pasts only. No names go in the notebook, and nobody gets called out for walking past."
+      },
+      {
+        "t": "Practise the Five-second move",
+        "d": "In class, you drop a pencil case or carry too much, and students spot it and move before five. Then everyone tries it for real around the building during the week."
+      },
+      {
+        "t": "Offers inside the school",
+        "d": "Students use lines from the Offer and answer card with classmates, younger kids and staff. A no thanks still counts: they went first, and that's the part that matters."
+      },
+      {
+        "t": "Family outing take-home",
+        "d": "Send home the Go first safely card with an optional mission: on a store or bus trip, with their grown-up beside them, count walk-pasts and go first. Nobody approaches strangers alone."
+      },
+      {
+        "t": "Habit check as a class",
+        "d": "Two weeks later, run the Habit check together. Explore students name one move to keep, Develop students plan an easier go-first, Extend students teach the Five-second move to a younger class."
+      }
+    ],
+    "timing": "Plan three 30-minute lessons over two weeks: spotting and tallying, then the Five-second move and offers, then the talk-through. In between, students tally and go first at school. The Habit check takes 15 minutes, two weeks later."
   }
 }

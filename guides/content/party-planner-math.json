@@ -328,5 +328,35 @@
   "fromHome": {
     "text": "My daughter organized an Italian party where every guest made their own pizza. She worked out how much dough, sauce and cheese she needed per guest, wrote the shopping list and did the shopping.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Every class has a reason to celebrate, and $5 per guest is a budget kids can really work with. Groups plan competing parties for the class, pitch them, and the winning plan gets hosted for real.",
+    "tips": [
+      {
+        "t": "Groups plan, class votes",
+        "d": "Groups of four each plan the class party: a budget keeper, a food planner, a decorations lead and a timeline keeper. The class votes on the winning plan, then everyone helps run it."
+      },
+      {
+        "t": "A class headcount",
+        "d": "With 25 guests at $5 each, the budget is $125. Use the real number from a class fund or a parent council, or run the plan on paper if there's no money."
+      },
+      {
+        "t": "Allergies come first",
+        "d": "Check your school's food and allergy rules before Step 3, and give every group the list of foods to avoid. Store-bought food with clear labels keeps it simple."
+      },
+      {
+        "t": "Price from flyers",
+        "d": "Groups use the How much per guest and Pack sizes cards, then price the food from grocery flyers or online pages. Rounding up pizzas and packs is the best math here."
+      },
+      {
+        "t": "Make, have or buy",
+        "d": "For decorations, kids sort ideas into make it, already have it and buy it. Art supplies already in the room count as free, which stretches the budget a long way."
+      },
+      {
+        "t": "Host and count up",
+        "d": "On party day, students set up from the timeline and count leftovers before anything gets thrown out. Explore kids count the money left, Extend kids find the cost per serving eaten."
+      }
+    ],
+    "timing": "Four periods of about 45 minutes: guests and the budget split (Steps 1 and 2), food per guest (Step 3), the timeline and pitches (Step 4), then the party. Shopping is done by you or a parent volunteer."
   }
 }

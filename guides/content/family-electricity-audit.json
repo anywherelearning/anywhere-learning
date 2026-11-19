@@ -344,5 +344,35 @@
         "Cost per day × 30 = cost per month"
       ]
     }
+  },
+  "classroom": {
+    "intro": "Your school is a great building to audit: it's full of devices, and the class can test a real saving plan for a week. Each group takes one room, and the whole class builds one report.",
+    "tips": [
+      {
+        "t": "One room per group",
+        "d": "Groups of four audit a classroom, the office, the gym or a hallway, with a spotter, a label reader, a recorder and an hours estimator. Rotate jobs between rooms."
+      },
+      {
+        "t": "Labels are look only",
+        "d": "Kids read labels and never unplug or move anything. Ask the custodian to show the back of big equipment, and use the Typical watts card when a label is out of reach."
+      },
+      {
+        "t": "One rate for everyone",
+        "d": "Ask the office or custodian for the school's electricity rate per kWh, or use a local average. With the same rate, every group's totals in Step 3 can be compared."
+      },
+      {
+        "t": "Model the chain once",
+        "d": "Do the first device on the board: watts × hours, divided by 1,000, times the rate. Then groups calculate their own room with a calculator and check each other's work."
+      },
+      {
+        "t": "A class saving week",
+        "d": "Step 5 becomes a class challenge, like the projector off between lessons and chargers unplugged at the end of the day. A different student checks the plan each day."
+      },
+      {
+        "t": "Home version and levels",
+        "d": "Kids can repeat Steps 1 to 3 at home with a family. Explore groups sort 8 devices into on all day and on for minutes, while Extend groups compare totals with a real bill."
+      }
+    ],
+    "timing": "Two periods for the hunt and the math (Steps 1 to 3), one for ranking and the plan (Step 4), then a week of the challenge at five minutes a day, and a final period to present the class report."
   }
 }

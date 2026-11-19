@@ -324,5 +324,35 @@
   "fromHome": {
     "text": "My son and a friend spent an afternoon in the woods in our neighbourhood building a shelter like this one, from nothing but fallen sticks leaned against a tree. Nobody gave them instructions: they figured out the angles, the support and what kept it standing by trying, failing and fixing it.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Engineering challenges work well with a class: groups plan, build, test and improve with fallen materials, and every group's first version is supposed to fail. You play the test, not the builder.",
+    "tips": [
+      {
+        "t": "Groups of four",
+        "d": "Jobs: a planner who sketches the design, two builders, and a tester who runs the test and records the result. Rotate jobs between version 1 and version 2."
+      },
+      {
+        "t": "Same card, every group",
+        "d": "Give every group the same card on the same day, like Bridge Builder or Raft Challenge. It turns the final test into a fair comparison across the whole class."
+      },
+      {
+        "t": "Materials per group",
+        "d": "Gather fallen sticks, rocks and leaves into a pile for each group. For water cards, bring one bin of water and cups to share. You cut any plastic bottles beforehand."
+      },
+      {
+        "t": "Be the tester",
+        "d": "Run the tests yourself or with a rotating student tester: blow on each shelter, add stones to each bridge. Cheer for version 2 louder than version 1."
+      },
+      {
+        "t": "Messy cards, safely",
+        "d": "Egg Nest drops happen outside, with hand washing after. Keep Mini Dam in a dry channel or a sand tray, never a real stream, and check insulator piles for anything sharp."
+      },
+      {
+        "t": "Design photos and share",
+        "d": "Each group photographs every version. End with a two-minute share: what failed, what changed, and why version 2 worked better. Then take builds apart and leave the space clean."
+      }
+    ],
+    "timing": "Each card takes 15 to 30 minutes, so a 45 minute period fits one card with the share and clean-up. Run one card a week, or one theme a month across a term."
   }
 }

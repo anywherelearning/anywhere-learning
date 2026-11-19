@@ -250,5 +250,35 @@
     "Compare your review of a place with what online reviews say about it, and decide which details they missed.",
     "Review a bus, train or ferry ride for comfort, price and views, and say whether you'd take it again."
   ],
-  "backHome": "Review the same kind of thing at home, like a playground or a bakery, and compare it with the one from the road."
+  "backHome": "Review the same kind of thing at home, like a playground or a bakery, and compare it with the one from the road.",
+  "classroom": {
+    "intro": "Reviews work well with a class because everyone has opinions and plenty of shared things to review: school library books, recess games, the class read-aloud. Each student writes their own column with their own rating system.",
+    "tips": [
+      {
+        "t": "Blind taste test",
+        "d": "Run Step 1 with three plain store-bought snacks or juices, labels hidden, after checking allergies. Everyone rates them, then explains exactly what made the difference."
+      },
+      {
+        "t": "Shared things to review",
+        "d": "Point students to things the class knows: a picture book, a recess game, the playground, a class read-aloud. Shared items make it easy to compare reviews of the same thing."
+      },
+      {
+        "t": "Partners test the scale",
+        "d": "In pairs, students test their rating systems on each other: what's the difference between a 3 and a 4? Could a stranger understand the score without asking?"
+      },
+      {
+        "t": "Your word is why",
+        "d": "When a review says 'good', ask what a reader would see if they went. Whatever the student answers is the proof sentence, and it goes right into the review."
+      },
+      {
+        "t": "Levels in one room",
+        "d": "Explore kids say the review with one 'because' and then write or dictate it, Develop kids write the full review with a downside, and Extend kids compare two similar things."
+      },
+      {
+        "t": "A class review wall",
+        "d": "Post the columns on a wall or bind them as a class guide. Readers mark which review they'd trust enough to act on, and authors hear why."
+      }
+    ],
+    "timing": "Plan four sessions of about 40 minutes: taste test and rating systems, noticing, writing, then the column and sharing. Students can review things from home too, like a book or a weekend outing."
+  }
 }

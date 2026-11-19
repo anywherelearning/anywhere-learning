@@ -337,5 +337,35 @@
     "Count how people get around here for ten minutes, walking, biking, buses or scooters, and compare it with your street.",
     "Photograph three clever small fixes around town, like a sign, a ramp or a shared shelf, and guess who made each one."
   ],
-  "backHome": "Pick one fix you saw on the road, check whether it would help your own street, and pitch it to whoever looks after it."
+  "backHome": "Pick one fix you saw on the road, check whether it would help your own street, and pitch it to whoever looks after it.",
+  "classroom": {
+    "intro": "With a class, the neighbourhood becomes the schoolyard and the block around the school, walked together on a supervised class walk. Teams spot problems, gather evidence and pitch a fix to someone who can say yes.",
+    "tips": [
+      {
+        "t": "One class walk",
+        "d": "Do Step 1 as a whole-class walk around the school grounds or block, with extra adults if you need them. Each team carries a clipboard and the What to look for card."
+      },
+      {
+        "t": "Teams of four with jobs",
+        "d": "One sketches, one notes where things are, one takes photos on a class device, and one asks 'Who would have trouble here?' at every stop."
+      },
+      {
+        "t": "Evidence during school",
+        "d": "For Step 3, teams count at recess, drop-off or lunch. Interviews are with the custodian, the principal or a parent volunteer you've arranged, never with strangers."
+      },
+      {
+        "t": "One big class map",
+        "d": "Draw one large map of the school area and let each team add its numbered marks. Then each team uses the Pick one card to choose its own problem."
+      },
+      {
+        "t": "Levels by team",
+        "d": "Explore teams draw a fix and explain how it helps. Develop teams fill in the Proposal page and answer one objection. Extend teams cost out two fixes and answer every objection."
+      },
+      {
+        "t": "A real audience",
+        "d": "Teams give their 30-second pitch to the principal, the parent council or a town staff member you invite. Anything that goes outside the class goes through you first."
+      }
+    ],
+    "timing": "Plan four 45-minute sessions: the walk, the map, the evidence, then the design. Pitches can be a fifth session or a short event. Students can walk their own street with family and bring back one more problem."
+  }
 }

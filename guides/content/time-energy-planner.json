@@ -348,5 +348,35 @@
     "Live on local time for one day, eating and resting when families here do, and check what it does to your energy line.",
     "After a long trip or a time change, plan the next day around everyone's numbers, with an easy morning."
   ],
-  "backHome": "Keep one rhythm from the trip that helped, like an afternoon rest, and try it at home for a week."
+  "backHome": "Keep one rhythm from the trip that helped, like an afternoon rest, and try it at home for a week.",
+  "classroom": {
+    "intro": "Every student has a school day, so the class tracks the same day together and compares energy lines. Students see that best-brain times differ from kid to kid, and that planning around them is a real skill.",
+    "tips": [
+      {
+        "t": "Track the school day",
+        "d": "For Step 1, students list everything in a school day using the Where the day hides card, including transitions and waiting. After-school time goes on the list only if they want."
+      },
+      {
+        "t": "Class-wide fuel checks",
+        "d": "Ring a chime five times across the day. Everyone writes their Fuel check number and the time, then sorts a half deck into suits while a partner times it."
+      },
+      {
+        "t": "Decks per pair",
+        "d": "Pairs share one deck of cards and a timer. One sorts while the other times, then they swap. A handful of decks covers the whole class working in turns."
+      },
+      {
+        "t": "Lines stay personal",
+        "d": "Energy lines aren't ranked or posted with names. Students can share the shape of their line if they like, but nobody has to explain a low number."
+      },
+      {
+        "t": "Levels in one room",
+        "d": "Explore students colour three dots across the day. Develop students check in five times and name what moved their line. Extend students track two kinds of day and compare."
+      },
+      {
+        "t": "Plan what they control",
+        "d": "For Steps 4 and 5, students plan the parts of tomorrow they choose, like independent work time or the evening, then live it, test a reset and report back."
+      }
+    ],
+    "timing": "Day 1 runs across a normal school day, with check-ins of about two minutes. Steps 3 and 4 take one 40-minute session. The plan is lived the next day, followed by a 15-minute debrief on resets."
+  }
 }

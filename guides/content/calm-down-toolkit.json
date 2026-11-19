@@ -336,5 +336,35 @@
     "src": "guides/assets/calm-down-toolkit.jpg",
     "alt": "A boy with glasses reading a book in a green hammock in the forest",
     "caption": "His reset: a book and a little time alone."
+  },
+  "classroom": {
+    "intro": "A class can test reset tools together on a calm day and turn the favourites into a calm corner everyone uses. Each student still makes a private plan, because what settles one kid often winds up another.",
+    "tips": [
+      {
+        "t": "Test on a calm day",
+        "d": "Wind the class up with a quick movement game, then try one tool from each group on the Reset tools card together. Students rate each tool privately."
+      },
+      {
+        "t": "Quiet versions for school",
+        "d": "Screaming into a pillow won't work at a desk. Have the class invent quiet versions together, like squeezing a cushion, pressing palms hard together or a walk to the water fountain."
+      },
+      {
+        "t": "Build a calm-down corner",
+        "d": "Stock a spot with the tools the class rated highest: a cushion, headphones, a book, a blanket. Agree on a signal for using it, and that nobody has to explain why."
+      },
+      {
+        "t": "Levels for every desk",
+        "d": "Explore students give each tool a thumbs up or down. Develop students rate every tool on the Rate it card. Extend students time how fast each one slows their breathing."
+      },
+      {
+        "t": "Plans stay private",
+        "d": "Each student writes My calm-down plan and keeps it in their desk, with a copy for you if they agree. The What helps from you line is now your job, so read it."
+      },
+      {
+        "t": "Loop in families and counselor",
+        "d": "Offer to send the plan home so families use the same words. If a student's meltdowns are getting more frequent, or someone gets hurt, bring in your school counselor."
+      }
+    ],
+    "timing": "Steps 1 to 4 fit in two 40-minute sessions on calm days. Step 5 runs for a few weeks: once a week, take five minutes to ask the class which tools got used, then let students update their plans privately."
   }
 }

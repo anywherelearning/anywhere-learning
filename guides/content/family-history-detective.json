@@ -224,5 +224,35 @@
   "fromHome": {
     "text": "My daughter interviewed her grandfather, my dad, about his life. Then she made a poster to show the rest of us what she had learned about him.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "The interview happens outside school, so the class version splits the work: students prepare in class, interview an older relative or family friend as homework, then build timelines and write stories back in class.",
+    "tips": [
+      {
+        "t": "Photo detective together",
+        "d": "Start with old photos of the school or town. Small groups write guesses about who, when and where, with the clue in the photo that backs each one."
+      },
+      {
+        "t": "Questions in pairs",
+        "d": "Partners turn yes-or-no questions into open ones and practise on each other. Explore kids dictate three, Develop kids write eight to ten, and Extend kids add follow-ups for one-word answers."
+      },
+      {
+        "t": "A take-home interview",
+        "d": "Send home a short note explaining the interview. Any older adult counts: a grandparent, an old family friend, a family neighbour, in person, on the phone or on video."
+      },
+      {
+        "t": "Offer another route",
+        "d": "Not every kid has an older relative to ask. Offer an older staff member or school volunteer you've set up, and never ask a student to explain why."
+      },
+      {
+        "t": "Keep family stories private",
+        "d": "Students choose which story to share and leave out anything personal. Family trees can be sensitive, so let students draw the tree of the person they interviewed instead of their own."
+      },
+      {
+        "t": "Timeline wall and share",
+        "d": "Hang timelines along a wall with a strip of world events above them. Students read one story aloud in small reading circles and send a copy to the person they interviewed."
+      }
+    ],
+    "timing": "Plan three class sessions of about 45 minutes around a one-week take-home window: photos and questions before, then timelines, trees and story writing after. Sharing the stories can be its own short session."
   }
 }

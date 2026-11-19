@@ -330,5 +330,35 @@
   "fromHome": {
     "text": "Building water channels is one of my kids' favourite things to do at the beach. They dig, the waves test it, something collapses, and they dig again, deeper or at a new angle. Nobody calls it engineering, but that's exactly what it is.",
     "quotes": []
+  },
+  "classroom": {
+    "intro": "Volume 2 runs well with a class because every challenge comes down to one fair test with a number at the end. Groups build, measure and change one thing at a time, then compare results.",
+    "tips": [
+      {
+        "t": "Groups of four",
+        "d": "Jobs: a builder, a launcher or pourer who runs the test, a measurer who counts steps or seconds, and a recorder. Rotate jobs for each new version."
+      },
+      {
+        "t": "Kit per group",
+        "d": "Pack a small bag for each group with string, cups, foil, rubber bands, a spoon, straws and paper. Fallen sticks, rocks and pinecones come from the school grounds."
+      },
+      {
+        "t": "Lanes and safety",
+        "d": "For Launch and aim, set up lanes facing one way with nobody in front, pinecones only, never at a person. For Pulley Lift, nobody stands under the bag."
+      },
+      {
+        "t": "Water in basins",
+        "d": "Run Move the water over basins or on tables outside. Stone Skipper needs calm, shallow water and an adult beside each kid, so make it a field trip or a take-home card."
+      },
+      {
+        "t": "One change per test",
+        "d": "Make this the rule of the room: one change per test. Post a class chart where groups log each change and its result, so everyone sees which change mattered."
+      },
+      {
+        "t": "Compare and debrief",
+        "d": "End each card by putting every group's best number on the board. Ask which single change made the biggest difference, and why three changes at once couldn't tell you."
+      }
+    ],
+    "timing": "Each card takes 15 to 30 minutes, so one 45 minute period fits a card, the measuring and clean-up. Work through one theme a week and you have five weeks of outdoor engineering."
   }
 }

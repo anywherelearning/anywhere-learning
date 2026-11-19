@@ -319,5 +319,35 @@
     "src": "guides/assets/probability-lab.jpg",
     "alt": "Watercolour illustration of a homemade paper-plate spinner with four coloured wedges, two dice, a pile of buttons and pennies as tokens, and a tally sheet on a wooden table",
     "caption": "One spinner, a pile of buttons, and the real odds."
+  },
+  "classroom": {
+    "intro": "A class carnival is the perfect way to run this. Every group builds one game of chance, works out the odds, sets a price and a prize, then opens its booth while the rest of the class plays with tokens.",
+    "tips": [
+      {
+        "t": "Start together",
+        "d": "Do Step 1 as a whole class: everyone guesses how many sixes in 12 rolls, then rolls and tallies. Put all the results on the board, so the class sees how close the total gets."
+      },
+      {
+        "t": "Groups of three or four",
+        "d": "Each group builds one game: a paper-plate spinner, three cups and a ball, dice or a card draw. Jobs: builder, odds counter, tally keeper and banker."
+      },
+      {
+        "t": "Supplies per group",
+        "d": "Each group needs paper plates and paperclips, cups, dice or a deck of cards, and a cup of tokens like buttons or counters. No real money, ever."
+      },
+      {
+        "t": "Test with 40 plays",
+        "d": "In Step 3, groups predict their wins in 40 plays, then play all 40 and compare. Pool every group's tallies to show that more plays land closer to the odds."
+      },
+      {
+        "t": "Carnival day",
+        "d": "Half the groups run booths while the other half play, then swap. Each player starts with the same tokens, and each booth tallies tokens in and prizes out for 30 plays or more."
+      },
+      {
+        "t": "Levels and the till",
+        "d": "Explore groups just see who came out ahead, while Extend groups set a price so the house keeps exactly 10%. End with every booth's till, and where the same trick shows up in real life."
+      }
+    ],
+    "timing": "Three periods of about 45 minutes: guessing and building (Steps 1 and 2), counting and testing the odds (Step 3), then pricing and the carnival (Steps 4 and 5). A big class can spread the carnival over two periods."
   }
 }

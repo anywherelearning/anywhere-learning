@@ -323,5 +323,35 @@
     "src": "guides/assets/conflict-fix.jpg",
     "alt": "A brother and sister asleep in the back seat of a car, her head resting on his shoulder",
     "caption": "Back to normal."
+  },
+  "classroom": {
+    "intro": "Conflict Fix gives your class one shared script for the fights that keep coming back, like turns at the wall ball court or who sits where. Teach it on made-up fights first, then use it privately with real ones.",
+    "tips": [
+      {
+        "t": "Practise on pretend fights",
+        "d": "Write short role-play cards for made-up arguments, like two characters fighting over the last marker. Groups of three act them out: two characters and one turn-runner."
+      },
+      {
+        "t": "The talking object rule",
+        "d": "The turn-runner holds a talking object, like the spoon in Step 2, and hands it over. Only the holder speaks, and during Hear it the turn-runner asks, 'Is that what you meant?'"
+      },
+      {
+        "t": "Real fights stay private",
+        "d": "Name two or three cool-down spots before you need them. When a real conflict happens, run the steps away from the class, at a side table or in the hallway, never in front of everyone."
+      },
+      {
+        "t": "Levels in the role-plays",
+        "d": "Explore students name one thing they did and pick a way to make up. Develop students run all five steps. Extend students name their part first and write a fix for other fights too."
+      },
+      {
+        "t": "Know when to step out",
+        "d": "If it gets physical, separate students right away and follow your school's process. If the same kids keep clashing, or it looks like bullying, bring in your counselor instead of mediating alone."
+      },
+      {
+        "t": "Debrief the characters",
+        "d": "After each role-play, ask the class which step was hardest and what the characters could try next time. Keep the talk on the characters, not on real fights in the room."
+      }
+    ],
+    "timing": "Teach the five steps over three 30-minute sessions of role-plays. After that, a real conflict takes 10 to 15 minutes. For a fight the whole class keeps having, like line order, run Fix it together and post Our fix."
   }
 }

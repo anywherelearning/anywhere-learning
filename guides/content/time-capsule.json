@@ -375,5 +375,35 @@
     "src": "guides/assets/time-capsule.jpg",
     "alt": "Watercolour illustration of an open tin box on a wooden table holding a rolled paper strip, a traced paper hand, a folded letter and a grocery receipt, with a tape measure curled beside it",
     "caption": "A paper strip, a traced hand, and a receipt for later."
+  },
+  "classroom": {
+    "intro": "A class time capsule is a classic for good reason. Each student fills their own envelope, the class adds a few shared pages, and everything goes into one box to open at the end of the year or later.",
+    "tips": [
+      {
+        "t": "Prices from flyers",
+        "d": "Bring in grocery flyers or ask for a receipt from home. Small groups fill in the Price survey card for eight items, writing the exact price and size of each."
+      },
+      {
+        "t": "Measure in pairs",
+        "d": "Partners mark each other's height with a book flat on the head, cut and date the paper strip, trace hands and feet, and measure arm span with the Measure me card."
+      },
+      {
+        "t": "Interview classmates",
+        "d": "In class, students ask four Family snapshot questions to classmates instead of family. Asking the same questions at home is optional homework, never required."
+      },
+      {
+        "t": "Private letters stay private",
+        "d": "The Letter to future me goes into a sealed envelope with the student's name on it. Tell students nobody will read it, and keep that promise."
+      },
+      {
+        "t": "Levels for predictions",
+        "d": "Explore kids say three things that will change and draw future them, Develop kids write five predictions with reasons, and Extend kids rate how sure they are."
+      },
+      {
+        "t": "A class sealing ceremony",
+        "d": "Everyone signs the lid and says one wish. Store the box somewhere cool and dry at school with a clear opening date, or send each envelope home to keep."
+      }
+    ],
+    "timing": "Plan four sessions of about 40 minutes: prices, measuring, interviews, then predictions, letters and sealing. Ask families for a receipt or flyer the week before, and keep a few spare flyers for kids without one."
   }
 }
