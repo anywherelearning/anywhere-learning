@@ -14,6 +14,7 @@
  *   - sendGrantEndingEmail                    → 14 days before a grant ends
  *   - sendGiftReceiptEmail                    → gift buyer's receipt + printable card
  *   - sendOwnerAlertEmail                     → plain-text alert to the owner inbox
+ *   - sendWorkshopConfirmationEmail           → free live workshop signup (/workshop)
  */
 
 import { Resend } from 'resend';
@@ -33,6 +34,7 @@ import GrantEnding from '@/emails/GrantEnding';
 import BasecampReminder from '@/emails/BasecampReminder';
 import BasecampAnnouncement from '@/emails/BasecampAnnouncement';
 import GiftReceipt from '@/emails/GiftReceipt';
+import WorkshopConfirmation from '@/emails/WorkshopConfirmation';
 import type { MidpointGuide, MidpointVariant } from '@/lib/trial-midpoint';
 
 function getResend() {
@@ -491,5 +493,30 @@ export async function sendOwnerAlertEmail({ subject, text }: { subject: string; 
     to: REPLY_TO,
     subject: `[Anywhere Learning] ${subject}`,
     text,
+  });
+}
+
+/** "You're in" for the free live workshop (/workshop). */
+export async function sendWorkshopConfirmationEmail({
+  to,
+  dayLabel,
+  timeLabel,
+  googleUrl,
+  icsUrl,
+  zoomUrl,
+}: {
+  to: string;
+  dayLabel: string;
+  timeLabel: string;
+  googleUrl: string;
+  icsUrl: string;
+  zoomUrl?: string | null;
+}) {
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: `You're in: ${dayLabel} at ${timeLabel}`,
+    react: WorkshopConfirmation({ dayLabel, timeLabel, googleUrl, icsUrl, zoomUrl }),
   });
 }
