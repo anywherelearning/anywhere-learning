@@ -2,7 +2,7 @@
  * Black Friday offer (Nov 2026): the yearly plan's first year for $79 instead
  * of the $99 founder rate. Membership only, the shop is not discounted.
  *
- * Window: Tue Nov 24, 2026 00:00 PT to Tue Dec 1, 2026 23:59 PT. Auto-applied
+ * Window: Mon Nov 23, 2026 00:00 PT to Tue Dec 1, 2026 23:59 PT. Auto-applied
  * at checkout, no code. The offer travels from /black-friday to Stripe through
  * `?offer=bf` on /start-trial, backed by the same cookie the Fall offer used.
  *
@@ -18,7 +18,7 @@ export const BLACK_FRIDAY_OFFER = {
   amountOffUsd: 20,
   // Stripe coupon ID (created by scripts/create-black-friday-coupon.ts)
   couponId: 'black_friday_2026',
-  startsAt: new Date('2026-11-24T08:00:00.000Z'), // Tue Nov 24, 00:00 PT
+  startsAt: new Date('2026-11-23T08:00:00.000Z'), // Mon Nov 23, 00:00 PT (moved up from Tue Nov 24)
   endsAt: new Date('2026-12-02T07:59:59.000Z'), // Tue Dec 1, 23:59 PT
   endsLabel: 'Tuesday, Dec 1',
   endsLabelShort: 'Dec 1',

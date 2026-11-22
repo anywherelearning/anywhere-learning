@@ -18,7 +18,7 @@ import { FOUNDER_PRICE_USD, MONTHLY_PRICE_USD, POST_FOUNDER_PRICE_USD, TRIAL_DAY
 
 /**
  * /black-friday: the landing page for the membership trial + Black Friday offer
- * ($79 first year, Nov 24 to Dec 1). One job: start the trial. Built from the
+ * ($79 first year, Nov 23 to Dec 1). One job: start the trial. Built from the
  * homepage's own pieces (taped polaroids, eyebrows, the map/month/record
  * tour, testimonials, FAQ accordion) so it reads as the same site, but with
  * no nav and nothing that leads away. Not indexed, not in the sitemap.
