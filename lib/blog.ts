@@ -9623,7 +9623,7 @@ const posts: BlogPost[] = [
     title: 'How Kids Learn a Language While You Travel (and How to Start at Home)',
     seoTitle: 'Learning a Language While Traveling With Kids: What Works',
     excerpt: 'Two winters of travel in Central America taught us that lessons give kids the words and real jobs with real people make the words stick. What worked for our kids, from their first Uber ride in Spanish to a goodbye note for a cashier, and how any family can borrow it at home.',
-    metaDescription: 'How kids learn Spanish or any language while traveling: one-on-one lessons, a step-by-step mission ladder, the hard parts and starting at home. Ages 6 to 14.',
+    metaDescription: 'How kids learn Spanish or any language while traveling: one-on-one lessons, a mission ladder, the hard parts and starting at home. Ages 6 to 14.',
     hook: 'When a driver asks a question, it is usually my kids who answer.',
     category: 'travel-worldschool',
     pillarSlug: 'worldschooling-guide',
@@ -9640,10 +9640,10 @@ const posts: BlogPost[] = [
 
       { type: 'paragraph', text: 'When a driver asks us a question, in an Uber, a shuttle or a tuk tuk, it is usually my kids who answer. Their dad can’t understand much Spanish, so they talk for him.' },
       { type: 'paragraph', text: 'Spanish is their third language. French is our home language, and English is everywhere else: sports, friends, the whole community. Switching between those two is just who they are. Spanish is harder. My son is 13 and my daughter is 10, and between last winter in Panama, Costa Rica and El Salvador and this fall in Guatemala, they have come a long way.' },
-      { type: 'paragraph', text: 'Here is what made the difference, and how to use it on the road or at home.' },
+      { type: 'paragraph', text: 'Here is what made the difference over two winters of [worldschooling](/guides/worldschooling-guide), and how to use it on the road or at home.' },
 
-      { type: 'heading', level: 2, text: 'Lessons: one-on-one does the most' },
-      { type: 'paragraph', text: 'We have tried a few setups, and for the language itself, one-on-one lessons have done the most for our kids. In El Salvador, we had a private teacher through a school: one hour every day for two weeks, the kids and me together, working on grammar and conversation. In Guatemala, they go to a Spanish school every weekday from 1 to 4 pm, the two of them with one teacher. Mornings are for everything else: math, art, sports and projects.' },
+      { type: 'heading', level: 2, text: 'Language lessons abroad: one-on-one does the most' },
+      { type: 'paragraph', text: 'We have tried a few setups, and for the language itself, one-on-one lessons have done the most for our kids. In [El Salvador](/blog/worldschooling-el-salvador), we had a private teacher through a school: one hour every day for two weeks, the kids and me together, working on grammar and conversation. In Guatemala, they go to a Spanish school every weekday from 1 to 4 pm, the two of them with one teacher. Mornings are for everything else: math, art, sports and projects. (Here is [how we structure a worldschool day](/blog/worldschool-day-structure) in general.)' },
       { type: 'paragraph', text: 'A teacher who is only working with your kids can go at their pace, catch their mistakes and push them to speak instead of just listen. The school here also organizes cultural activities and gives us great information on the region when we need it, which helps more than you would think in a new place.' },
       { type: 'image', src: '/images/language-travel-el-salvador-lesson.jpeg', alt: 'Two kids at a wooden table across from their Spanish teacher at a language school in El Salvador, a whiteboard behind her', caption: 'Spanish lessons in El Salvador: one teacher, one table, nowhere to hide.' },
       { type: 'heading', level: 3, text: 'Questions to ask a language school' },
@@ -9682,7 +9682,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'Culture, math and writing come with it' },
       { type: 'paragraph', text: 'A language makes more sense when you know the place it comes from. Alongside the lessons, we look for activities where the kids learn how people live: cooking classes (pupusas in El Salvador, tamales in Guatemala), making bracelets in Guatemala, a coffee tour and a chocolate tour in Panama. Each one comes with new words and a real reason to ask questions. A cooking class is a vocabulary lesson you get to eat at the end.' },
       { type: 'image', src: '/images/language-travel-tamales.jpeg', alt: 'A girl in a soccer jersey stirring a bowl of masa and a boy folding banana leaves at a tamale cooking class in Guatemala', caption: 'Tamales class in Guatemala.' },
-      { type: 'paragraph', text: 'It is not only a language lesson either. A new currency means mental math at every stall: what does this cost, is that a good price, how much change should come back? Older kids can convert prices back to the money they know and compare two stores before they buy. Writing fits in too. A small notebook of the words they needed that day becomes their own dictionary. At the end of every trip, my kids write a review of the country, scored out of 100. Writing part of it in the language of that country is a great stretch for an older kid.' },
+      { type: 'paragraph', text: 'It is not only a language lesson either. A new currency means [real-world math](/blog/real-world-math-activities) at every stall: what does this cost, is that a good price, how much change should come back? Older kids can convert prices back to the money they know and compare two stores before they buy. Writing fits in too. A small notebook of the words they needed that day becomes their own dictionary. At the end of every trip, my kids write a review of the country, scored out of 100 (the same idea as [My Review Column](/shop/my-review-column)). Writing part of it in the language of that country is a great stretch for an older kid.' },
 
       { type: 'heading', level: 2, text: 'What it looks like by age' },
       { type: 'heading', level: 3, text: 'Ages 6 to 8' },
@@ -9701,7 +9701,7 @@ const posts: BlogPost[] = [
         'Cook one dish from a place where the language is spoken, reading the recipe in it.',
         'Call or video-call someone who speaks it and ask them three questions.',
       ]},
-      { type: 'paragraph', text: 'If a trip is coming, start a few weeks before you leave: a little app practice every day, the numbers up to 100 (prices are the first thing they will need), and the first three rungs rehearsed at home with you playing the driver or the shopkeeper.' },
+      { type: 'paragraph', text: 'If a trip is coming, start a few weeks before you leave (our [homeschooling while traveling](/blog/homeschool-while-traveling) post covers the rest of the prep): a little app practice every day, the numbers up to 100 (prices are the first thing they will need), and the first three rungs rehearsed at home with you playing the driver or the shopkeeper.' },
 
       { type: 'heading', level: 2, text: 'What to expect' },
       { type: 'paragraph', text: 'A few weeks in a country will not make your kids fluent. Over two winters, ours have learned a lot more words and can build much longer sentences, and they still mix up their masculines and feminines. What the travel gives them most is confidence: they know they can be understood in a language they are still learning, and that people are kind when you try. That is what keeps them going.' },
