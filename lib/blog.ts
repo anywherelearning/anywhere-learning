@@ -9650,7 +9650,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 3, text: 'El Salvador: a private teacher, the three of us together' },
       { type: 'paragraph', text: 'In El Salvador we booked a private teacher through a school. One hour every day for two weeks, with the kids and me in the same lesson, working on grammar and conversation.' },
       { type: 'heading', level: 3, text: 'Guatemala: a Spanish school, three hours a day' },
-      { type: 'paragraph', text: 'Right now the kids are registered at a Spanish school. They have class every weekday from 1 to 4 pm, both of them together with one teacher. The school also organizes cultural activities and gives us great information on the region when we need it.' },
+      { type: 'paragraph', text: 'Right now the kids are registered at a Spanish school. They have class every weekday from 1 to 4 pm, both of them together with one teacher. Mornings are for everything else: math, art, sports and projects. The school also organizes cultural activities and gives us great information on the region when we need it.' },
       { type: 'tip', title: 'Which setup to choose', text: 'For a short stay, a daily private lesson can cover the basics without taking over your days. For a longer stay, a school adds what a teacher alone cannot: other kids, a routine and a window into how people live there.' },
 
             { type: 'heading', level: 2, text: 'How to choose a language school for kids' },
@@ -9658,7 +9658,7 @@ const posts: BlogPost[] = [
       { type: 'list', ordered: false, items: [
         'Do they teach kids, and what ages? Some schools are set up mostly for adults.',
         'Will your kids be together or separate, and how many students per teacher? Ours have one teacher for the two of them.',
-        'How many hours a day, and at what time? Ours is 1 to 4 pm, which leaves the mornings free.',
+        'How many hours a day, and at what time? Ours is 1 to 4 pm, which leaves our mornings for everything else: math, art, sports and projects.',
         'How much is grammar and how much is conversation?',
         'Do they organize cultural activities, and can they help with information about the region?',
         'Can your kids try one class before you commit to a week?',
