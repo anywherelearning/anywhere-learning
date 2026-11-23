@@ -9669,7 +9669,7 @@ const posts: BlogPost[] = [
         'A walking tour.',
         'Making bracelets in Guatemala.',
         'Cooking classes: pupusas in El Salvador, tamales in Guatemala.',
-        'A coffee tour in Panama and a chocolate tour in Boquete.',
+        'A coffee tour and a chocolate tour in Panama.',
         'New Year’s Eve on the beach in Panama.',
       ]},
       { type: 'paragraph', text: 'Activities like these come with new words and a real reason to ask questions in the language. A cooking class is a vocabulary lesson you get to eat at the end.' },
