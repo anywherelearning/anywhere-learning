@@ -1198,7 +1198,7 @@ const resources: ResourcePage[] = [
       },
       {
         type: 'paragraph',
-        text: 'The best language learning we\'ve seen happened naturally: ordering food at a local tienda, chatting with kids at the park, asking for directions. When your child has a genuine reason to communicate, the motivation takes care of itself.',
+        text: 'The best language learning we\'ve seen happened naturally: ordering food at a local tienda, chatting with kids at the park, asking for directions. When your child has a genuine reason to communicate, the motivation takes care of itself. Here is our full approach, from first words to real conversations: [how kids learn a language while traveling](/blog/kids-learning-a-language-while-traveling).',
       },
       {
         type: 'heading',

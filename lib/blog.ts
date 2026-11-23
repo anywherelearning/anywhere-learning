@@ -1398,7 +1398,7 @@ const posts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'What a typical day actually looks like' },
       { type: 'paragraph', text: 'There is no typical day. That\u2019s the whole point. But if you pushed me, a day here might look something like this:' },
       { type: 'paragraph', text: 'Most of our meals happen at home. The kids help cook and do the dishes, and that\u2019s non-negotiable. When we go out, they order in Spanish. They have to. Nobody in El Zonte is going to switch to English for them. We pay with Bitcoin and nobody bats an eye. That alone sparked a conversation about cryptocurrency, digital wallets, and why an entire beach town decided to build its economy around it.' },
-      { type: 'paragraph', text: 'The kids do Spanish lessons, and they practise every time they go to the tienda, every time we eat at a restaurant, every time we have a Spanish-speaking guide. They took one surf lesson and now they rent boards and go practise on their own. They\u2019re wiping out constantly but they keep going back.' },
+      { type: 'paragraph', text: 'The kids do Spanish lessons, and they practise every time they go to the tienda, every time we eat at a restaurant, every time we have a Spanish-speaking guide. They took one surf lesson and now they rent boards and go practise on their own. They\u2019re wiping out constantly but they keep going back. (What worked for their Spanish, from first words to real conversations, is in [how kids learn a language while traveling](/blog/kids-learning-a-language-while-traveling).)' },
       { type: 'paragraph', text: 'Some days are slower. Reading, drawing, a lot of conversations. If we don\u2019t know the answer to something, we look it up. Sometimes we pull out an activity guide. Sometimes we explore. We took a pupusa-making class with a local family. The kids learned to mix the masa, fill and press the dough, and cook them on the plancha. They ate about twelve each.' },
       { type: 'pull-quote', text: 'The world doesn\u2019t organise itself into subjects. Why should learning?' },
       { type: 'heading', level: 2, text: 'A week of real learning (no curriculum required)' },
@@ -1478,7 +1478,7 @@ const posts: BlogPost[] = [
       { type: 'list', ordered: false, items: [
         'Airport: reading signs, navigating, time zones, currency conversion, patience and waiting',
         'New city: map reading, public transport, budgeting, cultural awareness, safety awareness',
-        'Restaurant: reading a menu, trying new foods, tipping customs, ordering in another language',
+        'Restaurant: reading a menu, trying new foods, tipping customs, ordering in [another language](/blog/kids-learning-a-language-while-traveling)',
         'Museum or landmark: history, art, architecture, storytelling, asking questions',
         'Getting lost: problem-solving, asking for help, staying calm under pressure',
       ]},
@@ -9632,7 +9632,6 @@ const posts: BlogPost[] = [
     readTimeMinutes: 12,
     author: amelie,
     recommendedProduct: 'local-language-mission',
-    draft: true,
     heroImage: '/images/language-travel-spanish-class-hero.jpeg',
     heroImageAlt: 'Two kids seen from behind at an outdoor Spanish lesson in Guatemala, their teacher pointing to irregular verbs on a whiteboard',
     content: [
