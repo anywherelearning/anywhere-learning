@@ -65,12 +65,16 @@ export async function GET(req: NextRequest) {
 
   // Offer the buyer arrived with, from `?offer=` or the cookie set on the way
   // to sign-up (in case the query string doesn't survive the round trip):
-  //   - 'bf' from /black-friday, while the sale window is open
   //   - 'map' from a Skills Map purchase; eligibility (bought within 72h) is
   //     checked against the signed-in email in createMembershipCheckout
+  //   - 'bf' for EVERY yearly trial while the Black Friday window is open,
+  //     not just visitors who came through /black-friday. The site-wide
+  //     banner promises $79 to everyone, and homepage / plan-picker CTAs link
+  //     here without ?offer=bf, so gating on the param charged them $99.
+  //     createMembershipCheckout still skips it if the founder phase closed.
   const offerParam = req.nextUrl.searchParams.get('offer') || req.cookies.get(OFFER_COOKIE)?.value;
   const offer: 'bf' | 'map' | undefined =
-    offerParam === BLACK_FRIDAY_OFFER.slug && isBlackFridayActive()
+    plan === 'annual' && isBlackFridayActive()
       ? 'bf'
       : offerParam === OWNER_OFFER.slug
         ? 'map'

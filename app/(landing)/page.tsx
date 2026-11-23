@@ -9,6 +9,7 @@ import Eyebrow from '@/components/shared/PageEyebrow';
 import { Tape, Magnet, PAPER_SHADOW } from '@/components/shared/Paper';
 import HeroSaleBadge from '@/components/home/HeroSaleBadge';
 import ChallengeHeroSticker from '@/components/home/ChallengeHeroSticker';
+import BlackFridayHeroSticker from '@/components/home/BlackFridayHeroSticker';
 import HeroNextStop from '@/components/home/v2/HeroNextStop';
 import InsideMembership from '@/components/home/v2/InsideMembership';
 import ActivityExplorer from '@/components/home/v2/ActivityExplorer';
@@ -219,6 +220,7 @@ export default async function HomePage() {
             <div className="relative z-[2] max-w-[620px] xl:max-w-[680px]">
               <HeroSaleBadge />
               <ChallengeHeroSticker />
+              <BlackFridayHeroSticker />
               <div data-reveal>
                 <Eyebrow><span>From a teacher of 15 years &middot; <span className="whitespace-nowrap">Ages 6&ndash;14</span></span></Eyebrow>
               </div>
