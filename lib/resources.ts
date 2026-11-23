@@ -955,7 +955,7 @@ const resources: ResourcePage[] = [
     metaDescription: 'What worldschooling is, what it costs, what a real week looks like, and the 6 mistakes new families make in year one. No need to sell the house.',
     topic: 'worldschooling',
     publishedAt: '2026-03-21',
-    dateModified: '2026-04-30',
+    dateModified: '2026-11-23',
     keywords: [
       'what is worldschooling', 'worldschooling', 'learning while traveling', 'travel homeschool',
       'worldschool vs homeschool', 'worldschool family', 'portable homeschool',
@@ -1104,6 +1104,36 @@ const resources: ResourcePage[] = [
       {
         type: 'paragraph',
         text: 'None of that was planned. We didn\'t have a "unit study on El Salvador." We just showed up, stayed long enough to get curious, and followed the threads. Our [full account of worldschooling in El Salvador](/blog/worldschooling-el-salvador) includes what the kids actually learned, what we struggled with, and what surprised us.',
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'This year: Spanish, culture and a camera in Guatemala',
+      },
+      {
+        type: 'paragraph',
+        text: 'This year\'s trip started in San Pedro La Laguna, on Lake Atitlán in Guatemala, with Antigua next. Costa Rica and Mexico come later in the trip.',
+      },
+      {
+        type: 'paragraph',
+        text: 'In Guatemala, our focus is Spanish and culture. The kids have Spanish lessons every weekday and two or three cultural activities a week. My daughter (10) joined a soccer team and my son (13) a basketball team, so they have kids their own age around them and not just us.',
+      },
+      {
+        type: 'paragraph',
+        text: 'We also started photography lessons. We bought a digital camera, and the kids are learning how to use it and how to make a great photo, not just take one.',
+      },
+      {
+        type: 'heading',
+        level: 3,
+        text: 'Give yourself 10 days to adjust',
+      },
+      {
+        type: 'paragraph',
+        text: 'If it is your first time, here is what I would tell you: it is normal to need a week to 10 days to adjust to the lifestyle in a place like Guatemala. So much is different. You have to figure out where to find food, and sometimes change your food habits altogether, because it is not at all how it is at home. The house takes adjusting too: cold showers, water you cannot drink from the tap, frequent power outages.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Then there is everything around the house: how to use public transport, where to wash your clothes, and how people live. When the stores close, the local traditions, what not to wear. None of that means it is not working. It is the first lesson of the place, for you and for the kids.',
       },
       {
         type: 'heading',
