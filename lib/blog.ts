@@ -9659,7 +9659,7 @@ const posts: BlogPost[] = [
       { type: 'paragraph', text: 'Last winter in Panama and Costa Rica, we registered the kids part time in a bilingual school. We knew it would not be mostly about Spanish, and that was the point: connecting with other kids, seeing the differences with what they know, learning things we might not learn at home, facing a new lifestyle and hearing new opinions. For a long stay, that is worth as much as the language.' },
 
       { type: 'heading', level: 2, text: 'A mission ladder: from first words to real conversations' },
-      { type: 'paragraph', text: 'Lessons give them the words. What makes the words stay is using them for something real, the same day, with someone who does not speak French or English. Kids don’t go from zero to chatting with a stranger in one step, so think of it as a ladder. Start on the first rung, and move up when the last one feels easy.' },
+      { type: 'paragraph', text: 'Lessons give them the words. What makes the words stay is using them for something real, the same day, with a real person. Kids don’t go from zero to chatting with a stranger in one step, so think of it as a ladder. Start on the first rung, and move up when the last one feels easy.' },
       { type: 'list', ordered: true, items: [
         'Greet and thank: hello, thank you, goodbye, every time, with everyone. It sounds small, and it is the rung that makes people warm up to them.',
         'Answer easy questions: what is your name, where are you from. Our kids’ very first time was in an Uber in Panama, giving the driver the ride’s identification number and then answering his questions.',
