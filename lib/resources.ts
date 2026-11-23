@@ -949,7 +949,7 @@ const resources: ResourcePage[] = [
   },
   {
     slug: 'worldschooling-guide',
-    seoTitle: 'How to Start Worldschooling With Kids',
+    seoTitle: 'Worldschooling: What It Is and How Families Start',
     title: 'How to Start Worldschooling With Kids (Without Quitting Everything)',
     excerpt: 'You don\'t need to sell the house to worldschool. Here\'s how families combine travel and learning long-term, what a real week actually looks like, and the 6 mistakes most new worldschoolers make in year one.',
     metaDescription: 'What worldschooling is, what it costs, what a real week looks like, and the 6 mistakes new families make in year one. No need to sell the house.',
