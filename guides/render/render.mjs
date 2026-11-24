@@ -32,7 +32,7 @@ if (backRefs?.length) {
   console.error(`Says "at the back" for a page in the guide. Name the page and say "at the end of the guide":\n  ${backRefs.join('\n  ')}`);
   process.exit(1);
 }
-const build = (m, o) => (g.type === 'map' ? buildMapHtml(g, m, { ...o, review, tpt }) : g.type === 'days' ? buildDaysHtml(g, m) : g.type === 'capable' ? buildCapableHtml(g, m) : buildHtml(g, m, { ...o, tpt }));
+const build = (m, o) => (g.type === 'map' ? buildMapHtml(g, m, { ...o, review, tpt }) : g.type === 'days' ? buildDaysHtml(g, m, { tpt }) : g.type === 'capable' ? buildCapableHtml(g, m) : buildHtml(g, m, { ...o, tpt }));
 const tag = (bonus ? '-bonus' : '') + (review ? '-review' : '') + (tpt ? '-tpt' : '') + (preview ? '-preview' : '');
 const outDir = outArg ?? path.join('notes', 'guides');
 fs.mkdirSync(outDir, { recursive: true });

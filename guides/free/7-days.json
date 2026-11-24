@@ -110,12 +110,14 @@
       "next": {
         "t": "Nature Crafts for Kids",
         "v": "six crafts from what's on the ground, like soil paint and a wind chime tuned by ear",
-        "slug": "nature-crafts"
+        "slug": "nature-crafts",
+        "tptBundle": "Outdoor Learning Mega Bundle"
       },
       "focus": "50% 35%",
       "coverCap": "Land art",
       "coverSkill": "Observation",
-      "slug": "land-art-challenges"
+      "slug": "land-art-challenges",
+      "tptBundle": "Outdoor Learning Mega Bundle"
     },
     {
       "category": "Real-World Math",
@@ -143,12 +145,14 @@
       "next": {
         "t": "Farmers Market Challenge",
         "v": "a real budget at a market, unit prices stall to stall, and a meal planned from what's in season",
-        "slug": "farmers-market-challenge"
+        "slug": "farmers-market-challenge",
+        "tptBundle": "Financial Literacy Math Bundle"
       },
       "focus": "50% 15%",
       "coverCap": "The snack mission",
       "coverSkill": "Budgeting",
-      "slug": "snack-mission"
+      "slug": "snack-mission",
+      "tptBundle": "Financial Literacy Math Bundle"
     },
     {
       "category": "Creativity & Maker",
@@ -176,12 +180,14 @@
       "next": {
         "t": "Board Game Studio",
         "v": "a board game invented from nothing, then handed to someone new to see what breaks",
-        "slug": "board-game-studio"
+        "slug": "board-game-studio",
+        "tptBundle": "Makerspace & STEAM Bundle"
       },
       "focus": "50% 50%",
       "coverCap": "A brand-new sport",
       "coverSkill": "Design thinking",
-      "slug": "invent-a-sport"
+      "slug": "invent-a-sport",
+      "tptBundle": "Makerspace & STEAM Bundle"
     },
     {
       "category": "Planning & Problem-Solving",
@@ -209,12 +215,14 @@
       "next": {
         "t": "Family Debate Night",
         "v": "a real debate with research, a timer, a judge and a verdict",
-        "slug": "family-debate-night"
+        "slug": "family-debate-night",
+        "tptBundle": "Writing & Speaking Projects Bundle"
       },
       "focus": "50% 70%",
       "coverCap": "What would you do?",
       "coverSkill": "Decision-making",
-      "slug": "decision-lab"
+      "slug": "decision-lab",
+      "tptBundle": "Life Skills Bundle"
     },
     {
       "category": "Writing & Communication",
@@ -242,12 +250,14 @@
       "next": {
         "t": "Neighbourhood Interview Project",
         "v": "an interview with someone in your community, turned into a profile others want to read",
-        "slug": "neighbourhood-interview"
+        "slug": "neighbourhood-interview",
+        "tptBundle": "Writing & Speaking Projects Bundle"
       },
       "focus": "50% 40%",
       "coverCap": "Two-minute stories",
       "coverSkill": "Storytelling",
-      "slug": "two-minute-story"
+      "slug": "two-minute-story",
+      "tptBundle": "Writing & Speaking Projects Bundle"
     },
     {
       "category": "Entrepreneurship",
@@ -275,12 +285,14 @@
       "next": {
         "t": "Micro-Business Challenge",
         "v": "a tiny business that keeps going for weeks, with every cost and sale tracked",
-        "slug": "micro-business"
+        "slug": "micro-business",
+        "tptBundle": "Entrepreneurship Activities Bundle"
       },
       "focus": "50% 50%",
       "coverCap": "The cookie stand",
       "coverSkill": "Financial literacy",
-      "slug": "pricing-experiment"
+      "slug": "pricing-experiment",
+      "tptBundle": "Entrepreneurship Activities Bundle"
     },
     {
       "category": "Planning & Problem-Solving",
@@ -308,12 +320,14 @@
       "next": {
         "t": "Secret Code Lab",
         "v": "real codes to make and crack, including one with no key at all",
-        "slug": "secret-code-lab"
+        "slug": "secret-code-lab",
+        "tptBundle": "Life Skills Bundle"
       },
       "focus": "45% 50%",
       "coverCap": "The rockstar hunt",
       "coverSkill": "Planning",
-      "slug": "scavenger-hunt-designer"
+      "slug": "scavenger-hunt-designer",
+      "tptBundle": "Life Skills Bundle"
     }
   ],
   "finish": {
@@ -324,7 +338,8 @@
     "fullText": "Each day is the short version of a full guide in the membership, with step-by-step help, a toolkit and three levels for ages 6 to 14. There are 120+ guides in all.",
     "cta": "Come see what's inside. Free for 7 days.",
     "url": "anywherelearning.co/join",
-    "href": "https://anywherelearning.co/join"
+    "href": "https://anywherelearning.co/join",
+    "tptFullText": "Each day is the short version of a full guide, with step-by-step help, a toolkit and three levels for ages 6 to 14. You'll find every one in the Anywhere Learning Studio store on TPT:"
   },
   "avatar": "guides/assets/amelie-portrait.jpg"
 }

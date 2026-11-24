@@ -337,7 +337,20 @@ export function buildHtml(g, mode, { bonus = false, tpt = false } = {}) {
   ${K.timing ? `<div class="box classtime"><div class="label">Fitting it into class time</div><p>${esc(K.timing)}</p></div>` : ''}
   ${foot('In the classroom')}
 </section>` : '';
-  const thanks = tpt ? `
+  const thanks = tpt ? tptThanks() : '';
+
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(g.title)}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>${css(layout, accent, soft, bw, paper)}${tpt ? TPT_CSS : ''}</style></head>
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${thanks}${idea}${howto}${steps}${R?.first ? reference : ''}${cards}${journal}${R?.first ? '' : reference}${road}${classroom}${finish}</body></html>`;
+}
+
+// TPT only: thank you, terms of use and a follow-the-store note (no website links, TPT rules).
+function tptThanks() {
+  return `
 <section class="pg thankspg">
   ${contours()}
   <div class="eyebrow">Thank you</div>
@@ -348,15 +361,7 @@ export function buildHtml(g, mode, { bonus = false, tpt = false } = {}) {
     <ul class="crosses"><li>Please don't share it with other teachers or families. Additional licenses are available at a discount on TPT.</li><li>Please don't post it online, resell it, or claim it as your own.</li></ul></div>
   <div class="box"><div class="label">Let's stay in touch</div><p>Follow <b>Anywhere Learning Studio</b> on TPT: click the star next to the store name to hear about new guides and sales first. And if this guide worked for you, a short review helps other teachers and families find it, and earns you TPT credits for your next purchase. I read every one.</p></div>
   <p class="legal">&copy; Anywhere Learning Studio. All rights reserved.</p>
-</section>` : '';
-
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(g.title)}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<style>${css(layout, accent, soft, bw, paper)}${tpt ? TPT_CSS : ''}</style></head>
-<body class="${layout}${bw ? ' bw' : ''}">${cover}${thanks}${idea}${howto}${steps}${R?.first ? reference : ''}${cards}${journal}${R?.first ? '' : reference}${road}${classroom}${finish}</body></html>`;
+</section>`;
 }
 
 const TPT_CSS = `
@@ -926,7 +931,7 @@ ${bw ? `
 
 // Free guide: 7 short activities, one per day, each in its own category colour.
 // Same look as the library guides, lighter: why, what you need, four moves, three levels.
-export function buildDaysHtml(g, mode) {
+export function buildDaysHtml(g, mode, { tpt = false } = {}) {
   const bw = mode === 'print-bw';
   LINE_ART = bw;
   const layout = mode === 'phone' ? 'phone' : 'print';
@@ -1000,21 +1005,26 @@ export function buildDaysHtml(g, mode) {
   </div>
   <div class="label lvlabel">Adjust the level</div>
   ${levelRow(d.levels)}
-  <p class="dnext"><b>Loved this? Try next:</b> <a href="https://anywherelearning.co/shop/${d.next.slug}">${esc(d.next.t)}</a>, ${esc(d.next.v)}. It's in the library.</p>
+  ${tpt ? `<p class="dnext"><b>Loved this? Try next:</b> ${esc(d.next.t)}, ${esc(d.next.v)}. It's in the ${esc(d.next.tptBundle)} in my TPT store.</p>` : `<p class="dnext"><b>Loved this? Try next:</b> <a href="https://anywherelearning.co/shop/${d.next.slug}">${esc(d.next.t)}</a>, ${esc(d.next.v)}. It's in the library.</p>`}
   ${foot(`Day ${i + 1}`)}
 </section>`).join('');
 
   const F = g.finish;
+  const finishBox = tpt ? `
+  <div class="box"><div class="label">${esc(F.fullTitle)}</div><p>${esc(F.tptFullText)}</p>
+    <ul class="daylist full tptfull">${g.days.map((d, i) => `<li><span class="ddot" style="background:${acc(d.category).accent}"></span><span>Day ${i + 1}: <b>${esc(d.full)}</b>, ${esc(d.tptBundle)}</span></li>`).join('')}</ul></div>
+  <div class="grp"><div class="byline"><img src="${img(g.avatar)}" alt="Amelie"><p>Made by <b>Amelie Drouin</b>,<br>former teacher and homeschooling mom</p></div><p class="legal">&copy; Anywhere Learning Studio &middot; Free for one family or one classroom. Please don't share, resell or upload this guide.</p></div>` : `
+  <div class="box"><div class="label">${esc(F.fullTitle)}</div><p>${esc(F.fullText)}</p>
+    <ul class="daylist full">${g.days.map((d, i) => `<li><span class="ddot" style="background:${acc(d.category).accent}"></span><span>Day ${i + 1}: <a href="https://anywherelearning.co/shop/${d.slug}"><b>${esc(d.full)}</b></a></span></li>`).join('')}</ul></div>
+  <a class="cta" href="${esc(F.href)}"><p>${esc(F.cta)}</p><span class="ctaurl">${esc(F.url)} &rarr;</span></a>
+  <div class="grp"><div class="byline"><img src="${img(g.avatar)}" alt="Amelie"><p>Made by <b>Amelie Drouin</b>,<br>former teacher and homeschooling mom</p></div><p class="legal">&copy; Anywhere Learning &middot; Free to use with your family &middot; anywherelearning.co</p></div>`;
   const finish = `
 <section class="pg finish spread">
   ${contours()}
   <div class="grp"><div class="eyebrow">You made it</div><h2>${esc(F.headline)}</h2></div>
   <p class="lead">${esc(F.text)}</p>
   <p class="pull">${esc(F.quote)}</p>
-  <div class="box"><div class="label">${esc(F.fullTitle)}</div><p>${esc(F.fullText)}</p>
-    <ul class="daylist full">${g.days.map((d, i) => `<li><span class="ddot" style="background:${acc(d.category).accent}"></span><span>Day ${i + 1}: <a href="https://anywherelearning.co/shop/${d.slug}"><b>${esc(d.full)}</b></a></span></li>`).join('')}</ul></div>
-  <a class="cta" href="${esc(F.href)}"><p>${esc(F.cta)}</p><span class="ctaurl">${esc(F.url)} &rarr;</span></a>
-  <div class="grp"><div class="byline"><img src="${img(g.avatar)}" alt="Amelie"><p>Made by <b>Amelie Drouin</b>,<br>former teacher and homeschooling mom</p></div><p class="legal">&copy; Anywhere Learning &middot; Free to use with your family &middot; anywherelearning.co</p></div>
+${finishBox}
 </section>`;
 
   const extra = `
@@ -1093,8 +1103,8 @@ a.cta{display:block;text-decoration:none;color:#fff}.daylist a,.dnext a{color:in
 <title>${esc(g.title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<style>${css(layout, base.accent, base.soft, bw, base.paper)}${extra}</style></head>
-<body class="${layout}${bw ? ' bw' : ''}">${cover}${letter}${howto}${days}${finish}</body></html>`;
+<style>${css(layout, base.accent, base.soft, bw, base.paper)}${extra}${tpt ? TPT_CSS + '.daylist.tptfull{columns:1}.print .thankspg{justify-content:center!important}' : ''}</style></head>
+<body class="${layout}${bw ? ' bw' : ''}">${cover}${tpt ? tptThanks() : ''}${letter}${howto}${days}${finish}</body></html>`;
 }
 
 
