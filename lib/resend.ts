@@ -35,6 +35,8 @@ import BasecampReminder from '@/emails/BasecampReminder';
 import BasecampAnnouncement from '@/emails/BasecampAnnouncement';
 import GiftReceipt from '@/emails/GiftReceipt';
 import WorkshopConfirmation from '@/emails/WorkshopConfirmation';
+import WeeklyPick, { weeklySubject } from '@/emails/WeeklyPick';
+import type { WeeklySource } from '@/lib/weekly-pick';
 import type { MidpointGuide, MidpointVariant } from '@/lib/trial-midpoint';
 
 function getResend() {
@@ -183,6 +185,34 @@ export async function sendTrialMidpointEmail({
     to,
     subject: midpointSubject(variant, firstName, done?.length ?? 0),
     react: TrialMidpoint({ firstName, variant, guide, next, done, fromTrail, kids, trialEndDate, guideUrl, nextUrl }),
+  });
+}
+
+/** Sunday "one for this week" member email (lib/weekly-pick-run.ts). */
+export async function sendWeeklyPickEmail(opts: {
+  to: string;
+  firstName?: string;
+  guide: MidpointGuide;
+  source: WeeklySource;
+  doneLastWeek: MidpointGuide[];
+  kids: string;
+  monthTitle: string;
+  guideUrl: string;
+  stopUrl: string;
+}) {
+  const { to, ...props } = opts;
+  return getResend().emails.send({
+    from: FROM,
+    replyTo: REPLY_TO,
+    to,
+    subject: weeklySubject(props.guide, props.firstName),
+    // Mail apps show their own "unsubscribe" for this; the POST variant is the
+    // one-click form (RFC 8058) that Gmail and Apple Mail use.
+    headers: {
+      'List-Unsubscribe': `<${opts.stopUrl}>`,
+      'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+    },
+    react: WeeklyPick(props),
   });
 }
 

@@ -31,6 +31,7 @@ import { sendMembershipRenewalEmail } from '@/lib/resend';
 import { STRIPE_PRICES } from '@/lib/stripe-prices';
 import { runGrantLifecycle } from '@/lib/access-grants';
 import { runMemberCheckins } from '@/lib/member-checkin';
+import { runWeeklyPicks } from '@/lib/weekly-pick-run';
 import { runBasecampReminders } from '@/lib/basecamp-reminders';
 import { runCoopMilestones } from '@/lib/coop-milestones';
 
@@ -60,6 +61,16 @@ export async function GET(req: NextRequest) {
   } catch (err) {
     console.error('[cron] member check-ins failed:', err);
     checkins = { error: err instanceof Error ? err.message : 'unknown' };
+  }
+
+  // Sunday "one for this week" email to paying members (lib/weekly-pick-run.ts).
+  // Does nothing on other days.
+  let weekly: Awaited<ReturnType<typeof runWeeklyPicks>> | { error: string };
+  try {
+    weekly = await runWeeklyPicks();
+  } catch (err) {
+    console.error('[cron] weekly picks failed:', err);
+    weekly = { error: err instanceof Error ? err.message : 'unknown' };
   }
 
   // "Basecamp is tomorrow" to every member, the day before each session.
@@ -112,7 +123,7 @@ export async function GET(req: NextRequest) {
     );
 
   if (rows.length === 0) {
-    return NextResponse.json({ sent: 0, message: 'No renewals in the 14-day window.', grants, checkins, basecamp, coops });
+    return NextResponse.json({ sent: 0, message: 'No renewals in the 14-day window.', grants, checkins, weekly, basecamp, coops });
   }
 
   // Try to grab first names from Clerk in one round-trip. Clerk doesn't
@@ -201,6 +212,7 @@ export async function GET(req: NextRequest) {
     results,
     grants,
     checkins,
+    weekly,
     basecamp,
     coops,
   });

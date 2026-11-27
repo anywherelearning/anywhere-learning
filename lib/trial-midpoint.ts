@@ -59,7 +59,7 @@ export interface MidpointPick {
 const DEFAULT_FIRST_STOP = 'nature-journal-walks';
 
 /** An individual activity guide (not a bundle or pack) that we can link to. */
-function isActivity(slug: string): boolean {
+export function isActivity(slug: string): boolean {
   return !!EFFORT_BY_SLUG[slug] && !!getFallbackProductBySlug(slug)?.active;
 }
 
@@ -69,7 +69,7 @@ function minAgeOf(slug: string): number | null {
 }
 
 /** True when the guide's minimum age fits the youngest kid we know about. */
-function fitsKids(slug: string, kids: Child[]): boolean {
+export function fitsKids(slug: string, kids: Child[]): boolean {
   const ages = kids.map(childAge).filter((a): a is number => a !== null);
   const min = minAgeOf(slug);
   if (!ages.length || min === null) return true;
