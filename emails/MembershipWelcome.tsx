@@ -326,6 +326,13 @@ export default function MembershipWelcome({
                 <td style={{ padding: '28px 36px 0' }}>
                   <Text style={{ ...p, margin: '0 0 6px' }}>Enjoy that first hour together,</Text>
                   <Img src={`${SITE}/email-fn-amelie.png`} alt="Amelie" width="130" style={{ display: 'block', width: '130px', height: 'auto' }} />
+                  {/* Hand-run referrals (Nov 2026): checkout's "Did a friend tell you
+                      about us?" field feeds the owner email; she grants the month. */}
+                  <Text style={{ ...p, fontSize: '14.5px', margin: '20px 0 0' }}>
+                    P.S. Know a family who&apos;d love this too? Feel free to pass it along. When
+                    they join, they can add your name at checkout, and I&apos;ll add a free month
+                    to your membership as a thank you.
+                  </Text>
                 </td>
               </tr>
 
