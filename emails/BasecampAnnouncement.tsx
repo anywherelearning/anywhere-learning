@@ -44,12 +44,11 @@ export default function BasecampAnnouncement({ firstName, dayLabel, timeLabel, t
                   <Text style={p}>Hi {name},</Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
                     I&apos;ve wanted to do this for a while. Starting in December, once a month, we&apos;re going to
-                    meet live on Zoom. I&apos;m calling it Basecamp, because that&apos;s where explorers come back
-                    between climbs: to share what happened, get their gear ready, and head out a little more
-                    capable than before.
+                    meet live on Zoom. I&apos;m calling it Basecamp, like the place where explorers meet up
+                    between adventures.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
-                    It&apos;s 40 minutes, and it&apos;s just us. No webinar, no slides, no sales pitch. Here&apos;s what
+                    It&apos;s 40 minutes, just us, and very relaxed. I won&apos;t be selling anything. Here&apos;s what
                     we&apos;ll do:
                   </Text>
                 </td>

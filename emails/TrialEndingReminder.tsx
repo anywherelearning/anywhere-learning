@@ -76,7 +76,7 @@ export default function TrialEndingReminder({
     <Html>
       <Head />
       <Preview>
-        Your free trial ends {shortDate}. A quick heads-up so nothing lands out of nowhere.
+        Your free trial ends {shortDate}. Just a heads-up so the charge doesn't surprise you.
       </Preview>
       <Body style={body}>
         <Container style={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -99,7 +99,7 @@ export default function TrialEndingReminder({
                     </tbody>
                   </table>
                   <div style={h1}>Hi {name}, your trial ends in {daysLabel}.</div>
-                  <div style={subline}>A friendly heads-up, so nothing lands out of nowhere.</div>
+                  <div style={subline}>Just a heads-up so the charge doesn&apos;t surprise you.</div>
                 </td>
               </tr>
 
@@ -107,7 +107,7 @@ export default function TrialEndingReminder({
               <tr>
                 <td style={{ padding: '28px 36px 0' }}>
                   <Text style={p}>
-                    I promised no surprise charges, so here it is in plain words: on {shortDate},
+                    Like I said when you signed up, I&apos;ll always tell you before you&apos;re charged. On {shortDate},
                     your free trial ends and your membership starts. Your card will be charged{' '}
                     {price} {forThe}
                     {isFounderPhase
@@ -117,8 +117,8 @@ export default function TrialEndingReminder({
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
                     If Anywhere Learning has earned a spot in your family&apos;s weeks, you
-                    don&apos;t need to do a thing. If it hasn&apos;t, canceling takes one click.
-                    No questions, no guilt trip, no charge.
+                    don&apos;t need to do a thing. If it hasn&apos;t, you can cancel in one click
+                    and you won&apos;t be charged.
                   </Text>
                 </td>
               </tr>
@@ -160,7 +160,7 @@ export default function TrialEndingReminder({
                                   {isMonthly ? '5 downloads a month' : 'Up to 20 downloads a month'}
                                   <br />
                                   <span style={{ fontSize: '13.5px', fontWeight: 400, color: C_BODY }}>
-                                    plus new guide drops every quarter
+                                    plus new guides as I add them
                                   </span>
                                 </td>
                               </tr>
@@ -187,7 +187,7 @@ export default function TrialEndingReminder({
                             style={{ display: 'inline-block', width: '240px', maxWidth: '100%', height: 'auto' }}
                           />
                           <div style={{ ...label, color: C_FOREST, marginTop: '16px' }}>
-                            THREE DAYS IS ONE MORE ACTIVITY
+                            YOU STILL HAVE TIME FOR ONE MORE
                           </div>
                           <table role="presentation" cellPadding={0} cellSpacing={0} style={{ margin: '16px auto 0' }}>
                             <tbody>
@@ -202,8 +202,8 @@ export default function TrialEndingReminder({
                               already chosen. Telling them to pick one would
                               describe a product we deliberately don't ship. */}
                           <div style={micro}>
-                            Your next stop is already waiting. Grab what you have at home and see
-                            how it feels to do something real together. That&apos;s the whole test.
+                            Your next stop is already waiting. Grab what you have at home and give
+                            it a try with your kids. That&apos;s the best way to know if it&apos;s right for your family.
                           </div>
                         </td>
                       </tr>
@@ -216,7 +216,7 @@ export default function TrialEndingReminder({
               <tr>
                 <td style={{ padding: '32px 36px 0' }}>
                   <div style={{ ...label, color: C_MUTED }}>NEED TO CHANGE SOMETHING?</div>
-                  <div style={h2}>No buried buttons, I promise.</div>
+                  <div style={h2}>You can cancel anytime before then.</div>
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={cancelCard}>
                     <tbody>
                       <tr>
@@ -225,8 +225,7 @@ export default function TrialEndingReminder({
                             Cancel my trial
                           </div>
                           <div style={{ fontSize: '14.5px', lineHeight: 1.55, color: C_BODY, marginTop: '3px', fontFamily: FONT_BODY }}>
-                            One click before {shortDate} and you&apos;re never charged. We part as
-                            friends.
+                            Cancel before {shortDate} and you won&apos;t be charged anything.
                           </div>
                         </td>
                         <td

@@ -36,7 +36,7 @@ import BasecampAnnouncement from '@/emails/BasecampAnnouncement';
 import GiftReceipt from '@/emails/GiftReceipt';
 import WorkshopConfirmation from '@/emails/WorkshopConfirmation';
 import WeeklyPick, { weeklySubject } from '@/emails/WeeklyPick';
-import type { WeeklySource } from '@/lib/weekly-pick';
+import type { MonthRecap, WeeklySource } from '@/lib/weekly-pick';
 import type { MidpointGuide, MidpointVariant } from '@/lib/trial-midpoint';
 
 function getResend() {
@@ -195,8 +195,11 @@ export async function sendWeeklyPickEmail(opts: {
   guide: MidpointGuide;
   source: WeeklySource;
   doneLastWeek: MidpointGuide[];
+  quiet: boolean;
+  recap: MonthRecap | null;
   kids: string;
   monthTitle: string;
+  weekIndex: number;
   guideUrl: string;
   stopUrl: string;
 }) {

@@ -74,7 +74,7 @@ export default function TrialCanceled({ firstName, plan, surveyToken }: Props) {
                     </tbody>
                   </table>
                   <div style={h1}>Your trial is canceled, {name}.</div>
-                  <div style={subline}>All taken care of. This email is your written confirmation.</div>
+                  <div style={subline}>It&apos;s all done. Keep this email as your confirmation.</div>
                 </td>
               </tr>
 
@@ -82,12 +82,10 @@ export default function TrialCanceled({ firstName, plan, surveyToken }: Props) {
               <tr>
                 <td style={{ padding: '28px 36px 0' }}>
                   <Text style={p}>
-                    Nothing will be charged. Not today, not later. The card you saved at sign-up
-                    stays untouched.
+                    You won&apos;t be charged anything, now or later.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
-                    And no guilt trip from me. Wrong season, too much going on, not the right
-                    fit, all completely fine. I&apos;m glad you gave it a look.
+                    I completely understand, and I&apos;m really glad you gave it a try.
                   </Text>
                 </td>
               </tr>
@@ -113,7 +111,7 @@ export default function TrialCanceled({ firstName, plan, surveyToken }: Props) {
                               </div>
                             ))}
                             <div style={micro}>
-                              One tap, that&apos;s it. It genuinely shapes what I build next.
+                              Your answer really helps me decide what to work on next.
                             </div>
                           </td>
                         </tr>
@@ -128,7 +126,7 @@ export default function TrialCanceled({ firstName, plan, surveyToken }: Props) {
                 <td style={{ padding: '26px 36px 0' }}>
                   <Text style={p}>
                     If it was something specific, hit reply and tell me. This lands straight in my
-                    inbox, not a support queue, and I read every one. And if a better season comes around, the library
+                    inbox, and I read every one. And if a better season comes around, the library
                     will be right here.
                   </Text>
                   <Text style={{ ...p, margin: '18px 0 6px' }}>xo,</Text>

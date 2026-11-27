@@ -109,14 +109,14 @@ export default function MembershipCancellationScheduled({
                         </td>
                         <td style={{ ...stepCell, padding: '3px 0 4px 16px', borderLeft: '2px solid transparent' }}>
                           <div style={{ ...label, color: C_FOREST }}>AFTER THAT</div>
-                          <div style={stepBody}>It winds down quietly. No further charges, no hoops.</div>
+                          <div style={stepBody}>Your membership simply ends, and you won&apos;t be charged again.</div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                   <Text style={{ ...p, margin: '20px 0 0' }}>
-                    Thank you for being a member. Truly. Every family that joined this early
-                    shaped what it became.
+                    Thank you for being a member. The families who joined early really shaped
+                    what this has become.
                   </Text>
                 </td>
               </tr>
@@ -142,7 +142,7 @@ export default function MembershipCancellationScheduled({
                               </div>
                             ))}
                             <div style={micro}>
-                              One tap, that&apos;s it. It genuinely shapes what I build next.
+                              Your answer really helps me decide what to work on next.
                             </div>
                           </td>
                         </tr>

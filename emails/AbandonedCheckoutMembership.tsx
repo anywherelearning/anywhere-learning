@@ -55,8 +55,8 @@ export default function AbandonedCheckoutMembership({
   const showFounderStamp = founder && typeof spotsLeft === 'number' && spotsLeft > 0;
   const priceLabel = isMonthly ? '$15' : founder ? '$99' : '$129';
   const subhead = founder
-    ? 'Your spot, your founder rate, and the whole library, still waiting.'
-    : 'Your spot and the whole library, still waiting.';
+    ? 'Your founder rate is still saved for you.'
+    : 'Your spot is still saved for you.';
 
   return (
     <Html>
@@ -94,12 +94,10 @@ export default function AbandonedCheckoutMembership({
                 <td style={{ padding: '28px 36px 0' }}>
                   <Text style={p}>
                     Earlier today you started signing up for Anywhere Learning and got partway
-                    through. Life happens. A kid needs something, an email pings, the dog gets out.
-                    No judgment from this side.
+                    through. That happens all the time, especially with kids around.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
-                    This is a note, not a nudge. I just wanted to leave you the link in case
-                    you&apos;d like to come back to it.
+                    I just wanted to leave you the link in case you&apos;d like to finish.
                   </Text>
                 </td>
               </tr>
@@ -163,11 +161,10 @@ export default function AbandonedCheckoutMembership({
                     {isMonthly ? 'A whole library of' : 'One year of'} real-world learning.
                   </div>
                   <Text style={{ ...p, margin: '10px 0 0' }}>
-                    Here&apos;s what&apos;s waiting on the other side of that checkout button. The
-                    whole library, three levels per activity so every kid does the same one together,
-                    and the part that does the deciding for you: tell it your time and it picks the
-                    next thing, every month arrives already set up, and what you finish becomes a
-                    printable record without you lifting a finger.
+                    Here&apos;s what you get: the whole library, with three levels in every activity
+                    so all your kids can do the same one together. It also picks the next activity
+                    for you, based on how much time you have, and keeps a record of everything you
+                    finish.
                   </Text>
                 </td>
               </tr>
@@ -186,7 +183,7 @@ export default function AbandonedCheckoutMembership({
                       </tr>
                       <tr>
                         <Stat num="120+" name="ACTIVITIES" desc="Across twelve real-life skill areas." />
-                        <Stat num="4×" name="DROPS A YEAR" desc="New activities every quarter, included." />
+                        <Stat num="New" name="GUIDES ADDED" desc="Through the year, included." />
                         <Stat
                           num={priceLabel}
                           name={founder ? 'LOCKED IN' : isMonthly ? 'PER MONTH' : 'PER YEAR'}
@@ -216,16 +213,16 @@ export default function AbandonedCheckoutMembership({
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={aside}>
                     <tbody>
                       <Faq q={<>&ldquo;Will my kid actually use it?&rdquo;</>} first>
-                        Every activity is hands-on, and you do it with them. Real cooking, real
-                        building, real time outside. No screens required. Most land the first try.
+                        Every activity is hands-on, and you do it with them: cooking, building,
+                        time outside.
                       </Faq>
                       <Faq q={<>&ldquo;What if it doesn&apos;t click for us?&rdquo;</>}>
-                        14-day full refund, no questions, no awkward emails. Just reply and it&apos;s done.
+                        You have 14 days for a full refund. Just reply to this email.
                       </Faq>
                       <Faq q={`“Why ${priceLabel} when there’s free stuff out there?”`}>
-                        Pinterest takes hours. This is a teacher&apos;s library, built to land the
-                        first try, with three skill levels so it actually fits your kid. Less time
-                        searching, more time doing.
+                        You could find ideas online, but it takes hours, and they don&apos;t always fit
+                        your kid. These guides are written by a teacher, step by step, with three
+                        levels so they fit each of your kids.
                       </Faq>
                     </tbody>
                   </table>

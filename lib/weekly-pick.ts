@@ -17,6 +17,7 @@
 
 import { EFFORT_BY_SLUG } from '@/lib/activity-effort';
 import { describeGuide, fitsKids, isActivity, type MidpointGuide } from '@/lib/trial-midpoint';
+import { getProductSkills } from '@/lib/skills';
 import type { Child } from '@/lib/member-profile';
 
 export type WeeklySource = 'trail' | 'opened' | 'month' | 'quick';
@@ -36,11 +37,24 @@ export interface WeeklyInputs {
   now?: Date;
 }
 
+export interface MonthRecap {
+  /** e.g. "November". */
+  month: string;
+  /** Distinct activities marked done that month, most recent first. */
+  activities: MidpointGuide[];
+  /** The guides' own skills (lib/skills.ts, from the PDFs), most practised
+   *  first, at most 12. */
+  skills: string[];
+}
+
 export interface WeeklyPick {
   guide: MidpointGuide;
   source: WeeklySource;
   /** Activities they marked done in the last 7 days, most recent first. */
   doneLastWeek: MidpointGuide[];
+  /** Nothing marked done in the last 14 days, and they've had 2+ weekly
+   *  emails: the email adds one gentle "no pressure" line. */
+  quiet: boolean;
 }
 
 /** How many past weekly emails to look back on before a guide can come again. */
@@ -61,9 +75,13 @@ export function pickWeekly(inputs: WeeklyInputs): WeeklyPick | null {
     .map(describeGuide)
     .filter((g): g is MidpointGuide => !!g);
 
+  const quiet =
+    inputs.recent.length >= 2 &&
+    !inputs.completions.some((c) => now.getTime() - new Date(c.at).getTime() <= 2 * WEEK);
+
   const pick = (slug: string | undefined, source: WeeklySource): WeeklyPick | null => {
     const guide = slug ? describeGuide(slug) : null;
-    return guide ? { guide, source, doneLastWeek } : null;
+    return guide ? { guide, source, doneLastWeek, quiet } : null;
   };
 
   const trail = inputs.weekSlugs.find(ok);
@@ -98,4 +116,44 @@ export function isWeeklyDue({
 }): boolean {
   const since = lastSent ?? memberSince;
   return now.getTime() - since.getTime() >= 6.5 * 24 * 60 * 60 * 1000;
+}
+
+const easternMonth = (d: Date) =>
+  new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit' }).format(d);
+
+/**
+ * Last calendar month (Eastern) at a glance: what they marked done and the
+ * skills those guides practise. Null when they marked nothing that month, so a
+ * quiet month never gets a recap.
+ */
+export function monthRecap(completions: { slug: string; at: string }[], now: Date): MonthRecap | null {
+  const firstOfThisMonth = new Date(`${easternMonth(now)}-01T12:00:00Z`);
+  const lastMonth = easternMonth(new Date(firstOfThisMonth.getTime() - 5 * 24 * 60 * 60 * 1000));
+  const slugs = [...completions]
+    .filter((c) => easternMonth(new Date(c.at)) === lastMonth)
+    .sort((a, b) => b.at.localeCompare(a.at))
+    .map((c) => c.slug)
+    .filter((s, i, all) => all.indexOf(s) === i && isActivity(s));
+  if (!slugs.length) return null;
+
+  // The guides' own skills, as on the product pages. "STEM" is a label, not a
+  // skill, so it stays out. Most practised first, then in order of appearance.
+  const counts = new Map<string, number>();
+  for (const s of slugs) {
+    for (const k of getProductSkills(s)?.canonical ?? []) {
+      if (k !== 'STEM') counts.set(k, (counts.get(k) ?? 0) + 1);
+    }
+  }
+  const skills = [...counts.entries()]
+    .map(([k, n], i) => ({ k, n, i }))
+    .sort((a, b) => b.n - a.n || a.i - b.i)
+    .slice(0, 12)
+    .map((x) => x.k);
+
+  const month = new Intl.DateTimeFormat('en-US', { month: 'long', timeZone: 'UTC' }).format(new Date(`${lastMonth}-15T12:00:00Z`));
+  return {
+    month,
+    activities: slugs.map(describeGuide).filter((g): g is MidpointGuide => !!g),
+    skills,
+  };
 }

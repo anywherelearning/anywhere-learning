@@ -94,7 +94,7 @@ export default function MembershipRenewal({
     <Html>
       <Head />
       <Preview>
-        Your membership renews {sentenceDate}. A quick heads-up so it doesn&apos;t land out of nowhere.
+        Your membership renews {sentenceDate}. Just a heads-up so the charge doesn&apos;t surprise you.
       </Preview>
       <Body style={body}>
         <Container style={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -117,7 +117,7 @@ export default function MembershipRenewal({
                     </tbody>
                   </table>
                   <div style={h1}>Hi {name}, your membership renews in {daysLabel}.</div>
-                  <div style={subline}>A friendly heads-up, so the charge never lands out of nowhere.</div>
+                  <div style={subline}>Just a heads-up so the charge doesn&apos;t surprise you.</div>
                 </td>
               </tr>
 
@@ -130,8 +130,8 @@ export default function MembershipRenewal({
                     {isFounderPhase ? ', at the founder rate you locked in when you joined' : ''}.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
-                    Nothing for you to do, unless you&apos;d like to change something. No awkwardness,
-                    no buried buttons. Everything you need is below.
+                    You don&apos;t need to do anything. If you&apos;d like to change something,
+                    everything is below.
                   </Text>
                 </td>
               </tr>
@@ -178,7 +178,7 @@ export default function MembershipRenewal({
                         <td colSpan={2} style={summaryCellTop}>
                           <div style={{ ...label, color: C_MUTED }}>WHAT&apos;S RENEWING</div>
                           <div style={{ ...summaryCardLine, lineHeight: 1.5 }}>
-                            Full library · your family&apos;s trail and record · quarterly drops · Skills Map
+                            Full library · your family&apos;s trail and record · new guides as I add them · Skills Map
                           </div>
                         </td>
                       </tr>
@@ -211,22 +211,21 @@ export default function MembershipRenewal({
               <tr>
                 <td style={{ padding: '32px 36px 0' }}>
                   <div style={{ ...label, color: C_MUTED }}>WHAT&apos;S COMING IN YEAR TWO</div>
-                  <div style={h2}>Plenty of new ground ahead.</div>
+                  <div style={h2}>Here&apos;s what&apos;s coming.</div>
                 </td>
               </tr>
               <tr>
                 <td style={{ padding: '18px 36px 0' }}>
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={{ width: '100%' }}>
                     <tbody>
-                      <TrailStep n={1} dot={C_TERRA} labelColor={C_TERRA} title="40+ NEW ACTIVITIES">
-                        Four quarterly drops, included with your membership. The next drop lands
-                        within weeks.
+                      <TrailStep n={1} dot={C_TERRA} labelColor={C_TERRA} title="NEW ACTIVITIES">
+                        I keep adding new guides through the year, included with your membership.
                       </TrailStep>
-                      <TrailStep n={2} dot={C_FOREST} labelColor={C_FOREST} title="NEW CATEGORIES IN DEVELOPMENT">
-                        Shaped by what members keep asking for.
+                      <TrailStep n={2} dot={C_FOREST} labelColor={C_FOREST} title="SHAPED BY MEMBERS">
+                        What I build next comes from what members ask me for.
                       </TrailStep>
                       <TrailStep n={3} dot={C_GOLD} labelColor={C_EARTH} title="THE BLOG KEEPS GROWING" last>
-                        Real stories from our days, life-skills and parenting takes, no fluff.
+                        Real stories from our days, and ideas about life skills and parenting.
                       </TrailStep>
                     </tbody>
                   </table>
@@ -237,10 +236,7 @@ export default function MembershipRenewal({
               <tr>
                 <td style={{ padding: '32px 36px 0' }}>
                   <div style={{ ...label, color: C_MUTED }}>NEED TO CHANGE SOMETHING?</div>
-                  <div style={h2}>No buried buttons, I promise.</div>
-                  <Text style={{ ...p, margin: '8px 0 0' }}>
-                    Whatever you need, I&apos;d rather make it easy than make it sticky.
-                  </Text>
+                  <div style={h2}>You can do it all yourself, in a few clicks.</div>
                   <table role="presentation" cellPadding={0} cellSpacing={0} style={manageList}>
                     <tbody>
                       <tr>
@@ -256,7 +252,7 @@ export default function MembershipRenewal({
                         <td style={manageBodyCol}>
                           <div style={manageName}>Cancel my membership</div>
                           <div style={manageDesc}>
-                            One click. No questions. No hard-feelings email. You keep access until{' '}
+                            You can cancel in one click, and you keep access until{' '}
                             {sentenceDate}.
                           </div>
                         </td>
@@ -280,8 +276,7 @@ export default function MembershipRenewal({
                             <div style={{ ...label, color: C_FOREST }}>STILL LOCKED IN · FOUNDER RATE, YEAR 2</div>
                             <div style={{ fontSize: '15px', lineHeight: 1.6, color: C_BODY, marginTop: '6px', fontFamily: FONT_BODY }}>
                               Renewing keeps your <strong style={strongInk}>$99/year</strong> for as long
-                              as you stay a member. New members are paying $129 now, your price
-                              doesn&apos;t move.
+                              as you stay a member. New members pay $129 now. Yours stays at $99.
                             </div>
                           </td>
                         </tr>

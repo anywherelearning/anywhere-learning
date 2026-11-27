@@ -56,14 +56,14 @@ export default function GrantWelcome({ firstName, signInUrl, source, giftFrom, g
   const subline = extended
     ? `Your access now runs through ${endDate}.`
     : isGift
-      ? 'Nothing to pay, nothing to set up. Just open it and go.'
+      ? "It's all paid for, so you can start whenever you like."
       : source === 'odyssey' || source === 'charter'
         ? 'Paid with your education funds. Nothing else to pay.'
         : source === 'coop'
           ? 'Part of your co-op membership. Nothing to pay on your end.'
           : source === 'school'
             ? 'Your school has this covered. Nothing to pay on your end.'
-            : 'Nothing to pay, nothing to set up. Just open it and go.';
+            : "It's all paid for, so you can start whenever you like.";
 
   return (
     <Html>
@@ -124,8 +124,7 @@ export default function GrantWelcome({ firstName, signInUrl, source, giftFrom, g
                   <Text style={p}>
                     Anywhere Learning is a library of real-world activities you open on any device and
                     do together. Cook a meal and the fractions come along. Plan a real budget, build a
-                    shelter, run a tiny business. Low prep, no worksheets, and every guide adjusts to
-                    each kid.
+                    shelter, run a tiny business. Low prep, and every guide adjusts to each kid.
                   </Text>
                 </td>
               </tr>
@@ -176,8 +175,8 @@ export default function GrantWelcome({ firstName, signInUrl, source, giftFrom, g
                         Want a different one? Swap it in a tap.
                       </Step>
                       <Step n="3" color={C_GOLD} labelColor={C_EARTH} title="DO IT TOGETHER" last>
-                        Cook the meal, build the stand, plant the bed. The learning takes care of
-                        itself.
+                        Cook the meal, build the stand, plant the bed. The math, writing and life
+                        skills come along on their own.
                       </Step>
                     </tbody>
                   </table>
@@ -194,7 +193,7 @@ export default function GrantWelcome({ firstName, signInUrl, source, giftFrom, g
                     style={mapImg}
                   />
                   <div style={{ ...micro, marginTop: '10px', textAlign: 'center' as const }}>
-                    Your family&apos;s trail. One stop at a time, all year long.
+                    Your family&apos;s trail, with the next activity already picked.
                   </div>
                 </td>
               </tr>

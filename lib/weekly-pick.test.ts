@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isWeeklyDue, pickWeekly } from './weekly-pick';
+import { isWeeklyDue, monthRecap, pickWeekly } from './weekly-pick';
 
 const now = new Date('2026-12-06T14:00:00Z');
 const base = { views: {}, completions: [], weekSlugs: [], kids: [], recent: [], monthSlugs: [], now };
@@ -71,5 +71,40 @@ describe('isWeeklyDue', () => {
     const lastSent = d('2026-12-06T14:00:05Z');
     expect(isWeeklyDue({ memberSince, lastSent, now: d('2026-12-12T14:00:00Z') })).toBe(false);
     expect(isWeeklyDue({ memberSince, lastSent, now: d('2026-12-13T14:00:00Z') })).toBe(true);
+  });
+});
+
+describe('quiet weeks', () => {
+  it('quiet after 2+ emails with nothing marked in 14 days', () => {
+    expect(pickWeekly({ ...base, recent: ['a', 'b'] })?.quiet).toBe(true);
+  });
+  it('not quiet on the first emails', () => {
+    expect(pickWeekly({ ...base, recent: ['a'] })?.quiet).toBe(false);
+  });
+  it('not quiet when something was marked in the last 14 days', () => {
+    const completions = [{ slug: 'nature-crafts', at: '2026-11-25T10:00:00Z' }];
+    expect(pickWeekly({ ...base, recent: ['a', 'b'], completions })?.quiet).toBe(false);
+  });
+});
+
+describe('monthRecap', () => {
+  it('recaps last calendar month with its skills', () => {
+    const r = monthRecap(
+      [
+        { slug: 'nature-crafts', at: '2026-11-05T10:00:00Z' },
+        { slug: 'budget-challenge', at: '2026-11-20T10:00:00Z' },
+        { slug: 'budget-challenge', at: '2026-11-21T10:00:00Z' },
+        { slug: 'survival-base', at: '2026-10-30T10:00:00Z' },
+        { slug: 'household-orchestra', at: '2026-12-02T10:00:00Z' },
+      ],
+      new Date('2026-12-06T14:00:00Z'),
+    );
+    expect(r?.month).toBe('November');
+    expect(r?.activities.map((g) => g.slug)).toEqual(['budget-challenge', 'nature-crafts']);
+    expect(r?.skills).toContain('Budgeting');
+    expect(r?.skills).not.toContain('STEM');
+  });
+  it('no recap for a month with nothing marked', () => {
+    expect(monthRecap([{ slug: 'nature-crafts', at: '2026-10-05T10:00:00Z' }], new Date('2026-12-06T14:00:00Z'))).toBeNull();
   });
 });

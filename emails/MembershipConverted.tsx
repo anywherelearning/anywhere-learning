@@ -94,13 +94,11 @@ export default function MembershipConverted({
               <tr>
                 <td style={{ padding: '28px 36px 0' }}>
                   <Text style={p}>
-                    It earned its place in your week, and that&apos;s the whole hope behind this. So
-                    thank you, genuinely. I don&apos;t take it lightly.
+                    Thank you so much for staying. It means a lot to me.
                   </Text>
                   <Text style={{ ...p, margin: '14px 0 0' }}>
-                    Nothing changes about how you use it. Same library, same activities, same one
-                    good hour at a time with your kids. The only difference is you can now save and
-                    print {isMonthly ? '5 guides a month' : 'every guide whenever you like'}, and the whole thing is yours for the {per}{' '}
+                    Everything works the same as during your trial. The only difference is that you
+                    can now save and print {isMonthly ? '5 guides a month' : 'every guide whenever you like'}, and the whole thing is yours for the {per}{' '}
                     ahead.
                   </Text>
                 </td>
@@ -145,8 +143,7 @@ export default function MembershipConverted({
               <tr>
                 <td style={{ padding: '26px 36px 0' }}>
                   <Text style={p}>
-                    So glad you stayed. Now go do something real together this week, your kids
-                    will remember it.
+                    I hope you find a good moment this week to do one together.
                   </Text>
                   <Text style={{ ...p, margin: '16px 0 6px' }}>xo,</Text>
                   <Img src={`${SITE}/email-fn-amelie.png`} alt="Amelie" width="130" style={{ display: 'block', width: '130px', height: 'auto' }} />

@@ -203,8 +203,8 @@ export default function TrialMidpoint({
                         pick.
                       </Text>
                       <Text style={{ ...p, margin: '14px 0 0' }}>
-                        Already did it? Amazing. Tap <strong style={strong}>We did it!</strong> in
-                        the guide so it lands on your map. If you haven&apos;t had the chance yet,
+                        If you already did it, that&apos;s great! Tap <strong style={strong}>We did it!</strong> in
+                        the guide so it shows up on your map. If you haven&apos;t had the chance yet,
                         here&apos;s how to actually get it done together this week.
                       </Text>
                     </>
@@ -261,11 +261,11 @@ export default function TrialMidpoint({
                           </Step>
                           <Step n="2" color={C_FOREST} title="READ IT ONCE YOURSELF">
                             Ten minutes the night before, on your phone. You&apos;ll know what to grab and
-                            what to say, so you&apos;re not figuring it out with an audience.
+                            what to say before the kids are standing there waiting.
                           </Step>
                           <Step n="3" color={C_GOLD} labelColor={C_EARTH} title="START AT EXPLORE" last>
                             Every guide has three levels. Explore is the gentle first try. It
-                            doesn&apos;t have to go perfectly, it just has to happen. Then tap{' '}
+                            doesn&apos;t need to go perfectly. Getting started is the main thing. Then tap{' '}
                             <strong style={strong}>We did it!</strong> so it lands on your map.
                           </Step>
                         </tbody>

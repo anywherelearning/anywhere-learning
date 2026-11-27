@@ -130,7 +130,7 @@ export default function MembershipWelcome({
                   <Text style={{ ...p, margin: '14px 0 0' }}>
                     Everything in your new library comes from that idea. Real activities, low
                     prep, made to be done side by side. You don&apos;t need a plan for the whole
-                    year. You just need one good hour this week.
+                    year. One good hour this week is a great start.
                   </Text>
                 </td>
               </tr>
@@ -195,13 +195,13 @@ export default function MembershipWelcome({
                         time you usually have. That&apos;s all it needs.
                       </Step>
                       <Step n="2" color={C_FOREST} title="YOUR FIRST STOP IS ALREADY PICKED">
-                        No scrolling a library deciding on nothing. Open it and something is
-                        waiting, sized to your family. Want a different one? Say so and it swaps.
+                        When you open it, there&apos;s already an activity waiting that fits your
+                        family. If you&apos;d rather do a different one, you can swap it in one tap.
                       </Step>
                       <Step n="3" color={C_GOLD} labelColor={C_EARTH} title="DO IT TOGETHER" last>
-                        Cook the meal, build the stand, plant the bed. Most families walk one trail
-                        together, so everyone&apos;s in on the same thing. The learning takes care
-                        of itself.
+                        Cook the meal, build the stand, plant the bed. Most families do one activity
+                        together, with every kid at their own level. The math, writing and life
+                        skills come along on their own.
                       </Step>
                     </tbody>
                   </table>
@@ -259,7 +259,7 @@ export default function MembershipWelcome({
                       <tbody>
                         <tr>
                           <td style={{ padding: '22px 24px 22px' }}>
-                            <div style={{ ...label, color: C_FOREST }}>YOUR FREE TRIAL, PLAINLY</div>
+                            <div style={{ ...label, color: C_FOREST }}>YOUR FREE TRIAL</div>
                             <table
                               role="presentation"
                               cellPadding={0}
@@ -273,9 +273,9 @@ export default function MembershipWelcome({
                                   like. Want to save guides as PDFs? Start your membership anytime.
                                 </TrialRow>
                                 <TrialRow label={pillDate(headsUp)}>
-                                  <strong style={strongInk}>One friendly heads-up.</strong>{' '}
-                                  I&apos;ll email you 3 days before anything changes. No surprise
-                                  charges, I promise.
+                                  <strong style={strongInk}>A heads-up from me.</strong>{' '}
+                                  I&apos;ll email you 3 days before your trial ends, so the charge
+                                  never catches you off guard.
                                 </TrialRow>
                                 <TrialRow label={pillDate(trialEnd)} last>
                                   <strong style={strongInk}>Membership begins.</strong> Your plan
@@ -310,8 +310,8 @@ export default function MembershipWelcome({
                             <div style={{ ...label, color: C_TERRA, marginTop: '16px' }}>YOUR FOUNDER RATE</div>
                             <div style={founderHeadline}>$99 a year, for as long as you stay.</div>
                             <div style={founderBody}>
-                              You&apos;re joining in our founding season. When new members pay
-                              $129, your price won&apos;t move an inch.
+                              You&apos;re joining in our founding season. Later, new members will pay
+                              $129. Yours stays at $99 for as long as you&apos;re a member.
                             </div>
                           </td>
                         </tr>

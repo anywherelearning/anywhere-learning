@@ -28,7 +28,7 @@ import { generateSignInUrl, getClerk } from '@/lib/member-provision';
 import { sendWeeklyPickEmail } from '@/lib/resend';
 import { getThisMonth } from '@/lib/this-month';
 import { kidsPhrase } from '@/lib/trial-midpoint';
-import { isWeeklyDue, pickWeekly } from '@/lib/weekly-pick';
+import { isWeeklyDue, monthRecap, pickWeekly } from '@/lib/weekly-pick';
 import type { Child } from '@/lib/member-profile';
 
 const IS_OWNER_TEST = /ameliedrouin|@anywherelearning\.co$/i;
@@ -177,7 +177,7 @@ export async function runWeeklyPicks({
     }
   }
 
-  const results: { email: string; ok: boolean; guide?: string; source?: string; error?: string }[] = [];
+  const results: { email: string; ok: boolean; guide?: string; source?: string; quiet?: boolean; recap?: string; error?: string }[] = [];
   for (const d of due) {
     try {
       const state = stateByClerk.get(d.clerkId) ?? {};
@@ -198,17 +198,37 @@ export async function runWeeklyPicks({
         continue;
       }
       if (dryRun) {
-        results.push({ email: d.email, ok: true, guide: pick.guide.slug, source: pick.source });
+        const last = lastSentByEmail.get(d.email.toLowerCase());
+        const firstOfMonth = !last || easternDate(last).slice(0, 7) !== date.slice(0, 7);
+        const recap = firstOfMonth ? monthRecap(state.completions ?? [], now) : null;
+        results.push({
+          email: d.email,
+          ok: true,
+          guide: pick.guide.slug,
+          source: pick.source,
+          ...(pick.quiet && { quiet: true }),
+          ...(recap && { recap: `${recap.month}: ${recap.activities.length} done` }),
+        });
         continue;
       }
+      // A recap of last month rides along in the first weekly email of each
+      // new month (Eastern), and only when they marked something done.
+      const last = lastSentByEmail.get(d.email.toLowerCase());
+      const firstOfMonth = !last || easternDate(last).slice(0, 7) !== date.slice(0, 7);
+      const recap = firstOfMonth ? monthRecap(state.completions ?? [], now) : null;
+
       await sendWeeklyPickEmail({
         to: d.email,
         firstName: firstNames[d.clerkId],
         guide: pick.guide,
         source: pick.source,
         doneLastWeek: pick.doneLastWeek,
-        kids: kidsPhrase(kids),
+        quiet: pick.quiet,
+        recap,
+        // First names only, no ages (her call Nov 27): "Maya", "Elijah and Indie".
+        kids: kidsPhrase(kids.map((k) => ({ ...k, birthMonth: null, age: null }))),
         monthTitle: theme.skill.title,
+        weekIndex: recentByEmail.get(d.email.toLowerCase())?.length ?? 0,
         guideUrl: await generateSignInUrl(d.clerkId, `/account/view/${pick.guide.slug}`),
         stopUrl: weeklyStopUrl(d.userId),
       });
