@@ -50,7 +50,7 @@ interface ProductSpec {
 const SPECS: ProductSpec[] = [
   {
     name: 'Anywhere Learning Membership',
-    description: 'Read every guide in the library on any device. During your free trial, viewing is unlimited and downloads unlock when your membership starts. New activities added every quarter.',
+    description: 'Read every guide in the library on any device. During your free trial, viewing is unlimited and downloads unlock when your membership starts. New activities added through the year.',
     metadata: { kind: 'membership' },
     prices: [
       {
