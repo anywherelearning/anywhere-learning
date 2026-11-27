@@ -1,5 +1,5 @@
 /**
- * The Sunday "one for this week" member email: which guide it suggests.
+ * The weekly "one for this week" member email: which guide it suggests.
  *
  * Why it exists (Nov 2026 churn dig): every family who left used the member
  * zone on one day only; every family who stayed came back on a second day.
@@ -80,4 +80,22 @@ export function pickWeekly(inputs: WeeklyInputs): WeeklyPick | null {
   const fits = Object.keys(EFFORT_BY_SLUG).filter((s) => ok(s) && fitsKids(s, inputs.kids));
   const quick = fits.find((s) => EFFORT_BY_SLUG[s] === 'Quick') ?? fits[0];
   return pick(quick, 'quick');
+}
+
+/**
+ * Is this member's weekly email due today? First one 7 days after they became
+ * a paying member, then every 7 days after the last one. The cron runs once a
+ * day at the same hour, so "6.5 days" lands on the 7th day without drifting.
+ */
+export function isWeeklyDue({
+  memberSince,
+  lastSent,
+  now,
+}: {
+  memberSince: Date;
+  lastSent?: Date;
+  now: Date;
+}): boolean {
+  const since = lastSent ?? memberSince;
+  return now.getTime() - since.getTime() >= 6.5 * 24 * 60 * 60 * 1000;
 }

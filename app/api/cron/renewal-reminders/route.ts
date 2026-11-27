@@ -63,8 +63,8 @@ export async function GET(req: NextRequest) {
     checkins = { error: err instanceof Error ? err.message : 'unknown' };
   }
 
-  // Sunday "one for this week" email to paying members (lib/weekly-pick-run.ts).
-  // Does nothing on other days.
+  // Weekly "one for this week" email to paying members (lib/weekly-pick-run.ts).
+  // Each family on their own 7-day rhythm.
   let weekly: Awaited<ReturnType<typeof runWeeklyPicks>> | { error: string };
   try {
     weekly = await runWeeklyPicks();

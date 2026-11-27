@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { pickWeekly } from './weekly-pick';
+import { isWeeklyDue, pickWeekly } from './weekly-pick';
 
 const now = new Date('2026-12-06T14:00:00Z');
 const base = { views: {}, completions: [], weekSlugs: [], kids: [], recent: [], monthSlugs: [], now };
@@ -55,5 +55,21 @@ describe('pickWeekly', () => {
     const recent = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'household-orchestra'];
     const pick = pickWeekly({ ...base, recent, monthSlugs: ['household-orchestra'] });
     expect(pick?.guide.slug).toBe('household-orchestra');
+  });
+});
+
+describe('isWeeklyDue', () => {
+  const d = (s: string) => new Date(s);
+  it('first email a week after they became a member, not before', () => {
+    const memberSince = d('2026-12-04T15:00:00Z'); // a Friday
+    expect(isWeeklyDue({ memberSince, now: d('2026-12-06T14:00:00Z') })).toBe(false); // that Sunday
+    expect(isWeeklyDue({ memberSince, now: d('2026-12-10T14:00:00Z') })).toBe(false);
+    expect(isWeeklyDue({ memberSince, now: d('2026-12-11T14:00:00Z') })).toBe(true); // next Friday
+  });
+  it('then every 7 days after the last one', () => {
+    const memberSince = d('2026-10-01T00:00:00Z');
+    const lastSent = d('2026-12-06T14:00:05Z');
+    expect(isWeeklyDue({ memberSince, lastSent, now: d('2026-12-12T14:00:00Z') })).toBe(false);
+    expect(isWeeklyDue({ memberSince, lastSent, now: d('2026-12-13T14:00:00Z') })).toBe(true);
   });
 });

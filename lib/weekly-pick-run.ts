@@ -1,15 +1,23 @@
 /**
- * Sends the Sunday "one for this week" email (emails/WeeklyPick.tsx), from the
- * daily renewal-reminders cron (14:00 UTC = Sunday morning in North America).
- * Manual runs: GET /api/cron/weekly-pick?dry=1 (&force=1 to run on a weekday).
+ * Sends the weekly "one for this week" email (emails/WeeklyPick.tsx), from the
+ * daily renewal-reminders cron (14:00 UTC, morning in North America).
+ * Manual runs: GET /api/cron/weekly-pick?dry=1 (&force=1 ignores the launch date).
+ *
+ * Rhythm (Amelie, Nov 27 2026): each family's first email comes 7 days after
+ * they became a paying member, then every 7 days after that, on their own day
+ * of the week. Nobody gets one before WEEKLY_LAUNCH, so everyone already in
+ * starts on Sunday Dec 6 2026. "Became a paying member" = the owner's
+ * "Trial converted to paid" alert for that subscription when there is one
+ * (sent_emails kind 'owner_alert:converted:<sub id>'), else the subscription's
+ * start; for prepaid grants, the grant start.
  *
  * Who: active subscriptions not set to cancel (NOT trialing: trials already get
  * three emails in seven days) plus live prepaid grants, minus the owner's test
  * accounts and anyone who clicked "Stop the weekly pick".
  *
  * Bookkeeping lives in sent_emails, no new table:
- *   - 'weekly_pick:<YYYY-MM-DD>:<slug>'  one per member per Sunday; the slug
- *     part is how later weeks avoid repeating a suggestion.
+ *   - 'weekly_pick:<YYYY-MM-DD>:<slug>'  one per send; the date gives the
+ *     rhythm, the slug stops a suggestion coming back too soon.
  *   - 'weekly_pick_off'                   they turned it off.
  */
 
@@ -20,12 +28,14 @@ import { generateSignInUrl, getClerk } from '@/lib/member-provision';
 import { sendWeeklyPickEmail } from '@/lib/resend';
 import { getThisMonth } from '@/lib/this-month';
 import { kidsPhrase } from '@/lib/trial-midpoint';
-import { pickWeekly } from '@/lib/weekly-pick';
+import { isWeeklyDue, pickWeekly } from '@/lib/weekly-pick';
 import type { Child } from '@/lib/member-profile';
 
 const IS_OWNER_TEST = /ameliedrouin|@anywherelearning\.co$/i;
 const KIND_PREFIX = 'weekly_pick:';
 export const WEEKLY_OFF_KIND = 'weekly_pick_off';
+/** First day anyone can get it (Eastern). Existing members all start here. */
+export const WEEKLY_LAUNCH = '2026-12-06';
 const DAY = 24 * 60 * 60 * 1000;
 /** Reader opens older than this don't count as "you opened it recently". */
 const VIEW_WINDOW_DAYS = 28;
@@ -36,42 +46,61 @@ interface StateData {
   completions?: { slug: string; at: string }[] | null;
 }
 
-const easternParts = (d: Date) => {
-  const f = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'America/New_York',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    weekday: 'short',
-  }).formatToParts(d);
-  const get = (t: string) => f.find((p) => p.type === t)!.value;
-  return { date: `${get('year')}-${get('month')}-${get('day')}`, weekday: get('weekday') };
-};
+const easternDate = (d: Date) =>
+  new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
 
 export function weeklyStopUrl(userId: string): string {
   const base = (process.env.NEXT_PUBLIC_URL || 'https://anywherelearning.co').replace(/\/$/, '');
   return `${base}/api/email/weekly-off?t=${userId}`;
 }
 
+interface Member {
+  userId: string;
+  clerkId: string;
+  email: string;
+  /** When they became a paying member (see header). */
+  memberSince: Date;
+}
+
 async function payingMembers(now: Date) {
   const subRows = await db
-    .select({ userId: users.id, clerkId: users.clerkId, email: users.email })
+    .select({
+      userId: users.id,
+      clerkId: users.clerkId,
+      email: users.email,
+      createdAt: subscriptions.createdAt,
+      stripeSubscriptionId: subscriptions.stripeSubscriptionId,
+    })
     .from(subscriptions)
     .innerJoin(users, eq(subscriptions.userId, users.id))
     // Not members who already cancelled (access until period end): they chose
     // to leave, and a weekly nudge would read as pushy.
     .where(and(eq(subscriptions.status, 'active'), eq(subscriptions.cancelAtPeriodEnd, false)));
   const grantRows = await db
-    .select({ userId: users.id, clerkId: users.clerkId, email: users.email })
+    .select({ userId: users.id, clerkId: users.clerkId, email: users.email, startsAt: accessGrants.startsAt })
     .from(accessGrants)
     .innerJoin(users, eq(accessGrants.userId, users.id))
     .where(and(isNull(accessGrants.revokedAt), lte(accessGrants.startsAt, now), gt(accessGrants.endsAt, now)));
 
-  const byEmail = new Map<string, { userId: string; clerkId: string; email: string }>();
-  for (const r of [...subRows, ...grantRows]) {
-    const key = r.email.toLowerCase();
-    if (!IS_OWNER_TEST.test(key) && !byEmail.has(key)) byEmail.set(key, r);
+  // Trial-to-paid moments, from the owner alert the webhook logs at conversion.
+  const convKinds = subRows.map((r) => `owner_alert:converted:${r.stripeSubscriptionId}`);
+  const conversions = convKinds.length
+    ? await db
+        .select({ kind: sentEmails.kind, sentAt: sentEmails.sentAt })
+        .from(sentEmails)
+        .where(and(eq(sentEmails.email, 'owner'), inArray(sentEmails.kind, convKinds)))
+    : [];
+  const convertedAt = new Map(conversions.map((c) => [c.kind.split(':')[2], c.sentAt]));
+
+  const byEmail = new Map<string, Member>();
+  const add = (m: Member) => {
+    const key = m.email.toLowerCase();
+    if (!IS_OWNER_TEST.test(key) && !byEmail.has(key)) byEmail.set(key, m);
+  };
+  for (const r of subRows) {
+    add({ ...r, memberSince: convertedAt.get(r.stripeSubscriptionId) ?? r.createdAt });
   }
+  for (const r of grantRows) add({ ...r, memberSince: r.startsAt });
   return byEmail;
 }
 
@@ -80,38 +109,39 @@ export async function runWeeklyPicks({
   force = false,
   now = new Date(),
 }: { dryRun?: boolean; force?: boolean; now?: Date } = {}) {
-  const { date, weekday } = easternParts(now);
-  if (weekday !== 'Sun' && !force) return { date, skipped: 'not Sunday', due: 0, sent: 0 };
+  const date = easternDate(now);
+  if (date < WEEKLY_LAUNCH && !force) return { date, skipped: `starts ${WEEKLY_LAUNCH}`, due: 0, sent: 0 };
 
   const byEmail = await payingMembers(now);
   if (!byEmail.size) return { date, due: 0, sent: 0 };
   const emails = [...byEmail.keys()];
 
-  // Already sent today, or turned off.
-  const blocked = await db
-    .select({ email: sentEmails.email, kind: sentEmails.kind })
+  const optedOut = await db
+    .select({ email: sentEmails.email })
     .from(sentEmails)
-    .where(
-      and(
-        inArray(sentEmails.email, emails),
-        sql`(${sentEmails.kind} = ${WEEKLY_OFF_KIND} OR ${sentEmails.kind} LIKE ${`${KIND_PREFIX}${date}:%`})`,
-      ),
-    );
-  for (const b of blocked) byEmail.delete(b.email);
-  const due = [...byEmail.values()];
-  if (!due.length) return { date, due: 0, sent: 0 };
+    .where(and(inArray(sentEmails.email, emails), eq(sentEmails.kind, WEEKLY_OFF_KIND)));
+  for (const o of optedOut) byEmail.delete(o.email);
 
-  // Earlier suggestions, newest first, so a guide doesn't come back too soon.
-  const pastRows = await db
-    .select({ email: sentEmails.email, kind: sentEmails.kind, sentAt: sentEmails.sentAt })
-    .from(sentEmails)
-    .where(and(like(sentEmails.kind, `${KIND_PREFIX}%`), inArray(sentEmails.email, due.map((d) => d.email.toLowerCase()))));
+  // Every earlier weekly email, newest first: the last one sets the rhythm,
+  // and the slugs stop a guide coming back too soon.
+  const pastRows = byEmail.size
+    ? await db
+        .select({ email: sentEmails.email, kind: sentEmails.kind, sentAt: sentEmails.sentAt })
+        .from(sentEmails)
+        .where(and(like(sentEmails.kind, `${KIND_PREFIX}%`), inArray(sentEmails.email, [...byEmail.keys()])))
+    : [];
   const recentByEmail = new Map<string, string[]>();
+  const lastSentByEmail = new Map<string, Date>();
   for (const r of [...pastRows].sort((a, b) => b.sentAt.getTime() - a.sentAt.getTime())) {
+    if (!lastSentByEmail.has(r.email)) lastSentByEmail.set(r.email, r.sentAt);
     const slug = r.kind.split(':')[2];
-    if (!slug) continue;
-    recentByEmail.set(r.email, [...(recentByEmail.get(r.email) ?? []), slug]);
+    if (slug) recentByEmail.set(r.email, [...(recentByEmail.get(r.email) ?? []), slug]);
   }
+
+  const due = [...byEmail.entries()]
+    .filter(([email, m]) => isWeeklyDue({ memberSince: m.memberSince, lastSent: lastSentByEmail.get(email), now }))
+    .map(([, m]) => m);
+  if (!due.length) return { date, due: 0, sent: 0 };
 
   const viewRows = await db
     .select({ userId: activityEvents.userId, slug: activityEvents.slug, opens: sql<number>`count(*)::int` })

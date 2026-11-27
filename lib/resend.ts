@@ -188,7 +188,7 @@ export async function sendTrialMidpointEmail({
   });
 }
 
-/** Sunday "one for this week" member email (lib/weekly-pick-run.ts). */
+/** Weekly "one for this week" member email (lib/weekly-pick-run.ts). */
 export async function sendWeeklyPickEmail(opts: {
   to: string;
   firstName?: string;

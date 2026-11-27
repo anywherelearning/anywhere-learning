@@ -1,9 +1,9 @@
 /**
- * Manual trigger for the Sunday weekly-pick email (the real run is inside the
+ * Manual trigger for the weekly-pick email (the real run is inside the
  * daily renewal-reminders cron, so it needs no Vercel cron slot of its own).
  *
  *   ?dry=1    who would get which guide, sends nothing
- *   ?force=1  run even if it isn't Sunday (Eastern)
+ *   ?force=1  ignore the launch date (WEEKLY_LAUNCH)
  *
  * Authed with CRON_SECRET like the other cron routes.
  */

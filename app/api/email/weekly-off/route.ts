@@ -1,5 +1,5 @@
 /**
- * /api/email/weekly-off?t=<users.id> turns off the Sunday weekly-pick email.
+ * /api/email/weekly-off?t=<users.id> turns off the weekly-pick email.
  *
  * GET is the footer link (shows a short confirmation page). POST is the
  * one-click List-Unsubscribe that Gmail and Apple Mail send (RFC 8058). The
@@ -42,7 +42,7 @@ main{max-width:520px;margin:12vh auto;padding:0 24px;text-align:center}h1{font-f
 p{font-size:17px;line-height:1.65;color:#4B5563}a{color:#588157;font-weight:600}</style></head>
 <body><main>${
   ok
-    ? `<h1>Done. No more weekly picks.</h1><p>You won't get the Sunday email anymore. Your membership doesn't change, and your map and every guide are right where you left them.</p>`
+    ? `<h1>Done. No more weekly picks.</h1><p>You won't get the weekly email anymore. Your membership doesn't change, and your map and every guide are right where you left them.</p>`
     : `<h1>That link didn't work.</h1><p>To stop the weekly pick, email <a href="mailto:info@anywherelearning.co">info@anywherelearning.co</a> and I'll turn it off for you.</p>`
 }<p><a href="https://anywherelearning.co/account">Go to your account</a></p></main></body></html>`;
 

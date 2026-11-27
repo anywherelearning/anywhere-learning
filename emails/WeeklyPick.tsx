@@ -35,7 +35,7 @@ export function weeklySubject(guide: MidpointGuide, firstName?: string): string 
 }
 
 /**
- * The Sunday member email: one guide for this week, picked by lib/weekly-pick.ts.
+ * The weekly member email: one guide for this week, picked by lib/weekly-pick.ts.
  * Paying members and prepaid grants only (trials already get three emails in
  * seven days). Short on purpose: one guide, one button, a two-line how-to.
  * "Trail map" design, matching TrialMidpoint.
@@ -136,7 +136,7 @@ export default function WeeklyPick({
                   <div style={motto}>Meaningful Learning, Wherever You Are</div>
                   <Text style={legal}>
                     You&apos;re getting this because you&apos;re an Anywhere Learning member. One
-                    email, every Sunday.{' '}
+                    email a week.{' '}
                     <Link href={stopUrl} style={{ color: '#A09A8C' }}>
                       Stop the weekly pick
                     </Link>
