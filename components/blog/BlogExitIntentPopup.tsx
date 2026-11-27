@@ -570,7 +570,7 @@ function MembershipVariant({ onDismiss }: { onDismiss: () => void }) {
             Ready for the rest of the library?
           </h2>
           <p className="text-[13px] sm:text-[15px] text-gray-500 leading-relaxed">
-            120+ guided activities across nine categories. New ones added every quarter
+            120+ guided activities across nine categories. New ones added through the year
             {IS_FOUNDER_PHASE ? ', founder rate locked in for life' : ''}.
           </p>
         </div>

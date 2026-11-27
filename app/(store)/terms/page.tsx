@@ -36,7 +36,7 @@ const sections: LegalSection[] = [
             <strong className="text-ink font-semibold">Free resources</strong>: the 7-day guide, the Capable Kid Guide, a free 5-day email course, a 2-minute quiz, and printable activity idea checklists. Some are delivered by email after you give us your email address, which also adds you to our mailing list (you can unsubscribe anytime).
           </li>
           <li>
-            <strong className="text-ink font-semibold">Membership</strong>: a recurring subscription (yearly or monthly, your choice) that gives access to our complete library of activity guides, new content added quarterly, and member-only features. It starts with a 7-day free trial.
+            <strong className="text-ink font-semibold">Membership</strong>: a recurring subscription (yearly or monthly, your choice) that gives access to our complete library of activity guides, new content as it is added, and member-only features. It starts with a 7-day free trial.
           </li>
         </ul>
         <p>

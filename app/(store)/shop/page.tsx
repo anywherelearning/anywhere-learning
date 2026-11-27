@@ -480,7 +480,7 @@ export default function ShopPage() {
                     you never have to plan.
                   </p>
                   <div className="mt-6 flex flex-wrap gap-2">
-                    {['Ages 6 to 14', '3 skill levels', 'New each quarter'].map(
+                    {['Ages 6 to 14', '3 skill levels', 'New guides added'].map(
                       (pill) => (
                         <span
                           key={pill}
@@ -767,12 +767,12 @@ export default function ShopPage() {
                   </h3>
                   <p className="mt-3.5 text-[15.5px] leading-[1.6] text-gray-600">
                     {IS_FOUNDER_PHASE
-                      ? `Every activity plus quarterly new content, locked in at $${MEMBERSHIP_PRICE_USD} for life as a founding member. After the first ${FOUNDER_CAP} members, $${POST_FOUNDER_PRICE_USD}/year. Prefer monthly? $${MONTHLY_PRICE_USD}/month.`
-                      : `Every activity plus quarterly new content, $${MONTHLY_PRICE_USD}/month if you'd rather go monthly. Cancel anytime.`}
+                      ? `Every activity plus new guides as they're added, locked in at $${MEMBERSHIP_PRICE_USD} for life as a founding member. After the first ${FOUNDER_CAP} members, $${POST_FOUNDER_PRICE_USD}/year. Prefer monthly? $${MONTHLY_PRICE_USD}/month.`
+                      : `Every activity plus new guides as they're added, $${MONTHLY_PRICE_USD}/month if you'd rather go monthly. Cancel anytime.`}
                   </p>
                   <div className="mt-5 flex flex-col gap-2 text-[14px] text-gray-700">
                     <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> 120+ activities, all categories</span>
-                    <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> New content every quarter</span>
+                    <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> New guides added through the year</span>
                     <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> Start with a 7-day free trial</span>
                     {IS_FOUNDER_PHASE && (
                       <span className="inline-flex items-center gap-2"><span className="text-forest font-bold">✓</span> Founder rate locked for life</span>

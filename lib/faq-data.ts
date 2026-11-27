@@ -78,7 +78,7 @@ export const membershipFaqItems: FAQItem[] = [
   {
     question: 'How often are new activities added?',
     answer:
-      'Quarterly. New activities across all nine categories, added to the library every quarter. Members get them automatically. No extra cost, no announcements you have to act on.',
+      "I keep adding new activities through the year, across all the categories. Members get them automatically, at no extra cost, and you don't have to do anything to get them.",
   },
   {
     question: 'Can I cancel anytime?',

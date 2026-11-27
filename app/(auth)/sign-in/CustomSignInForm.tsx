@@ -36,7 +36,7 @@ const WARM_COPY: Record<
     list: [
       '120+ activities across 9 categories',
       'Three difficulty levels, siblings together',
-      'Quarterly drops included with membership',
+      'New guides added through the year, included',
     ],
   },
   email_code: {

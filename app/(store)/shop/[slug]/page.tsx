@@ -1102,8 +1102,8 @@ export default async function ProductPage({
               <p className="mt-4 mb-6 text-[16.5px] leading-[1.6] text-gray-600 max-w-[520px]">
                 The membership covers nine topics (math, AI, communication,
                 planning, creativity, outdoor, entrepreneurship, worldschooling,
-                and emotional & social skills) with new activities every
-                quarter. {MEMBERSHIP_PRICE_YEAR}
+                and emotional & social skills) with new activities added through
+                the year. {MEMBERSHIP_PRICE_YEAR}
                 {IS_FOUNDER_PHASE
                   ? ", locked in for life as a founding member."
                   : "."}
@@ -1142,7 +1142,7 @@ export default async function ProductPage({
                 {[
                   "All 120+ activities (every category)",
                   "3 levels per activity, for ages 6 to 14 across the library",
-                  "New activities every quarter",
+                  "New activities added through the year",
                   "The Future-Ready Skills Map (parent guide)",
                   "Member-only resources",
                   "14-day money-back guarantee",

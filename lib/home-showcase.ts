@@ -425,7 +425,7 @@ export const MEMBERSHIP_INCLUDES = [
   'A new skill, seasonal set and family challenge every month',
   'Reads, videos, podcasts, games and apps around each theme',
   'Printable home education record across twelve skill areas',
-  'New activities added every quarter, at no extra cost',
+  'New activities added through the year, at no extra cost',
 ];
 
 export interface ShowcaseFaq {
