@@ -110,6 +110,8 @@ export function draftCheckin(opts: {
         kids || 'your kids'
       }.`,
       "So I'd love to hear how it's going. If something is confusing, missing, or just not working for your family, please tell me. And if something worked, I'd love to hear that too. Your feedback shapes what I build next.",
+      // Hand-run referral offer (Nov 2026): she adds the free month at /admin/grants.
+      "One more thing: if you know a family who'd love this too, feel free to pass it along. When they join, ask them to mention your name, and I'll add a free month to your membership as a thank you.",
       "I'm always here if you need anything.",
       'Warmly,\nAmelie',
     ].join('\n\n'),

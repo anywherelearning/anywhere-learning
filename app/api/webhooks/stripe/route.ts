@@ -592,6 +592,9 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   if (session.subscription) {
     const subId = typeof session.subscription === 'string' ? session.subscription : session.subscription.id;
     const who = [firstName, lastName].filter(Boolean).join(' ') || '(no name)';
+    const referredBy = session.custom_fields
+      ?.find((f) => f.key === 'referred_by')
+      ?.text?.value?.trim();
     await notifyOwnerOnce(
       `signup:${subId}`,
       isTrial ? `New free trial: ${who}` : `New member: ${who}`,
@@ -603,6 +606,9 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
         `Plan: ${planLabel(plan, session.metadata?.offer)}`,
         isTrial && trialEndsAt ? `Trial ends: ${shortDate(trialEndsAt)}` : null,
         isFirstMembership ? null : 'Returning: they had a membership before.',
+        referredBy
+          ? `Referred by: ${referredBy} (add their free month at /admin/grants once this person is a paying member)`
+          : null,
       ],
     );
   }

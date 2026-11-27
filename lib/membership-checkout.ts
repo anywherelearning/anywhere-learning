@@ -193,6 +193,17 @@ export async function createMembershipCheckout(opts: {
           ? { discounts: [{ promotion_code: coopPromo.id }] }
           : { allow_promotion_codes: true }),
     billing_address_collection: 'auto',
+    // Hand-run referrals (Nov 2026): the name lands in the owner's "New member"
+    // email, and she adds the referrer's free month at /admin/grants.
+    custom_fields: [
+      {
+        key: 'referred_by',
+        label: { type: 'custom', custom: 'Did a friend tell you about us? Their name' },
+        type: 'text',
+        optional: true,
+        text: { maximum_length: 80 },
+      },
+    ],
     customer_email: email,
     client_reference_id: clerkId || undefined,
     // Card upfront even though the trial invoice is $0. Auto-converting
