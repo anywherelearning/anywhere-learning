@@ -64,26 +64,26 @@
   },
   "lesson": {
     "text": "A craft is knowledge held in someone's hands. The materials, the patterns and the hours of work all tell you about the place it comes from, and the fastest way to understand it is to try making it yourself.",
-    "before": "'It's just a bracelet. Why does it cost so much?'",
+    "before": "'It's just a little purse. Why does it cost so much?'",
     "model": [
       {
         "part": "Read",
-        "line": "Six colours, a pattern that repeats every few centimetres, cotton dyed by hand."
+        "line": "Bright stripes, a simple pattern, cotton threads stretched on a backstrap loom."
       },
       {
         "part": "Learn",
-        "line": "Half an hour to weave two centimetres, with the maker fixing every second row."
+        "line": "Three hours at the loom, with the maker and her daughter fixing the rows."
       },
       {
         "part": "Count",
-        "line": "About four hours for one bracelet that sells for $8. That's $2 an hour, before the cotton."
+        "line": "Three hours for one small coin purse, and that's with a simple pattern."
       },
       {
         "part": "Now",
         "line": "'It's cheap for how long it takes.'"
       }
     ],
-    "modelNote": "Nothing about the bracelet changed. Two slow centimetres made by their own hands turned 'it costs too much' into $2 an hour, and a price that suddenly looked low."
+    "modelNote": "Nothing about the purse changed. Three hours of their own work, with sore shoulders at the end, turned 'it costs too much' into a price that suddenly looked low."
   },
   "steps": [
     {
@@ -343,7 +343,12 @@
   },
   "photo": {
     "src": "guides/assets/learn-a-local-craft.jpg",
-    "alt": "Watercolour illustration of a child's hands weaving colourful threads on a small backstrap loom beside an adult's hands",
-    "caption": "Two slow centimetres, and a new respect for the whole piece."
+    "alt": "A girl weaving on a backstrap loom beside the weaver's daughter, in a shop full of woven pieces",
+    "caption": "Three hours on a backstrap loom in San Pedro La Laguna, Guatemala.",
+    "tall": true
+  },
+  "fromHome": {
+    "text": "In San Pedro La Laguna, Guatemala, my daughter and I took a weaving workshop in a shop where a mom and her daughter weave and sell their work. They taught us together, and we each made a small coin purse on a backstrap loom. It took three hours, with simple patterns, and it was much harder than we thought. It's physical work too: you hold the tension with your whole body. We paid 500 quetzales for the two of us.",
+    "quotes": []
   }
 }

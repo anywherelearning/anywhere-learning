@@ -3020,7 +3020,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/learn-a-local-craft.jpg",
-    previewFile: "Preview Worldschooling - Learn a Local Craft v5.pdf",
+    previewFile: "Preview Worldschooling - Learn a Local Craft v6.pdf",
     category: "worldschooling",
     isBundle: false,
     bundleProductIds: null,
