@@ -3043,7 +3043,7 @@ export const fallbackProducts: FallbackProduct[] = [
     stripePriceId: "",
     blobUrl: "",
     imageUrl: "/products/house-detective.jpg",
-    previewFile: "Preview Worldschooling - House Detective v3.pdf",
+    previewFile: "Preview Worldschooling - House Detective v4.pdf",
     category: "worldschooling",
     isBundle: false,
     bundleProductIds: null,

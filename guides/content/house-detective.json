@@ -4,7 +4,7 @@
   "title": "House Detective",
   "tagline": "Spot · Read · Ask · Build · Test",
   "ages": "Ages 6 to 14",
-  "goal": "Your kid works out why houses look the way they do where you are. They sketch the houses around them, match every roof, wall and window to the weather, check their theory with someone who lives there, then build a small model house for this climate and test it against the sun, the rain and the wind.",
+  "goal": "Your kid works out why houses look the way they do where you are. They sketch the houses around them, match every roof, wall and window to the weather, check their theory with someone who lives there, then build a small model house for this climate and test it against the sun, the rain, the wind and, where you get them, earthquakes.",
   "need": [
     "A street, village or neighbourhood to walk through, wherever you are",
     "A notebook and pencil for sketches",
@@ -137,23 +137,23 @@
     {
       "title": "Build a house for here",
       "why": "Designing a house for this weather shows whether they really understood it.",
-      "kid": "Your kid builds a small model house for this climate from cardboard and whatever is around, using the Build it card: walls, roof, windows and colour chosen on purpose. They also build a plain box house to compare it with.",
-      "you": "Help with cutting and taping. Ask 'Why did you choose that?' for every part, and let them choose, even if you'd do it differently.",
+      "kid": "Your kid gets two boxes the same size, like two shoeboxes. The first becomes their house for this climate, using the Build it card: they choose the walls, roof, windows and colour on purpose. The second stays exactly as it came, lid on, with only a door cut in, the same size as the door in their house. In Step 5 the tests show what their choices changed.",
+      "you": "Help with cutting and taping. For thick walls like concrete or stone, press clay or play dough about 1 cm thick inside the walls, or glue layers of cardboard. Ask 'Why did you choose that?' for every part, and let them choose, even if you'd do it differently.",
       "ask": [
         "Which part of your house fights the weather here?",
         "What did you build it from, and why?"
       ],
-      "tip": "Keep both houses the same size, so the tests are fair.",
+      "tip": "If you can only find one box, cut it in half and tape a cardboard end on each half to make two the same size.",
       "levels": {
         "explore": "Build a small house with a roof, and say what it keeps out.",
-        "develop": "Build a model for this climate, and a plain box house to compare.",
+        "develop": "Build your house for this climate in one box, and leave the second box as it came.",
         "extend": "Build a second model for the opposite climate, and explain every difference."
       }
     },
     {
       "title": "Test it",
       "why": "A real test, not an opinion, decides which design works.",
-      "kid": "Your kid tests both houses, using the Test it card: an ice cube inside each in the sun, a cup of water poured over the roof, a strong breath or a fan for wind. They record what happened and decide which house wins each test.",
+      "kid": "Your kid tests both houses, using the Test it card: an ice cube inside each in the sun, a cup of water poured over the roof, a strong breath or a fan for wind. Where you get earthquakes, they also shake both houses on a tray. They record what happened and decide which house wins each test.",
       "you": "Time the ice cubes with them, and pour the water slowly. Ask 'What would you change?' after each test, then let them fix one thing and test again.",
       "ask": [
         "Which house kept the ice longest, and why?",
@@ -162,7 +162,7 @@
       "tip": "The ice cube test works anywhere with sun: the house that keeps the inside coolest melts the ice slowest.",
       "levels": {
         "explore": "Put an ice cube in each house in the sun, and see which melts first.",
-        "develop": "Run all three tests, record the results, and pick a winner.",
+        "develop": "Run each test, record the results, and pick a winner.",
         "extend": "Change one feature, like the roof colour or wall thickness, and test whether it makes a difference."
       }
     }
@@ -254,11 +254,11 @@
         "lines": [
           {
             "k": "Base:",
-            "v": "a small cardboard box"
+            "v": "two boxes the same size"
           },
           {
             "k": "Walls:",
-            "v": "extra cardboard, clay or mud for thickness"
+            "v": "clay, play dough or layers of cardboard for thickness"
           },
           {
             "k": "Roof:",
@@ -270,7 +270,7 @@
           },
           {
             "k": "Compare:",
-            "v": "a plain box house the same size"
+            "v": "the second box as it came, lid on, same-size door"
           }
         ],
         "ask": "Which choice was hardest to make?"
@@ -289,6 +289,10 @@
           {
             "k": "Wind:",
             "v": "a strong breath or a fan, from one side"
+          },
+          {
+            "k": "Earthquake:",
+            "v": "both houses on a tray, shake gently, then harder"
           },
           {
             "k": "Fix:",
