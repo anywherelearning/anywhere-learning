@@ -58,14 +58,14 @@
               <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#d4a373; margin-bottom:8px;">Your free guide</div>
               <div style="font-size:16px; line-height:1.65; color:#2f3a2e; margin:0 0 8px;">{{ message_content }}</div>
               <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">I'm Amelie. I taught for fifteen years, then started homeschooling my own two, and Anywhere Learning grew straight out of that.</p>
-              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Thanks for grabbing <strong style="color:#2f3a2e;">{{ subscriber.last_guide }}</strong>. I made it for parents who already feel it: the best learning rarely looks like school. It looks like a kid counting out coins at the till, or planning a Saturday outing and actually being in charge of it.</p>
+              <p style="font-size:16px; line-height:1.65; color:#4b5563; margin:0 0 16px;">Thanks for grabbing <strong style="color:#2f3a2e;">{{ subscriber.last_guide | default: "the 7-day guide" }}</strong>. I made it for parents who already feel it: the best learning rarely looks like school. It looks like a kid counting out coins at the till, or planning a Saturday outing and actually being in charge of it.</p>
             </td>
           </tr>
 
           <!-- COVER IMAGE -->
           <tr>
             <td align="center" style="padding:8px 40px 4px;">
-              <img src="{{ subscriber.last_guide_cover }}" alt="{{ subscriber.last_guide }}" width="300" style="display:inline-block; width:300px; max-width:70%; height:auto; border:0; border-radius:12px; box-shadow:0 10px 26px rgba(60,50,30,0.18);">
+              <img src="{{ subscriber.last_guide_cover | default: 'https://anywherelearning.co/images/free-guide-cover.jpg' }}" alt="{{ subscriber.last_guide | default: '7 Days of Real-World Learning' }}" width="300" style="display:inline-block; width:300px; max-width:70%; height:auto; border:0; border-radius:12px; box-shadow:0 10px 26px rgba(60,50,30,0.18);">
             </td>
           </tr>
 
@@ -80,7 +80,7 @@
                 <td align="center" style="padding:26px 0 22px;">
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
                     <td align="center" bgcolor="#588157" style="background:#588157; border-radius:16px;">
-                      <a href="{{ subscriber.last_guide_download }}" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:600; color:#faf9f6; text-decoration:none; line-height:1;">Download the guide</a>
+                      <a href="{{ subscriber.last_guide_download | default: 'https://xkj3tzlgu6ylgllk.public.blob.vercel-storage.com/Free%20guide%20-%207%20Days%20of%20Real-World%20Learning%20-%20compressed.pdf' }}" style="display:inline-block; padding:16px 38px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size:16px; font-weight:600; color:#faf9f6; text-decoration:none; line-height:1;">Download the guide</a>
                     </td>
                   </tr></table>
                 </td>
